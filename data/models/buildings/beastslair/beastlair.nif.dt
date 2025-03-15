@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\buildings\beastslair\beastlair.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"BLAIR";
+    translation = xpoint3:"0.01452922821044921875,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"-6.4303436279296875,10.78749847412109375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

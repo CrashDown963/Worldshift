@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\concrete_buildings\concrete_wall02_broken.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Concrete_wall02";
+    translation = xpoint3:"0,0,91.455596923828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+}

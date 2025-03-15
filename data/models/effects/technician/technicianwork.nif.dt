@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\effects\technician\technicianwork.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box01";
+    translation = xpoint3:"-0.0328521728515625,-59.3214569091796875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"0.06046772003173828125,-64.9853973388671875,1.8596274852752685546875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

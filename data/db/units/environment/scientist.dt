@@ -1,0 +1,40 @@
+Mob Scientist : BaseMob {
+  name = "Scientist"
+  icon = 6,22
+  race = humans
+
+  model = data/models/units/Surgeon/Surgeon.kfm
+  idiot = civilian
+
+  physics {
+    default = data/models/units/Surgeon/Medic_Proxy.pml
+    die = data/models/units/Surgeon/Medic.pml
+  }
+  
+  destruction = ragdoll
+  take_auras : { RestorationCoreAura }
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  armor = 0
+  hp = 200
+  
+  aggro_range = 0
+  
+  impacts : LivingUnitImpacts
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+    
+  animation {
+    auto_show_hide {
+      Bone_Gun {
+        shoot
+        shoot_idle
+      } 
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Building OldOreExtractor : BaseBuilding {
+  name = Ore Extractor
+  model = Data/Models/buildings/OreExtractor/OreExtractor.kfm {
+   constr_phase_0 = Data/Models/buildings/OreExtractor/OreExtractor.nif
+  }
+  race = humans
+  
+  stats :{
+    hp = 4000
+  }
+  sight = 3000
+  
+  animation {
+    anim_set IDLE = loop {
+      idle_1 = 2000
+      idle_2 = 600
+    }
+  }
+}

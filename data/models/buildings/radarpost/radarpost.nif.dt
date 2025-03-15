@@ -1,0 +1,227 @@
+model = {
+  file = str:"data\models\buildings\radarpost\radarpost.nif";
+  animation = {
+    loop = fixp:"30.0666675567626953125";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Radar Post";
+    translation = xpoint3:"0,-0.27637481689453125,0.929981231689453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"decal_plane";
+    translation = xpoint3:"9.05999755859375,4.1477184295654296875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Side_plate01";
+      translation = xpoint3:"135.57781982421875,-132.2799835205078125,229.0418701171875";
+      rotation = {
+        0 = xpoint3:"0.707106769084930419921875,-0.707106769084930419921875,0";
+        1 = xpoint3:"0.707106769084930419921875,0.707106769084930419921875,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Side_plate02";
+      translation = xpoint3:"-135.5780029296875,-132.2799835205078125,229.0418701171875";
+      rotation = {
+        0 = xpoint3:"0.70710694789886474609375,0.707106649875640869140625,0";
+        1 = xpoint3:"-0.707106649875640869140625,0.70710694789886474609375,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Side_plate03";
+      translation = xpoint3:"135.57781982421875,132.2800140380859375,229.0418701171875";
+      rotation = {
+        0 = xpoint3:"-0.707106769084930419921875,-0.707106769084930419921875,0";
+        1 = xpoint3:"0.707106769084930419921875,-0.707106769084930419921875,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"Side_plate04";
+      translation = xpoint3:"-135.5780029296875,132.2800140380859375,229.0418701171875";
+      rotation = {
+        0 = xpoint3:"-0.70710647106170654296875,0.707107067108154296875,0";
+        1 = xpoint3:"-0.707107067108154296875,-0.70710647106170654296875,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"top_side";
+      translation = xpoint3:"0,0,509.9442138671875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"side_antena01";
+        translation = xpoint3:"-143.0443878173828125,-2.4598495960235595703125,-20.55621337890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"LightBillboard03";
+          translation = xpoint3:"-2.75714111328125,-179.5074615478515625,-26.9647216796875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"LightBillboard04";
+          translation = xpoint3:"288.84637451171875,-179.5074615478515625,-26.9647216796875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"side_antena02";
+        translation = xpoint3:"143.0439910888671875,-2.4598495960235595703125,-20.55621337890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"back_antena_base";
+        translation = xpoint3:"0,156.89306640625,1.19061279296875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"back_antena";
+          translation = xpoint3:"0,66.77099609375,-4.08648681640625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"LightBillboard02";
+            translation = xpoint3:"219.1862335205078125,-83.21954345703125,3.8297119140625";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0,-1";
+              2 = xpoint3:"0,1,0";
+            }
+          }
+          #1 = {
+            scale = fixp:"1";
+            name = str:"LightBillboard05";
+            translation = xpoint3:"219.1862335205078125,-49.7126617431640625,71.3214111328125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0,-1";
+              2 = xpoint3:"0,1,0";
+            }
+          }
+          #2 = {
+            scale = fixp:"1";
+            name = str:"LightBillboard06";
+            translation = xpoint3:"-212.3157958984375,-49.7126617431640625,71.3214111328125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0,-1";
+              2 = xpoint3:"0,1,0";
+            }
+          }
+          #3 = {
+            scale = fixp:"1";
+            name = str:"LightBillboard07";
+            translation = xpoint3:"-212.3157958984375,-83.21954345703125,3.8297119140625";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0,-1";
+              2 = xpoint3:"0,1,0";
+            }
+          }
+          #4 = {
+            scale = fixp:"1";
+            name = str:"LightBillboard08";
+            translation = xpoint3:"23.832683563232421875,30.56640625,104.35821533203125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0,-1";
+              2 = xpoint3:"0,1,0";
+            }
+          }
+          #5 = {
+            scale = fixp:"1";
+            name = str:"LightBillboard09";
+            translation = xpoint3:"-12.85768890380859375,30.56640625,104.35821533203125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0,-1";
+              2 = xpoint3:"0,1,0";
+            }
+          }
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"top_front_panel";
+        translation = xpoint3:"0,-169.421722412109375,-26.4315185546875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"LightBillboard01";
+    translation = xpoint3:"2.5145702362060546875,131.5060882568359375,842.99578857421875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

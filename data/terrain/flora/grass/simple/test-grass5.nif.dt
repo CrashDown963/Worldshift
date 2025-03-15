@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\simple\test-grass5.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"grass";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-0.70710694789886474609375,-0.707106649875640869140625";
+      2 = xpoint3:"0,0.707106649875640869140625,-0.70710694789886474609375";
+    }
+  }
+}

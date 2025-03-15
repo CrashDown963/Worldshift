@@ -1,0 +1,10 @@
+Building OilDepot : BaseBuilding {
+  model = Data/Models/buildings/OilDepot/Oil_Depot.nif
+  race = common
+  stats :{
+    hit_points = 800
+  }
+
+  no_mouse_targetable = 1
+  no_minimap = 1
+}

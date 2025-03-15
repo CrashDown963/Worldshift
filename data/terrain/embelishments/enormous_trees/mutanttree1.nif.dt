@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\enormous_trees\mutanttree1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"tree";
+    translation = xpoint3:"-330.5421142578125,-252.417022705078125,277.307373046875";
+    rotation = {
+      0 = xpoint3:"0.819152057170867919921875,0,-0.573576450347900390625";
+      1 = xpoint3:"-0.573576450347900390625,0,-0.81915199756622314453125";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

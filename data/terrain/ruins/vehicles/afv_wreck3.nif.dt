@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\vehicles\afv_wreck3.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"1.9179122447967529296875,5.012362957000732421875,141.651824951171875";
+    rotation = {
+      0 = xpoint3:"-0.99619472026824951171875,0,0.087155736982822418212890625";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"-0.087155736982822418212890625,0,-0.99619472026824951171875";
+    }
+  }
+}

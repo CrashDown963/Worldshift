@@ -1,0 +1,7 @@
+Mob M23BeamSource : BaseMob {
+  icon = 7,13
+  model = Data/Models/buildings/portal/Pilon.nif
+  movable = 0
+  hp = 0
+  damage = 0
+}

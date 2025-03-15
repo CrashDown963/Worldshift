@@ -1,0 +1,77 @@
+model = {
+  file = str:"data\models\effects\magic\lightningstrikes02.nif";
+  animation = {
+    loop = fixp:"1";
+    duration = fixp:"0.433333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Dummy01";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-0.999999940395355224609375";
+          2 = xpoint3:"0,0.999999940395355224609375,0";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Plane05";
+          translation = xpoint3:"0,32.52141571044921875,-111.7768707275390625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Plane06";
+          translation = xpoint3:"0,1.017333984375,0";
+          rotation = {
+            0 = xpoint3:"0,0.5251922607421875,-0.85098361968994140625";
+            1 = xpoint3:"0,0.85098361968994140625,0.5251922607421875";
+            2 = xpoint3:"1,0,0";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"Plane07";
+          translation = xpoint3:"0,1.017333984375,0";
+          rotation = {
+            0 = xpoint3:"0,-0.52443897724151611328125,0.85144805908203125";
+            1 = xpoint3:"0,0.85144805908203125,0.52443897724151611328125";
+            2 = xpoint3:"-1,0,0";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Omni01";
+        translation = xpoint3:"0,0,607.0281982421875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

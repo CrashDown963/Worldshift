@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\buildings\kohbuildings\kohbarracks_test.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Barracks";
+    translation = xpoint3:"360.562896728515625,156.4598388671875,560.355712890625";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"360.562896728515625,156.4598388671875,560.355712890625";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+}

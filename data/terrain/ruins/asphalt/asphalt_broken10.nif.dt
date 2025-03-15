@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\ruins\asphalt\asphalt_broken10.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box02";
+    translation = xpoint3:"266.7271728515625,-1381.97119140625,15.60389423370361328125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Asphalt-LOW";
+    translation = xpoint3:"35.16717529296875,3.60369873046875,8.2470188140869140625";
+    rotation = {
+      0 = xpoint3:"-0.977447807788848876953125,0,0.2111772000789642333984375";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0.2111772000789642333984375,0,0.977447807788848876953125";
+    }
+  }
+}

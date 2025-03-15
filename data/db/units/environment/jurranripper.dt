@@ -1,0 +1,55 @@
+Mob JurranRipper : BaseMob {
+  name : Ripper.name
+  descr : Ripper.descr
+  icon = 6,19
+  race = humans
+  model = Data/Models/Units/Ripper/Ripper.kfm
+
+  physics {
+    default = Data/Models/Units/Ripper/Ripper_Proxy.pml
+    die = Data/Models/Units/Ripper/Ripper.pml	
+  }
+
+  explosion = ExplosionMedium_03
+  
+  stats : {
+    rupture_chance = 5
+    rupture_stun_duration = 4
+  }
+  
+  sounds {
+    footstep = data/sounds/units/ripper/step/
+    stop = data/sounds/units/ripper/stop/
+  }
+  
+  hp = 250
+  armor = 10
+  range = 150
+  damage = 7
+  chase_range = -1
+
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+      Hit_rare_1 = 100,1,1
+      Hit_rare_2 = 100,1,1
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = ATTACK_MAIN
+    shoot_snd = data/sounds/units/ripper/shoot/
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact_type = melee
+  }
+  
+  abilities {
+    Ability_Rupture
+  }
+  
+}

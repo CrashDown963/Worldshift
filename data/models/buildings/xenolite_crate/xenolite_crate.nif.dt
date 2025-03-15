@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\buildings\xenolite_crate\xenolite_crate.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

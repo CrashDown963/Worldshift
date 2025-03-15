@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\buildings\powercore\powercore_build.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"decal_plane";
+    translation = xpoint3:"0.075897216796875,-14.1759490966796875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"-4.744140625,-24.539035797119140625,60.96247100830078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

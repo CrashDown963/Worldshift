@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\vehicles\bus01_broken02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Bus-broken02";
+    translation = xpoint3:"-4.55782318115234375,-42.04851531982421875,151.360076904296875";
+    rotation = {
+      0 = xpoint3:"0.96170246601104736328125,-0.2740955352783203125,0";
+      1 = xpoint3:"0.2740955352783203125,0.96170246601104736328125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

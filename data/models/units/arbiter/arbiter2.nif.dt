@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\units\arbiter\arbiter2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"arbiter";
+    translation = xpoint3:"-5.794971466064453125,-55.3314208984375,220.70819091796875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

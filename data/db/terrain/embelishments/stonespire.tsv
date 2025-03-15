@@ -1,0 +1,6 @@
+id	model	vars	class	
+StoneSpire	StoneSpire.nif	{tex_scale_auto=1}{high_obj=1}
+StoneSpire_Dark	StoneSpire_Dark.nif	{tex_scale_auto=1}{high_obj=1}
+StoneSpireArc	StoneSpireArc.nif
+StoneSpirePart1	StoneSpirePart1.nif
+StoneSpirePart2	StoneSpirePart2.nif	

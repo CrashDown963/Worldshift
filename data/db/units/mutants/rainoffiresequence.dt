@@ -1,0 +1,53 @@
+RainOfFire RainOfFireSequence {
+  hull = 0
+
+  --Ramge for secondary impacts
+  sec_range = 500, 1200
+  sec_parts = 10,10
+
+  --secondary spawn objects offset
+  sec_spawnoffstime = 0.1,0.2
+  sec_spawntime = 0.1,1.0
+
+  --models
+  pri_model = BigLightningStrike01, BigLightningStrike02, BigLightningStrike03
+  sec_model = SmallLightningStrike01, SmallLightningStrike02, SmallLightningStrike03
+  pri_explosion = RainOfFireSequencePriEffect
+  sec_explosion = RainOfFireSequenceSeqEffect
+}
+
+
+CAreaEffect RainOfFireSequencePriEffect {
+  range = 400
+  epicenter {
+    spawn LightningStrikeExplosion01
+    physics_radius = 250 
+    physics_power = 7000
+  }
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = stat:rainoffire_pri_damage
+      react = lightning
+      friendly_fire = 0
+    }
+  }
+}
+
+
+
+CAreaEffect RainOfFireSequenceSeqEffect {
+  range = 400
+  epicenter {
+    spawn LightningStrikeExplosion01
+    physics_radius = 150 
+    physics_power = 5000
+  }
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = stat:rainoffire_pri_damage * 0.3
+      react = lightning
+      friendly_fire = 0
+    }
+  }
+}
+

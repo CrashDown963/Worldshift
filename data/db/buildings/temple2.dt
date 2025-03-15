@@ -1,0 +1,29 @@
+Building Temple2 : BaseBuilding {
+  model = Data/Models/buildings/ShrineTemple/Temple2.kfm
+  race = mutants
+  target_priority = 500
+  req_produce_range = 1
+
+  stats : {
+    hp = 2000
+    range = 3000
+    fire_lash = 0
+  }
+  
+  CAlertController alert {
+    timeout = 10
+    layered_anims = 0
+  }
+  
+  sight : area.large
+  
+  actions {
+    RallyPoint
+    CancelUnitProduce
+    ProduceHighPriest
+    ProduceWarrior
+    ProduceBrute
+    ProduceAncientShade
+    ProduceHowlingHorror
+  }
+}

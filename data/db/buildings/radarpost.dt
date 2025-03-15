@@ -1,0 +1,36 @@
+Building RadarPost : BaseBuilding {
+  name = Radar Post
+  model = Data/Models/buildings/RadarPost/RadarPost.nif {
+   constr_phase_0 = Data/Models/buildings/RadarPost/RadarPost_build.nif
+  }
+  race = humans
+  construction {
+    phase_0 {
+      model = constr_phase_0
+    }
+  }
+  
+  stats :{
+    hp = 4000
+    radar_range = 15000
+  }
+
+  sight = stat:radar_range / 5
+
+  actions {
+    RadarAmplifyUpgrade;
+  }
+}
+
+CUpgradeAction RadarAmplifyUpgrade {
+  name = Amplify Upgrade
+  instant = 1
+  visible = 1
+  icon = 11,1
+  program = PrgUpgrade
+  duration = 10
+  upgrade {
+    radar_range = 20%
+  }
+}
+

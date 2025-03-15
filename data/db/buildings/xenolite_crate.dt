@@ -1,0 +1,7 @@
+Building Xenolite_crate : BaseBuilding {
+  model = Data/Models/buildings/Xenolite_crate/Xenolite_crate.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

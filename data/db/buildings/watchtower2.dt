@@ -1,0 +1,7 @@
+Building WatchTower2 : BaseBuilding {
+  model = Data/Models/buildings/WatchTower2/WatchTower2.nif
+  race = mutants
+  stats :{
+    hit_points = 800
+  }
+}

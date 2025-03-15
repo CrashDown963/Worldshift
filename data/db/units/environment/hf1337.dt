@@ -1,0 +1,211 @@
+Mob HF1337 : BaseBoss {
+  name = "HF1337"
+  icon = 1,26
+  conv_icon_row = 3
+  conv_icon_col = 2
+  boss_icon = 3,2
+  model = data/models/units/HellFire/HellFire.kfm {
+    die = data/models/units/HellFire/HellFire_Break.kfm 
+
+    rot_z1 {
+      min_yaw = -30
+      max_yaw = 0
+    }
+    rot_z2 {
+      min_yaw = 0
+      max_yaw = 30
+    }
+  }
+  
+  tags = unit, bot, mob
+  machine = 1
+
+  impacts : MachineUnitImpacts
+
+  refpoints {
+    repair = 5
+  }
+
+  -- general purpose restore points!
+  nano_restore_points = pt_head,pt_center,pt_top
+  
+  scale = 2
+  
+  blod_max = 0
+  
+  hp = 15000
+  energy = 1000
+  energy_gen = 600
+  range = 1000
+  damage = 350
+  armor = 150
+  sight = 2000
+  sight_incombat = 10000
+  chase_range = 10000
+  
+  shield_regen_base = 2000
+  shield_regen_buffed = 30000
+
+  stats :{
+    healing_taken_mod = 400
+    shield_hull = 5000
+    shield_fullabsorbchance = 50
+    shield_percentabsorbtion = 75
+    --shield_activatechance = 50
+  }
+  
+  --destruction = ragdoll
+  explosion = ExplosionBig_02
+  
+  ondeath = SayPrm { text_key = str:"activate cannon" }
+
+  -- nano restore points!
+  nano_restore_points = Bone_foot_L2,Bone_foot_R2,Bone_markuch_05,Bone_guz,Bone_markuch_01,Bone_L_hand_2,Bone_L_hand_1,Bone_R_hand_1,Bone_R_sholder,Bone_L_sholder
+
+  physics {
+    default = data/models/units/HellFire/HellFire_Proxy.pml
+    die = data/models/units/HellFire/HellFire.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_04 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_perc = 40
+	
+  }
+  
+  foot_prints {
+    desert = hellfire_footprint
+  }
+
+  pitch_speed = 90
+  min_pitch = -60
+  max_pitch = 60
+  yaw_speed = 120
+  min_yaw = -45
+  max_yaw = 45
+  
+  sounds {
+    confirm = data/sounds/units/hellfire/confirm/
+    select = data/sounds/units/hellfire/select/
+    footstep = data/sounds/units/hellfire/step/
+    stop = data/sounds/units/hellfire/stop/
+    destruction = data/sounds/destruction/units/hellfire/
+  }
+  
+  abilities : HF1337Abilities
+    
+  animation {
+    anim_set IDLE = loop {
+      idle = 2000
+      idle_var_1 = 200
+      --idle_var_2 = 50
+      idle_var_3 = 200
+      idle_var_4 = 200
+      --idle_very_rare_1 = 10
+      --idle_very_rare_2 = 10
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 120
+    max_tilt = 0
+  }  
+
+  CMultiWeaponController weapon {
+    can_crit = 1
+
+    count = 2 
+    sync = alternate
+    active = 1
+    idle_only = 0
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_once_right
+    shoot_anim_2 = shoot_once_left
+    shoot_snd = Data/Sounds/Units/Hellfire/shot
+    aim_tolerance = 60
+--    fire_rate = 1.2 
+    idle_time = 0.7
+    spot_impact_type = fire
+    spot_impact = 1250
+    damage_type = fire
+
+    muzzle_anim = HellfireMuzzle
+	  
+    projectile = linear {
+      spot_impact = 1200
+      spot_impact_type = fire
+      speed = 2400
+      model = data/models/projectiles/fire/HellfireShot.nif {
+      CTrailController trail {
+          emitter = Core
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 6
+         -- start_width = 25
+         -- end_width = 100
+          ttl = 24
+          --simple_time = 90
+    	  
+
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+
+          time3 = 15
+          color3 = colora: 0, 0, 0, 0.6
+
+          time4 = 50
+          color4 = colora: 0, 0, 0, 0.4
+
+          time5 = 100
+          color5 = colora: 0, 0, 0, 0
+
+          }
+      }
+      react = fire
+      effect = HellfireHit
+      ground_hit_effect = HellfireTerrainHitEffect
+      expire_effect = HellfireExpire
+    }
+    
+
+  }
+
+  CShieldController shield : Hellfire.shield {
+    regen_boost_perc = 0
+    --regen_boost_timeout = 0
+    regen_tick = 1
+    regen_per_minute = var:shield_regen_base
+  }
+}
+ 
+HF1337Abilities {
+  Shield {
+    name : HellfireAbilities.Shield.name
+    text : HellfireAbilities.Shield.text
+    icon = 13,0
+  }
+  HellSweep {
+    when : abi.fight
+    chance = 25
+    power  = 200
+    cooldown = 4
+    effect = E_damage {
+      area = 1800 { 
+        anim = data/Models/Effects/Fire/FireSweep.kfm  {
+          scale = 6
+        }
+        sound = DATA/sounds/Effects/FireSweep/
+      }
+      amount = 250
+      friendly_fire = 0
+    }
+  }
+}
+

@@ -1,0 +1,77 @@
+model = {
+  file = str:"data\models\buildings\rom_bigturret\rom_bigturret.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"rot_z1";
+      translation = xpoint3:"-305.169097900390625,15.27607440948486328125,690.1329345703125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"rot_x1";
+        translation = xpoint3:"0,-37.45217132568359375,78.51031494140625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"pt_shoot_1";
+          translation = xpoint3:"-0.3003021776676177978515625,-267.138397216796875,0.03074583224952220916748046875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"rot_z2";
+      translation = xpoint3:"305.169036865234375,15.27607440948486328125,690.1329345703125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"rot_x2";
+        translation = xpoint3:"0,-37.4522247314453125,78.5103759765625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"pt_shoot_2";
+          translation = xpoint3:"0.2999267578125,-267.13836669921875,0.03082275390625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

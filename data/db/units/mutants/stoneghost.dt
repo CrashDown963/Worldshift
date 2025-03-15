@@ -1,0 +1,262 @@
+StoneGhost StoneGhost : UnderworldUnit {
+  name = "StoneGhost"
+  descr = "StoneGhost Placeholder Desc."
+  race = mutants
+  officer = 1
+  icon = 4,5
+
+  model = data/models/units/stoneghost/stoneghost.kfm
+  scale = 1.1
+
+  sounds {
+    start = data/speech/summoning/stone ghost summoned.wav
+    attack = data/speech/confirmations/stone ghost/stone ghost attack/
+    select = data/speech/selecting/stone ghost select/
+    joke = data/speech/selecting/stone ghost joke/
+    confirm = data/speech/confirmations/stone ghost/stone ghost confirm/
+    destruction = data/speech/deaths/stone ghost death/
+    engage = data/speech/engage alerts/stone ghost engage/
+    damage = data/speech/engage alerts/stone ghost damage/
+  }
+    
+  attachments {
+    pt_ground = data/models/effects/Magic/StoneGhostAttachment.nif {
+			scale = 0.45; 
+			CTrailController GhostTrail01  {
+				  emitter = Trail01
+				  texture = data/textures/trails/Trail3.dds
+				  tex_ratio = float: 1
+				  start_width = 45
+				  end_width = 0
+				  ttl = 18
+				  simple_time = 1
+				  additive = 1
+                  z_write = 0
+				  material_alpha = 1
+				  diffuse = color: 0, 0, 0
+				  ambient = color: 0, 0, 0
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 3
+				  color1 = colora: 0.31, 0.31, 0.73, 1
+
+				  time2 = 30
+				  color2 = colora: 0.31, 0.56, 0.73, 1
+
+				  time3 = 60
+				  alpha3 = 0.6
+
+				  time4 = 100
+				  color4 = colora: 0, 0, 1, 0
+		   }
+		   CTrailController InjectTrail02 : GhostTrail01 {emitter = Trail02}
+		   CTrailController InjectTrail03 : GhostTrail01 {emitter = Trail03}
+		   CTrailController InjectTrail04 : GhostTrail01 {emitter = Trail04}
+     }
+  }
+  
+  stats :{
+    hp = 420
+    psi = 320
+    armor = 0
+    range = 1600
+    damage = 9
+    armor = 2
+
+    corruption_psi_cost = 120
+    corruption_damage = 10  -- per tick (currently 2 sec)
+    corruption_duration = 20
+
+    drain_psi_amount = 30
+    drain_psi_chance = 25
+
+    hatch_chance = 5
+    hatch_worms = 2
+
+    unholy_aura_interval = 5
+    unholy_aura_heal = 40
+    unholy_power_restore_perc = 5
+    unholy_power_duration = 20
+    unholy_power_cooldown = 60
+  }
+  speed = 450
+ 
+  spread_psi_range = 800
+  spread_psi_react = spread_psi
+  take_auras : { RestorationCoreAura }
+
+
+  abilities {
+    HatchAbi
+    LeechAbi
+    UnholyAuraAbi
+  }
+  
+  CPeriodicEffectsController UnholyAura {
+    interval = stat:unholy_aura_interval
+    effect = E_heal {
+      amount = stat:unholy_aura_heal
+      area = 1000 { anim = data/models/effects/StoneGhost/StoneGhostWave.nif }
+        --{ anim = data/models/effects/magic/healingwave.nif { scale = 0.3 } }
+      target_tags = underworld
+      react = relief
+    }
+  }
+  
+  CEffectAura StoneGhostUnholyPowerAura {
+    active = 0
+    range = 800
+    faction = ally
+    exclude_self = 1
+    non_stackable = 1
+    effect = E_buff {
+      id = UnholyPower
+      name = "Unholy Power"
+      text = "This unit�s power is being replenished by a nearby Stone Ghost."
+      icon = 3,11
+      type = restore_psi
+      perc = stat:unholy_power_restore_perc
+      damage_type = fire
+      -- show_text_feedback = 1
+      
+      duration = stat:unholy_power_duration
+      
+      tick = 1
+      --immediate_tick = 1
+      discard_react = 1
+      repeat_react = 1
+      react = spread_psi
+      stack_count = 1
+      cleansable = 0
+    }
+  }
+  
+  actions : BaseUnit.actions {
+    CorruptionAction;
+    UnholyPowerAction;
+    MakeShrine -- fake
+  }
+
+  animation {
+    cast_convert_xenolite = cast_start
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    damage_type = sid:psi
+    damage = stat:damage
+    shoot_anim = shoot
+    fire_node = pt_shoot_1
+    idle_time = 2
+    shoot_snd = data/sounds/units/stone ghost/shot/
+    
+    projectile = linear {
+      --spot_impact = 800
+      --spot_impact_type = small_energy
+      speed = 4000
+      ground_hit_effect = BulletTerrainHitEffect
+
+      model = data/models/effects/StoneGhost/StoneGhostProjectile.nif 
+      scale = 2
+
+      react = drainpsy_small
+    }
+
+  }
+
+  cost : pvp.mutants.unit_costs.Officer
+  cost_sloc : pvp.mutants.sloc_costs.Officer
+}
+
+LeechAbi {
+  name = "Leech"
+  text = "Stone Ghost has [stat:drain_psi_chance]% chance on each attack to steal up to [stat:drain_psi_amount] power from its target, and also to give same amount to all nearby friendly units."
+  icon = 4,0
+}
+
+UnholyAuraAbi {
+  name = "Unholy Aura"
+  text = "Stone Ghost maintains a link with the Underworld, healing all Underworld creatures (Stone Ghost, Ancient Shade, Howling Horror, Soul Worm) near him for [stat:unholy_aura_heal] hit points every [stat:unholy_aura_interval] seconds."
+  icon = 3,0
+}
+
+HatchAbi {
+  name = "Hatch"
+  text = "The Stoneghost's default attack has a [stat:hatch_chance]% chance to spawn [stat:hatch_worms] Worms near its current target."
+  chance = stat:hatch_chance
+  when : abi.target_hit
+  range = stat:range
+  target = current
+  
+  cast {
+    finish {
+      anim = run
+    }
+  }
+  effect = WormHatchEffect
+}
+    
+CSpawnEffect WormHatchEffect {
+  sound = data/sounds/effects/common/infest.wav
+  spawn_prg = PrgPlayAnim {
+    anim = run
+  }
+  spawn {
+    Worm = stat:hatch_worms
+  }
+}
+
+CSpellAction CorruptionAction {
+  name = "Corruption"
+  descr = "Stone Ghost corrupts all enemy units in selected area, causing them to suffer for [stat:corruption_damage] damage every tick for [stat:corruption_duration] seconds. If the target dies while corrupted, a small number of Soul Worms will spawn protecting the area and attacking enemies."
+  icon = 8,7
+  visible = 1
+  tags = location
+  feedback = DecalFeedback
+  min_power = stat:corruption_psi_cost
+  cooldown = 30
+  aoe_radius = 400
+  
+  spell {
+    power = stat:corruption_psi_cost
+    cast {
+      finish {
+        anim = cast_finish   
+        sound = data/sounds/units/highpriest/pyro/
+      }
+    }
+    effect = E_multidebuff {
+      id = Corruption
+      name = "Corruption"
+      text = "This unit is taking poison damage from a Corruption spell."
+      icon = 1,13
+      type = damage
+      damage = stat:corruption_damage
+      damage_type = poison
+      duration = stat:corruption_duration
+      multi_area : aoe_radius { anim = Data/Models/Effects/Magic/Corruption.nif }
+      enemy = 1
+      tick = 2
+      immediate_tick = 1
+      discard_react = 1
+      react = corruption
+      stack_count = 1
+      target_died = Worm
+    }
+  }  
+}
+    
+action UnholyPowerAction {
+  name = "Unholy Power"
+  descr = "Stone Ghost drains energy from the Underworld and charges all friendly units nearby. The effect adds [stat:unholy_power_restore_perc]% of the total power of the affected unit every second. The effect lasts for [stat:unholy_power_duration] seconds or until Stone Ghost is moved or killed."
+  instant = 1
+  icon = 7,7
+  visible = 1
+  program = PrgUnholyPower
+  cooldown = stat:unholy_power_cooldown
+  power = 200
+}

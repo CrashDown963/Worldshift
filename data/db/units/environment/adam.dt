@@ -1,0 +1,115 @@
+Mob Adam : BaseBoss {
+  name = "Adam"
+  model = Data/Models/units/GiantMutant/BigGad.kfm
+  
+  scale = 1.5
+
+  icon = 1,22
+  conv_icon_row = 2
+  conv_icon_col = 5
+  boss_icon = 1,1
+  
+  hp = 20000
+  armor = 50
+  range = 200
+  min_attack_range = 100
+  damage = 300
+
+  physics {
+    default = Data/Models/units/GiantMutant/GiantMutant_Proxy.pml
+    die = Data/Models/units/GiantMutant/GiantMutant.pml
+  }
+
+  destruction = ragdoll
+
+  animation {
+    anim_set IDLE = loop {
+      idle = 80
+      idle_left = 10
+      idle_right = 10 
+    }
+  }
+  
+  abilities {
+    Stomp {
+      when : abi.fight
+      chance = 40
+      cooldown = 15
+      target = self
+      
+      cast {
+        prepare {
+          anim = idle_angry
+        }
+      }
+      effect = E_set {
+        effect = E_damage {
+          area = 1500
+          amount = 120
+          react = fire
+          friendly_fire = 0
+        }
+        effect = S_multistun {
+          duration = 7
+          multi_area = 1500 {  
+            anim = data/models/effects/magic/FreezingBlast.nif
+            sound = data/sounds/effects/explosionmedium/Medium Explosion 2.wav
+            scale = 1.5
+          }
+          react = stun
+          epicenter {
+            physics_radius = 1500
+            physics_power = 300
+            physics_elevation = 1600
+          }
+        }
+      }
+    }  
+    
+    Recharge {
+      when : abi.fight
+      condition = BeamsUsable
+      chance = 50
+      cooldown = 12
+      target = self { health_under = 75 }
+      
+      cast {
+        finish {
+          anim = attack_bildings_head
+        }
+      }
+      
+      lua_method =  CallMapLua { func = RechargeAdam }
+      
+      react = lightning   --drain_life
+    }  
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+ 
+    shoot_idle_1 = combat_idle
+    fire_node = ROOT
+    shoot_anim = attack_righthand
+    shoot_idle = combat_idle
+    damage = 0
+    spot_impact = 0
+    spot_impact_type = melee
+    projectile = instant {
+      effect = E_AdamHit
+    }
+  }
+}
+
+CMultiEffect E_AdamHit {
+  effect = CDamageEffect
+  multi_area = var:range
+  cone_angle = 170
+  amount = var:damage
+  epicenter {
+    physics_radius = var:range
+    physics_power = 1000
+    physics_elevation = 800
+  }
+}

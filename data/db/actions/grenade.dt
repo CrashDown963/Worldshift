@@ -1,0 +1,10 @@
+action Grenade {
+  name = Throw Grenade
+  visible = 1
+  tags = location
+  program = PrgGrenade
+  dblclk_label = run
+  can_default = 0
+  energy_required = 70
+  icon = 4,1
+}

@@ -1,0 +1,110 @@
+model = {
+  file = str:"data\models\lifeforms\bird\bird01.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"2.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.333333492279052734375";
+        }
+      }
+    }
+    peack = {
+      loop = int:"1";
+      duration = fixp:"0.966666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.966666698455810546875";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"0.66666698455810546875";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-5.28869342803955078125,0";
+        time = fixp:"0.66666698455810546875";
+        distance = fixp:"5.2886962890625";
+        speed = fixp:"7.9330406519584357738494873046875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.66666698455810546875";
+        }
+      }
+    }
+    rising = {
+      loop = int:"0";
+      duration = fixp:"0.733333110809326171875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.733333110809326171875";
+        }
+      }
+    }
+    fly = {
+      loop = int:"1";
+      duration = fixp:"0.6000003814697265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.6000003814697265625";
+        }
+      }
+    }
+    soar = {
+      loop = int:"1";
+      duration = fixp:"2.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.333333492279052734375";
+        }
+      }
+    }
+    landing = {
+      loop = int:"1";
+      duration = fixp:"0.36666584014892578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.36666584014892578125";
+        }
+      }
+    }
+  }
+}

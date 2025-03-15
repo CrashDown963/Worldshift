@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\effects\miscreacts\levelup.nif";
+  animation = {
+    loop = fixp:"3.3333332538604736328125";
+    duration = fixp:"1.83333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Streaks";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Plane01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"StarD";
+      translation = xpoint3:"0,340.897857666015625,0";
+      rotation = {
+        0 = xpoint3:"0.5,0.86602532863616943359375,0";
+        1 = xpoint3:"0,0,0.99999988079071044921875";
+        2 = xpoint3:"0.86602532863616943359375,-0.49999988079071044921875,0";
+      }
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Blizzard01-Emitter";
+    translation = xpoint3:"-0.175731658935546875,-3.336963653564453125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+}

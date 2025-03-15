@@ -1,0 +1,50 @@
+Mob DoomDrone2 : BaseMachineMob {
+  model = data/Models/units/DoomDrone/DoomDrone2.kfm
+  icon = 7,27
+  race = common
+
+  hp = 500
+  armor = 10
+  range = 150
+  --min_attack_range = 100
+  damage = 50
+  sounds {
+    start = data/sounds/effects/doomdroneloop/
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = pt_ground
+  }
+
+  ondeath_effect = E_damage {
+    area = 750
+    amount = 500
+  }
+  
+  explosion = ExplosionMedium_03
+  
+  abilities {
+    Seek {
+      when : abi.combat
+      cooldown = 1000000
+      target = enemy { min_range = 1500; max_range = 3000; aoe_min_enemy_count = 4 }
+      no_buffs { Confusion }
+      program = PrgAttack
+      no_self_buffs { Confusion }
+    }
+    SelfDestruct {
+      when : abi.fight
+      target = self
+      sound = data/sounds/weapons/doomdrone2/
+      cast { 
+        prepare { 
+          anim = shoot
+          duration = 5
+        }
+      }
+      damage = 1000000
+    }
+  }
+}

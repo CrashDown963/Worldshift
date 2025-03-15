@@ -1,0 +1,9 @@
+Building HumanShip : BaseBuilding {
+  name = "Personnel carrier"
+  icon = 7,28
+  model = data/Models/units/PersonnelCarrier/PersonnelCarrier.nif
+  race = humans
+  passable = 1
+  attackable = 1
+  target_priority = 2000
+}

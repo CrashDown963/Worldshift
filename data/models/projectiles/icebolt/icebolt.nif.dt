@@ -1,0 +1,57 @@
+model = {
+  file = str:"data\models\projectiles\icebolt\icebolt.nif";
+  animation = {
+    loop = fixp:"0.666666686534881591796875";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Ice_cube";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray01-Emitter";
+      translation = xpoint3:"-2.5877506732940673828125,-4.1475162506103515625,0";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray02Smoke-Emitter";
+      translation = xpoint3:"-2.5877506732940673828125,-4.1475162506103515625,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"TrailEmitter";
+      translation = xpoint3:"0,-46.73506927490234375,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

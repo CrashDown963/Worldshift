@@ -1,0 +1,10 @@
+Mob ROMShieldGenerator : BaseMachineMob {
+  name = "ROM Shield Generator"
+  icon = 4,14
+  model = Data/Models/buildings/Tower_Controller/Tower_Controller.nif
+  explosion = ExplosionMedium_03
+  movable = 0
+  hp = 4000
+  damage = 0
+  sight = 0
+}

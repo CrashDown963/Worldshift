@@ -1,0 +1,87 @@
+model = {
+  file = str:"data\models\effects\fire\firesweep_desaturated.nif";
+  animation = {
+    loop = fixp:"3.3333332538604736328125";
+    duration = fixp:"0.900000035762786865234375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"RootDummy";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #5 = {
+      scale = fixp:"1";
+      name = str:"RootDummy NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Drag01";
+        translation = xpoint3:"6.34618377685546875,178.08807373046875,-25.5624752044677734375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"FlameShockWave";
+        translation = xpoint3:"0,0,64.713592529296875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Omni01";
+        translation = xpoint3:"0,0,339.640167236328125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"PCloud01-Emitter";
+        translation = xpoint3:"0,0,-35.550846099853515625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01Flames-Emitter";
+        translation = xpoint3:"0,0,55.6709747314453125";
+        rotation = {
+          0 = xpoint3:"-1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,-1";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"Wind01";
+        translation = xpoint3:"0,0,-290.633697509765625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+ref_points {
+  pt_center
+  pt_head
+  pt_chest
+  pt_hand
+  pt_ground
+  pt_top
+  pt_cast
+  pt_weapon 
+  pt_shoot_1
+}
+
+ignore {
+  BigCannon
+  CargoCopter
+  FAV
+  Fido
+  Mutant1
+  Mutant2
+  Mutant3
+  Mutant4
+  Mutant5
+  Mutant6
+  RocketLauncher
+  SmallCannon
+  SpiderBot
+  Strider
+  SuppliesCopter
+  TransportCopter
+  UnitsCopter
+}

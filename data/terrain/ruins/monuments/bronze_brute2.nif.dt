@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\ruins\monuments\bronze_brute2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

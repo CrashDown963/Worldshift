@@ -1,0 +1,12 @@
+id	model	vars	class				
+
+AlienPart1	AlienPart1.nif			
+
+AlienPart2	AlienPart2.nif
+
+AlienPart3	AlienPart3.nif
+
+AlienPart4	AlienPart4.nif
+
+PortalEmb	Data/Models/buildings/BreederPortal/Portal.kfm
+BreederEmb	Data/Models/buildings/BreederPortal/Breeder2.nif	{no_hufx_occluder=1}

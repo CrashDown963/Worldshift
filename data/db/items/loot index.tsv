@@ -1,0 +1,48 @@
+0	GENERIC	50	25	10	5	1
+10	PVP GENERIC	50	25	10	5	1
+20	Common Hard Boss	0	0	20	5	1
+30	Common Dungeon	50	25	10	5	1
+40	PvP Rewards	50	25	10	5	1
+50	Safari - Queen	0	100	100	5	0
+60	Safari - Mech 0	0	100	100	5	0
+70	Safari - Jack	0	100	100	10	0
+80	Safari - Bill	0	0	100	10	0
+90	Safari - Bill Hard	0	0	0	100	20
+100	DTB - Cages	0	100	25	0	0
+110	DTB - Adam	0	0	100	20	0
+120	DTB - Frank	0	0	100	20	0
+130	BSA - Horror	0	100	100	20	0
+140	BSA - Yamu	0	100	100	20	0
+150	BSA - Champions	0	0	100	20	0
+160	ROM - HF1337	0	0	100	30	10
+170	ROM - Cannon	0	0	100	30	10
+180	Kharum - Village	0	100	20	10	2
+190	Kharum - Retaliate	0	100	20	10	2
+200	Kharum - Device	0	100	20	10	2
+210	Kharum - Ulf	0	0	0	100	25
+220	JY 3min Reward	0	100	25	5	0
+230	JY 3rd Side	0	100	25	5	0
+240	JY Gorgar	0	0	100	25	5
+250	JY Gorgar Hard	0	0	0	100	25
+260	JY Ditz Left Side Hard	0	0	0	100	25
+270	JY Ditz	0	0	0	100	25
+280	JY Xessk	0	0	0	0	100
+290	Common Low Boss	0	100	75	50	25
+300	Mission Rewards	100	100	100	100	100
+310	CF 1st encounter	0	100	20	10	5
+320	CF 2nd encounter	0	0	100	10	5
+330	CF Village 1	0	100	25	5	0
+340	CF Village 2	0	100	25	5	0
+350	CF Boss	0	0	100	10	0
+360	CF Boss Extra 1	0	0	0	100	50
+370	CF Boss Extra 2	0	0	0	100	50
+380	AC West	0	0	100	20	0
+390	AC East	0	100	50	10	0
+400	AC Last	0	0	100	10	0
+410	AC Hard	0	0	0	100	10
+420	RH Officers	0	0	100	10	0
+430	RH Zul Thark	0	0	0	50	20
+440	RH Final Master	0	0	0	10	100
+450	BRD Start	0	100	10	0	0
+460	BRD Lan Zealot	0	0	100	20	0
+470	BRD Lan Zealot - Hard	0	0	0	100	20

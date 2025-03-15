@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\effects\magic\rainoffire_small.nif";
+  animation = {
+    loop = fixp:"1.27777850627899169921875";
+    duration = fixp:"0.83333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"RootDummy01";
+    translation = xpoint3:"1754.90673828125,0,4496.68798828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"RootDummy01 NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"SmallAsteroid";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"0.464618742465972900390625,0,0.88551080226898193359375";
+          1 = xpoint3:"-0.80937731266021728515625,0.40566217899322509765625,0.42467224597930908203125";
+          2 = xpoint3:"-0.35921823978424072265625,-0.91402304172515869140625,0.188478291034698486328125";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"3.980224609375,0,22.08251953125";
+        rotation = {
+          0 = xpoint3:"0.929332792758941650390625,0,0.3692432940006256103515625";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"-0.3692432940006256103515625,0,0.929332792758941650390625";
+        }
+      }
+    }
+  }
+}

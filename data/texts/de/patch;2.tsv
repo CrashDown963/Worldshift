@@ -1,0 +1,7 @@
+sid	text
+
+obj.Get the human troops in the teleporter cage	Bewegt Eure Truppen in den Teleporter-K?fig
+obj.Denkar should divert the guards attention	Denkar sollte die Wachen ablenken!
+create_gamebtn	Klicken Sie hier um ein Spiel zu erstellen; Shift-Klick um ein privates Spiel zu erstellen
+game_is_private	(Privat)
+privategame_msg	Dies ist ein privates Spiel. Um beizutreten m?ssen sie vom Host eingeladen werden!

@@ -1,0 +1,110 @@
+Mob SalingSurgeon : BaseMob {
+  name : Surgeon.name
+  icon = 7,10
+  descr : Surgeon.descr
+  race = humans
+  model = data/models/units/Surgeon/Surgeon.kfm
+  ai = 1
+  idiot = civilian
+
+  physics {
+    default = data/models/units/Surgeon/Medic_Proxy.pml
+    die = data/models/units/Surgeon/Medic.pml
+  }
+  destruction = ragdoll
+  take_auras : { RestorationCoreAura }
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  armor = 4
+  hp = 180
+  range = 1200
+  damage = 15
+  energy = 300
+  energy_gen = 120
+  
+  stats : {
+    bandage_range = 1200
+    bandage_amount = 60
+    bandage_cooldown = 2
+    bandage_crit = 0
+    
+    relief_duration = 15
+    relief_healpersec = 20
+    relief_psicost = 120
+
+    mend_power = 100
+    mend_heal = 220
+  }
+  
+  relief_radius = 500
+  bandage_follow_range = 1100
+  relief_range = 1500
+  resurect_duration = 10
+  
+  aggro_range = 0
+  
+  impacts : LivingUnitImpacts
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+
+    range_far = var:range * 0.25
+    range_near = var:range * 0.15
+    proximity_bonus = 8
+    fire_node = pt_shoot_1
+    --aim_node = pt_aim
+
+    aim_tolerance = 45
+    shoot_anim = shoot
+    idle_time = 1.5
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 0.7
+		    E = 125,255,20
+ 	    }
+    }
+    spot_impact = 750
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+  prg_idle = PrgHeal
+  
+  animation {
+    auto_show_hide {
+      Bone_Gun {
+        shoot
+        shoot_idle
+      } 
+    }
+    cast_mend_channeling = shoot
+  }
+
+  -- mend restore
+  mend_range = var:range * 0.7
+  mend_max_range = var:range
+  mend_duration = 10
+  mend_beam_timelife = 1
+  mend_beam_spawn_time = 1
+  mend_beam = MendBeam
+  mend_source = pt_hand
+  mend_attach = data/models/effects/magic/drainhands.nif
+  --mend_beam_color = 1,0.2,0.1
+}

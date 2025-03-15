@@ -1,0 +1,22 @@
+CParticleObject t_smoke = {
+  model = data/models/TestObjects/tst_smoke/tst_smoke.nif
+}
+
+CMapAnim t_boom = {
+  model = data/models/TestObjects/tst_smoke/tst_boom.nif
+}
+
+CParticleObject t_heal = {
+  model = data/models/TestObjects/tst_smoke/tst_heal.nif
+}
+
+
+CParticleObject gun_muzzle = {
+  model = data/models/TestObjects/tst_smoke/gun_muzzle.nif
+  no_terrain_snap = 1
+}
+
+CParticleObject tst_trails = {
+  model = data/models/TestObjects/tst_smoke/tst_trails.nif
+ 
+}

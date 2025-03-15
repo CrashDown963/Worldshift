@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\rafinery\pipe01_broken03.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Pipe01-broken03";
+    translation = xpoint3:"3.0127618312835693359375,112.80364990234375,226.9993743896484375";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"1,0,0";
+    }
+  }
+}

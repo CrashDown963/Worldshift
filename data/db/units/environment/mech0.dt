@@ -1,0 +1,210 @@
+Mob Mech0 : BaseMachineBoss {
+  name = "Mech 0"
+  model = data/models/units/Mech_Destroyer/Mech_Destroyer.kfm
+  icon = 2,28
+  race = common
+  destruction = animation
+  
+  skin {
+    base = data/Models/Units/Mech_Destroyer/mech_destroyer_diff_1.dds
+  }
+  
+  boss = 1  
+  boss_icon = 4,2
+  
+  hp = 40000
+  armor = 75
+  range = 1600
+  damage = 80
+  rocket_damage = 150
+  
+  --blend_aim = pt_aim {
+  --  shoot_var_1 = 0 {
+  --    shoot_var_1_down = -30
+  --    shoot_var_1_up = 30
+  --  }
+  --  shoot_var_2 = 0 {
+  --    shoot_var_2_down = -30
+  --    shoot_var_2_up = 30
+  --  }
+  --}
+  
+  AddsVars {
+    sight_incombat = 3000
+    sight = 3000
+    chase_range = -1
+    roam = 1
+    waypoint_radius = 500
+    CAutoDieController AutoDie {
+      duration = 60
+      --no_enemy_despawn_time = 15
+      show_progress = 0
+    }
+  }
+
+  abilities {
+    Drones {
+      when : abi.combat
+      cooldown = 30
+      target = self
+      effect = E_set {
+        sound = data/sounds/effects/doomdronestart/
+        effect = E_spawn {
+          range = 3000
+          copy_target_list = 1
+          random_spawn = 1
+          spawn { DoomDrone1 : AddsVars = 1  }
+          spawn { DoomDrone2 : AddsVars = 1  }
+          spawn { DoomDrone3 : AddsVars = 1  }
+        }
+      }  
+    }
+  }
+  
+  
+  CMultiWeaponController rockets {
+    active = 1
+    idle_only = 0
+    count = 2
+    sync = alternate 
+    fire_node_1 = pt_cast_1
+    fire_node_2 = pt_cast_2
+    shoot_snd = Data/Sounds/Units/AssaultBot/RocketLaunch
+    fire_rate = 1
+    damage = 20
+    precision = 100
+    spot_impact_type = small_energy
+    damage_type = energy
+    min_range = 1000
+    range = 2500
+    face_target = 0
+    aim_node = pt_aim
+    aim_tolerance_yaw = 20
+    aim_tolerance_pitch = 180
+      
+    projectile = parabolic {
+      angle = 5
+      dispersion = 370
+      spot_impact = 900
+      spot_impact_type = small_energy
+      effect = MechDestroyerRocketEffect
+      decal_settings ground_hit_decal = barrage_decal1
+      model = data/models/projectiles/rocket/Mortar.nif {
+        scale = 2.2
+        CTrailController trail {
+          emitter = Dummy01
+          texture = data/model/effects/Trails/TrailHellfire.dds
+          material_alpha = 0.8
+		  diffuse = color: 1, 1, 1
+		  ambient = color: 1, 1, 1
+		  emissive = color: 0.2, 0.2, 0.2
+          z_write = 0
+          tex_ratio = float: 5
+          start_width = 50
+          end_width = 230
+          ttl = 37
+          --simple_time = 90
+    	  
+          time0 = 0
+          color0 = colora: 1, 1, 0, 1
+          time1 = 3
+          color1 = colora: 0.7, 0.3, 0.2, 1
+
+          time2 = 50
+          color2 = colora: 0.2, 0.2, 0.2, 0.5
+          
+          time3 = 100
+          color3 = colora: 0.2, 0.2, 0.2, 0
+        }  
+      }
+    }
+  }
+  
+  CMultiWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = alternate
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_var_1
+    shoot_anim_2 = shoot_var_2
+    --shoot_idle_1 = idle
+    --shoot_idle_2 = idle
+    --idle_time = 1
+    --min_bursts = 2
+    --max_bursts = 2
+    aim_node = pt_aim
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    muzzle_fx mech_destroyer {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction  = 25
+      active_variation = 5
+      length_variation = 42
+      width_variation  = 7
+      scale = 2.7
+      instances = 64
+      emit = 150,255,80
+    }
+    
+    instant_shot mech_destroyer_shot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+      dist_start = 100
+      travel_start = 100
+      travel_end = 0
+      duration = 0.55
+      time_fraction_to_lag_end = 1
+      width = 120
+      instances = 128
+      color_alpha {
+        0 = 255,255,255,255
+        5 = 255,180,216,255
+        22 = 30,255,30,205
+        100 = 0,255,0,0
+      }
+    }
+    
+    --projectile = linear {
+    --  spot_impact = 800
+    --  spot_impact_type = ion
+    --  speed = 4500
+    --  ground_hit_effect = BulletTerrainHitEffect
+    --  model = data/models/projectiles/V Laser/t_laser.nif {
+    --    scale = 1.5
+    --    E = 150,255,80,255
+    --  }
+    --}
+	}
+}
+
+CAnimEffect MechDestroyerRocketEffectAnim {
+  tags t1 = grass | dirt | mud | sand {
+    spawn ExplosionBig_05 {
+      scale = 1.0
+    }
+  }
+  tags t2 = water {
+    spawn WaterHit
+  }
+}
+CAreaEffect MechDestroyerRocketEffect {
+  range = 500
+  epicenter {
+    spawn MechDestroyerRocketEffectAnim
+    physics_radius = 250 
+    physics_power = 7000
+  }
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = var:rocket_damage
+      --react = fire
+    }
+  }
+}

@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\effects\smoke\swampparticles_tiny.nif";
+  animation = {
+    loop = fixp:"1";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"State0";
+    translation = xpoint3:"0.09853839874267578125,41.4736328125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"state1";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Blizzard01-Emitter";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+}

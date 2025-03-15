@@ -1,0 +1,97 @@
+model = {
+  file = str:"data\models\miscobjects\def confirmation\confirmation.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0.800000011920928955078125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Top1";
+        translation = xpoint3:"0,-211.9196624755859375,16.843662261962890625";
+        rotation = {
+          0 = xpoint3:"-1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Top2";
+        translation = xpoint3:"0,211.9196624755859375,16.843662261962890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Centre";
+        translation = xpoint3:"0,0,231.8446044921875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"CentreInner";
+        translation = xpoint3:"0,0,250.9746551513671875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"Side_Dummy";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"-1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Side";
+          translation = xpoint3:"87.8714141845703125,0,18.381679534912109375";
+          rotation = {
+            0 = xpoint3:"0,1,0";
+            1 = xpoint3:"-1,0,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Side2";
+          translation = xpoint3:"-87.8714141845703125,0,18.381679534912109375";
+          rotation = {
+            0 = xpoint3:"0,-1,0";
+            1 = xpoint3:"1,0,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

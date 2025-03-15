@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\projectiles\shell\shell.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"3.333333492279052734375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"shell";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"shell NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"trail";
+    translation = xpoint3:"0,121.83914947509765625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

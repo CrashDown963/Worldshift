@@ -1,0 +1,77 @@
+model = {
+  file = str:"data\models\projectiles\rocket\missile01.nif";
+  animation = {
+    loop = fixp:"6.666666507720947265625";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Dummy01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"Dummy01 NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"missile";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"0,0,1";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,1,0";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray02-Emitter";
+          translation = xpoint3:"0,0,0";
+          rotation = {
+            0 = xpoint3:"0,0,1";
+            1 = xpoint3:"-1,0,0";
+            2 = xpoint3:"0,-1,0";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"0,0.122135162353515625,0";
+        rotation = {
+          0 = xpoint3:"-1,0,0";
+          1 = xpoint3:"0,0,1";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Drag01";
+        translation = xpoint3:"-0.3989131450653076171875,1.395832061767578125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"Plane01";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

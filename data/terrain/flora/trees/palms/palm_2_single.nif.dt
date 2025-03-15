@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\flora\trees\palms\palm_2_single.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"trunk";
+    translation = xpoint3:"1.050575733184814453125,0.4975154399871826171875,-1.79562389850616455078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"leaves";
+    translation = xpoint3:"1.050575733184814453125,0.4975154399871826171875,-1.79562389850616455078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

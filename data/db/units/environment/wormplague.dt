@@ -1,0 +1,107 @@
+BaseWorm : BaseMob {
+  movable = 0
+  attackable = 0
+}
+
+BaseSporeWorm : BaseWorm {
+  stats : {
+    range = 1300
+  }
+
+  range = stat:range
+
+  CWeaponController spores {
+    can_crit = 1
+    damage = 10
+    idle_only = 1
+    fire_node = pt_top
+    idle_time = 4
+    aim_tolerance = 90
+    aim_tolerance_yaw = 90
+    aim_tolerance_pitch = 360
+    range = stat:range
+
+    projectile = splitparabolic {
+      secondary_projectiles = 15
+      secondary_radius = 1800
+      split_effect = WormSporesExplode
+      
+      primary {
+        projectile = parabolic {
+          angle = 70
+          model = Data/Models/Effects/TraceBullet/MasterProjectile.nif {
+            scale = 2.5
+          }
+        }
+      }
+      
+      secondary {
+        projectile = parabolic {
+          angle = 30
+          spot_impact = 800
+          spot_impact_type = small_energy
+          damage_type = energy
+          model = Data/Models/Effects/TraceBullet/MasterProjectile.nif {
+            scale = 0.5
+          }
+          effect = WormSporesExplode
+	      }
+      }
+    }
+  }
+}
+
+CAreaEffect WormSporesExplode {
+  range = 150
+ 
+  epicenter {
+    spawn SporeExplosion
+    physics_radius = 200 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      friendly_fire = 1
+      amount = 20
+    }
+  }
+}
+
+CMapAnim SporeExplosion {
+  model = data/Models/Effects/MediumExplosion/ExplosionPlasma_Green.kfm
+  sound = Data/Sounds/Effects/PoisonSpores/
+  scale = 1
+  decals = explosion_crater2
+  physics_impact = 5000
+}
+
+Mob MaleWorm : BaseSporeWorm {
+  name = "Male Worm"
+  icon = 7,16
+  model = data/terrain/embelishments/mutated/WormPlague_Male.kfm
+}
+
+Mob FemaleWorm : BaseSporeWorm {
+  name = "Female Worm"
+  icon = 2,16
+  model = data/terrain/embelishments/mutated/WormPlague_Female.kfm
+}
+
+Mob InfantMaleWorm : BaseWorm {
+  name = "Infant Male Worm"
+  icon = 6,16
+  model = data/terrain/embelishments/mutated/WormPlague_Male_child.kfm
+}
+
+Mob InfantFemaleWorm : BaseWorm {
+  name = "Infant Female Worm"
+  icon = 5,16
+  model = data/terrain/embelishments/mutated/WormPlague_Female_child.kfm
+}
+
+Mob SmallWorm : BaseWorm {
+  name = "Small Worm"
+  icon = 2,17
+  model = data/terrain/embelishments/mutated/WormPlague_Small.kfm
+}

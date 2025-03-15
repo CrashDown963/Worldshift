@@ -1,0 +1,3 @@
+DUPLICATED TEXTURE: ganthu_diffuse.dds
+DUPLICATED TEXTURE: ganthu_nm.dds
+DUPLICATED TEXTURE: black.dds

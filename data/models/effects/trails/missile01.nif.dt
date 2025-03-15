@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\effects\trails\missile01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"1.36666667461395263671875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"missile";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0,0,0.99999988079071044921875";
+      1 = xpoint3:"0.99999988079071044921875,0,0";
+      2 = xpoint3:"0,0.99999988079071044921875,0";
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"missile NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"jack_Trail";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"TrailEmitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

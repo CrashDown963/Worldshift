@@ -1,0 +1,139 @@
+Mob CorruptedGhost : BaseUnderworldMob {
+  name = "Corrupted Ghost"
+  race = mutants
+  icon = 2,21
+
+  model = data/models/units/stoneghost/stoneghost.kfm
+  scale = 1.6
+  
+  hp = 1300
+  armor = 45
+  energy = 300
+  energy_gen = 300
+  armor = 0
+  range = 600
+  damage = 65
+  penetration = 100
+  speed = 650
+  
+  spread_psi_range = 1000
+  spread_psi_react = spread_psi
+  
+  attachments {
+    pt_ground = data/models/effects/Magic/StoneGhostAttachment.nif {
+			scale = 0.45; 
+			CTrailController GhostTrail01  {
+			  emitter = Trail01
+			  texture = data/textures/trails/Trail3.dds
+			  tex_ratio = float: 1
+			  start_width = 45
+			  end_width = 0
+			  ttl = 18
+			  simple_time = 1
+			  additive = 1
+                z_write = 0
+			  material_alpha = 1
+			  diffuse = color: 0, 0, 0
+			  ambient = color: 0, 0, 0
+			  emissive = color: 1, 1, 1
+
+			  time0 = 0
+			  color0 = colora: 1, 1, 1, 0
+
+			  time1 = 3
+			  color1 = colora: 0.31, 0.31, 0.73, 1
+
+			  time2 = 30
+			  color2 = colora: 0.31, 0.56, 0.73, 1
+
+			  time3 = 60
+			  alpha3 = 0.6
+
+			  time4 = 100
+			  color4 = colora: 0, 0, 1, 0
+		   }
+		   CTrailController InjectTrail02 : GhostTrail01 {emitter = Trail02}
+		   CTrailController InjectTrail03 : GhostTrail01 {emitter = Trail03}
+		   CTrailController InjectTrail04 : GhostTrail01 {emitter = Trail04}
+     }
+  }
+  
+  CPeriodicEffectsController CorruptedGhostUnholyAura {
+    interval = 7
+    effect = E_heal {
+      amount = 60
+      area = 1400 { anim = data/models/effects/StoneGhost/StoneGhostWave.nif }
+      target_tags = underworld
+      react = drainpsy_small
+      heal_psi = 1
+    }
+  }
+ 
+  abilities {
+    Corruption {
+      when : abi.fight
+      cooldown = 30
+      target = current { aoe_range = 750; aoe_min_enemy_hp = 400; aoe_min_enemy_count = 4; }
+      range = 1600
+      power = 120
+
+      cast {
+        finish {
+          anim = cast_finish   
+          sound = data/sounds/units/highpriest/pyro/
+        }
+      }
+      effect = E_multidebuff {
+        id = Corruption
+        name : CorruptionAction.spell.effect.name
+        text : CorruptionAction.spell.effect.text
+        type = damage
+        damage = 20
+        damage_type = poison
+        duration = 20
+        multi_area = 500 {
+          anim = data/models/effects/StoneGhost/StoneGhostWave.nif
+          scale = 0.5
+        }
+        enemy = 1
+        tick = 2
+        immediate_tick = 1
+        discard_react = 1
+        react = fire
+        stack_count = 1
+        target_died = Worm
+      }
+    }  
+  }
+  
+  animation {
+    cast_convert_xenolite = cast_start
+  }
+  
+  attack_spell = CorruptedGhostAttackSpell
+}
+
+CorruptedGhostAttackSpell {
+  range = stat:range
+  cast {
+    finish {
+      anim = shoot
+      sound = data/sounds/units/highpriest/pyro/
+      attach {
+        L_Hand = data/models/effects/magic/FireFXFinish.nif
+        R_Hand = data/models/effects/magic/FireFXFinish.nif
+      }
+    }
+  }
+
+  projectile = beam {
+    start_point = L_Hand,R_Hand
+    beam = CorruptedLightning
+  }
+  
+  effect = E_damage {
+    amount = var:damage
+    react = fire
+    can_crit = 1
+  }
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\simple\pointybushbig.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"pointy_grass";
+    translation = xpoint3:"-0.75079357624053955078125,0.8359987735748291015625,70.18592071533203125";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"1,0,0";
+    }
+  }
+}

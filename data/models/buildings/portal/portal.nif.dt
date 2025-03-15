@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\buildings\portal\portal.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Door";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Lock";
+          translation = xpoint3:"0.69949758052825927734375,0,197.3221282958984375";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Lock01";
+          translation = xpoint3:"300,0,223.1555328369140625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"Lock02";
+          translation = xpoint3:"-300,0,223.1555328369140625";
+          rotation = {
+            0 = xpoint3:"-1,0,0";
+            1 = xpoint3:"0,-1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

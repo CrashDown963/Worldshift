@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\ancient_ruins\ancient_ruin02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"WG-relic03";
+    translation = xpoint3:"-3.634198665618896484375,-15.6322727203369140625,96.60784912109375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-0.4777629077434539794921875,-0.878488838672637939453125";
+      2 = xpoint3:"0,0.878488838672637939453125,-0.4777629077434539794921875";
+    }
+  }
+}

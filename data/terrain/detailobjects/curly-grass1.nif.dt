@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\detailobjects\curly-grass1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"grass";
+    translation = xpoint3:"0,0,202.7996826171875";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,0.7071068286895751953125,-0.70710670948028564453125";
+      2 = xpoint3:"0,-0.70710670948028564453125,-0.70710694789886474609375";
+    }
+  }
+}

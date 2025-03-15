@@ -1,0 +1,21 @@
+CUpgradeAction WorkerArmAction {
+  name = Arm
+  instant = 1
+  visible = 1
+  hide_in_pve = 1
+  icon = 2,1
+  program = PrgUpgrade
+  duration = 3
+  replace = Warrior
+}
+
+CUpgradeAction TechnicianArmAction {
+  name = Arm
+  instant = 1
+  visible = 1
+  hide_in_pve = 1
+  icon = 2,1
+  program = PrgUpgrade
+  duration = 10
+  replace = Trooper
+}

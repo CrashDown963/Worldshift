@@ -1,0 +1,147 @@
+Mob KharumShaman : BaseMob {
+  name : Shaman.name
+  descr : Shaman.descr
+  model = Data/Models/Units/Shaman/Shaman.kfm
+  race = mutants
+  icon = 1,25
+  
+  physics {
+    default = data/models/units/Trooper/TownGuard_Proxy.pml
+    die = Data/Models/Units/Shaman/Shaman.pml
+  }
+  destruction = ragdoll
+  
+  tags = unit, organic
+  impacts : LivingUnitImpacts
+
+  stats :{
+
+    drain_life_chance = 25
+    drain_life_purge = 0
+    
+    rejuvenation_psicost = 120
+    rejuvenation_amount = 160
+    
+    purify_psicost = 80
+    purify_range = 1000
+
+    hp = 420
+    range = 1700
+    energy = 420
+    armor = 0
+    damage = 10
+   
+  }
+
+  hull = stat:hp
+  range = stat:range
+  battery = stat:energy
+  armor = stat:armor
+  damage = stat:damage
+
+  
+  drain_life_damage = stat:damage 
+  drain_life_heal = stat:damage * 4
+  
+  rejuvenation_range = stat:range
+
+  xp = 0
+  take_auras : { RestorationCoreAura }
+  
+  abilities {
+    DrainLife {
+      when = fight
+      target = current { tags = organic }
+      chance = stat:drain_life_chance
+      cast {
+        prepare {
+          anim = cast_drnlife_prepare
+        }
+        finish {
+          anim = cast_finish
+        }
+      }
+
+      projectile = beam {
+        start_point = pt_hand
+        beam = DrainLifeLightning -- { add relevant parameters for tune: scale, emittanc, etc }
+        duration = 0.2
+--        damage = stat:damage * 2
+      }
+
+      effect = E_set {
+        effect = E_damage {
+--          amount = stat:drain_life_damage
+          amount = stat:drain_life_damage
+          react = drain_life
+        }
+        effect = E_heal {
+--          amount = stat:drain_life_damage
+          amount = stat:drain_life_damage
+          tags = organic, ally -- ??
+          area = 600 { anim = data/models/effects/magic/ReliefAreaEffect.kfm }
+          target_self = 1
+        }
+        effect = E_cleanse {
+          amount = 1
+          ally = 1
+          react = cleanse
+          active = stat:drain_life_purge
+        }
+      }
+    }
+    
+    AIRenew {
+      action = RenewAction
+      when   : abi.always
+      target = ally { 
+        health_hp_taken = stat:rejuvenation_amount;
+        aoe_range = 500;
+        aoe_min_wounded_count = 1
+        aoe_min_wounded_health = 400
+      }
+      range = 2000
+    }
+  }
+  
+  actions : BaseUnit.actions {
+    RenewAction
+    PurifyAction
+  }
+
+  attack_spell = PyrokinesisSpell
+  --fight_method = DrainLifeAttack
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+ 
+  animation {
+    cast_pyrokinesis_prepare = cast_praparation
+    cast_pyrokinesis_finish = cast_finish
+
+    cast_drnlife_channeling = cast_praparation
+    cast_drnlife_prepare = cast_praparation
+    cast_drnlife_finish = drainpsi_start
+    
+    cast_rejuvenation_prepare = cast_praparation
+    cast_rejuvenation_finish = drainpsi_start
+    
+    cast_purify_prepare = cast_praparation
+    cast_purify_finish = drainpsi_start
+  }
+
+  -- drnlife cast spell
+  drnlife_range = stat:range * 0.9
+  drnlife_max_range = stat:range
+  drnlife_duration = 5
+  drnlife_beam_timelife = 2.0
+  drnlife_beam_spawn_time = 1
+  drnlife_beam = DrainLifeLightning
+  drnlife_react = drain_life
+  drnlife_source = pt_hand
+  drnlife_attach = data/models/effects/magic/drainhands.nif
+  drnlife_beam_color = 0.8,0.6,0.1
+  drnlife_heal_perc = 30
+
+  cost : pvp.mutants.unit_costs.Officer
+}

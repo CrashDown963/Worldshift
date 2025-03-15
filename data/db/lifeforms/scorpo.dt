@@ -1,0 +1,20 @@
+Mob Scorpo : BaseAnimal {
+  name = "Scorpo"
+  model = data/models/lifeforms/Scorpo/scorpo.kfm
+  destruction = animation
+
+  speed = 400
+  scale = 0.8
+
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+    }
+  }
+
+  stats : {
+    range = 50
+  }
+
+  range = stat:range
+}

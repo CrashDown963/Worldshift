@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\projectiles\grenade\grenade2.nif";
+  animation = {
+    loop = fixp:"1";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0.66870176792144775390625,-1.26678264141082763671875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"HandGrenade";
+      translation = xpoint3:"-0.66870176792144775390625,1.26678264141082763671875,0";
+      rotation = {
+        0 = xpoint3:"0.862508594989776611328125,0,-0.506042420864105224609375";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0.506042420864105224609375,0,0.862508594989776611328125";
+      }
+    }
+  }
+}

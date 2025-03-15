@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\flora\grass\water_vegetation\water-clover_small.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

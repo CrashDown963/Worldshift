@@ -1,0 +1,22 @@
+Mob WorkerMob : BaseMob {
+  name : Worker.name
+  icon = 5,9
+  descr : Worker.descr
+  race = mutants
+  model = Data/Models/Units/Worker/Worker.kfm  
+
+
+  tags = unit, organic, lowrank
+  impacts : LivingUnitImpacts
+  take_auras : { RestorationCoreAura }
+  sight = 1400
+  hp = 150
+  walk_speed = 180
+  armor = 0
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+}
+

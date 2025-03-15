@@ -1,0 +1,115 @@
+Unit Warrior : BaseUnit {
+  name = "Warrior"
+  descr = "Warrior Desc."
+  model = Data/Models/Units/Warrior/Warrior.kfm
+  race = mutants
+  icon = 5,2
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Warrior/Warrior.pml
+  }
+  destruction = ragdoll
+
+  tags = unit, organic, lowrank
+  take_auras : { RestorationCoreAura }
+  
+  
+   stats :{
+    hp = 220
+    armor = 0
+    damage = 12
+    range = 1600
+  }
+  
+  speed = 450
+
+  sounds {
+    start = data/speech/summoning/warrior summoned.wav
+    attack = data/speech/confirmations/warrior/warrior attack/
+    select = data/speech/selecting/warrior select/
+    joke = data/speech/selecting/warrior joke/
+    confirm = data/speech/confirmations/warrior/warrior confirm/
+    destruction = data/speech/deaths/warrior death/
+    engage = data/speech/engage alerts/warrior engage/
+    damage = data/speech/engage alerts/warrior damage/
+  }
+
+  tags = unit, organic
+  
+  actions :{
+    MakeShrine -- fake
+  }
+  
+  abilities {
+    SharpShooterAbi {
+      name = "Sharp Shooter"
+      text = "The Warrior is very efficient while shooting at his maximum range. However, he quickly looses effciency if forced into close range combat."
+      icon = 1,0
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -55
+      shoot_up = 50
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -55
+      shoot_idle_up = 50
+    }
+    shoot_var_2 = 0 {
+      shoot_var_2_down = -60
+      shoot_var_2_up = 60
+    }
+    shoot_idle_var_2 = 0 {
+      shoot_var_2_idle_down = -60
+      shoot_var_2_idle_up = 60
+    }
+  }
+  
+  impacts : LivingUnitImpacts
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.6
+    range_near = stat:range * 0.2
+    proximity_bonus = 0.4
+    idle_time = 0.1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    aim_tolerance = 45
+    shoot_anim_1 = shoot
+    shoot_idle_1 = shoot_idle
+    shoot_anim_2 = shoot_var_2
+    shoot_idle_2 = shoot_idle_var_2
+    anim_shuffle = 2,4
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 6000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+        scale = 0.75
+        E = 180,50,20
+      }
+    }
+    spot_impact = 1500
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Laser/ShootMedium/
+  }
+  cost : pvp.mutants.unit_costs.Warrior
+  cost_sloc : pvp.mutants.sloc_costs.Warrior
+}
+  

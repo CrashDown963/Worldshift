@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\detailobjects\broccolitest.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object06";
+    translation = xpoint3:"-309.4384765625,61.192230224609375,-0.80027008056640625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

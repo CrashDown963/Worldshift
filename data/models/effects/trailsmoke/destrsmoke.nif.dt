@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\effects\trailsmoke\destrsmoke.nif";
+  animation = {
+    loop = fixp:"0.666666686534881591796875";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"SpraySmoke-Emitter";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

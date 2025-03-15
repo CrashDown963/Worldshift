@@ -1,0 +1,103 @@
+Building M33Breeder : BaseBuilding {
+  name : Breeder.name
+  descr : Breeder.descr
+  icon = 4,11
+  race = aliens
+  
+  model = Data/Models/buildings/BreederPortal/Breeder.kfm {
+    die = Data/Models/buildings/BreederPortal/Breeder_die.nif
+  }
+  
+  destruction = animation
+  attackable = 1
+
+  stats :{
+    hp = 25000
+    range = 1800
+    suppression_field_slow_perc = 50
+    corruption_field_damage = 10
+  }
+  
+  hp_gen = stat:hp
+  sight = 3500
+
+  animation {
+    anim_seq upgrade_finished = loop {
+      upgrade = once
+      idle
+    }
+  }
+  
+  abilities {
+    SuppressionField {
+      name : Portal.abilities.SuppressionField.name
+      text : Portal.abilities.SuppressionField.text
+      icon : Portal.abilities.SuppressionField.icon
+    }
+    CorruptionField {
+      name : Portal.abilities.CorruptionField.name
+      text : Portal.abilities.CorruptionField.text
+      icon = Portal.abilities.CorruptionField.icon
+    }
+  }
+
+  CEffectAura M33BreederSuppressionFieldAura {
+    range = var:sight
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = SuppressionField
+      name = "Supperssion Field"
+      text = "This unit is slowed down by a Suppression Field."
+      icon = 2,16
+      type = slow
+      cleansable = 0
+      duration = -1
+      stats_change {
+        speed_mod = { perc = stat:suppression_field_slow_perc * -1 }
+      }
+      tick = 1
+      immediate_tick = 1
+      discard_react = 1
+      --react = chill
+      stack_count = 1
+    }
+  }
+  
+  CEffectAura M33BreederCorruptionFieldAura {
+    range = var:sight
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = CorruptionField
+      name = "Corruption Field"
+      text = "This unit is poisoned by a Corruption Field."
+      icon = 2,15
+      type = damage
+      damage = stat:corruption_field_damage * 0.1
+      damage_type = poison
+      --show_text_feedback = 1
+      
+      duration = -1
+      
+      tick = 1
+      --immediate_tick = 1
+      discard_react = 1
+      react = poison
+      repeat_react = 1
+      stack_count = 1
+      cleansable = 0
+    }
+  }
+  
+  CDamageEffect M33BreederBoomEffect {
+    area = 2000 {
+      anim = data/Models/Effects/Fire/FireSweep.kfm  
+      sound = data/sounds/units/stone ghost/shot/sg 2.wav
+      scale = 4.5
+    }
+    amount = 2500
+    react = death_rumble
+  }
+  
+}

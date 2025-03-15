@@ -1,0 +1,117 @@
+model = {
+  file = str:"data\models\effects\plasmaexplosion\plasmaexplosion.nif";
+  animation = {
+    loop = fixp:"3.3333332538604736328125";
+    duration = fixp:"0.3333333432674407958984375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Dummy01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #8 = {
+      scale = fixp:"1";
+      name = str:"Dummy01 NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Deflector01";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Drag01";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray02-Emitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray06-Emitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray07-Emitter";
+        translation = xpoint3:"8.3161773681640625,-2.7139875888824462890625,32.2440948486328125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"Drag02";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #6 = {
+        scale = fixp:"1";
+        name = str:"Gravity02";
+        translation = xpoint3:"141.592010498046875,-151.1394500732421875,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,-1";
+        }
+      }
+      #7 = {
+        scale = fixp:"1";
+        name = str:"Gravity03";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,-1";
+        }
+      }
+      #8 = {
+        scale = fixp:"1";
+        name = str:"Sphere01";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

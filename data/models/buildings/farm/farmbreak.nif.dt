@@ -1,0 +1,817 @@
+model = {
+  file = str:"data\models\buildings\farm\farmbreak.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Debris01";
+    translation = xpoint3:"27.5977611541748046875,-321.799530029296875,119.735137939453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Debris02";
+    translation = xpoint3:"411.38037109375,-143.8150634765625,12.5806121826171875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Debris03";
+    translation = xpoint3:"347.044921875,-183.7592620849609375,12.58060932159423828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Debris04";
+    translation = xpoint3:"348.359130859375,-189.2708587646484375,38.41831207275390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"Debris05";
+    translation = xpoint3:"339.554656982421875,-125.42510986328125,12.580608367919921875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"Debris06";
+    translation = xpoint3:"332.688873291015625,-128.7428436279296875,39.310657501220703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"Debris07";
+    translation = xpoint3:"334.19488525390625,-153.7299957275390625,64.68930816650390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"Debris08";
+    translation = xpoint3:"357.35888671875,-284.023468017578125,12.580608367919921875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #8 = {
+    scale = fixp:"1";
+    name = str:"Debris13";
+    translation = xpoint3:"390.7979736328125,301.4989013671875,12.58060932159423828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #9 = {
+    scale = fixp:"1";
+    name = str:"Debris14";
+    translation = xpoint3:"337.05169677734375,420.929718017578125,12.58060932159423828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #10 = {
+    scale = fixp:"1";
+    name = str:"Debris15";
+    translation = xpoint3:"291.538970947265625,446.900177001953125,12.58060932159423828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #11 = {
+    scale = fixp:"1";
+    name = str:"Debris16";
+    translation = xpoint3:"218.6717529296875,422.542449951171875,12.58060932159423828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #12 = {
+    scale = fixp:"1";
+    name = str:"Debris17";
+    translation = xpoint3:"211.341583251953125,482.037841796875,12.58060932159423828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #13 = {
+    scale = fixp:"1";
+    name = str:"Debris18";
+    translation = xpoint3:"218.0235443115234375,416.213714599609375,38.30641937255859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #14 = {
+    scale = fixp:"1";
+    name = str:"Debris19";
+    translation = xpoint3:"299.73431396484375,433.319915771484375,38.30641937255859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #15 = {
+    scale = fixp:"1";
+    name = str:"Debris20";
+    translation = xpoint3:"204.219146728515625,477.834747314453125,38.30641937255859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #16 = {
+    scale = fixp:"1";
+    name = str:"Debris21";
+    translation = xpoint3:"206.47265625,452.61492919921875,65.55281829833984375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #17 = {
+    scale = fixp:"1";
+    name = str:"Debris22";
+    translation = xpoint3:"44.0651397705078125,313.667022705078125,95.24123382568359375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #18 = {
+    scale = fixp:"1";
+    name = str:"Debris29";
+    translation = xpoint3:"-66.26470184326171875,62.6290283203125,414.1270751953125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #19 = {
+    scale = fixp:"1";
+    name = str:"Debris32";
+    translation = xpoint3:"-321.080718994140625,-154.1374359130859375,558.2860107421875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #20 = {
+    scale = fixp:"1";
+    name = str:"Debris34";
+    translation = xpoint3:"169.270538330078125,222.9313507080078125,319.3138427734375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #21 = {
+    scale = fixp:"1";
+    name = str:"Debris35";
+    translation = xpoint3:"298.249542236328125,105.72628021240234375,268.8692626953125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #22 = {
+    scale = fixp:"1";
+    name = str:"Debris36";
+    translation = xpoint3:"406.242767333984375,148.1159820556640625,142.872711181640625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #23 = {
+    scale = fixp:"1";
+    name = str:"Debris37";
+    translation = xpoint3:"406.242767333984375,-86.982513427734375,128.5854339599609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #24 = {
+    scale = fixp:"1";
+    name = str:"Debris38";
+    translation = xpoint3:"298.5185546875,385.503662109375,122.15616607666015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #25 = {
+    scale = fixp:"1";
+    name = str:"Debris39";
+    translation = xpoint3:"108.6601715087890625,-270.757080078125,267.54168701171875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #26 = {
+    scale = fixp:"1";
+    name = str:"Debris40";
+    translation = xpoint3:"293.25933837890625,147.97503662109375,88.4539642333984375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #27 = {
+    scale = fixp:"1";
+    name = str:"Debris41";
+    translation = xpoint3:"298.5185546875,-86.6334228515625,122.15616607666015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #28 = {
+    scale = fixp:"1";
+    name = str:"Debris42";
+    translation = xpoint3:"307.77130126953125,-389.67193603515625,116.12165069580078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #29 = {
+    scale = fixp:"1";
+    name = str:"Debris43";
+    translation = xpoint3:"103.429412841796875,-389.67193603515625,116.12165069580078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #30 = {
+    scale = fixp:"1";
+    name = str:"Debris44";
+    translation = xpoint3:"141.64263916015625,-298.31884765625,34.18383026123046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #31 = {
+    scale = fixp:"1";
+    name = str:"Debris45";
+    translation = xpoint3:"118.8670501708984375,-314.543548583984375,39.664581298828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #32 = {
+    scale = fixp:"1";
+    name = str:"Debris46";
+    translation = xpoint3:"-429.04217529296875,-143.32257080078125,41.354267120361328125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #33 = {
+    scale = fixp:"1";
+    name = str:"Debris47";
+    translation = xpoint3:"-464.4398193359375,-149.28948974609375,35.8735198974609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #34 = {
+    scale = fixp:"1";
+    name = str:"Debris48";
+    translation = xpoint3:"406.7486572265625,31.464813232421875,36.930377960205078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #35 = {
+    scale = fixp:"1";
+    name = str:"Debris49";
+    translation = xpoint3:"406.748687744140625,267.267608642578125,36.930377960205078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #36 = {
+    scale = fixp:"1";
+    name = str:"Debris09";
+    translation = xpoint3:"371.732879638671875,-333.5423583984375,-2.640476226806640625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #37 = {
+    scale = fixp:"1";
+    name = str:"Debris10";
+    translation = xpoint3:"343.25927734375,-377.62261962890625,-2.640476226806640625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #38 = {
+    scale = fixp:"1";
+    name = str:"Debris11";
+    translation = xpoint3:"333.51910400390625,-328.91888427734375,-2.640475749969482421875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #39 = {
+    scale = fixp:"1";
+    name = str:"Debris12";
+    translation = xpoint3:"344.881591796875,-279.42852783203125,17.4351978302001953125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #40 = {
+    scale = fixp:"1";
+    name = str:"Debris23";
+    translation = xpoint3:"-19.442913055419921875,493.101287841796875,-4.63720703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #41 = {
+    scale = fixp:"1";
+    name = str:"Debris24";
+    translation = xpoint3:"-307.294586181640625,361.53228759765625,94.03598785400390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #42 = {
+    scale = fixp:"1";
+    name = str:"Debris25";
+    translation = xpoint3:"-531.92877197265625,297.523681640625,-4.63720703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #43 = {
+    scale = fixp:"1";
+    name = str:"Debris26";
+    translation = xpoint3:"-476.267852783203125,236.815704345703125,-4.63720607757568359375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #44 = {
+    scale = fixp:"1";
+    name = str:"Debris27";
+    translation = xpoint3:"-535.9454345703125,195.079864501953125,-4.63720607757568359375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #45 = {
+    scale = fixp:"1";
+    name = str:"Debris28";
+    translation = xpoint3:"-545.3902587890625,-36.12359619140625,-4.63720607757568359375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #46 = {
+    scale = fixp:"1";
+    name = str:"Debris30";
+    translation = xpoint3:"-333.43267822265625,64.8970947265625,271.614288330078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #47 = {
+    scale = fixp:"1";
+    name = str:"Debris31";
+    translation = xpoint3:"-306.7711181640625,-300.094940185546875,240.65350341796875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #48 = {
+    scale = fixp:"1";
+    name = str:"Debris33";
+    translation = xpoint3:"-330.04296875,60.60052490234375,537.451171875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #49 = {
+    scale = fixp:"1";
+    name = str:"Debris50";
+    translation = xpoint3:"-85.16864013671875,351.77276611328125,68.99037933349609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #50 = {
+    scale = fixp:"1";
+    name = str:"Debris51";
+    translation = xpoint3:"309.579986572265625,-86.76123046875,268.616546630859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #51 = {
+    scale = fixp:"1";
+    name = str:"Debris52";
+    translation = xpoint3:"301.697509765625,221.61724853515625,268.616546630859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #52 = {
+    scale = fixp:"1";
+    name = str:"Debris53";
+    translation = xpoint3:"337.64532470703125,84.3911285400390625,268.616546630859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #53 = {
+    scale = fixp:"1";
+    name = str:"Debris54";
+    translation = xpoint3:"367.137054443359375,170.6572418212890625,320.70916748046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #54 = {
+    scale = fixp:"1";
+    name = str:"Debris55";
+    translation = xpoint3:"374.09197998046875,35.354339599609375,317.340576171875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #55 = {
+    scale = fixp:"1";
+    name = str:"Debris56";
+    translation = xpoint3:"-253.51959228515625,363.7137451171875,209.061004638671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #56 = {
+    scale = fixp:"1";
+    name = str:"Debris57";
+    translation = xpoint3:"-356.565673828125,377.0377197265625,219.8874969482421875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #57 = {
+    scale = fixp:"1";
+    name = str:"Debris58";
+    translation = xpoint3:"336.001953125,-238.0166015625,152.225372314453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #58 = {
+    scale = fixp:"1";
+    name = str:"Debris59";
+    translation = xpoint3:"226.862762451171875,-238.016632080078125,290.854248046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #59 = {
+    scale = fixp:"1";
+    name = str:"Debris60";
+    translation = xpoint3:"11.0835475921630859375,-238.0166015625,191.8039703369140625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #60 = {
+    scale = fixp:"1";
+    name = str:"Debris61";
+    translation = xpoint3:"148.7643585205078125,-159.6251373291015625,149.9907073974609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #61 = {
+    scale = fixp:"1";
+    name = str:"Debris62";
+    translation = xpoint3:"148.7643585205078125,61.4474334716796875,77.99517059326171875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #62 = {
+    scale = fixp:"1";
+    name = str:"Debris63";
+    translation = xpoint3:"161.4310455322265625,61.44742584228515625,250.47735595703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #63 = {
+    scale = fixp:"1";
+    name = str:"Debris64";
+    translation = xpoint3:"-14.1156005859375,246.807464599609375,84.76007080078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #64 = {
+    scale = fixp:"1";
+    name = str:"Debris65";
+    translation = xpoint3:"-14.1155986785888671875,246.807464599609375,268.295135498046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #65 = {
+    scale = fixp:"1";
+    name = str:"Debris66";
+    translation = xpoint3:"-116.75652313232421875,-108.230377197265625,176.9890289306640625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #66 = {
+    scale = fixp:"1";
+    name = str:"Debris67";
+    translation = xpoint3:"-116.75652313232421875,115.61981201171875,176.9890289306640625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #67 = {
+    scale = fixp:"1";
+    name = str:"Debris68";
+    translation = xpoint3:"-34.65619659423828125,-1.11852264404296875,312.298004150390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #68 = {
+    scale = fixp:"1";
+    name = str:"Debris69";
+    translation = xpoint3:"89.17718505859375,-187.50177001953125,312.298004150390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #69 = {
+    scale = fixp:"1";
+    name = str:"Debris70";
+    translation = xpoint3:"88.5977020263671875,31.62237548828125,312.298004150390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #70 = {
+    scale = fixp:"1";
+    name = str:"Debris71";
+    translation = xpoint3:"8.10205841064453125,77.6792144775390625,330.24932861328125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #71 = {
+    scale = fixp:"1";
+    name = str:"Debris72";
+    translation = xpoint3:"79.38970184326171875,333.02288818359375,79.61572265625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #72 = {
+    scale = fixp:"1";
+    name = str:"Debris73";
+    translation = xpoint3:"218.7596435546875,-396.87457275390625,280.224853515625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #73 = {
+    scale = fixp:"1";
+    name = str:"Debris74";
+    translation = xpoint3:"208.27789306640625,-353.936492919921875,244.59619140625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #74 = {
+    scale = fixp:"1";
+    name = str:"BaseBone";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #75 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Farm";
+      translation = xpoint3:"-17.007568359375,26.3218994140625,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #76 = {
+    scale = fixp:"1";
+    name = str:"Debris75";
+    translation = xpoint3:"-526.904541015625,65.638641357421875,130.27447509765625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #77 = {
+    scale = fixp:"1";
+    name = str:"Debris76";
+    translation = xpoint3:"-485.825836181640625,-298.7972412109375,129.8924560546875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #78 = {
+    scale = fixp:"1";
+    name = str:"Debris77";
+    translation = xpoint3:"-310.160552978515625,-475.890106201171875,129.8924560546875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #79 = {
+    scale = fixp:"1";
+    name = str:"Debris78";
+    translation = xpoint3:"-334.99517822265625,258.725372314453125,175.98065185546875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

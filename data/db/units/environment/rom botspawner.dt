@@ -1,0 +1,10 @@
+Mob ROMBotSpawner : BaseMob {
+  name: ROMMegaCannonPowerCore.name
+  model = Data/Models/buildings/DefencePost/DefencePost_build.nif
+  icon = 2,26
+  explosion = ExplosionMedium_03
+  movable = 0
+  hp = 4000;
+  damage = 0
+  sight = 0
+}

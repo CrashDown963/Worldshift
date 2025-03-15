@@ -1,0 +1,337 @@
+﻿sid	text:de
+	
+//// Common labels	
+ok	O. K.
+cancel	ABBRECHEN
+yes	JA
+no	NEIN
+error	FEHLER
+	
+//// Entrance screen	
+text_current_profile	AKTUELLES PROFIL:
+text_current_profile_gs	AKTUELLES PROFIL (GameSpy-ID):
+enter game	SPIEL BETRETEN
+entering lobby	Betritt Lobby ...
+change profile	PROFIL ÄNDERN
+replay intro	INTRO WIEDERHOLEN
+credits	MITWIRKENDE
+exit to desktop	ZUM DESKTOP
+incorrect password	Das eingegebene Passwort ist nicht korrekt.
+gamespy_ttl	GameSpy
+gslegal_text	Dieses Produkt beinhaltet Software-Technologie, die unter Lizenz von GameSpy Industries, Inc. verwendet wird. © 1999-2007 GameSpy Industries, Inc. GameSpy und das „Powered By GameSpy“-Logo sind Marken von GameSpy Industries, Inc. Alle Rechte vorbehalten.
+	
+//// Profiles window	
+profiles	Profile
+selected profiles	Wählen Sie ein bestehendes Profil oder erstellen Sie ein neues.
+local account	Lokales Profil
+gamespy id account	GameSpy-ID-Profil
+new	Neu
+del	Entf
+delete account ttl	Profil löschen
+delete account	Soll das Profil auch bei GameSpy gelöscht werden?
+enter password:	Passwort eingeben:
+	
+//// New Profile window	
+create account	Profil erstellen
+name	Name
+psw	Pw
+email	E-Mail
+no profile	Kein Profil zum Löschen ausgewählt!
+	
+//// Main screen	
+missions	MISSIONEN
+special locations btn	SPEZIAL-<nl>KARTE
+pvp	DEATHMATCH
+skirmish	GEFECHT
+practice	TRAINING
+abilities btn	FÄHIGKEITENFELD
+chat settings	CHAT-EINSTELLUNGEN
+settings	EINSTELLUNGEN
+exit	BEENDEN
+exiting	WIRD BEENDET ...
+text_no_sp_locations	Sie haben noch keine Spezialkarten entdeckt.
+	
+//// Missions window	
+clicktoviewinfo	Weitere Informationen:<nl>links eine Mission wählen
+locked_mission	Diese Mission ist noch gesperrt.
+completed	ABGESCHLOSSEN
+fastest time	BESTE ZEIT: [#] Std. [#] Min. [#] Sek.
+rewards:	BELOHNUNGEN:
+replay	WIEDERHOLEN
+	
+//// Game List window	
+all locations	ALLE KARTEN
+all	ALLE
+big	GROSS
+small	KLEIN
+ping	PING
+quick join	SCHNELLBEITRITT
+join	BEITRETEN
+error joining	BEITRITTSFEHLER
+create	ERSTELLEN
+special locations	SPEZIALKARTEN
+open special location games	SPEZIALKARTEN-SPIELE ÖFFNEN
+open practice games	TRAININGSSPIELE ÖFFNEN
+err_onlysingle	DIESE KARTE IST NUR IM EINZELSPIELER-MODUS VERFÜGBAR.
+err_toobigteam	IHR TEAM IST ZU GROSS FÜR DIESE KARTE.
+auto_findgame	VERSUCHT, SPIEL ZU FINDEN ...
+auto_findteam	VERSUCHT, TEAM ZU FINDEN ...
+the game is full	Das Spiel ist voll.
+	
+//// Active Game window	
+special location	SPEZIALKARTE
+pvp_title	Deathmatch
+arr_team	Festes Team
+random_player	Zufällig ausgewählter Spieler
+random	Zufall
+team	Team
+pvp_help	<color=255, 143, 51><b>Deathmatch-Optionen</></><nl><nl>Bei Deathmatch-Spielen kämpfen Sie gegen unbekannte Gegner und verdienen sich Artefakte.<nl>Wählen Sie zwischen den Teamgrößen „1-vs.-1“, „2-vs.-2“ oder „3-vs.-3“.<nl>Wählen Sie „Team“ oder „Zufall“, um die Art Ihrer Gruppe zu bestimmen.<nl>Über „Team“ können Sie bestimmte Spieler einladen, bei „Zufall“ spielen Sie in einer willkürlich zusammengestellten Gruppe.<nl>Die Mitglieder eines zufälligen Teams werden ausgewählt, nachdem Sie auf „Start“ geklickt haben.<nl>Die automatische Zuordnung wählt ein gegnerisches Team desselben Typs (fest oder zufällig).
+hard ai	Starke KI
+easy ai	Schwache KI
+s game	Spiel von [#]
+s game: 	Spiel von [#]:
+s line up	Aufstellung von [#]
+1v1	1-vs.-1
+2v2	2-vs.-2
+3v3	3-vs.-3
+<closed>	<gesperrt>
+<open>	<frei>
+leave	VERLASSEN
+start	START
+	
+//// Chat settings window	
+friends list	FREUNDELISTE
+ignore list	IGNORIEREN-LISTE
+chat_tab	KANÄLE
+standart channels	STANDARDKANÄLE
+default	Voreingestellt
+default channel	Voreingestellter Kanal
+general	Allgemein
+virtual channels	VIRTUELLE KANÄLE
+tells	Privatnachrichten
+created game lobby	Erstelltes Spiel
+user channels	BENUTZERKANÄLE
+text_unassigned	<nicht zugewiesen>
+sl_invalidchannelname	Ungültige Kanalbezeichnung. Es gelten nur lateinische Buchstaben ohne Leerzeichen!
+text_chatviewsetup_title	BENUTZER-CHAT-ANSICHT #[#]
+shorcut_assign	Drücken Sie die Schnelltaste, der Sie den Kanal „[#]“ zuweisen wollen. Enter oder Leertaste löschen die vorhandene Zuweisung, Escape beendet den Vorgang.
+chat views:	CHAT-ANSICHTEN:
+help_chatsetup	Klicken Sie auf die Ansicht-Symbole unten, um festzulegen, welche Kanäle Sie in welcher Ansicht sehen möchten.
+clicktosetupchanel	Wählen Sie die Kanäle, die Sie in Ihrer Chat-Ansicht Nr. „[#]“ sehen möchten.
+find	Suchen
+game	Spiel
+F_riend	F
+I_gnored	I
+addtofriends	Zu Freunden hinzufügen
+invitetoteam	In Team einladen
+inviteasopponent	Als Gegner einladen
+viewinfo	Info ansehen
+ignore	Ignorieren
+	
+//// Other chat-related texts	
+from	Von
+to	An
+text_user_join_game	<i><color=180,180,180>Der Spieler „[#]“ ist dem Spiel beigetreten.</></>
+text_user_left_game	<i><color=180,180,180>Der Spieler „[#]“ hat das Spiel verlassen.</></>
+text_user_rename	<i><color=180,180,180>Der Spieler „[#]“ heißt jetzt „[#]“.</></>
+	
+//// Game invitation texts	
+invite player:	Spieler einladen:
+text_type_player_name	<Name hier eingeben>
+accept	Annehmen
+decline	Ablehnen
+invitation_ttl	Einladung
+invitation_msg	Der Spieler „[#]“ lädt Sie zum Spielbeitritt ein.
+invitation_accepted	Der Spieler „[#]“ hat Ihre Einladung angenommen.
+invitation_declined	Der Spieler „[#]“ hat Ihre Einladung abgelehnt.
+invitation_invalid	Die Einladung von „[#]“ ist nicht mehr gültig.
+invitation_sent	Sie haben eine Einladung an den Spieler „[#]“ gesendet.
+sl_invitationcanceled	Ihre Einladung wurde zurückgezogen.
+sl_invitationtimedout	Ihre Einladung ist abgelaufen.
+sl_invitationnotfound	Sie haben keine Einladung von diesem Spieler.
+sl_invitationrejected	Ihre Einladung wurde zurückgewiesen.
+	
+//// Automatch-related texts	
+automatcherr_playerleft	Der Spieler „[#]“ hat die automatische Zuordnung abgebrochen.
+autojoinerr_timedout	Zeitüberschreitung: Der Beitrittsversuch ist abgelaufen.
+autojoinerr_noplayers	Die automatische Zuordnung wurde wegen Nichterscheinens einiger Spieler abgebrochen.
+	
+//// GameSpy error messages	
+gs_accountalreadycreated	Sie haben dieses Konto bereits erstellt.
+gs_deleteaccount	Fehler beim Löschen des Kontos. Entweder ist Ihr Passwort nicht korrekt oder dies ist das letzte Profil ihres Kontos.
+gs_incorrectpassword	Das eingegebene Passwort ist nicht korrekt.
+gs_invalidemail	Die E-Mail-Adresse ist ungültig.
+gs_invalidnick	Der eingegebene Spielername ist ungültig, es gelten nur Buchstaben ohne Leerzeichen.
+gs_invalidparams	Ungültige Parameter.
+gs_invalidpassword	Das eingegebene Passwort ist nicht korrekt.
+gs_login	Fehler bei der Anmeldung.
+gs_loginincorrect	Die eingegebenen Anmeldedaten sind nicht korrekt.
+gs_nickalreadyused	Der gewählte Spielername ist schon vergeben.
+gs_persistisinprogess	Spielerdaten werden gespeichert.
+gs_persistloaderr	Fehler beim Laden des Spielerprofils.
+gs_persistsaveerr	Fehler beim Speichern des Spielerprofils.
+gs_servererror	Beim Versuch, eine Verbindung zum Server aufzubauen, ist ein Problem aufgetreten.
+gs_servicenotavailable	Der Online-Dienst für WorldShift ist nicht mehr verfügbar.
+gs_unabletoconnect	Verbindung zum Server nicht möglich oder während des Verbindungsaufbaus abgebrochen.
+gs_unknown	Ein unbekannter Online-Fehler ist aufgetreten.
+gs_servicetemporarynotavailable	Der Online-Dienst für WorldShift ist aufgrund von Wartungsarbeiten zeitweise nicht verfügbar.
+gs_qrsocket	Beim Melden des erstellten Spiels ist ein Fehler aufgetreten.
+gs_qrbind	Beim Melden des erstellten Spiels ist ein Fehler aufgetreten.
+gs_qrdns	Beim Melden des erstellten Spiels ist ein Fehler aufgetreten.
+gs_qrconn	Beim Melden des erstellten Spiels ist ein Fehler aufgetreten.
+gs_qrnochallenge	Beim Melden des erstellten Spiels ist ein Fehler aufgetreten.
+requested operation timed out	Zeitüberschreitung: Die gewünschte Aktion konnte nicht ausgeführt werden.
+	
+//// Ability Grid window	
+humans	MENSCHEN
+tribes	STÄMME
+the cult	DER KULT
+ability grid	FÄHIGKEITENFELD
+inventory	INVENTAR
+specialization	SPEZIALISIERUNGEN
+defence	Xenotronik
+implants	Nanotechnologie
+weapon	Metachemie
+nature	Natur
+blood	Blut
+mind	Gedanken
+power	Macht
+corruption	Korruption
+dogma	Dogma
+invalid	Ungültiger Platz!
+stritemreject	GEGENSTAND NICHT AUSRÜSTBAR
+gems: 	Xenoscherben:
+gems2	Xenoscherben: [#]/[#]
+nogems	Nicht genug Xenoscherben.
+prednotrev	Sie benötigen die vorherigen Spezialisierungen.
+noreqstars	Es sind mehr Sterne bei einer vorherigen Spezialisierung erforderlich.
+nostars	Nicht genug Sterne.
+reset	ZURÜCKSETZEN
+	
+//// Settings window	
+video	Grafik
+screen resolution:	Bildschirmauflösung:
+fullscreen mode	Im Vollbildmodus abspielen
+tex_detail	Texturenqualität
+tex_detail_vhigh	Sehr hoch
+tex_detail_high	Hoch
+tex_detail_med	Mittel
+tex_detail_low	Niedrig
+tex_detail_vlow	Sehr niedrig
+shader_detail	Shaderqualität
+shader_detail_high	Hoch
+shader_detail_med	Mittel
+shader_detail_low	Niedrig
+models_detail	Modellqualität
+models_detail_high	Hoch
+models_detail_med	Mittel
+models_detail_low	Niedrig
+shadow_detail	Schattenqualität
+shadow_detail_normal	Normal
+shadow_detail_low	Niedrig
+shadow_detail_off	Aus
+reflections_check	Reflexionen
+vsync_check	Vsync
+postprocess_check	Postprocess-Effekte
+sett_temp_info	Die Einstellungen für Shader, Schatten und Vsync werden beim nächsten Spielstart übernommen.
+audio	Audio
+volume:	Lautstärke:
+mute sound	Ton aus
+close	Schließen
+	
+//// Starting a game	
+startgame_waitforjoin	WARTET AUF BEITRITT ZU ERSTELLTEM SPIEL ...
+startgame_waitforparty	WARTET AUF BEITRITT DER GRUPPE ZUM SPIEL ...
+startgame_waitforplayers	WARTET AUF SPIELER ...
+startstr	LÄDT KARTE ...
+starting game	STARTET SPIEL ...
+loading...	Lädt ...
+done	Fertig
+	
+//// Selection Info window	
+effects	Effekte
+health_stat	Trefferpunkte
+health_stat_d	Trefferpunkte zeigen an, wie viel Schaden eine Einheit nehmen kann, bevor sie zerstört wird.
+armour_stat	Panzerung
+armour_stat_d	Die Panzerungspunkte bestimmen, welcher Anteil des vom Feind verursachten Schadens von den aktuellen Trefferpunkten abgezogen wird.
+damage_stat	Schaden
+damage_stat_d	Zeigt an, wie viele Trefferpunkte ein einzelner Angriff bei einem Ziel ohne Panzerung verursacht.
+damagerange_stat	Schaden nach Entfernung
+damagerange_stat_d	Der Angriffsbereich der Einheiten ist in Unterbereiche eingeteilt. Die Einheit verursacht maximalen Schaden, wenn sich der Feind im grünen Entfernungsbereich befindet. Der Schaden nimmt im gelben Bereich ab und ist im orangefarbenen Bereich nur minimal.
+crit_stat	Chance auf kritische Treffer
+crit_stat_d	Kritische Treffer verursachen das Doppelte des normalen Angriffsschadens der Einheit.
+manna_stat	Energie
+manna_stat_d	Energie wird für die Spezialaktionen der Einheit benötigt.
+shield_stat	Schild
+shield_stat_d	Der Schild fängt einen Teil des zugefügten Schadens ab und kann einen Einzelangriff sogar unter Umständen vollständig absorbieren. Wenn er Schaden abfängt, wird der Schild aufgebraucht, und wenn seine Stärke auf 0 sinkt, funktioniert er nicht mehr. Wird die Einheit eine Zeit lang nicht angegriffen, regeneriert sich der Schild von alleine.
+description	Beschreibung
+constructing	Im Bau
+upgrading	Rüstet auf
+producing	Produziert
+active	Aktiv
+inactive	Inaktiv
+stop	Stopp
+	
+//// Faction resource names	
+humans resources ttl	Ressourcen der Menschen
+pvp.humans.res_name	Credits
+humans credits	Credits können für Einheiten, zur Aufrüstung und für globale Aktionen verwendet werden. Es gibt einen Höchstwert, daher sollte man Credits nicht horten.
+humans unit points	Die Einheitenpunkte (angezeigt als verfügbar/gesamt) legen die Größe Ihrer Armee fest. Die Punktewerte der Einheiten, die diese vom Gesamtwert verbrauchen, unterscheiden sich.
+tribes resources ttl	Ressourcen der Stämme
+pvp.mutants.res_name	Fokus
+tribes credits	Fokus kann für Einheiten, zur Aufrüstung und für globale Aktionen verwendet werden. Es gibt einen Höchstwert, daher sollte man Fokus nicht horten.
+tribes unit points	Die Einheitenpunkte (angezeigt als verfügbar/gesamt) legen die Größe Ihrer Armee fest. Die Punktewerte der Einheiten, die diese vom Gesamtwert verbrauchen, unterscheiden sich.
+the cult resources ttl	Ressourcen des Kults
+pvp.aliens.res_name	Plasma
+the cult unit credits	Plasma kann für Einheiten, zur Aufrüstung und für globale Aktionen verwendet werden. Es gibt einen Höchstwert, daher sollte man Plasma nicht horten.
+the cult unit points	Die Einheitenpunkte (angezeigt als verfügbar/gesamt) legen die Größe Ihrer Armee fest. Die Punktewerte der Einheiten, die diese vom Gesamtwert verbrauchen, unterscheiden sich.
+	
+//// Miscellaneous in-mission texts	
+pause	PAUSE
+resume	FORTSETZEN
+quit	BEENDEN
+items	GEGENSTÄNDE
+no items collected	KEINE GEGENSTÄNDE GESAMMELT
+cooldown	Intervall
+menu button ttl	Menü-Schaltfläche
+menu button	Diese Schaltfläche ruft das Missionsmenü auf.
+strner	NICHT GENUG RESSOURCEN
+strplr	BEVÖLKERUNGSLIMIT ERREICHT
+strreqnotmet	ANFORDERUNGEN NICHT ERFÜLLT
+strobjbusy	OBJEKT IN VERWENDUNG
+strunderattack	IHRE TRUPPEN WERDEN ANGEGRIFFEN!
+textofficer	Klicken Sie hier zur Auswahl des Offiziers und klicken Sie erneut, um die Ansicht auf ihn zu zentrieren.
+empty officer slot	Freier Offiziersplatz
+textofficer_empty	Um einen Offizier anzufordern, klicken Sie auf einen leeren Platz und wählen Sie einen Offizierstyp aus dem Menü aus.
+textofficer_empty_mis_sp	In Story-Missionen und auf Spezialkarten können Sie keine neuen Offiziere anfordern.
+textorder	Klicken Sie hier, um einen neuen Offizier des gezeigten Typs anzufordern.
+	
+//// Victory/Defeat screen	
+victory	Sieg
+defeat	Niederlage
+observe	Beobachten
+statistics	Statistik
+collected items	Gesammelte Gegenstände
+tech	Fähigkeitenfeld
+best_damage	Größter Schaden
+best_healing	Beste Heilung
+most_kills	Meiste Eliminierungen
+most_deaths	Meiste Verluste
+most_commands	Meiste Befehle
+damage_taken	Erlittener Schaden
+mis_complete	Mission abgeschlossen
+mis_failed	Mission gescheitert
+cur_time	Aktuelle Zeit
+fastest_time	Bestzeit
+old_fastest	Alte Bestzeit
+items_taken	Aufgenommene Gegenstände
+chs_rewards	Wählen Sie Ihre Belohnungen
+chs_reward	Wählen Sie Ihre Belohnung
+destroy_btn	Zerstören
+takeall_btn	Alle nehmen
+take_btn	Nehmen
+destroy_txt	Ziehen Sie alle gewünschten Gegenstände in Ihr Inventar und zerstören Sie den Rest. Dadurch können Sie Xenoscherben erlangen.
+destroy_succ	Sie haben die Artefakte zerstört und [#] Xenoscherben gewonnen.
+destroy_succ1	Sie haben die Artefakte zerstört und 1 Xenoscherbe gewonnen.
+destroy_fail	Sie haben die Artefakte zerstört, konnten aber keine Xenoscherben gewinnen. Vielleicht beim nächsten Mal!
+continue	Weiter

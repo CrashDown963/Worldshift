@@ -1,0 +1,317 @@
+model = {
+  file = str:"data\models\units\fav\fav.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"FAV";
+    translation = xpoint3:"0,0,2.41419219970703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Bone_Body";
+        translation = xpoint3:"0,-67.291534423828125,40.5838623046875";
+        rotation = {
+          0 = xpoint3:"0,0,0.999999940395355224609375";
+          1 = xpoint3:"0.8122971057891845703125,-0.58324372768402099609375,0";
+          2 = xpoint3:"0.583243787288665771484375,0.8122971057891845703125,0";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Dummy_FrontWheel01";
+          translation = xpoint3:"48.340145111083984375,-26.27442169189453125,0";
+          rotation = {
+            0 = xpoint3:"0,0.8122971057891845703125,0.58324372768402099609375";
+            1 = xpoint3:"0,-0.58324372768402099609375,0.812297165393829345703125";
+            2 = xpoint3:"1,0,0";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Bone_Kolesnik_Front";
+            translation = xpoint3:"0,0,0";
+            rotation = {
+              0 = xpoint3:"0,0.999999940395355224609375,0";
+              1 = xpoint3:"-0.996895134449005126953125,0,-0.078740894794464111328125";
+              2 = xpoint3:"-0.078740894794464111328125,0,0.9968950748443603515625";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"Dummy04";
+              translation = xpoint3:"98.8811798095703125,0.00387573218904435634613037109375,-13.13310718536376953125";
+              rotation = {
+                0 = xpoint3:"0,-0.996171891689300537109375,-0.07868383824825286865234375";
+                1 = xpoint3:"0.999274432659149169921875,0,0";
+                2 = xpoint3:"0,-0.07868383824825286865234375,0.99689733982086181640625";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"Dummy03";
+                translation = xpoint3:"-95.6794891357421875,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+                #0 = {
+                  scale = fixp:"1";
+                  name = str:"Bone_FRR";
+                  translation = xpoint3:"0,0,0";
+                  rotation = {
+                    0 = xpoint3:"0,0,-1";
+                    1 = xpoint3:"0,1,0";
+                    2 = xpoint3:"1,0,0";
+                  }
+                  #0 = {
+                    scale = fixp:"1";
+                    name = str:"rot_x_WheelFront02";
+                    translation = xpoint3:"40.580371856689453125,-87.04864501953125,-43.22031402587890625";
+                    rotation = {
+                      0 = xpoint3:"0,0,1.00000011920928955078125";
+                      1 = xpoint3:"0,1,0";
+                      2 = xpoint3:"-1.00000011920928955078125,0,0";
+                    }
+                    #0 = {
+                      scale = fixp:"1";
+                      name = str:"Bone_WheelFront01";
+                      translation = xpoint3:"0,0,0";
+                      rotation = {
+                        0 = xpoint3:"1,0,0";
+                        1 = xpoint3:"0,-1,0";
+                        2 = xpoint3:"0,0,-1";
+                      }
+                    }
+                  }
+                }
+              }
+              #1 = {
+                scale = fixp:"1";
+                name = str:"Dummy_RotZ_front";
+                translation = xpoint3:"0,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+              }
+              #2 = {
+                scale = fixp:"1";
+                name = str:"Dummy02";
+                translation = xpoint3:"95.6747283935546875,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+                #0 = {
+                  scale = fixp:"1";
+                  name = str:"Bone_FrL";
+                  translation = xpoint3:"0,0,0";
+                  rotation = {
+                    0 = xpoint3:"0,0,-1";
+                    1 = xpoint3:"0,1,0";
+                    2 = xpoint3:"1,0,0";
+                  }
+                  #0 = {
+                    scale = fixp:"1";
+                    name = str:"rot_x_WheelFront1";
+                    translation = xpoint3:"40.580379486083984375,-87.048614501953125,44.062976837158203125";
+                    rotation = {
+                      0 = xpoint3:"0,0,0.999999940395355224609375";
+                      1 = xpoint3:"0,1,0";
+                      2 = xpoint3:"-0.999999940395355224609375,0,0";
+                    }
+                    #0 = {
+                      scale = fixp:"1";
+                      name = str:"Bone_WheelFront";
+                      translation = xpoint3:"0,0,0";
+                      rotation = {
+                        0 = xpoint3:"1,0,0";
+                        1 = xpoint3:"0,1,0";
+                        2 = xpoint3:"0,0,1";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Dummy_RearWheel01";
+          translation = xpoint3:"133.9637908935546875,-93.23450469970703125,0";
+          rotation = {
+            0 = xpoint3:"0,0.81229698657989501953125,0.5832440853118896484375";
+            1 = xpoint3:"0,-0.5832440853118896484375,0.81229698657989501953125";
+            2 = xpoint3:"1,0,0";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Bone_Kolesnik_Rear";
+            translation = xpoint3:"0,0,0";
+            rotation = {
+              0 = xpoint3:"0,-1,0";
+              1 = xpoint3:"0.932069718837738037109375,0,-0.3622789680957794189453125";
+              2 = xpoint3:"0.3622789680957794189453125,0,0.932069718837738037109375";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"rot_x_WheelRear";
+              translation = xpoint3:"89.02236175537109375,0,0";
+              rotation = {
+                0 = xpoint3:"0,0.999999940395355224609375,0";
+                1 = xpoint3:"-0.999999940395355224609375,0,0";
+                2 = xpoint3:"0,0,1";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"Bone_WheelRear";
+                translation = xpoint3:"0,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+              }
+            }
+          }
+          #1 = {
+            scale = fixp:"1";
+            name = str:"Dust";
+            translation = xpoint3:"110,16.54819488525390625,14.02408885955810546875";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+          #2 = {
+            scale = fixp:"1";
+            name = str:"Dust@#0";
+            translation = xpoint3:"-110,16.5481719970703125,14.02411651611328125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"Point_rotZ";
+          translation = xpoint3:"207.055694580078125,0,0";
+          rotation = {
+            0 = xpoint3:"0,0.812297284603118896484375,0.583243668079376220703125";
+            1 = xpoint3:"0,-0.583243668079376220703125,0.812297284603118896484375";
+            2 = xpoint3:"1,0,0";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"rot_z";
+            translation = xpoint3:"0,0,0";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"Bone_Kupol";
+              translation = xpoint3:"0,0,0";
+              rotation = {
+                0 = xpoint3:"0,0,1";
+                1 = xpoint3:"0,-1,0";
+                2 = xpoint3:"1,0,0";
+              }
+            }
+            #1 = {
+              scale = fixp:"1";
+              name = str:"Point_rotX";
+              translation = xpoint3:"0,0,33.499927520751953125";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"rot_x";
+                translation = xpoint3:"0,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+                #0 = {
+                  scale = fixp:"1";
+                  name = str:"Bone_weapon";
+                  translation = xpoint3:"0,2.7060568332672119140625,22.78014373779296875";
+                  rotation = {
+                    0 = xpoint3:"0,0,1";
+                    1 = xpoint3:"-0.999990940093994140625,-0.0042555234394967555999755859375,0";
+                    2 = xpoint3:"0.004255528561770915985107421875,-0.999990940093994140625,0";
+                  }
+                }
+                #1 = {
+                  scale = fixp:"1";
+                  name = str:"Bone_weapon_End";
+                  translation = xpoint3:"0,-106.08902740478515625,23.1707134246826171875";
+                  rotation = {
+                    0 = xpoint3:"0,0,1";
+                    1 = xpoint3:"-0.999999940395355224609375,0,0";
+                    2 = xpoint3:"0,-1,0";
+                  }
+                  #0 = {
+                    scale = fixp:"1";
+                    name = str:"Point_fire";
+                    translation = xpoint3:"106.051025390625,0.476935803890228271484375,0";
+                    rotation = {
+                      0 = xpoint3:"0,-1,0";
+                      1 = xpoint3:"0,0,-1";
+                      2 = xpoint3:"1,0,0";
+                    }
+                    #0 = {
+                      scale = fixp:"1";
+                      name = str:"fire";
+                      translation = xpoint3:"0,0,0";
+                      rotation = {
+                        0 = xpoint3:"1,0,0";
+                        1 = xpoint3:"0,1,0";
+                        2 = xpoint3:"0,0,1";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

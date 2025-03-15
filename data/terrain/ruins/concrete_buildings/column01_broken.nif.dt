@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\terrain\ruins\concrete_buildings\column01_broken.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box334";
+    translation = xpoint3:"-32.31268310546875,36.392364501953125,294.915191650390625";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"place holders";
+    translation = xpoint3:"-1.2183990478515625,-461.399169921875,277.3780517578125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"-1.2183990478515625,-461.399169921875,277.3780517578125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

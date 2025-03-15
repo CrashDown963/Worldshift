@@ -1,0 +1,127 @@
+Unit Tritech : BaseUnit {
+  name = "Tritech"
+  descr = "DESCRIPTION"
+  race = aliens
+  tags = unit, organic, lowrank
+  icon = 2,3
+
+  physics {
+    default = Data/Models/Units/Tritech/Tritech_Proxy.pml
+    die = Data/Models/Units/Trisat/Bug_die.pml
+  }
+  destruction = ragdoll
+  
+  sounds {
+    select = data/sounds/units/alien bugs/select/
+    confirm = data/sounds/units/alien bugs/confirm/
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  stats :{
+    hp = 220
+    armor = 1
+    range = 1700
+    damage = 15
+
+    shield_hull = 100
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 50
+
+    feedback_chance = 20
+    feedback_heal = 20
+    bio_split_chance = 0
+  }
+  speed = 450
+
+  model = data/models/units/Tritech/Tritech.kfm {
+  die = data/models/units/Trisat/BugDie.nif
+  }
+  scale = 1.35
+  
+  actions :{
+    MakeBreeder -- fake
+  }
+  
+  abilities {
+    FeedbackAbi
+  }
+  
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.5
+    range_near = stat:range * 0.3
+    proximity_bonus = 1.5
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Discharge Energy/
+    aim_tolerance = 45
+    shoot_anim = shoot
+    idle_time = 1.0
+    shoot_idle_1 = shoot_idle
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    instant_shot Tritech {
+      model = Data/Models/Effects/TraceBullet/ion_trace.nif	
+      dist_start = 0
+      travel_start = 100
+      travel_end = 10
+      duration = 0.2
+      --duration = 0.4, 0.7, 100, 1000
+      time_fraction_to_lag_end = 50
+      width = 14
+      instances = 128
+      color_alpha {
+        0 = 150,255,80,255
+        100 = 75,128,40,255
+      }
+    }
+ 
+    muzzle_fx tritech_muzzle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction	= 20
+      active_variation = 0
+      length_variation = 20
+      width_variation	= 7
+      scale	= 1.5
+      instances = 64
+      emit = 150,255,80
+    }
+  }
+  
+  take_auras : { RestorationCoreAura }
+  cost : pvp.aliens.unit_costs.Tritech
+  cost_sloc : pvp.aliens.sloc_costs.Tritech
+}
+
+FeedbackAbi {
+  name = "Feedback"
+  text = "Tritech has [stat:feedback_chance]% chance on shoot to heal himself for [stat:feedback_heal] hit points."
+  icon = 3,0
+  when : abi.target_hit
+  chance = stat:feedback_chance
+  target = self
+  effect = E_heal {
+    amount = stat:feedback_heal
+    react = heal
+  }
+}

@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\bigexplosion\explosionbig_02.kfm";
+  animations = {
+    boom = {
+      loop = int:"0";
+      duration = fixp:"2.833333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.833333492279052734375";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+﻿sid	text
+	
+Checkpoint.name	Checkpoint
+Checkpoint.descr	If you fail the mission after having activated the checkpoint, the Defeat screen will offer you the option to retry from the current state.
+	
+14.beams_switch.name	Cage Control
+14.beams_switch.descr	Turns off the cage’s energy barrier.
+14.door_switch.name	Gate Control
+14.door_switch.descr	Opens the nearby gate.
+	
+16.guard_body_switch.name	Dead trooper
+16.guard_body_switch.descr	It seems this was once this door’s guard. It would likely be a good idea to search him.
+16.gate_switch.name	Gate Control
+16.gate_switch.descr	You can open the gate with the keycard.
+16.explosives_switch.name	Mining explosives
+16.explosives_switch.descr	Denkar can steal some explosives from here.
+16.explosive_place_switch.name	Structure
+16.explosive_place_switch.descr	Denkar can plant explosives at this building.
+	
+22.diary_switch.name	Onkar’s Diary
+22.diary_switch.descr	You must recover Onkar’s diary.
+	
+23.artifact_switch.name	Ancient Machine
+23.artifact_switch.descr	These ruins must be examined.
+23.generator_switch.name	Power Generator
+23.generator_switch.descr	The generator must be activated.
+	
+26.gate_switch.name	Ancient mechanism
+26.gate_switch.descr	You must try to deactivate the ancient machine.
+	
+35.spawner_switch.name	Teleporter
+35.spawner_switch.descr	Tharksh must disable this receiver.
+35.teleport1_switch.name	Teleport controls
+35.teleport1_switch.descr	Tharksh has to enable the teleportation pad from here.
+35.teleport2_switch.name	Teleport controls
+35.teleport2_switch.descr	Tharksh has to enable the teleportation pad from here.
+35.teleport_in_switch.name	Jaar Lash shield
+35.teleport_in_switch.descr	Only Jaar Lash units may pass through the shield.
+35.teleport_out_switch.name	Jaar Lash shield
+35.teleport_out_switch.descr	Only Jaar Lash units may pass through the shield.
+	
+rom.door_switch.name	Gate Control
+rom.door_switch.descr	Opens the nearby gate.
+	
+dtb.door_switch.name	Gate Control
+dtb.door_switch.descr	Opens the nearby gate.
+	
+bsa.next_wave.name	Next fight
+bsa.next_wave.descr	Shows the announcer that you are ready for the next fight.
+	
+kharum.talk_to_priest.name	Talk
+kharum.talk_to_priest.descr	Talk to the village’s High Priest.
+kharum.call_ranboo.name	House
+kharum.call_ranboo.desct	You can knock on the door of this house.
+kharum.talk_to_ranboo.name	Talk
+kharum.talk_to_ranboo.descr	Talk to Ran Boo.
+kharum.power_source.name	Ancient Power Source
+kharum.power_source.descr	Bring Ran Boo to this location in order to activate the power source.
+kharum.ancient_device.name	Ancient Device
+kharum.ancient_device.descr	Bring Ran Boo to this location in order to activate the ancient device.
+kharum.door_switch.name	Gate Control
+kharum.door_switch.descr	Opens the nearby gate.
+	
+safari.door_switch.name	Gate Control
+safari.door_switch.descr	Opens the nearby gate.

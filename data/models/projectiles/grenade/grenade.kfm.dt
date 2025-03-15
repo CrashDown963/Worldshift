@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\models\projectiles\grenade\grenade.kfm";
+  animations = {
+    high = {
+      loop = int:"1";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    low = {
+      loop = int:"1";
+      duration = fixp:"1.60000002384185791015625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.60000002384185791015625";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+Mob Kikkert : BaseMob {
+  name = "Kikkert"
+  icon = 7,7
+  model = Data/Models/LifeForms/Kikkert/Kikkert.kfm
+  destruction = animation
+
+  hp = 160
+  range = 1200
+  damage = 20
+  armor = 2
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    fire_node = pt_shoot_1
+    shoot_snd = data/sounds/weapons/m60 mg/
+    fire_rate = 0.8
+    aim_tolerance = 45
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    min_bursts = 1
+    max_bursts = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    muzzle_fx KikkertMuzzle {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+		  frequency = 5
+		  active_fraction	= 40
+		  active_variation = 5
+		  length_variation = 5
+		  width_variation = 5
+		  scale	= 1.6
+		  instances = 64
+      emit = 225,130,60
+    }
+
+    trace KikkertShot {
+		  model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+		  variant	= 0
+		  start_dist = 10
+		  end_dist = 10
+		  frequency	= 9
+		  ttl	= 1
+		  length = 180
+		  target_size	= 15
+		  velocity	= 70
+		  length_end = 180
+		  width_scale = 4
+		  instances = 128
+		  emit = 200,20,20
+    }
+  }
+}

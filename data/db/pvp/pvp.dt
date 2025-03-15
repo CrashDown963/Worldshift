@@ -1,0 +1,148 @@
+pvp {
+
+  humans {
+    res_tick_time = 2
+    small_structure_res = 1     -- extractor
+    small_structure_time = 30t  -- time to build
+    big_structure_res = 3       -- control tower
+    big_structure_time = 10t    -- time to upgrade
+    big_structure_cost = 200r    -- cost to upgrade
+    max_res = 1000
+    start_res = 0
+    res_name = "Credits"
+    unit_points = 30
+    unit_point_lag_time = 10
+    unit_costs {
+      Commander = 0u 100r 15t
+      Trooper = 1u 10r 5t
+      Ripper = 1u 15r 5t
+      AssaultBot = 4u 40r 10t
+      Hellfire = 5u 65r 15t
+      Defender = 3u 40r 15t
+      Officer = 0u 100r 5t
+    }
+    sloc_costs : pvp.humans.unit_costs {
+      Commander = 0u 100r 30t
+      Trooper = 1u 10r 5t
+      Ripper = 1u 20r 5t
+      AssaultBot = 3u 40r 15t
+      Hellfire = 4u 70r 20t
+      Defender = 3u 40r 15t
+      Officer = 0u 100r 4t
+    }
+    officer_costs_add = int4:0,0,50,100
+  }
+
+  mutants {
+    res_tick_time = 2
+    small_structure_res = 1  -- shrine
+    small_structure_time = 30t  -- time to build
+    big_structure_res = 3    -- temple
+    big_structure_time = 10t    -- time to upgrade
+    big_structure_cost = 200r    -- cost to upgrade
+    max_res = 1000          
+    start_res = 0
+    res_name = "Focus"
+    unit_points = 30
+    unit_point_lag_time = 10
+    unit_costs {
+      HighPriest = 0u 100r 15t
+      Warrior = 1u 10r 5t
+      Brute = 3u 20r 5t
+      AncientShade = 4u 40r 10t
+      HowlingHorror = 6u 80r 15t
+      Officer = 0u 100r 5t
+    }
+    sloc_costs {
+      HighPriest = 0u 100r 30t
+      Warrior = 1u 10r 5t
+      Brute = 3u 30r 10t
+      AncientShade = 3u 30r 15t
+      HowlingHorror = 4u 70r 20t
+      Officer = 0u 100r 4t
+    }
+    officer_costs_add = int4:0,0,50,100
+  }
+
+
+  aliens {
+    breeder_max_eggs = 3
+    portal_max_eggs = 5
+    egg_spawn_time = 60,90
+    egg_expire_time = 4,8
+    egg_boost_treshold = 100% 
+  
+    res_tick_time = 2
+    small_structure_res = 1  -- breeder
+    small_structure_time = 30t  -- time to build
+    big_structure_res = 3    -- portal
+    big_structure_time = 10t    -- time to upgrade
+    big_structure_cost = 300r    -- cost to upgrade
+    
+    egg_res = 1              
+    egg_res_tick_time = 10
+    max_res = 1000
+    start_res = 0
+    
+    res_name = "Plasma"
+
+    unit_points = 30
+    unit_point_lag_time = 10
+
+    unit_costs {
+      Master = 0u 100r 15t
+      Trisat = 1u 10r 5t
+      Tritech = 2u 20r 5t
+      Shifter = 6u 80r 10t
+      Overseer = 4u 80r 10t
+      Officer = 0u 100r 4t
+    }
+    sloc_costs {
+      Master = 0u 100r 30t
+      Trisat = 1u 10r 5t
+      Tritech = 2u 20r 5t
+      Shifter = 3u 80r 10t
+      Overseer = 3u 80r 10t
+      Officer = 0u 100r 4t
+    }
+    officer_costs_add = int4:0,0,50,100
+  }
+  
+  make_struct_time = 4 -- time to plant the structure at xenolite for the faction leaders
+  
+  xenolite_grow_time = 1  -- random seconds after xenolte structure is destroyed for the xenolite to respawn
+
+
+  -- artifact bonuses
+  item_taken_res = 100
+  item_taken_bp = 0
+
+
+  -- action points
+  tier1destr = 25
+  tier2destr = 75
+  killedlord = 50
+  killedofficer = 10
+  tier1built = 25
+  tier2built = 50
+
+  -- minimum limits for getting battle points on loss
+  give2val = 2
+  give1val = 1
+  give2 = 500
+  give1 = 300
+  give2time = 600
+  give1time = 180
+
+  -- battle points stuff  
+  costlvl1 = 2
+  costlvl2 = 8
+  costlvl3 = 20
+  costlvl4 = 50
+  costlvl5 = 90
+  costoffer = 5
+  winpoints = 50
+  losspoints = 9
+  maxpoints = 600
+
+}

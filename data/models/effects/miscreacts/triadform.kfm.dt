@@ -1,0 +1,23 @@
+model = {
+  file = str:"data\models\effects\miscreacts\triadform.kfm";
+  animations = {
+    dissapear = {
+      loop = int:"0";
+      duration = fixp:"2.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.066666670143604278564453125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.5";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+Mob M23PowerGenerator : BaseMob {
+  model = Data/Models/buildings/Mana_Generator/Mana_Generator.nif
+  icon = 1,14
+  explosion = ExplosionMedium_03
+  movable = 0
+  hp = 0
+  damage = 0
+}

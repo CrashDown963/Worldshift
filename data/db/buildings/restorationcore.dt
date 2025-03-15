@@ -1,0 +1,21 @@
+Building RestorationCore : BaseBuilding {
+  model = Data/Models/buildings/PowerCore/PowerCore.nif {
+  constr_phase_0 = Data/Models/buildings/PowerCore/PowerCore_Build.nif}
+  race = humans
+  stats :{
+    hp = 3000
+  }
+  restore_hp_interval = 2
+  restore_hp_per_second = 10
+  
+  construction {
+    phase_0 {
+      model = constr_phase_0
+    }
+  }
+
+  CRestoreAura RestorationCoreAura {
+    range = 2500
+    --active_in_construction = 1
+  }
+}

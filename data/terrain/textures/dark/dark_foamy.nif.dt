@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\dark\dark_foamy.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

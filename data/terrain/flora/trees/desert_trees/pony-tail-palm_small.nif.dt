@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\terrain\flora\trees\desert_trees\pony-tail-palm_small.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"trunk";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"trunk01";
+    translation = xpoint3:"-50.94228363037109375,-8.599456787109375,325.11553955078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"34.47013092041015625,-152.99993896484375,385.2193603515625";
+    rotation = {
+      0 = xpoint3:"-0.0469738952815532684326171875,0.895191848278045654296875,0.44319856166839599609375";
+      1 = xpoint3:"-0.99393284320831298828125,-0.086062960326671600341796875,0.068488419055938720703125";
+      2 = xpoint3:"0.09945325553417205810546875,-0.43729245662689208984375,0.893803298473358154296875";
+    }
+  }
+}

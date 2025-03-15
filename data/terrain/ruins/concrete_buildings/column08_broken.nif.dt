@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\concrete_buildings\column08_broken.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box334";
+    translation = xpoint3:"14.24969482421875,-2.161712646484375,277.3780517578125";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

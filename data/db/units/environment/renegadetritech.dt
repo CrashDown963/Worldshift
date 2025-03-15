@@ -1,0 +1,104 @@
+Mob RenegadeTritech : BaseMob {
+  name : Tritech.name
+  descr : Tritech.descr
+  icon = 1,30
+  race = aliens
+
+  tags = unit, organic, mob, renegade
+
+  model = data/models/units/Tritech/Tritech.kfm {
+    die = data/models/units/Trisat/BugDie.nif
+  }
+  
+  physics {
+    default = Data/Models/Units/Tritech/Tritech_Proxy.pml
+    die = Data/Models/Units/Trisat/Bug_die.pml
+  }
+  
+  skin {
+    base = Data/Models/Units/Tritech/tritech-renegade-diffuse.dds
+    mask = Data/Models/Units/Tritech/tritech-renegade-mask.dds
+    ignore_on_model = data/models/units/Trisat/BugDie.nif
+  }
+  
+  destruction = ragdoll
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  hp = 600
+  armor = 4
+  range = 1000
+  damage = 25
+  fire_rate = 0.5
+  chase_range = -1
+  
+  stats :{
+    shield_hull = 100
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 50
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    range_far = 700
+    range_near = 100
+    proximity_bonus = 3
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Discharge Energy/
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    instant_shot TritechMob {
+      model = Data/Models/Effects/TraceBullet/ion_trace.nif	
+      dist_start = 0
+      travel_start = 100
+      travel_end = 10
+      duration = 0.2
+      --duration = 0.4, 0.7, 100, 1000
+      time_fraction_to_lag_end = 50
+      width = 14
+      instances = 128
+      color_alpha {
+        0 = 150,255,80,255
+        100 = 75,128,40,255
+      }
+    }
+ 
+    muzzle_fx tritechmob_muzzle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction	= 20
+      active_variation = 0
+      length_variation = 20
+      width_variation	= 7
+      scale	= 1.5
+      instances = 64
+      emit = 150,255,80
+    }
+  }
+
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+}

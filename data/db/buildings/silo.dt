@@ -1,0 +1,17 @@
+Building Silo : BaseBuilding {
+  name = Silo
+  model = Data/Models/buildings/Silo/Silo.nif {
+  constr_phase_0 = Data/Models/buildings/Silo/Silo_build.nif
+  }
+  race = humans
+  silo = 1
+  stats :{
+    hp = 3000
+  }
+  construction {
+    phase_0 {
+      model = constr_phase_0
+    }
+  }
+      
+}

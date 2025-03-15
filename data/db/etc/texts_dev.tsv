@@ -1,0 +1,125 @@
+sid	text
+	
+consoleui_chatprefix	>
+game_title	WorldShift
+		
+ft_add_res	<color=0,255,0>+%d
+ft_sub_res	<color=255,0,0>-%d
+		
+cost_1	%s
+cost_2	%s, %s
+cost_3	%s, %s, %s
+		
+crit	<color=255,0,0>+%d!</>
+drain_psy	<color=35,150,250>+%d</>
+burn_psy	<color=0,0,255>-%d</>
+nano_restore	<color=0,255,0>+%d</>
+mend	<color=0,255,0>+%d</>
+drnlife	<color=255,0,0>-%d</>
+healcrit	<color=0,255,0>+%d</>
+		
+res_ok	<color=0,255,0>%d</>
+res_bad	<color=255,0,0>%d</>
+		
+buff_damage	<color=255,0,0>-%d</>
+buff_heal	<color=0,255,0>+%d</>
+
+ed_start	Extinction Editor
+
+ed_clrfog	Fog color
+ed_clramb	Ambient color
+ed_clrsun	Sunlight color
+
+ed_terset_save	Terrain Set %s has been changed. Do you want to save it?
+ed_terset_save_new	The new terrain set has not been saved. Do you want to save it?
+ed_terset_save_overwrite	The chosen terrain set %s already exists. Do you want to overwrite it?
+ed_terset_save_delete	Are you sure you want to delete terrain set %s?
+ed_terset_save_mapdisabled	You are not able to modify the terrain sets ordinating from maps.
+ed_terset_save_mapdelete	You are not able to delete terrain sets ordinating from maps.
+
+ed_terset_save_cap	Editor
+ed_terset_save_local	<LOCAL>%s
+ed_terset_save_map	<MAP>%s
+ed_terset_save_preset	%s
+ed_terset_save_empty	<EMPTY>%s
+ed_terset_new_preset	new*
+
+
+
+ed_floraset_save	Flora Set %s has been changed. Do you want to save it?
+ed_floraset_save_new	The new flora set has not been saved. Do you want to save it?
+ed_floraset_save_overwrite	The chosen flora set %s already exists. Do you want to overwrite it?
+ed_floraset_save_delete	Are you sure you want to delete flora set %s?
+
+ed_floraset_save_cap	Editor
+ed_flora_save_preset	%s
+ed_flora_new_preset	new*
+
+ed_flora_add_group	+
+ed_flora_remove_group	-
+
+
+	
+dev_debuginfouitotal	TOTAL
+dev_debuginfouiterrain	TERRAIN
+dev_debuginfouitrees	TREES
+dev_debuginfouiactors	ACTORS
+dev_debuginfouiembelishments	EMBELISMENTS
+dev_debuginfouidecals	DECALS
+dev_debuginfouiothers	OTHERS
+dev_debuginfouititle	<tab=10><b>%s
+dev_debuginfouitrtot	<tab=20>triangles total: %d
+dev_debuginfouitrreal	<tab=20>triangles real: %d
+dev_debuginfouivertcs	<tab=20>verteces: %d
+dev_debuginfouinodes	<tab=20>nodes cnt: %d
+dev_debuginfouigeometr	<tab=20>geometries cnt: %d
+dev_debuginfouitexcnt	<tab=20>tex cnt: %d
+dev_debuginfouitexsz	<tab=20>tex size: %.1f MB
+dev_debuginfouibonescnt	<tab=20>bones cnt: %d
+	
+dev_errdesync	Desync Detected!
+dev_errmapnotfound	Map not found! Please try again...
+dev_errweaponcontrollerinit	Weapon controller failed to initialize
+dev_err_load_terset	Terrain set fail to load: %s
+
+dev_grfclose	Close
+dev_grfrecalc	Recalc
+dev_grfreset	Reset
+
+dev_uiedcreateui	Are you sure you want to create a top level UI?
+dev_uieddeleteui	Are you sure you want to delete this UI?
+dev_uisaveuiask	Save changes made to this UI to database?
+dev_uisaveuierr	Cannot save UI without name!
+
+dev_default_terset	Default
+dev_default_floraset	Default
+
+debugui_close	Close
+debugui_refresh	Refresh
+
+gcreator_close	X
+gcreator_create	Create
+gcreator_load	Load
+gcreator_minimaze	_
+gcreator_save	Save
+gcreator_savedefault	Save As Default
+gcreator_title	Galaxy Create Data
+
+generic_back	Back
+generic_cancel	Cancel
+generic_close	Close
+generic_no	No
+generic_ok	OK
+generic_yes	Yes
+
+movietimeline_add	Add
+movietimeline_del	Del
+movietimeline_duration	Duration;
+movietimeline_hideplay	Record
+movietimeline_play	Play
+movietimeline_reset	Reset
+movietimeline_set	Set
+movietimeline_stop	Stop
+movietimeline_load	Load
+movietimeline_save	Save
+movietimeline_hard	Hard

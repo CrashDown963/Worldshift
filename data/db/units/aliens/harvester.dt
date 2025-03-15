@@ -1,0 +1,239 @@
+Unit Harvester: BaseUnit {
+  name = "Harvester"
+  descr = "Harvester Placeholder Desc."
+  race = aliens
+  officer = 1
+  tags = unit, organic
+  icon = 3,6
+
+  model = Data/Models/Units/harvester/harvester.kfm {
+  die = Data/Models/Units/harvester/harvester_die.nif
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/harvester/Harvester.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+
+  destruction = ragdoll
+  scale = 1.15
+
+  sounds {
+    select = data/sounds/units/harvester/select/
+    confirm = data/sounds/units/harvester/confirm/
+  }
+
+  stats : {
+    hp = 780
+    armor = 22
+    range = 125
+    damage = 35
+    psi = 400
+    
+	  shield_hull = 150
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+
+    feed_chance = 100
+	
+    vitality_surge_gain = 40
+    vitality_surge_power = 300
+    vitality_surge_cooldown = 45
+
+    harvest_chance = 10
+    harvest_damage = 30
+    harvest_range = 300
+    harvest_duration = 3
+    harvest_cooldown = 15
+
+    paralyzing_field_range = 300
+    paralyzing_field_speed_reduction_perc = 20
+    
+    confuse_chance = 25
+  }
+  speed = 450
+
+  sight = stat:range + 1100
+  aggro_range = var:sight
+
+  take_auras : { RestorationCoreAura }
+
+  CEffectAura HarvesterParalyzingFieldAura {
+    range = stat:paralyzing_field_range
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = HarvesterParalyzingField
+      name = "Paralyzing Field"
+      text = "This unit is slowed down by a Paralyzing field."
+      icon = 2,7
+      type = slow
+      stats_change {
+        speed_mod = { perc = stat:paralyzing_field_speed_reduction_perc * -1 }
+      }
+      tick = 1
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = paralyze
+      stack_count = 1
+      exclude_self = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+  
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK_MAIN
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact_type = melee
+    shoot_snd = data/sounds/effects/harvester hit/
+  }
+  
+  actions : Alien.actions {
+    VitalitySurgeAction;
+    MakeBreeder -- fake
+  }
+
+  abilities {
+    HarvesterParalyzingField 
+    HarvesterHarvestAbi
+    HarvesterFeedAbi 
+
+    ImminenceAbi {
+      name = "Imminence"
+      text = "Chance to confuse the target on hit"
+      icon = 6,0
+      when : abi.target_hit
+      chance = stat:confuse_chance
+      target = current
+      effect = S_confuse {
+        duration = 4
+        react = confusion_react
+        id = Imminence
+        name = "Imminence"
+        text = "This unit is threatened by a Harvester and cannot attack anyone else."
+        icon = 2,6
+        type = confusion
+        dont_interrupt_bosses = 1
+        program = PrgConfuse
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+      }
+      active = 0
+    }
+    
+    AIVitalitySurge {
+      action = VitalitySurgeAction
+      when   : abi.always
+      target = self { health_under = stat:vitality_surge_gain * -1 + 100 }
+    }
+  }
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+    }
+  }
+  cost : pvp.aliens.unit_costs.Officer
+  cost_sloc : pvp.aliens.sloc_costs.Officer
+}
+
+HarvesterParalyzingField {
+  name = "Paralyzing Field"
+  text = "Harvester slows down the movement of all living enemies near him by [stat:paralyzing_field_speed_reduction_perc]%."
+  icon = 5,0
+}
+
+HarvesterFeedAbi {
+  name = "Consume Hatchling"
+  text = "The Harvester will consume a nearby Hatchling to restore its health"
+  icon = 5,0
+  when : abi.always
+  chance = 100
+  target = ally { 
+    def = Hatchling;
+    aoe_range = 500;
+    aoe_min_wounded_count = 1
+    aoe_min_wounded_health = 500
+  }
+  range = 500
+  program = PrgHarvesterFeed
+}
+
+HarvesterHarvestAbi {
+  name = "Harvest"
+  text = "Harvester has [stat:harvest_chance]% chance on hit to do special strike that hits all targets arround him and stuns them."
+  when : abi.fight
+  cooldown = stat:harvest_cooldown
+  icon = 6,0
+  chance = stat:harvest_chance
+  target = self
+  
+  cast {
+    prepare {
+      anim = Harvest_Hit
+    }
+  }
+
+  effect = E_set {
+    effect = E_damage {
+      amount = stat:harvest_damage
+      area = stat:harvest_range
+    }
+    effect = S_multistun {
+      multi_area = stat:harvest_range {  
+        anim = data/Models/Effects/Aliens/AlienGreenShockwave.nif  
+        sound = data/sounds/units/stone ghost/shot/sg 2.wav
+        scale = 1
+      }
+      discard_react = 1
+      duration = stat:harvest_duration
+    }
+    effect = E_heal {
+      amount = stat:damage
+      react = heal
+    }  
+  }
+}
+
+CEffectAction VitalitySurgeAction {
+  name = "Vitality Surge"
+  descr = "Instantly heals the Harvester for [stat:vitality_surge_gain]% health."
+  visible = 1
+  icon = 3,6
+  instant = 1
+  multi_chooser = missing_hp
+  cooldown = stat:vitality_surge_cooldown
+  power = stat:vitality_surge_power
+  tags = self
+  
+  effect = E_heal {
+    sound = data/sounds/effects/common/vitality surge.wav
+    amount_perc = stat:vitality_surge_gain
+    react = vitality_surge
+  }
+}
+

@@ -1,0 +1,11 @@
+experience {
+
+  killing_blow = 100    -- per kill
+  heal = 5              -- per 100 hp healed
+  enemy_dies_in_sight = 5
+  damage_done = 1       -- per 100 damage done
+  
+  levels = 100,200,300,500  -- to reach level 1,2,3,4
+  crit_chance = 0,3,5,9,12
+  
+}

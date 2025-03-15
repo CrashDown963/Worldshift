@@ -1,0 +1,6 @@
+Unit Nightmare2 : BaseUnit {
+  race = mutants
+  tags = unit, organic
+  model = data/models/units/nightmare/nightmare.nif
+}
+  

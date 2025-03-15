@@ -1,0 +1,7 @@
+Building Workshop : BaseBuilding {
+  model = Data/Models/buildings/workshop/workshop.nif
+  race = common
+  stats :{
+    hit_points = 800
+  }
+}

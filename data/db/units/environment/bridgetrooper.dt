@@ -1,0 +1,245 @@
+Mob BridgeTrooper : BaseMob {
+  name : Trooper.trooper_name
+  icon = 7,19
+  descr : Trooper.descr
+  race = humans
+  scale = 1.4
+  
+  model = data/models/units/Trooper/Trooper.kfm
+  
+  skin {
+    base = data/models/units/trooper/trooper-diff05.dds
+    mask = data/models/units/trooper/trooper-mask05.dds
+  }  
+
+  take_auras : { RestorationCoreAura }
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+    confirm = data/sounds/units/trooper/confirm/
+  }
+  
+  stats : {
+    throw_grenade_chance = 15
+    grenade_damage = 80
+    grenade_radius = 200
+    grenade_stun_duration = 1
+    range = 2100
+    damage = 30
+    hp = 500
+    armor = 15
+    
+    inject_hp = 300
+    inject_duration = 3
+  }
+  
+  damage = stat:damage
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  
+  physics {
+    default = data/models/units/Trooper/TownGuard_Proxy.pml
+    die = data/models/units/Trooper/TownGuard.pml
+  }
+
+  destruction = ragdoll
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  } 
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+    shoot_var_2 = 0 {
+      shoot_var_2_down = -60
+      shoot_var_2_up = 60
+    }
+    shoot_idle_var2 = 0 {
+      shoot_var_2_idle_down = -60
+      shoot_var_2_idle_up = 60
+    }
+    shoot_var_3 = 0 {
+      shoot_var_3_down = -60
+      shoot_var_3_up = 60
+    }
+    shoot_idle_var_3 = 0 {
+      shoot_var_3_idle_down = -60
+      shoot_var_3_idle_up = 60
+    }
+  }
+
+  actions : BaseUnit.actions {
+    
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/units/trooper/shoot/
+    aim_tolerance = 45
+    shoot_anim_1 = shoot
+    shoot_idle_1 = SHOOT_IDLE_VAR_1
+    shoot_anim_2 = shoot_var_2
+    shoot_idle_2 = shoot_idle_var2
+    shoot_anim_3 = shoot_var_3
+    shoot_idle_3 = shoot_idle_var_3
+    idle_time = 0.5
+    shoot_idle_1 = shoot_idle
+    spot_impact = 850
+    spot_impact_type = bullet
+    damage_type = energy
+
+	  trace BridgeTrooper {
+		  model = Data/Models/Effects/TraceBullet/Trooper_trace.nif	
+		  z_write = 0
+		  variant	= 0
+		  start_dist = 10
+		  end_dist = 10
+		  frequency	= 8
+		  ttl	= 0.5
+		  length = 200
+		  target_size	= 20
+		  velocity	= 50
+		  length_end = 170
+		  width_scale = 12
+		  instances = 128
+		  emit = 255,118,52
+	  }
+	  
+    muzzle_fx ion_rifle_bridge_trooper {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+		  frames = 4
+		  frequency = 8
+		  active_fraction	= 40
+		  active_variation = 5
+		  length_variation = 40
+		  width_variation	= 7
+		  scale	= 1.8
+		  instances = 64
+		  emit = 255,118,52
+	  }
+  }
+
+  impacts : LivingUnitImpacts
+  
+  abilities : TrooperAbilities {
+    Inject {
+      name = Inject
+      when : abi.always
+      target = self { health_under = 60 }
+      cooldown = 10
+    
+      effect = E_buff {
+        sound = data/sounds/effects/common/inject.wav
+        id = Infuse
+        name = "Inject"
+        text = "The Trooper is regenerating his health under the influence of injected medications."
+        icon = 2,13
+        type = heal
+        hp = stat:inject_hp
+        duration = stat:inject_duration
+        tick = 1
+        area { anim = data/models/effects/magic/healingwave.nif }
+        react = inject
+      }
+    }
+  }
+}
+
+Mob LZTrooper : BridgeTrooper {
+  skin {
+    base = data/models/units/trooper/shock_trooper-diff.dds
+    mask = data/models/units/trooper/shock_trooper-mask.dds
+  }
+          icon = 3,31
+  --respawn_min_time = 120
+
+  
+  stats : {
+    throw_grenade_chance = 10
+  }
+  
+  abilities : BridgeTrooper.abilities {
+    Grenade {
+      name = "Throw Grenade"
+      text = "The Troopers will have [stat:throw_grenade_chance]% chance on each attack to throw an explosive greande towards his target. The grenade will inflict [stat:grenade_damage] damage in a small area. However, the Trooper will not use this ability if there is a danger for the grenade to harm allied units as well."
+      icon = 0,0
+      chance = stat:throw_grenade_chance
+      when   : abi.fight
+      range  = stat:range
+      target = current { no_ally_in_range = 300 }
+      
+      cast up {
+        min_range = 600
+        finish {
+          anim = grenade_up
+        }
+      }
+      
+      cast down {
+        max_range = 600
+        finish {
+          anim = grenade_down
+        }
+      }
+      
+      projectile = parabolic {
+        start_point = pt_hand
+        spot_impact = 800
+        spot_impact_type = small_energy
+        damage_type = energy
+        
+        effect = E_set {
+          effect = S_multistun {
+            multi_area = stat:grenade_radius
+            duration = stat:grenade_stun_duration
+          }
+          effect = TrooperGrenadeExplode
+        }
+        
+        decal_settings ground_hit_decal = barrage_decal1
+        model = data/models/Projectiles/Grenade/grenade2.nif {
+          CTrailController trail {
+            emitter = Root
+            texture = data/textures/trails/energy_trail1.dds
+            tex_ratio = float: 4.0
+            start_width = 14
+            end_width = 0
+            ttl = 12
+            simple_time = 1
+            additive = 1
+            z_write = 0
+            material_alpha = 0.5
+            diffuse = color: 1, 1, 1
+            ambient = color: 0.5, 0.5, 0.5
+            emissive = color: 1, 1, 1
+            time0 = 0
+            color0 = colora: 1, 1, 1, 0
+            time1 = 3
+            color1 = colora: 1, 1, 1, 0.4
+            time2 = 30
+            color2 = colora: 1, 1, 1, 0.25
+            time4 = 100
+            color4 = colora: 1, 1, 1, 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+MutantSpecItem {
+  race = mutants
+  quality = 1
+  autobind = 1
+  hidden = 1
+}
+
+item I_A1M : MutantSpecItem {
+  name = "Thunder Focus"
+  text = "Your High Priest Lightning will do [stats.lightning_damage] more damage."
+  icon = 4,1
+  levels = 1,2
+  repo = MUTANT_SPECA1
+  target {
+    HighPriest
+  }
+  stats {
+    lightning_damage = 20%/50%
+  }
+  --abilities { AA1M { item = I_A1M } }
+}
+
+item I_A2M : MutantSpecItem {
+  name = "Freeze Mastery"
+  text = "Your High Priest Freeze action will hold for [stats.freeze_duration] seconds longer."
+  icon = 4,1
+  levels = 1,2
+  repo = MUTANT_SPECA2
+  target {
+    HighPriest
+  }
+  stats {
+    freeze_duration = 1/2
+  }
+  --abilities { AA2M { item = I_A2M } }
+}
+
+item I_B1M : MutantSpecItem {
+  name = "Weapons Training"
+  text = "Your warriors will have additional [stat.crit_chance]% to critically attack inflicting double damage."
+  icon = 4,1
+  repo = MUTANT_SPECB1
+  target {
+    Warrior
+  }
+  stats {
+    crit_chance = 5/10/20
+  }
+  --abilities { AB1M { item = I_B1M } }
+}
+
+item I_B2M : MutantSpecItem {
+  name = "Power Mastery"
+  text = "Your High Priest and all your Elders' power will regenerate [stats.psi_gen] faster."
+  icon = 4,1
+  levels = 1,3
+  repo = MUTANT_SPECB2
+  target {
+    HighPriest
+    Shaman
+    Sorcerer
+    StoneGhost
+    Guardian
+  }
+  stats {
+    psi_gen = 10%/30%
+  }
+  --abilities { AB2M { item = I_B2M } }
+}
+
+item I_B3M : MutantSpecItem {
+  name = "Dark Binding"
+  text = "All your Underworld units (Ancient Shade, Howling Horror, Stone Ghost and Soul Worm) will regenerate hit points [stats.hp_gen] faster, with no recovery time."
+  icon = 4,1
+  levels = 1,2
+  repo = MUTANT_SPECB3
+  target {
+    StoneGhost
+    AncientShade
+    HowlingHorror
+    Worm
+  }
+  stats {
+    hp_gen = 30%
+    recovery_time = -100%
+  }
+  --abilities { AB3M { item = I_B3M } }
+}
+
+item I_C1M : MutantSpecItem {
+  name = "Natural Protection"
+  text = "All your regular units will gain [stats.hp] additional hit points."
+  icon = 4,1
+  levels = 1,2
+  repo = MUTANT_SPECC1
+  target {
+    Warrior
+    Worker
+    Brute
+    AncientShade
+    HowlingHorror
+  }
+  stats {
+    hp = 5%/15%
+  }
+  --abilities { AC1M { item = I_C1M } }
+}
+
+item I_C2M : MutantSpecItem {
+  name = "Healing Grace"
+  text = "Your High Priest Holy Aura will heal for [stats.holy_aura_heal] more hit points."
+  icon = 4,1
+  levels = 1,3
+  repo = MUTANT_SPECC2
+  target {
+    HighPriest
+  }
+  stats {
+    holy_aura_heal = 10%/20%/30%
+  }
+  --abilities { AC2M { item = I_C2M } }
+}
+
+item I_D1M : MutantSpecItem {
+  name = "Nature Focus"
+  text = "Your Shamans' will have [stats.drain_life_chance] higher chance to drain life while attacking enemies. Also, each time Shamans drains life, they will purge one positive effect on their targets."
+  icon = 4,1
+  repo = MUTANT_SPECD1
+  target {
+    Shaman
+  }
+  stats {
+    drain_life_chance = 25
+    drain_life_purge = 1
+  }
+  --abilities { AD1M { item = I_D1M } }
+}
+
+item I_D2M : MutantSpecItem {
+  name = "Elemental Focus"
+  text = "Your High Priest, Sorcerer and Shaman will do [stats.damage] more damage with their direct attack."
+  icon = 4,1
+  levels = 1,3
+  repo = MUTANT_SPECD2
+  target {
+    HighPriest
+    Shaman
+    Sorcerer
+  }
+  stats {
+    damage = 5%/15%
+  }
+  --abilities { AD2M { item = I_D2M } }
+}
+
+item I_D3M : MutantSpecItem {
+  name = "Beast Training"
+  text = "Your Brutes will get [stats.hp] higher hit points and [stats.armor] additional armor. Also, Brutes will have [stats.ignite_on_strike_chance] chance to Ignite after each attack, instead only after doing killing blow."
+  icon = 4,1
+  repo = MUTANT_SPECD3
+  target {
+    Brute
+  }
+
+  stats {
+    hp = 10%/20%
+    armor = 5/10
+    ignite_on_strike_chance = 2/5
+  }
+  
+  abilities {
+    IgniteOnHitAbi { 
+      active = 1 
+      item = I_D3M
+      icon = 1,0
+    }
+  }
+}
+

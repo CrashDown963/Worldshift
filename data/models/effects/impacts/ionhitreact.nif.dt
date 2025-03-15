@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\effects\impacts\ionhitreact.nif";
+  animation = {
+    loop = fixp:"0.766666710376739501953125";
+    duration = fixp:"1.39999997615814208984375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Flare";
+      translation = xpoint3:"0,-0.013862244784832000732421875,0.94277191162109375";
+      rotation = {
+        0 = xpoint3:"0,-1,0";
+        1 = xpoint3:"0.17124082148075103759765625,0,-0.985229194164276123046875";
+        2 = xpoint3:"0.985229194164276123046875,0,0.17124082148075103759765625";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray03Flame-Emitter";
+      translation = xpoint3:"0,-0.0138667114078998565673828125,-6.0687255859375";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Sparks04";
+      translation = xpoint3:"0,-3.3581993579864501953125,-1.4832305908203125";
+      rotation = {
+        0 = xpoint3:"0.4725750982761383056640625,-0.84077346324920654296875,0.264145433902740478515625";
+        1 = xpoint3:"-0.87864911556243896484375,-0.426309406757354736328125,0.21502570807933807373046875";
+        2 = xpoint3:"-0.068180225789546966552734375,-0.3337069451808929443359375,-0.940208017826080322265625";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Lightning02";
+    translation = xpoint3:"1.9933013916015625,-3.489105224609375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Lightning01";
+    translation = xpoint3:"1.9933013916015625,-3.489105224609375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

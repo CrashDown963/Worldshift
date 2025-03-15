@@ -1,0 +1,4 @@
+bugged_Mob Big_bird : BaseAnimal  {
+  name = "Big_bird"
+  model = data/models/lifeforms/Big_bird/big_bird.nif
+}

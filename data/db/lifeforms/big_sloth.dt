@@ -1,0 +1,4 @@
+Mob Big_sloth : BaseAnimal {
+  name = "Big_sloth"
+  model = data/models/lifeforms/Big_sloth/big_sloth.nif
+}

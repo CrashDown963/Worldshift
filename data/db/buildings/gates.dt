@@ -1,0 +1,6 @@
+Building Gates : BaseBuilding {
+  name = "Gates"
+  model = Data/Models/buildings/Gate/Gate.nif
+  race = mutants
+  target_priority = 0
+}

@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\embelishments\mutated\mad-daisy_big.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\mediumexplosion\explosionmedium02.kfm";
+  animations = {
+    boom = {
+      loop = int:"0";
+      duration = fixp:"1.39999997615814208984375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.39999997615814208984375";
+        }
+      }
+    }
+  }
+}

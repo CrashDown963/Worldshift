@@ -1,0 +1,40 @@
+model = {
+  file = str:"data\models\lifeforms\bambi\bambi.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"4";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"2.966666698455810546875";
+      movement = {
+        start = xpoint3:"0,-0.6264140605926513671875,0";
+        velocity = xpoint3:"0,-299.8523457050323486328125,0";
+        time = fixp:"2.966666698455810546875";
+        distance = fixp:"299.8523406982421875";
+        speed = fixp:"101.07382164825685322284698486328125";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.966666698455810546875";
+        }
+      }
+    }
+  }
+}

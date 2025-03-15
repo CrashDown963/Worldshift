@@ -1,0 +1,12 @@
+Mob Scorpion : BaseAnimal {
+  name = "Scorpion"
+  model = data/models/lifeforms/Scorpion/scorpion.kfm
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+      hit_2
+      hit_3
+      attack_1
+    }
+  }
+}

@@ -1,0 +1,50 @@
+﻿sid	text:fr	note
+ach_campaign	Démolisseur des plans démoniaques des extra-terrestres, également appelé 'Sauveur de la planète'	given for completing all story missions
+ach_items_1	Chercheur	collected a certain number of items
+ach_items_2	Collectionneur	collected a certain number of items
+ach_items_3	Chasseur de trésor	collected a certain number of items
+ach_humans_1	Supporteur du sénat	won a certain number of games with the Humans
+ach_humans_2	Poing du sénat	won a certain number of games with the Humans
+ach_humans_3	Héros du sénat	won a certain number of games with the Humans
+ach_tribes_1	Ami des tribus	won a certain number of games with the Tribes
+ach_tribes_2	Défenseur des tribus	won a certain number of games with the Tribes
+ach_tribes_3	Seigneur de guerre des tribus	won a certain number of games with the Tribes
+ach_cult_1	Disciple de Thar’Kyn	won a certain number of games with the Cult
+ach_cult_2	Expert de Thar’Kyn	won a certain number of games with the Cult
+ach_cult_3	Maître de Thar’Kyn	won a certain number of games with the Cult
+ach_pvp_1	Vétéran	won a certain number of PvP games
+ach_pvp_2	Champion	won a certain number of PvP games
+ach_pvp_3	Légende	won a certain number of PvP games
+ach_top_kills_1	Frappe de mort	had most kills in a certain number of games
+ach_top_kills_2	Faucheur d'âme	had most kills in a certain number of games
+ach_top_kills_3	Main du destin	had most kills in a certain number of games
+ach_top_heal_1	Infirmier	was the top healer in a certain number of games
+ach_top_heal_2	Auxiliaire médical	was the top healer in a certain number of games
+ach_top_heal_3	Robot de soins	was the top healer in a certain number of games
+ach_top_damage_1	Distributeur de douleur	did top damage in a certain number of games
+ach_top_damage_2	Destructeur	did top damage in a certain number of games
+ach_top_damage_3	Effaceur	did top damage in a certain number of games
+ach_top_tank_1	T-34	was the best ‘tank’ in a certain number of games
+ach_top_tank_2	T-72	was the best ‘tank’ in a certain number of games
+ach_top_tank_3	M1A1 Abrams	was the best ‘tank’ in a certain number of games
+ach_locations	Explorateur	completed all special locations
+ach_bosses_1	Éclaireur	killed a certain number of bosses
+ach_bosses_2	Traqueur	killed a certain number of bosses
+ach_bosses_3	Chasseur de gros gibier	killed a certain number of bosses
+ach_pvp_kills_1	Massacreur	killed a certain number of enemy units in PvP
+ach_pvp_kills_2	Exterminateur	killed a certain number of enemy units in PvP
+ach_pvp_kills_3	Dévastateur 	killed a certain number of enemy units in PvP
+ach_pvp_kills_4	Chuck Norris	killed a certain number of enemy units in PvP
+ach_win_streak_1	Vainqueur	a certain number of consecutive victories
+ach_win_streak_2	Conquérant	a certain number of consecutive victories
+ach_win_streak_3	Dominateur	a certain number of consecutive victories
+ach_kills_1g_1	Soldat	killed a certain number of enemy units in a single game
+ach_kills_1g_2	Capitaine	killed a certain number of enemy units in a single game
+ach_kills_1g_3	Général	killed a certain number of enemy units in a single game
+ach_res_1g_1	Cueilleur	gathered a certain amount of resources in a single game
+ach_res_1g_2	Entrepreneur	gathered a certain amount of resources in a single game
+ach_res_1g_3	Industriel	gathered a certain amount of resources in a single game
+ach_loc_challenge	Aventurier	completed all locations in Challenge mode
+ach_respecs_1	Testeur	has reset the entire specialization tree a certain number of times
+ach_respecs_2	Expérimentateur	has reset the entire specialization tree a certain number of times
+ach_respecs_3	Esprit lent	has reset the entire specialization tree a certain number of times

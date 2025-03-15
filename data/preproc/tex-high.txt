@@ -1,0 +1,2 @@
+data\models\units\cargocopter\high\cargocopter_diffuse.dds
+data\models\units\cargocopter\high\cargocopter_nmbase.dds

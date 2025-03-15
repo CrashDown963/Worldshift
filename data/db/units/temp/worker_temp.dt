@@ -1,0 +1,6 @@
+Unit Worker_temp: BaseUnit {
+  race = mutants
+  linkable = 1
+  model = Data/Models/Units/worker/Worker_temp.nif
+}
+

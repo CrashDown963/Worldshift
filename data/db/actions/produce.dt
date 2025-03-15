@@ -1,0 +1,149 @@
+ProduceAction {
+  visible = 1
+  instant = 1
+  program = PrgProduce
+}
+
+CCancelUnitProductionAction CancelUnitProduce {
+  name = "Cancel Unit Produce"
+  instant = 1
+  visible = 0
+}
+
+-- humans
+
+CProduceAction ProduceTechnician : ProduceAction {
+  name : Technician.name
+  produce = Technician
+  icon = 1,2
+}
+
+CProduceAction ProduceCommander : ProduceAction {
+  name : Commander.name
+  descr : Commander.descr
+  produce = Commander
+  icon = 10,9
+  max_objects = 1
+}
+
+CProduceAction ProduceTrooper : ProduceAction {
+  name : Trooper.trooper_name
+  descr : Trooper.descr
+  produce = Trooper
+  icon = 11,8
+}
+
+CProduceAction ProduceHellfire : ProduceAction {
+  name : Hellfire.name
+  descr : Hellfire.descr
+  produce = Hellfire
+  icon = 1,9
+}
+
+CProduceAction ProduceAssaultBot : ProduceAction {
+  name : AssaultBot.name
+  descr : AssaultBot.descr
+  produce = AssaultBot
+  icon = 13,8
+}
+
+CProduceAction ProduceDefender : ProduceAction {
+  name : Defender.name
+  produce = Defender
+  icon = 12,1
+}
+
+CProduceAction ProduceRipper : ProduceAction {
+  name : Ripper.name
+  descr : Ripper.descr
+  produce = Ripper
+  icon = 12,8
+}
+
+-- mutants
+
+CProduceAction ProduceHighPriest : ProduceAction {
+  name : HighPriest.name
+  descr : HighPriest.descr
+  produce = HighPriest
+  icon = 12,9
+  max_objects = 1
+}
+
+CProduceAction ProduceWorker : ProduceAction {
+  name : Worker.name
+  produce = Worker
+  icon = 1,2
+}
+
+CProduceAction ProduceBattleYamu : ProduceAction {
+  name : BattleYamu.name
+  produce = BattleYamu
+  icon = 7,3
+}
+    
+CProduceAction ProduceWarrior : ProduceAction {
+  name : Warrior.name
+  descr : Warrior.descr
+  produce = Warrior
+  icon = 2,9
+}
+
+CProduceAction ProduceHowlingHorror : ProduceAction {
+  name : HowlingHorror.name
+  descr : HowlingHorror.descr
+  produce = HowlingHorror
+  icon = 11,9
+}
+    
+CProduceAction ProduceAncientShade : ProduceAction {
+  name : AncientShade.name
+  descr : AncientShade.descr
+  produce = AncientShade
+  icon = 4,9
+}
+    
+CProduceAction ProduceBrute : ProduceAction {
+  name : Brute.name
+  descr : Brute.descr
+  produce = Brute
+  icon = 3,9
+}
+
+-- aliens
+
+CProduceAction ProduceMaster : ProduceAction {
+  name : Master.name
+  descr : Master.descr
+  produce = Master
+  icon = 13,9
+  max_objects = 1
+}
+
+CProduceAction ProduceTrisat : ProduceAction {
+  name : Trisat.name
+  descr : Trisat.descr
+  produce = Trisat
+  icon = 5,9
+}
+
+CProduceAction ProduceTritech : ProduceAction {
+  name : Tritech.name
+  descr : Tritech.descr
+  produce = Tritech
+  icon = 6,9
+}
+
+CProduceAction ProduceOverseer : ProduceAction {
+  name : Overseer.field_name
+  descr : Overseer.descr
+  produce = Overseer
+  icon = 8,9
+}
+
+CProduceAction ProduceShifter : ProduceAction {
+  name : Shifter.name
+  descr : Shifter.descr
+  produce = Shifter
+  icon = 7,9
+}

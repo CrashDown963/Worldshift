@@ -1,0 +1,32 @@
+﻿sid	text
+
+ConfuseAction.spell.effect.effect2.name	Confusion
+ConfuseAction.spell.effect.effect2.text	This unit is threatened by a Lord Commander and cannot attack anyone else.
+
+AncientSmith.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmith.abilities.ConfuseAbi.effect.effect.text	Ancient Smith’s armor is increased during a Confusion maneuver.
+AncientSmith.abilities.ConfuseAbi.effect.effect2.name	Confusion
+AncientSmith.abilities.ConfuseAbi.effect.effect2.text	This unit is threatened by an Ancient Smith and cannot attack anyone else.
+
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.text	Ancient Smith’s armor is increased during a Confusion maneuver.
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect2.name	Confusion
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect2.text	This unit is threatened by an Ancient Smith and cannot attack anyone else.
+
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.text	Ancient Smith’s armor is increased during a Confusion maneuver.
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect2.name	Confusion
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect2.text	This unit is threatened by an Ancient Smith and cannot attack anyone else.
+
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.text	Ancient Smith’s armor is increased during a Confusion maneuver.
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect2.name	Confusion
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect2.text	This unit is threatened by an Ancient Smith and cannot attack anyone else.
+
+QueenProtector.abilities.Taunt.effect.effect.name	Healing
+QueenProtector.abilities.Taunt.effect.effect.text	The Queen is being healed by a Queen Protector.
+QueenProtector.abilities.Taunt.effect.effect2.name	Confusion
+QueenProtector.abilities.Taunt.effect.effect2.text	This unit is threatened by a Queen Protector and cannot attack anyone else.
+
+BridgeTrooper.abilities.Inject.effect.name	Inject
+BridgeTrooper.abilities.Inject.effect.text	The Trooper is regenerating his health under the influence of injected medications.

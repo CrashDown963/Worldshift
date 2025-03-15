@@ -1,0 +1,216 @@
+Building ControlTower : BaseBuilding {
+  name = "Control Tower"
+  descr = "DESCRIPTION"
+  icon = 2,4
+  model = Data/Models/buildings/ControlTower/ControlTower.kfm {
+    die = Data/Models/buildings/ControlTower/ControlTower_Break.nif
+    rot_z_01 {
+      min_yaw = -90
+      max_yaw = 90
+    }
+    
+    rot_z_02 {
+      min_yaw = -180
+      max_yaw = 0
+    }
+    
+    rot_z_03 {
+      min_yaw = 0
+      max_yaw = -180
+    }
+    
+    rot_z_04 {
+      min_yaw = 90
+      max_yaw = -90
+    }
+  }
+  sounds {
+    start = data/sounds/PvP/Humans/CT amb/
+  }
+  
+  physics {
+    default = Data/Models/buildings/ControlTower/ControlTower_Proxy.pml
+    die = Data/Models/buildings/ControlTower/ControlTower.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/TrailSmoke/DestrSmoke02.nif
+    attach_destr_node_04 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_05 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_node_06 = data/models/Effects/Fire/Fire_Ani1.nif
+    attach_destr_perc = 40
+  }
+  
+  destruction = ragdoll
+  explosion = ExplosionControlTower
+
+  upgraded = 1
+
+  race = humans
+  silo = 1
+  stats :{
+    hp = 9000
+    range = 2000
+    damage = 20
+    detect_motion = 0
+  }
+  sight = 3500
+  
+  actions {
+    RallyPoint
+    CancelUnitProduce
+    ProduceCommander
+    ProduceTrooper
+    ProduceRipper
+    ProduceAssaultBot
+    ProduceHellfire
+    ProduceDefender
+    
+    PerimeterDefenseAction
+    DetectMotionAction
+  }
+  
+  CAbilityController AbilityController
+  
+  abilities {
+    LargeCrew {
+      name = "Large Crew"
+      text = "DESCRIPTION"
+      icon = 7,0
+    }
+    MotionScanner {
+      name = "Motion Scanner"
+      text = "DESCRIPTION"
+      icon = 2,0
+      active = var:detect_motion
+    }
+  }
+  
+  CAlertController alert {
+    timeout = 10
+    layered_anims = 0
+  }  
+
+  CCrewController crew {
+    spawn = Crew                    -- spawn objects of this type
+    program = PrgRepair             -- spawned objects's program
+    count = 3                       -- base count (number of objects to spawn)
+    hp_threshold = 90               -- only spawn if we're not above this threshold
+    low_hp_count = 1                -- additional spawns if we're not above low_hp_threshold
+    low_hp_threshold = 25           -- threshold for additional spawns due to low hp
+    low_hp_high_threshold = 30      -- despawn additional low hp spawns when repaired to this threshold
+    death_cooldown = 30             -- don't spawn any for X seconds after one of the spawns has died
+  }
+  
+  min_yaw = -45
+  max_yaw = 45
+  yaw_speed = 130
+  
+  CWeaponController weapon_01 {
+    range = stat:range
+    active = 1
+    idle_only = 1
+    root_node = wepon_01
+    fire_node = pt_shoot_01
+    aim_node = pt_aim_01
+    aim_tolerance = 15
+    shoot_snd = data/sounds/weapons/Arc Discharge High/
+    fire_rate = 0.8 
+    spot_impact = 800
+    spot_impact_type = bullet
+
+    instant_shot CT_Shot {
+     model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+     dist_start = 100
+     travel_start = 100
+     travel_end = 0
+     duration = 0.4
+     time_fraction_to_lag_end = 1
+     width = 55
+     instances = 128
+     color_alpha {
+       0 = 105,25,75,180
+       5 = 105,25,75,180
+       22 = 120,18,50,205
+       100 = 145,5,35,0
+     }
+   }
+   
+    muzzle_fx CT_shot {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
+		  frames = 2
+		  frequency = 1.0
+		  active_fraction	= 10
+		  active_variation = 5
+		  length_variation = 4
+		  width_variation	= 13
+		  scale	= 7
+		  instances = 64
+      emit = 140,18,50
+	  }  
+ 
+  }
+  
+  CWeaponController weapon_02 : weapon_01 {
+    root_node = wepon_02
+    fire_node = pt_shoot_02
+    aim_node = pt_aim_02
+  }
+  
+  CWeaponController weapon_03 : weapon_01 {
+    root_node = wepon_03
+    fire_node = pt_shoot_03
+    aim_node = pt_aim_03
+  }
+  
+  CWeaponController weapon_04 : weapon_01 {
+    root_node = wepon_04
+    fire_node = pt_shoot_04
+    aim_node = pt_aim_04
+  }
+    
+  give_res : pvp.humans.big_structure_res
+}
+
+CPerimeterDefenseUpgradeAction PerimeterDefenseAction {
+  name = "Perimeter Defense"
+  descr = "DESCRIPTION"
+  visible = 1
+  instant = 1
+  icon = 9,9
+
+  cost = 200r
+
+  auto_spend = 1
+  
+  turret_id = ProtonTurret
+  turret_count = 3
+  
+  model1 = data/models/buildings/protonturret/protonturret_upgrading.nif
+  duration1 = 4.75
+  
+  model2 = data/models/buildings/protonturret/protonturret_upgraded.nif
+  duration2 = 0.25
+}
+
+CUpgradeAction DetectMotionAction {
+  name = "Detect Motion"
+  descr = "DESCRIPTION"
+  instant = 1
+  visible = 1
+  icon = 11,1
+  program = PrgUpgrade
+  duration = 10
+  global_upgrade = 0
+  upgrade {
+    radar_range = 10000
+    detect_motion = 1
+  }
+  cost = 120r
+}
+
+CRadarPingAnim RadarPing {
+  model = Data/Models/MiscObjects/RadarPing/RadarPing.nif
+  looped = 1
+}
+

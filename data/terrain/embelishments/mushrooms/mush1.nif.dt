@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\mushrooms\mush1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ring";
+    translation = xpoint3:"-2.82205867767333984375,-59.867889404296875,132.269805908203125";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+}

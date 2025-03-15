@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\buildings\missioncontrol\missioncontrol-2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"CommandCenter2";
+    translation = xpoint3:"0.2890567779541015625,110.9044952392578125,500.385528564453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"__NDL_MultiMtl_Node";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"decal_plane";
+    translation = xpoint3:"0.3441162109375,110.9044189453125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

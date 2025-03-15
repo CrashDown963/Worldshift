@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\terrain\detailobjects\vegetation41.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Cylinder01";
+    translation = xpoint3:"1.33986794948577880859375,-2.9588992595672607421875,7.22913360595703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Cylinder17";
+    translation = xpoint3:"1.33986794948577880859375,-2.9216268062591552734375,-0.1503849029541015625";
+    rotation = {
+      0 = xpoint3:"0.81851482391357421875,0.57448542118072509765625,0";
+      1 = xpoint3:"-0.57448542118072509765625,0.81851482391357421875,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Cylinder18";
+    translation = xpoint3:"0.93138635158538818359375,-4.1499004364013671875,-0.1503849029541015625";
+    rotation = {
+      0 = xpoint3:"0.323562145233154296875,0.94620692729949951171875,0";
+      1 = xpoint3:"-0.94620692729949951171875,0.323562145233154296875,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"roundshadow";
+    translation = xpoint3:"2.019397735595703125,-1.57653903961181640625,3.037502765655517578125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

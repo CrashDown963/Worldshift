@@ -1,0 +1,186 @@
+Unit Shifter : BaseUnit {
+  name = "Shifter"
+  descr = "Shifter description"
+  race = aliens
+  tags = unit, organic
+  icon = 4,3
+
+  model = Data/Models/Units/Shifter/Shifter.kfm
+  destruction = animation
+  
+  sounds {
+    select = data/sounds/units/shifter/select/
+    confirm = data/sounds/units/shifter/confirm/
+    destruction = data/sounds/destruction/units/shifter/
+  }
+
+  stats : {
+    hp = 580
+    psi = 300
+    armor = 8
+    range = 1600
+    damage = 10
+
+    shield_hull = 250
+    shield_regen  = 120
+    shield_fullabsorbchance = 20
+    shield_percentabsorbtion = 50
+
+    breed_power = 250
+    breed_range = 1600
+    breed_cooldown = 35
+    breed_hatchlings = 4
+
+    enfeeble_chance = 10
+    enfeeble_damage_reduction_perc = 10
+    enfeeble_duration = 8
+    
+    power_leak_chance = 15
+    power_leak_drain = 5
+
+    infestation_chance = 5
+    infestation_hatchlings = 1
+  }
+  
+  speed = 450
+  actions :{
+    BreedAction
+    MakeBreeder -- fake
+  }
+  
+  abilities {
+    EnfeebleAbi
+    InfestationAbi
+    PowerLeakAbi
+    CloneShieldAbi {
+      name = "Clone Shield"
+      text = "Clone Shield that is activated automatically when the Shifter is attacked. Clone Shield has [stat:shield_hull] durability, [stat:shield_regen] charge rate, [stat:shield_fullabsorbchance]% chance for full deflection and [stat:shield_percentabsorbtion]% damage absorbtion. Also, everytime the Clone Shield fully deflects an incoming attack, it clones and protects one random nearby Officer, Trisat or Tritech."
+      icon = 2,0
+    }  
+  }
+
+  take_auras : { RestorationCoreAura }
+  
+  CShieldController shield {
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    call_lua_on_full_absorb = OnShifterShieldFullAbsorb
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = run
+    shoot_snd = data/sounds/effects/single weapons/arbiter gun.wav
+    fire_node = pt_cast
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/AlienProjectile.nif
+	    speed = 2500
+      scale = 0.1
+    }
+  }
+  cost : pvp.aliens.unit_costs.Shifter
+  cost_sloc : pvp.aliens.sloc_costs.Shifter
+}
+
+EnfeebleAbi {
+  name = "Enfeeble"
+  text = "Shifter has [stat:enfeeble_chance]% chance on each attack to enfeeble all enemy units around his target for [stat:enfeeble_duration] reducing their damage by [stat:enfeeble_damage_reduction_perc]%. The effect stacks up to 5 times."
+  icon = 5,0
+  when : abi.target_hit
+  chance = stat:enfeeble_chance
+  target = current
+  effect = E_multidebuff {
+    id = Enfeeble
+    name = "Enfeeble"
+    text = "This unit has been weakened by a Shifter�s attack."
+    icon = 1,16
+    type = weaken
+    multi_area = 500 { anim = data/models/effects/plasmaexplosion/plasmaexplosion.kfm }
+    stats_change {
+      damage = { perc = stat:enfeeble_damage_reduction_perc * -1 }
+    }
+    duration = stat:enfeeble_duration
+    --tick = 1
+    --immediate_tick = 1
+    react = fire
+    stack_count = 5
+  }
+}
+
+CSpellAction BreedAction {
+  name = "Breed"
+  descr = "Shifter summons [stat:breed_hatchlings] Hatchlings at the selected area that will automatically attack nearby enemies."
+  visible = 1
+  cooldown = stat:breed_cooldown
+  icon = 13,7
+  tags = location
+  feedback = DecalFeedback
+  min_power = stat:breed_power
+  range = stat:sight
+  
+  spell {
+    power = stat:breed_power
+    effect = ShifterBreedEffect
+  }
+}
+
+CSpawnEffect ShifterBreedEffect {
+  sound = data/sounds/effects/common/breed.wav
+  one_time_only = 1
+  spawn_prg = PrgPlayAnim {
+    anim = spawn_1
+  }
+  spawn {
+    Hatchling = stat:breed_hatchlings
+  }
+}
+
+PowerLeakAbi {
+  name = "Power Leak"
+  text = "Default attack of Shifter has [stat:power_leak_chance]% chance to reduce the enemy power by [stat:power_leak_drain]%."
+  icon = 4,0
+  when : abi.target_hit
+  chance = stat:power_leak_chance
+  target = current
+  effect = E_heal {
+    amount_perc = stat:power_leak_drain * -1
+    heal_psi = 1
+    react = drainpsy_small
+  }
+}
+
+InfestationAbi {
+  name = "Infestation"
+  text = "The Shifter’s default attack has a [stat:infestation_chance]% chance to spawn [stat:infestation_hatchlings] hatchlings near its current target."
+  chance = stat:infestation_chance
+  when : abi.target_hit
+  range = stat:range
+  target = current
+      
+      cast {
+        finish {
+          anim = run
+        }
+      }
+      effect = ShifterInfestationEffect
+}
+    
+CSpawnEffect ShifterInfestationEffect {
+  sound = data/sounds/effects/common/infest.wav
+  spawn_prg = PrgPlayAnim {
+    anim = spawn_1
+  }
+  spawn {
+    Hatchling = stat:infestation_hatchlings
+  }
+  sound = data/sounds/effects/global actions/horrify/
+}

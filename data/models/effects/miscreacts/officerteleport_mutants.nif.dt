@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\effects\miscreacts\officerteleport_mutants.nif";
+  animation = {
+    loop = fixp:"8.3666667938232421875";
+    duration = fixp:"3.3333332538604736328125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Gravity01";
+      translation = xpoint3:"-259.305999755859375,754.5068359375,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Blizzard01-Emitter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"PCloud01BrightShit-Emitter";
+    translation = xpoint3:"0,0,125.606781005859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"LightCylinder02";
+    translation = xpoint3:"0,0,-7.410614013671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"LightCylinder01";
+    translation = xpoint3:"0,0,-7.410614013671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

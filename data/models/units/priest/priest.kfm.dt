@@ -1,0 +1,121 @@
+model = {
+  file = str:"data\models\units\priest\priest.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"1.06666660308837890625";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-200.61236572265625,0";
+        time = fixp:"1.06666660308837890625";
+        distance = fixp:"200.61236572265625";
+        speed = fixp:"188.07410412165336310863494873046875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.06666660308837890625";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"0.866666316986083984375";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-399.637786865234375,0";
+        time = fixp:"0.866666316986083984375";
+        distance = fixp:"399.637786865234375";
+        speed = fixp:"461.12070936593227088451385498046875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.866666316986083984375";
+        }
+      }
+    }
+    cast_praparation = {
+      loop = int:"1";
+      duration = fixp:"0.83333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.83333301544189453125";
+        }
+      }
+    }
+    cast_finish = {
+      loop = int:"0";
+      duration = fixp:"0.666666507720947265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.56666660308837890625";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"0.666666507720947265625";
+        }
+      }
+    }
+    cast_globall = {
+      loop = int:"0";
+      duration = fixp:"1.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.66666698455810546875";
+        }
+      }
+    }
+    cast_global_loop = {
+      loop = int:"1";
+      duration = fixp:"1.6666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6666660308837890625";
+        }
+      }
+    }
+  }
+}

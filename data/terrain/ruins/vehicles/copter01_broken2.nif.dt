@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\vehicles\copter01_broken2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Copter-broken02";
+    translation = xpoint3:"20.169525146484375,66.4640655517578125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

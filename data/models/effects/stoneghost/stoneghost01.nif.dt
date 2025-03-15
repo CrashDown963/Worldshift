@@ -1,0 +1,267 @@
+model = {
+  file = str:"data\models\effects\stoneghost\stoneghost01.nif";
+  animation = {
+    loop = fixp:"8.3666667938232421875";
+    duration = fixp:"3.3333332538604736328125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"state1";
+    translation = xpoint3:"-24.5501556396484375,74.35477447509765625,48.89440155029296875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"State2";
+    translation = xpoint3:"-19.7298583984375,47.55872344970703125,13.4570159912109375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"state3";
+    translation = xpoint3:"7.203369140625,40.45362091064453125,0.8885498046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Gravity01";
+      translation = xpoint3:"-259.305999755859375,754.5068359375,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Blizzard01-Emitter";
+      translation = xpoint3:"0,36.7026824951171875,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"GhostDummy01";
+      translation = xpoint3:"4.83551025390625,339.57916259765625,286.95654296875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Plane02";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"BBoardSG02";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"Plane01";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"GhostDummy02";
+      translation = xpoint3:"248.509918212890625,-93.77519989013671875,240.4586181640625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray02-Emitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1.1741497516632080078125";
+        name = str:"Plane03";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"BBoardSG03";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"Plane04";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+    #5 = {
+      scale = fixp:"1";
+      name = str:"GhostDummy03";
+      translation = xpoint3:"-244.7648468017578125,-113.35585784912109375,419.926788330078125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"BBoardSG04";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1.1741497516632080078125";
+        name = str:"Plane07";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1.78399944305419921875";
+        name = str:"Plane08";
+        translation = xpoint3:"-3.605224609375,3.1065673828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray03-Emitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"Cylinder01";
+    translation = xpoint3:"-1.81610870361328125,38.206722259521484375,-32.424652099609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"PCloud01-Emitter";
+    translation = xpoint3:"0,0,334.4515380859375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"LightCylinder02";
+    translation = xpoint3:"-1.81610870361328125,38.20671844482421875,-7.410614013671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"LightCylinder01";
+    translation = xpoint3:"-1.81610870361328125,38.20671844482421875,-7.410614013671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #8 = {
+    scale = fixp:"1";
+    name = str:"Cylinder02";
+    translation = xpoint3:"-1.81610870361328125,38.206722259521484375,-46.11649322509765625";
+    rotation = {
+      0 = xpoint3:"-0.57357656955718994140625,0.819152057170867919921875,0";
+      1 = xpoint3:"-0.819152057170867919921875,-0.57357656955718994140625,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\terrain\flora\bushes\jungle\paprat-bush2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object07";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"-0.67569732666015625,21.0770435333251953125,-7.90496158599853515625";
+    rotation = {
+      0 = xpoint3:"-0.9109685420989990234375,-0.384892284870147705078125,-0.14830458164215087890625";
+      1 = xpoint3:"0.3891961574554443359375,-0.921154916286468505859375,0";
+      2 = xpoint3:"-0.136611402034759521484375,-0.057719789445400238037109375,0.988941729068756103515625";
+    }
+  }
+}

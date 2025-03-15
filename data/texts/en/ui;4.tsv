@@ -1,0 +1,21 @@
+sid	text
+
+gs_game_disabled	This version of the game has expired!
+voice	voice
+inspect_forbidden_ttl	INSPECT NOT ALLOWED
+inspect_forbidden_txt	The player does not allow to be inspected.
+paused	PAUSED
+antialiasing	Anti-aliasing
+kicked	You’ve been kicked out of the game.
+res_error	Unable to set the desired screen resolution!
+dmmeters_stl1	(players<color = 52,157,255> preparing</>,<color = 183,94,216> playing</> and<nl><color = 241,182,1> searching</>)
+trash_ttl	Recycle an item
+trash_txt	Drop an item here to recycle it. You have a chance to receive a xenoshard in the process; the probability depends on the quality of the deleted item.
+log_ttl	Conversation Log
+log_txt	Click here to show past conversations
+Ran Boo_dead	Ran Boo is dead!
+Kharum Priest_dead	Kharum’s High Priest is dead!
+Trooper.trooper_name	Trooper
+Trooper.elite_name	Elite Trooper
+trooper_name.name	Trooper
+elite_name.name	Elite Trooper

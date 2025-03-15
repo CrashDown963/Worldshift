@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\rom_smallturret\rom_smallturret.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"rot_z";
+      translation = xpoint3:"0,6.457505702972412109375,366.6541748046875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"rot_x";
+        translation = xpoint3:"0,-37.8460693359375,73.569091796875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"pt_shoot";
+          translation = xpoint3:"0,-282.44598388671875,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

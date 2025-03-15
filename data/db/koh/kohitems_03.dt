@@ -1,0 +1,7 @@
+Building KoHItems_03 : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/KoHItems_03.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

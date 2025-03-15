@@ -1,0 +1,11 @@
+CFireSweep HellfireSweep {
+  model = data/Models/Effects/Fire/FireSweep.kfm
+  sound = DATA/sounds/Effects/FireSweep/
+  scale = 1
+  hide_in_fog = 1
+
+  spot_def = MoltenArea
+  radius = 750
+  expand_speed = 600
+  damage = 20
+}

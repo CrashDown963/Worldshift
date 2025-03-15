@@ -1,0 +1,5 @@
+CRallyPointAction RallyPoint {
+  name = "Set Rally Point"
+  tags = location
+  can_default = 1
+}

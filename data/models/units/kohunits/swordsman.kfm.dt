@@ -1,0 +1,131 @@
+model = {
+  file = str:"data\models\units\kohunits\swordsman.kfm";
+  animations = {
+    idle = {
+      loop = int:"0";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_rare = {
+      loop = int:"1";
+      duration = fixp:"3";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3";
+        }
+      }
+    }
+    idle_very_rare = {
+      loop = int:"1";
+      duration = fixp:"2.33333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.33333301544189453125";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1.06666660308837890625";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-400,0";
+        time = fixp:"1.06666660308837890625";
+        distance = fixp:"400";
+        speed = fixp:"375.0000224448740482330322265625";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.06666660308837890625";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"1.06666660308837890625";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-200,0";
+        time = fixp:"1.06666660308837890625";
+        distance = fixp:"200";
+        speed = fixp:"187.50001122243702411651611328125";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.06666660308837890625";
+        }
+      }
+    }
+    hit_1 = {
+      loop = int:"1";
+      duration = fixp:"1.3333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.3333339691162109375";
+        }
+      }
+    }
+    hit_2 = {
+      loop = int:"1";
+      duration = fixp:"1.23333263397216796875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.23333263397216796875";
+        }
+      }
+    }
+    hit_3 = {
+      loop = int:"1";
+      duration = fixp:"1.83333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.83333301544189453125";
+        }
+      }
+    }
+  }
+}

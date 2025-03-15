@@ -1,0 +1,12 @@
+﻿sid	text
+	
+RenegadeManipulator.abilities.EnrageAbi.effect.name	Enrage
+RenegadeManipulator.abilities.EnrageAbi.effect.text	This unit’s statistics are being enhanced by a friendly Renegade Manipulator.
+RenegadeDominator.abilities.DimensionChainAbi.effect.effect.name	Dimension Chain
+RenegadeDominator.abilities.DimensionChainAbi.effect.effect.text	This unit is caught in a Dimension Chain and cannot move.
+RenegadeHarvester.abilities.EnsnareAbi.projectile.effect.name	Hunter’s net
+RenegadeHarvester.abilities.EnsnareAbi.projectile.effect.text	This unit is caught in a hunter’s net and cannot act.
+E_bt_shield.name	Special Defense
+E_bt_shield.text	This unit has been granted a special defensive ability.
+E_bt_weapon.name	Special Offense
+E_bt_weapon.text	This unit has been granted a special offensive ability.

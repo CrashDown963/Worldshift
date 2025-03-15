@@ -1,0 +1,47 @@
+CAreaEffect GroundExplosionEffect {
+  range = 1000
+  
+  epicenter {
+    spawn BigGroundExplosionAnim
+  }
+  
+  area {
+    points = 3
+    chance = 75
+    spawn GroundExplosionAnim
+  }
+  
+  tags t1 = unit, organic {
+    chance = 50
+    spawn ExplosionDamage {
+      amount = 300
+    }
+    spawn PlasmaExplosion
+  }
+}
+
+CAnimEffect GroundExplosionAnim {
+  tags t1 = grass {
+	spawn PlasmaExplosion
+  }
+  
+  tags t2 = dirt | mud {
+	spawn RocketExplosion
+  }
+  
+  tags t3 = water {
+	spawn WaterHit
+  }
+}
+
+CAnimEffect BigGroundExplosionAnim : GroundExplosionAnim {
+  scale = 2
+}
+
+CMapAnim PurpleEnergyBurst {
+  model = data/models/effects/magic/PurpleEnergyBurst.nif
+}
+
+CMapAnim PurpleEnergyBurst_Inverse {
+  model = data/models/effects/magic/PurpleEnergyBurst_Inverse.nif
+}

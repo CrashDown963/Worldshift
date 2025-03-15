@@ -1,0 +1,31 @@
+﻿sid	text
+		
+Bill.name	Bill the Rocket Scientist
+BSAHowlingHorror.name	The Reptile
+ArrowForward.name	Arrow
+AlienShip.name	Tharksh’s ship
+AlienShip.descr	This is Tharksh’s shuttle.
+
+// Corrupted Fields
+CorruptedHighPriest.name	Corrupted High Priest
+CorruptedShade.name	Corrupted Shade
+CorruptedShaman.name	Corrupted Shaman
+CorruptedGhost.name	Corrupted Ghost
+CorruptedGhostMinion.name	Corrupted Ghost Minion
+CorruptedShadeMinion.name	Corrupted Shade Minion
+
+// Ancient Corridors		
+AncientSmith.name	Ancient Smith
+AncientSmithCloneEast.name	Ancient Smith
+AncientSmithCloneWest.name	Ancient Smith
+AncientSmithMinion.name	Ancient Smith
+
+// Renegades’ Hideout
+ZulThark.name	Zul’Thark
+ErkhArul.name	Erkh Arul
+
+// Bridges of Trial
+LanZealot.name	Lan Zealot
+Berserker.name	Berserker
+BTMonster.name	Monster
+Kroggol.name	Kroggol

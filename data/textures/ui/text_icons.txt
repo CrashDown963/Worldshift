@@ -1,0 +1,4 @@
+energy = 0,0,16x16
+food = 16,0,16x16
+minerals = 32,0,16x16
+people = 48,0,16x16

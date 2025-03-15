@@ -1,0 +1,6 @@
+Unit HorrorGhost : PlaceholderUnit {
+  model = Data/Models/units/HorrorGhost/Howling_Horror_Ghost.kfm
+  race = mutants
+  tags = unit, underworld
+}
+  

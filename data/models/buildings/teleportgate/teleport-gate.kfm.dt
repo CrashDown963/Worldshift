@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\models\buildings\teleportgate\teleport-gate.kfm";
+  animations = {
+    working = {
+      loop = int:"1";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"4.96666717529296875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4.96666717529296875";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\effects\tracebullet\alienprojectile.nif";
+  animation = {
+    loop = fixp:"3.333333492279052734375";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Core";
+    translation = xpoint3:"0,-29.735927581787109375,0";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"0,0,1";
+      2 = xpoint3:"-1,0,0";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray01-Emitter";
+    translation = xpoint3:"0,-48.633144378662109375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,1";
+      2 = xpoint3:"0,-1,0";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"SpraySmoke-Emitter";
+    translation = xpoint3:"0,-32.60919189453125,0";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"Plane05";
+    translation = xpoint3:"0,-36.93182373046875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

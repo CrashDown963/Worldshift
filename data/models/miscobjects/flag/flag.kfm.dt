@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\miscobjects\flag\flag.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+  }
+}

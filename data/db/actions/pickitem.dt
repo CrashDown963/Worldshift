@@ -1,0 +1,15 @@
+CAction PickItem {
+  icon = 3,1
+  program = PrgPickItem
+  instant = 1
+  visible = 1
+  cursor = item
+}
+
+CAction PickItemDef {
+  tags = items
+  program = PrgPickItem
+  can_default = 1
+  weight = 1
+  cursor = item
+}

@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\projectiles\protonshot\protonshotexpire.nif";
+  animation = {
+    loop = fixp:"0.16666667163372039794921875";
+    duration = fixp:"1.83333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Drag01";
+    translation = xpoint3:"0,99.71833038330078125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray02-Emitter";
+    translation = xpoint3:"0,59.033535003662109375,-1.421788692474365234375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray03Smoke-Emitter";
+    translation = xpoint3:"0,99.71833038330078125,-1.421794891357421875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Plane02";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

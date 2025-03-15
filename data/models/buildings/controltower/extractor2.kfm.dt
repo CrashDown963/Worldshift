@@ -1,0 +1,61 @@
+model = {
+  file = str:"data\models\buildings\controltower\extractor2.kfm";
+  animations = {
+    alert_in = {
+      loop = int:"0";
+      duration = fixp:"0.83333337306976318359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.83333337306976318359375";
+        }
+      }
+    }
+    alert = {
+      loop = int:"1";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    alert_out = {
+      loop = int:"0";
+      duration = fixp:"0.599999904632568359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.599999904632568359375";
+        }
+      }
+    }
+    idle_1 = {
+      loop = int:"1";
+      duration = fixp:"0.466666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.466666698455810546875";
+        }
+      }
+    }
+  }
+}

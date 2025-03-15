@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\effects\impacts\bloodspray01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0.20000000298023223876953125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Plane01";
+      translation = xpoint3:"-5.31102466583251953125,0,1.7157146930694580078125";
+      rotation = {
+        0 = xpoint3:"0.984807789325714111328125,0.1736481189727783203125,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"-0.1736481189727783203125,0.9848077297210693359375,0";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Plane02";
+      translation = xpoint3:"-5.31102466583251953125,0,1.7157146930694580078125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

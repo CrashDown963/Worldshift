@@ -1,0 +1,209 @@
+Unit AncientShade : UnderworldUnit {
+  name = "AncientShade"
+  descr = "AncientShade Placeholder Desc."
+  model = Data/Models/Units/AncientShade/AncientShade.kfm
+  scale = 0.8
+  race = mutants
+  icon = 7,2
+    
+  stats :{
+    hp = 350
+	  psi = 280
+    damage = 40
+    penetration = 100
+    range = 1800
+    
+    fatelink_duration = 15
+    fatelink_power = 220
+    
+    terrify_chance = 5
+    terrify_cooldown = 20
+    terrify_duration = 3
+    terrify_area = 200
+  }
+  speed = 450
+  
+  sounds {
+    start = data/sounds/units/ancientshade/ancient shade summoned.wav
+    attack = data/sounds/units/ancientshade/attack/
+    move = data/sounds/units/ancientshade/move/
+    select = data/sounds/units/ancientshade/select/
+    confirm = data/sounds/units/ancientshade/confirm/
+    destruction = data/sounds/units/ancientshade/die/
+  }
+
+  abilities {
+    UnholyAttackAbi
+    TerrifyAbi
+  }
+    
+  actions : BaseUnit.actions {
+    FateLinkAction;
+	  MakeShrine -- fake
+  }
+  
+  attachments {
+    FX_ROOT = data/models/effects/Magic/AncientShade_fx_Attachment.nif {
+    CTrailController ShadeTrail  {
+          emitter = Emmiter01
+          texture = data/textures/trails/dark-lightnings.dds
+          tex_ratio = float: 0.5
+          start_width = 0
+          end_width = 100
+          ttl = 17
+          simple_time = 1
+          additive = 0
+                  z_write = 0
+          material_alpha = 0.6
+          diffuse = color: 0, 0, 0
+          ambient = color: 0, 0, 0
+          emissive = color: 0.8, 0.8, 0.8
+
+          time0 = 0
+          color0 = colora: 1, 1, 1, 0
+
+          time1 = 4
+          color1 = colora: 1, 1, 1, 1
+
+          time2 = 60
+          color2 = colora: 1, 1, 1, 1
+
+          time3 = 100
+          color3 = colora: 1, 1, 1, 0
+    }
+    CTrailController ShadeTrail02 : ShadeTrail {emitter = Emmiter02}
+    CTrailController ShadeTrail03 : ShadeTrail {emitter = Emmiter03}
+    CTrailController ShadeTrail04 : ShadeTrail {emitter = Emmiter04}
+    CTrailController ShadeTrail05 : ShadeTrail {emitter = Emmiter05}
+    CTrailController ShadeTrail06 : ShadeTrail {emitter = Emmiter06}
+    }
+  }
+  
+  attack_spell = AncientShadeAttackSpell
+  
+  cost : pvp.mutants.unit_costs.AncientShade
+  cost_sloc : pvp.mutants.sloc_costs.AncientShade
+}
+
+AncientShadeAttackSpell {
+  cast {
+    prepare {
+      anim = cast_preparation
+      duration = 1.5
+      sound = data/sounds/units/highpriest/pyro/
+      attach {
+        pt_hand = data/models/effects/Magic/AncientShade_Magic.nif {scale = 0.6}
+      }
+    }
+  }
+
+  projectile = chase {
+    start_point = pt_center
+    model = data/models/effects/Magic/AncientShade_Projectile.nif {
+      scale = 0.7
+      CTrailController ShadeTrail  {
+        emitter = FX_ROOT
+        texture = data/textures/trails/dark-lightnings.dds
+        tex_ratio = float: 1.5
+        start_width = 120
+        end_width = 0
+        ttl = 14
+        simple_time = 1
+        additive = 0
+        z_write = 0
+        material_alpha = 0.6
+        diffuse = color: 0, 0, 0
+        ambient = color: 0, 0, 0
+        emissive = color: 0.8, 0.8, 0.8
+
+        time0 = 0
+        color0 = colora: 1, 1, 1, 0
+
+        time1 = 4
+        color1 = colora: 1, 1, 1, 1
+
+        time2 = 60
+        color2 = colora: 1, 1, 1, 1
+
+        time3 = 100
+        color3 = colora: 1, 1, 1, 0
+      }
+    }
+    speed = 2500
+  }
+  
+  effect = E_damage {
+    amount = stat:damage
+    can_crit = 1
+  }
+}
+
+UnholyAttackAbi {
+  name = "Unholy Attack"
+  text = "Shades default attacks are completely penetrating any kinds of enemy armor."
+  icon = 1,0
+}
+
+TerrifyAbi {
+  name = "Terrify"
+  text = "The Ancient Shade instills fear into its enemies, every attack has a [stat:terrify_chance]% chance to terrify all enemies near its target for [stat:terrify_duration] seconds"
+  icon = 4,0
+  when : abi.combat
+  chance = stat:terrify_chance
+  cooldown = stat:terrify_cooldown
+  range = stat:range
+  target = current
+  effect = S_multifear {
+    id = Fear
+    name = "Terrified"
+    text = "Terrified"
+    multi_area = stat:terrify_area
+    duration = stat:terrify_duration
+    sound = data/sounds/effects/global actions/horrify/
+    react = fear
+    program = PrgFear {
+      speed_multiplier = 0.8
+      range = 400
+      sleep_time = 0.5
+      wander = 1
+    }
+  }
+}
+
+CSpellAction FateLinkAction {
+  name = "Fate Link"
+  descr = "Ancient Shade is using his knowledge to establish a powerful link for [stat:fatelink_duration] sec. with a friendly unit. This link will case any damage caused on the friendly unit to be split with all Ancient Shades that are currently linked to him. The link will be destroyed if the Ancient Shade moves."
+  tags = ally
+  range = stat:range
+  visible = 1
+  icon = 1,4
+  min_power = stat:fatelink_power
+  cooldown = 40
+    
+  spell {
+    power = stat:fatelink_power
+    cast {
+      finish {
+        duration = stat:fatelink_duration
+        anim = cast_finish
+      }
+    }
+    remove_effects = 1
+    effect = E_damage_share {
+    id = BloodLink
+	  name = "Fate Link"
+    text = "This unit is currently linked by an Ancient Shade, all damage taken will be split between you and him."
+	  icon = 2,5
+    type = damage_share
+    duration = -1
+    tick = 2
+    immediate_tick = 1
+    react = lightning
+    repeat_react = 1
+    p2pray = FatelinkBeam
+    p2pray_srcnode = pt_cast
+    p2pray_dstnode = pt_center
+    stack_count = 0
+      }
+    }
+  }

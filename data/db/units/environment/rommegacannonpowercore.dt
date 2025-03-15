@@ -1,0 +1,10 @@
+Mob ROMMegaCannonPowerCore : BaseMob {
+  name = "ROM Mega Cannon Power Core"
+  icon = 2,27
+  model = Data/Models/buildings/DefencePost/DefencePost_build.nif
+  explosion = ExplosionMedium_03
+  movable = 0
+  hp = 3000
+  damage = 0
+  sight = 0
+}

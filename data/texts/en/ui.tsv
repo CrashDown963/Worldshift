@@ -1,0 +1,337 @@
+﻿sid	text
+	
+//// Common labels	
+ok	OK
+cancel	CANCEL
+yes	YES
+no	NO
+error	ERROR
+	
+//// Entrance screen	
+text_current_profile	CURRENT PROFILE:
+text_current_profile_gs	CURRENT PROFILE (GameSpy ID):
+enter game	ENTER GAME
+entering lobby	Entering lobby...
+change profile	CHANGE PROFILE
+replay intro	REPLAY INTRO
+credits	CREDITS
+exit to desktop	EXIT TO DESKTOP
+incorrect password	The provided password is incorrect.
+gamespy_ttl	GameSpy
+gslegal_text	This product contains software technology licensed from GameSpy Industries, Inc. © 1999-2008 GameSpy Industries, Inc. GameSpy and the “Powered By GameSpy” design are trademarks of GameSpy Industries, Inc. All rights reserved.
+	
+//// Profiles window	
+profiles	Profiles
+selected profiles	Select one of the existing profiles or create a new one.
+local account	Local Profile
+gamespy id account	GameSpy ID Profile
+new	New
+del	Del
+delete account ttl	Delete Profile
+delete account	Delete the profile from GameSpy as well?
+enter password:	Enter password:
+	
+//// New Profile window	
+create account	Create profile
+name	Name
+psw	Password
+email	E-mail
+no profile	There is no profile to delete!
+	
+//// Main screen	
+missions	MISSIONS
+special locations btn	SPECIAL<nl>LOCATIONS
+pvp	DEATHMATCH
+skirmish	SKIRMISH
+practice	PRACTICE
+abilities btn	ABILITY GRID
+chat settings	CHAT SETTINGS
+settings	SETTINGS
+exit	EXIT
+exiting	EXITING...
+text_no_sp_locations	You have not yet discovered any special locations.
+	
+//// Missions window	
+clicktoviewinfo	Select a mission on the left<nl>for more details.
+locked_mission	This mission is still locked.
+completed	COMPLETED
+fastest time	FASTEST TIME: [#]h [#]m [#]s
+rewards:	REWARDS:
+replay	REPLAY
+	
+//// Game List window	
+all locations	ALL LOCATIONS
+all	ALL
+big	BIG
+small	SMALL
+ping	PING
+quick join	QUICK JOIN
+join	JOIN
+error joining	ERROR IN JOINING
+create	CREATE
+special locations	SPECIAL LOCATIONS
+open special location games	OPEN SPECIAL LOCATION GAMES
+open practice games	OPEN PRACTICE GAMES
+err_onlysingle	YOU CAN PLAY THIS LOCATION ONLY IN SINGLE-PLAYER MODE
+err_toobigteam	YOUR TEAM IS TOO BIG TO PLAY THIS LOCATION
+auto_findgame	TRYING TO FIND GAME ...
+auto_findteam	TRYING TO FIND TEAM ...
+the game is full	The game is full.
+	
+//// Active Game window	
+special location	SPECIAL LOCATION
+pvp_title	Deathmatch
+arr_team	Arranged Team
+random_player	Random player
+random	Random
+team	Team
+pvp_help	<color=255, 143, 51><b>Deathmatch options</></><nl><nl>In a deathmatch game, you play against unknown opponents and win artifacts as awards.<nl>Select 1v1, 2v2, or 3v3 to set team size.<nl>Toggle between Team and Random to determine your team’s type.<nl>Select ‘Team’ to invite particular player(s), or ‘Random’ to play in a random team.<nl>The members of a random team are selected after you click the Start button.<nl>The automatch will select an opposing team of the same type (arranged or random).
+hard ai	Strong AI
+easy ai	Weak AI
+s game	[#]’s game
+s game: 	[#]’s game: 
+s line up	[#]’s line up
+1v1	1v1
+2v2	2v2
+3v3	3v3
+<closed>	<closed>
+<open>	<open>
+leave	LEAVE
+start	START
+	
+//// Chat settings window	
+friends list	FRIENDS LIST
+ignore list	IGNORE LIST
+chat_tab	CHANNELS
+standart channels	STANDARD CHANNELS
+default	Default
+default channel	Default channel
+general	General
+virtual channels	VIRTUAL CHANNELS
+tells	Tells
+created game lobby	Created Game Lobby
+user channels	USER CHANNELS
+text_unassigned	<unassigned>
+sl_invalidchannelname	Invalid channel name, only Latin letters are allowed, with no spaces!
+text_chatviewsetup_title	USER CHAT VIEW #[#]
+shorcut_assign	Press the shortcut letter you want to assign to channel ‘[#]’, press Space or Enter to erase the letter which has already been assigned, or press Escape to cancel.
+chat views:	CHAT VIEWS:
+help_chatsetup	Click on the view icons below to select which channels you want to see in each view.
+clicktosetupchanel	Select channels you want to see in your chat view number ‘[#]’.
+find	Find
+game	Game
+F_riend	F
+I_gnored	I
+addtofriends	Add to friends
+invitetoteam	Invite to team
+inviteasopponent	Invite as opponent
+viewinfo	View info
+ignore	Ignore
+	
+//// Other chat-related texts	
+from	From
+to	To
+text_user_join_game	<i><color=180,180,180>Player ‘[#]’ has joined the game.</></>
+text_user_left_game	<i><color=180,180,180>Player ‘[#]’ has left the game.</></>
+text_user_rename	<i><color=180,180,180>Player ‘[#]’ has changed nick to: ‘[#]’</></>
+	
+//// Game invitation texts	
+invite player:	Invite player:
+text_type_player_name	<type name here>
+accept	Accept
+decline	Decline
+invitation_ttl	Invitation
+invitation_msg	The player ‘[#]’ invites you to join their game.
+invitation_accepted	The player ‘[#]’ has accepted your invitation.
+invitation_declined	The player ‘[#]’ has declined your invitation.
+invitation_invalid	The invitation from ‘[#]’ is no longer valid.
+invitation_sent	You have sent an invitation to player ‘[#]’.
+sl_invitationcanceled	Your invitation has been cancelled.
+sl_invitationtimedout	Your invitation has timed out.
+sl_invitationnotfound	You have no invitation from that player.
+sl_invitationrejected	Your invitation has been rejected.
+	
+//// Automatch-related texts	
+automatcherr_playerleft	The player ‘[#]’ has cancelled the automatch attempt.
+autojoinerr_timedout	The joining attempt timed out.
+autojoinerr_noplayers	The automatch attempt was cancelled because some of the players did not show.
+	
+//// GameSpy error messages	
+gs_accountalreadycreated	You’ve already created this account.
+gs_deleteaccount	Error deleting account. Either your password is not correct, or this is your last profile on your account.
+gs_incorrectpassword	The password you typed is incorrect.
+gs_invalidemail	The provided email is invalid.
+gs_invalidnick	The provided player name is invalid, as you can use only letters (without blanks).
+gs_invalidparams	Invalid Parameters.
+gs_invalidpassword	The password you typed is invalid.
+gs_login	Error trying to login.
+gs_loginincorrect	The provided login info is incorrect.
+gs_nickalreadyused	The selected player name is already taken.
+gs_persistisinprogess	Persisting player’s data is in progress.
+gs_persistloaderr	Error loading player’s profile.
+gs_persistsaveerr	Error saving player’s profile.
+gs_servererror	Problem encountered trying to connect to the server.
+gs_servicenotavailable	The online service for WorldShift is no longer available.
+gs_unabletoconnect	Unable to connect to the server, or disconnected during the attempt.
+gs_unknown	An unknown online error occurred.
+gs_servicetemporarynotavailable	The online service for WorldShift is temporarily down for maintenance.
+gs_qrsocket	An error has occurred while reporting the created game.
+gs_qrbind	An error has occurred while reporting the created game.
+gs_qrdns	An error has occurred while reporting the created game.
+gs_qrconn	An error has occurred while reporting the created game.
+gs_qrnochallenge	An error has occurred while reporting the created game.
+requested operation timed out	The requested operation timed out.
+	
+//// Ability Grid window	
+humans	HUMANS
+tribes	TRIBES
+the cult	THE CULT
+ability grid	ABILITY GRID
+inventory	INVENTORY
+specialization	SPECIALIZATIONS
+defence	Xenotronics
+implants	Nanotechnology
+weapon	Metachemistry
+nature	Nature
+blood	Blood
+mind	Mind
+power	Power
+corruption	Corruption
+dogma	Dogma
+invalid	Invalid slot!
+stritemreject	CANNOT EQUIP THIS ITEM
+gems: 	Xenoshards: 
+gems2	Xenoshards: [#]/[#]
+nogems	Not enough xenoshards.
+prednotrev	You must unlock the previous specializations.
+noreqstars	More stars required on previous specializations.
+nostars	Not enough stars.
+reset	RESET
+	
+//// Settings window	
+video	Video
+screen resolution:	Screen resolution:
+fullscreen mode	Run in fullscreen mode
+tex_detail	Texture detail
+tex_detail_vhigh	Very High
+tex_detail_high	High
+tex_detail_med	Medium
+tex_detail_low	Low
+tex_detail_vlow	Very Low
+shader_detail	Shader detail
+shader_detail_high	High
+shader_detail_med	Medium
+shader_detail_low	Low
+models_detail	Model detail
+models_detail_high	High
+models_detail_med	Medium
+models_detail_low	Low
+shadow_detail	Shadow quality
+shadow_detail_normal	Normal
+shadow_detail_low	Low
+shadow_detail_off	Off
+reflections_check	Reflections
+vsync_check	VSync
+postprocess_check	Post-process effects
+sett_temp_info	Shader, shadow, and VSync settings will take effect next time you run the game.
+audio	Audio
+volume:	Volume:
+mute sound	Mute sound
+close	Close
+	
+//// Starting a game	
+startgame_waitforjoin	WAITING TO JOIN THE CREATED GAME...
+startgame_waitforparty	WAITING FOR PARTY TO JOIN OUR GAME...
+startgame_waitforplayers	WAITING FOR PLAYERS...
+startstr	LOADING MAP...
+starting game	STARTING GAME...
+loading...	Loading...
+done	Done
+	
+//// Selection Info window	
+effects	Effects
+health_stat	Hit points
+health_stat_d	The hit points show how much damage the unit can take before being destroyed.
+armour_stat	Armor
+armour_stat_d	The armor points determine how much of the incoming damage is deducted from the bearer’s hit points.
+damage_stat	Damage
+damage_stat_d	This property shows how many hit points a single attack will deduct from a target with no armor.
+damagerange_stat	Damage by range
+damagerange_stat_d	The unit’s attack range is divided into subranges. The unit deals maximal damage when the enemy is in the green range. The damage decreases in the yellow range and is minimal in the orange range.
+crit_stat	Chance for critical hits
+crit_stat_d	Critical hits deal twice the standard damage done by the unit’s attack.
+manna_stat	Power
+manna_stat_d	Power is necessary for the unit’s special actions.
+shield_stat	Shield
+shield_stat_d	The shield absorbs some of the damage received by the unit. It also has a chance to fully absorb any single attack. While absorbing damage, the shield depletes, and if its integrity drops to 0, it stops working. The shield starts replenishing on its own if the unit is not attacked for some time.
+description	Description
+constructing	Constructing
+upgrading	Upgrading
+producing	Producing
+active	Active
+inactive	Inactive
+stop	Stop
+	
+//// Faction resource names	
+humans resources ttl	Resources for the Humans
+pvp.humans.res_name	Credits
+humans credits	Credits can be spent for units, upgrades, and global actions. The maximum amount of collected credits is capped, so avoid stockpiling them.
+humans unit points	The unit points (shown as unoccupied/total) limit the size of your force. Different units take up different amounts of points from the fixed total.
+tribes resources ttl	Resources for the Tribes
+pvp.mutants.res_name	Focus
+tribes credits	Focus can be spent for units, upgrades, and global actions. The maximum amount of collected focus is capped, so avoid stockpiling it.
+tribes unit points	The unit points (shown as unoccupied/total) limit the size of your force. Different units take up different amounts of points from the fixed total.
+the cult resources ttl	Resources for the Cult
+pvp.aliens.res_name	Plasma
+the cult unit credits	Plasma can be spent for units, building upgrades, and global actions. The maximum amount of collected plasma is capped, so avoid stockpiling it.
+the cult unit points	The unit points (shown as unoccupied/total) limit the size of your force. Different units take up different amounts of points from the fixed total.
+	
+//// Miscellaneous in-mission texts	
+pause	PAUSE
+resume	RESUME
+quit	QUIT
+items	ITEMS
+no items collected	NO ITEMS COLLECTED
+cooldown	Cooldown
+menu button ttl	Menu button
+menu button	This button brings up the in-mission menu.
+strner	NOT ENOUGH RESOURCES
+strplr	POPULATION LIMIT REACHED
+strreqnotmet	REQUIREMENTS NOT MET
+strobjbusy	OBJECT BUSY
+strunderattack	YOUR FORCES ARE UNDER ATTACK!
+textofficer	Click here to select the officer; click again to center the view on the officer.
+empty officer slot	Empty officer slot
+textofficer_empty	To order another officer, click this empty slot and select an officer type from the menu.
+textofficer_empty_mis_sp	You cannot order new officers in a story mission or special location.
+textorder	Click here to order a new officer of the displayed type.
+	
+//// Victory/Defeat screen	
+victory	Victory
+defeat	Defeat
+observe	Observe
+statistics	Statistics
+collected items	Collected items
+tech	Ability Grid
+best_damage	Best Damage
+best_healing	Best Healing
+most_kills	Most Kills
+most_deaths	Most Deaths
+most_commands	Most Commands
+damage_taken	Damage Taken
+mis_complete	Mission Complete
+mis_failed	Mission Failed
+cur_time	Current Time
+fastest_time	Fastest Time
+old_fastest	Previous Fastest Time
+items_taken	Items Taken
+chs_rewards	Choose Your Rewards
+chs_reward	Choose Your Reward
+destroy_btn	Destroy
+takeall_btn	Take All
+take_btn	Take
+destroy_txt	Drag any items you want to your inventory and destroy the rest. Destroying items may generate xenoshards.
+destroy_succ	You destroyed the artifacts and successfully extracted [#] xenoshards.
+destroy_succ1	You destroyed the artifacts and successfully extracted 1 xenoshard.
+destroy_fail	You destroyed the artifacts but did not succeed in extracting any xenoshards. Better luck next time!
+continue	Continue

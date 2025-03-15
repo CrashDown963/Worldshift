@@ -1,0 +1,8 @@
+Building OreExtractorBuild : BaseBuilding {
+  model = Data/Models/buildings/OreExtractor/OreExtractor_Build.nif
+  race = humans
+  
+  stats :{
+    hp = 4000
+  }
+}

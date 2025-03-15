@@ -1,0 +1,124 @@
+Mob Nomad : BaseMob {
+  name = "Nomad"
+  icon = 1,8
+  model = Data/Models/units/Nomad/nomad.kfm
+
+  hp = 190
+  damage = 30
+  range = 1600
+  armor = 2
+  
+  stats :{
+    grenade_damage = 50
+    grenade_radius = 150
+  }  
+  
+  physics {
+    default = data/models/units/Nomad/Nomad_Proxy.pml
+    die = data/models/units/Nomad/Nomad.pml
+  }
+  destruction = ragdoll
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+  
+  animation {
+    anim_seq CAST_SEQ {
+      cast_preparation = 100, 1,2
+      cast_finish
+    }
+    anim_set CAST = loop {
+      CAST_SEQ
+      cast_instant
+    }
+    anim_seq SHOOT = loop {
+      shoot_idle
+    }
+  }
+ 
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    can_crit = 1
+    damage = var:damage
+    range_far = 1000
+    range_near = 700
+    proximity_bonus = 0.2
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = .2
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+        scale = 0.5
+        E = 255,200,0
+      }
+    }
+    spot_impact = 1000
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+  conditions {
+    SelfDestruct = CheckVar {
+      variable = health_percent
+      operator = <
+      value = 20
+    }
+  }
+
+  abilities {
+    PyroVolley {
+      icon = 13,0
+      chance = 30
+      when : abi.fight
+      --lua_when = CheckAbility
+      range  = var:range
+      target = current --{ no_ally_in_range = 300 }
+      
+      cast {
+        finish {
+          anim = cast_instant
+        }
+      }
+      
+      projectile = parabolic {
+        start_point = pt_hand
+        spot_impact = 800
+        spot_impact_type = small_energy
+        damage_type = energy
+        effect = TrooperGrenadeExplode
+        model = data/models/effects/magic/fireball.nif
+      }
+      
+      --program = PrgCastAbility { more_test = 11 }
+    }
+  }
+}

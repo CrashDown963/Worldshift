@@ -1,0 +1,187 @@
+HumanSpecItem {
+  race = humans
+  quality = 1
+  autobind = 1
+  hidden = 1
+}
+
+item I_A1H : HumanSpecItem {
+  name = "Durability"
+  text = "All your regular units will have [stats.hp] higher hit points."
+  icon = 4,1
+  levels = 1,2
+  repo = HUMAN_SPECA1
+  target {
+    Technician
+    Ripper
+    Trooper
+    AssaultBot
+    Hellfire
+    Defender
+  }
+
+  stats {
+    hp = 5%/10%
+  }
+
+  --abilities { AA1H { item = I_A1H } }
+}
+
+item I_A2H : HumanSpecItem {
+  name = "Overclocking"
+  text = "All your cyber units will auto-repair [stats.hp_gen] faster, without recovery time and will also do [stats.damage] additional direct damage."
+  icon = 4,1
+  levels = 1,2
+  repo = HUMAN_SPECA2
+  target {
+    Constructor
+    Ripper
+    AssaultBot
+    Hellfire
+    Defender
+  }
+
+  stats {
+    hp_gen = 10%/20% 
+    damage = 10%/20%
+    recovery_time = -100%
+  }
+  --abilities { AA2H { item = I_A2H } }
+}
+
+item I_B1H : HumanSpecItem {
+  name = "Elusion"
+  text = "Your Rippers will have [stats.elusion]% chance to completely ignore direct ranged attacks coming from melee range."
+  icon = 4,1
+  repo = HUMAN_SPECB1
+  target {
+    Ripper
+  }
+
+  stats {
+    elusion = 20
+  }
+  --abilities { AB1H { item = I_B1H } }
+}
+
+item I_B2H : HumanSpecItem {
+  name = "Crushing Fire"
+  text = "All your units will have [stats.crit_chance]% additionaly to inflicting double (critical) damage with their direct attack."
+  icon = 4,1
+  levels = 1,3
+  repo = HUMAN_SPECB2
+  target {
+    Commander
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+    Technician
+    Ripper
+    Trooper
+    AssaultBot
+    Hellfire
+    Defender
+  }
+  stats {
+    crit_chance = 2/5/10
+  }
+  --abilities { AB2H { item = I_B2H } }
+}
+
+item I_B3H : HumanSpecItem {
+  name = "Motivation"
+  text = "Troopers has [stats.motivation]% to become Elite after doing critical attack on their target."
+  icon = 4,1
+  levels = 1,2
+  repo = HUMAN_SPECB3
+  target {
+    Trooper
+  }
+  stats {
+    motivation = 10/25
+  }
+  --abilities { AB3H { item = I_B3H } }
+}
+
+item I_C1H : HumanSpecItem {
+  name = "Precision"
+  text = "All your Troopers will do [stats.damage] additional direct damage."
+  icon = 4,1
+  levels = 1,2
+  repo = HUMAN_SPECC1
+  target {
+    Trooper
+  }
+  stats {
+    damage = 1/2
+  }
+  --abilities { AC1H { item = I_C1H } }
+}
+
+item I_C2H : HumanSpecItem {
+  name = "First-Aid Mastery"
+  text = "Surgeons' First-Aid has additional [stats.bandage_crit]% chance to heal for double amount."
+  icon = 4,1
+  levels = 1,3
+  repo = HUMAN_SPECD2
+  target {
+    Surgeon
+  }
+  stats {
+    bandage_crit = 10/20/30
+  }
+  --abilities { AC2H { item = I_C2H } }
+}
+
+item I_D1H : HumanSpecItem {
+  name = "Barrier Armor"
+  text = "Lord Commander's has [stats.armor] additional armor and hit points."
+  icon = 4,1
+  repo = HUMAN_SPECD1
+  target {
+    Commander
+  }
+  stats {
+    hp = 25%
+    armor = 25%
+  }
+  --abilities { AD1H { item = I_D1H } }
+}
+
+item I_D2H : HumanSpecItem {
+  name = "Overtraining"
+  text = "All your Officers have [stats.hp] more hit points"
+  icon = 4,1
+  levels = 1,3
+  repo = HUMAN_SPECC2
+  target {
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+  }
+  stats {
+    hp = 5%/10%/25%
+  }
+  --abilities { AD2H { item = I_D2H } }
+}
+
+item I_D3H : HumanSpecItem {
+  name = "Power Surge"
+  text = "Your Lord Commander and all your Officers' power will restore [stats.psi_gen] faster."
+  icon = 4,1
+  repo = HUMAN_SPECD3
+  target {
+    Commander
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+  }
+  stats {
+    psi_gen = 30%
+  }
+  --abilities { AD3H { item = I_D3H } }
+}
+

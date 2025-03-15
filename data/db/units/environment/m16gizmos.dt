@@ -1,0 +1,51 @@
+AreaActionsGizmo M16ExplosivesControl {
+  model = data/models/miscobjects/areabeacon/areabeacon.nif
+  AreaActions M16ExplosivesControlActions {
+    Commander  { 
+      M16DetonateCharge1Action 
+      M16DetonateCharge2Action 
+      M16DetonateCharge3Action 
+    }
+    faction = own
+    range = -1
+  }
+}
+
+action M16DetonateCharge1Action {
+  name = "Detonate first charge"
+  icon = 5,10
+  instant = 1
+  visible = 1
+  lua_check_visible = MapLuaCheckActionVisible
+  program = PrgCallMapLua {
+    func = DetonateExplosives {
+      id = 1
+    }
+  }
+}
+
+action M16DetonateCharge2Action {
+  name = "Detonate second charge"
+  icon = 6,10
+  instant = 1
+  visible = 1
+  lua_check_visible = MapLuaCheckActionVisible
+  program = PrgCallMapLua {
+    func = DetonateExplosives {
+      id = 2
+    }
+  }
+}
+
+action M16DetonateCharge3Action {
+  name = "Detonate third charge"
+  icon = 7,10
+  instant = 1
+  visible = 1
+  lua_check_visible = MapLuaCheckActionVisible
+  program = PrgCallMapLua {
+    func = DetonateExplosives {
+      id = 3
+    }
+  }
+}

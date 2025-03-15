@@ -1,0 +1,65 @@
+Mob ROMDefenceTurret : BaseMachineMob {
+  name = "ROM Defence Turret"
+  icon = 4,26
+  model = Data/Models/buildings/DefencePost/DefencePost.kfm
+  explosion = ExplosionMedium_03
+  movable = 0
+  --scale = 0.69
+
+  hp = 1000
+  range = 1500
+  damage = 30
+  armor = 0
+
+  pitch_speed = 30
+  min_pitch = -20
+  max_pitch = 30
+  yaw_speed = 90
+
+  CAlertController alert {
+    timeout = 15
+    layered_anims = 0
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    root_node = rot_z
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/m60 mg/
+    fire_rate = 1.2
+    idle_time = 0.7
+    spot_impact = 800
+    spot_impact_type = bullet
+
+    trace ROMTurret_trace {
+      model = Data/Models/Effects/TraceBullet/trace_bullet.nif  
+      variant = 0
+      start_dist = 10
+      end_dist = 10
+      frequency = 5
+      ttl = 1
+      length = 320
+      target_size = 15
+      velocity  = 90
+      length_end = 320
+      instances = 128
+    }
+    muzzle_fx ROMTurret_muzzle {
+--    model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+--    model = data/models/effects/MuzzleFlash/muzzle_flash_light.nif
+      model = data/models/effects/MuzzleFlash/muzzle_flash_MGanim.nif
+      frames = 4
+      frequency = 10
+      active_fraction = 40
+      active_variation = 5
+      length_variation = 20
+      width_variation = 5
+      scale = 3
+      instances = 64
+      emit = 255,160,80
+      low_dmmer = 0.5
+    }
+  }
+}

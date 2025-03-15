@@ -1,0 +1,183 @@
+Mob KharumGuardian : BaseMob {
+  name : Guardian.name
+  descr : Guardian.descr
+  icon = 6,24
+  race = mutants
+
+  tags = unit, organic
+  take_auras : { RestorationCoreAura }
+
+  model = Data/Models/Units/guardian/guardian.kfm
+  
+  physics {
+    default = Data/Models/Units/Guardian/Guardian_Proxy.pml
+    die = Data/Models/Units/Guardian/Guardian.pml
+  }
+  
+  destruction = ragdoll
+
+  CTrailController trail {
+    emitter = pt_charge01
+    texture = data/textures/trails/energy_trail1.dds
+    tex_ratio = float: 4.0
+    start_width = 27
+    end_width = 0
+    ttl = 25
+    simple_time = 1
+    additive = 1
+                z_write = 0
+    material_alpha = 0.5
+    diffuse = color: 1, 1, 1
+    ambient = color: 0.5, 0.5, 0.5
+    emissive = color: 1, 1, 1
+
+    time0 = 0
+    color0 = colora: 1, 1, 1, 0
+
+    time1 = 8
+    color1 = colora: 0.10, 0.10, 0.90, 1
+
+    time2 = 30
+    color2 = colora: 0, 0, 0.90, 1
+
+    time3 = 60
+    alpha3 = 0.6
+
+    time4 = 100
+    color4 = colora: 0, 0, 1, 0
+  }
+
+  --energy charges
+  energy_charges = 2
+  energy_charge_attach = data/models/effects/magic/drainhands.nif
+  --expects pt_charge01, pt_charge02, in case energy_charge_node = pt_charge, energy_charges = 2
+  energy_charge_attach_node = pt_charge
+  
+  sight = 1400
+  aggro_range = var:sight
+  stats :{
+    hp = 700
+    armor = 5
+    psi = 0
+    psi_gen = 0
+    range = 200
+    damage = 20
+
+    shield_fullabsorbchance = 50
+    shield_percentabsorbtion = 50
+
+    abosorb_blow_chance = 5
+    dual_blow_chance  = 5  
+
+    sling_shot_dmg = 50
+  }
+  shield_stand_time = 6
+  range = stat:range
+  min_attack_range = 100
+
+  hp = stat:hp
+  armor = stat:armor
+  psi = stat:psi
+  range = stat:range
+  damage = stat:damage
+
+  impacts : LivingUnitImpacts
+  
+  abilities {
+    ShiftAbi
+    DualBlowAbi
+  }
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      attack_1 = 100,1,1
+      attack_2 = 100,1,1
+    }
+
+    --sequence_1 = attack_2
+
+    anim_seq sequence_1 {
+      attack_2
+      charge
+    }
+
+    sequence_2 = attack_jump
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK_MAIN
+    fire_node = pt_cast
+    fire_rate = 0.5
+    spot_impact = 900
+    spot_impact_type = melee
+  }
+
+
+  -- Absorb energy
+  CGuardianShieldController shield {
+    drain_on_hit = 0
+    activate_probability = stat:abosorb_blow_chance
+    activate_damage_type = energy
+    effects {
+      percent_absorbtion = 100
+    }
+  }
+
+  -- Plasma Shield
+  CShieldController shield {
+    active = 0
+    drain_on_hit = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    activate_probability = 100
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      flat_absorbtion = 0
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+  
+}
+  
+DualBlowAbi {
+  name = Dual Blow
+  icon = 13,0
+  
+  chance = stat:dual_blow_chance
+  when : abi.fight
+  target : abi.current
+
+  cast {
+    finish {
+      anim = attack_3   
+      attach {
+        pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+      }
+    }
+  }
+    
+  effect = E_damage {
+    amount = stat:damage * 3
+    area = 200 
+  }
+}
+
+Guardian_Sequence_Finish {
+  effect = E_damage {
+    amount = stat:damage * 4
+    react = lightning
+    area = 400 { 
+      anim = data/Models/Effects/Magic/Lightning_AoE_Wave.kfm 
+      sound = Data/Sounds/Effects/ExplosionSmall/
+    }
+  }
+}

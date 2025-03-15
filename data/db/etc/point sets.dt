@@ -1,0 +1,14 @@
+point_sets {
+	pt_attack { // engine is choosing random point to aim attack to
+		pt_chest
+		pt_center
+		pt_head
+	}
+
+
+	pt_impact { // points where the blood/sparks/etc.  comes from
+		pt_chest
+		pt_center
+		pt_head
+	}
+}	

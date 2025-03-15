@@ -1,0 +1,80 @@
+Mob M33Warrior : BaseMob {
+  name : Warrior.name
+  descr : Warrior.descr
+  icon = 3,18
+  race = mutants
+  model = Data/Models/Units/Warrior/Warrior.kfm
+  take_auras : { RestorationCoreAura }
+
+  hp = 190
+  armor = 0
+  damage = 22
+  range = 2000
+  
+  physics {
+    default = data/models/units/Warrior/Warrior_Proxy.pml
+    die = data/models/units/Warrior/Warrior.pml
+  }
+  
+  destruction = animation
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+ 
+  impacts : LivingUnitImpacts
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    can_crit = 1
+    damage = var:damage
+    range_far = 1700
+    range_near = 1200
+    proximity_bonus = 0.2
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = .4
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 7000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+        scale = 0.75
+        E = 180,50,20
+      }
+    }
+    spot_impact = 1000
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+}

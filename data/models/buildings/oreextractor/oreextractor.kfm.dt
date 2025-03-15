@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\oreextractor\oreextractor.kfm";
+  animations = {
+    activate = {
+      loop = int:"0";
+      duration = fixp:"4.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4.66666698455810546875";
+        }
+      }
+    }
+    idle_1 = {
+      loop = int:"1";
+      duration = fixp:"1.299999713897705078125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.299999713897705078125";
+        }
+      }
+    }
+    idle_2 = {
+      loop = int:"1";
+      duration = fixp:"5.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"5.333333492279052734375";
+        }
+      }
+    }
+  }
+}

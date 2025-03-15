@@ -1,0 +1,6 @@
+Unit Repair_Drone : MachineUnit {
+  model = data/models/units/Repair_Drone/Repair_Drone.nif
+  race = humans
+  tags = unit, organic, lowrank 
+}
+

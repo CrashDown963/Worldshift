@@ -1,0 +1,143 @@
+Mob BridgeDroid : BaseMachineMob {
+  model = data/models/units/Mech_Destroyer/Mech_Destroyer.kfm
+  name = "Guard Droid"
+  icon = 5,17
+  scale = 0.5
+  destruction = animation
+  
+  stats : {
+    hp = 3000
+    armor = 20
+    damage = 25
+    speed = 160
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  damage = stat:damage
+  speed = stat:speed
+  rocket_damage = 25
+  sight = -1
+  sight_in_combat = -1
+  sight_area = DroidsFightArea
+  chase_range = -1
+  
+  CMultiWeaponController rockets {
+    active = 1
+    idle_only = 0
+    count = 2
+    sync = alternate 
+    fire_node_1 = pt_cast_1
+    fire_node_2 = pt_cast_2
+    shoot_snd = Data/Sounds/Units/AssaultBot/RocketLaunch
+    fire_rate = 0.3
+    damage = 20
+    precision = 100
+    spot_impact_type = small_energy
+    damage_type = energy
+    min_range = 400
+    range = 2000
+    face_target = 0
+    aim_node = pt_aim
+    aim_tolerance_yaw = 20
+    aim_tolerance_pitch = 180
+      
+    projectile = parabolic {
+      angle = 5
+      dispersion = 370
+      spot_impact = 900
+      spot_impact_type = small_energy
+      effect = GuardDroidRocketEffect
+      
+      decal_settings ground_hit_decal = barrage_decal1
+      
+      model = data/models/projectiles/rocket/Mortar.nif {
+        CTrailController trail {
+          emitter = Dummy01
+          material = data/models/Effects/Trails/Trail_Smoke3.nif
+          tex_ratio = float: 25
+          start_width = 25
+          end_width = 100
+          ttl = 40
+          --simple_time = 90
+    	  
+          time0 = 0
+          color0 = colora: 1, 1, 1, 1
+          time1 = 3
+          color1 = colora: 1, 1, 1, 1
+          time2 = 50
+          color2 = colora: 1, 1, 1, 0.5
+          
+          time3 = 100
+          color3 = colora: 1, 1, 1, 0
+        }  
+      }
+    }
+  }
+  
+  CMultiWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = alternate
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_var_1
+    shoot_anim_2 = shoot_var_2
+    aim_node = pt_aim
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    muzzle_fx guard_droid {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction  = 25
+      active_variation = 5
+      length_variation = 42
+      width_variation  = 7
+      scale = 1.3
+      instances = 64
+      emit = 150,255,80
+    }
+    
+    instant_shot BridgeDroidShot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+      dist_start = 100
+      travel_start = 100
+      travel_end = 0
+      duration = 0.4
+      time_fraction_to_lag_end = 1
+      width = 35
+      instances = 128
+      color_alpha {
+        0 = 255,128,0,180
+        5 = 255,128,0,180
+        22 = 0,255,0,205
+        100 = 0,128,0,0
+      }
+    }
+	}
+}
+
+Actor BridgeDroidPlaceholder {
+  name = "BridgeDroid spawn place"
+  model = data/models/units/Mech_Destroyer/Mech_Destroyer.kfm
+  scale = 0.5
+}
+
+CMapAnim BridgeDroidTeleportingAnim {
+  model = data/models/effects/miscreacts/Mech0_IncomingTeleport.kfm
+  sound = Data/Sounds/Effects/Teleport/AppearLoop.wav
+  duration = 1000
+  offscreen_mode = 0
+}
+
+CMapAnim BridgeDroidTeleportedAnim {
+  model = data/models/effects/miscreacts/mech0teleport.kfm
+  sound = Data/Sounds/Effects/Teleport/Appear.wav
+  offscreen_mode = 0
+}

@@ -1,0 +1,14 @@
+Unit BossHologram1  {
+  model = data/Models/units/Lancelot/Lancelot.kfm
+  shadow = 0
+  alpha = 0.4
+  conv_icon_row = 5
+  conv_icon_col = 4
+
+  scale = 4
+
+  race = common
+  hull = 0
+  attackable = 0
+  selectable = 0
+}

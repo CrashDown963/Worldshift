@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\detailobjects\grass2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"grass1";
+    translation = xpoint3:"-1.18270671367645263671875,7.81265163421630859375,49.747730255126953125";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"1,0,0";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"grass02";
+    translation = xpoint3:"-1.18270671367645263671875,7.81265163421630859375,49.747730255126953125";
+    rotation = {
+      0 = xpoint3:"-0.1484682559967041015625,-0.988917171955108642578125,0";
+      1 = xpoint3:"0,0,1";
+      2 = xpoint3:"-0.988917171955108642578125,0.1484682559967041015625,0";
+    }
+  }
+}

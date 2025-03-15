@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\ruins\brick_buildings\brick_building01_jungle.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Brick_building01";
+    translation = xpoint3:"-18.816394805908203125,-555.36309814453125,-0.1144561767578125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"wallorigin";
+    translation = xpoint3:"-1537.9990234375,-202.3612518310546875,260.800567626953125";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+}

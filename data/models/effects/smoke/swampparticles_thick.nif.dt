@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\effects\smoke\swampparticles_thick.nif";
+  animation = {
+    loop = fixp:"1";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray01-Emitter";
+    translation = xpoint3:"-6.254441738128662109375,-4.048566341400146484375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

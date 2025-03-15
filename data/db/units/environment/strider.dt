@@ -1,0 +1,55 @@
+Mob Strider : BaseMachineMob {
+  model = Data/Models/units/Strider/Arm_Strider.kfm
+  explosion = ExplosionMedium_03
+
+  pitch_speed = 90
+  yaw_speed = 180
+  range = 1500
+  damage = 50
+  speed = 285
+  
+  sounds {
+    confirm = data/sounds/bots/confirm/scout/
+    select = data/sounds/bots/select/scout/
+  }
+  
+  COrientationController orientation {
+    rot_speed = 360 
+    max_tilt = 20 
+  }
+
+  CMultiWeaponController weaponL {
+    type = CMultiWeaponController 
+    count = 4 
+    sync = alternate 
+    node_prefix = fireL_ 
+    projectile = sid:TestRocket 
+    shoot_snd = data/sounds/weapons/missile/ShootMedium/ 
+    fire_rate = 1.5 
+    aim_tolerance = 20 
+  }
+
+  CMultiWeaponController weaponR {
+    type = CMultiWeaponController 
+    count = 4 
+    sync = alternate 
+    node_prefix = fireR_ 
+    projectile = sid:TestRocket 
+    shoot_snd = data/sounds/weapons/missile/ShootMedium/ 
+    fire_rate = 1.5 
+    aim_tolerance = 20 
+  }
+  
+  CMultiWeaponController weaponB {
+    type = CMultiWeaponController 
+    face_target = 1 
+    count = 2 
+    sync = alternate 
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    projectile = sid:LaserBolt 
+    shoot_snd = data/sounds/weapons/spheretower/shoot/ 
+    fire_rate = .5 
+    aim_tolerance = 10 
+  }
+}

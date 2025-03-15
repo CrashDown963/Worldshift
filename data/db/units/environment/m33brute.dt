@@ -1,0 +1,152 @@
+Mob M33Brute : BaseMob {
+  name : Brute.name
+  descr : Brute.descr
+  icon = 1,18
+  race = mutants
+  model = Data/Models/units/Brute/Brute.kfm
+  scale = 0.75
+  
+  stats : {
+    hp = 560
+    armor = 32
+    psi = 0
+    psi_gen = 0
+    range = 150
+    damage = 8
+    
+    growl_duration = 10
+    growl_chance = 10
+    ignite_on_strike_chance = 0
+    ignite_duration = 30
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  sight = stat:range + 1050
+  aggro_range = var:sight
+  min_attack_range = 80
+  speed = 450
+
+  ignite_targets = 3
+  ignite_damage = stat:damage * 2
+
+  impacts : LivingUnitImpacts
+
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+      Hit_rare = 30,1,1
+    }
+  }
+  
+  destruction = animation
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  sounds {
+    destruction = data/sounds/units/brute/die/
+    confirm = data/sounds/units/brute/confirm/
+    select = data/sounds/units/brute/select/
+  }
+  
+  CWeaponController weapon_ignite {
+    active = 0
+    can_crit = 0
+    idle_only = 1
+    shoot_snd = data/sounds/units/brute/shoot/
+    shoot_anim = ATTACK_MAIN
+    fire_node = pt_cast
+    fire_rate = 0.5
+    spot_impact = 700
+    spot_impact_type = melee
+    damage = 0
+    projectile = instant {
+      effect = E_damage {
+        area = 400
+        amount = var:ignite_damage
+        react = fire
+        max_units = var:ignite_targets
+        cone_angle = 120
+      }
+    }
+  }
+  
+  CWeaponController weapon {  -- should be last!
+    active = 1
+    can_crit = 0
+    idle_only = 1
+    damage = stat:damage
+    shoot_snd = data/sounds/units/brute/shoot/
+    shoot_anim = ATTACK_MAIN
+    fire_node = pt_cast
+    fire_rate = 0.5
+    spot_impact = 700
+    spot_impact_type = melee
+  }
+  
+  abilities {
+    GrowlAbi {
+      name : Brute.abilities.GrowlAbi.name
+      text : Brute.abilities.GrowlAbi.text
+      icon = 13,0
+      when : abi.target_hit
+      chance = stat:growl_chance
+      target = current
+      effect = S_confuse {
+        duration = stat:growl_duration       -- for Y secs total
+        react = confusion_react
+        id = Growl
+        name : Brute.abilities.GrowlAbi.effect.name
+        text : Brute.abilities.GrowlAbi.effect.text
+        icon = 1,7
+        type = confusion
+        program = PrgConfuse
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+      }
+    }  
+    IgniteOnHitAbi {
+      name : Brute.abilities.IgniteOnHitAbi.name
+      text : Brute.abilities.IgniteOnHitAbi.text
+      icon = 13,0
+      when : abi.target_hit
+      chance = stat:ignite_on_strike_chance
+      target = self
+      effect = E_ignite {
+        id = Ignite
+        name : Brute.abilities.IgniteOnHitAbi.effect.name
+        text : Brute.abilities.IgniteOnHitAbi.effect.text
+        icon = 1,8
+        type = damage_buff
+        duration = 20
+      }
+      active = 0
+    }
+    IgniteOnKillAbi {
+      name : Brute.abilities.IgniteOnKillAbi.name
+      text : Brute.abilities.IgniteOnKillAbi.text
+      icon = 13,0
+      when : abi.killing_blow
+      chance = 100
+      target = self
+      effect = E_ignite {
+        id = Ignite
+        name : Brute.abilities.IgniteOnKillAbi.effect.name
+        text : Brute.abilities.IgniteOnKillAbi.effect.text
+        icon = 1,9
+        type = damage_buff
+        duration = 20
+      }
+    }
+  }
+  
+  cost : pvp.mutants.unit_costs.Brute
+  ignite_effect = data/models/effects/Fire/FireReact.nif
+}

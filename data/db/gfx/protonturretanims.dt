@@ -1,0 +1,10 @@
+CMapAnim ProtonTurretUpgradingAnim {
+  model = data/models/buildings/protonturret/protonturret_upgrading.nif
+  duration = 1000
+  offscreen_mode = 0
+}
+
+CMapAnim ProtonTurretUpgradedAnim {
+  model = data/models/buildings/protonturret/protonturret_upgraded.nif
+  offscreen_mode = 0
+}

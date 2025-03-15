@@ -1,0 +1,107 @@
+model = {
+  file = str:"data\models\buildings\alienegg\alien_egg.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"6.16666698455810546875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"-1.641143798828125,3.0358946323394775390625,108.92241668701171875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"98.07907867431640625,24.7903900146484375,40.45043182373046875";
+    rotation = {
+      0 = xpoint3:"0.22801841795444488525390625,0.727115571498870849609375,-0.647541940212249755859375";
+      1 = xpoint3:"-0.968601405620574951171875,0.1017130911350250244140625,-0.22686064243316650390625";
+      2 = xpoint3:"-0.099090404808521270751953125,0.678938448429107666015625,0.727477610111236572265625";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"decal_plane";
+    translation = xpoint3:"0.0235137939453125,0.3495330810546875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,-2.588489532470703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Bip01";
+        translation = xpoint3:"0,0,2.588489532470703125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"EggPulse";
+          translation = xpoint3:"7.05058193206787109375,0,131.1429443359375";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Plane02";
+          translation = xpoint3:"0,0,116.097076416015625";
+          rotation = {
+            0 = xpoint3:"0,0,1";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"-1,0,0";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"Plane04";
+          translation = xpoint3:"10.115631103515625,0.155972301959991455078125,91.91393280029296875";
+          rotation = {
+            0 = xpoint3:"0,0,1";
+            1 = xpoint3:"1,0,0";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"Plane01";
+          translation = xpoint3:"10.11792087554931640625,0.155972301959991455078125,61.8156890869140625";
+          rotation = {
+            0 = xpoint3:"0,0,1";
+            1 = xpoint3:"1,0,0";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+      }
+    }
+  }
+}

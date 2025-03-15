@@ -1,0 +1,15 @@
+Building MainHall : BaseBuilding {
+  model = Data/Models/buildings/TownHall/MainHall.nif
+  race = mutants
+  indestructible = 1
+  stats :{
+    hp = 4000
+  }
+
+  actions {
+    RallyPoint
+    CancelUnitProduce
+    KaiTransportUpgrade
+    ProduceShaman
+  }
+}

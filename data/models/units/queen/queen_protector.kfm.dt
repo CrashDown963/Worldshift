@@ -1,0 +1,96 @@
+model = {
+  file = str:"data\models\units\queen\queen_protector.kfm";
+  animations = {
+    idle = {
+      loop = int:"0";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-300,0";
+        time = fixp:"1";
+        distance = fixp:"300";
+        speed = fixp:"300";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"0";
+      duration = fixp:"0.8333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.8333339691162109375";
+        }
+      }
+    }
+    shoot_idle = {
+      loop = int:"1";
+      duration = fixp:"1.6333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6333332061767578125";
+        }
+      }
+    }
+    die = {
+      loop = int:"0";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+  }
+}

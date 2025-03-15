@@ -1,0 +1,129 @@
+0	GENERIC	0	GENERIC	100	1	1					
+10	PVP GENERIC	10	PVP GENERIC	100	1	1					
+20	Common Boss	20	Common Hard Boss	100	1	1					
+30	Common Dungeon	30	Common Dungeon	100	1	1	100				
+30	Common Dungeon	30	Common Dungeon	50	1	2		100	20	5	2
+40	PvP Rewards	40	PvP Rewards	100	1	1					
+50	Safari - Queen	50	Safari - Queen	100	1	1		100			
+50	Safari - Queen	50	Safari - Queen	25	1	1			50	10	
+50	Safari - Queen	290	Common Low Boss	100	1	2					
+60	Safari - Mech 0	60	Safari - Mech 0	100	1	1		100			
+60	Safari - Mech 0	60	Safari - Mech 0	25	1	1			50	10	
+60	Safari - Mech 0	290	Common Low Boss	100	1	2					
+70	Safari - Jack	70	Safari - Jack	100	1	1		100			
+70	Safari - Jack	70	Safari - Jack	25	1	1			50	50	
+70	Safari - Jack	0	GENERIC	50	1	1					
+70	Safari - Jack	290	Common Low Boss	100	1	1					
+80	Safari - Bill	80	Safari - Bill	100	1	1			100		
+80	Safari - Bill	80	Safari - Bill	25	1	1				100	
+80	Safari - Bill	290	Common Low Boss	100	1	1					
+90	Safari - Bill Hard	90	Safari - Bill Hard	100	1	1				100	
+90	Safari - Bill Hard	90	Safari - Bill Hard	25	1	1					100
+90	Safari - Bill Hard	20	Common Hard Boss	100	1	1					
+90	Safari - Bill Hard	0	GENERIC	50	1	1					
+100	DTB - Cages	100	DTB - Cages	100	1	1		100			
+100	DTB - Cages	100	DTB - Cages	25	1	1			100		
+100	DTB - Cages	0	GENERIC	100	1	1					
+110	DTB - Adam	110	DTB - Adam	100	1	1			100		
+110	DTB - Adam	110	DTB - Adam	25	1	1				100	
+110	DTB - Adam	290	Common Low Boss	100	1	1					
+120	DTB - Frank	120	DTB - Frank	100	1	1			100		
+120	DTB - Frank	120	DTB - Frank	25	1	1				100	
+120	DTB - Frank	290	Common Low Boss	100	1	1					
+130	BSA - Horror	130	BSA - Horror	100	1	1		100	50		
+130	BSA - Horror	130	BSA - Horror	20	1	1				50	
+130	BSA - Horror	290	Common Low Boss	100	1	1					
+140	BSA - Yamu	140	BSA - Yamu	100	1	1		100	50		
+140	BSA - Yamu	140	BSA - Yamu	20	1	1				50	
+140	BSA - Yamu	290	Common Low Boss	100	1	1					
+150	BSA - Champions	150	BSA - Champions	100	1	1			100		
+150	BSA - Champions	150	BSA - Champions	25	1	1				100	
+150	BSA - Champions	40	PvP Rewards	25	1	1					
+150	BSA - Champions	290	Common Low Boss	100	1	1					
+160	ROM - HF1337	160	ROM - HF1337	100	1	1			100		
+160	ROM - HF1337	20	Common Hard Boss	20	1	1					
+160	ROM - HF1337	0	GENERIC	100	1	1					
+160	ROM - HF1337	160	ROM - HF1337	25	1	1				50	10
+170	ROM - Cannon	170	ROM - Cannon	100	1	1			100		
+170	ROM - Cannon	170	ROM - Cannon	25	1	1				50	10
+170	ROM - Cannon	0	GENERIC	100	1	2					
+180	Kharum - Village	180	Kharum - Village	100	1	1		100			
+180	Kharum - Village	180	Kharum - Village	50	1	1			50	10	2
+190	Kharum - Retaliate	190	Kharum - Retaliate	100	1	1		100			
+190	Kharum - Retaliate	190	Kharum - Retaliate	50	1	1			50	10	2
+200	Kharum - Device	200	Kharum - Device	100	1	1		100					
+200	Kharum - Device	200	Kharum - Device	50	1	1			50	10	2
+210	Kharum - Ulf	210	Kharum - Ulf	100	1	1					100
+210	Kharum - Ulf	20	Common Hard Boss	100	1	1					
+210	Kharum - Ulf	0	GENERIC	50	1	2					
+220	JY 3min Reward	220	JY 3min Reward	100	1	1		100			
+220	JY 3min Reward	220	JY 3min Reward	25	1	1	0	100	20	5	0
+230	JY 3rd Side	230	JY 3rd Side	100	1	1		100			
+230	JY 3rd Side	230	JY 3rd Side	25	1	1		100	20	5	
+240	JY Gorgar	240	JY Gorgar	100	1	1			100		
+240	JY Gorgar	240	JY Gorgar	25	1	1				50	10
+250	JY Gorgar Hard	250	JY Gorgar Hard	100	1	1				100	
+250	JY Gorgar Hard	250	JY Gorgar Hard	25	1	1					100
+260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	100	1	1				100	10
+260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	25	1	1					100
+260	JY Ditz Left Side Hard	20	Common Hard Boss	50	1	1				50	10
+270	JY Ditz	270	JY Ditz	100	1	1				100	
+270	JY Ditz	270	JY Ditz	25	1	1					100
+270	JY Ditz	0	GENERIC	100	1	1					
+280	JY Xessk	280	JY Xessk	100	1	1					100
+280	JY Xessk	0	GENERIC	100	1	1					
+280	JY Xessk	20	Common Hard Boss	50	1	1					
+290	CF 1st encounter	310	CF 1st encounter	100	1	1		100			
+290	CF 1st encounter	310	CF 1st encounter	50	1	1			100	10	2
+290	CF 1st encounter	0	GENERIC	100	1	1					
+300	CF 2nd encounter	320	CF 2nd encounter	100	1	1			100		
+300	CF 2nd encounter	320	CF 2nd encounter	50	1	1				100	10
+310	CF Village 1	330	CF Village 1	100	1	1		100			
+310	CF Village 1	340	CF Village 2	50	1	1			100	10	
+320	CF Village 2	340	CF Village 2	100	1	1		100			
+320	CF Village 2	340	CF Village 2	50	1	1			100	10	
+330	CF Boss	350	CF Boss	100	1	1			100		
+330	CF Boss	350	CF Boss	25	1	1				100	
+330	CF Boss	20	Common Hard Boss	100	1	1					
+340	CF Boss Extra 1	360	CF Boss Extra 1	100	1	1					
+350	CF Boss Extra 2	370	CF Boss Extra 2	100	1	1					
+360	AC West	380	AC West	100	1	1			100		
+360	AC West	380	AC West	25	1	1				100	
+360	AC West	0	GENERIC	100	1	1		100	10		
+370	AC East	390	AC East	100	1	1		100			
+370	AC East	390	AC East	25	1	1			50	10	
+370	AC East	0	GENERIC	100	1	1		100	10	1	
+380	AC Last	400	AC Last	100	1	1			100		
+380	AC Last	400	AC Last	25	1	1				100	
+380	AC Last	0	GENERIC	50	1	1					
+390	AC Hard	410	AC Hard	100	1	1				100	
+390	AC Hard	410	AC Hard	25	1	1					100
+390	AC Hard	20	Common Hard Boss	100	1	1					
+390	AC Hard	0	GENERIC	100	1	2					
+400	RH Officers	420	RH Officers	100	1	1			100		
+400	RH Officers	420	RH Officers	25	1	1				100	
+410	RH Zul Thark	430	RH Zul Thark	100	1	1				100	
+410	RH Zul Thark	430	RH Zul Thark	50	1	1					100
+410	RH Zul Thark	20	Common Hard Boss	100	1	1					
+410	RH Zul Thark	30	Common Dungeon	100	1	2					
+420	RH Final	440	RH Final Master	100	1	1					100
+420	RH Final	440	RH Final Master	25	1	1				100	
+420	RH Final	20	Common Hard Boss	100	1	2					
+420	RH Final	0	GENERIC	100	1	1		100	50	10	
+420	RH Final	30	Common Dungeon	10	1	1					100
+430	BRD Monster	450	BRD Start	100	1	1		100			
+430	BRD Monster	450	BRD Start	25	1	1			100		
+430	BRD Monster	0	GENERIC	100	1	2					
+440	BRD Lan Zealot	460	BRD Lan Zealot	100	1	1			100		
+440	BRD Lan Zealot	460	BRD Lan Zealot	25	1	1				100	
+440	BRD Lan Zealot	0	GENERIC	100	1	1					
+450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	100	1	1					100
+450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	25	1	1				100	
+450	BRD Lan Zealot Hard	20	Common Hard Boss	100	1	1					
+450	BRD Lan Zealot Hard 290	Common Low Boss	100	1	1			100	50	20
+460	Bodo	30	Common Dungeon	100	1	1	0	100	20	0	0
+460	Bodo	290	Common Low Boss	100	1	1			100	20	10
+460	Bodo	10	PVP GENERIC	100	1	1					100
+470	DTB Hard	20	Common Hard Boss	100	1	1				100	25
+470	DTB Hard	0	GENERIC	100	1	1					100
+470	DTB Hard	10	PVP GENERIC	25	1	1					100

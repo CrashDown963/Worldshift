@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\small_round_stones\sharp_stones02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"02";
+    translation = xpoint3:"83.363983154296875,-39.9290771484375,30.6028118133544921875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

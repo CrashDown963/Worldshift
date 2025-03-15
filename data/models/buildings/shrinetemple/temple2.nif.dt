@@ -1,0 +1,277 @@
+model = {
+  file = str:"data\models\buildings\shrinetemple\temple2.nif";
+  animation = {
+    loop = fixp:"5";
+    duration = fixp:"1.33333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #6 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"AlertFlare01";
+        translation = xpoint3:"-485.44049072265625,294.507537841796875,610.5030517578125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"AlertFlare02";
+        translation = xpoint3:"489.758392333984375,276.316650390625,620.1529541015625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"AlertFlare03";
+        translation = xpoint3:"-3.148119449615478515625,-556.73309326171875,617.5811767578125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"AlertFlare04";
+        translation = xpoint3:"-286.0015869140625,-151.02691650390625,766.1519775390625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"AlertFlare05";
+        translation = xpoint3:"278.525238037109375,-173.7029266357421875,764.2862548828125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"AlertFlare06";
+        translation = xpoint3:"14.22217559814453125,327.479583740234375,766.7979736328125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"PCloud02Lightnings-Emitter";
+    translation = xpoint3:"7.878475189208984375,-2.4462721347808837890625,1211.807373046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"PCloud01-Emitter";
+    translation = xpoint3:"-5.23680877685546875,17.573333740234375,1094.767333984375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Beam";
+    translation = xpoint3:"0,0,1652.7105712890625";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,-1,0";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"LightnigBBP2P_Root";
+    translation = xpoint3:"213.9818572998046875,-800.734619140625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"pt_src01";
+      translation = xpoint3:"259.30047607421875,-0.3558349609375,0";
+      rotation = {
+        0 = xpoint3:"0,1,0";
+        1 = xpoint3:"-1,0,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"pt_dst01";
+      translation = xpoint3:"-245.056243896484375,8.7874755859375,0";
+      rotation = {
+        0 = xpoint3:"0,1,0";
+        1 = xpoint3:"-1,0,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"Beam01";
+    translation = xpoint3:"72.1600341796875,42.46361541748046875,213.234771728515625";
+    rotation = {
+      0 = xpoint3:"-0.9999701976776123046875,0,-0.0077130966819822788238525390625";
+      1 = xpoint3:"0.0077127632685005664825439453125,0.00100866449065506458282470703125,-0.9999697208404541015625";
+      2 = xpoint3:"0,-0.999999463558197021484375,-0.0010061585344374179840087890625";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"Beam02";
+    translation = xpoint3:"-53.500186920166015625,12.79277801513671875,223.7536773681640625";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,-1,0";
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"Beam03";
+    translation = xpoint3:"28.9150485992431640625,-2.07978057861328125,223.9630584716796875";
+    rotation = {
+      0 = xpoint3:"-0.999971091747283935546875,0,0.00759606994688510894775390625";
+      1 = xpoint3:"-0.00759617984294891357421875,0,-0.999971091747283935546875";
+      2 = xpoint3:"0,-0.99999988079071044921875,0";
+    }
+  }
+  #8 = {
+    scale = fixp:"1";
+    name = str:"FX_Looping";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Segment_rot_01";
+      translation = xpoint3:"0,0,724.1748046875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Segment_rot_02";
+      translation = xpoint3:"0,0,851.01031494140625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Segment_rot_03";
+      translation = xpoint3:"0,0,944.76861572265625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"Segment_rot_04";
+      translation = xpoint3:"0,0,1450.6556396484375";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"Segment_rot_05";
+      translation = xpoint3:"0,0,1171.5404052734375";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #5 = {
+      scale = fixp:"1";
+      name = str:"Segment_rot_06";
+      translation = xpoint3:"0,0,1342.775634765625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #9 = {
+    scale = fixp:"1";
+    name = str:"LightnigBBP2P_Root01";
+    translation = xpoint3:"-616.66717529296875,-866.861328125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"pt_src05";
+      translation = xpoint3:"572.55645751953125,1826.8818359375,768.759033203125";
+      rotation = {
+        0 = xpoint3:"-0.08419863879680633544921875,0.962062299251556396484375,-0.25951254367828369140625";
+        1 = xpoint3:"-0.6195971965789794921875,0.15341879427433013916015625,0.769780457019805908203125";
+        2 = xpoint3:"0.78039085865020751953125,0.22560770809650421142578125,0.583173453807830810546875";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"pt_dst05";
+      translation = xpoint3:"166.152435302734375,1814.763427734375,445.90826416015625";
+      rotation = {
+        0 = xpoint3:"-0.5319488048553466796875,0.510083675384521484375,-0.67590320110321044921875";
+        1 = xpoint3:"-0.615909755229949951171875,0.3147039115428924560546875,0.72223031520843505859375";
+        2 = xpoint3:"0.58110725879669189453125,0.8004848957061767578125,0.1467591226100921630859375";
+      }
+    }
+  }
+}

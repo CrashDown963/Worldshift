@@ -1,0 +1,165 @@
+Mob RenegadeHarvester : BaseMob {
+  name : Harvester.name
+  descr : Harvester.descr
+  race = aliens
+  icon = 4,29
+
+  tags = unit, organic, mob, renegade
+
+  model = Data/Models/Units/harvester/harvester.kfm {
+    die = Data/Models/Units/harvester/harvester_die.nif
+  }
+  
+  skin {
+    base = Data/Models/Units/harvester/Harvester-renegade-Diff.dds
+    mask = Data/Models/Units/harvester/Harvester-renegade-mask.dds
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/harvester/Harvester.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+
+  destruction = ragdoll
+
+  stats : {
+    hp = 2800
+    psi = 450
+    damage = 55
+  
+    vitality_surge_gain = 50
+    vitality_surge_power = 150
+    vitality_surge_cooldown = 10
+
+    harvest_chance = 10
+    harvest_damage = 55
+    harvest_range = 500
+    harvest_duration = 3
+    harvest_cooldown = 10
+
+    paralyzing_field_range = 450
+    paralyzing_field_speed_reduction_perc = 50
+    
+    confuse_chance = 20
+    
+    ensnare_duration = 7
+  }
+  
+  hp = stat:hp
+  armor = 35
+  range = 125
+  damage = stat:damage
+  energy = stat:psi
+  chase_range = -1
+  
+  take_auras : { RestorationCoreAura }
+
+  CEffectAura HarvesterMobParalyzingFieldAura {
+    range = stat:paralyzing_field_range
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = HarvesterMobParalyzingField
+      name : Harvester.HarvesterParalyzingFieldAura.effect.name
+      text : Harvester.HarvesterParalyzingFieldAura.effect.text
+      type = slow
+      stats_change {
+        speed_mod = { perc = stat:paralyzing_field_speed_reduction_perc * -1 }
+      }
+      tick = 1
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = paralyze
+      stack_count = 1
+      exclude_self = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = ATTACK_MAIN
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact_type = melee
+    shoot_snd = data/sounds/effects/harvester hit/
+  }
+  
+  actions : Alien.actions {
+    VitalitySurgeAction;
+  }
+
+  abilities {
+    HarvesterParalyzingField 
+    HarvesterHarvestAbi 
+
+    ImminenceAbi {
+      name : Harvester.abilities.ImminenceAbi.name
+      text : Harvester.abilities.ImminenceAbi.text
+      icon = 13,0
+      when : abi.target_hit
+      chance = stat:confuse_chance
+      target = current
+      effect = S_confuse {
+        duration = 10
+        react = confusion_react
+        id = Imminence
+        name : Harvester.abilities.ImminenceAbi.effect.name
+        text : Harvester.abilities.ImminenceAbi.effect.text
+        type = confusion
+        program = PrgConfuse
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+      }
+    }
+    
+    EnsnareAbi {
+      when : abi.approach
+      cooldown = 5
+      target = current
+      range = 1600
+      min_range = 400
+      
+      cast {
+        finish {
+          anim = Harvest_Hit 
+        }
+      }
+      
+      projectile = chase {
+        model = data/Models/Projectiles/Misc/HuntersNetProjectile.nif
+  	    speed = 2500
+        damage = var:damage
+        start_point = pt_shoot_1
+        
+        effect = S_stun {
+          name = "Hunter's net"
+          text = "This unit is cought in a hunter's net and cannot act"
+          duration = var:ensnare_duration
+          discard_react = 1
+          react = ensnare
+        }
+      }
+    }
+    
+    AIVitalitySurge {
+      action = VitalitySurgeAction
+      when   : abi.always
+      target = self { health_under = stat:vitality_surge_gain * -1 + 100 }
+    }
+  }
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+    }
+  }
+}

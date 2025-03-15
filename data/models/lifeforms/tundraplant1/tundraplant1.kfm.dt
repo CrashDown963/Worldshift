@@ -1,0 +1,145 @@
+model = {
+  file = str:"data\models\lifeforms\tundraplant1\tundraplant1.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    stress = {
+      loop = int:"0";
+      duration = fixp:"1.93333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.93333339691162109375";
+        }
+      }
+    }
+    stressed = {
+      loop = int:"1";
+      duration = fixp:"1.1333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.1333332061767578125";
+        }
+      }
+    }
+    open = {
+      loop = int:"0";
+      duration = fixp:"5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"5";
+        }
+      }
+    }
+    "idle-mid1" = {
+      loop = int:"1";
+      duration = fixp:"3.1666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.1666660308837890625";
+        }
+      }
+    }
+    "idle-mid2" = {
+      loop = int:"1";
+      duration = fixp:"4.8333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4.8333339691162109375";
+        }
+      }
+    }
+    "idle-low1" = {
+      loop = int:"1";
+      duration = fixp:"3.1666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.1666660308837890625";
+        }
+      }
+    }
+    "idle-low2" = {
+      loop = int:"1";
+      duration = fixp:"4.6666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4.6666660308837890625";
+        }
+      }
+    }
+    "idle-hi1" = {
+      loop = int:"1";
+      duration = fixp:"3.166667938232421875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.166667938232421875";
+        }
+      }
+    }
+    "idle-hi2" = {
+      loop = int:"1";
+      duration = fixp:"6.5000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"6.5000019073486328125";
+        }
+      }
+    }
+  }
+}

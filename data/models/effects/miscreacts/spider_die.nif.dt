@@ -1,0 +1,57 @@
+model = {
+  file = str:"data\models\effects\miscreacts\spider_die.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"1.66666662693023681640625";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray01-Emitter";
+      translation = xpoint3:"0,0,38.5864105224609375";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Gravity01";
+      translation = xpoint3:"305.322723388671875,-1.010063648223876953125,189.2636260986328125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray021-Emitter";
+      translation = xpoint3:"0,0,41.0533447265625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"NDLCD CN";
+    translation = xpoint3:"0,0,-116.1000823974609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

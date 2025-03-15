@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\models\units\repairdrone\repairdrone.kfm";
+  animations = {
+    idle_1 = {
+      loop = int:"1";
+      duration = fixp:"3";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3";
+        }
+      }
+    }
+    die = {
+      loop = int:"0";
+      duration = fixp:"0.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.5";
+        }
+      }
+    }
+  }
+}

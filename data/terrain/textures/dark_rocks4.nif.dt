@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\dark_rocks4.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

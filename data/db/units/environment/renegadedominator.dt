@@ -1,0 +1,268 @@
+Mob RenegadeDominator : BaseMob {
+  name : Dominator.name
+  descr : Dominator.descr
+  race = aliens
+  icon = 3,29
+  
+  tags = unit, organic, mob, renegade
+  
+  model = data/models/units/dominator/renegadedominator.kfm {
+    die = data/models/units/dominator/dominator_die.nif
+  }
+  
+  skin {
+    base = Data/models/units/zul'thark/zul'thark_diffuse.dds
+    mask = Data/models/units/zul'thark/zul'thark_mask.dds
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = data/models/units/dominator/dominator.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+
+  stats : {
+    hp = 1400
+    damage = 55
+    psi = 360
+    speed = 370
+    armor = 25
+    
+    stasis_shot_chance = 10
+    stasis_shot_duration = 4
+
+    power_fuse_perc = 50
+    power_fuse_power = 80
+    power_fuse_cooldown = 30
+    power_fuse_area = 1200
+
+    dimension_chain_duration = 6
+    dimension_chain_area = 800
+    dimension_chain_power = 120
+    dimension_chain_cooldown = 30
+  }
+  
+  immune_to :{
+    E_multifreeze
+    E_freeze
+    E_multistun
+    E_stun
+    stun
+    fear
+    slow
+    Confusion
+    confusion
+  }
+
+  hp = stat:hp
+  armor = stat:armor
+  range = 1400
+  damage = stat:damage
+  energy = 360
+  fire_rate = 1.8
+  speed = stat:speed
+  sight = 3000
+  sight_in_combat = 6500
+  chase_range = -1
+  siege_projectile = SiegeProjectile
+  siege_damage = stat:damage
+  siege_damage2 = stat:damage * 2
+  
+  -- This is for the Blight Ray ability
+  penetration = 100
+  crit_chance = 2
+  
+  abilities {
+    SiegeAbi {
+      when : abi.combat
+      target = self { no_enemy_in_range = 1100 }
+      program = PrgSiege
+    }
+
+    DimensionChainAbi {
+      when   : abi.fight
+      target = current { aoe_range = 1500; aoe_min_enemy_count = 3 }
+      range = 2000
+      min_power = stat:dimension_chain_power
+      power = stat:dimension_chain_power
+      cooldown = stat:dimension_chain_cooldown
+  
+      cast {
+        prepare {
+          duration = 0.5
+          anim = cast_instant
+        }
+      }
+      
+      effect = E_set {
+        sound = data/sounds/effects/common/dimension chain.wav
+        exclude_self = 1
+        effect = S_multistun {
+          multi_area = stat:dimension_chain_area { anim = data/models/effects/magic/FreezingBlast.nif }
+          duration = stat:dimension_chain_duration
+          react = dimension_chain
+        }
+        effect = E_multidebuff {
+          id = DimensionChain
+          name = "Dimension Chain"
+          text = "This unit is caught in a Dimension Chain and cannot move."
+          type = vulnerability
+          multi_area = stat:dimension_chain_area
+          duration = stat:dimension_chain_duration
+          stats_change {
+            damage_taken_mod = { perc = 100 }
+          }
+          tick = 1
+          duration = stat:dimension_chain_duration
+          immediate_tick = 1
+          stack_count = 1
+          exclude_self = 1
+        }
+      }
+    }
+    
+    PowerFuseAbi {
+      when   : abi.fight
+      target = self { aoe_range = 600; aoe_min_enemy_count = 2 }
+      range = 2000
+      power = stat:power_fuse_power
+      min_power = stat:power_fuse_power
+      cooldown = stat:power_fuse_cooldown 
+      
+      cast {
+        prepare {
+          duration = 0.5
+          anim = cast_instant
+        }
+      }
+  
+      effect = E_multipowerburn {
+        id = PowerFuse
+        multi_area = stat:power_fuse_area { 
+          anim = data/models/effects/magic/FreezingBlast.nif; 
+        }
+        sound = data/sounds/effects/common/power fuse.wav
+        burned_power_perc = stat:power_fuse_perc
+        damage_amplifier = 0
+        react = power_fuse
+      }
+    }
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  take_auras : { RestorationCoreAura }
+  
+  CMultiWeaponController dominator_weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = alternative
+    range_far = var:range * 0.8
+    range_near = var:range * 0.4
+    proximity_bonus = 3
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_1
+    shoot_anim_2 = shoot_2
+    shoot_idle_1 = shoot_idle
+    shoot_idle_2 = shoot_idle
+    idle_time = 1
+    min_bursts = 2
+    max_bursts = 2
+    aim_node = pt_aim
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    fire_rate = 1.5
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    muzzle_fx dominator_rifle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction  = 25
+      active_variation = 5
+      length_variation = 42
+      width_variation  = 7
+      scale = 1.3
+      instances = 64
+      emit = 150,255,80
+    }
+    
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = ion
+      speed = 4500
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/V Laser/t_laser.nif {
+        scale = 1.5
+        E = 150,255,80,255
+      }
+    }
+	}
+}
+
+CProjectile SiegeProjectile {
+  type = parabolic
+  angle = 60
+  model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif
+  effect = SiegeProjectileExplode
+}
+
+CProjectile SiegeProjectile2 {
+  type = parabolic
+  angle = 60
+  model = data/models/projectiles/ProtonShot/ProtonShotProjectile_Green.nif {
+    scale = 1.3
+  }
+  effect = SiegeProjectileExplode2
+}
+
+CMapAnim SiegeExplosion {
+  model = data/Models/Effects/MediumExplosion/ExplosionPlasma.kfm
+  sound = Data/Sounds/Effects/PoisonSpores/
+  scale = 1
+  decals = explosion_crater2
+  physics_impact = 5000
+}
+
+CAreaEffect SiegeProjectileExplode {
+  range = 250
+ 
+  epicenter {
+    spawn SiegeExplosion
+    physics_radius = 250 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount : RenegadeDominator.siege_damage
+    }
+  }
+}
+
+CAreaEffect SiegeProjectileExplode2 {
+  range = 250
+ 
+  epicenter {
+    spawn SiegeExplosion
+    physics_radius = 250 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount : RenegadeDominator.siege_damage2
+    }
+  }
+}
+

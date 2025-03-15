@@ -1,0 +1,227 @@
+Commander CommanderBoss : BaseUnit {
+  name = CommanderBoss
+  commander = 1
+  model = data/Models/units/CommanderBoss/CommanderBoss.kfm
+  race = humans
+  tags = unit, organic
+  speed = 450
+  take_auras : { RestorationCoreAura }
+  icon = 1,1
+  
+  stats :{
+    hp = 880
+    armor = 22
+
+    psi = 350
+
+    range = 1400
+    damage = 40
+    
+    inject_hp = 320
+    inject_power_cost = 80
+    inject_duration = 6
+    
+    barriercure_hp = 0
+    barriercure_chance = 0
+
+    confuse_duration = 12
+    confuse_armor_perc_buff = 50
+    confuse_power = 80
+  }
+
+  confuse_range = stat:range
+  
+  
+  
+  destruction = animation
+
+  impacts : LivingUnitImpacts
+  
+  movement_type = crawl
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+  }
+
+  actions : BaseUnit.actions {
+    Reinforce 
+    TeleportOfficerAction
+    InjectAction
+    ConfuseAction
+    MakeOreExtractor
+    PickItemDef
+  }
+  
+  abilities {
+    AIInject {
+      action = InjectAction
+      when   : abi.always
+      target = self { health_under = 60 }
+    }
+  }
+  
+  animation {
+    auto_show_hide {
+      default_tool = commander_gun {
+        cast
+      }
+    }
+
+    teleport_officer = summon_loop 
+    cast_confusion_finish = summon
+    plant_structure = summon_loop
+    pick_item = summon_loop
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.35
+    range_near = stat:range * 0.14
+    proximity_bonus = 1.5
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/hitech beam/
+    aim_tolerance = 45
+    shoot_anim = shoot
+    spot_impact = 850
+    spot_impact_type = ion
+    damage_type = energy
+    
+  muzzle_fx ion_rifle_commander {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
+		  frames = 2
+		  frequency = 1.0
+		  active_fraction	= 10
+		  active_variation = 5
+		  length_variation = 4
+		  width_variation	= 13
+		  scale	= 5
+		  instances = 64
+          emit = 52,118,255
+	  }
+
+   instant_shot CommanderShot {
+     model = Data/Models/Effects/TraceBullet/Ion_trace.nif	
+     dist_start = 20
+     travel_start = 100
+     travel_end = 20
+     duration = 0.2
+     time_fraction_to_lag_end = 20
+     width = 30
+     instances = 128
+     color_alpha {
+       0 = 255,255,255,0
+       20 = 52,118,255,255
+       80 = 52,118,255,100
+       150 = 52,118,255,50
+     }
+   }
+  }
+  cost : pvp.humans.unit_costs.Commander
+}
+
+CTeleportOfficerAction TeleportOfficerAction {
+  name = "Teleport Officer"
+  instant = 1
+  visible = 0
+  program = PrgTeleportOfficer
+}
+
+CEffectAction InjectAction {
+  name = "Inject"
+  descr = "Lord Commander injects himself with powerful drug mixture, that will restore [stat:inject_hp] hit points over [stat:inject_duration] sec."
+  instant = 1
+  icon = 10,3
+  visible = 1
+  power = stat:inject_power_cost
+  cooldown = 15
+  
+  effect = E_buff {
+    id = Infuse
+    
+    type = heal
+    hp = stat:inject_hp  -- restore X hp
+    --show_text_feedback = 1
+    
+    duration = stat:inject_duration       -- for Y secs total
+    tick = 1            -- every Z secs
+    area { anim = data/models/effects/magic/healingwave.nif }
+    react = inject
+  }
+}
+
+
+-- Confusion
+CSpellAction ConfuseAction {
+  name = "Confuse"
+  descr = "A tactical maneuvre that will force all enemies in a small area to focus their attacks on Lord Commander himself for <color=tooltip.lite>[stat:confuse_duration] sec.</> and will also increase his armor with <color=tooltip.lite>[stat:confuse_armor_perc_buff]%</> for the same time. This effect might last shorter if the affected enemies loose the Lord Commander of their sight."
+  visible = 1  
+  icon = 11,3
+  tags = location
+  feedback = DecalFeedback
+
+  max_range = stat:range
+  min_power = stat:confuse_power
+  cooldown = 10
+  
+  spell {
+    power = stat:confuse_power
+    cast {
+      finish {
+        anim = cast_confusion_finish
+        attach {
+          pt_hand = data/models/effects/magic/Debuff_hands.nif
+        }
+      }
+    }
+    
+    effect = E_set {
+      effect = E_buff {
+        target_self = 1
+        id = Confuse
+        type = armor
+        stats_change {
+          armor = { perc = stat:confuse_armor_perc_buff  }
+        }
+        duration = stat:confuse_duration
+      }
+      effect = E_multiconfuse {
+        multi_area = 500
+        duration = stat:confuse_duration       -- for Y secs total
+        area { anim = data/models/effects/magic/Confusion_wave.nif }
+        react = confusion_react
+        
+        id = Confusion
+        type = confusion
+        debuff = 1
+        program = PrgConfuse
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+      }
+    }  
+  }
+}

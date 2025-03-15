@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\embelishments\special\swamplife.nif";
+  animation = {
+    loop = fixp:"8.3333339691162109375";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"State0";
+    translation = xpoint3:"0.09853839874267578125,41.4736328125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"state1";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

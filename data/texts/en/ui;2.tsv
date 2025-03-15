@@ -1,0 +1,109 @@
+﻿sid	text
+	
+err_actiononcooldown	ACTION STILL ON COOLDOWN!
+	
+// Settings	
+game_settings	Game Settings
+player_settings	Player Settings
+video_settings	VIDEO
+audio_settings	SOUND
+mute_all_sounds	Mute all sounds
+master_volume	Master volume
+music_volume	Music volume
+sound_effects_volume	Sound effects volume
+speech_volume	Speech volume
+units_aknowlegments	Unit acknowledgments
+subtitles_cutscenes	Subtitles in cutscenes
+	
+	
+// Login screen tooltips	
+lan_tip	Choose LAN mode for multiplayer
+internet_tip	Choose Internet mode for multiplayer
+new_player_tip	Create a WorldShift player name associated with a GameSpy ID (for Internet games)
+enter_game_tip	Enter the game using the displayed player name
+	
+	
+// Lobby UI button tooltips	
+missions_btn_tip	Play a single player story mission
+locations_btn_tip	Play a cooperative game at a Special Location
+deathmatch_btn_tip	Play on the Internet against random opponents
+practice_btn_tip	Play a practice game on the Internet
+skirmish_btn_tip	Play a skirmish game on a LAN
+	
+ability_grid_btn_tip	Manage items and specializations in the Ability Grid
+chat_btn_tip	See your Friends list and the chat channels
+settings_btn_tip	Adjust game and player related settings
+	
+chat_views_tip	Click to select this chat view
+	
+exit_btn_tip	Exit to the Entrance screen
+	
+	
+// Game list window	
+location_list_tip	Select the location at which to play
+1v1_tip	Show only 1-versus-1 games
+2v2_tip	Show only 2-versus-2 games
+3v3_tip	Show only 3-versus-3 games
+small_games_tip	Show 1-versus-1 and 2-versus-2 games
+big_games_tip	Show 2-versus-2 and 3-versus-3 games
+all_games_tip	Team size does not matter
+	
+create_game_tip	Host your own game
+join_game_tip	Join the selected game
+quick_join_tip	Join a random game from the list
+	
+	
+// Deathmatch window	
+deathmatch_1v1_tip	Set the team size to 1 player
+deathmatch_2v2_tip	Set the team size to 2 players
+deathmatch_3v3_tip	Set the team size to 3 players
+deathmatch_team_tip	Toggle random/arranged team
+	
+	
+// Active game window (creating/joining)	
+change_slot_tip	Change the type of this player slot
+change_slot_open_tip	Open slot, any player can join
+change_slot_ai_tip	AI player in this slot
+change_slot_close_tip	Closed slot, no player can join
+change_ai_tip	Change AI strength
+change_sides_tip	Change sides
+change_faction_tip	Select faction
+change_player_color_tip	Select player color
+select_units_tip	Select starting units
+player_ready_tip	Shows whether the player is ready to start
+invite_player_tip	Invite a player
+leave_game_tip	Leave the game (cancels it if you are the host)
+start_game_tip	Start the game
+	
+	
+// Ability Grid tooltips	
+ability_grid_tab_tip	View this faction’s items and specializations
+reset_spec_tip	Reset the stars allocated to specializations
+	
+	
+// Chat tooltips	
+chat_channel_tip	Click to assign shortcut, right-click to select color
+chat_add_friend_tip	Add to your Friends list
+chat_remove_friend_tip	Remove from your Friends list
+chat_join_tip	Join the game in which the player is currently active
+chat_tell_tip	Send a private message
+chat_invite_tip	Invite the player to join your game
+chat_inspect_tip	Inspect the player’s Ability Grid and statistics
+chat_authorize_tip	Authorize the player
+chat_reject_tip	Reject authorization
+	
+// Settings window	
+logo_background_ttl	Background
+logo_background_txt	Click to select color
+logo_gradient_ttl	Gradient
+logo_frame_ttl	Frame
+logo_symbol_ttl	Symbol
+logo_click_txt	Click to change, right-click to select color
+	
+// Victory/Defeat screen	
+vic_close_reward	You have not chosen your mission completion reward. Are you sure you want to continue?
+reward_chs_txt	Click on the item you would like to collect.
+	
+// In-game tooltips	
+leaderdead_tooltip_ttl	No field leader
+leaderdead_tooltip_txt	Your field leader is dead and you cannot summon officers. Call a new leader using one of your buildings.

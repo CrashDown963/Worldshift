@@ -1,0 +1,12 @@
+Mob Insect : BaseAnimal  {
+  name = "Insect"
+  icon = 6,11
+  model = data/models/lifeforms/Insect/insect.kfm
+  destruction = animation
+    
+  animation {
+    anim_set ATTACK = loop {
+      Hit_1
+    }
+  }
+}

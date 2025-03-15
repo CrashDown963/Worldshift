@@ -1,0 +1,83 @@
+"id"	"file"	"size"	"vars"
+
+"AreaSelection"	"AreaSelection/area_selection.nif"	500	"{layer = 255} {saveable=0} {copy_properties=1}"
+"UnitsSelection"	"AreaSelection/units_selection.nif"	500	"{layer = 255} {saveable=0} {copy_properties=1}"
+			
+"cracks-1"	"cracks1.nif"	500	
+"cracks-2"	"cracks2.nif"	500	
+"cracks-3"	"cracks3.nif"	500	
+"cracks-4"	"cracks4.nif"	500	
+"cracks-5"	"cracks5.nif"	500	
+"cracks-6"	"cracks6.nif"	500	
+"cracks-7"	"cracks7.nif"	500	
+"cracks_uni"	"Universal/uni_cracks1.nif"	500
+"Field1"	"Universal/field1.nif"	2000	
+			
+"explosion_small-1"	"decal_smoke1.nif"	400	"{stay_time=30.0} {fade_time=2.0}"
+			
+"hell_geyser"	"hell_geyser_dec.nif"	400	
+"hell_wet_ground_dec"	"hell_wet_ground_dec.nif"	1000	
+			
+"glow"	"glow.nif"	400	
+			
+"GroundSelection"	"selection/selection1.nif"	500	"{layer = 255} {saveable=0} {copy_properties=1}"
+"GroundSelectionOfficer"	"selection/selection1-officer.nif"	500	"{layer = 255} {saveable=0} {copy_properties=1}"
+			
+"smoke2"	"decal_smoke2.nif"	500
+"smoke3"	"decal_smoke3.nif"	500
+"crater1"	"decal_crater1.nif"	1200
+"crater2"	"decal_crater2.nif"	1200
+"slabs1"	"desert/slabs1.nif"	500
+"bardecal1"	"desert/bar_decal_01.nif"	300
+"bardecal2"	"desert/bar_decal_02.nif"	600
+"bardecal3"	"desert/bar_decal_03.nif"	300
+"bardecal4"	"desert/bar_decal_04.nif"	300
+"bardecal5"	"desert/bar_decal_05.nif"	300
+"bardecapebles1"	"desert/bar_decal_pebles_01.nif"	300
+	
+			
+"snowice"	"SnowIce/dec_snow-ice2.nif"	500	
+"snowice_nm_spec"	"SnowIce/dec_snow-ice2-nm-spec.nif"	500	
+"snowice_nm_env"	"SnowIce/dec_snow-ice2-nm-env.nif"	500	
+"snowice_nm_glow"	"SnowIce/dec_snow-ice2-nm-glow.nif"	500	
+			
+"stones"	"stones1.nif"	200	
+			
+"stonespile"	"stones_pile1.nif"	1300
+
+"mutants_field1"	"fields/mutants_field.nif"	960	"{copy_properties=1}"
+"mutant_field1"	"fields/mutant_field1.nif"	600	"{copy_properties=1}"
+
+"explosion_crater2"	"explosions/explosion_crater2.nif"	1200	"{stay_time=30.0} {fade_time=2.0} {copy_properties=1}"
+
+"burnt_ground1.nif"	"BurntGround/burnt_ground1.nif"	720	"{stay_time=30.0} {fade_time=2.0}"
+
+"molten-spot1"	"MoltenSpot/molten-spot1.nif"	300	"{saveable=0} {copy_properties=1}"
+"molten_spot_area"	"MoltenSpot/molten-spot-area.nif"	1200	"{saveable=0} {copy_properties=1}"
+"fire_burst1"	"Fire/fire_burst1.nif"	1200	"{stay_time=30.0} {fade_time=2.0}"
+
+"barrage_decal1"	"Barrage/barrage-decal1.nif"	260	"{copy_properties=1}"
+
+"blood_stain1"	"BloodStains/blood_stain1.nif"	180	"{copy_properties=1}"
+"blood_stain2"	"BloodStains/blood_stain2.nif"	180	"{copy_properties=1}"
+"blood_stain3"	"BloodStains/blood_stain3.nif"	180	"{copy_properties=1}"
+"aliens_blood_stain1"	"BloodStains/aliens_blood_stain1.nif"	180	"{copy_properties=1}"
+"aliens_blood_stain2"	"BloodStains/aliens_blood_stain2.nif"	180	"{copy_properties=1}"
+"aliens_blood_stain3"	"BloodStains/aliens_blood_stain3.nif"	180	"{copy_properties=1}"
+
+"blood_drops1"	"blood drops/blood_drops1.nif"	100	"{copy_properties=1}"
+"aliens_blood_drops1"	"blood drops/aliens_blood_drops1.nif"	100	"{copy_properties=1}"
+"aliens_blood_drops2"	"blood drops/aliens_blood_drops2.nif"	100	"{copy_properties=1}"
+
+"human_footprint1"	"Footprints/human_footprint1.nif"	43	"{copy_properties=1}"
+
+"hellfire_footprint"	"Footprints/hellfire_footprint.nif"	110	"{copy_properties=1}"
+"heavybot_footprint"	"Footprints/heavybot_footprint.nif"	170	"{copy_properties=1}"
+"kai_footprint"	"Footprints/Kai_footprint.nif"      110	"{copy_properties=1}"
+
+"barrage"	"AreaSelection/area_selection_barrage.nif"	500	"{layer = 255} {saveable=0} {copy_properties=1} {keep_properties=1}"
+"barrage_rot"	"AreaSelection/area_selection_barrage_rot.nif"	180	"{layer = 255} {saveable=0} {copy_properties=1} {keep_properties=1}"
+"barrage_scale"	"AreaSelection/area_selection_barrage_scale.nif"	600	"{layer = 255} {saveable=0} {copy_properties=1} {keep_properties=1}"
+
+"Brute_footprint"	"Footprints/Brute_footprint.nif"	150	"{copy_properties=1}"
+

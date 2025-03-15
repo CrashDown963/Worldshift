@@ -1,0 +1,35 @@
+Mob GreenskinWild : BaseMob {
+  name = "Green Skin (wild)"
+  icon = 6,7
+  model = Data/Models/units/GreenSkinWild/GreenSkin.kfm
+  destruction = animation
+
+  physics {
+    default = Data/Models/units/GreenSkinWild/GreenSkin_Proxy.pml
+    die = Data/Models/units/GreenSkinWild/GreenSkin.pml
+  }
+
+  sounds {
+    destruction = data/sounds/effects/littlemonsterdead/
+  }
+
+  destruction = ragdoll
+
+  range = 75
+  damage = 15
+  armor = 10
+  
+  animation {
+    anim_set HIT {
+      Hit_1
+    }
+  }
+  
+  CWeaponController weapon {
+    shoot_snd = data/sounds/effects/lightpunch/
+    active = 0
+    idle_only = 1
+    fire_node = Scene Root
+    shoot_anim = HIT
+  }
+}

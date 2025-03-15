@@ -1,0 +1,162 @@
+Unit Brute : BaseUnit {
+  name = "Brute"
+  descr = "DESCRIPTION"
+  model = Data/Models/units/Brute/Brute.kfm
+  scale = 0.75
+  race = mutants
+  tags = unit, organic, lowrank
+  icon = 2,2
+  
+  stats :{
+    hp = 520
+    armor = 14
+    psi = 0
+    psi_gen = 0
+    range = 150
+    damage = 8
+    growl_duration = 4
+    growl_chance = 5
+    ignite_on_strike_chance = 0
+    ignite_duration = 8
+  }
+  sight = stat:range + 1050
+  aggro_range = var:sight
+  min_attack_range = 80
+  speed = 450
+
+  ignite_targets = 3
+  ignite_damage = stat:damage * 0.5
+  
+  impacts : LivingUnitImpacts
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+      Hit_rare = 30,1,1
+    }
+  }
+  
+  destruction = animation
+  
+  actions :{
+    MakeShrine -- fake
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  sounds {
+    destruction = data/sounds/units/brute/die/
+    confirm = data/sounds/units/brute/confirm/
+    select = data/sounds/units/brute/select/
+  }
+  
+  CWeaponController weapon_ignite {
+    active = 0
+    can_crit = 0
+    idle_only = 1
+    shoot_snd = data/sounds/units/brute/shoot/
+    shoot_anim = ATTACK_MAIN
+    fire_node = pt_cast
+    fire_rate = 0.5
+    spot_impact = 700
+    spot_impact_type = melee
+    damage = 0
+    projectile = instant {
+      effect = E_set {
+        effect = E_damage {
+          area = stat:range
+          amount = var:ignite_damage
+          react = fire
+          max_units = var:ignite_targets
+          cone_angle = 120
+        }
+        effect = E_damage {
+          area = stat:range
+          amount = var:damage
+          react = fire
+          max_units = var:ignite_targets
+          cone_angle = 120
+        }
+      }
+    }
+  }
+  
+  CWeaponController weapon {  -- should be last!
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_snd = data/sounds/units/brute/shoot/
+    shoot_anim = ATTACK_MAIN
+    fire_node = pt_cast
+    fire_rate = 0.5
+    spot_impact = 700
+    spot_impact_type = melee
+  }
+  
+  abilities {
+    GrowlAbi {
+      name = "Growl"
+      text = "Brute has [stat:growl_chance]% chance on each attack to draw hi targets' attention, causing him to focus fire on the Brute for [stat:growl_duration] seconds."
+      icon = 6,0
+      when : abi.target_hit
+      chance = stat:growl_chance
+      cooldown = 12
+      target = current
+      effect = S_confuse {
+        duration = stat:growl_duration       -- for Y secs total
+        react = confusion_react
+        id = Growl
+        name = "Growl"
+        text = "This unit is threatened by a Brute and cannot attack anyone else."
+        icon = 1,7
+        type = confusion
+        dont_interrupt_bosses = 1
+        program = PrgConfuse
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+      }
+    }  
+    IgniteOnHitAbi {
+      name = "Ignite"
+      text = "Chance to Ignite on hit"
+      icon = 1,0
+      when : abi.target_hit
+      chance = stat:ignite_on_strike_chance
+      target = self
+      effect = E_ignite {
+        id = Ignite
+        name = "Ignite"
+        text = "This unit is in a special state that raises its effectiveness."
+        icon = 1,8
+        type = damage_buff
+        duration = stat:ignite_duration
+      }
+      active = 0
+    }
+    IgniteOnKillAbi {
+      name = "Ignite"
+      text = "After doing the killing blow on his target, the Brute will enrage, ignating himself for [stat:ignite_duration] seconds. Ignited brute will inflict additionally [ignite_damage] damage on up to [ignite_targets] targets at front of him."
+      icon = 1,0
+      when : abi.killing_blow
+      chance = 100
+      target = self
+      effect = E_ignite {
+        id = Ignite
+        name = "Ignite"
+        text = "This unit is in a special state that raises its effectiveness."
+        icon = 1,9
+        type = damage_buff
+        duration = stat:ignite_duration
+      }
+    }
+  }
+  cost : pvp.mutants.unit_costs.Brute
+  cost_sloc : pvp.mutants.sloc_costs.Brute
+  ignite_effect = data/models/effects/Fire/FireReact.nif
+}

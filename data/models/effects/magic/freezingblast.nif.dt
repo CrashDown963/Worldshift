@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\effects\magic\freezingblast.nif";
+  animation = {
+    loop = fixp:"3.3333332538604736328125";
+    duration = fixp:"0.699999988079071044921875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray01Flames-Emitter";
+    translation = xpoint3:"0,0,122.28216552734375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Drag01";
+    translation = xpoint3:"46.9222412109375,465.98028564453125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Plane02";
+    translation = xpoint3:"0,0,124.28838348388671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Wind01";
+    translation = xpoint3:"0,0,-265.07122802734375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"freeze_streaks";
+    translation = xpoint3:"0,0,124.28838348388671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"Omni01";
+    translation = xpoint3:"0,0,664.299072265625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

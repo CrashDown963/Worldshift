@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\buildings\wall\wall_handle.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

@@ -1,0 +1,6 @@
+balance_subst {
+  hp = str:this:GetVar("hp")
+  a = str:this:GetVar("armor")
+  psi = str:this:GetVar("power")
+  dmg = str:this:GetVar("damage")
+}

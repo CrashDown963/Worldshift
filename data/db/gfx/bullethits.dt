@@ -1,0 +1,20 @@
+CMapAnim BulletHit_Dirt01 {
+  model = data/Models/Effects/BulletHits/BulletHitGround01.kfm
+ -- sound = DATA/sounds/Effects/ExplosionBig/
+ -- scale = 1
+ -- decals = explosion_crater2
+ -- physics_impact = 5000
+}
+
+CMapAnim BulletHit_Dirt02 {
+  model = data/Models/Effects/BulletHits/BulletHitGround02.kfm 
+}
+
+CAnimEffect BulletTerrainHitEffect {
+  tags t1 = default {
+    spawn BulletHit_Dirt01
+  }
+  tags t2 = water {
+  	spawn WaterHit { scale = 0.5 }
+  }
+}

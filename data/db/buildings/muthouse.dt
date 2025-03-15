@@ -1,0 +1,17 @@
+Building MutHouse : BaseBuilding {
+  name = Mutant House
+  model = Data/Models/buildings/MutHouse/MutHouse.nif
+  race = mutants
+  maxpoplimit = 5
+  indestructible = 1
+
+  stats :{
+    hp = 4000
+  }
+
+  actions {
+    HouseToTownHall;
+    HouseToMight;
+    HouseToSouls;
+  }
+}

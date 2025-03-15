@@ -1,0 +1,675 @@
+FogRevealer FogRevealer {
+  model = data/Models/Effects/Magic/MindVision.nif
+  reveal_radius : MindVisionAction.reveal_radius
+  reveal_time : MindVisionAction.reveal_time
+  sounds {
+    start = data/sounds/effects/blop/
+  }
+  sight = 1
+  no_mouse_targetable = 1
+}
+
+Field Field1 {
+  model = data/models/miscobjects/PumpkinField/Pumpkins.nif
+  sight = 1000
+  name = Field
+  race = mutants
+  
+  states {
+    #0 {
+      model = data/models/miscobjects/PumpkinField/Pumpkins.nif
+    }
+    #1 {
+      model = data/models/miscobjects/PumpkinField/Pumpkins.nif
+    }
+  }
+  
+  upgrade_time = 5            -- upgrade state every X sec
+  downgrade_time = 30         -- downgrade state if no worker around every X sec
+  start_downgrade_time = 30   -- start fading away after X sec of inactivity
+  food_interval = 10          -- drop food every X sec whwn worker is digging
+}
+
+Field Field2 : Field1 {
+  model = data/models/miscobjects/PumpkinField/Pumpkins2.nif
+  states {
+    #0 {
+      model = data/models/miscobjects/PumpkinField/Pumpkins2.nif
+    }
+    #1 {
+      model = data/models/miscobjects/PumpkinField/Pumpkins2.nif
+    }
+  }
+}
+
+Field Field3 : Field1 {
+  model = data/models/miscobjects/PumpkinField/Pumpkins3.nif
+  states {
+    #0 {
+      model = data/models/miscobjects/PumpkinField/Pumpkins3.nif
+    }
+    #1 {
+      model = data/models/miscobjects/PumpkinField/Pumpkins3.nif
+    }
+  }
+}
+
+Holder CommanderSoul {
+  name = Commander DNA Cell
+  model =  Data/Models/Units/Commander/Commander_DNA_Cell.nif
+
+  sight = 500
+  hull = 100
+}
+
+SoundPlayer SoundPlayer {
+  CAutoDieController AutoDie {
+    duration = 10
+  }
+}
+
+Actor SpringOfLife {
+  name = Spring Of Life
+  model =  Data/Models/Units/Commander/Commander_DNA_Cell.nif
+  sight = 500
+  hull = 100
+
+  stats {
+    springoflife_duration = 30
+    springoflife_healpersec = 10
+  }
+  
+  CRestoreAura RestorationCoreAura {
+    range = 1500
+  }
+  restore_hp_interval = 2
+  restore_hp_per_second = stat:springoflife_healpersec
+  
+  CAutoDieController AutoDie {
+    duration = stat:springoflife_duration
+  }
+}
+
+-- Surgeon's Relief action!
+Actor ReliefCell {
+  name = "Relief Cell"
+  model =  Data/Models/MiscObjects/ReliefCell/ReliefCell.kfm {scale = 2}
+  sight = 200
+  hull = 500
+  target_priority = 0 
+
+  sounds {
+    start = data/sounds/effects/common/relief spawn.wav
+    idle_1 = data/sounds/effects/common/relief loop.wav
+  }
+
+  CRestoreAura RestorationCoreAura {
+    range = 1500
+    amount = stat:relief_healpersec
+    faction = ally
+  }
+  
+  restore_hp_interval = 1
+  
+  CAutoDieController AutoDie {
+    duration = stat:relief_duration
+  }
+}
+
+
+CP2PGameObject DrainPsyLightning {
+  --model =  Data/Models/MiscObjects/lightning_p2p_drainpsy.nif
+  model =  Data/Models/MiscObjects/lightning_p2p_bboard.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 1500,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 3,12
+  p2p_sin_noise_angle = 20,-15
+ 
+}
+
+CP2PGameObject DrainLifeLightning {
+  model =  Data/Models/MiscObjects/lightning_p2p_bboard.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 1500,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 3,12
+  p2p_sin_noise_angle = 10,-10
+  color = 1,0,0
+}
+
+CP2PGameObject ChainShotLightning {
+  model =  Data/Models/MiscObjects/ManaBeam_P2P.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 1500,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 3,12
+  p2p_sin_noise_angle = 10,-10
+  color = 1,0,0
+}
+
+CP2PGameObject NanoRestoreBeam {
+  model =  Data/Models/MiscObjects/repairbeam_p2p.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+ 
+}
+
+CP2PGameObject NanoFixBeam {
+  model =  Data/Models/MiscObjects/NanoFixBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+ 
+}
+
+CP2PGameObject MendBeam {
+  model =  Data/Models/MiscObjects/RedBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  p2p_dst_attach = data/models/effects/magic/HealSmallReact.nif
+ 
+}
+
+CP2PGameObject FatelinkBeam {
+  model =  Data/Models/MiscObjects/Lightning_custom1.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 3,12
+  p2p_sin_noise_angle = 10,-10
+  color = 1,0,0
+}
+
+CP2PGameObject DarkVortexHealBeam {
+  model =  Data/Models/MiscObjects/Vortex_Heal_P2P.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+}
+
+CP2PGameObject ShieldGeneratorBeam {
+  model =  Data/Models/MiscObjects/ShieldBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  --p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+}
+
+CP2PGameObject EnergyGeneratorBeam {
+  model =  Data/Models/MiscObjects/ManaBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  --p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+}
+
+CP2PGameObject ThunderBeam {
+  model =  Data/Models/MiscObjects/ManaBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+}
+
+CP2PGameObject DarkWindBeam {
+  model =  Data/Models/MiscObjects/ManaBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+}
+
+CP2PGameObject FireLashBeam {
+  model =  Data/Models/MiscObjects/ShieldBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 5000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+}
+
+CP2PGameObject 23ForceFieldBeam {
+  model =  Data/Models/MiscObjects/ShieldBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 5000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  --p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+}
+
+CP2PGameObject 14ForceFieldBeam {
+  model =  Data/Models/MiscObjects/ShieldBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 5000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  --p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+}
+
+CP2PGameObject 33ChargeBeam {
+  model =  Data/Models/MiscObjects/ShieldBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 5000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  --p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+}
+
+CP2PGameObject BSABeam {
+  model =  Data/Models/MiscObjects/RedBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 5000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+}
+
+CP2PGameObject MasterFeedBeam {
+  model =  Data/Models/MiscObjects/Alien_P2P01.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 1500,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 3,12
+  p2p_sin_noise_angle = 20,-15
+ 
+}
+
+MissionAreaCorner MissionAreaCorner {
+  name = "Mission area corner"
+  model = data/models/miscobjects/areabeacon/areabeacon.nif
+}
+
+BehaviorWaypoint BehaviorWaypoint {
+  name = "NPC behavior waypoint"
+  model = data/models/miscobjects/areabeacon/areabeacon.nif
+}
+
+CAction UseSwitch {
+  name = "Use"
+  tags = switch
+  program = PrgUseSwitch
+  can_default = 1
+  weight = 1
+}
+
+Switch Switch {
+  name = "Switch"
+  descr = ""
+  model = data/models/miscobjects/switches/diamond.kfm
+  sel_ui = switch
+  icon = 2,5
+  
+  hull = 0
+  
+  --spawn_condition = sid:SwitchSpawn
+  --despawn_condition = sid:SwitchDespawn
+  --enabled_condition = sid:SwitchEnabled
+  --fail_condition = sid:SwitchFail
+  --repeatable = 0
+  --users = Commander,Ganthu,NamedGroup1
+  --user_faction = own    -- own | ally | enemy | all
+  --appear_dist = 2000    -- 0 to always appear
+  --reveal_radius = 500   -- 0 to not reveal
+  --power_cost = 10       -- 0 to not require power
+  --use_duration = 4      -- 0 - instant, < 0 - do not override cast time
+  --use_anim = sid:pick_item
+  --use_dist = 200        -- 0 - touch bounds, -1 - guided move pos to pos, -2 - guided move + face
+  
+  --success_cooldown = 10
+  --success_program = sid:PrgFear {
+  --  speed_multiplier = 0.25
+  --}
+  --success_map_lua = str:onSwitchSuccess
+  --success_effect = E_set {
+  --effect = E_damage {
+  --  area = 1000 { 
+  --      anim = data/Models/Effects/Fire/FireSweep.kfm 
+  --      sound = DATA/sounds/Effects/FireSweep/
+  --    }
+  --    amount = 10
+  --    friendly_fire = 1
+  --  }
+  --}
+  --success_set_flags = Flag1, Flag2
+  --success_clear_flags = Flag3, Flag4
+  --success_toggle_flags = Flag5, Flag6
+  --
+  --fail_cooldown = 10
+  --fail_program = sid:PrgStun
+  --fail_map_lua = str:onSwitchFail
+  --fail_effect = E_set {
+  --  effect = E_damage {
+  --    area = 1000 { 
+  --      anim = data/Models/Effects/Fire/FireSweep.kfm 
+  --      sound = DATA/sounds/Effects/FireSweep/
+  --    }
+  --    amount = 10
+  --    friendly_fire = 1
+  --  }
+  --}
+  --fail_set_flags = Flag3, Flag4
+  --fail_clear_flags = Flag1, Flag2
+  --fail_toggle_flags = Flag5, Flag6
+}
+
+Switch GearSwitch : Switch {
+  model = data/models/miscobjects/switches/gear.kfm
+  icon = 2,6
+}
+
+Switch ExclamationSwitch : Switch {
+  model = data/models/miscobjects/switches/exclamation.kfm
+  icon = 3,6
+}
+
+Switch QuestionSwitch : Switch {
+  model = data/models/miscobjects/switches/question.kfm
+  icon = 4,6
+}
+
+Switch LightningSwitch : Switch {
+  model = data/models/miscobjects/switches/lightning.kfm
+  icon = 5,6
+}
+
+Switch Checkpoint : LightningSwitch {
+  name = "Checkpoint"
+  descr = ""
+  appear_dist = 2000
+  disable_in_combat = 1
+  use_duration = 0
+  success_map_lua = onCheckpointSwitchUse
+}
+
+Switch ResurrectLeader : LightningSwitch {
+  name = "Revive Leader"
+  descr = ""
+  start_cooldown = 30
+  use_duration = 20
+  success_map_lua = onRessurectSwitchUse
+}
+
+CMapArrow ArrowForward {
+  name = "Arrow"
+  model = data/models/miscobjects/arrows/arrowforward.kfm
+}
+
+CMapArrow ArrowBlue {
+  name = "Arrow"
+  model = data/models/miscobjects/arrows/arrowforward_blue.kfm
+}
+
+CMapArrow ArrowPurple {
+  name = "Arrow"
+  model = data/models/miscobjects/arrows/arrowforward_purple.kfm
+}
+
+CP2PGameObject HighPriestSequenceBeam {
+  model =  Data/Models/MiscObjects/lightning_p2p_bboard.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  --p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 3000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  --p2p_sin_noise_time_scale = 3,12
+  --p2p_sin_noise_angle = 20,-15
+ 
+}
+
+CP2PGameObject RepairDronesBeam {
+  model =  Data/Models/MiscObjects/DroneBeam_P2P.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 2000,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 0,0
+  p2p_sin_noise_angle = 0,0
+
+  p2p_dst_attach = Data/Models/Effects/MiscReacts/NanoRestore.nif
+ 
+}
+
+CP2PGameObject CorruptedLightning {
+  --model =  Data/Models/MiscObjects/lightning_p2p_drainpsy.nif
+  model =  Data/Models/MiscObjects/lightning_p2p_bboard.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+
+  -- Scale texture
+  p2p_size = 1500,0
+
+  --sine noise time scale per node, .x -> src, .y -> dst
+  p2p_sin_noise_time_scale = 3,12
+  p2p_sin_noise_angle = 10,-10
+ 
+  color = 0,0,1
+}
+
+CP2PGameObject ZulTharkFeed {
+  model = Data/Models/MiscObjects/ZulThark_P2P.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+
+  -- Rotate points 
+  p2p_rotate_attach_points = 1
+ 
+  color = 0,0,1
+}
+
+CP2PGameObject ErkhArulHeal {
+  model = Data/Models/MiscObjects/erkh_heal_p2p.nif
+  p2p_src_attach_point = pt_src
+  p2p_dst_attach_point = pt_dst
+}
+
+CP2PGameObject ErkhArulDamage {
+  model =  Data/Models/MiscObjects/erkh_damage_p2p.nif
+  p2p_src_attach_point = pt_dst
+  p2p_dst_attach_point = pt_src
+}
+
+BridgeGizmo BridgeGizmo {
+  name = Bridge Gizmo
+  model = data/models/miscobjects/bridgegizmo.nif
+  no_terrain_snap = 1
+}
+
+CXenoliteStarter XenoliteStarter {
+  model = data/models/resources/xenolite_appear.kfm
+  wait_time : pvp.xenolite_grow_time
+  hide_in_fog = 1
+  create_fow_proxy = 1
+  is_xenolite = 1
+  indestructible = 1
+  hull = 0
+}
+
+MapPings {
+  general = Data/Models/MiscObjects/MapPing/MapPingAttack.nif { scale = 0.6 }
+  pointer = Data/Models/MiscObjects/MapPing/MapPingPointer.nif { scale = 0.6 }
+  attack = Data/Models/MiscObjects/MapPing/MapPingAttack.nif { scale = 0.6 }
+  defense = Data/Models/MiscObjects/MapPing/MapPingDefense.nif { scale = 0.6 }
+  heal = Data/Models/MiscObjects/MapPing/MapPingHeal.nif { scale = 0.6 }
+  boss = Data/Models/MiscObjects/MapPing/MapPingBoss.nif { scale = 0.55 }
+  
+  marker_arrow = pointer
+  marker_attack = attack
+  marker_defend = defense
+  marker_heal = heal
+}
+
+Unit Dummy : BaseUnit {
+  hull = 100000000
+  model = data/models/buildings/silo/silo.nif
+  CDPSDamageMonitor dpsmon
+}

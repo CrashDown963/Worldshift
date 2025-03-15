@@ -1,0 +1,14 @@
+action Move {
+  tags = object
+  tags2 = location
+  program = PrgMove
+  dblclk_label = walk
+  can_default = 1
+  cursor_ctrl = attack_move
+  
+  sound_feedback {
+    move = 30
+    confirm = 70
+  }
+  
+}

@@ -1,0 +1,178 @@
+model = {
+  file = str:"data\models\units\arbiter\arbiter.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"3.166666507720947265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.166666507720947265625";
+        }
+      }
+    }
+    idle_very_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"2.133333683013916015625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.133333683013916015625";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1.33333301544189453125";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-374.663421630859375,0";
+        time = fixp:"1.33333301544189453125";
+        distance = fixp:"374.663421630859375";
+        speed = fixp:"280.997633305378258228302001953125";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.33333301544189453125";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"0";
+      duration = fixp:"1.33333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.6333332061767578125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.33333301544189453125";
+        }
+      }
+    }
+    shoot_up = {
+      loop = int:"0";
+      duration = fixp:"1.33333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.6666660308837890625";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.33333301544189453125";
+        }
+      }
+    }
+    shoot_idle_up = {
+      loop = int:"1";
+      duration = fixp:"1.6333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6333332061767578125";
+        }
+      }
+    }
+    shoot_down = {
+      loop = int:"0";
+      duration = fixp:"1.3333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.6333332061767578125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.3333339691162109375";
+        }
+      }
+    }
+    shoot_idle_down = {
+      loop = int:"1";
+      duration = fixp:"1.6333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6333332061767578125";
+        }
+      }
+    }
+    cast_prepare = {
+      loop = int:"1";
+      duration = fixp:"1.6666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6666660308837890625";
+        }
+      }
+    }
+    cast_finish = {
+      loop = int:"0";
+      duration = fixp:"0.799999237060546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.799999237060546875";
+        }
+      }
+    }
+  }
+}

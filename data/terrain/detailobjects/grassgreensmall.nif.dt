@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\detailobjects\grassgreensmall.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box01";
+    translation = xpoint3:"6.624664306640625,1.86902713775634765625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

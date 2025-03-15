@@ -1,0 +1,92 @@
+Mob SpiderSpawn : BaseMob {
+  name = "Spider Spawn"
+  model = data/models/lifeforms/Insect/insect.kfm
+  icon = 6,11
+
+  stats : {
+    sight = 4000
+    range = 50
+    damage = 5
+    armor = 4
+    hp = 75
+
+    detonate_duration = 3
+    detonate_wait = 8
+    detonate_damage = 75
+  } 
+
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  sight = stat:sight
+  sight_in_combat = -1
+  chase_range = -1
+
+  animation {
+    anim_set ATTACK = loop {
+      Hit_1
+    }
+  }
+
+  CAutoDieController AutoDie {
+    show_progress = 0
+    duration = stat:detonate_wait
+    with_damage = 1
+    death_effect = DetonateEffect
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK
+    shoot_snd = data/sounds/effects/melee little pierce/
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact = 500
+    spot_impact_type = melee
+  }
+
+  CSetEffect DetonateEffect : E_set {
+    effect = E_damage {
+      area = 250
+      amount = stat:detonate_damage
+    }
+    effect = S_multistun {
+      duration = stat:detonate_duration
+      multi_area = 250 {
+        map_anim = DetonateExplosionAnim
+      }
+      epicenter {
+        physics_radius = 300
+        physics_power = 500
+        physics_elevation = 800
+      }
+    }
+  }
+  
+  abilities {
+    DetonateAbi {
+      name = Detonate
+      text = The Spider Spawn explodes [stat:detonate_wait] seconds after it is born. The explosion damages the nearby enemies for [stat:detonate_damage] health and stuns them for [stat:detonate_duration] seconds. If the Spawn is killed the detonation will not happen.
+      icon = 13,0
+    }
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}
+
+CMapAnim DetonateExplosionAnim {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_01.kfm
+  scale = 0.3
+  physics_impact = 1500
+  max_onscreen = 10
+  decals = explosion_crater2
+}

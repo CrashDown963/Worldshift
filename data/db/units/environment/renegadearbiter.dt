@@ -1,0 +1,91 @@
+Mob RenegadeArbiter : BaseMob {
+  name : Arbiter.name
+  descr : Arbiter.descr
+  icon = 2,29
+  race = aliens
+  
+  tags = unit, organic, mob, renegade
+
+  
+  model = Data/Models/Units/Arbiter/Arbiter.kfm {
+    die = Data/Models/Units/Arbiter/Arbiter_die.nif
+  }
+  
+  skin {
+    base = Data/Models/Units/Arbiter/arbiter-renegade_diffuse.dds
+    mask = Data/Models/Units/Arbiter/arbiter-renegade_mask.dds
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Arbiter/Arbiter.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+  
+  icon = 2,3
+  
+  stats :{
+    hp = 1200
+    damage = 110
+    psi = 360
+    chain_shot_chance = 35
+    fear_shock_power = 120
+    fear_shock_cooldown = 20
+    fear_shock_area = 600
+    fear_shock_duration = 6
+    fear_shock_range = 1800
+  }
+  
+  hp = stat:hp
+  range = 2200
+  energy = stat:psi
+  damage = stat:damage
+  armor = 5
+  chase_range = -1
+  take_auras : { RestorationCoreAura }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.8
+    range_near = stat:range * 0.6
+    proximity_bonus = 0.2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    shoot_snd = data/sounds/effects/single weapons/arbiter gun.wav
+    shoot_anim = shoot
+    shoot_idle_1 = idle
+    idle_time = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/AlienProjectile.nif
+	    speed = 2500
+      scale = 0.25
+      damage = stat:damage
+      react = fire
+    }
+  }
+  
+  actions :{
+    FearShockAction
+  }
+  
+  abilities {
+    LongRangeAbi
+    ChainShotAbi
+
+    AIFearShock {
+      action = FearShockAction
+      when   : abi.fight
+      target = current { aoe_range = 1000; aoe_min_enemy_count = 4 }
+      range = 2000
+    }
+  }
+}

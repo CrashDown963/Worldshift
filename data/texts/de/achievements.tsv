@@ -1,0 +1,50 @@
+﻿sid	text:de	note
+ach_campaign	Sieger über dämonische Aliens und Retter des Planeten	given for completing all story missions
+ach_items_1	Sucher	collected a certain number of items
+ach_items_2	Sammler	collected a certain number of items
+ach_items_3	Schatzsucher	collected a certain number of items
+ach_humans_1	Stütze des Senats	won a certain number of games with the Humans
+ach_humans_2	Faust des Senats	won a certain number of games with the Humans
+ach_humans_3	Held des Senats	won a certain number of games with the Humans
+ach_tribes_1	Freund der Stämme	won a certain number of games with the Tribes
+ach_tribes_2	Verteidiger der Stämme	won a certain number of games with the Tribes
+ach_tribes_3	Kriegsfürst der Stämme	won a certain number of games with the Tribes
+ach_cult_1	Jünger von Thar’Kyn	won a certain number of games with the Cult
+ach_cult_2	Adept von Thar’Kyn	won a certain number of games with the Cult
+ach_cult_3	Meister von Thar’Kyn	won a certain number of games with the Cult
+ach_pvp_1	Veteran	won a certain number of PvP games
+ach_pvp_2	Großmeister	won a certain number of PvP games
+ach_pvp_3	Legende	won a certain number of PvP games
+ach_top_kills_1	Blitztod	had most kills in a certain number of games
+ach_top_kills_2	Seelensammler	had most kills in a certain number of games
+ach_top_kills_3	Hand des Schicksals	had most kills in a certain number of games
+ach_top_heal_1	Krankenpfleger	was the top healer in a certain number of games
+ach_top_heal_2	Sanitäter	was the top healer in a certain number of games
+ach_top_heal_3	Rettungsbot	was the top healer in a certain number of games
+ach_top_damage_1	Schmerzbringer	did top damage in a certain number of games
+ach_top_damage_2	Zerstörer	did top damage in a certain number of games
+ach_top_damage_3	Vernichter	did top damage in a certain number of games
+ach_top_tank_1	Kämpfer	was the best ‘tank’ in a certain number of games
+ach_top_tank_2	Streiter	was the best ‘tank’ in a certain number of games
+ach_top_tank_3	Kriegsheld	was the best ‘tank’ in a certain number of games
+ach_locations	Entdecker	completed all special locations
+ach_bosses_1	Kundschafter	killed a certain number of bosses
+ach_bosses_2	Fährtensucher	killed a certain number of bosses
+ach_bosses_3	Großwildjäger	killed a certain number of bosses
+ach_pvp_kills_1	Jäger	killed a certain number of enemy units in PvP
+ach_pvp_kills_2	Verwüster	killed a certain number of enemy units in PvP
+ach_pvp_kills_3	Ein-Mann-Krieg	killed a certain number of enemy units in PvP
+ach_pvp_kills_4	Chuck Norris	killed a certain number of enemy units in PvP
+ach_win_streak_1	Sieger	a certain number of consecutive victories
+ach_win_streak_2	Eroberer	a certain number of consecutive victories
+ach_win_streak_3	Unterdrücker	a certain number of consecutive victories
+ach_kills_1g_1	Soldat	killed a certain number of enemy units in a single game
+ach_kills_1g_2	Hauptmann	killed a certain number of enemy units in a single game
+ach_kills_1g_3	General	killed a certain number of enemy units in a single game
+ach_res_1g_1	Farmer	gathered a certain amount of resources in a single game
+ach_res_1g_2	Unternehmer	gathered a certain amount of resources in a single game
+ach_res_1g_3	Großindustrieller	gathered a certain amount of resources in a single game
+ach_loc_challenge	Abenteurer	completed all locations in Challenge mode
+ach_respecs_1	Tester	has reset the entire specialization tree a certain number of times
+ach_respecs_2	Experimentierer	has reset the entire specialization tree a certain number of times
+ach_respecs_3	Spätzünder	has reset the entire specialization tree a certain number of times

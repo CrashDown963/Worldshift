@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\units\turrets\turret_big.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.3333333432674407958984375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.3333333432674407958984375";
+        }
+      }
+    }
+    shoot_L = {
+      loop = int:"0";
+      duration = fixp:"0.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.5";
+        }
+      }
+    }
+    shoot_R = {
+      loop = int:"0";
+      duration = fixp:"0.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.5";
+        }
+      }
+    }
+  }
+}

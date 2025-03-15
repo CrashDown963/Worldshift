@@ -1,0 +1,11 @@
+id	class	texture	normal_text_color	normal_texture_coords	hi_text_color	hi_texture_coords	pushed_text_color	pushed_texture_coords	rows_offsets
+btn_text	CBBtnUI::CBtnLook		0,0,0,255		0,255,0,255		255,0,0,255		
+btn_def	CBBtnUI::CBtnLook	DATA/Textures/UI/ui.tga	255,255,255,255	376,0,284x45	0,255,0,255	376,0,284x45	255,0,0,255	376,0,284x45	
+btn_ok	CBBtnUI::CBtnLook	DATA/Textures/UI/ui.tga	0,0,0,0	0,96,40x40	0,0,0,0	40,96,40x40	0,0,0,0	80,96,40x40	
+btn_cancel	CBBtnUI::CBtnLook	DATA/Textures/UI/ui.tga	0,0,0,0	0,136,40x40	0,0,0,0	40,136,40x40	0,0,0,0	80,136,40x40	
+btn_menu	CBBtnUI::CBtnLook	DATA/Textures/UI/top_bar.tga	255,255,255,255	0, 29,119x25	0,255,0,255	0, 29,119x25	255,0,0,255	0, 29,119x25	
+btn_check	CBBtnUI::CBtnLook	DATA/Textures/UI/ui.tga	0,0,0,0	0,96,40x40	0,0,0,0	40,96,40x40	0,0,0,0	80,96,40x40	0,4
+btn_sel_check_first	CBBtnUI::CBtnLook	DATA/Textures/UI/selected_unit_ui.tga	0,0,0,0	246,21,20x45	0,0,0,0	266,21,20x45	0,0,0,0	286,21,20x45	0,45
+btn_sel_check_second	CBBtnUI::CBtnLook	DATA/Textures/UI/selected_unit_ui.tga	0,0,0,0	310,21,20x45	0,0,0,0	330,21,20x45	0,0,0,0	350,21,20x45	0,45
+btn_frame	CBBtnUI::CBtnLook	DATA/Textures/UI/ui.tga	255,255,255,255	138,105,90x90	0,255,0,255	138,105,90x90	255,0,0,255	138,105,90x90	
+btn_base	CBBtnUI::CBtnLook	DATA/Textures/UI/base/buttons.tga	255,255,255,255	0,0,48x48	0,255,0,255	48,0,48x48	255,0,0,255	96,0,48x48	

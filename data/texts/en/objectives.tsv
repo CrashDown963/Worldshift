@@ -1,0 +1,191 @@
+﻿sid	text
+	
+// 11	
+obj.Clear the way	Clear the way
+obj.Eliminate the hostile creatures	Eliminate the hostile creatures
+obj.Save Denkar	Save Denkar
+obj.Avoid the patrols	Avoid the patrols
+	
+// 12	
+obj.Get help	Get help
+obj.Helpers:	Gathered reinforcements:
+obj.Help the village	Reach the village
+obj.Defenders alive:	Defenders alive:
+obj.Clear the enemy camp	Clear the enemy camp
+obj.Enemies left:	Enemies left:
+	
+// 13	
+obj.Protect the xenolite	Protect the xenolite
+obj.Defenders alive:	Defenders alive:
+obj.Sneak in the camp	Sneak into the camp
+obj.Return to the village	Return to the village
+obj.Save Eji	Save Eji
+obj.Village defenders alive	Village defenders alive:
+obj.Escape the village	Escape the village
+	
+// 14	
+obj.Enter the camp	Enter the camp
+obj.Find escape vehicle	Find an escape vehicle
+obj.Eliminate the mine defenders	Eliminate the mine’s guards
+	
+// 15	
+obj.Approach Saling	Approach Saling
+obj.Find your way to Saling	Find your way to Saling
+obj.Make your way past the camp	Make your way past the camp
+obj.Defeat the Salingian Commander	Defeat the Salingian Commander
+obj.Continue to Saling	Continue to Saling
+obj.Avoid the fire bursts	Avoid the fire bursts
+	
+// 16	
+obj.Enter the base	Enter the base
+obj.Remove the guards from the road	Get the guards out of the way
+obj.Sneak through the base	Sneak through the base
+obj.Reach the service entrance	Reach the service entrance
+	
+// 21	
+obj.Protect the village	Protect the village
+obj.Defenders alive:	Defenders alive:
+obj.Protect the lab	Protect the lab
+obj.Turrets left:	Turrets left:
+obj.Defeat The Hive	Defeat the aliens
+obj.Master killed:	Master killed:
+obj.no	no
+obj.YES	YES
+obj.Breeder destroyed:	Breeder destroyed:
+	
+// 22	
+obj.Reach Onkar's place of death	Reach Onkar’s place of death
+obj.Take the diary	Retrieve Onkar’s diary
+obj.Reach the extraction point	Reach the extraction point
+	
+// 23	
+obj.Scout the area	Scout the area
+obj.Follow the path	Follow the path
+obj.Protect the technicians	Protect the technicians
+obj.Technicians alive	Тechnicians alive:
+obj.Examine the ancient device	Examine the ancient device
+obj.Activate the power generator	Activate the power generator
+obj.Find another ancient device	Find another ancient device
+obj.Examine the ruins	Examine the ruins
+obj.Return to the first site	Return to the first site
+obj.Find power	Find power
+obj.Find the ancient power source	Find the ancient power source
+obj.Reach the extraction point	Reach the extraction point
+	
+// 24	
+obj.Help the mutants	Help the mutants
+obj.Help the village defenders	Help the village defenders
+obj.Kill the Big One	Kill the Big One
+obj.Explore the area ahead	Explore the area ahead
+obj.Search the area ahead	Search the area ahead
+	
+// 25	
+obj.Find Esperanza gates	Find Esperanza’s gates
+obj.Enter Esperanza	Enter Esperanza
+obj.Disable the gate forcefield	Disable the gate’s forcefield
+obj.Protect the entrance	Protect the entrance
+	
+// 26	
+obj.Open the gates	Open the gates
+obj.Eliminate the aliens	Eliminate the aliens
+obj.Find the ancient device	Find the source of the signal
+	
+// 31	
+obj.Find Tharksh's ship	Find Tharksh’s ship
+obj.Protect the Psi Resonator	Protect the Psi Resonator
+obj.Defeat the enemy Master	Defeat the enemy Master
+	
+// 32	
+obj.Locate the enemy base	Locate the enemy camp
+obj.Destroy the enemy base	Destroy the enemy camp
+obj.Protect the ship	Protect the ship
+obj.Ship hull:	Ship hull:
+obj.Deal with the gas	Deal with the gas
+	
+// 33	
+obj.Protect the ship	Protect the ship
+obj.Time until next turret arrives:	Time until next turret arrives:
+obj.Help the mutants	Help the mutants
+obj.Destroy the AA site	Destroy the AA site
+obj.AA facility hull	AA facility hull:
+	
+// 34	
+obj.Proceed onward	Follow the path
+obj.Protect the Psi Resonator	Protect the Psi Resonator
+obj.Eliminate Vasilii	Eliminate Vasilii
+obj.Vasilii health left:	Vasilii’s health:
+obj.Destroy the mutants temple	Destroy the mutants’ temple
+obj.Temple hit points:	Temple hit points:
+obj.Secure the landing zone	Defend the landing zone
+obj.Time until the ship arrives:	Time until the ship arrives:
+	
+// 35	
+obj.Escort Eji to the Shard	Escort Eji to the Shard
+obj.Disable the teleporter	Disable the teleporter
+obj.Find the teleporter controls	Find the teleporter controls
+obj.Use only alien units	Use only Jaar Lash units
+obj.Activate the teleporter	Activate the teleporter
+obj.Teleport all friendly units	Teleport all friendly units
+obj.Use the teleporter to escape	Use the teleporter to escape
+obj.All avatars must be in range	All characters must be in range
+	
+// 36	
+obj.Attack the enemy psychic	Attack the enemy psychic
+obj.Protect Eji	Protect Eji
+obj.Find suitable spot for Eji	Find a suitable spot for Eji
+	
+// ROM	
+obj.Engage HF1337	Engage HF1337
+obj.Shuttle arrives in:	Shuttle arrives in:
+obj.Destroy HF1337	Destroy HF1337
+obj.Hull:	Hull:
+obj.Energy:	Energy:
+obj.Deactivate the cannon	Deactivate the cannon
+obj.Power cores left:	Power cores left:
+	
+// JUNKYARD	
+obj.Teleport	Teleport
+obj.Clean up time:	Clean up time:
+obj.Defeat Gorgar the Late	Defeat Gorgar the Late
+obj.Defeat Trashmaster Ditz	Defeat Trashmaster Ditz
+obj.Defeat Xessk	Defeat Xessk
+	
+// BSA	
+obj.Defeat the Battle Yamu	Defeat the Battle Yamu
+obj.Defeat the Howling Horror	Defeat the Howling Horror
+obj.Defeat all enemies	Defeat all enemies
+obj.Defeat the machines	Defeat the machines
+obj.Defeat the third wave	Defeat the third wave
+obj.Defeat the Hellfires	Defeat the Hellfires
+obj.Go to start position	Go to start position
+obj.Enter The Arena	Enter the Arena
+	
+// DTB	
+obj.investigate_dtb	Locate the base commander
+obj.kill_frank	Eliminate Frank N. Stein
+obj.kill_adam	Kill Adam
+	
+// Kharum	
+obj.Defeat Trashmaster Ulv	Defeat Trashmaster Ulv
+obj.Protect the village	Protect the village
+obj.Help the villagers to survive the attack	Help the villagers survive the attack
+obj.Village is safe	The village is safe
+obj.Talk to the village's High Priest	Talk to the village’s High Priest
+obj.Eliminate the threat	Eliminate the threat
+obj.Attack sources neutralized:	Attack sources neutralized:
+obj.Threat eliminated	Threat eliminated
+obj.Talk to Ran Boo	Talk to Ran Boo
+obj.Find Ran Boo	Find Ran Boo
+obj.Return to the village	Return to the village
+obj.Engage Trashmaster Ulv	Engage Trashmaster Ulv
+obj.Activate the ancient device	Activate the ancient device
+obj.Power sources activated:	Power sources activated:
+obj.Help the village	Help the village
+	
+// Safari	
+obj.Kill the Queen	Kill the Queen
+obj.Kill Mech 0	Kill Mech 0
+obj.Kill Jack	Kill Jack
+obj.Find Bill	Find Bill
+obj.Kill Bill	Kill Bill
+obj.Explore the area	Explore the area

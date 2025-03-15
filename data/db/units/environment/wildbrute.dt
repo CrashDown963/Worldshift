@@ -1,0 +1,31 @@
+Mob WildBrute : BaseMob {
+  name = "Wild Brute"
+  icon = 3,17
+  model = Data/Models/units/WildBrute/Wild_Brute.kfm
+
+  physics {
+    default = Data/Models/units/WildBrute/Wild_Brute_Proxy.pml
+    die = Data/Models/units/WildBrute/Wild_Brute.pml
+  }
+  destruction = ragdoll
+  
+  damage = 8
+
+  CWeaponController weapon {
+    idle_only = 1
+    fire_node = gun_fire
+    shoot_snd = data/sounds/weapons/armlightinfantry/shoot/
+    fire_rate = 1
+    aim_tolerance = 45
+    freeze_time = 0.69
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    trace = sid:light_inf
+    spot_impact = 750
+    spot_impact_dead = 700
+    muzzle_fx = light_inf
+    //laser_color = 120,30,200
+  }
+}

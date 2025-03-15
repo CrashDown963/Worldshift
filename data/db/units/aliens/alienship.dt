@@ -1,0 +1,12 @@
+Building AlienShip : BaseBuilding {
+  name = "Alien Ship"
+  descr = "DESCRIPION"
+  icon = 5,30
+  
+  model = data/Models/Buildings/AlienShip/AlienShip.nif
+  race = aliens
+  passable = 1
+  attackable = 1
+  movable = 0
+  target_priority = 2000
+}

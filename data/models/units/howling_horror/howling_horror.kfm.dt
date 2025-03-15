@@ -1,0 +1,118 @@
+model = {
+  file = str:"data\models\units\howling_horror\howling_horror.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+    idle_rare_2 = {
+      loop = int:"1";
+      duration = fixp:"3.299999713897705078125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.299999713897705078125";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"2.33333301544189453125";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-600,0";
+        time = fixp:"2.33333301544189453125";
+        distance = fixp:"600";
+        speed = fixp:"257.14289224706590175628662109375";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.33333301544189453125";
+        }
+      }
+    }
+    Hit_1 = {
+      loop = int:"1";
+      duration = fixp:"1.53333377838134765625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.8333339691162109375";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.53333377838134765625";
+        }
+      }
+    }
+    Hit_2 = {
+      loop = int:"1";
+      duration = fixp:"2.13333415985107421875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.8666667938232421875";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.13333415985107421875";
+        }
+      }
+    }
+    die = {
+      loop = int:"0";
+      duration = fixp:"1.1666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.1666660308837890625";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Mob ROMPowerGenerator : BaseMachineMob {
+  name = "ROM Power Generator"
+  icon = 3,27
+  model = Data/Models/buildings/Mana_Generator/Mana_Generator.nif
+  explosion = ExplosionMedium_03
+  movable = 0
+  hp = 4000
+  damage = 0
+  sight = 0
+}

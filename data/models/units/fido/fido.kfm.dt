@@ -1,0 +1,84 @@
+model = {
+  file = str:"data\models\units\fido\fido.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.3333333432674407958984375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.3333333432674407958984375";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"6.000000476837158203125";
+      movement = {
+        start = xpoint3:"0,-20,0";
+        velocity = xpoint3:"0,-394.436004638671875,0";
+        time = fixp:"6.000000476837158203125";
+        distance = fixp:"394.436004638671875";
+        speed = fixp:"65.7393289022147655487060546875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.666666686534881591796875";
+        }
+        #2 = {
+          name = str:"Foot03_down";
+          time = fixp:"2.3333332538604736328125";
+        }
+        #3 = {
+          name = str:"Foot01_down";
+          time = fixp:"3.6666667461395263671875";
+        }
+        #4 = {
+          name = str:"Foot04_down";
+          time = fixp:"5.333333492279052734375";
+        }
+        #5 = {
+          name = str:"end";
+          time = fixp:"6.000000476837158203125";
+        }
+      }
+    }
+    rot_x = {
+      loop = int:"0";
+      duration = fixp:"3.966666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.966666698455810546875";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"0";
+      duration = fixp:"1.16666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.16666698455810546875";
+        }
+      }
+    }
+  }
+}

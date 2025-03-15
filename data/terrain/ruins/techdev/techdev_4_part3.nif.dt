@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\ruins\techdev\techdev_4_part3.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

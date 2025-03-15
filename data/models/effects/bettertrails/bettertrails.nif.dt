@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\effects\bettertrails\bettertrails.nif";
+  animation = {
+    loop = fixp:"3.3333332538604736328125";
+    duration = fixp:"3.1666667461395263671875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Trails	-Emitter";
+    translation = xpoint3:"-2.58302593231201171875,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Nova	-Emitter";
+    translation = xpoint3:"-3.0710201263427734375,-0.104736328125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"fireball-Emitter";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

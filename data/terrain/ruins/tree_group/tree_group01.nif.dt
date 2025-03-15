@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\terrain\ruins\tree_group\tree_group01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Trunk";
+    translation = xpoint3:"38.167724609375,47.70359039306640625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"__NDL_MultiMtl_Node";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Leaves";
+    translation = xpoint3:"37.66162109375,-63.5939483642578125,1154.81689453125";
+    rotation = {
+      0 = xpoint3:"0.971065044403076171875,0,-0.238815248012542724609375";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0.238815248012542724609375,0,0.971065044403076171875";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"__NDL_MultiMtl_Node";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

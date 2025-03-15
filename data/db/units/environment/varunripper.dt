@@ -1,0 +1,48 @@
+Mob VarunRipper : BaseMob {
+  name : Ripper.name
+  icon = 4,8
+  descr : Ripper.descr
+  race = humans
+  model = Data/Models/Units/Ripper/Ripper.kfm
+
+  physics {
+    default = Data/Models/Units/Ripper/Ripper_Proxy.pml
+    die = Data/Models/Units/Ripper/Ripper.pml	
+  }
+  --destruction = ragdoll
+  explosion = ExplosionMedium_03
+  
+  hp = 250
+  armor = 10
+  range = 150
+  damage = 7
+  chase_range = -1
+
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+      Hit_rare_1 = 100,1,1
+      Hit_rare_2 = 100,1,1
+    }
+  }
+  
+  sounds {
+    footstep = data/sounds/units/ripper/step/
+    stop = data/sounds/units/ripper/stop/
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = ATTACK_MAIN
+    shoot_snd = data/sounds/units/ripper/shoot/
+ --   min_bursts = 1
+ --   max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+--    fire_rate = stat:fire_rate
+    spot_impact_type = melee
+  }
+}

@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\resources\oreplatform_state3.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"4";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4";
+        }
+      }
+    }
+  }
+}

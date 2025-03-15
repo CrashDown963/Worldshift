@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\water_tower1\water_tower01_break01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Break-stage01";
+    translation = xpoint3:"0,0,0.11948394775390625";
+    rotation = {
+      0 = xpoint3:"0,0,-1";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

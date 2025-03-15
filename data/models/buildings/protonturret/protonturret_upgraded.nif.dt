@@ -1,0 +1,137 @@
+model = {
+  file = str:"data\models\buildings\protonturret\protonturret_upgraded.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"11.66666698455810546875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Teleport_base";
+      translation = xpoint3:"0,0,3416.864501953125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Teleport_Top";
+      translation = xpoint3:"0,0,125.950347900390625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Shockwave";
+      translation = xpoint3:"-7.009703159332275390625,-5.6783962249755859375,118.55742645263671875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"ShokwaveBB";
+      translation = xpoint3:"-7.009703159332275390625,-5.678391933441162109375,103.3563232421875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"Sphere01";
+      translation = xpoint3:"-2.3848636150360107421875,-5.6783962249755859375,77.06180572509765625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #5 = {
+      scale = fixp:"1";
+      name = str:"Deflector01";
+      translation = xpoint3:"0,-5.67838287353515625,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #6 = {
+      scale = fixp:"1";
+      name = str:"DragDust";
+      translation = xpoint3:"0,-33.245758056640625,-63.307765960693359375";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #7 = {
+      scale = fixp:"1";
+      name = str:"Dust_Idle-Emitter";
+      translation = xpoint3:"0,-5.67838287353515625,-32.6034698486328125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #8 = {
+      scale = fixp:"1";
+      name = str:"Gravity01";
+      translation = xpoint3:"-106.6159210205078125,20.8781280517578125,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #9 = {
+      scale = fixp:"1";
+      name = str:"SuperSprayFragments-Emitter";
+      translation = xpoint3:"0,-5.67838287353515625,37.389057159423828125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"DP01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"DP02";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,290 @@
+Unit Overseer : BaseUnit {
+  field_name = "Field Overseer"
+  power_name = "Power Overseer"
+  descr = "Overseer description"
+  icon = 1,3
+  field_icon = 1,3
+  power_icon = 7,4
+  name_var = field_name
+
+  model = data/models/units/BladeOverseer/BladeOverseer.kfm
+  field_model = data/models/units/BladeOverseer/BladeOverseer.kfm
+  power_model = Data/Models/Units/EnergyOverseer/EnergyOverseer.kfm
+
+  destruction = animation
+
+  race = aliens
+  tags = unit, organic
+  cost : pvp.aliens.unit_costs.Overseer
+  cost_sloc : pvp.aliens.sloc_costs.Overseer
+
+  sounds {
+    select = data/sounds/units/overseer/select/
+    confirm = data/sounds/units/overseer/confirm/
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  stats : {
+    hp = 380
+    armor = 4
+    damage = 9
+    psi = 300
+    range = 1700
+    
+    field_fire_rate = 2.5
+    power_fire_rate = 1.5
+
+    attackdrone_power = 180
+    attackdrone_cooldown = 60
+
+    morph_power = 200
+    morph_cooldown = 15
+
+    shield_hull = 200
+    shield_regen = 100
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+
+    charging_field_area = 500
+    charging_field_psi_perc = 5
+    charging_field_tick = 5
+  }
+
+  speed = 450
+
+  aggro_range = var:sight
+  
+  current_form = field
+  active_weapon = field_weapon
+
+  take_auras : { RestorationCoreAura }
+
+  actions : BaseUnit.actions {
+    AttackDrone
+    MorphAction
+    MakeBreeder -- fake
+  }
+
+  abilities {
+    OverseerChargingFieldAbi
+    OverseerPlasmaShieldAbi
+  }
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 80
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 80
+    }
+    shoot_left = 0 {
+      shoot_left_down = -45
+      shoot_left_up = 80
+    }
+    shoot_right = 0 {
+      shoot_right_down = -45
+      shoot_right_up = 80
+    }
+  }
+
+  CShieldController plasma_shield {
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    -- regen_tick = 2
+    -- reactivate_threshold = 30
+    -- regen_boost_perc = 100
+    -- regen_boost_timeout = 20
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+
+  CEffectAura OverseerChargingFieldAura {
+    active = 0
+    range = stat:charging_field_area
+    faction = ally
+    exclude_self = 1
+    non_stackable = 1
+    effect = E_buff {
+      id = ChargingField
+      name = "Charging field"
+      text = "This unit�s energy is begin replenished by a Charging Field."
+      icon = 3,3
+      type = restore_psi
+      perc = stat:charging_field_psi_perc
+      tick = stat:charging_field_tick
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      repeat_react = 1
+      react = spread_psi
+      stack_count = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+
+  CMultiWeaponController field_weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = alternative
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_left
+    shoot_anim_2 = shoot_right
+    shoot_idle_1 = shoot_idle
+    shoot_idle_2 = shoot_idle
+    idle_time = 1
+    min_bursts = 2
+    max_bursts = 2
+    aim_node = pt_aim
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    fire_rate = stat:field_fire_rate
+    damage = stat:damage * 3
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    instant_shot FOverseerShot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+      dist_start = 100
+      travel_start = 100
+      travel_end = 0
+      duration = 0.7
+      time_fraction_to_lag_end = 1
+      width = 35
+      instances = 128
+      color_alpha {
+        0 = 105,25,155,180
+        5 = 105,25,155,180
+        22 = 112,18,180,205
+        100 = 215,5,5,0
+      }
+    }
+	}
+
+  CMultiWeaponController power_weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = simultaneous
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    aim_node = pt_aim
+    shoot_anim = shoot
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    fire_rate = stat:power_fire_rate
+    damage = stat:damage
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+
+    instant_shot POverseerShot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+      dist_start = 100
+      travel_start = 100
+      travel_end = 0
+      duration = 0.7
+      time_fraction_to_lag_end = 1
+      width = 35
+      instances = 128
+      color_alpha {
+        0 = 255,128,0,180
+        5 = 255,128,0,180
+        22 = 0,255,0,205
+        100 = 0,128,0,0
+      }
+    }
+	}
+}
+
+OverseerChargingFieldAbi {
+  name = "Charging Field"
+  text = "Power Overseer has aura that fills [stat:charging_field_psi_perc]% of nearby allied units power every [stat:charging_field_tick] seconds."
+  icon = 4,0
+  enabled = 0
+}
+
+OverseerPlasmaShieldAbi {
+  name = "Plasma Shield"
+  text = "Powerful shield that is activated automatically when the Overseer is repaired. Plasma Shield has [stat:shield_hull] durability, [stat:shield_regen] charge rate, [stat:shield_fullabsorbchance]% chance for full deflection and [stat:shield_percentabsorbtion]% damage absorbtion."  
+  icon = 2,0
+  enabled = 1
+}
+
+action MorphAction {
+  name = "Morph"
+  descr = "Morphs the Field Overseer into Power Overseer"
+  descr_field = "Morphs the Field Overseer into Power Overseer"
+  descr_power = "Morphs the Power Overseer into Field Overseer"
+  visible = 1
+  instant = 1
+  icon = 7,8
+  power = stat:morph_power
+  cooldown = 30
+  function = PrgMorphOverseer -- { sound = data/sounds/effects/common/inject.wav }
+}
+
+CSpellAction AttackDrone {
+  name = "Sentinel Droid"
+  descr = "Deploy a Sentinel Droid which scouts the area and attacks enemies for [stat:attackdrone_cooldown]seconds."
+  visible = 1
+  icon = 11,1
+  range = 2000
+  min_power = stat:attackdrone_power
+  cooldown = stat:attackdrone_cooldown
+  tags = location
+  feedback = DecalFeedback
+
+  spell {
+    power = stat:attackdrone_power
+  
+    cast {
+      finish {
+        duration = 0.5
+        anim = shoot
+        attach {
+          pt_hand = data/models/effects/magic/AlienCast01.nif
+        }
+      }
+    }
+    effect = AttackDroneEffect
+  }
+}
+
+CAreaEffect AttackDroneEffect {
+  epicenter {
+    spawn AttackDroneTerrainHitEffect
+    spawn AttackDroneSpawn
+  }
+}
+
+CAnimEffect AttackDroneTerrainHitEffect {
+  tags t1 = grass | dirt | mud | water {
+    spawn AttackDroneAppear
+  }
+}
+
+CSpawnEffect AttackDroneSpawn {
+  One_time_only = 1
+  spawn_prg = PrgPlayAnim {
+    anim = shoot_idle
+  }
+  spawn {
+    AttackDrone = 1
+  }
+}
+
+CMapAnim AttackDroneAppear {
+  model = Data/Models/Effects/Magic/repairdrone_appear.kfm
+  scale = 1
+  sound = data/sounds/effects/common/repair_drone_up.wav
+}

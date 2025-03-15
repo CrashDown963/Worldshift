@@ -1,0 +1,143 @@
+Building Portal : BaseBuilding {
+  name = "Portal"
+  icon = 6,4
+  descr = "Portal description"
+  model = Data/Models/buildings/BreederPortal/Portal.kfm {
+  die = Data/Models/buildings/BreederPortal/Portal_die.nif
+  }
+  
+  destruction = animation
+  
+  scale = 0.75
+
+  upgraded = 1
+
+  race = aliens
+  stats :{
+    hp = 9000
+    range = 1800
+    suppression_field_slow_perc = 30
+    corruption_field_damage = 5
+  }
+  hp_gen = stat:hp
+  sight = 3500
+
+  animation {
+    anim_seq upgrade_finished = loop {
+      upgrade = once
+      idle
+    }
+  }
+  
+  actions {
+    RallyPoint
+    CancelUnitProduce
+    ProduceMaster
+    ProduceTrisat
+    ProduceTritech
+    ProduceOverseer
+    ProduceShifter
+    PossessAction
+  }
+  
+  CAbilityController AbilityController
+  
+  abilities {
+    BreedEggs {
+      name = "Breed Eggs"
+      text = "DESCRIPTION"
+      icon = 8,0
+    }
+    SuppressionField {
+      name = "Suppression Field"
+      text = "DESCRIPTION"
+      icon = 5,0
+    }
+    CorruptionField {
+      name = "Corruption Field"
+      text = "DESCRIPTION"
+      icon = 0,0
+    }
+  }
+  
+  give_res : pvp.aliens.big_structure_res
+
+  eggs {
+    AlienEgg
+  }
+  egg_spawn_time : pvp.aliens.egg_spawn_time
+  max_eggs : pvp.aliens.portal_max_eggs
+  
+  CEffectAura PortalSuppressionFieldAura {
+    range = var:sight
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = SuppressionField
+      name = "Suppression Field"
+      text = "This unit is slowed down by a suppression field"
+      icon = 3,5
+      type = slow
+      cleansable = 0
+      duration = -1
+      stats_change {
+        speed_mod = { perc = stat:suppression_field_slow_perc * -1 }
+      }
+      tick = 1
+      immediate_tick = 1
+      discard_react = 1
+      --react = chill
+      stack_count = 1
+    }
+  }  
+  CEffectAura PortalCorruptionFieldAura {
+    range = var:sight
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = CorruptionField
+      name = "Corruption Field"
+      text = "This unit is poisoned by a Corruption Field."
+      icon = 3,4
+      type = damage
+      damage = stat:corruption_field_damage
+      damage_type = poison
+      --show_text_feedback = 1
+      
+      duration = -1
+      
+      tick = 1
+      --immediate_tick = 1
+      discard_react = 1
+      react = poison
+      repeat_react = 1
+      stack_count = 1
+      cleansable = 0
+    }
+  }
+  
+  env_changer {
+    fog_distance = fixp: 75.0
+    range = fixp: 6500
+    color_fog = color: 60,65,12
+    handle = int: 37
+    clone_mode_int = int: 128
+    hide_in_fog = 1
+  }
+}
+
+action PossessAction {
+  name = "Possess"    
+  icon = 1,8
+  descr = "DESCRIPTION"
+  tags = xenolite
+  cost = 100r
+  program = PrgPossess {
+    time = 10
+    res = 100
+  }
+  requires_vision = 1
+  visible = 1
+  can_default = 1
+  weight = 1
+}

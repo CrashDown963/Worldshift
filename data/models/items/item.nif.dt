@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\items\item.nif";
+  animation = {
+    loop = fixp:"4";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"ItemPlaceholder";
+        translation = xpoint3:"0,0,44.73199462890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray01-Emitter";
+          translation = xpoint3:"0,0,52.36171722412109375";
+          rotation = {
+            0 = xpoint3:"0,1,0";
+            1 = xpoint3:"1,0,0";
+            2 = xpoint3:"0,0,-1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray02-Emitter";
+          translation = xpoint3:"0,0,23.4115924835205078125";
+          rotation = {
+            0 = xpoint3:"0,1,0";
+            1 = xpoint3:"-1,0,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Plane01";
+        translation = xpoint3:"0,0,3.536968231201171875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

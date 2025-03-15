@@ -1,0 +1,289 @@
+model = {
+  file = str:"data\models\units\giantmutant\biggad.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1.333333492279052734375";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-437.176727294921875,0";
+        time = fixp:"1.333333492279052734375";
+        distance = fixp:"437.176727294921875";
+        speed = fixp:"327.88250648626126348972320556640625";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.333333492279052734375";
+        }
+        #2 = {
+          name = str:"Foot01_down";
+          time = fixp:"1";
+        }
+        #3 = {
+          name = str:"end";
+          time = fixp:"1.333333492279052734375";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"2";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-399.3597412109375,0";
+        time = fixp:"2";
+        distance = fixp:"399.3597412109375";
+        speed = fixp:"199.67987060546875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.5";
+        }
+        #2 = {
+          name = str:"Foot01_down";
+          time = fixp:"1.5";
+        }
+        #3 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    idle_left = {
+      loop = int:"1";
+      duration = fixp:"3";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3";
+        }
+      }
+    }
+    idle_right = {
+      loop = int:"1";
+      duration = fixp:"2.6666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.6666660308837890625";
+        }
+      }
+    }
+    idle_angry = {
+      loop = int:"1";
+      duration = fixp:"3.83333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.83333301544189453125";
+        }
+      }
+    }
+    attack_lefthand = {
+      loop = int:"1";
+      duration = fixp:"2.1666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.1666660308837890625";
+        }
+      }
+    }
+    attack_righthand = {
+      loop = int:"1";
+      duration = fixp:"4";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.96666717529296875";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"4";
+        }
+      }
+    }
+    attack_bildings_body = {
+      loop = int:"1";
+      duration = fixp:"1.1000003814697265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.4333343505859375";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.1000003814697265625";
+        }
+      }
+    }
+    attack_bildings_head = {
+      loop = int:"1";
+      duration = fixp:"1.833332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.6666660308837890625";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.833332061767578125";
+        }
+      }
+    }
+    combat_idle_in = {
+      loop = int:"0";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    combat_idle = {
+      loop = int:"1";
+      duration = fixp:"1.6666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6666660308837890625";
+        }
+      }
+    }
+    combat_idle_out = {
+      loop = int:"0";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    combat_hit = {
+      loop = int:"1";
+      duration = fixp:"1.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.5";
+        }
+      }
+    }
+    portrait_base = {
+      loop = int:"1";
+      duration = fixp:"2.83333587646484375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.83333587646484375";
+        }
+      }
+    }
+    portrait_1 = {
+      loop = int:"1";
+      duration = fixp:"2.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.5";
+        }
+      }
+    }
+    portrait_2 = {
+      loop = int:"1";
+      duration = fixp:"2.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.5";
+        }
+      }
+    }
+  }
+}

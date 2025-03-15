@@ -1,0 +1,8 @@
+Building SiloBuild : BaseBuilding {
+  model = Data/Models/buildings/Silo/Silo_build.nif
+  race = humans
+  silo = 1
+  stats :{
+    hp = 3000
+  }
+}

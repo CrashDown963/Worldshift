@@ -1,0 +1,16 @@
+Mob Crococeratops : BaseAnimal  {
+  name = "Crococeratops"
+  icon = 3,7
+  model = data/models/lifeforms/Crococeratops/crococeratops.kfm
+  destruction = animation
+
+  speed = 300
+  walk_speed = 120
+  
+  animation {
+    anim_set ATTACK = loop {
+      Hit_1
+      Hit_2
+    }
+  }
+}

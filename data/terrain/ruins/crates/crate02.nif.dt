@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\crates\crate02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"13.182308197021484375,20.675891876220703125,38.02178955078125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

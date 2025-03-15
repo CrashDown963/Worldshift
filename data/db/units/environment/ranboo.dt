@@ -1,0 +1,161 @@
+Unit RanBoo : BaseUnit {
+  name = "Ran Boo"
+  icon = 2,31
+  conv_icon_row = 6
+  conv_icon_col = 4
+  model = data/models/units/mercenary/mercenary.kfm
+  physics {
+    default = data/models/units/Mercenary/Mercenary_Proxy.pml
+    die = data/models/units/Mercenary/Mercenary.pml
+  }
+  destruction = ragdoll
+  sounds {
+    reload = data/sounds/weapons/armlightinfantry/reload/
+    destruction = data/sounds/bots/human die/
+  }
+ 
+  stats :{
+    hp = 1000
+    armor = 25
+    range = 1500
+    damage = 20
+  }
+  speed = 470
+  
+  tags = unit, organic  
+
+  actions {}
+
+  animation {
+    auto_show_hide {
+      default_tool = TownGuard_Rifle
+      Tool_hammer {
+        work_down_hammer_1
+        work_down_hammer_2
+        work_down_hammer_3
+        work_up_hammer_1
+        work_up_hammer_2
+      }
+      Tool_Kluch {
+        work_down_key_1
+        work_up_key_1
+        work_up_key_2
+      }
+      OreCrate {
+        mine_carry
+      }
+    }
+  
+    cast_preparation = cast_target
+    cast_instant = cast_self
+    cast_finish = finish_target
+    
+    anim_set WORK_DOWN_HAMMER = loop {
+      work_down_hammer_1
+      work_down_hammer_2
+      work_down_hammer_3
+    }
+    anim_set WORK_UP_HAMMER = loop {
+      work_up_hammer_1
+      work_up_hammer_2
+    }
+    anim_set WORK_HAMMER = loop {
+      WORK_DOWN_HAMMER = 100, 3,4
+      WORK_UP_HAMMER = 100, 3,4
+    }
+    anim_set WORK_KEY = loop {
+      work_down_key_1 = 100, 2,3
+      work_up_key_1 = 100, 2,3
+      work_up_key_2 = 100, 2,3
+    }
+    anim_set WORK = loop {
+      WORK_HAMMER = 100, 1,2
+      WORK_KEY = 100, 1,2
+    }
+    
+    mine_loop = WORK_HAMMER
+    supply_down_loop = WORK_DOWN_HAMMER
+    supply_up_loop = WORK_UP_HAMMER
+  }
+
+
+  --foot_prints {
+  --  desert = human_footprint1
+  --}
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+    shoot_idle_2 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+    shoot_spice_1 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+    shoot_spice_2 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+  }
+    
+  CWeaponController weapon {
+    active = 0
+    range_far = 600
+    range_near = 300
+    proximity_bonus = 2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/armlightinfantry/shoot/
+    fire_rate = 0.5
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 2
+    shoot_idle_1 = shoot_idle_1
+    --shoot_idle_2 = shoot_idle_2
+    shoot_idle_2 = shoot_spice_1
+    shoot_idle_3 = shoot_spice_2
+    spot_impact = 650
+    spot_impact_type = bullet
+    trace small_rifle_trace {
+      model = Data/Models/Effects/TraceBullet/trace_bullet.nif  
+      variant = 0
+      start_dist = 10
+      end_dist = 10
+      frequency = 3
+      ttl = 1
+      length = 120
+      target_size = 3
+      velocity  = 70
+      length_end = 120
+      instances = 128
+    }
+    muzzle_fx small_rifle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_light_bboard.nif
+      frequency = 10
+      active_fraction = 40
+      active_variation = 5
+      length_variation = 20
+      width_variation = 5
+      scale = 1.2
+      instances = 64
+      emit = 255,160,80
+      low_dimmer = 0.5
+    }
+  }
+}
+
+Switch RanBooFollowSwitch : ExclamationSwitch {
+  name_var = kharum.talk_to_ranboo
+  attach_to = RanBoo
+  success_map_lua = RanBooFollow2
+}

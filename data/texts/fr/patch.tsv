@@ -1,0 +1,25 @@
+﻿sid	text
+
+ALERT	AVERTISSEMENT
+PROMPT	CONFIRMATION
+no_such_user	[#]: il n’ya pas de joueur en ligne.
+random_loc	LIEU ALÉATOIRE
+gs_isc_atlasconnect	Connexion au service tournoi...
+battle points cost:	Coût des points de combat:
+obj.Find the renegade commander	Trouvez le commandant renégat
+accepted	acceptée
+rejected	rejetée
+Triad.descr	Installations de défense Jaar Lash
+ErkhArulAlienShip.name	Vaisseau Jaar Lash
+ErkhArulAlienShip.descr	
+rank1v1txt	RANG
+rating1v1txt	COTE
+wins1v1txt	VICTOIRES
+losses1v1txt	DÉFAITES
+streak1v1txt	VICTOIRES CONSÉCUTIVES
+	
+video_sett	RÉGLAGES DE VIDÉO
+audio_sett	RÉGLAGES DE SON
+player_sett	RÉGLAGES DU JOUEUR
+player_frame	JOUEUR
+player_profile	Profil du joueur

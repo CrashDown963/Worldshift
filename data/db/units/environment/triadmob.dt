@@ -1,0 +1,49 @@
+Mob TriadMob : BaseMob {
+  name : Triad.name
+  descr : Triad.descr
+  icon = 3,12
+  race = aliens
+  model = Data/Models/Units/Trisat/TrisatTriad.kfm
+  
+  hp = 600
+  armor = 8
+  range = 1200
+  damage = 30
+  aura_hp_bonus = 0
+  aura_dmg_bonus = 0
+    
+  movable = 0
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    can_crit = 1
+    fire_node = pt_shoot_1
+    shoot_snd = Data/Sounds/Units/Hellfire/shot
+    --aim_tolerance = 180
+    aim_tolerance_yaw   = 180
+    aim_tolerance_pitch = 180
+    fire_rate = 1.2 
+    spot_impact_type = fire
+    spot_impact = 850
+    damage_type = fire
+
+    --muzzle_anim = HellfireMuzzle
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = fire
+      ground_hit_effect = BulletTerrainHitEffect
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+      speed = 2500
+      scale = 0.25
+      --model = data/models/projectiles/fire/HellfireShot.nif
+    }
+  }
+
+  animation {
+    anim_seq TELEPORT = loop {
+      dig_in
+      dig_out
+    }
+  }
+}

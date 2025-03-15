@@ -1,0 +1,7 @@
+
+Building Extractor333 : BaseBuilding {
+  model = Data/Models/buildings/ControlTower/Extractor333.nif {
+  }
+  race = humans
+
+}

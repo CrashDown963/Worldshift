@@ -1,0 +1,25 @@
+Building Farm : BaseBuilding {
+  model = Data/Models/buildings/Farm/Farm.nif {
+    die = Data/Models/buildings/Farm/FarmBreak.nif
+  }
+
+  physics {
+    default = Data/Models/buildings/Farm/Farm_Proxy.pml
+    die = Data/Models/buildings/Farm/Farm.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/TrailSmoke/DestrSmoke02.nif
+    attach_destr_node_04 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_05 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_node_06 = data/models/Effects/Fire/Fire_Ani1.nif
+    attach_destr_perc = 40
+  }
+
+  destruction = ragdoll
+  explosion = ExplosionBig_01
+  race = common
+
+  no_mouse_targetable = 1
+  no_minimap = 1
+}

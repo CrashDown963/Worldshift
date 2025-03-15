@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\buildings\vehiclecontrol\vehiclecontrol2_build.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"-5.1268310546875,-0.4892635345458984375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

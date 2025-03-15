@@ -1,0 +1,37 @@
+CMapAnim Exp_Grnd {
+  model = data/models/testobjects/Exp_Grnd_2m/Expl_Grnd_2m.kfm
+  scale = 1
+  clone_mode = reuse deepcopy
+
+
+  CTrailController TrailSpray = { 
+    emitter = TrailSpray 
+    texture = data/models/TestObjects/Exp_Grnd_2m/smoke_trail1.tga
+    tex_ratio = float: 1.7
+    start_width = 60
+    end_width = 300
+    ttl = 30
+    simple_time = 5
+    additive = 0
+    material_alpha = 1
+    diffuse = color: 1, 1, 1 
+    ambient = color: 0.5, 0.5, 0.5 
+    emissive = color: 1, 1, 1 
+
+    time0 = 0 
+    color0 = colora: 1, 1, 1, 1 
+
+    time1 = 3 
+    color1 = colora: 0.65, 0.60, 0.60, 1 
+
+    time2 = 30 
+    color2 = colora: 1, 1, 1, 1
+
+    
+    time3 = 100
+    color3 = colora: 0.5, 0.5, 0.5, 1
+  }
+
+ 
+
+}

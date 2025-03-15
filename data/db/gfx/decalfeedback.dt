@@ -1,0 +1,111 @@
+CVisualFeedback DecalFeedback {
+  drag {
+    decal_settings drag_outline {
+--			settings_id = drag_outline
+			max_decals = 0
+			life_time = 0
+			fade_time = 0.5
+			fast_fade = 0.5
+
+		-- negative sizes mean scale, positive sizes mean absolute size in cm
+
+			start_size = -2
+			grown_size = -2
+			grow_time = 1
+
+		-- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+			size_variation = 0
+
+		-- angle in degrees relative to the facing of the spawning actor
+		-- negative angle means spawn with random rotation
+
+			angle_delta = -1
+			angle_speed = -22.5
+
+			models = {
+				barrage
+			}
+    }
+
+    decal_settings drag_inner {
+--			settings_id = drag_inner
+			max_decals = 0
+			life_time = 0
+			fade_time = 1.2
+			fast_fade = 1.2
+
+		-- negative sizes mean scale, positive sizes mean absolute size in cm
+
+			start_size = -2
+			grown_size = -2
+			grow_time = 1
+
+		-- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+			size_variation = 0
+
+		-- angle in degrees relative to the facing of the spawning actor
+		-- negative angle means spawn with random rotation
+
+			angle_delta = -1
+			angle_speed = 45
+
+			models = {
+				barrage_rot
+			}
+    }
+  }
+  
+  state invisible {
+  }
+
+  state drag_active: drag {
+    diffuse = color: 0, 0, 0
+    ambient = color: 0, 0, 0
+    emissive = color: 0, 255, 0
+  }
+  
+  state drag_inactive: drag {
+    diffuse = color: 0, 0, 0
+    ambient = color: 0, 0, 0
+    emissive = color: 255, 0, 0
+  }
+  
+  state success {
+    diffuse = color: 0, 0, 0
+    ambient = color: 0, 0, 0
+    emissive = color: 0, 255, 0
+    
+    decal_settings drag_scale {
+--			settings_id = drag_scale
+			max_decals = 0
+			life_time = 0.5
+			fade_time = 0.5
+			fast_fade = -1
+
+		-- negative sizes mean scale, positive sizes mean absolute size in cm
+
+			start_size = -2.5
+			grown_size = -0.1
+			grow_time = 0.5
+
+		-- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+			size_variation = 0
+
+		-- angle in degrees relative to the facing of the spawning actor
+		-- negative angle means spawn with random rotation
+
+			angle_delta = -1
+			angle_speed = -22.5
+
+			models = {
+				barrage_scale
+			}
+			
+			-- align the rotation to the rotation of drag_outline
+			align = drag_outline
+    }
+  }
+}

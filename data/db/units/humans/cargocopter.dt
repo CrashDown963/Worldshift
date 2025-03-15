@@ -1,0 +1,17 @@
+OreTransporter CargoCopter : BaseUnit {
+  speed = 1000
+  model = data/Models/units/CargoCopter/CargoCopter.kfm
+  race = humans
+  tags = unit, bot
+  movement_type = hover
+
+  COrientationController orientation {
+    rot_speed = 45
+    max_tilt = 0
+  }  
+
+  mine {
+    pickup_platform_search_radius = 2000
+    platforms_pick = 2
+  }
+}

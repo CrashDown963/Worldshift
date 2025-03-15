@@ -1,0 +1,87 @@
+model = {
+  file = str:"data\terrain\detailobjects\newflowertest.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Cylinder02";
+    translation = xpoint3:"-206.80322265625,41.544712066650390625,5.848407268524169921875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"roundshadow";
+    translation = xpoint3:"-98.49349212646484375,-187.889312744140625,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"0.843686521053314208984375,-0.536836147308349609375,0";
+      1 = xpoint3:"0.536836147308349609375,0.843686521053314208984375,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"roundshadow01";
+    translation = xpoint3:"-353.46258544921875,152.54486083984375,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"roundshadow02";
+    translation = xpoint3:"-210.8087615966796875,163.41619873046875,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"roundshadow03";
+    translation = xpoint3:"-202.76007080078125,41.16373443603515625,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"roundshadow04";
+    translation = xpoint3:"-386.046295166015625,-53.4332122802734375,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"roundshadow05";
+    translation = xpoint3:"-232.4761962890625,-64.7393646240234375,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"roundshadow06";
+    translation = xpoint3:"-130.15179443359375,-193.435028076171875,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"-0.85110366344451904296875,0.524997651576995849609375,0";
+      1 = xpoint3:"-0.524997651576995849609375,-0.85110366344451904296875,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

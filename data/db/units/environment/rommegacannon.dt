@@ -1,0 +1,108 @@
+Mob ROMMegaCannon : BaseMachineMob {
+  name = "ROM Mega Cannon"
+  icon = 1,27
+  model = Data/Models/buildings/HeavyTurret/HeavyTurret.kfm
+  explosion = ExplosionMedium_03
+  movable = 0
+  --scale = 4
+  
+  hp = 0
+  sight = 10000
+  chase_range = -1
+  range = 100000
+  min_range = 4000
+  damage = 250
+  explosion_radius = 1000
+  
+  --pitch_speed = 20
+  --min_pitch = 45
+  --max_pitch = 45
+  yaw_speed = 15
+  
+  CMultiWeaponController weapon {
+    count = 2
+    sync = alternate -- simultaneous
+    active = 0
+    idle_only = 0
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    --aim_node = pt_aim
+    shoot_anim_1 = shoot_1
+    shoot_anim_2 = shoot_2
+    shoot_snd = data/sounds/weapons/huge cannon/
+    --freeze_time = 4 
+    idle_time = 4
+    aim_tolerance = 1
+    dispersion = 1500
+
+    projectile = parabolic {
+      angle = 45
+      effect = ROMMegaCannonExplosion
+      damage_type = energy
+      model = data/models/Projectiles/Grenade/grenade2.nif {
+        CTrailController trail {
+		      emitter = Root
+		      texture = data/textures/trails/energy_trail1.dds
+		      tex_ratio = float: 4.0
+		      start_width = 14
+		      end_width = 0
+		      ttl = 12
+		      simple_time = 1
+		      additive = 1
+		      z_write = 0
+		      material_alpha = 0.5
+		      diffuse = color: 1, 1, 1
+		      ambient = color: 0.5, 0.5, 0.5
+		      emissive = color: 1, 1, 1
+
+		      time0 = 0
+		      color0 = colora: 1, 1, 1, 0
+
+		      time1 = 3
+		      color1 = colora: 1, 1, 1, 0.4
+
+		      time2 = 30
+		      color2 = colora: 1, 1, 1, 0.25
+
+		      time4 = 100
+		      color4 = colora: 1, 1, 1, 0
+	      }
+      }
+
+      decal_settings ground_hit_decal = barrage_decal1
+    }
+  }
+}
+
+CAnimEffect ROMMegaCannonExplosionAnim {
+  tags t1 = default {
+    spawn ExplosionMedium_03 {
+      scale = 1.5
+    }
+    spawn ExplosionBig_03 {
+      sound =
+      scale = 1.5
+    }
+    spawn ExplosionBig_04 {
+      sound =
+      scale = 1.2
+    }
+  }
+}
+
+CAreaEffect ROMMegaCannonExplosion {
+  range = var:explosion_radius
+ 
+  epicenter {
+    spawn ROMMegaCannonExplosionAnim
+    physics_radius = var:explosion_radius 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = var:damage
+      react = fire
+    }
+  }
+}

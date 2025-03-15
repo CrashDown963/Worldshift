@@ -1,0 +1,6 @@
+Unit Sorcerer2: BaseUnit {
+  race = mutants
+  linkable = 1
+  model = Data/Models/Units/Sorcerer/Sorcerer.nif
+}
+

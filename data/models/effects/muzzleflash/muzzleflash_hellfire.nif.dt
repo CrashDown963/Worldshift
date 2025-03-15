@@ -1,0 +1,77 @@
+model = {
+  file = str:"data\models\effects\muzzleflash\muzzleflash_hellfire.nif";
+  animation = {
+    loop = fixp:"1.27777850627899169921875";
+    duration = fixp:"3.3333332538604736328125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Drag01";
+      translation = xpoint3:"98.57110595703125,-32.2005615234375,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Flare";
+      translation = xpoint3:"0,-17.711700439453125,0";
+      rotation = {
+        0 = xpoint3:"0,-1,0";
+        1 = xpoint3:"0.17124082148075103759765625,0,-0.985229194164276123046875";
+        2 = xpoint3:"0.985229194164276123046875,0,0.17124082148075103759765625";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Gravity01";
+      translation = xpoint3:"69.4942474365234375,-88.83069610595703125,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray01-Emitter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray02F-Emitter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+    #5 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray02Fire-Emitter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+  }
+}

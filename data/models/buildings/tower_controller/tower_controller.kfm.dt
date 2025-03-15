@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\buildings\tower_controller\tower_controller.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.666666686534881591796875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.666666686534881591796875";
+        }
+      }
+    }
+  }
+}

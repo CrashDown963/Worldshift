@@ -1,0 +1,586 @@
+﻿sid	text
+	
+// UNITS //////////////////////////////////////////////////////////////////////	
+	
+Assassin.name	刺客
+Assassin.descr	這種長距離單位在最大射程時威力最強。他的射擊有機會減弱目標裝甲數秒鐘。
+AssaultBot.name	突襲機器人
+AssaultBot.descr	裝甲完善的機械單位。偶而會發射能夠減弱目標敵人攻擊效率的火箭。能夠齊射長距離火箭。
+Commander.name	貴族指揮官
+Commander.descr	貴族指揮官的裝甲渾厚而且擁有一種鄰近加成能力。他能夠醫療自己並吸引敵人攻擊。
+Constructor.name	建築師
+Constructor.descr	這種機械軍官能在戰鬥期間快速地維修機器。他的普通攻擊有機會擊中並暈眩數名敵人。
+Crew.name	技師
+Crew.descr	當附近沒有敵人時，技師會自動維修建築物。
+EliteTrooper.name	突擊裝甲兵
+EliteTrooper.descr	突擊裝甲兵是充當臨時增援的精銳部隊。無法直接控制他們。
+Hellfire.name	地獄火
+Hellfire.descr	行動緩慢但裝甲及護盾強大的遠距機械單位。能夠發射強大的近距離區域攻擊。
+Judge.name	判官
+Judge.descr	一種能有效對付「能量使用型」敵人的頑強軍官。能夠晉升部隊至精英狀態並強化他們的攻擊力。
+ProtonTurret.name	質子砲塔
+ProtonTurret.descr	能夠加裝至控制塔的防禦性砲塔。
+RepairDrone.name	維修機械人
+Ripper.name	撕裂者
+Ripper.descr	這是一種行動快速的肉搏單位。攻擊時有機會震暈敵人。
+Surgeon.name	醫生
+Surgeon.descr	這是一種訓練來醫療有機體單位專家，即便是當她們進行戰鬥時。儘管她在其他方面是弱小的戰士，她的攻擊在近距離平射的狀態下非常強大。
+Technician.name	技師
+Technician.descr	非戰鬥人員，訓練來處理各式各樣的設備和人造物品。
+Trooper.name	裝甲兵
+Trooper.descr	相對廉價而且擁有鄰近加成的單位。戰鬥時偶而會投擲手榴彈。能夠晉升成精英狀態提高其致命一擊的機率。
+Trooper.trooper_name	裝甲兵
+Trooper.elite_name	精銳裝甲兵
+trooper_name.name	裝甲兵
+elite_name.name	精銳裝甲兵
+	
+AlienEgg.name	蛋體
+AlienEgg.descr	這是一種由「傳送門」或「繁殖者」產出的實體。作為防禦設施使用並且在被摧毀時釋放孵化體。
+Arbiter.name	仲裁者
+Arbiter.descr	這種長距離單位在最大射程時威力最強。他的射擊有機會一次擊中數個目標。能夠對敵人造成恐慌，導致他們陷入混亂逃跑。
+Dominator.name	支配者
+Dominator.descr	這種強大的人員控制型單位能夠麻痺敵人並且吸取他們的能源。他的攻擊能完全地忽視敵人的裝甲。
+Harvester.name	收割者
+Harvester.descr	這種重型肉搏單位的攻擊可能會震懾附近的有機體敵人，使得他們的行動便慢。他也能夠自我醫療。
+Hatchling.name	孵化體
+Hatchling.descr	較為弱小的崔薩特變體。能夠吸引敵人攻擊。
+Manipulator.name	操弄者
+Manipulator.descr	這種醫療單位的普通攻擊能夠從目標敵人竊取生命並將其灌輸於附近盟友。他能製造一道醫療漩渦暫時醫療附近盟友。
+Master.name	大師
+Master.descr	一種強大的進攻和醫療型單位。能夠敵人竊取生命並且分配給附近盟友。也能夠發射強大的區域性攻擊。
+Overseer.field_name	戰場督察
+Overseer.power_name	能量督察
+field_name.name	戰場督察
+power_name.name	能量督察
+Overseer.descr	一種很好的進攻性單位。擁有的特殊外形能夠補充附近盟友的能量。
+Shifter.name	迅變者
+Shifter.descr	迅變者的攻擊偶爾會弱化目標的攻擊力或是吸取其能量。迅變者的護盾也有機會在附近的結盟崔薩特或崔泰克身複製自己。他也能生產孵化體。
+Trisat.name	崔薩特
+Trisat.descr	一種常備的肉搏單位，能夠遲滯附近敵人。它在造成一定總額的傷害後攻擊效力會增加一段時間。
+Tritech.name	崔泰克
+Tritech.descr	一種常備的遠距單位。有機會在攻擊同時醫療自己。
+	
+AncientShade.name	古代幽靈
+AncientShade.descr	一種攻擊完全忽視裝甲的地底世界怪物。
+Brute.name	兇獸
+Brute.descr	一種裝甲防護良好的肉搏單位，能夠吸引敵人攻擊。使出致命一擊後會有一段時間變得更強大。
+Guardian.name	守護者
+Guardian.descr	一種強大的肉搏單位，能夠產生自我複製體獨力作戰。也能夠進入一種特殊狀態，賦予附近單位防禦上的加成。
+GuardianIllusion.name	守護者幻象
+GuardianIllusion.descr	守護者複製體
+HighPriest.name	祭司長
+HighPriest.descr	一種強大而且多方適用的魔法使用者，能夠治療有機體盟友並且冰凍敵人。也擁有一種強大的特殊遠距離攻擊。
+HowlingHorror.name	嗥叫驚懼獸
+HowlingHorror.descr	緩慢但強大的地底世界肉搏單位。擁有特殊的防禦態勢能夠允許其自我醫療。
+Shaman.name	薩滿
+Shaman.descr	一種醫療型單位，他的普通攻擊能從目標敵人竊取生命並且灌輸到附近盟友。能夠在特定區域內治療盟友並且消除他們的不利效果。
+Sorcerer.name	術士
+Sorcerer.descr	冰和火元素方面的專家，他的普通攻擊能夠遲滯敵人。能夠在地面上製造熔化點焚燒站在上面的敵人。
+StoneGhost.name	石鬼
+StoneGhost.descr	一種能夠竊取敵人能量並且重新分配給附近盟友的地底世界生物。它也能夠持續地治療附近地底世界盟友。能夠感染有機體目標，當目標死亡時則生出靈魂蠕蟲。
+Warrior.name	戰士
+Warrior.descr	一種常備遠距離單位。他的攻擊在最大射程時最為強大。
+Worker.name	工人
+Worker.descr	一種非戰鬥單位，能夠維修和建造建築物。
+Worm.name	靈魂蠕蟲
+Worm.descr	當敵人被石鬼的腐化咒語感染死亡時就會滋生這種地底世界生物。
+	
+// BUILDINGS //////////////////////////////////////////////////////////////////	
+	
+ControlTower.name	控制塔
+ControlTower.descr	控制塔可提煉異域礦石。它擁有防禦設施能且能夠以砲塔和動態偵測器加以升級。你能使用它來訂購更多單位。
+OreExtractor.name	礦石萃取機
+OreExtractor.descr	礦石萃取機可開採異域礦石並且可作為防禦設施使用。它能夠升級成控制塔。
+	
+Temple.name	神殿
+Temple.descr	神殿利用異域礦石的能源。它也能攻擊附近敵人並且附近盟友的生命點數和能量。你能夠使用它訂購更多單位或是召喚工人。
+Shrine.name	祭壇
+Shrine.descr	祭壇利用異域礦石的能源而且也能治療附近盟友。它也能用來召喚工人，而且能升級成神殿。
+	
+Portal.name	傳送門
+Portal.descr	傳送門消耗異域礦石。它也能夠生出蛋體並且對附近的敵人造成不利影響。你可以使用傳送門訂購更多單位並且遠端建造「繁殖者」。
+Breeder.name	繁殖者
+Breeder.descr	繁殖者消耗異域礦石並且生出蛋體。你能夠使用它訂購低階單位（崔薩特及崔泰克）。繁殖者能夠升級成傳送門。
+	
+// RESOURCES AND OTHER OBJECTS ////////////////////////////////////////////////	
+	
+Artifact1.descr	這是一種古代神器。你可以用戰場領袖來檢視它。
+Artifact1.name	神器
+Artifact2.descr	這是一種古代神器。你可以用戰場領袖來檢視它。
+Artifact2.name	神器
+BehaviorWaypoint.name	NPC行為導航點
+MissionAreaCorner.name	任務區域角落
+PersonnelCarrier.name	人員運輸機
+ReliefCell.name	緩和電池
+Thunder.name	龍捲風
+Vortex.name	旋風
+Xenolite.name	異域礦石
+Xenolite.descr	你可以在這個異域礦床興建建築物來增加你的資源收入。
+XenoliteBarge.name	異域礦石駁船
+	
+// SPECIALIZATIONS ////////////////////////////////////////////////////////////	
+	
+I_A1A.name	瘋狂
+I_A1A.text	你崔薩特的狂熱在他們停止製造傷害後會持續[stats.frenzy_duration]額外秒數。
+I_A1H.name	耐久度
+I_A1H.text	你所有常備單位多增加[stats.hp]生命點數。
+I_A1M.name	集雷
+I_A1M.text	你祭司長的閃電可多造成[stats.lightning_damage]傷害。
+I_A2A.name	超強之力
+I_A2A.text	你所有常備單位可多造成[stats.damage]直接傷害。
+I_A2H.name	超頻
+I_A2H.text	你所有機械體單位自動維修速度加快[stats.hp_gen]，不用恢復時間而且也會造成[stats.damage]額外直接傷害。
+I_A2M.name	精通冰凍
+I_A2M.text	你祭司長的冰凍能力可多拘束[stats.freeze_duration]秒。
+I_B1A.name	預言
+I_B1A.text	你的大師能量重生速度加快 [stats.psi_gen]。
+I_B1H.name	迴避
+I_B1H.text	你的撕裂者將有[stats.elusion]%機率完全忽視出自肉搏距離內的直接遠距攻擊。
+I_B1M.name	兵器訓練
+I_B1M.text	你的戰士將擁有額外的[stats.crit_chance]%機率使出致命一擊，造成兩倍傷害。
+I_B2A.name	火焰專注
+I_B2A.text	你的崔泰克將擁有額外的[stats.crit_chance]%機率使出致命一擊，造成兩倍傷害。
+I_B2H.name	毀滅烈焰
+I_B2H.text	你所有單位將擁有額外的[stats.crit_chance]%機率使出致命一擊，造成兩倍傷害。
+I_B2M.name	能量專家
+I_B2M.text	你的祭司長和你所有長老的能量重生速度加快[stats.psi_gen]。
+I_B3A.name	生化分裂
+I_B3A.text	當崔泰克被殺死時，有[stats.bio_split_chance]%機率從他的屍體生出2～3隻孵化體。
+I_B3H.name	幹勁
+I_B3H.text	裝甲兵對目標使出致命一擊後，將有[stats.motivation]%機率成為精銳狀態。
+I_B3M.name	黑暗束縛
+I_B3M.text	你所有地底世界生物（古代幽靈、嗥叫驚懼獸、石鬼以及靈魂蠕蟲）重生生命點數速度加快[stats.hp_gen]，不用恢復時間。
+I_C1A.name	惡魔飢渴
+I_C1A.text	你大師的飲命能力對每個受影響的目標每秒增加額外 [stats.feed_add_heal]治療。
+I_C1H.name	精準
+I_C1H.text	你所有裝甲兵可造成[stats.damage]格外點數傷害。
+I_C1M.name	自然保護
+I_C1M.text	你所常備單位可獲得[stats.hp]額外生命點數。
+I_C2A.name	緊迫
+I_C2A.text	收割者每次攻擊將擁有[stats.confuse_chance]%機率壓迫他的目標，強迫他專注攻擊收割者。
+I_C2H.name	急救專家
+I_C2H.text	醫生的急救將擁有[stats.bandage_crit]%機率治療通常總數的兩倍。
+I_C2M.name	治療恩惠
+I_C2M.text	你祭司長的聖光可多治療[stats.holy_aura_heal]生命點數。
+I_D1A.name	治療防護罩
+I_D1A.text	你所有單位的生命點數重生加快[stats.hp_gen]，不用恢復時間。
+I_D1H.name	裝甲防護罩
+I_D1H.text	貴族指揮官將有[stats.armor]額外裝甲和生命點數。
+I_D1M.name	自然專注
+I_D1M.text	你的薩滿將有[stats.drain_life_chance]%更高的機率在攻擊同時吸取生命。同時，每次薩滿吸取生命時，他將從他的目標淨化一項有利效果。
+I_D2A.name	充能裝甲
+I_D2A.text	你的大師以及所有典獄長將有[stats.hp]額外生命點數。
+I_D2H.name	過度訓練
+I_D2H.text	你所有軍官的生命點數增加[stats.hp]。
+I_D2M.name	元素專注
+I_D2M.text	你的祭司長、術士以及薩滿的直接攻擊可多造成 [stats.damage]傷害。
+I_D3A.name	生化循環
+I_D3A.text	當崔薩特在大師的視線範圍內死亡時，大師有[stats.bio_cycle_chance]%機率以他的25%生命點數將他復活。循環的崔薩特會失去死亡之前擁有的全部有利效果。
+I_D3H.name	能量浪潮
+I_D3H.text	你的貴族指揮官和所有軍官可以更快地恢復他們的能量[stats.psi_gen]。
+I_D3M.name	野獸訓練
+I_D3M.text	你的兇獸的生命點數增加[stats.hp]，並且獲得額外[stats.armor]裝甲。同時，兇獸將擁有[stats.ignite_on_strike_chance]%機率在每次攻擊後激動。
+	
+// GLOBAL ACTIONS /////////////////////////////////////////////////////////////	
+	
+AirAssaultAction.name	空中突襲
+AirAssaultAction.descr	從母城請求空中支援。一支攻擊機中隊會轟炸整張地圖一小段時間，集中火力於敵方目標。避免
+EliteSquadAction.name	突擊裝甲兵
+EliteSquadAction.descr	請求一小隊精銳突擊裝甲兵傳送到指定位置。他們會幫你作戰但無法直接指揮。如果附近沒有敵方目標，存活的突擊裝甲兵會傳送回城市。
+ProtonBlastAction.name	質子爆破
+ProtonBlastAction.descr	請求母城的防禦幸加農砲瞄準並且射擊指定區域。質子爆破會嚴重地傷害大範圍區域內的所有單位，不過要當心友軍誤擊！
+	
+	
+MindVisionAction.name	心靈視野
+MindVisionAction.descr	引導自然能源到選擇的區域，獲得幾秒鐘的能見度。
+ThunderAction.name	閃電風暴
+ThunderAction.descr	產生一道龍捲風在指定區域肆虐，偶爾會爆發出閃電傷害附近敵人。
+NaturesGraceAction.name	自然的恩惠
+NaturesGraceAction.descr	控制自然之力立即醫療所有創傷並且維修選擇區域內所有友軍單位的損壞。
+	
+	
+HorrifyAction.name	恐懼
+HorrifyAction.descr	恐懼小區域內所有敵人，使他們害怕逃跑並且混亂地射擊。
+MarkOfChaosAction.name	混沌記號
+MarkOfChaosAction.descr	標示大區域內所有敵人，持續對他們造成小傷害並且在效果期間使他們顯現在迷你地圖上。
+InfestAction.name	寄生
+InfestAction.descr	在指定位置滋生孵化體。他們會幫你作戰但無法直接指揮。如果附近沒有敵方目標，存活的孵化體會消失。
+	
+// BUILDING ACTIONS ///////////////////////////////////////////////////////////	
+	
+BreederUpgrade.name	傳送門
+BreederUpgrade.descr	升級繁殖者成傳送門
+CancelUnitProduce.name	取消單位生產
+DetectMotionAction.name	動態掃描器
+DetectMotionAction.descr	這項升級允許控制塔在一定範圍內偵測所有單位的移動。
+OreExtractorUpgrade.name	控制塔
+OreExtractorUpgrade.descr	升級礦石萃取機成控制塔
+PerimeterDefenseAction.name	陣地防禦
+PerimeterDefenseAction.descr	這項升級可替控制塔增加三具防禦砲塔。
+PossessAction.name	佔據
+PossessAction.descr	以腐化孢子寄生於選擇的異域礦床。如果沒人在一定的時間內在礦床上興建建築物，那麼會自動生出繁殖者來。
+RallyPoint.name	設定集結點
+ShiftingRayAction.name	轉移光線
+ShiftingRayAction.descr	傳送大師附近所有盟軍到指定目的地。
+ShrineUpgrade.name	神殿
+ShrineUpgrade.descr	升級祭壇成神殿
+SummonWorkersAction.name	召喚工人
+SummonWorkersAction.descr	召喚幾位能維修建築物的功能並且在異域礦床上建造祭壇。
+FireLashAction.name	火焰鞭
+FireLashAction.descr	大幅提高神殿防禦的升級。
+	
+// UNIT ACTIONS ///////////////////////////////////////////////////////////////	
+	
+Reinforce.name	請求援軍
+Reinforce.descr	點擊恢復所有從任務一開始損失的單位。
+RainOfFireAction.name	火雨
+RainOfFireAction.descr	從新形成的地球環帶牽引一些隕石墜落地表，在指定區域內造成嚴重傷害。
+ActionRelief.name	緩和
+ActionRelief.descr	醫生啟動一種特殊緩和電池，對附近所有存活的友軍每秒治療[stat:relief_healpersec]生命點數。緩和電池回維持作用[stat:relief_duration]秒。
+Barrage.name	彈幕
+Barrage.descr	從遠處發射一連串離子火箭。每一枚火箭隊一小區域內所有目標造成[stat:rocket_damage]傷害。
+BreedAction.name	繁殖
+BreedAction.descr	迅變者在選擇區域召喚三隻孵化體。他們會自動攻擊附近敵人。
+ConfuseAction.name	混亂
+ConfuseAction.descr	這種戰術行動可以強迫小區域內所有敵人集中攻擊貴族指揮官[stat:confuse_duration]秒，必且在這段期間增加他的裝甲[stat:confuse_armor_perc_buff]%。如果受影響的敵人看不見貴族指揮官，這種效果可能會更短。
+CorruptionAction.name	腐化
+CorruptionAction.descr	石鬼可腐化選擇區域內所有敵人，使他們每秒承受[stat:corruption_damage]點傷害達[stat:corruption_duration]秒。如果目標受腐化影響死亡，會生出一小群靈魂蠕蟲，保護該區域並且攻擊敵人。
+DarkVortexAction.name	黑暗漩渦
+DarkVortexAction.descr	製造一道地獄能源漩渦，偶爾以地獄光線襲擊附近的盟軍，治療[stat:vortex_heal]生命點數。這道漩渦停留 [stat:vortex_duration]秒之後消失。
+DominatorDimensionChainAction.name	次元鎖鍊
+DominatorDimensionChainAction.descr	所有在選擇區域內的敵人會在次元靜止的狀態被鎖住[stat:dimension_chain_duration]秒。處於靜止同時，這些敵人會被震懾並且對所有攻擊來源多承受 [stat:dimension_chain_dmgbonus]%傷害。
+DominatorPowerFuseAction.name	能量融合
+DominatorPowerFuseAction.descr	所有圍繞支配者的敵人立即喪失[stat:power_fuse_perc]%能量。
+FateLinkAction.name	命運連結
+FateLinkAction.descr	古代幽靈運用其豐富的知識建立一種與友軍單位的連結[stat:fatelink_duration]秒。任何友軍單位接受的傷害都會在該單位及所有古代幽靈目前所連結的單位之間分攤。如果古代幽靈移動或是如果受連結單位移動離開視線，此連結將會被摧毀。
+FearShockAction.name	驚恐
+FearShockAction.descr	在選擇區域內逐漸灌輸恐懼給所有敵人，造成他們驚恐逃跑[stat:fear_shock_duration]秒。
+FeedAction.name	飲命
+FeedAction.descr	大師傳輸強大的地獄光線，每秒造成[feed_base_damage]傷害，持續時間為[stat:feed_duration]秒。這種攻擊也能從受影響的目標吸取相同點數的生命並且散佈到任何大師附近的盟友來治療他們。這種光線會於目標上分裂並且跳至其他目標。每跳至一個額外的目標則使得治療效果增加，儘管傷害降低。
+FireSweep.name	火焰掃射
+FireSweep.descr	爆破圍繞地獄火周圍區域，對所有附近目標造成[stat:sweep_damage]傷害。小心友軍誤擊！
+FortifyAction.name	強固
+FortifyAction.descr	守護者使用她的力量散發一團靈光，給予附近所有盟軍單位[stat:fortify_armor_add_perc]%加上[stat:fortify_armor]格外裝甲。守護者強固同時，她的能量不會重生而且如果她授命移動那麼此效果就會取消。此效果不會累加。
+FreezeAction.name	冰凍
+FreezeAction.descr	祭司長使用他的力量在指定區域施展一道寒氣爆破，造成所有敵軍原地冷凍[stat:freeze_duration]秒。
+FrostWaveAction.name	寒冰波
+FrostWaveAction.descr	術士立刻發出一道強力的寒冰波，遲滯所有受影響的單位[stat:chill_perc]%，持續[stat:chill_duration]秒。
+HolyShockAction.name	神聖電擊
+HolyShockAction.descr	祭司長聚精會神並使用自然力量來完全恢復一名結盟單位的生命點數。
+HowlAction.name	嗥叫
+HowlAction.descr	灌輸恐懼給附近所敵人[stat:howl_fear_duration]秒並且進入防禦態勢[stat:howl_duration]秒。以這種態勢，驚懼獸每秒可自我治療它生命點數的[stat:howl_hp_perc]%，並且忽視[stat:howl_ignore_perc]%所有進來的攻擊。
+IllusionAction.name	幻象
+IllusionAction.descr	守護者使用她的力量複製她兩個分身。幻象會持續[illusions_duration]秒然後消失。她們的致命程度與守護者本身相同！
+IncinerateAction.name	焚化
+IncinerateAction.descr	術士在選擇的區域加熱溶解地面。所有站在熔解點的單位每秒承受[stat:incinerate_damage]點傷害。此效果持續[stat:incinerate_duration]秒。
+InjectAction.name	注射
+InjectAction.descr	貴族指揮官使用一種強大的混合藥物自我注射，在[stat:inject_duration]秒期間恢復 [stat:inject_hp]生命點數達。
+LightningAction.name	閃電
+LightningAction.descr	祭司長傳送他的能量成為致命的閃電，攻擊敵人[stat:lightning_damage]點數傷害。
+MendAction.name	癒合
+MendAction.descr	醫生使用她的技巧和工具癒合一名受傷的友軍單位，在[mend_duration]期間總共恢復[stat:mend_heal]生命點數。
+MorphAction.name	變形
+MorphAction.descr	變形戰地督察成能量督察
+MorphAction.descr_field	變形戰鬥督察成能量督察
+MorphAction.descr_power	變形戰地督察成能量督察
+NanofixAction.name	奈米修復
+NanofixAction.descr	建築師發送一大群高能源微型細胞機器人於一名友軍機器單位上，立刻修復[stat:nano_fix_heal]生命點數。
+NetherNovaAction.name	地獄新星
+NetherNovaAction.descr	大師創造一道地獄能量爆破對小區域內所有敵人造成[stat:nether_nova_damage]傷害。
+ProtonShotAction.name	質子榴彈
+ProtonShotAction.descr	判官可發射特殊質子榴彈對小區域內所有敵人造成[stat:proton_shot_damage]點傷害，並且燃燒他們[proton_shot_power_burn]點能量，輕微地增加造成傷害的總數。
+PurifyAction.name	淨化
+PurifyAction.descr	立刻移除選擇區域內所有友軍的有害效果。
+RenewAction.name	復原
+RenewAction.descr	薩滿使用他的力量立刻恢復選擇區域內所有友軍單位[stat:rejuvenation_amount]生命點數。
+RepairDrones.name	維修機器人
+RepairDrones.descr	建築師啟動三台維修機器人跟著他維修附近受損的機器，包含他自己。維修機器人可維持啟動[stat:repairdrones_time_to_live]秒。每台機器人每秒可維修[stat:repairdrones_repair_per_tick]生命點數。
+VoiceofCommandAction.name	掃射火焰
+VoiceofCommandAction.descr	指揮小區域內所有裝甲兵和其他低階單位，提升他們的攻擊力[stat:voiceofcommand_damage_perc]%，持續時間為[stat:voiceofcommand_duration]秒。
+TeleportOfficerAction.name	傳送軍官
+TrackAction.name	追蹤
+TrackAction.descr	這種強力射擊可植探測器針到刺客的目標內。持續時間[stat:poison_shot_duration]秒，受追蹤的目標會每秒承受[stat:poison_shot_damage]點數傷害並且會顯示在迷你地圖上。
+UnholyPowerAction.name	邪惡之力
+UnholyPowerAction.descr	石鬼從地底世界吸收能量並且填充給所有附近友軍單位。此效果每秒可恢復受影響單位的[stat:unholy_power_restore_perc]%總能量。此效果持續[stat:unholy_power_duration]秒，或者直到石鬼移動或被殺死為止。
+VitalitySurgeAction.name	活力浪潮
+VitalitySurgeAction.descr	立刻恢復收割者的[stat:vitality_surge_gain]%生命點數。
+Worker.WorkerRepairAction.name	維修建築物
+	
+// BUILDING ABILITIES /////////////////////////////////////////////////////////	
+	
+ControlTower.abilities.LargeCrew.name	大組人員
+ControlTower.abilities.LargeCrew.text	如果沒有敵人在控制塔附近，它保持三名技師出來維修任何受損的建築物。如果損壞超過75%，會額外出現一名技師。
+ControlTower.abilities.MotionScanner.name	動態掃描器
+ControlTower.abilities.MotionScanner.text	控制塔可偵測到特定範圍內的所有單位移動。
+OreExtractor.abilities.SmallCrew.name	小組人員
+OreExtractor.abilities.SmallCrew.text	如果礦石萃取機受損而且沒有敵人在附近，兩名技師將啟動維修損壞。
+	
+Shrine.abilities.SpiritTapAbi.name	精神汲取
+Shrine.abilities.SpiritTapAbi.text	每[stat:spirit_sanctum_interval]秒，祭壇可重生圍繞它中型區域內所有有機體友軍單位[stat:spirit_sanctum_hp_perc]%生命點數。
+Temple.abilities.DarkWindAbi.name	暗風
+Temple.abilities.DarkWindAbi.text	當敵方部隊靠近神殿時，會有一團烏雲集中在頂端，降下閃電打擊攻擊者。每發擊中的閃電造成[stat:dark_wind_damage]點數傷害。
+Temple.abilities.FireLashAbi.name	火焰鞭
+Temple.abilities.FireLashAbi.text	火焰鞭升級可提高神殿閃電造成的傷害至[stat:fire_lash_damage]。閃電也會在地面形成熔解點，每秒對任何站在上面的單位造成[stat:fire_lash_area_damage]點數傷害。
+Temple.abilities.SpiritSanctumAbi.name	精神聖所
+Temple.abilities.SpiritSanctumAbi.text	每[stat:spirit_sanctum_interval]秒，神殿可重生圍繞它大範圍區域內所有有機體友軍單位 [stat:spirit_sanctum_hp_perc]%生命點數以及[stat:spirit_sanctum_power_perc]%能量。
+	
+Breeder.abilities.BreedEggs.name	繁殖蛋體
+Breeder.abilities.BreedEggs.text	繁殖者可生出蛋體作為防禦設施。
+Portal.abilities.BreedEggs.name	繁殖蛋體
+Portal.abilities.BreedEggs.text	傳送門可生出蛋體作為防禦設施。它能比繁殖者維持更多蛋體。
+Portal.abilities.CorruptionField.name	腐化力場
+Portal.abilities.CorruptionField.text	傳送門的腐化力場每秒對附近敵人造成[corruption_field_damage]點數傷害。
+Portal.abilities.SuppressionField.name	壓制力場
+Portal.abilities.SuppressionField.text	傳送門的壓制力場可遲滯附近敵人達 [suppression_field_slow_perc]%。
+	
+// ABILITIES //////////////////////////////////////////////////////////////////	
+	
+Ability_Rupture.name	爆裂
+Ability_Rupture.text	撕裂者的攻擊有[stat:rupture_chance]%機率震懾它的目標 [stat:rupture_stun_duration] 秒。
+AlienEgg.abilities.ClammyAcid.name	酸液噴發
+AlienEgg.abilities.ClammyAcid.text	蛋體可對附近敵人發射酸液，降低他們的裝甲效力[stat:clammy_acid_armor_perc]%。此效果最多可累積5次。
+AlienEgg.abilities.Hatchlings.name	孵化體
+AlienEgg.abilities.Hatchlings.text	如果蛋體被摧毀，裡頭的孵化體會生出來並且自動攻擊附近敵人。
+AlienEgg.abilities.Sizzle.name	熱爆
+AlienEgg.abilities.Sizzle.text	蛋體偶爾會釋放炙熱的能源爆破。這些釋放的能源會降低附近所有敵人可造成的傷害達[sizzle_damage_reduction_perc]%。
+AncientShade.abilities.UnholyAttackAbi.name	邪惡攻擊
+AncientShade.abilities.UnholyAttackAbi.text	幽靈的預設攻擊完全忽視敵人的裝甲。
+Assassin.abilities.Sharpshooter.name	神射手
+Assassin.abilities.Sharpshooter.text	刺客在最大距離最為致命，不過他們在較短距離時效力會明顯地下降。戰鬥期間試著將他們擺對位置並且避免強迫他們進行近距離戰鬥。
+AssaultBotAbilities.Rocket.name	震盪火箭
+AssaultBotAbilities.Rocket.text	突襲機器人有[stat:rocket_precision_chance]%機率在每次攻擊時對附近目標發射一枚震盪火箭。造成的爆炸可降低受影響敵人的效力，導致他們的預設攻擊減少[stat:rocket_precision_damage_perc]%傷害。此效果最多可累積5次。
+Brute.abilities.GrowlAbi.name	咆哮
+Brute.abilities.GrowlAbi.text	兇獸有[stat:growl_chance]%機率在每次攻擊時吸引目標的注意，導致該目標專注攻擊兇獸 [stat:growl_duration]秒。
+Brute.abilities.IgniteOnHitAbi.name	激動
+Brute.abilities.IgniteOnHitAbi.text	兇獸擊中目標後有[stat:ignite_on_strike_chance]%機率陷入爆怒，激發自己[stat:ignite_duration]秒。激動中的兇獸對他前方最多[ignite_targets]目標造成額外 [ignite_damage]傷害。
+Brute.abilities.IgniteOnKillAbi.name	激動
+Brute.abilities.IgniteOnKillAbi.text	兇獸殺死牠的目標後會陷入爆怒，激動中的兇獸對他前方最多[ignite_targets]目標造成額外 [ignite_damage]傷害。
+ChainShotAbi.name	連鎖射擊
+ChainShotAbi.text	仲裁者有[stat:chain_shot_chance]%機率在每次射擊時觸發連鎖反應，傷害好幾為額外敵人。
+ChargeAbi.name	衝鋒
+ChargeAbi.text	靠近敵人時，守護者會在最後幾公尺時衝過去，立即進入戰鬥距離。
+DeathRumbleAbi.name	死亡震動
+DeathRumbleAbi.text	驚懼獸有[stat:death_rumble_chance]%引發邪惡新星，對附近所有敵人造成 [stat:death_rumble_damage]傷害。
+DischargeAbi.name	洩能
+DischargeAbi.text	判官的攻擊有[stat:discharge_chance]%機率從他的目標扣除[burned_power]點能量並且把它轉為傷害。
+DominatorBlightRayAbi.name	枯萎光線
+DominatorBlightRayAbi.text	支配者的預設攻擊完全忽視敵人的裝甲。
+DominatorStasisShotAbi.name	靜止射擊
+DominatorStasisShotAbi.text	支配者有[stat:stasis_shot_chance]%機率震懾他的目標[stat:stasis_shot_duration]秒，並且在射擊時造成兩倍傷害。
+EnfeebleAbi.name	衰弱
+EnfeebleAbi.text	迅變者有 [stat:enfeeble_chance]%機率在每次攻擊時虛弱圍繞它的所有敵方目標[stat:enfeeble_duration]秒，降低他們傷害達[stat:enfeeble_damage_reduction_perc]%。此效果最多可累積5次。
+ExposeTargetAbi.name	揭露
+ExposeTargetAbi.text	刺客有[stat:expose_target_chance]%機率在每次射擊時貫穿目標的裝甲，降低其效力達[stat:expose_target_armor_perc]%，持續時間[stat:expose_target_armor_duration]秒。此效果最多可累積五次。
+FeedbackAbi.name	回饋
+FeedbackAbi.text	崔泰克有[stat:feedback_chance]%在射擊時治療自己[stat:feedback_heal]生命點數。
+Harvester.abilities.ImminenceAbi.name	緊迫
+Harvester.abilities.ImminenceAbi.text	收割者有[stat:confuse_chance]%機率在每次攻擊時吸引目標的注意，導致該目標集中攻擊收割者10秒鐘。
+HarvesterHarvestAbi.name	收割
+HarvesterHarvestAbi.text	收割者有[stat:harvest_chance]%機率在每次攻擊時使出一種特殊攻擊，打擊他周圍所有目標，震懾他們。
+HarvesterParalyzingField.name	麻痺力場
+HarvesterParalyzingField.text	收割者可遲滯所有附近有機體敵人的移動達[stat:paralyzing_field_speed_reduction_perc]%。
+Hatchling.abilities.ThreatenAbi.name	恐嚇
+Hatchling.abilities.ThreatenAbi.text	孵化體有[stat:threaten_chance]%機率在每次攻擊時威脅它的目標，迫使他集中攻擊於孵化體[stat:threaten_duration]秒。
+HellfireAbilities.Shield.name	力場
+HellfireAbilities.Shield.text	當地獄火受到攻擊時會自動啟動一道強大的護盾。此護盾力場的耐久度為[stat:shield_hull]、充能率為[stat:shield_regen]、有[stat:shield_fullabsorbchance]%機率完全偏轉攻擊，並且可吸收[stat:shield_percentabsorbtion]%點數傷害。
+HollowVoiceAbi.name	驚恐之語
+HollowVoiceAbi.text	驚懼獸有[stat:hollow_voice_chance]%機率召集它的地底世界之聲並且發出令人膽戰心驚的嗥叫，d對它前方所有敵人造成[stat:hollow_voice_damage]傷害。
+HolyAuraAbi.name	聖光
+HolyAuraAbi.text	祭司長的以自然能源的力量圍繞著他，每[stat:holy_aura_tick]治療所有結盟單位[stat:holy_aura_heal]秒。
+LeadershipAbi.name	領導力
+LeadershipAbi.text	透過攻擊敵人以及觀察戰鬥，判官會自動地晉升附近裝甲兵成為精銳狀態。精銳裝甲兵對目標造成兩倍傷害的機率增加。
+LeechAbi.name	吸能
+LeechAbi.text	石鬼有[stat:drain_psi_chance]%機率在每次攻擊時從目標竊取最多[stat:drain_psi_amount]點能量並且把相同總數的能量給予附近所有友軍單位。
+LifeLeechAbi.name	生命吸收
+LifeLeechAbi.text	每次攻擊，操弄者從它的目標吸取[stat:damage]點生命並且散佈治療附近所有結盟單位。
+LongRangeAbi.name	長射程
+LongRangeAbi.text	仲裁者可造成極大的傷害，不過只有在他最大射程才能發揮效力。從近距離攻擊會大幅地將低他的傷害。
+NanofixAbi.name	奈米修復
+NanofixAbi.text	創造一波奈米粒子，立刻維修一台機器[stat:nano_fix_heal]生命點數。
+OverchargeAbi.name	超載射擊
+OverchargeAbi.text	建築師有[stat:overcharge_chance]%機率使出一種以能源為基礎的閃電而非他的正常攻擊，對目標造成兩倍傷害。同時，這種超載閃電會在受影響目標周圍產生地獄新星，造成小區域內所敵人一半的傷害並且震懾他們[stat:overcharge_stun_duration]秒。
+OverseerChargingFieldAbi.name	充能力場
+OverseerChargingFieldAbi.text	能量監督的靈光每[stat:charging_field_tick]可恢復附近所有結盟單位[stat:charging_field_psi_perc]%能量。
+OverseerPlasmaShieldAbi.name	電漿護盾
+OverseerPlasmaShieldAbi.text	當監督受到攻擊時會自動啟動一道強大的護盾。這道電漿護盾的耐久度為[stat:shield_hull]、充能率為[stat:shield_regen]、有[stat:shield_fullabsorbchance]%機率完全偏轉攻擊，並且可吸收[stat:shield_percentabsorbtion]%.傷害。
+PlasmaShieldAbi.name	電漿護盾
+PlasmaShieldAbi.text	當大師收到攻擊時會自動啟動一道強大的護盾。這道電漿護盾的耐久度為[stat:shield_hull]、充能率為 [stat:shield_regen]、有[stat:shield_fullabsorbchance]%機率完全偏轉攻擊，並且[stat:shield_percentabsorbtion]%點數傷害。
+PowerLeakAbi.name	能量滲漏
+PowerLeakAbi.text	迅變者的預設攻擊有[power_leak_chance]%機率減少敵人的能量達[power_leak_drain]%。
+PyroblastAbi.name	火焰爆破
+PyroblastAbi.text	祭司長有[stat:pyrowave_chance]%機率在每次攻擊時發出強大的火焰波，傷害最多兩個額外目標。
+RepairDronesAbi.name	維修機器人
+RepairDronesAbi.text	啟動機器人維修建築師以及附近的盟軍機器。
+Shaman.abilities.DrainLife.name	吸取生命
+Shaman.abilities.DrainLife.text	薩滿有[stat:drain_life_chance]%機率對他目前的目標造成[stat:damage]點傷害並且在圍繞他的小區域內醫療所有活著的友軍單位[stat:shift_stun_duration]秒。
+ShiftAbi.name	移形
+ShiftAbi.text	戰鬥時，守護者能使用她的力量移形通過次元，移到她自己到目標周圍。這種移形可造成兩倍傷害並且震懾目標[stat:shift_stun_duration]。
+Shifter.abilities.CloneShieldAbi.name	錐形護盾
+Shifter.abilities.CloneShieldAbi.text	當迅變者受到攻擊時會自動啟動錐形護盾。它的耐久度為[stat:shield_hull]、充能率為[stat:shield_regen]、有[stat:shield_fullabsorbchance]%機率完全偏轉攻擊，並且可吸收[stat:shield_percentabsorbtion]%傷害。同時，每次錐形護盾完全地偏轉過來的攻擊時，它會複製並且保護附近一個隨機的崔薩特或崔泰克。
+Sorcerer.abilities.ChillAbi.name	寒氣
+Sorcerer.abilities.ChillAbi.text	術士的預設攻擊可遲滯他的目標達[stat:chill_perc]%，持續時間 [stat:chill_duration]秒。
+SurgeonAbilities.FirstAid.name	急救
+SurgeonAbilities.FirstAid.text	醫生會在一般規模範圍內自動治療受傷單位，恢復[stat:bandage_amount]生命點數並且移除一項有害效果。右擊點選一位友軍目標來標示醫生跟隨著它並且特別關注它的生命點數。
+Trisat.abilities.FrenzyAbi.name	狂熱
+Trisat.abilities.FrenzyAbi.text	崔薩特每次造成[stat:frenzy_threshold]傷害後會陷入狂熱狀態，增加它的裝甲[stat:frenzy_armor] 以及它的傷害[stat:frenzy_damage]%。這種有利效果最多可累積3次，但是如果崔薩特在[stat:frenzy_duration]秒沒有擊中任何敵人，此效果會消退。
+Trisat.abilities.ParalyzingFieldAbi.name	麻痺力場
+Trisat.abilities.ParalyzingFieldAbi.text	崔薩特可遲滯附近所有有機體敵人達[stat:paralyzing_field_speed_reduction_perc]%。
+TrooperAbilities.Grenade.name	投擲榴彈
+TrooperAbilities.Grenade.text	裝甲兵有[stat:throw_grenade_chance]%機會在每次攻擊時對他的目標投擲爆破榴彈。榴彈可在小區域內造成 [stat:grenade_damage]傷害。然而，如果榴彈有可能傷害到友軍單位，裝甲兵就不會使用這項能力。
+UnholyAuraAbi.name	邪光
+UnholyAuraAbi.text	石鬼維持與地底世界的聯繫，每[stat:unholy_aura_interval]秒可治療所有附近所有地底世界生物（石鬼、古代幽靈、嗥叫驚懼獸、靈魂蠕蟲）[stat:unholy_aura_heal]生命點數。
+Warrior.abilities.SharpShooterAbi.name	神射手
+Warrior.abilities.SharpShooterAbi.text	戰士在最大射程射擊時非常有效力。然而，如果被迫進入短距離戰鬥，他很快地會失去效力。
+WhirlwindAbi.name	旋風擊
+WhirlwindAbi.text	戰鬥時，守護者有[stat:whirlwind_chance]%機率使出一種特殊攻擊，對所有鄰近目標造成傷害。
+Worker.abilities.RepairAbi.name	維修建築物
+Worker.abilities.RepairAbi.text	工人可以維修受損的建築物。
+Worker.abilities.BuildAbi.name	建造祭壇
+Worker.abilities.BuildAbi.text	工人可以在為佔用的異域礦床建造新祭壇。
+	
+// BUFFS //////////////////////////////////////////////////////////////////////	
+	
+AlienEgg.SizzleAura.effect.name	熱爆
+AlienEgg.SizzleAura.effect.text	此單位受附近異形蛋體的熱爆而變弱。
+AlienEgg.weapon.effect.name	酸液噴發
+AlienEgg.weapon.effect.text	此單位的裝甲受到酸液噴發而變弱。
+AssaultBotAbilities.Rocket.effect.name	降低傷害
+AssaultBotAbilities.Rocket.effect.text	此單位的效力受震盪火箭而變弱。
+BigOne.abilities.VenomousBiteAbi.effect.name	毒素
+BigOne.abilities.VenomousBiteAbi.effect.text	此單位受毒液攻擊而受傷害。
+BigOne.abilities.VenomShowerAbi.effect.name	毒素
+BigOne.abilities.VenomShowerAbi.effect.text	此單位受毒液攻擊而受傷害。
+BigOne.ParalyzingFieldAura.effect.name	遲緩毒素
+BigOne.ParalyzingFieldAura.effect.text	此單位受麻痺性毒液而變得遲緩。
+Brute.abilities.GrowlAbi.effect.name	咆哮
+Brute.abilities.GrowlAbi.effect.text	此單位受到兇獸威脅而無法攻擊其他人。
+Brute.abilities.IgniteOnHitAbi.effect.name	激動
+Brute.abilities.IgniteOnHitAbi.effect.text	此單位處於一種可以提升其效力的特殊狀態。
+Brute.abilities.IgniteOnKillAbi.effect.name	激動
+Brute.abilities.IgniteOnKillAbi.effect.text	此單位處於一種可以提升其效力的特殊狀態。
+ChainShotAbi.effect.name	連鎖射擊
+ChainShotAbi.effect.text	此單位受到連鎖射擊承受傷害。
+ChillSpell.effect.name	寒氣
+ChillSpell.effect.text	此單位受到術士的攻擊變得遲緩。
+ConfuseAction.spell.effect.effect.name	混亂
+ConfuseAction.spell.effect.effect.text	貴族指揮官的裝甲在混亂戰法期間增加了。
+CorruptionAction.spell.effect.name	腐化
+CorruptionAction.spell.effect.text	此單位被腐化咒語攻擊承受毒素傷害
+DarkWind.FireLashHit.IncinerateAura.effect.name	焚化
+DarkWind.FireLashHit.IncinerateAura.effect.text	此單位被附近敵人神殿造成的閃電攻擊承受火焰傷害。
+DominatorDimensionChainAction.spell.effect.effect.name	次元鎖鍊
+DominatorDimensionChainAction.spell.effect.effect.text	此單位被所在次元鎖鍊中無法移動
+EnfeebleAbi.effect.name	虛弱
+EnfeebleAbi.effect.text	此單位受到迅變者攻擊而變弱。
+ExposeTargetAbi.effect.name	揭露目標
+ExposeTargetAbi.effect.text	此端次的護甲被刺客攻擊而變弱。
+FeedAction.spell.effect.caster_effect_on_start.name	飲命
+FeedAction.spell.effect.caster_effect_on_start.text	此單位被飲命影響獲得治療。
+FeedAction.spell.effect.name	飲命
+FeedAction.spell.effect.text	此單位被飲命影響承受傷害。
+FrostWaveAction.spell.effect.name	寒氣
+FrostWaveAction.spell.effect.text	此單位受到術士的攻擊變得遲緩。
+Guardian.FortifyAura.effect.name	強固
+Guardian.FortifyAura.effect.text	此單位的裝甲受附近守護者強固靈光影響而強化。
+Harvester.abilities.ImminenceAbi.effect.name	緊迫
+Harvester.abilities.ImminenceAbi.effect.text	此單位受到收割者威脅無法攻擊其他人。
+Harvester.ParalyzingFieldAura.effect.name	麻痺力場
+Harvester.ParalyzingFieldAura.effect.text	此單位受到麻痺力場而遲緩。
+Hatchling.abilities.ThreatenAbi.effect.name	恐嚇
+Hatchling.abilities.ThreatenAbi.effect.text	此單位受到孵化體威脅而無法攻擊其他人。
+HowlArmor.name	嗥叫裝甲
+HowlArmor.text	此單位處於護甲增加的特殊狀態。
+HowlFear.name	嗥叫恐懼
+HowlFear.text	此單位受到恐懼侵襲而無法執行命令。
+HowlHeal.name	嗥叫治療
+HowlHeal.text	此單位處於提高生命值恢復的特殊狀態。
+IncinerateSpot.IncinerateAura.effect.name	焚化
+IncinerateSpot.IncinerateAura.effect.text	此單位被焚化咒語攻擊而成受傷害。
+InjectAction.effect.name	注射
+InjectAction.effect.text	貴族指揮官在注射藥物的影響下恢復他的生命值。
+JurranAssassin.weapon.alt_projectile.effect.name	毒素
+JurranAssassin.weapon.alt_projectile.effect.text	此單位受毒液攻擊而受傷害。
+M33Breeder.CorruptionFieldAura.effect.name	腐化力場
+M33Breeder.CorruptionFieldAura.effect.text	此單位受腐化力場影響而中毒。
+M33Breeder.SuppressionFieldAura.effect.name	壓制力場
+M33Breeder.SuppressionFieldAura.effect.text	此單位受壓制力場影響而遲緩。
+MarkOfChaosAction.effect.name	混沌記號
+MarkOfChaosAction.effect.text	此單位受混沌記號影響而成受傷害。
+MutantsThunder.ThunderSlowAura.effect.name	閃電風暴遲滯
+MutantsThunder.ThunderSlowAura.effect.text	此單位受閃電風暴影響而遲緩
+Overseer.ChargingFieldAura.effect.name	充能力場
+Overseer.ChargingFieldAura.effect.text	此單位的能量被充能力場給補充
+Portal.CorruptionFieldAura.effect.name	腐化力場
+Portal.CorruptionFieldAura.effect.text	此單位受腐化力場影響而中毒。
+Portal.SuppressionFieldAura.effect.name	壓制力場
+Portal.SuppressionFieldAura.effect.text	此單位受壓制力場影響而遲緩。
+S_fear.name	恐懼
+S_fear.text	此單位受到恐懼侵襲而無法執行命令。
+S_freeze.name	冰凍
+S_freeze.text	此單位被冰凍暫時無法做任何事。
+S_madden.name	瘋狂
+S_madden.text	此段陷入瘋狂無法區分敵友。
+S_stun.name	震懾
+S_stun.text	此單位被震懾暫時無法做任何事。
+SalingAssassin.weapon.alt_projectile.effect.name	毒素
+SalingAssassin.weapon.alt_projectile.effect.text	此單位受毒液攻擊而受傷害。
+Shrine.SpiritTrapAura.effect.name	精神汲取
+Shrine.SpiritTrapAura.effect.text	此單位受附近神殿的精神穿刺靈光影響恢復生命值。
+SpittingScorpion.abilities.VenomousBiteAbi.effect.name	毒素
+SpittingScorpion.abilities.VenomousBiteAbi.effect.text	此單位受毒液攻擊而受傷害。
+StoneGhost.UnholyPowerAura.effect.name	邪惡之力
+StoneGhost.UnholyPowerAura.effect.text	此單位的能量受附近石鬼而補充。
+VoiceofCommandAction.effect.name	掃射火焰
+VoiceofCommandAction.effect.text	此單位的攻擊效力受到附近判官強化。
+Temple.SpiritSanctumAura.effect.name	精神聖所
+Temple.SpiritSanctumAura.effect.text	此單位的生命點數及能量受附近神殿的精神聖所影響而恢復。
+TrackAction.spell.effect.name	毒素
+TrackAction.spell.effect.text	此單位受毒液攻擊而受傷害。
+Trisat.frenzy.effect.name	狂熱
+Trisat.frenzy.effect.text	此單位陷入狂熱。他的裝甲及傷害點數增加。
+Trisat.ParalyzingFieldAura.effect.name	麻痺力場
+Trisat.ParalyzingFieldAura.effect.text	此單位受到麻痺力場而遲緩。
+VarunAssassin.weapon.alt_projectile.effect.name	毒素
+VarunAssassin.weapon.alt_projectile.effect.text	此單位受毒液攻擊而受傷害。
+Vasilii.weapon.projectile.effect.effect.name	毒素
+Vasilii.weapon.projectile.effect.effect.text	此單位受毒液攻擊而受傷害。
+VenomousScorpion.abilities.VenomousBiteAbi.effect.name	毒素
+VenomousScorpion.abilities.VenomousBiteAbi.effect.text	此單位受毒液攻擊而受傷害。
+VenomousScorpion.ParalyzingFieldAura.effect.name	遲緩毒素
+VenomousScorpion.ParalyzingFieldAura.effect.text	此單位受麻痺性毒液而變得遲緩。
+E_PlaguedCorrosion.name	瘟疫腐化
+E_PlaguedCorrosion.text	此單位被治療時減少[stat:healing_taken_debuff_amount]%生命點數獲得。
+LavaTrap.IncinerateAura.effect.name	焚化
+LavaTrap.IncinerateAura.effect.text	此單位承受地面熔化點的傷害。
+QueenProtector.abilities.Taunt.effect.effect.name	混亂
+QueenProtector.abilities.Taunt.effect.effect.text	此單位受到皇后保衛者的威脅而無法攻擊其他人。
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.name	毒素
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.text	此單位受毒液攻擊而受傷害。
+Kai_Rider.frenzy.effect.name	狂熱
+Kai_Rider.frenzy.effect.text	此單位陷入狂熱，致命一擊的機率增加。
+CPCorruptedBody.name	腐化肉體
+CPCorruptedBody.text	此單位受邪惡力量影響而狀態增加。
+CPCorruptedMind.name	腐化心靈
+CPCorruptedMind.text	此彎為心靈被腐化，迫使他為敵人戰鬥。
+AncientSmith.abilities.ConfuseAbi.effect.effect.name	混亂
+AncientSmith.abilities.ConfuseAbi.effect.effect.text	遠古史密斯的裝甲在混亂戰法期間增加。
+AncientSmith.AncientSmithBerserkAura.effect.name	狂暴
+AncientSmith.AncientSmithBerserkAura.effect.text	此單位受到附近遠古史密斯的狂暴靈光影響傷害力增加。
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.name	混亂
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.text	遠古史密斯的裝甲在混亂戰法期間增加。
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.name	混亂
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.text	此單位被遠古史密斯威脅而無法攻擊其他人。
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.name	混亂
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.text	遠古史密斯的裝甲在混亂戰法期間增加。
+AncientSmithMinion.AncientSmithFortifyAura.effect.name	強固
+AncientSmithMinion.AncientSmithFortifyAura.effect.text	此單位的裝甲受到附近遠古史密斯的強固靈光影響而強化。
+RenegadeManipulator.abilities.EnrageAbi.effect.name	激怒
+RenegadeManipulator.abilities.EnrageAbi.effect.text	此單位受到友好的背叛操弄者的影響而狀態增強。
+RenegadeDominator.abilities.DimensionChainAbi.effect.effect.name	次元鎖鍊
+RenegadeDominator.abilities.DimensionChainAbi.effect.effect.text	此單位被所在次元鎖鍊中無法移動
+RenegadeHarvester.abilities.EnsnareAbi.projectile.effect.name	獵網
+RenegadeHarvester.abilities.EnsnareAbi.projectile.effect.text	此單位被困在獵網之中無法動彈。
+E_bt_shield.name	特殊防禦
+E_bt_shield.text	此單位被賦予特殊防衛能力。
+E_bt_weapon.name	特殊進攻
+E_bt_weapon.text	此單位被賦予特殊進攻能力。

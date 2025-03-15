@@ -1,0 +1,66 @@
+Mob ROMDefenceTower : BaseMachineMob {
+  name = "ROM Defence Tower"
+  icon = 3,26
+  model = Data/Models/buildings/DefencePost/DefencePost.kfm
+  explosion = ExplosionMedium_03
+  scale = 3
+  
+  movable = 0
+  hp = 0
+  range = 10000
+  sight = 10000
+  chase_range = -1
+  damage = 75
+
+  pitch_speed = 30
+  min_pitch = -45
+  max_pitch = 45
+  yaw_speed = 90
+
+  CAlertController alert {
+    timeout = 15
+    layered_anims = 0
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    root_node = rot_z
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/quasar/
+    idle_time = 1.2
+    idle_time = 0.7
+    spot_impact = 800
+    spot_impact_type = bullet
+
+    muzzle_fx ROMTowerMuzzle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+      frequency	= 1
+      active_fraction = 20 
+      active_variation = 0
+      length_variation = 20
+      width_variation = 5
+      scale = 1
+      instances = 64
+      emit = 255,255,255
+    }
+
+    instant_shot ROMTowerShot {
+      model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+      dist_start = 20
+      travel_start = 100
+      travel_end = 20
+      duration = 0.2
+      time_fraction_to_lag_end = 20
+      width = 60
+      instances = 128
+      color_alpha {
+        0 = 200,20,20,0
+        20 = 200,20,20,255
+        80 = 200,80,20,100
+        150 = 200,60,30,50
+      }
+    }
+  }  
+}

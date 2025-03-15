@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\effects\miscreacts\paralyzingfield_yellow.nif";
+  animation = {
+    loop = fixp:"3.333333492279052734375";
+    duration = fixp:"0";
+  }
+}

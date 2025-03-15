@@ -1,0 +1,87 @@
+model = {
+  file = str:"data\models\buildings\teleportgate\teleport-gate_phase0.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"-13.330047607421875,28.5956573486328125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"pt_work_1";
+      translation = xpoint3:"-218.600433349609375,-284.391510009765625,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"pt_work_2";
+      translation = xpoint3:"-375.1949462890625,91.39990234375,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"pt_work_5";
+      translation = xpoint3:"9.103542327880859375,432.46148681640625,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"pt_work_3";
+      translation = xpoint3:"400.355865478515625,68.543914794921875,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"pt_work_4";
+      translation = xpoint3:"289.365020751953125,-293.633544921875,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"pt_spawn";
+    translation = xpoint3:"-0.8681812286376953125,-0.56542205810546875,74.62281036376953125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"pt_exit";
+    translation = xpoint3:"-0.868180096149444580078125,-348.345611572265625,6.40260982513427734375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

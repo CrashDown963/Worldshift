@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\blackexplfirenova\black exposion fire nova.kfm";
+  animations = {
+    EMPTY_SEQUENCE_AT_0f = {
+      loop = int:"0";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+  }
+}

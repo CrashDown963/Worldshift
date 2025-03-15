@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\buildings\shrinetemple\shrine_build.nif";
+  animation = {
+    loop = fixp:"0.7333333492279052734375";
+    duration = fixp:"4.266666889190673828125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Emmiter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"PCloud01-Emitter";
+      translation = xpoint3:"-129.4119873046875,994.70343017578125,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"PCloud02GroundDust-Emitter";
+      translation = xpoint3:"0,0,83.45600128173828125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"Segment_rot_01";
+      translation = xpoint3:"0,0,603.9415283203125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #6 = {
+      scale = fixp:"1";
+      name = str:"PCloud02Build_Idle-Emitter";
+      translation = xpoint3:"0,0,204.6385955810546875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

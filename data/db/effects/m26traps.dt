@@ -1,0 +1,81 @@
+CSetEffect E_boom_trap : E_set {
+  effect = E_damage {
+    amount = 180
+    area = 200
+  }
+  effect = E_spawn {
+    spawn_at_exact_location = 1
+    spawn {
+      Explosion_2_Big = 1
+    }
+  }
+}
+
+CSetEffect E_lava_trap : E_set {
+  effect = E_damage {
+    amount = 120
+    area = 200 {
+      sound = data/sounds/units/highpriest/lightning/
+    }
+  }
+  effect = E_spawn {
+    spawn_at_exact_location = 1
+    spawn {
+      LavaTrap = 1
+      BigLightningStrike03 = 1
+    }
+  }
+}
+
+CSetEffect E_freeze_trap : E_set {
+  effect = E_damage {
+    amount = 100
+    area = 250
+  }
+  effect = S_multifreeze {
+    multi_area = 250 { 
+      anim = data/models/effects/magic/FreezingBlast.nif
+      scale = 0.4 
+    }
+    sound = data/sounds/Effects/AcidBlow/
+    duration = 10
+  }
+}
+
+Actor LavaTrap {
+  decal = molten_spot_area
+  scale = 0.6
+  CAutoDieController AutoDie {
+    duration = 10
+  }
+
+  hull = 0
+  sight = 0
+  selectable = 0
+  attackable = 0
+  no_mouse_targetable = 1
+  discard_area = 150
+
+  CEffectAura LavaTrapIncinerateAura {
+    range = 200
+    faction = enemy
+    exclude_self = 1
+    non_stackable = 1
+    effect = E_debuff {
+      name = "Lava"
+      text = "This unit is suffering fire damage from a hot lava trap."
+      icon = 4,1
+      id = LavaTrapIncinerate
+      type = damage
+      damage = 35
+      damage_type = fire
+      duration = -1
+      tick = 1
+      immediate_tick = 1
+      discard_react = 1
+      react = fire
+      stack_count = 1
+      cleansable = 0
+    }
+  }
+}

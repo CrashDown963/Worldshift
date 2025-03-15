@@ -1,0 +1,91 @@
+Mob KharumSorcerer : BaseMob {
+  name : Sorcerer.name
+  descr : Sorcerer.descr
+  model = Data/Models/Units/Sorcerer/Sorcerer.kfm
+  race = mutants
+  icon = 2,25
+  
+  tags = unit, organic
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Sorcerer/Sorcerer.pml
+  }
+  destruction = ragdoll
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+  
+  attachments {
+    "pt_hand@#0" = data/models/effects/Magic/Small_Ice.nif { fixed_up = 1 }
+    pt_staff = data/models/effects/Fire/Fire_small.nif { scale = 1; fixed_up = 1 }
+  }
+
+  impacts : LivingUnitImpacts
+  
+  stats :{
+    hp = 480
+    range = 1700
+    psi = 400
+    damage = 60
+    armor = 0
+    
+    chill_psi_cost = 150
+    chill_duration = 12
+    chill_perc = 50
+    
+    incinerate_psi_cost = 120
+    incinerate_duration = 6
+    incinerate_damage = 25
+  } 
+
+  hull = stat:hp
+  range = stat:range
+  battery = stat:psi
+  armor = stat:armor
+  damage = stat:damage
+  
+  
+  
+  xp = 1
+  take_auras : { xp_boost; RestorationCoreAura }
+  
+  abilities {
+    AIIncinerate {
+      action = IncinerateAction
+      when   : abi.fight
+      target = current { aoe_range = 750; aoe_min_enemy_hp = 400; aoe_min_enemy_count = 4; aoe_max_ally_count = 2 }
+      range = stat:range
+    }
+  }
+  
+  actions : BaseUnit.actions {
+    IncinerateAction
+    FrostWaveAction
+  }
+
+  attack_spell = ChillSpell
+  
+  animation {
+   
+    cast_chill_prepare = cast_preparation
+    cast_chill_finish = cast_finish
+    cast_freeze_prepare = cast_preparation
+    cast_freeze_finish = cast_finish
+    cast_pyrokinesis_prepare = cast_preparation
+    cast_pyrokinesis_finish = cast_finish
+  }
+  
+  drainpsy_attachments {
+    anim = cast_drainpsy_channeling
+    infinite = 1
+    attach {
+      pt_hand = data/models/effects/magic/drainhands.nif
+    }
+  }
+  
+  drainpsy_p2p_attachment = pt_hand
+  drainpsy_react = drainpsy_small
+ 
+  cost : pvp.mutants.unit_costs.Officer
+}

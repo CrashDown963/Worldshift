@@ -1,0 +1,48 @@
+CParticleObject Fire_Building_1 {
+ group = Embelishments
+ subgroup = fires
+ model = data/models/effects/Fire/BuildingFire1.nif
+ scale = 1
+}
+
+CParticleObject Fire_Ani1 {
+ group = Embelishments
+ subgroup = fires
+ model = data/models/effects/Fire/Fire_Ani1.nif
+ scale = 1
+}
+
+CParticleObject Fire_Ani2 {
+ group = Embelishments
+ subgroup = fires
+ model = data/models/effects/Fire/Fire_Ani2.nif
+ scale = 1
+}
+
+CParticleObject Fire_Med1 {
+ group = Embelishments
+ subgroup = fires
+ model = data/models/effects/Fire/Fire_Med1.nif
+ scale = 1
+}
+
+CParticleObject Fire_Med2 {
+ group = Embelishments
+ subgroup = fires
+ model = data/models/effects/Fire/Fire_Med2.nif
+ scale = 1
+}
+
+CParticleObject Fire_Smoke {
+ group = Embelishments
+ subgroup = fires
+ model = data/models/effects/Fire/Fire&Smoke1.nif
+ scale = 1
+}
+
+CParticleObject Fire_Ani1_Small {
+ group = Embelishments
+ subgroup = fires
+ model = data/models/effects/Fire/Fire_Ani1_Small.nif
+ scale = 1
+}

@@ -1,0 +1,117 @@
+model = {
+  file = str:"data\models\effects\magic\stoneghostattachment.nif";
+  animation = {
+    loop = fixp:"2";
+    duration = fixp:"4";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Dummy04";
+      translation = xpoint3:"0,0,214.9595794677734375";
+      rotation = {
+        0 = xpoint3:"0,0,-0.999999940395355224609375";
+        1 = xpoint3:"-0.70710742473602294921875,0.707106113433837890625,0";
+        2 = xpoint3:"0.707106053829193115234375,0.70710742473602294921875,0";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Glow03";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Trail03";
+          translation = xpoint3:"84.43720245361328125,0,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Glow04";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"0,-1,0";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Trail04";
+          translation = xpoint3:"84.43698883056640625,0,0";
+          rotation = {
+            0 = xpoint3:"0,1,0";
+            1 = xpoint3:"0,0,1";
+            2 = xpoint3:"1,0,0";
+          }
+        }
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Dummy03";
+      translation = xpoint3:"0,0,348.29400634765625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0.70710694789886474609375,-0.70710659027099609375";
+        2 = xpoint3:"0,0.70710659027099609375,0.70710694789886474609375";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Glow01";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Trail01";
+          translation = xpoint3:"84.43721771240234375,0,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Glow02";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"0,-1,0";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Trail02";
+          translation = xpoint3:"84.43698883056640625,0,0";
+          rotation = {
+            0 = xpoint3:"0,1,0";
+            1 = xpoint3:"0,0,1";
+            2 = xpoint3:"0.999999940395355224609375,0,0";
+          }
+        }
+      }
+    }
+  }
+}

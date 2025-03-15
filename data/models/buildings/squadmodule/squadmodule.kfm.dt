@@ -1,0 +1,75 @@
+model = {
+  file = str:"data\models\buildings\squadmodule\squadmodule.kfm";
+  animations = {
+    EMPTY_SEQUENCE_AT_40f = {
+      loop = int:"0";
+      duration = fixp:"3.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.5";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"1.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.5";
+        }
+      }
+    }
+    power_in = {
+      loop = int:"0";
+      duration = fixp:"1.30000007152557373046875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.30000007152557373046875";
+        }
+      }
+    }
+    power_idle = {
+      loop = int:"1";
+      duration = fixp:"0.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.30000019073486328125";
+        }
+      }
+    }
+    power_out = {
+      loop = int:"0";
+      duration = fixp:"1.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.333333492279052734375";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+decal_settings footprints_consts {
+  settings_id = footprints
+  max_decals = 50
+  life_time = 10
+  fade_time = 1
+  fast_fade = 1
+
+-- negative sizes mean scale, positive sizes mean absolute size in cm
+
+  start_size = -1
+  grown_size = -1
+  grow_time = 0.5
+
+-- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+  size_variation = 0
+
+-- angle in degrees relative to the facing of the spawning actor
+-- negative angle means spawn with random rotation
+
+  angle_delta = 0
+}

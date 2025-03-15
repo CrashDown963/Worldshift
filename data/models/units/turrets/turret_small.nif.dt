@@ -1,0 +1,97 @@
+model = {
+  file = str:"data\models\units\turrets\turret_small.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Turet_Base";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"rot_z";
+          translation = xpoint3:"0,0,380.939605712890625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"turret_Kupol";
+            translation = xpoint3:"0,-12.3498668670654296875,9.5653076171875";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"rot_x";
+              translation = xpoint3:"0,33.260936737060546875,61.456455230712890625";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"turret_Canon";
+                translation = xpoint3:"0,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+                #0 = {
+                  scale = fixp:"1";
+                  name = str:"dulo";
+                  translation = xpoint3:"0,-177.646942138671875,-3.813574314117431640625";
+                  rotation = {
+                    0 = xpoint3:"1,0,0";
+                    1 = xpoint3:"0,1,0";
+                    2 = xpoint3:"0,0,1";
+                  }
+                  #0 = {
+                    scale = fixp:"1";
+                    name = str:"fire";
+                    translation = xpoint3:"0,-157.298553466796875,0";
+                    rotation = {
+                      0 = xpoint3:"1,0,0";
+                      1 = xpoint3:"0,1,0";
+                      2 = xpoint3:"0,0,1";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+Unit Archer : BaseUnit {
+  Halberdier = 1
+  model = data/models/units/KOHUnits/Archer.kfm
+  race = humans
+  tags = unit, organic
+  speed = 450
+
+
+  sight = 2000
+  aggro_range = var:sight
+  stats :{
+    hp = 1000
+    armor = 5
+    psi = 0
+    psi_gen = 0
+    range = 3000
+    min_range = 500
+    damage = 50
+
+  }
+  min_attack_range = 3	
+  max_attack_range = 3000
+
+  impacts : LivingUnitImpacts
+  
+  animation {
+    anim_set MELEE = loop {
+      hit_1 = 100,1,1
+      hit_3 = 100,1,1
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon_daggers {
+    active = 1
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    range = 200
+    min_range = 0
+    shoot_anim = MELEE
+    fire_node = pt_shoot_1
+    --fire_rate = 0.3
+    spot_impact = 900
+    spot_impact_type = melee
+  }
+  
+  CWeaponController weapon_bow {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    range = stat:range
+    min_range = stat:min_range
+    shoot_anim = hit_2 --ATTACK_MAIN
+    fire_node = pt_shoot_1
+    --fire_rate = 0.3
+    spot_impact = 900
+    spot_impact_type = melee
+    
+    projectile = parabolic {
+      angle = 30
+      model = data/models/units/kohunits/arrow.nif {
+        CTrailController trail {
+				  emitter = Scene Root
+				  texture = data/textures/trails/energy_trail1.dds
+				  tex_ratio = float: 4.0
+				  start_width = 14
+				  end_width = 0
+				  ttl = 12
+				  simple_time = 1
+				  additive = 1
+				  z_write = 0
+				  material_alpha = 0.5
+				  diffuse = color: 1, 1, 1
+				  ambient = color: 0.5, 0.5, 0.5
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 3
+				  color1 = colora: 1, 1, 1, 0.4
+
+				  time2 = 30
+				  color2 = colora: 1, 1, 1, 0.25
+
+				  time4 = 100
+				  color4 = colora: 1, 1, 1, 0
+			  }
+		  }
+    }
+  }
+}
+  

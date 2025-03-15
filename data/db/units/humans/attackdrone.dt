@@ -1,0 +1,106 @@
+Unit AttackDrone : MachineUnit {
+  name = "Attack Drone"
+  model = Data/Models/Units/repair_drone/repair_drone.kfm
+  race = aliens
+  tags = unit, lowrank
+  movement_type = hover
+  explosion = PlasmaExplosion
+  destruction = PlasmaExplosion
+  scale = 0.5
+  speed = 550
+  sight = stat:range * 1.1
+  aggro_range = 5000
+  waypoint_radius = 5000
+  maintain_count = 10
+  wander_stay = 6
+  selectable = 0
+  hover_altitude_min = 500
+  hover_altitude_max = 700
+
+  stats := {
+    hp = 100
+    damage = 10
+    range = 1600
+    fire_rate = 2
+  }
+
+  sounds {
+    explosion = sound = data/sounds/effects/explosionsmall/explode.wav
+    destruction = data/sounds/effects/explosionsmall/explode.wav
+    die = data/sounds/effects/common/repair_drone_down.wav
+  }
+    
+  CAutoDieController AutoDie {
+    duration = 60
+    show_progress = 0
+    }
+
+  animation {
+  }
+  
+  actions {
+  }
+
+  CTrailController trail {
+				  emitter = Box01
+				  texture = data/textures/trails/smoke_trail1.dds
+				  tex_ratio = float: 10
+				  start_width = 40
+				  end_width = 0
+				  ttl = 50
+				  simple_time = 1
+				  additive = 1
+                  z_write = 0
+				  material_alpha = 0.4
+				  diffuse = color: 1, 0.5, 0.5
+				  ambient = color: 0.5, 1, 0.5
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 0, 1, 1, 0.5
+
+				  time1 = 8
+				  color1 = colora: 0.6, 0.90, 0.10, 1
+
+				  time2 = 35
+				  color2 = colora: 0, 0.9, 0.0, 0.7
+	  
+				  time3 = 100
+				  color3 = colora: 0, 1, 0, 1
+	}  
+
+  attack_spell = AttackSpell
+  
+    AttackSpell {
+      range = stat:range
+      cast {
+        finish {
+          anim = cast_loop
+          sound = data/sounds/effects/common/short spark.wav
+          attach {
+            pt_cast = data/models/effects/magic/AlienCast01.nif
+          }
+      }
+    }
+    projectile = beam {
+      start_point = pt_cast
+      beam = RepairDronesBeam
+    }
+    
+    effect = E_damage {
+      amount = stat:damage
+      react = fire
+      can_crit = 1
+    }
+  }
+  abilities {
+    AttackDroneAbi {
+      name = "Scouting"
+      text = "The Sentinel is scouting the area"
+      when : abi.idle
+      target = enemy
+      range = 10000
+      program = PrgAttack
+    }
+  }
+}

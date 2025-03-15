@@ -1,0 +1,57 @@
+model = {
+  file = str:"data\models\projectiles\fire\hellfireshot_expire.nif";
+  animation = {
+    loop = fixp:"1.27777850627899169921875";
+    duration = fixp:"1.83333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray01-Emitter";
+    translation = xpoint3:"0,58.65460968017578125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0.0871560573577880859375,-0.996194660663604736328125";
+      2 = xpoint3:"0,0.996194660663604736328125,0.0871560573577880859375";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray02Redd-Emitter";
+    translation = xpoint3:"0,58.65460968017578125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Drag01";
+    translation = xpoint3:"-246.843963623046875,-20.3824787139892578125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray02Forward-Emitter";
+    translation = xpoint3:"0,58.65460968017578125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0.17364846169948577880859375,-0.9848077297210693359375";
+      2 = xpoint3:"0,0.9848077297210693359375,0.17364846169948577880859375";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray02Smoke-Emitter";
+    translation = xpoint3:"0,58.65460968017578125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

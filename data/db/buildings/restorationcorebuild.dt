@@ -1,0 +1,14 @@
+Building RestorationCoreBuild : BaseBuilding {
+  model = Data/Models/buildings/PowerCore/PowerCore_Build.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+
+  CAuraController Auras {
+    aura PowerCoreAura { 
+      range = 2500
+      active_in_construction = 1
+    }
+  }
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\crates\bidon01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"bidon01";
+    translation = xpoint3:"0.13682079315185546875,3.7708570957183837890625,50.78271484375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

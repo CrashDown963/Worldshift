@@ -1,0 +1,274 @@
+Guardian Guardian : BaseUnit {
+  name = "Guardian"
+  descr = "Guardian Placeholder Desc."
+  race = mutants
+  officer = 1   
+  icon = 1,5
+
+  tags = unit, organic
+  take_auras : { RestorationCoreAura }
+
+  model = Data/Models/Units/guardian/guardian.kfm
+  physics {
+    default = Data/Models/Units/Guardian/Guardian_Proxy.pml
+    die = Data/Models/Units/Guardian/Guardian.pml
+  }
+  destruction = ragdoll
+
+  sounds {
+    start = data/speech/summoning/guardian summoned.wav
+    attack = data/speech/confirmations/guardian/guardian attack/
+    select = data/speech/selecting/guardian select/
+    joke = data/speech/selecting/guardian joke/
+    confirm = data/speech/confirmations/guardian/guardian confirm/
+    destruction = data/speech/deaths/guardian death/
+  }
+
+  CTrailController trail {
+    emitter = pt_charge01
+    texture = data/textures/trails/energy_trail1.dds
+    tex_ratio = float: 4.0
+    start_width = 27
+    end_width = 0
+    ttl = 25
+    simple_time = 1
+    additive = 1
+    z_write = 0
+    material_alpha = 0.5
+    diffuse = color: 1, 1, 1
+    ambient = color: 0.5, 0.5, 0.5
+    emissive = color: 1, 1, 1
+
+    time0 = 0
+    color0 = colora: 1, 1, 1, 0
+
+    time1 = 8
+    color1 = colora: 0.10, 0.10, 0.90, 1
+
+    time2 = 30
+    color2 = colora: 0, 0, 0.90, 1
+
+    time3 = 60
+    alpha3 = 0.6
+
+    time4 = 100
+    color4 = colora: 0, 0, 1, 0
+  } 
+
+  sight = 1400
+  aggro_range = var:sight
+
+  stats :{
+    hp = 720
+    armor = 4
+    psi = 200
+    range = 200
+    damage = 50
+
+    whirlwind_chance  = 10  
+    
+    illusion_power_cost = 160
+
+    fortify_power_cost = 90
+    fortify_armor = 5
+    fortify_armor_add_perc = 15
+    fortify_range = 1600
+    
+    shift_stun_duration = 4
+  }
+  speed = 450
+  illusions_duration = 15
+  min_attack_range = 70
+  impacts : LivingUnitImpacts
+  
+  actions : BaseUnit.actions {
+    FortifyAction
+    IllusionAction
+    MakeShrine -- fake
+  }
+
+  abilities {
+    ShiftAbi
+    ChargeAbi
+    WhirlwindAbi
+    
+    AIIllusion {
+      action = IllusionAction
+      when   : abi.fight
+      target = current { aoe_range = 1000; aoe_min_enemy_hp = 600 }
+    }
+  }
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      attack_1 = 100,1,1
+      attack_2 = 100,1,1
+    }
+    fortify = attack_jump
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK_MAIN
+    fire_node = pt_cast
+    spot_impact = 600
+    spot_impact_type = melee
+  }
+
+  CEffectAura GuardianFortifyAura {
+    range = stat:fortify_range
+    faction = ally
+    active = 0
+    non_stackable = 1
+    effect = E_buff {
+      id = Fortify
+      name = "Fortify"
+      text = "This unit�s armor is strengthened by the Fortify aura of a nearby Guardian."
+      icon = 2,5
+      type = armor_buff
+      stats_change {
+        armor = {
+          perc = stat:fortify_armor_add_perc
+          abs = stat:fortify_armor
+        }
+      }
+      ally = 1
+      tick = 10
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = fortify
+      stack_count = 1
+    }
+  }
+
+  fortify_anim = fortify
+  fortify_sound = data/sounds/effects/common/fortify.wav
+  fortify_react = fortify_self
+  
+  cost : pvp.mutants.unit_costs.Officer
+  cost_sloc : pvp.mutants.sloc_costs.Officer
+}
+  
+ChargeAbi {
+  name = "Charge"
+  text = "This should be hidden"
+  icon = 1,0
+  chance = 100
+  when : abi.approach
+  cooldown = 8
+  target = shift
+  range =  var:sight * 0.7
+  min_range = 400
+  lua_method = Shift
+  cast {
+    finish {
+      anim = attack_jump
+      attach {
+        pt_ground = data/models/effects/magic/HealFXGround.nif
+      }  
+    }
+  }
+  effect = E_damage {
+    amount = stat:damage
+  }
+}
+
+ShiftAbi {
+  name = "Shift"
+  text = "While fighting the Guardian can use her power to dimensionaly shift, moving herself around her target. The shifting causes double damage and also stuns the target for [stat:shift_stun_duration] seconds."
+  icon = 1,0
+  chance = 10
+  when : abi.fight
+  target = shift
+  range = var:sight * 0.7 
+  cooldown = 8
+  lua_method = Shift
+  cast {
+    finish {
+      anim = attack_jump
+      attach {
+        pt_ground = data/models/effects/magic/HealFXGround.nif
+      }  
+    }
+  }
+  damage = stat:damage * 2
+  damage_type = melee
+  effect = S_stun {
+    duration = stat:shift_stun_duration
+    discard_react = 1
+  }
+}
+
+WhirlwindAbi {
+  name = "Whirlwind"
+  text = "While fighting the Guardian has [stat:whirlwind_chance]% chance to perform special move inflicting damage to all adjacent targets."
+  icon = 0,0
+  
+  chance = stat:whirlwind_chance
+  when : abi.fight
+  target : abi.current
+
+  cast {
+    finish {
+      anim = attack_3   
+      attach {
+        pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+      }
+    }
+  }
+    
+  effect = E_damage {
+    amount = stat:damage
+    area = 150 
+  }
+}
+
+Guardian GuardianIllusion : Guardian {
+  name = "Guardian Illusion"
+  descr = "Illusion Placeholder Desc."
+  icon = 7,5
+  race = mutants
+  officer = 0   
+  actions = 
+  indestructible = 1
+  lifetime = var:illusions_duration
+  no_enemy_despawn_time = 5
+  max_range_to_master = 2000
+  
+  guard_follow_distance = 100
+  idle_freq = 0.25
+}
+
+action FortifyAction {
+  name = "Fortify"
+  descr = "Guardian uses her powers to activate an aura that gives [stat:fortify_armor_add_perc]% plus [stat:fortify_armor] additional armor to all allied units nearby. While guardian is fortified, her power doesnt regenerate and the effect will be canceled if she is ordered to move. This effect doesnt stack."
+  visible = 1
+  icon = 8,5
+  instant = 1
+  power = stat:fortify_power_cost
+  cooldown = 20
+  program = PrgFortify
+}
+
+action IllusionAction {
+  name = "Illusion"
+  descr = "The Guardian uses her powers to create two illusions of herself. The Illusions will last for [illusions_duration] seconds and will disapper. They are as deadly as the Guardian herself!"
+  visible = 1
+  icon = 10,7
+  instant = 1
+  program = PrgIllusions
+  power = stat:illusion_power_cost
+  cooldown = 60
+}
+
+
+

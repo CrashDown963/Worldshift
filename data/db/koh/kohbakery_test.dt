@@ -1,0 +1,7 @@
+Building KoHBakery_Test : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/KoHBakery_Test.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

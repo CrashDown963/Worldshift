@@ -1,0 +1,79 @@
+Mob JunkLurker : BaseMob {
+  name = "Junk Lurker"
+  icon = 2,24
+  model = data/models/lifeforms/Arachnoid/Arachnoid.kfm
+  scale = 0.75
+
+  tags = unit, organic, mob, animal
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs
+  }
+  
+  destruction = animation
+  
+  stats : {
+    range = 125
+    damage = 35
+    armor = 6
+    hp = 320
+  }  
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+
+  COrientationController orientation {
+    rot_speed = 130
+    max_tilt = 60
+  } 
+  
+  animation {
+    anim_set ATTACK = loop {
+      Hit_1
+      Hit_2
+      Hit_rare
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK
+    shoot_snd = data/sounds/effects/melee little pierce/
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact = 800
+    spot_impact_type = melee
+  }
+  
+
+  abilities {
+    Petrify {
+      when : abi.fight
+      cooldown = 20
+      chance = 10
+      target = self
+      
+      cast {
+        finish {
+          anim = Hit_rare
+        }
+      }
+      effect = S_multifear {
+        id = Fear
+        duration = 6
+        multi_area = 800
+        react = fear
+      }
+    }     
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}
+
+

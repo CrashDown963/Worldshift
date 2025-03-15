@@ -1,0 +1,36 @@
+Mob GiantMutant : BaseMob {
+  name = "Giant Mutant"
+  icon = 6,13
+  model = Data/Models/units/GiantMutant/BigGad.kfm
+  
+  hp = 700
+  armor = 25
+  range = 250
+  min_attack_range = 100
+  damage = 150
+
+  physics {
+    default = Data/Models/units/GiantMutant/GiantMutant_Proxy.pml
+    die = Data/Models/units/GiantMutant/GiantMutant.pml
+  }
+
+  destruction = ragdoll
+
+  animation {
+    anim_set ATTACK = loop {
+      attack_lefthand
+      attack_righthand
+      idle_angry
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+ 
+    shoot_idle_1 = combat_idle
+    fire_node = ROOT
+    shoot_anim = ATTACK
+  }
+
+}

@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\ruins\rafinery\pipe01_jungle_broken02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Pipe01_Jungle_broken02";
+    translation = xpoint3:"57.7288970947265625,-3.12786865234375,218.4344024658203125";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Liani0_broken02";
+    translation = xpoint3:"4.1112651824951171875,-125.26959228515625,181.003570556640625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

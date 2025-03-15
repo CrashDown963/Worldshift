@@ -1,0 +1,118 @@
+model = {
+  file = str:"data\models\units\hellfire\hellfire_break.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"2.6666667461395263671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.6666667461395263671875";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"2.166666507720947265625";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-253.011962890625,0";
+        time = fixp:"2.166666507720947265625";
+        distance = fixp:"253.011962890625";
+        speed = fixp:"116.77476069494150578975677490234375";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.56666660308837890625";
+        }
+        #2 = {
+          name = str:"Foot01_down";
+          time = fixp:"1.69999980926513671875";
+        }
+        #3 = {
+          name = str:"end";
+          time = fixp:"2.166666507720947265625";
+        }
+      }
+    }
+    idle_var_1 = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_var_2 = {
+      loop = int:"1";
+      duration = fixp:"0.93333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.93333339691162109375";
+        }
+      }
+    }
+    idle_var_3 = {
+      loop = int:"1";
+      duration = fixp:"7.3333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"7.3333339691162109375";
+        }
+      }
+    }
+    shoot_once_right = {
+      loop = int:"0";
+      duration = fixp:"0.19999980926513671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.19999980926513671875";
+        }
+      }
+    }
+    shoot_once_left = {
+      loop = int:"0";
+      duration = fixp:"0.200000286102294921875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.200000286102294921875";
+        }
+      }
+    }
+  }
+}

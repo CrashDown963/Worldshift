@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\brick_buildings\brick_wall05_jungle.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Brick_wall05_corner";
+    translation = xpoint3:"98.286712646484375,95.884613037109375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

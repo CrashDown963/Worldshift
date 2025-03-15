@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\tower_controller\tower_controller.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"rot_x";
+      translation = xpoint3:"-15.318103790283203125,0,117.21541595458984375";
+      rotation = {
+        0 = xpoint3:"0,-1,0";
+        1 = xpoint3:"1,0,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"rot_z";
+        translation = xpoint3:"0.0063019455410540103912353515625,9.8215808868408203125,23.8817844390869140625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"pt_cast";
+          translation = xpoint3:"-0.0063013336621224880218505859375,-22.9145526885986328125,42.371795654296875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

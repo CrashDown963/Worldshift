@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\lifeforms\armadillo\armadillo.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"2.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.333333492279052734375";
+        }
+      }
+    }
+    idle_very_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"0.6333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.6333332061767578125";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1.000000476837158203125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.000000476837158203125";
+        }
+      }
+    }
+  }
+}

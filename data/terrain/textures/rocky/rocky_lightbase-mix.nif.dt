@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\rocky\rocky_lightbase-mix.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

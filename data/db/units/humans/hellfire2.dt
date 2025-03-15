@@ -1,0 +1,5 @@
+Unit Hellfire2 : MachineUnit {
+  model = data/models/units/HellFire2/HellFire2.nif
+  race = humans
+  tags = unit, organic, lowrank 
+}

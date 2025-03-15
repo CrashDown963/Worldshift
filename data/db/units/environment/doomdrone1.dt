@@ -1,0 +1,74 @@
+Mob DoomDrone1 : BaseMachineMob {
+  model = data/Models/units/DoomDrone/DoomDrone1.kfm
+  icon = 6,27
+  race = common
+  
+  hp = 1500
+  armor = 30
+  range = 1500
+  damage = 30
+
+  sounds {
+    start = data/sounds/effects/doomdroneloop/
+  }
+  explosion = ExplosionMedium_03
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = pt_shoot_1
+    shoot_anim = shoot
+    shoot_idle_1 = idle
+    spot_impact = 1000
+    --spot_impact_type = melee
+    min_bursts = 2
+    max_bursts = 3
+    idle_time = 1
+    shoot_snd = data/sounds/weapons/doomdrone1/
+    projectile = linear {
+      speed = 2500
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif {
+        CTrailController trail {
+				  emitter = Scene Root
+				  texture = data/textures/trails/energy_trail1.dds
+				  tex_ratio = float: 4.0
+				  start_width = 14
+				  end_width = 0
+				  ttl = 12
+				  simple_time = 1
+				  additive = 1
+				  z_write = 0
+				  material_alpha = 0.5
+				  diffuse = color: 0, 1, 0
+				  ambient = color: 0, 0.5, 0
+				  emissive = color: 0, 1, 0
+
+				  time0 = 0
+				  color0 = colora: 0, 1, 0, 0
+
+				  time1 = 3
+				  color1 = colora: 0, 1, 0, 0.4
+
+				  time2 = 30
+				  color2 = colora: 0, 1, 0, 0.25
+
+				  time4 = 100
+				  color4 = colora: 0, 1, 0, 0
+			  }
+      }
+      scale = 0.25
+    }
+  }
+
+  abilities {
+    Seek {
+      when : abi.combat
+      cooldown = 1000000
+      target = enemy { min_range = 2000; max_range = 3000 }
+      no_buffs { Confusion }
+      program = PrgAttack
+      no_self_buffs { Confusion }
+    }
+  }  
+  
+}

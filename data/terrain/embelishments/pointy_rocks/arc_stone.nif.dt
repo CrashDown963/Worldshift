@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\pointy_rocks\arc_stone.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"stone";
+    translation = xpoint3:"53.39841461181640625,-40.12464141845703125,0.614655017852783203125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

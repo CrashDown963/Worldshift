@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\lifeforms\eel\eel.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"13.3333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"13.3333339691162109375";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\smallpointboom\small point boom.kfm";
+  animations = {
+    EMPTY_SEQUENCE_AT_0f = {
+      loop = int:"0";
+      duration = fixp:"0.63333332538604736328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.63333332538604736328125";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+model = {
+  file = str:"data\models\miscobjects\arrows\arrowforward_purple.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"19.6333332061767578125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Root NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"switch_horizontal";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-0.999999940395355224609375";
+          2 = xpoint3:"0,0.999999940395355224609375,0";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"EnergiinaSterlka01";
+          translation = xpoint3:"0,-3.2057669162750244140625,52.11664581298828125";
+          rotation = {
+            0 = xpoint3:"0,1,0";
+            1 = xpoint3:"0,0,1";
+            2 = xpoint3:"1,0,0";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Dummy01";
+          translation = xpoint3:"0,-1.72882783412933349609375,83.3823089599609375";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,1";
+            2 = xpoint3:"0,-1,0";
+          }
+        }
+      }
+    }
+  }
+}

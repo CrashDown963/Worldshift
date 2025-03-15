@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\buildings\controltower\extractor333.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Extractor";
+    translation = xpoint3:"-1.8830623626708984375,88.6046905517578125,512.7447509765625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

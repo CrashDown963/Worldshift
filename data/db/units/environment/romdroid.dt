@@ -1,0 +1,35 @@
+Mob ROMDroid : BaseMachineMob {
+  name = "ROM Droid"
+  icon = 5,26
+  race = humans
+  model = Data/Models/Units/BattleDroid/BattleDroid.kfm
+  scale = 1.5
+  explosion = ExplosionMedium_03
+
+  range = 1800
+  --energy = 300
+  --energy_gen = 2
+  sight = 3000
+  armor = 22
+  hp = 1200
+  NanoHeal {
+    cast {
+      prepare {
+        anim = cast_preparation
+      }
+    }
+    self {
+      prepare {
+        anim = cast_preparation
+      }
+    }
+    p2pray = NanoRestoreBeam
+    p2pray_srcnode = pt_cast
+    effect = E_heal {
+      amount = 50
+    }
+  }
+  heal_cast = NanoHeal
+  heal_range = 4000
+  prg_idle = PrgROMDroidIdle
+}

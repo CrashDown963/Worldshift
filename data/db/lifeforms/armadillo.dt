@@ -1,0 +1,4 @@
+Mob Armadillo : BaseAnimal {
+  name = "Armadillo"
+  model = data/models/lifeforms/armadillo/Armadillo.kfm
+}

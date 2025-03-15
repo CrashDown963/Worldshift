@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\effects\fire\firereact.nif";
+  animation = {
+    loop = fixp:"1.52666580677032470703125";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Spray01TrailFlame-Emitter";
+    translation = xpoint3:"0,0,-80.56447601318359375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

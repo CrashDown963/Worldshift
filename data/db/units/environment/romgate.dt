@@ -1,0 +1,9 @@
+Mob ROMGate : BaseMob {
+  name = "ROM Gate"
+  icon = 2,10
+  model = Data/Models/buildings/portal/portal.nif
+  movable = 0
+  hp = 0;
+  damage = 0
+  sight = 0
+}

@@ -1,0 +1,44 @@
+CXenolite Xenolite {
+  name = "Xenolite"
+  create_fow_proxy = 1
+  model = data/models/resources/Borax01_state0.nif
+  icon = 3,5
+  sel_ui = xenolite
+  hull = 0
+  
+  models {
+    var_01 {
+      state_01 = data/models/resources/Borax01_state0.nif
+      state_02 = data/models/resources/Borax01_state1.nif
+      state_03 = data/models/resources/Borax01_state2.nif
+      state_04 = data/models/resources/Borax01_state3.nif
+    } 
+    var_02 {
+      state_01 = data/models/resources/Borax01_state0.nif
+      state_02 = data/models/resources/Borax01_state1.nif
+      state_03 = data/models/resources/Borax01_state2.nif
+      state_04 = data/models/resources/Borax01_state3.nif
+    } 
+    var_03 {
+      state_01 = data/models/resources/Borax01_state0.nif
+      state_02 = data/models/resources/Borax01_state1.nif
+      state_03 = data/models/resources/Borax01_state2.nif
+      state_04 = data/models/resources/Borax01_state3.nif
+    } 
+  }
+  
+  reacts {
+    possess {
+		  pt_top {
+			  model = data/models/effects/twistedxenolite/twistedxenolite.nif
+			  duration = -1
+			  stack = once
+		  }
+    }
+  }
+
+  indestructible = 1
+  hide_in_fog = 1
+  is_xenolite = 1
+}
+

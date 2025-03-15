@@ -1,0 +1,83 @@
+Mob Queen : BaseBoss {
+  name = "Queen"
+  icon = 3,28
+  model = data/Models/units/Queen/Queen.kfm
+  destruction = animation
+  
+  boss_icon = 4,1
+
+  hp = 30000
+  armor = 50
+  range = 250
+  --min_attack_range = 100
+  damage = 100
+
+  animation {
+    anim_set HIT1 = loop {
+      Hit_1
+      Hit_2
+      Hit_3
+    }
+  }
+
+  sounds {
+    destruction = data/sounds/destruction/units/queen/
+    Hit_1 = data/Sounds/bosses/queenHits/queenhitsshort/queen_hit_short_2.wav
+    Hit_2 = data/Sounds/bosses/queenHits/queenhitsshort/queen_hit_short_3.wav
+    Hit_3 = data/Sounds/bosses/queenHits/
+    hit1 = data/Sounds/bosses/queenHits/queenhitsshort/queen_hit_short_2.wav
+    hit2 = data/Sounds/bosses/queenHits/queenhitsshort/queen_hit_short_3.wav
+    cast = data/Sounds/bosses/queenHits/queenhitsshort/Queen_Cast.wav
+    step = data/Sounds/bosses/queenHits/queenhitsshort/Queen_Run.wav
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+ 
+    fire_node = ROOT
+    shoot_anim = HIT1
+    spot_impact = 1000
+    spot_impact_type = melee
+    aim_tolerance_pitch = 180
+    aim_tolerance_yaw = 45
+  }
+
+  AddsVars {
+    sight_incombat = 3000
+    sight = 3000
+    chase_range = -1
+    roam = 1
+    waypoint_radius = 500
+    CAutoDieController AutoDie {
+      duration = 60
+      --no_enemy_despawn_time = 15
+      show_progress = 0
+    }
+  }
+
+  abilities {
+    Protectors {
+      when : abi.combat
+      cooldown = 30
+      target = self
+      cast {
+        prepare { 
+          anim = cast
+        }
+      }
+      effect = E_set {
+        effect = E_spawn {
+          range = 3000
+          copy_target_list = 1
+          spawn { QueenProtector : AddsVars = 1  }
+        }
+        --effect = E_damage {
+        --  area = 1500
+        --  amount = 500
+        --  friendly_fire = 0
+        --}
+      }  
+    }
+  }
+}

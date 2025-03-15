@@ -1,0 +1,108 @@
+Mob Kai_Rider : BaseMob {
+  name = "Kai_Rider"
+  icon = 5,20
+  model = Data/Models/units/Kai_Rider/Kai_Rider.kfm
+  destruction = animation
+  race = mutants
+  tags = unit, organic
+
+  stats :{
+    hp = 800
+    armor = 15
+    damage = 110
+    range = 2500
+  }
+
+  frenzy_threshold = stat:damage * 2
+  frenzy_duration = 15
+  frenzy_crit_chance = 25
+
+  hp = stat:hp
+  armor = stat:armor
+  damage = stat:damage
+  range = stat:range
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -30
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -30
+      shoot_idle_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -30
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.9
+    range_near = stat:range * 0.2
+    proximity_bonus = 0.5
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = 0.2
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    instant_shot AssassinShot {
+      model = Data/Models/Effects/TraceBullet/Red_Beam.nif
+      dist_start = 100
+      travel_start = 0
+      travel_end = 0
+      duration = 0.25
+      time_fraction_to_lag_end = 1
+      width = 20
+      instances = 128
+      color_alpha {
+        0 = 255,255,255,255
+        5 = 255,255,255,255
+        22 = 255,118,52,255
+        100 = 255,100,45,0
+      }
+    }
+    
+    spot_impact = 1500
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Units/Assassin/shoot/
+  }
+  
+  CFrenzyController frenzy {
+    threshold = var:frenzy_threshold
+    reset_time = var:frenzy_duration
+    max_applications = 3
+    effect = E_buff {
+      id = Frenzy
+      name = "Frenzy"
+      text = "This unit is frenzied. Its critical chance is increased."
+      icon = 4,3
+      type = frenzy
+      duration = -1
+      stack_count = 3
+      stats_change {
+        crit_chance = { abs = var:frenzy_crit_chance }
+      }
+      react = fire
+      repeat_react = 1
+    }
+  } 
+ 
+  impacts : LivingUnitImpacts
+  
+}

@@ -1,0 +1,19 @@
+Building VehicleControl : BaseBuilding {
+  model = Data/Models/buildings/VehicleControl/VehicleControl.nif {
+   constr_phase_0 = Data/Models/buildings/VehicleControl/VehicleControl_build.nif
+  }
+  race = humans
+  stats :{
+    hp = 4000
+  }
+  target_priority = 1500
+  
+  construction {
+    phase_0 {
+      model = constr_phase_0
+    }
+  }
+  
+  actions {
+  }
+}

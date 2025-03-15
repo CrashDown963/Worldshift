@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\crystals\crystalbig_1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"CrystalBIG_1";
+    translation = xpoint3:"49.09259033203125,-4.67218017578125,187.54315185546875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

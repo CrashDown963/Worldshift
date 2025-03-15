@@ -1,0 +1,17 @@
+id	type	value
+CBWndUI.backcolor	colora	0,0,0,0
+CBWndUI.class	str
+CBWndUI.font	font
+CBWndUI.id	int
+CBBtnUI.look	str	btn_def
+CBWndUI.lpos	lpoint2
+CBWndUI.lsize	int2
+CBWndUI.name	sid
+CBWndUI.painter	str	CNiPainter
+CBWndUI.texture	str
+CBWndUI.texturecoords	lrect
+CBWndUI.text_color	colora	255,255,255,255
+CBWndUI.textkey	str
+CBWndUI.tiled	int	0
+
+CBScrollUI.look	str	scroll_def

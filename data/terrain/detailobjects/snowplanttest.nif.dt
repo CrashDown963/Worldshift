@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\detailobjects\snowplanttest.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"22.9885044097900390625,-10.727970123291015625,0";
+    rotation = {
+      0 = xpoint3:"0.749752223491668701171875,-0.661718666553497314453125,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0.661718666553497314453125,0.7497522830963134765625,0";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"22.9885044097900390625,-10.727970123291015625,0";
+    rotation = {
+      0 = xpoint3:"0.749752223491668701171875,-0.661718666553497314453125,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0.661718666553497314453125,0.7497522830963134765625,0";
+    }
+  }
+}

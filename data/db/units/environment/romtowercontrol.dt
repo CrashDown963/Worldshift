@@ -1,0 +1,10 @@
+Mob ROMTowerControl : BaseMachineMob {
+  name = "ROM Tower Control"
+  icon = 5,14
+  model = Data/Models/buildings/Shield_Generator/Shield_Generator.nif
+  explosion = ExplosionMedium_03
+  movable = 0
+  hp = 4000
+  damage = 0
+  sight = 0
+}

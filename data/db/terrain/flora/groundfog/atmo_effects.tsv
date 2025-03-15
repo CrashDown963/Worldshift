@@ -1,0 +1,5 @@
+id	model	vars	fade_near	fade_far	density_min	density_max	slope_max	alpha_max	scale
+
+horiz_fog1	horiz_fog1.nif	{water_snap = 1}
+god_rays	god_rays.nif	{water_snap = 1}
+

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\rocks\stone_pile1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"rock";
+    translation = xpoint3:"0,0,0.38458251953125";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

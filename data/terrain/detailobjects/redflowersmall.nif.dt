@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\detailobjects\redflowersmall.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"roundshadow03";
+    translation = xpoint3:"4.243341922760009765625,-4.87959575653076171875,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object04";
+    translation = xpoint3:"-4.120717525482177734375,-4.49861812591552734375,20.6253986358642578125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

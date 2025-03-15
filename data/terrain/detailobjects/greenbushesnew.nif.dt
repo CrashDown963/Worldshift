@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\detailobjects\greenbushesnew.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Plane02";
+    translation = xpoint3:"-244.408416748046875,144.111663818359375,17.826694488525390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object04";
+    translation = xpoint3:"-244.408416748046875,144.111663818359375,17.826694488525390625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

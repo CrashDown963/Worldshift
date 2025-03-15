@@ -1,0 +1,497 @@
+model = {
+  file = str:"data\models\buildings\pvporeextractor\pvporeextractor.nif";
+  animation = {
+    loop = fixp:"11.33333301544189453125";
+    duration = fixp:"11.42666721343994140625";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Extractor";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"decal_plane";
+    translation = xpoint3:"8.563934326171875,17.5851287841796875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Extractor_root";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"extractor_beam_lens01";
+          translation = xpoint3:"-85.25000762939453125,174.3415069580078125,275.2196044921875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,1";
+            2 = xpoint3:"0,-1,0";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"lens_dummy";
+            translation = xpoint3:"85.25000762939453125,-169.885162353515625,-1.22406423091888427734375";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"laser_lens";
+              translation = xpoint3:"-0.2921142578125,-0.923469483852386474609375,-0.442997395992279052734375";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+            }
+            #1 = {
+              scale = fixp:"1";
+              name = str:"laser_lens_bBoard";
+              translation = xpoint3:"-0.2921142578125,-0.923469483852386474609375,-0.442997395992279052734375";
+              rotation = {
+                0 = xpoint3:"0,1,0";
+                1 = xpoint3:"-1,0,0";
+                2 = xpoint3:"0,0,1";
+              }
+            }
+            #2 = {
+              scale = fixp:"1";
+              name = str:"laser_lens_bBoard01";
+              translation = xpoint3:"-0.277659356594085693359375,5.95699310302734375,-0.44299709796905517578125";
+              rotation = {
+                0 = xpoint3:"0,1,0";
+                1 = xpoint3:"-1,0,0";
+                2 = xpoint3:"0,0,1";
+              }
+            }
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"extractor_beam_lens";
+          translation = xpoint3:"85.24977874755859375,174.3415069580078125,275.2196044921875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,1";
+            2 = xpoint3:"0,-1,0";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"extractor_hatch02";
+          translation = xpoint3:"-74.83819580078125,50.165203094482421875,177.03240966796875";
+          rotation = {
+            0 = xpoint3:"-1,0,0";
+            1 = xpoint3:"0,-1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"extractor_hatch01";
+          translation = xpoint3:"74.83782958984375,50.1651763916015625,177.03240966796875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #4 = {
+          scale = fixp:"1";
+          name = str:"extractor_exaust";
+          translation = xpoint3:"0,238.3080291748046875,452.852569580078125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #5 = {
+          scale = fixp:"1";
+          name = str:"extractor_gizmo";
+          translation = xpoint3:"0,151.85357666015625,394.24822998046875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"extractor_piston";
+            translation = xpoint3:"0,-65.60247802734375,-66.61956787109375";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+          #1 = {
+            scale = fixp:"1";
+            name = str:"extractor_top_gizmo";
+            translation = xpoint3:"0,-65.6024932861328125,156.44244384765625";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"extractor_top_gizmo_point";
+              translation = xpoint3:"0,-23.497528076171875,-51.62640380859375";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,0,1";
+                2 = xpoint3:"0,-1,0";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"Laser_Beam_2";
+                translation = xpoint3:"0.14484345912933349609375,-58.049808502197265625,2.412230014801025390625";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,0,-1";
+                  2 = xpoint3:"0,1,0";
+                }
+              }
+              #1 = {
+                scale = fixp:"1";
+                name = str:"Laser_Beam";
+                translation = xpoint3:"0.14484345912933349609375,-58.049808502197265625,2.412230014801025390625";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,0,-1";
+                  2 = xpoint3:"0,1,0";
+                }
+              }
+              #2 = {
+                scale = fixp:"1";
+                name = str:"Laser_BeamGlow";
+                translation = xpoint3:"0.14484345912933349609375,-58.049808502197265625,2.412230014801025390625";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,0,-1";
+                  2 = xpoint3:"0,1,0";
+                }
+              }
+            }
+          }
+          #2 = {
+            scale = fixp:"1";
+            name = str:"light_dummy01";
+            translation = xpoint3:"-47.7737579345703125,-31.7435302734375,214.454833984375";
+            rotation = {
+              0 = xpoint3:"0,0,-0.999999940395355224609375";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0.999999940395355224609375,0,0";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"Beam";
+              translation = xpoint3:"0,0,0";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+            }
+          }
+          #3 = {
+            scale = fixp:"1";
+            name = str:"light_dummy02";
+            translation = xpoint3:"47.7740020751953125,-31.7435302734375,214.454833984375";
+            rotation = {
+              0 = xpoint3:"0,0,-0.999999940395355224609375";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0.999999940395355224609375,0,0";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"Beam01";
+              translation = xpoint3:"0,0,0";
+              rotation = {
+                0 = xpoint3:"-1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,-1";
+              }
+            }
+          }
+          #4 = {
+            scale = fixp:"1";
+            name = str:"Plane01";
+            translation = xpoint3:"47.7740020751953125,-31.7435302734375,212.524383544921875";
+            rotation = {
+              0 = xpoint3:"0,0,0.999999940395355224609375";
+              1 = xpoint3:"0.999999940395355224609375,0,0";
+              2 = xpoint3:"0,0.999999940395355224609375,0";
+            }
+          }
+        }
+        #6 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray01Sparks-Emitter";
+          translation = xpoint3:"0,0,44.93670654296875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #7 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray_Smoke-Emitter";
+          translation = xpoint3:"0,0,-48.70296478271484375";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #8 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray01Sparks02-Emitter";
+          translation = xpoint3:"0,0,44.93670654296875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #9 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray_Smoke01-Emitter";
+          translation = xpoint3:"0,0,-48.70296478271484375";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #10 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray_SmokeBack-Emitter";
+          translation = xpoint3:"0,246.8032989501953125,494.456298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,-0.766044437885284423828125,0.642787635326385498046875";
+            2 = xpoint3:"0,-0.642787635326385498046875,-0.766044437885284423828125";
+          }
+        }
+        #11 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray01Sparks_back-Emitter";
+          translation = xpoint3:"0,289.172607421875,421.38287353515625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,1";
+            2 = xpoint3:"0,-1,0";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Plane02";
+        translation = xpoint3:"0,-13.01161098480224609375,93.488555908203125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Beam_Top_Flare";
+        translation = xpoint3:"0,4.630464076995849609375,687.08660888671875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Particle View 01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"Gravity01";
+    translation = xpoint3:"362.040771484375,-30.1439342498779296875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_01";
+    translation = xpoint3:"-124.62262725830078125,294.79168701171875,134.1515350341796875";
+    rotation = {
+      0 = xpoint3:"0.866025388240814208984375,-0.5,0";
+      1 = xpoint3:"0.5,0.866025388240814208984375,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_02";
+    translation = xpoint3:"106.58316802978515625,294.897247314453125,102.86283111572265625";
+    rotation = {
+      0 = xpoint3:"0.93969261646270751953125,0.3420201241970062255859375,0";
+      1 = xpoint3:"-0.3420201241970062255859375,0.93969261646270751953125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_03";
+    translation = xpoint3:"-110.6973114013671875,57.66956329345703125,134.1515350341796875";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #8 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_04";
+    translation = xpoint3:"140.662261962890625,57.669567108154296875,134.1515350341796875";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #9 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_05";
+    translation = xpoint3:"58.9298553466796875,242.2706298828125,410.28326416015625";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #10 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_06";
+    translation = xpoint3:"55.90265655517578125,165.1271820068359375,529.6270751953125";
+    rotation = {
+      0 = xpoint3:"-0.642787516117095947265625,0.766044557094573974609375,0";
+      1 = xpoint3:"-0.766044557094573974609375,-0.642787516117095947265625,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #11 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_07";
+    translation = xpoint3:"-74.12110137939453125,167.36627197265625,529.6270751953125";
+    rotation = {
+      0 = xpoint3:"-0.766044437885284423828125,-0.642787635326385498046875,0";
+      1 = xpoint3:"0.642787635326385498046875,-0.766044437885284423828125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #12 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_08";
+    translation = xpoint3:"-60.1982269287109375,244.1770477294921875,359.479827880859375";
+    rotation = {
+      0 = xpoint3:"-0.766044437885284423828125,-0.642787635326385498046875,0";
+      1 = xpoint3:"0.642787635326385498046875,-0.766044437885284423828125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #13 = {
+    scale = fixp:"1";
+    name = str:"pt_impact_09";
+    translation = xpoint3:"21.013637542724609375,98.0813446044921875,359.479827880859375";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #14 = {
+    scale = fixp:"1";
+    name = str:"pt_work_01";
+    translation = xpoint3:"-179.372589111328125,250.0180511474609375,0";
+    rotation = {
+      0 = xpoint3:"0.766044437885284423828125,-0.64278757572174072265625,0";
+      1 = xpoint3:"0.64278757572174072265625,0.766044437885284423828125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #15 = {
+    scale = fixp:"1";
+    name = str:"pt_work_02";
+    translation = xpoint3:"182.968048095703125,256.376434326171875,0";
+    rotation = {
+      0 = xpoint3:"0.642787516117095947265625,0.76604449748992919921875,0";
+      1 = xpoint3:"-0.76604449748992919921875,0.642787516117095947265625,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #16 = {
+    scale = fixp:"1";
+    name = str:"pt_work_03";
+    translation = xpoint3:"280.934722900390625,-84.1671295166015625,0";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #17 = {
+    scale = fixp:"1";
+    name = str:"pt_work_04";
+    translation = xpoint3:"-286.63775634765625,-84.66960906982421875,0";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,83 @@
+Unit Bomber {
+  model = data/Models/units/PersonnelCarrier/PersonnelCarrier.nif
+  scale = 0.5
+  
+  CTrailController trail {
+    emitter = pt_wing_1
+    texture = data/textures/trails/energy_trail1.dds
+    tex_ratio = float: 4.0
+    start_width = 25
+    end_width = 0
+    ttl = 12
+    simple_time = 1
+    additive = 1
+    z_write = 0
+    material_alpha = 0.5
+    diffuse = color: 1, 1, 1
+    ambient = color: 0.5, 0.5, 0.5
+    emissive = color: 1, 1, 1
+
+    time0 = 0
+    color0 = colora: 1, 1, 1, 0
+
+    time1 = 3
+    color1 = colora: 1, 1, 1, 0.4
+
+    time2 = 30
+    color2 = colora: 1, 1, 1, 0.25
+
+    time4 = 100
+    color4 = colora: 1, 1, 1, 0
+  }
+  CTrailController trail2 {
+    emitter = pt_wing_2
+    texture = data/textures/trails/energy_trail1.dds
+    tex_ratio = float: 4.0
+    start_width = 25
+    end_width = 0
+    ttl = 12
+    simple_time = 1
+    additive = 1
+    z_write = 0
+    material_alpha = 0.5
+    diffuse = color: 1, 1, 1
+    ambient = color: 0.5, 0.5, 0.5
+    emissive = color: 1, 1, 1
+
+    time0 = 0
+    color0 = colora: 1, 1, 1, 0
+
+    time1 = 3
+    color1 = colora: 1, 1, 1, 0.4
+
+    time2 = 30
+    color2 = colora: 1, 1, 1, 0.25
+
+    time4 = 100
+    color4 = colora: 1, 1, 1, 0
+  }
+  
+  sounds {
+    start = data/sounds/units/copter/
+  }
+  sight = 400
+  movement_type = fly
+  speed = 10000
+  min_speed = 4000
+  min_altitude = 1200
+  tags = machine   -- we don't really need tags but game crashes if no tags are specified
+  movable = 1
+  attackable = 0
+  selectable = 0
+  hull = 0
+  
+  COrientationController orientation {
+    rot_speed = 90
+    max_tilt = 45
+  } 
+  
+  CDropBombController DropBomb {
+    effect = AirStrikeExplosion
+    dispersion = 1200
+  }
+}

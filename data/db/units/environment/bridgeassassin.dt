@@ -1,0 +1,113 @@
+Mob BridgeAssassin : BaseMob {
+  name : Assassin.name
+  icon = 1,9
+  descr : Assassin.descr
+  model = data/models/units/Assassin/Assassin.kfm
+  race = humans
+  take_auras : { RestorationCoreAura }
+  
+  stats {
+    damage = 150
+    fear_shock_area = 300
+    fear_shock_duration = 6
+  }
+  
+  speed = 450
+  hp = 1000
+  energy = 300
+  armor = 1
+  precision = 100
+  range = 2300
+  sight = var:range  
+    
+  physics {
+    default = data/models/units/assassin/Scout_Proxy.pml
+    die = data/models/units/assassin/Scout.pml
+  }
+  
+  destruction = ragdoll
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  abilities {
+    ChangeTarget {
+      when : abi.fight
+      chance = 50
+      target = enemy
+      no_buffs {
+        Growl
+        Fear
+      }
+      range = var:range
+      program = PrgAttack {
+        cancel_on_cc = 1
+      }
+    }
+    
+    Fear {
+      when : abi.target_hit
+      chance = 10
+      target = current
+      no_buffs {
+        Growl
+        Fear
+      }
+      effect : FearShockAction.spell.effect
+    }
+  }
+  
+  impacts : LivingUnitImpacts
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    --range_far = var:range * 0.9
+    --range_near = var:range * 0.5
+    --proximity_bonus = 0.1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = .2
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 1.5
+		    E = 190,160,40
+	    }
+    }
+    spot_impact = 1000
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+}

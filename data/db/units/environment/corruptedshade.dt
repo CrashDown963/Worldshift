@@ -1,0 +1,189 @@
+Mob CorruptedShade : BaseUnderworldMob {
+  name = "Corrupted Shade"
+  model = Data/Models/Units/AncientShade/AncientShade.kfm
+  scale = 1.8
+  race = mutants
+  icon = 5,21
+  
+  hp = 850
+  energy = 360
+  armor = 12
+  damage = 55
+  penetration = 100
+  range = 2200
+  speed = 400
+  count_projectiles = 6
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  abilities {
+    CorruptMindAbi {
+      when : abi.fight
+      cooldown = 30
+      target = enemy
+      tags = organic
+      no_buffs = CorruptedMind
+      range = var:range
+      power = 120
+      cast {
+        finish {
+          anim = cast_finish
+        }
+      }
+      effect = E_mindcontrol {
+        id = CorruptedMind
+		name = "Corrupted Mind"
+		text = "This unit’s mind is corrupted, forcing it to fight on the enemy’s side."
+		icon = 4,5
+		duration = 10
+        destroy_when_creator_dead = 1
+        react = mind_control
+        sound = data/sounds/effects/global actions/horrify/
+      }
+    }
+  }
+  
+  CPeriodicEffectsController CorruptedShadeUnholyAura {
+    interval = 5
+    effect = E_heal {
+      amount = 150
+      area = 1000 { anim = data/models/effects/StoneGhost/StoneGhostWave.nif }
+      target_tags = underworld
+      react = relief
+    }
+  }
+  
+  attachments {
+    FX_ROOT = data/models/effects/Magic/AncientShade_fx_Attachment.nif {
+    CTrailController ShadeTrail  {
+      emitter = Emmiter01
+      texture = data/textures/trails/dark-lightnings.dds
+      tex_ratio = float: 0.5
+      start_width = 0
+      end_width = 100
+      ttl = 17
+      simple_time = 1
+      additive = 0
+              z_write = 0
+      material_alpha = 0.6
+      diffuse = color: 0, 0, 0
+      ambient = color: 0, 0, 0
+      emissive = color: 0.8, 0.8, 0.8
+
+      time0 = 0
+      color0 = colora: 1, 1, 1, 0
+
+      time1 = 4
+      color1 = colora: 1, 1, 1, 1
+
+      time2 = 60
+      color2 = colora: 1, 1, 1, 1
+
+      time3 = 100
+      color3 = colora: 1, 1, 1, 0
+    }
+    CTrailController ShadeTrail02 : ShadeTrail {emitter = Emmiter02}
+    CTrailController ShadeTrail03 : ShadeTrail {emitter = Emmiter03}
+    CTrailController ShadeTrail04 : ShadeTrail {emitter = Emmiter04}
+    CTrailController ShadeTrail05 : ShadeTrail {emitter = Emmiter05}
+    CTrailController ShadeTrail06 : ShadeTrail {emitter = Emmiter06}
+    }
+  }
+  
+  attack_spell = CorruptedShadeAttackSpell
+}
+
+CorruptedShadeAttackSpell {
+  cast {
+    prepare {
+      sound = data/sounds/units/highpriest/pyro/
+      anim = cast_preparation
+      duration = 1.2
+    }
+  }
+
+  projectile = chase {
+    start_point = pt_center
+    model = data/models/effects/Magic/AncientShade_fx_Attachment.nif {
+      scale = 0.1
+      CTrailController ShadeTrail  {
+        emitter = Emmiter01
+        texture = data/textures/trails/dark-lightnings.dds
+        tex_ratio = float: 0.5
+        start_width = 20
+        end_width = 200
+        ttl = 17
+        simple_time = 1
+        additive = 0
+        z_write = 0
+        material_alpha = 0.6
+        diffuse = color: 0, 0, 0
+        ambient = color: 0, 0, 0
+        emissive = color: 0.8, 0.8, 0.8
+
+        time0 = 0
+        color0 = colora: 1, 1, 1, 0
+
+        time1 = 4
+        color1 = colora: 1, 1, 1, 1
+
+        time2 = 60
+        color2 = colora: 1, 1, 1, 1
+
+        time3 = 100
+        color3 = colora: 1, 1, 1, 0
+      }
+    }
+    speed = 700
+    effect = E_damage {
+      amount = var:damage
+      can_crit = 1
+    }
+  }
+  
+  alt_projectile {
+    cone_angle = 80
+    count = var:count_projectiles - 1
+    projectile = chase {
+      start_point = pt_center
+      model = data/models/effects/Magic/AncientShade_fx_Attachment.nif {
+        scale = 0.1
+        CTrailController ShadeTrail  {
+          emitter = Emmiter01
+          texture = data/textures/trails/dark-lightnings.dds
+          tex_ratio = float: 0.5
+          start_width = 20
+          end_width = 200
+          ttl = 17
+          simple_time = 1
+          additive = 0
+          z_write = 0
+          material_alpha = 0.6
+          diffuse = color: 0, 0, 0
+          ambient = color: 0, 0, 0
+          emissive = color: 0.8, 0.8, 0.8
+  
+          time0 = 0
+          color0 = colora: 1, 1, 1, 0
+  
+          time1 = 4
+          color1 = colora: 1, 1, 1, 1
+  
+          time2 = 60
+          color2 = colora: 1, 1, 1, 1
+  
+          time3 = 100
+          color3 = colora: 1, 1, 1, 0
+        }
+      }
+      speed = 700
+    }
+    effect = E_damage {
+      amount = var:damage
+      can_crit = 1
+    }
+  }
+
+}

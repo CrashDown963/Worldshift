@@ -1,0 +1,21 @@
+AreaActionsGizmo ROMP2ReinforceGizmo {
+  model = data/models/miscobjects/areabeacon/areabeacon.nif
+  AreaActions ROMP2ReinforceGizmoActions {
+    Commander  { ROMP2Reinforce } 
+    HighPriest { ROMP2Reinforce }
+    Master     { ROMP2Reinforce }
+    faction = all
+  }
+}
+
+action ROMP2Reinforce {
+  name = Call Reinforcements
+  icon = 6,7
+  instant = 1
+  visible = 1
+  lua_check_visible = MapLuaCheckActionVisible
+  program = PrgCallMapLua {
+    func = ROMP2Reinforce
+    --prm = hehe
+  }
+}

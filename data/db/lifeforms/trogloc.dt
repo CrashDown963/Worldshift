@@ -1,0 +1,11 @@
+Mob Trogloc : BaseAnimal  {
+  name = "Trogloc"
+  model = data/models/lifeforms/Trogloc/trogloc.kfm
+  animation {
+    anim_set ATTACK = loop {
+      Hit_1
+      Hit_2
+      Hit_3
+    }
+  }
+}

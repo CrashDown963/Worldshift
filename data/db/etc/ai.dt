@@ -1,0 +1,50 @@
+ai {
+  forces {
+    humans {
+      #1 {
+        Judge = 1,4
+        Surgeon = 0,2
+        Assassin = 0,2
+        Trooper
+      }
+      #2 {
+        Constructor = 2,4
+        Assassin = 0,2
+        Hellfire = 0,4
+        AssaultBot = 0,5
+        Ripper
+      }
+    }
+    mutants {
+      #1 {
+        Shaman = 1,4
+        Sorcerer = 0,2
+        Guardian = 0,2
+        StoneGhost = 0,1
+        Brute = 0,3
+        Warrior
+      }
+      #2 {
+        StoneGhost = 1,4
+        Sorcerer = 0,2
+        Guardian = 0,2
+        Shaman = 0,1
+        HowlingHorror = 0,4
+        AncientShade = 0,5
+        Warrior
+      }
+    }
+    aliens {
+      #1 {
+        Harvester = 0,4
+        Manipulator = 0,4
+        Arbiter = 0,4
+        Dominator = 0,4
+        Overseer = 0,2
+        Shifter = 0,2
+        Trisat = 0,20
+        Tritech
+      }
+    }
+  }
+}

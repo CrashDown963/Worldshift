@@ -1,0 +1,16 @@
+id	model	vars	class	
+ShieldWall01	ShieldWall01.nif
+ShieldWall02	ShieldWall02.nif
+ShieldWall03	ShieldWall03.nif
+AlienAura01   	AlienAura01.nif
+AlienAura02   	AlienAura02.nif
+AlienAura04   	AlienAura04.nif
+AlienAura05   	AlienAura05.nif
+AlienAura_Ball	AlienAura_Ball.nif
+AlienAura_Ball02	AlienAura_Ball02.nif
+AlienAura_Ball03	AlienAura_Ball03.nif
+AlienAura_Ball04	AlienAura_Ball04.nif
+AlienAura_Ball05	AlienAura_Ball05.nif
+HolyAura01    	HolyAura01.nif
+TrapAura01	trapaura01.nif	{ passable = 1 }
+SwampLife	SwampLife.nif

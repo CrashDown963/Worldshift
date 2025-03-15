@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\kohbuildings\kohitems_05.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object05";
+    translation = xpoint3:"60.96253204345703125,778.4954833984375,208.1260223388671875";
+    rotation = {
+      0 = xpoint3:"-0.50000011920928955078125,0.86602532863616943359375,0";
+      1 = xpoint3:"-0.86602532863616943359375,-0.50000011920928955078125,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"__NDL_MultiMtl_Node";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object06";
+    translation = xpoint3:"0,0,78.690155029296875";
+    rotation = {
+      0 = xpoint3:"-0.50000011920928955078125,0.86602532863616943359375,0";
+      1 = xpoint3:"-0.86602532863616943359375,-0.50000011920928955078125,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"__NDL_MultiMtl_Node";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

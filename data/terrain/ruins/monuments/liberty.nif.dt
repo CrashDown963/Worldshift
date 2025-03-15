@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\monuments\liberty.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"default";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-0.111395888030529022216796875,0.9937760829925537109375";
+      2 = xpoint3:"0,-0.9937760829925537109375,-0.111395888030529022216796875";
+    }
+  }
+}

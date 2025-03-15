@@ -1,0 +1,115 @@
+Building OreExtractor : BaseBuilding {
+  name = "Ore Extractor"
+  descr = "Ore Extractor description"
+  model = Data/Models/buildings/ControlTower/Extractor2.kfm {
+    die = Data/Models/buildings/ControlTower/Extractor2_break.nif
+    constr_phase_0 = data/Models/Buildings/Build_Device/Build_Device.kfm
+    constr_phase_1 = Data/Models/Buildings/ControlTower/Extractor_teleporting.kfm
+  }
+  
+  physics {
+    default = Data/Models/buildings/ControlTower/ControlTower_Proxy.pml
+    die = Data/Models/buildings/ControlTower/Extractor.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/TrailSmoke/DestrSmoke02.nif
+    attach_destr_node_04 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_05 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_node_06 = data/models/Effects/Fire/Fire_Ani1.nif
+    attach_destr_perc = 40
+  }
+  
+  destruction = ragdoll
+  explosion = ExplosionControlTower
+  
+  race = humans
+  icon = 1,4
+
+  upgraded = 0
+
+  stats :{
+    hp = 3500
+  }
+  sight = 2500
+  
+  construction {
+    phase_0 {
+      model = constr_phase_0
+      play_anim = constr_phase0
+    }
+    phase_1 {
+      model = constr_phase_0
+      play_anim = constr_phase0
+      perc = 5.5
+    }
+    phase_2 {
+      model = constr_phase_0
+      play_anim = constr_phase2
+    }
+    phase_3 {
+      model = constr_phase_1
+      play_anim = teleport
+      perc = 9
+    }
+  }
+
+  place {
+    place_on_id = Xenolite
+    sticky_radius = 100
+  }
+  
+  animation {
+	  anim_set IDLE = loop {
+      idle_1 = 2000
+      idle_2 = 600
+    }
+  }
+  
+  actions {
+    OreExtractorUpgrade
+    ProduceCommander
+  }
+  
+  CAbilityController AbilityController
+  
+  abilities {
+    SmallCrew {
+      name = "Small Crew"
+      text = "DESCRIPTION"
+      icon = 7,0
+    }
+  }
+  
+  CAlertController alert {
+    timeout = 10
+    layered_anims = 0
+  }
+  
+  CCrewController crew {
+    spawn = Crew                    -- spawn objects of this type
+    program = PrgRepair             -- spawned objects's program
+    count = 2                       -- base count (number of objects to spawn)
+    hp_threshold = 90               -- only spawn if we're not above this threshold
+    low_hp_count = 0                -- additional spawns if we're not above low_hp_threshold
+  }
+  
+  give_res : pvp.humans.small_structure_res
+  cost : pvp.humans.small_structure_time
+}
+
+CUpgradeAction OreExtractorUpgrade {
+  name = "Upgrade to Control Tower"
+  descr = "DESCRIPTION"
+  instant = 1
+  visible = 1
+  icon = 1,10
+  program = PrgConvertToMainBuilding { 
+    id = ControlTower 
+    anim_point = ROOT
+    loop_anim = data/models/buildings/ControlTower/Extractor2_Upgrading_Att.nif
+    finish_anim = data/models/buildings/ControlTower/Extractor2_Upgraded_Att.nif
+  }
+  duration : pvp.humans.big_structure_time
+  cost : pvp.humans.big_structure_cost
+}

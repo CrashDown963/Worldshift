@@ -1,0 +1,287 @@
+Unit Hellfire : MachineUnit {
+  name = "Hellfire"
+  icon = 2,1
+  descr = "The biggest and most powerful unit. Almost undestructable with conventonal weapons. Marks the highlight of human engineering."
+  model = data/models/units/HellFire/HellFire.kfm {
+    die = data/models/units/HellFire/HellFire_Break.kfm 
+
+    rot_z1 {
+      min_yaw = -15
+      max_yaw = 0
+    }
+    rot_z2 {
+      min_yaw = 0
+      max_yaw = 15
+    }
+  }
+  
+  stats :{
+    hp = 380
+    power = 300
+    range = 1600
+    damage = 75
+    armor = 20
+
+    shield_hull = 300
+    shield_regen  = 100
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+    
+    sweep_power_cost = 220
+    sweep_damage = 210
+  }
+  speed = 450
+  race = humans
+
+  destruction = ragdoll
+  explosion = ExplosionBig_02
+
+  -- nano restore points!
+  nano_restore_points = Bone_foot_L2,Bone_foot_R2,Bone_markuch_05,Bone_guz,Bone_markuch_01,Bone_L_hand_2,Bone_L_hand_1,Bone_R_hand_1,Bone_R_sholder,Bone_L_sholder
+
+  physics {
+    default = data/models/units/HellFire/HellFire_Proxy.pml
+    die = data/models/units/HellFire/HellFire.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_04 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_perc = 40
+	
+  }
+  
+  blod_dist {
+    #0 = 10000
+    #1 = 12000
+  }
+
+  foot_prints {
+    desert = hellfire_footprint
+  }
+
+  pitch_speed = 90
+  min_pitch = -30
+  max_pitch = 30
+  yaw_speed = 120
+  min_yaw = -45
+  max_yaw = 45
+  
+  sounds {
+    confirm = data/sounds/units/hellfire/confirm/
+    select = data/sounds/units/hellfire/select/
+    footstep = data/sounds/units/hellfire/step/
+    stop = data/sounds/units/hellfire/stop/
+    destruction = data/sounds/destruction/units/hellfire/
+  }
+  
+  abilities : HellfireAbilities
+  
+  actions := {
+    FireSweep
+    MakeOreExtractor -- fake
+  }
+  
+  animation {
+    anim_set ILE = loop {
+      idle = 2000
+      idle_var_1 = 200
+      --idle_var_2 = 50
+      idle_var_3 = 200
+      idle_var_4 = 200
+      --idle_very_rare_1 = 10
+      --idle_very_rare_2 = 10
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 120
+    max_tilt = 0
+  }  
+
+  CMultiWeaponController weapon {
+
+    damage = stat:damage
+    can_crit = 0
+
+    count = 2 
+    sync = alternate
+    active = 1
+    idle_only = 0
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_once_right
+    shoot_anim_2 = shoot_once_left
+    shoot_snd = Data/Sounds/Units/Hellfire/shot
+    aim_tolerance = 15
+--    fire_rate = 1.2 
+    idle_time = 0.9
+    spot_impact_type = fire
+    spot_impact = 850
+    damage_type = fire
+
+    muzzle_anim = HellfireMuzzle
+	  
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = fire
+      speed = 2400
+      model = data/models/projectiles/fire/HellfireShot.nif {
+      CTrailController trail {
+          emitter = Core
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 6
+         -- start_width = 25
+         -- end_width = 100
+          ttl = 24
+          --simple_time = 90
+    	  
+
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+
+          time3 = 15
+          color3 = colora: 0, 0, 0, 0.6
+
+          time4 = 50
+          color4 = colora: 0, 0, 0, 0.4
+
+          time5 = 100
+          color5 = colora: 0, 0, 0, 0
+
+          }
+      }
+      react = fire
+      effect = HellfireHit
+      ground_hit_effect = HellfireTerrainHitEffect
+      expire_effect = HellfireExpire
+    }
+    
+
+  }
+
+  CShieldController shield {
+    drain_on_hit = 0
+--    radius
+--    max_effects
+--    hit_expire
+--    appear_expire
+--    idle_expire
+--    disappear_expire
+--    idle_reappear = 10
+--    drain_on_hit
+--    sound_no_power
+--    sound_appear
+--    sound_disappear
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+--    activate_damage_type = any
+
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    regen_tick = 2
+    reactivate_threshold = 30
+
+    activate_probability = 100
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      flat_absorbtion = 0
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+  
+
+  cost : pvp.humans.unit_costs.Hellfire
+  cost_sloc : pvp.humans.sloc_costs.Hellfire
+}
+ 
+CEffectAction FireSweep {
+  name = "Fire Sweep"
+  descr = "Blasts the area around the Hellfire inflicting [stat:sweep_damage] to all targets nearby. Beware the friendly fire!"
+  visible = 1
+  instant = 1
+  icon = 8,1
+  power = stat:sweep_power_cost
+  cooldown = 20
+  effect = E_damage {
+    area = 1000 { 
+      anim = data/Models/Effects/Fire/FireSweep.kfm 
+      sound = DATA/sounds/Effects/FireSweep/
+    }
+    amount = stat:sweep_damage 
+    friendly_fire = 1
+  }
+}
+ 
+HellfireAbilities {
+  Shield {
+    name = "Sonic Shield"
+    text = "Powerful shield that is activated automatically when the Hellfire is attacked. Sonic Shield has [stat:shield_hull] durability, [stat:shield_regen] charge rate, [stat:shield_fullabsorbchance]% chance for full deflection and [stat:shield_percentabsorbtion]% damage absorbtion."
+    icon = 2,0
+  }
+}
+
+CMapAnim HellfireHit {
+  model = data/models/projectiles/fire/HellfireShot_HitUnit.nif
+  sound = Data/Sounds/Units/Hellfire/hit
+}
+
+CMapAnim HellfireExpire {
+  model = data/models/projectiles/fire/HellfireShot_Expire.nif
+}
+
+CMapAnim HellfireGroundHit {
+  model = data/models/projectiles/fire/HellfireShot_HitGround.nif
+  scale = 0.65
+}
+
+CMapAnim HellfireMuzzle {
+  model = data/models/Effects/MuzzleFlash/MuzzleFlash_Hellfire.nif
+	CTrailController trail {
+				  emitter = SuperSpray02Fire
+				  texture = data/textures/trails/energy_trail1.dds
+				  tex_ratio = float: 1
+				  start_width = 18
+				  end_width = 0
+				  ttl = 6
+				  simple_time = 1
+				  additive = 1
+                  z_write = 0
+				  material_alpha = 0.5
+				  diffuse = color: 1, 1, 1
+				  ambient = color: 0.5, 0.5, 0.5
+				  emissive = color: 1, 0.8, 0.9
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 3
+				  color1 = colora: 1, 0.45, 0, 1
+
+				  time2 = 30
+				  color2 = colora: 1, 0.2, 0.2, 1
+
+				  time3 = 60
+				  alpha3 = 0.6
+
+				  time4 = 100
+				  color4 = colora: 1, 0.5, 0.2, 0
+			  }
+}
+
+CAnimEffect HellfireTerrainHitEffect {
+  tags t1 = grass | dirt | mud {
+    spawn MoltenSpot
+    spawn HellfireGroundHit
+  }
+  tags t2 = water {
+  	spawn WaterHit
+  }
+}
+

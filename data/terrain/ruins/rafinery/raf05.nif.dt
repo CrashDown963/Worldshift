@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\rafinery\raf05.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object05";
+    translation = xpoint3:"1.11669921875,-0.710933685302734375,356.9185791015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

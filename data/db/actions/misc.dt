@@ -1,0 +1,8 @@
+action DefaultAreaAction  {
+  name = "Area"
+  tags = area_object
+  program = PrgDefaultAreaAction
+  can_default = 1
+  weight = 100
+  cursor = hand
+}

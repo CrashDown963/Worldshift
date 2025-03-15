@@ -1,0 +1,201 @@
+Unit Arbiter : BaseUnit {
+  name = "Arbiter"
+  descr = "Arbiter Placeholder Desc."
+  race = aliens
+  model = Data/Models/Units/Arbiter/Arbiter.kfm {
+  die = Data/Models/Units/Arbiter/Arbiter_die.nif
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Arbiter/Arbiter.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+
+  destruction = ragdoll
+  
+  sounds {
+    select = data/sounds/units/arbiter/select/
+    confirm = data/sounds/units/arbiter/confirm/
+  }
+  
+  officer = 1
+  tags = unit, organic
+  icon = 2,6
+
+  stats :{
+    hp = 320
+    range = 2200
+    psi = 300
+    damage = 80 
+    armor = 2
+    chain_shot_chance = 25
+	  chain_shot_hops = 2
+    
+    shield_hull = 150
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+	
+    fear_shock_power = 180
+    fear_shock_cooldown = 45
+    fear_shock_area = 300
+    fear_shock_duration = 6
+    fear_shock_range = 1800
+    
+  }
+  speed = 450
+  
+  take_auras : { RestorationCoreAura }
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+  }
+
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.6
+    range_near = stat:range * 0.3
+    proximity_bonus = 0.2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/effects/single weapons/arbiter gun.wav
+    shoot_anim = shoot
+    shoot_idle_1 = idle
+    idle_time = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    projectile = chase {
+      model = data/models/projectiles/ProtonShot/ProtonShotProjectile_Green.nif
+      speed = 6000
+      damage = stat:damage
+      react = fire
+    }
+  }
+  
+  actions :{
+    FearShockAction
+    MakeBreeder -- fake
+  }
+  
+  abilities {
+    LongRangeAbi
+    ChainShotAbi
+
+    AIFearShock {
+      action = FearShockAction
+      when   : abi.fight
+      target = current { aoe_range = 1000; aoe_min_enemy_count = 4 }
+      range = 2000
+    }
+  }
+  cost : pvp.aliens.unit_costs.Officer
+  cost_sloc : pvp.aliens.sloc_costs.Officer
+}
+
+LongRangeAbi {
+  name = "Long Range"
+  text = "Arbiter does great damage, but is only efficient at his maximum range. Attacking from close distance will reduce his damage dramatically."
+  icon = 1,0
+}
+
+ChainShotAbi {
+  name = "Chain Shot"
+  text = "Arbiter has [stat:chain_shot_chance]% chance with every shot to trigger plasma chain reaction, damaging [stat:chain_shot_hops] additional enemies."
+  icon = 0,0
+  when : abi.target_hit
+  chance = stat:chain_shot_chance
+  target = current
+  sound = data/sounds/effects/common/short spark.wav
+
+  effect = E_chain {
+    debuff = 1
+    id = ChainShot
+    name = "Chain Shot"
+    text = "This unit is taking damage from a Chain Shot."
+    icon = 1,10
+    type = damage
+    damage = stat:damage
+    dont_damage_first = 1
+    chooser = nearest
+    max_hops = stat:chain_shot_hops
+    max_affected = 10
+    max_spreads = 2
+    max_spreads_per_tick = 2
+    min_spreads_per_tick = 1
+	  spread_dist = 1000
+    remove_spreads = 0
+    check_caster = 0
+    discard_react = 0
+    p2pray = RepairDronesBeam
+    p2pray_dstnode = pt_center
+    p2pray_duration = 1
+  }
+}
+
+CSpellAction FearShockAction {
+  name = "Fear Shock" 
+  descr = "Fears all enemies in the selected area, causing them to run in chaos for [stat:fear_shock_duration] seconds."
+  visible = 1
+  icon = 13,6
+  min_power = stat:fear_shock_power
+  cooldown = stat:fear_shock_cooldown
+  range = stat:fear_shock_range
+  feedback = DecalFeedback
+  tags = location
+  aoe_radius = stat:fear_shock_area
+
+  spell {
+    power = stat:fear_shock_power
+    cast {
+      prepare {
+        duration = 1
+        anim = idle_very_rare_1
+      }
+      finish {
+        duration = 1
+        anim = shoot
+        sound = data/sounds/units/highpriest/pyro/pyro.wav
+      }
+    }
+    effect = S_multifear {
+      id = Fear
+      name = Fear Shock
+      multi_area = stat:fear_shock_area {  
+        anim = data/Models/Effects/Magic/AuraArbiter.nif
+        sound = data/sounds/units/stone ghost/shot/sg 2.wav
+        scale = 1.5
+      }
+      discard_react = 1
+      duration = stat:fear_shock_duration
+      program = PrgFear {
+        speed_multiplier = 0.75
+        range = 600
+        sleep_time = 0.5
+        wander = 1
+      }
+    }
+  } 
+}
+

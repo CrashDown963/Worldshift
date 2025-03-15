@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\plant\plant_parts_10.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"default";
+    translation = xpoint3:"0.15869140625,1.64666748046875,400.9925537109375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

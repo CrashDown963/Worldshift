@@ -1,0 +1,160 @@
+Mob BSABattleYamu : BaseBoss {
+  name = "Battle Yamu"
+  icon = 3,20
+
+  model = Data/Models/units/BAttleYamu/BAttle_Yamu.kfm
+  destruction = animation
+  boss_icon = 6,2
+  
+  sounds {
+    destruction = data/sounds/units/yamu/die.wav
+    footstep = data/sounds/units/yamu/footstep.wav
+  }
+
+  play_sound_on_footstep = 1
+
+  stats : {
+    hp = 18000
+    armor = 55
+    range = 2700
+    damage = 300
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  run_speed = 280
+  
+  melee_damage = 200
+  melee_range = 200
+  melee_cone_angle = 170
+  
+  charge_chance = 40
+  charge_damage = 400
+  charge_range = 300
+  charge_cone_angle = 170
+  
+  stomp_chance = 80
+  stomp_damage = 250
+  stomp_range = 1000
+  stomp_stun_duration = 7
+  
+  COrientationController orientation {
+    rot_speed = 60
+    max_tilt = 20
+  }
+  
+  CWeaponController Melee {
+    active = 0
+    can_crit = 1
+    damage = 0
+    idle_only = 1
+    shoot_anim = MELEE_ATTACK
+    shoot_idle_1 = idle
+    range = 100
+    fire_node = ROOT
+    spot_impact = 0
+    spot_impact_type = melee
+    shoot_snd = data/sounds/units/yamu/hit.wav
+    projectile = instant {
+      effect = E_YamuHit
+    }
+  }
+  
+  animation {
+    anim_set MELEE_ATTACK = loop {
+      Hit_1 = 100,1,1
+    }
+  }
+  
+  abilities {
+    BSAYamuChargeAbi
+    BSAYamuStompAbi
+  }
+}
+
+BSAYamuChargeAbi {
+  name = Enrage
+  when : abi.combat
+  cooldown = 10
+  icon = 13,0
+  chance = var:charge_chance
+  program = PrgYamuCharge {
+    target_react = confusion_react
+    charge_speed = 1200
+    hit_range = 500
+    enemy_search_range = 5000
+    enemy_search_cone = 180
+    prepare_anim = idle_rare_3
+    map_lua_on_hit = YamuHit
+    foot_attachment = data/Models/Effects/Puffs&Dust/hugedirtimpact.nif
+    foot_attachment_scale = 0.3
+    growl_sound = data/sounds/units/yamu/growl.wav
+  }
+}
+
+BSAYamuStompAbi {
+  name = Stomp
+  when : abi.fight
+  cooldown = 10
+  icon = 13,0
+  chance = var:stomp_chance
+  target = self
+  
+  cast {
+    prepare {
+      anim = Hit_2
+    }
+  }
+  
+  sound = data/sounds/effects/explosionmedium/
+  
+  effect = E_set {
+    effect = E_damage {
+      amount = var:stomp_damage
+      area = var:stomp_range
+    }
+    effect = S_multistun {
+      multi_area = var:stomp_range {  
+        anim = data/models/effects/magic/FreezingBlast.nif
+        sound = data/sounds/effects/explosionmedium/Medium Explosion 2.wav
+        scale = 1.5
+        zoffset = -100
+      }
+      duration = var:stomp_stun_duration
+      epicenter {
+        physics_radius = var:stomp_range
+        physics_power = 300
+        physics_elevation = 1600
+      }
+      discard_react = 1
+    }
+  }
+}
+
+CMultiEffect E_YamuChargeHit {
+  effect = CDamageEffect
+  multi_area = var:charge_range {
+    sound = data/sounds/units/yamu/hit.wav
+  }
+  cone_angle = var:charge_cone_angle
+  amount = var:charge_damage
+  epicenter {
+    physics_radius = var:charge_range
+    physics_power = 1700
+    physics_elevation = 300
+  }
+}
+
+CMultiEffect E_YamuHit {
+  effect = CDamageEffect
+  multi_area = var:melee_range
+  cone_angle = var:melee_cone_angle
+  amount = var:melee_damage
+  epicenter {
+    physics_radius = var:melee_range
+    physics_power = 1000
+    physics_elevation = 800
+  }
+}

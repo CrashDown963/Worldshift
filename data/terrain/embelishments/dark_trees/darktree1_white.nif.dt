@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\dark_trees\darktree1_white.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"crystals";
+    translation = xpoint3:"-34.5084686279296875,29.822174072265625,149.7203521728515625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,57 @@
+model = {
+  file = str:"data\models\miscobjects\markers\marker_arrow_ground.nif";
+  animation = {
+    loop = fixp:"1";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Wave";
+    translation = xpoint3:"0,0,16.6660003662109375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Wave01";
+    translation = xpoint3:"0,0,16.6660003662109375";
+    rotation = {
+      0 = xpoint3:"0.7071068286895751953125,0.707106769084930419921875,0";
+      1 = xpoint3:"-0.707106769084930419921875,0.7071068286895751953125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Symbol";
+    translation = xpoint3:"0,0,379.276458740234375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"EnergiinaSterlka01";
+      translation = xpoint3:"0,0,0.985107421875";
+      rotation = {
+        0 = xpoint3:"0,-1,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"1,0,0";
+      }
+    }
+  }
+}

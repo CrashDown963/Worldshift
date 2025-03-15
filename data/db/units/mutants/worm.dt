@@ -1,0 +1,90 @@
+Unit Worm : UnderworldUnit {
+  name = "Soul Worm"
+  descr = "Worm"
+  model = Data/Models/Units/Worm/Worm.kfm
+  scale = 0.8
+  race = mutants
+  icon = 3,2
+  
+  tags = unit, underworld, lowrank
+  
+  stats :{
+    hp = 100
+    damage = 20
+    range = 800
+  }
+  
+  maintain_count = 18
+  
+  speed = 180
+  sight = stat:range
+  aggro_range = 3000
+  waypoint_radius = 500
+
+  actions = 
+
+  immune_to :{
+    Corruption
+  }  
+  
+  spawn_react = respawn_react
+  
+  CAutoDieController AutoDie {
+    duration = 40
+    no_enemy_despawn_time = 15
+    show_progress = 0
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    --range_far = 700
+    --range_near = 100
+    --proximity_bonus = 1
+    idle_only = 1
+    fire_node = pt_shoot_1
+    --aim_node = pt_aim
+    shoot_snd = data/sounds/units/worm/spit/
+    fire_rate = 2
+    aim_tolerance = 45
+    --shoot_anim = shoot
+    --min_bursts = 1
+    --max_bursts = 1
+    --shoot_idle_1 = shoot_idle
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = poison
+
+    instant_shot Worm {
+      model = Data/Models/Effects/TraceBullet/ion_trace.nif	
+      dist_start = 0
+      travel_start = 100
+      travel_end = 10
+      duration = 0.2
+      --duration = 0.4, 0.7, 100, 1000
+      time_fraction_to_lag_end = 50
+      width = 14
+      instances = 128
+      color_alpha {
+        0 = 150,255,80,255
+        100 = 75,128,40,255
+      }
+    }
+ 
+    muzzle_fx worm_muzzle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction	= 20
+      active_variation = 0
+      length_variation = 20
+      width_variation	= 7
+      scale	= 1.5
+      instances = 64
+      emit = 150,255,80
+    }
+  }
+  
+}
+

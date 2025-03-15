@@ -1,0 +1,102 @@
+Mob Greenskin : BaseMob {
+  name = "Green Skin"
+  icon = 5,7
+  model = Data/Models/units/Greenskin/GreenSkin.kfm
+
+  hp = 150
+  min_attack_range = 2000
+  range = 1300
+  damage = 20
+  armor = 0
+  
+  physics {
+    default = Data/Models/units/Greenskin/GreenSkin_Proxy.pml
+    die = Data/Models/units/Greenskin/GreenSkin.pml
+  }
+
+  destruction = ragdoll
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -40
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -40
+      shoot_idle_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -40
+      shoot_idle_up = 60
+    }
+    shoot_idle_2 = 0 {
+      shoot_idle_down = -40
+      shoot_idle_up = 60
+    }
+    shoot_spice_1 = 0 {
+      shoot_idle_down = -40
+      shoot_idle_up = 60
+    }
+    shoot_spice_2 = 0 {
+      shoot_idle_down = -40
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+	range_far = 500
+	range_near = 100
+	proximity_bonus = 2
+    idle_only = 1 
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Juicy Laser/
+    fire_rate = 1 
+    aim_tolerance = 45 
+    min_bursts = 1 
+    max_bursts = 1
+    shoot_anim = shoot 
+    shoot_idle_1 = shoot_idle_1
+    shoot_idle_2 = shoot_spice_2
+
+    spot_impact = 1000 
+    spot_impact_dead = 700 
+
+    spot_impact_type = small_energy
+
+    muzzle_fx GreenskinMuzzle {
+	    model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+	    frequency	= 1
+	    active_fraction	= 20	
+	    active_variation	= 0
+	    length_variation	= 20
+	    width_variation	= 5
+	    scale	= 1
+	    instances = 64
+      emit = 255,255,255
+	  }
+
+    instant_shot GreenskinShot {
+		  model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+		  dist_start = 100
+		  travel_start = 100
+		  travel_end = 50
+        -- duration has either a fixed time format, i.e. duration = time_in_seconds, or
+        -- duration = duration_min, duration_max, distance_min, distance_max
+        -- meaning that shot flight duration is interpolated between duration_min at distance_min
+        -- and duration_max at distance_max, clamped for distances outside the interval.
+        duration = 0.2
+--			duration = 0.2, 0.4, 100, 1000
+		  time_fraction_to_lag_end = 50
+		  width = 10
+		  instances = 128
+		  color_alpha {
+			  0 = 200,180,60,0
+			  20 = 220,150,60,255
+			  80 = 180,150,60,100
+			  100 = 160,0,0,0
+		}
+	  }	
+  }
+  
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\units\nightmare\nightmare.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,32.397125244140625,276.31646728515625";
+    rotation = {
+      0 = xpoint3:"0,0,-1";
+      1 = xpoint3:"-0.99951207637786865234375,0.0312349237501621246337890625,0";
+      2 = xpoint3:"0.03123495168983936309814453125,0.99951207637786865234375,0";
+    }
+  }
+}

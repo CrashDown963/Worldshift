@@ -1,0 +1,290 @@
+Unit Assassin : BaseUnit {
+  name = "Assassin"
+  descr = "DESCRIPTION"
+  model = data/models/units/Assassin/Assassin.kfm
+  scale = 1.05
+  race = humans
+  officer = 1
+  tags = unit, organic
+  speed = 450
+  take_auras : { RestorationCoreAura }
+  icon = 2,4
+  
+  stats :{
+    hp = 320
+    psi = 120
+    armor = 2
+    range = 2100
+    damage = 120
+
+    poison_shot_psi = 90
+    poison_shot_damage = 30
+    poison_shot_duration = 10
+    poison_shot_radius = 500
+    poison_shot_cooldown = 40
+    poison_shot_perc = 30
+
+    expose_target_chance = 10
+    expose_target_armor_perc = 10
+    expose_target_armor_duration = 12
+  }	
+  sight = stat:range + 300
+  physics {
+    default = data/models/units/assassin/Scout_Proxy.pml
+    die = data/models/units/assassin/Scout.pml
+  }
+  destruction = ragdoll
+
+  sounds {
+    start = data/speech/summoning/assassin summoned.wav
+    attack = data/speech/confirmations/assassin/assassin attack/
+    select = data/speech/selecting/assassin select/
+    joke = data/speech/selecting/assassin joke/
+    confirm = data/speech/confirmations/assassin/assassin confirm/
+    destruction = data/speech/deaths/assassin death/
+    engage = data/speech/engage alerts/assassin engage/
+    damage = data/speech/engage alerts/assassin damage/
+    move = data/speech/confirmations/trooper/assassin move/
+  }
+
+  abilities {
+    Sharpshooter {
+      name = "Sharp Shooter"
+      text = "Assassins are devastating at their maximum range, but their efficiency drops quickly with the distance. Try to postion them accordingly during the fight and avoid being forced to fight at close range."
+      icon = 1,0
+    }
+    ExposeTargetAbi
+  }
+  
+  actions : {
+    PoisonShotAction
+    MakeOreExtractor -- fake
+  }
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 45
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 45
+    }
+  }
+
+  animation {
+    cast_poison_shot_finish = shoot
+    anim_seq cast_expose_target_finish {
+      shoot
+      shoot_idle
+    }  
+  }
+
+  impacts : LivingUnitImpacts
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+    
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    range_far = stat:range * 0.8
+    range_near = stat:range * 0.5
+    proximity_bonus = 0.2
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    idle_time = 1.75
+    aim_tolerance = 45
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    instant_shot AssassinShot {
+     model = Data/Models/Effects/TraceBullet/Red_Beam.nif
+     dist_start = 100
+     travel_start = 0
+     travel_end = 0
+     duration = 0.25
+     time_fraction_to_lag_end = 1
+     width = 20
+     instances = 128
+     color_alpha {
+       0 = 255,255,255,255
+       5 = 255,255,255,255
+       22 = 255,118,52,255
+       100 = 255,100,45,0
+     }
+   }
+    spot_impact = 1000
+    spot_impact_type = bullet
+    
+    muzzle_fx AssassinMuzzle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_Ball.nif
+      emit = 255, 51, 51
+      frames = 1
+      frequency	= 1
+      active_fraction	= 17
+      active_variation	= 0
+      length_variation	= 0
+      width_variation	= 0
+      instances = 64
+      scale	= 1
+    }
+    shoot_snd = data/sounds/Effects/Single Weapons/assassin shot.wav
+  }
+  
+  cost : pvp.humans.unit_costs.Officer
+  cost_sloc : pvp.humans.sloc_costs.Officer
+}
+
+
+
+CSpellAction PoisonShotAction {
+  name = "Poison Flare"
+  descr = "Shoot a poisonous flare at the selected area, all targets will be slowed for [stat:poison_shot_perc]% and take [stat:poison_shot_damage] damage every 2 seconds for [stat:poison_shot_duration] seconds."
+  visible = 1
+  icon = 13,1
+  tags = location
+  max_range = stat:range * 1.2 
+  min_power = stat:poison_shot_psi
+  cooldown = stat:poison_shot_cooldown
+  feedback = DecalFeedback
+  aoe_radius = stat:poison_shot_radius
+    
+  spell {
+    power = stat:poison_shot_psi
+    cast {
+	    finish {
+        anim = shoot_up
+        sound = data/sounds/effects/common/proton_grenade.wav
+        attach {
+          pt_shoot = data/models/effects/MuzzleFlash/muzzle_flash_poisonshot.nif
+        }
+      }
+    }
+
+    projectile = parabolic {
+      damage_type = poison
+      start_point = pt_cast
+      angle = 60
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif {
+        CTrailController trail {
+			    emitter = Scene Root
+			    texture = data/textures/trails/energy_trail1.dds
+			    tex_ratio = float: 4.0
+			    start_width = 14
+			    end_width = 140
+			    ttl = 12
+			    simple_time = 1
+			    additive = 1
+			    z_write = 0
+			    material_alpha = 0.5
+			    diffuse = color: 0, 1, 0
+			    ambient = color: 0, 0.5, 0
+			    emissive = color: 0, 1, 0
+
+			    time0 = 0
+			    color0 = colora: 0, 1, 0, 0
+
+			    time1 = 3
+			    color1 = colora: 0, 1, 0, 0.4
+
+			    time2 = 30
+			    color2 = colora: 0, 1, 0, 0.25
+
+			    time4 = 100
+			    color4 = colora: 0, 1, 0, 0
+        }
+      }
+
+      react = poison
+      effect = PoisonShotHit
+      ground_hit_effect = PoisonShotTerrainHitEffect
+      expire_effect = PoisonShotExpire
+    }
+  }
+}
+
+CMapAnim PoisonShotGroundHit {
+  model = data/Models/Effects/Magic/AuraArbiter.nif
+  scale = 1.3
+}
+
+CMapAnim PoisonShotExpire {
+  model = data/Models/Projectiles/ProtonShot/ProtonShotExpire.nif
+  scale = 0.8
+}
+
+CAnimEffect PoisonShotTerrainHitEffect {
+  tags t1 = grass | dirt | mud {
+    spawn PoisonShotGroundHit
+  }
+  tags t2 = water {
+    spawn WaterHit
+  }
+}
+
+CAreaEffect PoisonShotHit {
+  range = stat:poison_shot_radius
+ 
+  epicenter {
+    spawn PoisonShotTerrainHitEffect
+    physics_radius = stat:poison_shot_radius
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn E_PoisonShot  
+  }
+}
+
+CBuffEffect E_PoisonShot {
+  name = "Slowing Poison"
+  text = "Worldshift devs can suck on this one"
+  icon = 2,14
+  debuff = 1
+  type = damage
+  damage_type = poison
+  damage = stat:poison_shot_damage
+  duration = stat:poison_shot_duration
+  stats_change {
+    speed_mod = { perc = var:poison_shot_perc * -1 }
+  }
+  tick = 2
+  immediate_tick = 1
+  discard_react = 1
+  react = poison
+  stack_count = 1
+}
+
+
+ExposeTargetAbi {
+  name = "Expose"
+  text = "Assassin has [stat:expose_target_chance] on every attack to pierce enemy armor, reducing its effectiveness with [stat:expose_target_armor_perc]% for [stat:expose_target_armor_duration] seconds. This effect stacks up to 5 times."
+  icon = 5,0
+  target = current --enemy
+  when : abi.target_hit
+  chance = stat:expose_target_chance
+  sound = data/sounds/Effects/Single Weapons/assassin shot expose.wav
+  effect = E_debuff {
+    id = ExposeTarget
+    name = "Expose Target"
+    text = "This units armor is weakened by an Assassins shot."
+    icon = 2,1
+    type = damage
+    damage = stat:damage
+    stats_change {
+      armor = { perc = stat:expose_target_armor_perc * -1 }
+    }
+    duration = stat:expose_target_armor_duration       -- for Y secs total
+    discard_react = 1
+    react = expose_target
+    stack_count = 5
+  }
+}
+
+

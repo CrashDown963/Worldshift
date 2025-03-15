@@ -1,0 +1,130 @@
+Mob SpittingScorpion: BaseMob {
+  name = "Spitting Scorpion"
+  icon = 2,15
+  model = data/models/lifeforms/Scorpion/ScorpionRanged.kfm {
+    die = Data/Models/Effects/MiscReacts/Spider_die.nif
+  }
+  
+  destruction = animation
+  
+  skin {
+    base = data/models/lifeforms/scorpion/scorpo_skin_diffuse.dds
+    mask = data/models/lifeforms/scorpion/scorpion_maskmap.dds
+    ignore_on_model = Data/Models/Effects/MiscReacts/Spider_die.nif
+  }
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs
+  }
+  
+  stats : {
+    range = 1200
+    damage = 120
+    armor = 3
+    hp = 350
+    sight = 1500
+    
+    venomous_bite_damage = 10
+    venomous_bite_duration = 15
+    -- Acts as melee attack - don't get too close
+    venomous_bite_chance = 100
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  sight = stat:sight
+
+  COrientationController orientation {
+    rot_speed = 130
+    max_tilt = 0
+  } 
+  
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+      hit_2
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = 0
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Discharge Energy/
+    shoot_anim = attack_1
+    shoot_idle_1 = idle
+    idle_time = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 2500
+      scale = 0.25
+      damage = 0
+      effect = E_damage {
+        amount = stat:damage
+        distribute_area = 300
+        react = poison
+        discard_react = 1
+      }
+    }
+  }
+
+  abilities {
+    SpiderSpawn {
+      name = Spider Spawn
+      text = The spider will spawn a number of explosive Spider Spawns when killed. The Spider Spawns should be swiftly destroyed or they will explode, damaging and stunning all enemies around them.
+      icon = 13,0
+    }
+    VenomousBiteAbi {
+      name = Venomous Bite
+      text = The spider has [stat:venomous_bite_chance]% chance to inject poison into his victim causing the poor bastard to lose [stat:venomous_bite_damage] health every second for [stat:venomous_bite_duration] seconds.
+      icon = 13,0
+      when = fight
+      chance = stat:venomous_bite_chance
+      target = enemy {
+        area = 400
+      }
+
+      cast { prepare { anim = ATTACK } }
+
+      effect = E_debuff {
+        id = poison
+        name = "Poison"
+        text = "This unit is taking damage from poison."
+        icon = 1,14
+        type = damage
+        damage = stat:venomous_bite_damage
+        damage_type = poison
+        show_text_feedback = 1
+        duration = stat:venomous_bite_duration
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+        react = poison
+        stack_count = 3
+      }
+    }
+    SwarmingAttack {
+      name = Swarming Attackt
+      text = The attack of the Spitting Spider will distribute its damage over all enemies in small area. Thus it is recommended to engage it with large pack of units.
+      icon = 13,0
+    }
+  }
+
+  ondeath = SpiderSpawn {
+    id = SpiderSpawn
+    min = 2
+    max = 4
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}

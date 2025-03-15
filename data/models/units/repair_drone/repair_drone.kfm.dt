@@ -1,0 +1,96 @@
+model = {
+  file = str:"data\models\units\repair_drone\repair_drone.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+    idle_rare_2 = {
+      loop = int:"1";
+      duration = fixp:"2.799999713897705078125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.799999713897705078125";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-400,0";
+        time = fixp:"1";
+        distance = fixp:"400";
+        speed = fixp:"400";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"0";
+      duration = fixp:"0.3999996185302734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.3999996185302734375";
+        }
+      }
+    }
+    cast_loop = {
+      loop = int:"1";
+      duration = fixp:"1.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.66666698455810546875";
+        }
+      }
+    }
+  }
+}

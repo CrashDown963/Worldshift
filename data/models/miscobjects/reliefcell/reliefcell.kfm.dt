@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\miscobjects\reliefcell\reliefcell.kfm";
+  animations = {
+    activate = {
+      loop = int:"0";
+      duration = fixp:"0.83333337306976318359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.83333337306976318359375";
+        }
+      }
+    }
+    idle_1 = {
+      loop = int:"1";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    idle_2 = {
+      loop = int:"1";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+  }
+}

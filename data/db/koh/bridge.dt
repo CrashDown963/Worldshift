@@ -1,0 +1,7 @@
+Building Bridge : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/Bridge.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

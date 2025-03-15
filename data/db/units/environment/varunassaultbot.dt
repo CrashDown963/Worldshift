@@ -1,0 +1,187 @@
+Mob VarunAssaultBot : BaseMachineMob {
+  name : AssaultBot.name
+  icon = 7,12
+  descr : AssaultBot.descr
+  race = humans
+  
+  model = data/models/units/AssaultBot/AssaultBot.kfm {
+	  die = data/models/units/AssaultBot/AssaultBot_Break.nif
+  }
+  
+  physics {
+    default = data/models/units/AssaultBot/AssaultBot_Proxy.pml
+    die = data/models/units/AssaultBot/AssaultBot.pml
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_04 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_perc = 30
+  }
+  
+  destruction = ragdoll
+  explosion = ExplosionMedium_03
+
+  stats : {
+    hp = 350
+    armor = 15
+    energy = 300
+    damage = 15
+    rocket_damage = 30
+    rocket_precision_perc = -30
+    rocket_precision_duration = 10
+    rocket_precision_chance = 15
+  }
+
+  hp = stat:hp
+  armor = stat:armor
+  energy = stat:energy
+  energy_gen = 180
+  range = 1500
+  chase_range = -1
+  damage = stat:damage
+
+  rocket_damage = stat:rocket_damage
+  barrage_cost = 300
+  barrage_duration = 2
+  barrage_min_range = 750
+  shield_activatechance = 20
+  shield_fullabsorbchance = 10
+  shield_percentabsorb = 10
+  
+  AOE_state = barrage
+  
+  pitch_speed = 90
+  min_pitch = -45
+  max_pitch = 20
+  yaw_speed = 360
+  min_yaw = -30
+  max_yaw = 30
+  
+  COrientationController orientation {
+    rot_speed = 120
+    max_tilt = 0
+  }  
+  
+  CMultiWeaponController rockets {
+    idle_only = 0
+    count = 6 
+    sync = alternate 
+    fire_node_1 = pt_shoot_3
+    fire_node_2 = pt_shoot_4
+    fire_node_3 = pt_shoot_5
+    fire_node_4 = pt_shoot_6
+    fire_node_5 = pt_shoot_7
+    fire_node_6 = pt_shoot_8
+    shoot_snd = Data/Sounds/Units/AssaultBot/RocketLaunch
+    fire_rate = 0.2
+    damage = var:rocket_damage
+    precision = 100
+    spot_impact_type = small_energy
+    damage_type = energy
+    min_range = var:range * 0.5
+      
+    projectile = parabolic {
+  	  dispersion = 370
+      spot_impact = 800
+      spot_impact_type = small_energy
+      effect = VarunAssaultBotRocketEffect
+
+      decal_settings ground_hit_decal = barrage_decal1_assault
+
+      model = data/models/projectiles/rocket/Mortar.nif {
+        CTrailController trail {
+          emitter = Dummy01
+          material = data/models/Effects/Trails/Trail_Smoke3.nif
+          tex_ratio = float: 25
+          start_width = 25
+          end_width = 100
+          ttl = 40
+          --simple_time = 90
+          
+          time0 = 0
+          color0 = colora: 1, 1, 1, 1
+
+          time1 = 3
+          color1 = colora: 1, 1, 1, 1
+
+          time2 = 50
+          color2 = colora: 1, 1, 1, 0.5
+          
+          time3 = 100
+          color3 = colora: 1, 1, 1, 0
+        }  
+      }
+    }
+  }
+  
+  CMultiWeaponController weapon {
+    active = 1
+    can_crit = 1
+    idle_only = 0
+    count = 2 
+    sync = alternate 
+    -- root_node = gun_slot_2 
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_once_right
+    shoot_anim_2 = shoot_once_left
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    idle_time = 0.3
+    damage = var:damage
+
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    muzzle_fx ion_rifle_bot {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+		  frames = 4
+		  frequency = 1.0
+		  active_fraction	= 10
+		  active_variation = 5
+		  length_variation = 42
+		  width_variation	= 7
+		  scale	= 2.2
+		  instances = 64
+          emit = 25,65,195
+	  }
+    
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = small_energy
+      speed = 5000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/V Laser/t_laser.nif {
+        scale = 0.85
+        E = 25,65,195
+      }
+    }
+  }
+
+  CShieldController shield {
+    drain_on_hit = 0
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    activate_probability = var:shield_activatechance
+    projectile_destroy_probability = var:shield_fullabsorbchance
+    effects {
+      flat_absorbtion = 0
+      percent_absorbtion = var:shield_percentabsorb
+    }
+  }
+  
+  abilities : AssaultBotAbilities
+}
+
+CAreaEffect VarunAssaultBotRocketEffect {
+  range = 250
+  epicenter {
+    spawn AssaultBotRocketEffectAnim
+    physics_radius = 250 
+    physics_power = 7000
+  }
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = var:rocket_damage
+    }
+  }
+}

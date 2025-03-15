@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\models\lifeforms\mutantbird\mutant_bird.kfm";
+  animations = {
+    fly = {
+      loop = int:"1";
+      duration = fixp:"0.80000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.80000019073486328125";
+        }
+      }
+    }
+    soar = {
+      loop = int:"1";
+      duration = fixp:"2.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.66666698455810546875";
+        }
+      }
+    }
+  }
+}

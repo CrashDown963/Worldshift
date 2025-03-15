@@ -1,0 +1,516 @@
+Mob CorruptedHighPriest : BaseBoss {
+  name = "Corrupted High Priest"
+  icon = 4,21
+  race = mutants
+  conv_icon_row = 5
+  conv_icon_col = 2
+  boss_icon = 5,3
+  tags = unit, organic
+
+  model = Data/Models/Units/high_priest/high_priest_new.kfm
+  
+  skin {
+    base = data/models/units/high_priest/high_priest_corrupted_diffuse.dds
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/High_Priest/High_Priest.pml
+  }
+  
+  destruction = ragdoll
+  scale = 2.5
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+  
+  attachments {
+    pt_staff = data/models/effects/Fire/Fire_small.nif { scale = 1; fixed_up = 1 }
+    pt_center = data/models/effects/Magic/AncientShade_fx_Attachment.nif {
+      CTrailController ShadeTrail  {
+        emitter = Emmiter01
+        texture = data/textures/trails/dark-lightnings.dds
+        tex_ratio = float: 0.5
+        start_width = 0
+        end_width = 100
+        ttl = 17
+        simple_time = 1
+        additive = 0
+        z_write = 0
+        material_alpha = 0.6
+        diffuse = color: 0, 0, 0
+        ambient = color: 0, 0, 0
+        emissive = color: 0.8, 0.8, 0.8
+  
+        time0 = 0
+        color0 = colora: 1, 1, 1, 0
+  
+        time1 = 4
+        color1 = colora: 1, 1, 1, 1
+  
+        time2 = 60
+        color2 = colora: 1, 1, 1, 1
+  
+        time3 = 100
+        color3 = colora: 1, 1, 1, 0
+      }
+      CTrailController ShadeTrail02 : ShadeTrail {emitter = Emmiter02}
+      CTrailController ShadeTrail03 : ShadeTrail {emitter = Emmiter03}
+      CTrailController ShadeTrail04 : ShadeTrail {emitter = Emmiter04}
+      CTrailController ShadeTrail05 : ShadeTrail {emitter = Emmiter05}
+      CTrailController ShadeTrail06 : ShadeTrail {emitter = Emmiter06}
+    }
+  }
+ 
+  stats : {
+    hp = 50000
+    range = 1800
+    psi = 20000
+    damage = 220
+    armor = 35
+    
+    incinerate_duration = 12
+    incinerate_damage = 60
+  }
+ 
+  hp = stat:hp
+  range = stat:range
+  energy = stat:psi
+  damage = stat:damage
+  armor = stat:armor
+
+  holy_aura_tick = 5
+  holy_aura_heal = 60
+
+  pyrowave_chance = 20
+
+  lightning_power = 80
+  lightning_damage = 450
+
+  holyshock_power = 80
+  
+  freeze_duration = 5
+  freeze_power = 120
+  
+  impacts : LivingUnitImpacts
+
+  abilities {
+    CorruptedLightningAbi {
+      when : abi.combat
+      target = enemy {  min_hp = 400 }
+      range = var:range
+      power = var:lightning_power
+      cooldown = 15
+    
+      cast {
+        finish {
+          anim = cast_finish
+          sound = data/sounds/units/highpriest/lightning/
+          attach {
+            pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+          }
+        }
+      }
+    
+      --Ligtnings
+      projectile = linear {
+        start_point = pt_cast
+        spot_impact = 800
+        spot_impact_type = small_energy
+        speed = 10000
+        damage_type = energy
+        damage = var:lightning_damage
+      
+        model = data/models/effects/magic/HealFXFinish.nif {
+          CTrailController trail {
+            emitter = Dummy01
+            material = data/models/Effects/Trails/trail_drain.nif
+            tex_ratio = float: 5
+            ttl = 15
+    
+            time0 = 0
+            color0 = colora: 0, 1, 1, 1
+            
+            time1 = 35
+            color1 = colora: 0, 0.5, 1, 1
+            
+            time2 = 100
+            color2 = colora: 0, 0.4, 0.8, 0
+          }
+        }
+        react = lightning
+      }
+    }
+    
+    CorruptedFreezeAAbi {
+      when : abi.combat {  aoe_range = 1000; aoe_min_enemy_hp = 600  }
+      target = enemy
+      range = var:range
+      min_power = var:freeze_power
+      power = var:freeze_power
+      cooldown = 25
+    
+      cast {
+        finish {
+          anim = cast_freezingblast_finish
+          attach {
+            pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+          }
+        }
+      }
+      
+      effect = S_multifreeze {
+        multi_area = 1000 { anim = data/models/effects/magic/FreezingBlast.nif; scale = 0.6 }
+        sound = data/sounds/Effects/AcidBlow/
+        duration = var:freeze_duration
+      }
+    }
+    
+    CorruptedShockAbi {
+      when : abi.always
+      target = ally { health_under = 30; health_hp_taken = 200 }
+      range = var:range
+      program = PrgLifeBloom
+      min_power = var:holyshock_power
+      cooldown = 10
+    }
+    
+    CorruptMindAbi {
+      when : abi.fight
+      cooldown = 25
+      target = enemy
+      tags = organic
+      no_buffs = CorruptedMind
+      range = var:range
+      power = 120
+      cast {
+        finish {
+          anim = cast_finish
+        }
+      }
+      effect = E_mindcontrol {
+        id = CorruptedMind
+        duration = 12
+        react = mind_control
+        sound = data/sounds/effects/global actions/horrify/
+      }
+    }
+    
+    Corruption {
+      when : abi.fight
+      cooldown = 15
+      target = current { aoe_range = 750; aoe_min_enemy_hp = 400; aoe_min_enemy_count = 3; }
+      range = 1600
+      power = 120
+
+      cast {
+        finish {
+          anim = cast_finish   
+          sound = data/sounds/units/highpriest/pyro/
+        }
+      }
+      
+      effect = E_multidebuff {
+        id = Corruption
+        name : CorruptionAction.spell.effect.name
+        text : CorruptionAction.spell.effect.text
+        type = damage
+        damage = 20
+        damage_type = poison
+        duration = 20
+        multi_area = 500 {
+          anim = data/models/effects/StoneGhost/StoneGhostWave.nif
+          scale = 0.5
+        }
+        enemy = 1
+        tick = 2
+        immediate_tick = 1
+        discard_react = 1
+        react = fire
+        stack_count = 1
+        target_died = Worm
+      }
+    }
+    
+    CorruptedFire {
+      when : abi.fight
+      cooldown = 10
+      target = current { aoe_range = 750; aoe_min_enemy_hp = 400 }
+      range = 2000
+      power = 80
+      
+      cast {
+        finish {
+          anim = cast_finish   
+          sound = data/sounds/units/highpriest/pyro/
+        }
+      }
+      
+      effect = IncinerateSpot
+    }
+  }
+
+  attack_spell = PyroblastSpell
+  alt_attack_spell = PyrowaveSpell
+  alt_attack_chance = var:pyrowave_chance 
+
+  animation {
+    cast_pyroblast_prepare = cast_preparation
+    cast_pyroblast_finish = cast_finish
+    cast_pyrowave_prepare = cast_preparation
+    cast_pyrowave_finish = cast_finish
+    cast_freezingblast_prepare = cast_preparation
+    cast_freezingblast_finish = cast_finish
+    cast_healing_wave_prepare = cast_preparation
+    cast_absorb_energy_prepare = cast_preparation
+    cast_mind_vision_prepare = cast_preparation
+    cast_ice_shock_prepare = cast_preparation
+    cast_natures_touch_prepare = cast_preparation
+    cast_conjure_food_prepare = cast_preparation --cast_global_loop
+    cast_conjure_food_finish = cast_finish --cast_globall
+    cast_life_bloom_prepare = cast_preparation--cast_global_loop
+    cast_life_bloom_finish = cast_finish --cast_globall
+  }
+}
+
+PyroblastSpell {
+  cast {
+    prepare {
+      anim = cast_pyroblast_prepare
+      duration = 0.5
+      attach {
+        pt_hand = data/models/effects/magic/FireHands.nif
+      }
+    }
+    finish {
+      anim = cast_pyroblast_finish
+      sound = data/sounds/units/highpriest/pyro/
+      attach {
+        pt_hand = data/models/effects/magic/FireHands.nif
+      }
+    }
+  }
+
+  projectile = chase {
+    start_point = pt_cast
+    model = data/models/effects/magic/fireball.nif {
+      CTrailController trail_smoke {
+        emitter = RootDummy
+        material = data/models/Effects/Trails/Trail_Hellfire.nif
+        tex_ratio = float: 2.5
+        start_width = 60
+        end_width = 300
+        ttl = 15
+        --simple_time = 90
+
+          time0 = 0
+          color0 = colora: 1, 0.5, 0, 1
+
+          time1 = 5
+          color1 = colora: 1, 0, 0, 0.8
+
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+
+          time3 = 40
+          color3 = colora: 0, 0, 0, 0.6
+
+          time4 = 100
+          color4 = colora: 0, 0, 0, 0
+      }
+    }
+    speed = 2500
+    scale = 0.35
+  }
+  
+  effect = E_damage {
+    amount = var:damage
+    react = fire
+    can_crit = 1
+  }
+}
+
+PyrowaveSpell {
+  cast {
+    prepare {
+      anim = cast_pyrowave_prepare
+      duration = 0.5
+      attach {
+        pt_hand = data/models/effects/magic/FireHands.nif
+      }
+    }
+    finish {
+      anim = cast_pyrowave_finish
+      sound = data/sounds/units/highpriest/pyro/
+      attach {
+        pt_hand = data/models/effects/magic/FireFXFinish.nif
+      }
+    }
+  }
+
+  projectile = chase {
+    start_point = pt_cast
+    model = data/models/effects/magic/fireball.nif {
+      CTrailController trail_smoke {
+        emitter = RootDummy
+        material = data/models/Effects/Trails/Trail_Hellfire.nif
+        tex_ratio = float: 2.5
+        start_width = 60
+        end_width = 300
+        ttl = 15
+        --simple_time = 90
+
+        time0 = 0
+        color0 = colora: 1, 0.5, 0, 1
+
+        time1 = 5
+        color1 = colora: 1, 0, 0, 0.8
+
+        time2 = 8
+        color2 = colora: 1, 0.2, 0.1, 0.5
+
+        time3 = 40
+        color3 = colora: 0, 0, 0, 0.6
+
+        time4 = 100
+        color4 = colora: 0, 0, 0, 0
+      }
+    }
+    speed = 2500
+    scale = 0.85
+  }
+  
+  effect = E_damage {
+    amount = var:damage
+    react = fire
+  }
+
+  alt_projectile {
+    count = 2
+    projectile = chase {
+      model = data/models/effects/magic/fireball.nif {
+        CTrailController trail_smoke {
+          emitter = RootDummy
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 2.5
+          start_width = 60
+          end_width = 300
+          ttl = 15
+          --simple_time = 90
+
+          time0 = 0
+          color0 = colora: 1, 0.5, 0, 1
+
+          time1 = 5
+          color1 = colora: 1, 0, 0, 0.8
+
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+
+          time3 = 40
+          color3 = colora: 0, 0, 0, 0.6
+
+          time4 = 100
+          color4 = colora: 0, 0, 0, 0
+        }
+      }
+      speed = 2500
+      scale = 0.85
+    }
+    
+    effect = E_damage {
+      amount = var:damage
+      react = fire
+    }
+  }
+}
+
+CMindControlEffect CPCorruptedMind : E_mindcontrol {
+  id = CPCorruptedMind
+  name = "Corrupted Mind"
+  text = "This unit’s mind is corrupted, forcing it to fight on the enemy’s side."
+  icon = 4,5
+  duration = -1
+  react = mind_control
+  discard_react = 1
+}
+
+CBuffEffect CPCorruptedBody : E_buff {
+  id = CPCorruptedBody
+  name = "Corrupted Body"
+  text = "This unit’s statistics are increased by a foul power."
+  icon = 4,4
+  duration = -1
+  stats_change {
+    damage = { perc = 250 }
+    hp = { perc = 400 }
+    psi = { perc = 250 }
+  }
+}
+
+Mob CorruptedHighPriestImage : BaseAnimal {
+  name = "Corrupted High Priest"
+  icon = 4,21
+  race = mutants
+  conv_icon_row = 5
+  conv_icon_col = 2
+  boss_icon = 5,3
+  tags = unit, organic
+
+  model = Data/Models/Units/high_priest/high_priest_new.kfm
+  
+  skin {
+    base = data/models/units/high_priest/high_priest_corrupted_diffuse.dds
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/High_Priest/High_Priest.pml
+  }
+  
+  destruction = ragdoll
+  scale = 2.5
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+  
+  attachments {
+    pt_staff = data/models/effects/Fire/Fire_small.nif { scale = 1; fixed_up = 1 }
+    pt_center = data/models/effects/Magic/AncientShade_fx_Attachment.nif {
+      CTrailController ShadeTrail  {
+        emitter = Emmiter01
+        texture = data/textures/trails/dark-lightnings.dds
+        tex_ratio = float: 0.5
+        start_width = 0
+        end_width = 100
+        ttl = 17
+        simple_time = 1
+        additive = 0
+        z_write = 0
+        material_alpha = 0.6
+        diffuse = color: 0, 0, 0
+        ambient = color: 0, 0, 0
+        emissive = color: 0.8, 0.8, 0.8
+  
+        time0 = 0
+        color0 = colora: 1, 1, 1, 0
+  
+        time1 = 4
+        color1 = colora: 1, 1, 1, 1
+  
+        time2 = 60
+        color2 = colora: 1, 1, 1, 1
+  
+        time3 = 100
+        color3 = colora: 1, 1, 1, 0
+      }
+      CTrailController ShadeTrail02 : ShadeTrail {emitter = Emmiter02}
+      CTrailController ShadeTrail03 : ShadeTrail {emitter = Emmiter03}
+      CTrailController ShadeTrail04 : ShadeTrail {emitter = Emmiter04}
+      CTrailController ShadeTrail05 : ShadeTrail {emitter = Emmiter05}
+      CTrailController ShadeTrail06 : ShadeTrail {emitter = Emmiter06}
+    }
+  }
+}

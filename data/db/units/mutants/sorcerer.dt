@@ -1,0 +1,284 @@
+Unit Sorcerer : BaseUnit {
+  name = "Sorcerer"
+  model = Data/Models/Units/Sorcerer/Sorcerer.kfm
+  descr = "Sorcerer Placeholder Desc."
+  race = mutants
+  officer = 1
+  icon = 3,5
+  
+  tags = unit, organic
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Sorcerer/Sorcerer.pml
+  }
+  destruction = ragdoll
+
+  sounds {
+    start = data/speech/summoning/sorcerer summoned.wav
+    attack = data/speech/confirmations/sorcerer/sorcerer attack/
+    select = data/speech/selecting/sorcerer select/
+    joke = data/speech/selecting/sorcerer joke/
+    confirm = data/speech/confirmations/sorcerer/sorcerer confirm/
+    destruction = data/speech/deaths/sorcerer death/
+    engage = data/speech/engage alerts/sorcerer engage/
+    damage = data/speech/engage alerts/sorcerer damage/
+  }
+  
+  attachments {
+    "pt_hand@#0" = data/models/effects/Magic/Small_Ice.nif { fixed_up = 1 }
+    pt_staff = data/models/effects/Fire/Fire_small.nif { scale = 1; fixed_up = 1 }
+  }
+
+  impacts : LivingUnitImpacts
+  
+  stats :{
+    hp = 540
+    range = 1600
+    psi = 400
+    damage = 70
+    armor = 0
+    
+    chill_psi_cost = 150
+    chill_duration = 8
+    chill_perc = 50
+    
+    incinerate_psi_cost = 120
+    incinerate_duration = 10
+    incinerate_damage = 10
+  } 
+  incinerate_spot_size = 400
+
+  speed = 450
+
+  take_auras : { xp_boost; RestorationCoreAura }
+  
+  abilities {
+    ChillAbi {
+      name = "Chill"
+      text = "Sorcerers' default attack slows down his targets' speed with [stat:chill_perc]% for [stat:chill_duration] seconds."
+      icon = 5,0
+    }
+    
+    AIIncinerate {
+      action = IncinerateAction
+      when   : abi.fight
+      target = current { aoe_range = 750; aoe_min_enemy_hp = 400; aoe_min_enemy_count = 4; aoe_max_ally_count = 2 }
+      range = stat:range
+    }
+  }
+  
+  actions : BaseUnit.actions {
+    IncinerateAction
+    FrostWaveAction
+    MakeShrine -- fake
+  }
+
+  attack_spell = ChillSpell
+  
+  animation {
+   
+    cast_chill_prepare = cast_preparation
+    cast_chill_finish = cast_finish
+    cast_freeze_prepare = cast_preparation
+    cast_freeze_finish = cast_finish
+    cast_pyrokinesis_prepare = cast_preparation
+    cast_pyrokinesis_finish = cast_finish
+  }
+  
+  drainpsy_attachments {
+    anim = cast_drainpsy_channeling
+    infinite = 1
+    attach {
+      pt_hand = data/models/effects/magic/drainhands.nif
+    }
+  }
+  
+  drainpsy_p2p_attachment = pt_hand
+  drainpsy_react = drainpsy_small
+ 
+  cost : pvp.mutants.unit_costs.Officer
+  cost_sloc : pvp.mutants.sloc_costs.Officer
+}
+
+ChillSpell {
+  cast {
+    prepare {
+      duration = 1.0
+      anim = cast_chill_prepare     
+      attach {
+        pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+      }
+    }
+    finish {
+      anim = cast_chill_finish   
+      sound = data/sounds/units/highpriest/pyro/
+      attach {
+        pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+      }
+    }
+  }
+
+  projectile = chase {
+    model = data/models/Projectiles/IceBolt/Icebolt.nif {
+      CTrailController trail {
+        emitter = TrailEmitter
+        texture = data/textures/trails/Trail_5.dds
+        tex_ratio = float: 4.0
+        start_width = 25
+        end_width = 0
+        ttl = 16
+        simple_time = 1
+        additive = 1
+        z_write = 0
+        material_alpha = 0.15
+        diffuse = color: 1, 1, 1
+        ambient = color: 0.5, 0.5, 0.5
+        emissive = color: 1, 1, 1
+   
+        time0 = 0
+        color0 = colora: 1, 1, 1, 0
+   
+        time1 = 8
+        color1 = colora: 0.8, 0.8, 1, 1
+   
+        time2 = 20
+        color2 = colora: 0.2, 0.2, 0.90, 1
+   
+        time3 = 60
+        alpha3 = 0.6
+   
+        time4 = 100
+        color4 = colora: 0.2, 0.2, 1, 0
+      } 
+	  }
+    speed = 2500
+    scale = 0.25
+    damage = stat:damage
+  }
+  
+  effect = E_debuff {
+    id = Chill
+    name = "Chill"
+    text = "This unit is slowed down by a Sorcerer�s attack."
+    icon = 1,11
+    type = slow
+    stats_change {
+      speed_mod = { perc = stat:chill_perc * -1 }
+    }
+    duration = stat:chill_duration
+    tick = 1
+    immediate_tick = 1
+    discard_react = 1
+    react = chill
+    stack_count = 1
+  }
+}
+
+CSpellAction FrostWaveAction {
+  name = "Frost Wave"
+  descr = "Sorcerer nstantly creates a powerful Frost Wave, that slows down all affected units with [stat:chill_perc]% for [stat:chill_duration] seconds."
+  visible = 1
+  icon = 3,7
+  --instant = 1
+  tags = location
+  feedback = DecalFeedback
+  min_power = stat:chill_psi_cost  
+  cooldown = 20
+  aoe_radius = 400
+  
+  spell {
+    power = stat:chill_psi_cost  
+    cast {
+      prepare {
+--        duration = 1.0
+        anim = cast_finish
+        attach {
+          pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+        }
+      }
+    }
+    
+    effect = E_multidebuff {
+      sound = data/sounds/effects/common/chill.wav
+      id = Chill
+      name = "Chill"
+      text = "This unit is slowed down by a Sorcerer�s attack."
+      icon = 2,4
+      type = slow
+      duration = stat:chill_duration
+      multi_area : aoe_radius { anim = data/models/effects/magic/healingwave.nif }
+      enemy = 1
+      stats_change {
+        speed_mod = { perc = stat:chill_perc * -1 }
+      }
+      tick = 1
+      immediate_tick = 1
+      discard_react = 1
+      react = chill
+      stack_count = 1
+    }
+  }
+}
+
+CGameObject IncinerateSpot {
+  decal = molten_spot_area
+  scale = 1.2
+  sounds {
+    start = data/Sounds/Effects/Common/burn.wav
+  }
+  CAutoDieController AutoDie {
+    duration = stat:incinerate_duration
+  }
+  CEffectAura IncinerateSpotAura {
+    range : Sorcerer.incinerate_spot_size
+    faction = all
+    non_stackable = 1
+    effect = E_debuff {
+      id = IncinerateSpot
+      name = "Incinerate"
+      text = "This unit is taking fire damage from an Incinerate spell."
+      icon = 2,12
+      type = damage
+      damage = stat:incinerate_damage
+      damage_type = fire
+      show_text_feedback = 1
+      
+      duration = stat:incinerate_duration
+      
+      tick = 1
+      --immediate_tick = 1
+      discard_react = 1
+      react = fire
+      stack_count = 1
+      cleansable = 0
+    }
+  }
+}
+
+CSpellAction IncinerateAction {
+  name = "Incinerate"
+  descr = "Sorcerer creates a melting spot on the ground, that inflicts [stat:incinerate_damage] damage each tick to all units in the area. The effect lasts for [stat:incinerate_duration] seconds."
+  visible = 1
+  icon = 2,7
+  tags = location
+  feedback = DecalFeedback
+  min_power = stat:incinerate_psi_cost  
+  cooldown = 30
+  aoe_radius = var:incinerate_spot_size
+  
+  spell {
+    power = stat:incinerate_psi_cost
+    cast {
+      prepare {
+--        duration = 1.0
+        anim = cast_finish
+        attach {
+          pt_hand = data/models/effects/magic/FireHands.nif
+        }
+        sound = data/sounds/units/highpriest/pyro/
+      }
+    }
+    effect = IncinerateSpot
+  }  
+}

@@ -1,0 +1,379 @@
+earth_settings = {
+  sun_color = 1.0,1.0,0.9
+  amb_color = 0,0,10
+  azimuth = -300
+  altitude = -20
+  backlight_strength = float: 0
+  terrain_backlight_strength = float: 0
+  brightness = float: 1.0
+}
+
+play_mode = {
+  humans {
+    Assassin
+    Constructor
+    Judge
+    Surgeon
+    ------------
+    Trooper
+    Ripper
+    AssaultBot
+    Hellfire
+    Defender
+  }
+  mutants {
+    Guardian
+    Shaman
+    Sorcerer
+    StoneGhost
+    ------------
+    Warrior
+    Brute
+    AncientShade
+    HowlingHorror
+  }
+  aliens {
+    Arbiter
+    Dominator
+    Harvester
+    Manipulator
+    ------------
+    Trisat
+    Tritech
+    Shifter
+    Overseer
+  }
+}
+
+gt_pvp : play_mode {
+  num_players = 6
+  max_officers = 2
+  recr_points = 12
+}
+
+gt_pvpat : play_mode {
+  num_players = 6
+  max_officers = 2
+  recr_points = 12
+}
+
+
+gt_practice : play_mode {
+  num_players = 6
+  max_officers = 2
+  recr_points = 12
+}
+
+gt_speciallocation : play_mode = location {
+  num_players = 3
+  max_officers = 4
+  recr_points = 12
+}
+
+earth_spots = {
+  #11 = {
+    title = "1.1. A bolt from the blue"
+    descr = "Onkar ni�Varra leads an expedition to explore some ancient ruins. His son Denkar is responsible for the expedition�s safety."
+    pos = 2229,-2194,1006
+    map = missions/11
+    next = missions/12
+    --max_officerslots = 0
+  }
+  #12 = {
+    title = "1.2. Devastation"
+    descr = "Denkar returns to the Tamani village from an exploration trip and finds out the village is under attack by Dunetown forces."
+    story_bits = { cities; saling; onkar; denkar; tamani; }
+    pos = 246,-2993,1333
+    map = missions/12
+    next = missions/13
+    --max_officerslots = 2
+  }
+  #13 = {
+    title = "1.3. Treachery!"
+    descr = "Another attack of Dunetown forces is going on at the nearby Wakono village. Its High Priest, Ganthu, must protect his tribe."
+    story_bits = { ganthu; eji; ragho }
+    pos = 79,-3007,1317
+    map = missions/13
+    next = missions/14
+    --max_officerslots = 1
+  }
+  #14 = {
+    title = "1.4. Retribution"
+    descr = "Denkar and Ganthu are to pay the Dunetown base a visit, deal with their Lord Commander, and take over an aircraft."
+    story_bits = { allies; mining_base }
+    pos = 79,-2932,1481
+    map = missions/14
+    next = missions/15
+    open { "missions/dtb" }
+    max_officerslots = 2
+  }
+  #15 = {
+    title = "1.5. Hostile reception"
+    descr = "Denkar, Ganthu and Eji are approaching Saling, moving through the scorched wastelands outside the city."
+    --story_bits = { saling }
+    pos = 2459,-912,1981
+    map = missions/15
+    next = missions/16
+    max_officerslots = 2
+  }
+  #16 = {
+    title = "1.6. Sneaking in"
+    descr = "Denkar, Ganthu, and Eji are trying to infiltrate Saling. Denkar has to create a diversion so that the two mutants may slip in unnoticed."
+    story_bits = { mutants }
+    pos = 2459,-912,1981
+    map = missions/16
+    next = missions/21
+    open { "missions/bsa" }
+    max_officerslots = 2
+  }
+  #21 = { 
+    title = "2.1. A new enemy"
+    descr = "Appointed as a Lord Commander in Aurora, Denkar is sent to defend an installation in the city�s outskirts from unknown attackers."
+    story_bits = { arna; kuna; order; aurora; denkar; aliens }
+    pos = 1593,-2673,1052
+    map = missions/21
+    next = missions/22
+    max_officerslots = 3
+  }
+  #22 = {
+    title = "2.2. A Place of death"
+    descr = "Denkar returns to the place of his father�s death to retrieve his field diary, in hope that it may contain clues about the lost human city."
+    story_bits = { meeting; lost_city; diary }
+    pos = 0,0,0
+    map = missions/22
+    next = missions/23
+    max_officerslots = 4
+  }
+  #23 = { 
+    title = "2.3. Following the crumbs"
+    descr = "Onkar�s diary points to a location somewhere in Inca. Denkar leads a party to explore the ruins and search for more clues."
+    story_bits = { diary }
+    pos = 2485,-831,1985
+    map = missions/23
+    next = missions/24
+    open { "missions/rom" }
+    max_officerslots = 4
+  }
+  #24 = {
+    title = "2.4. Into the lair of the beast"
+    descr = "The last �crumb� is a derelict Esperantian outpost in America."
+    --story_bits = { esperanza }
+    pos = 0,0,0
+    map = missions/24
+    next = missions/25
+    max_officerslots = 4
+  }
+  #25 = {
+    title = "2.5. Approaching Esperanza"
+    descr = "Denkar�s party approaches Esperanza just to discover that the outskirts of the city are infested with aliens and creatures of the Plague."
+    story_bits = { final_clue }
+    pos = 0,0,0
+    map = missions/25
+    next = missions/26
+    max_officerslots = 6
+  }
+  #26 = {
+    title = "2.6. Labyrinth"
+    descr = "Having entered Esperanza, Denkar�s party races against the aliens to find the source of the mysterious force sensed by Eji."
+    story_bits = { prophecy }
+    pos = 0,0,0
+    map = missions/26
+    next = missions/31
+    open { "missions/esperanza" }
+    max_officerslots = 4
+  }
+  #31 = {
+    title = "3.1. Exposed!"
+    descr = "After retrieving the Esperantian artifact, Denkar and his companions must escape from Esperanza with it."
+    story_bits = { sacrifice; aliens; tharksh; seeds; resonator }
+    pos = 0,0,0
+    map = missions/31
+    next = missions/32
+    max_officerslots = 4
+  }
+  #32 = {
+    title = "3.2. Broken wings"
+    descr = "The forces of the Cult have downed Tharksh�s ship and are trying to eradicate the party."
+    story_bits = { aa }
+    pos = 0,0,0
+    map = missions/32
+    next = missions/33
+    max_officerslots = 4
+  }
+  #33 = {
+    title = "3.3. Caught in the web"
+    descr = "Kuna ni�Dahl and Arna ni�Varra fly to Denkar�s aid. Their aircraft is also disabled but Kuna manages to land close to the Cult�s anti-air facility."
+    story_bits = { help }
+    pos = 0,0,0
+    map = missions/33
+    next = missions/34
+    open { "missions/kharum" }
+    max_officerslots = 4
+  }
+  #34 = {
+    title = "3.4. Chaos"
+    descr = "Having detected the downing of the alien craft, the Jurrans send a raiding party to it. The local Tribes do not hesitate to open hostilities."
+    story_bits = { jurra }
+    pos = 0,0,0
+    map = missions/34
+    next = missions/35
+    open { "missions/cf" }
+    max_officerslots = 4
+  }
+  #35 = {
+    title = "3.5. Ascent"
+    descr = "Denkar�s party scales the slopes of ridge around the Hell Hole."
+    story_bits = { hole }
+    pos = 0,0,0
+    map = missions/35
+    next = missions/36
+    max_officerslots = 6
+  }
+  #36 = {
+    title = "3.6. A battle of minds"
+    descr = "In a desperate effort to turn the tables on the Cult again, Eji has to engage in a telepathic battle with the alien psychic."
+    story_bits = { acceleration }
+    pos = 0,0,0
+    map = missions/36
+    open { "missions/rh" }
+    max_officerslots = 6
+  }
+  #101 = { 
+    title = "Deadly Safari"
+    descr = "Go on deadly safari"
+    map = missions/safari
+    type : gt_speciallocation {
+	  max_officers = 6
+      recr_points = 18
+    }
+    pos = 2459,-912,1981
+	max_officerslots = 6
+  }
+  #102 = { 
+    title = "Dunetown base"
+    descr = "Infiltrate the Dunetown base"
+    map = missions/dtb
+    open { "missions/bt" }
+    type : gt_speciallocation
+    pos = -16,-2808,1710
+  }
+  #103 = { 
+    title = "Bloodsport Arena"
+    descr = "Prove your skill on the arena"
+    map = missions/bsa
+    type : gt_speciallocation
+    pos = 2459,-912,1981
+  }
+  #104 = { 
+    title = "ROM Base"
+    descr = "Infiltrate the ROM base"
+    map = missions/rom
+    type : gt_speciallocation
+    pos = 1892,-2216,1522
+  }
+  #108 = {
+    title = "Esperanza"
+    descr = "Attack the clones"
+    map = missions/esperanza
+    type : gt_speciallocation
+    pos = 2459,-912,1981
+  }
+  #105 = { 
+    title = "Kharum"
+    descr = "Face the kharum inhabitants"
+    map = missions/kharum
+    open { "missions/junkyard" }
+    type : gt_speciallocation {
+	  max_officers = 8
+      recr_points = 24
+	  }
+    pos = 2459,-912,1981
+	max_officerslots = 8
+  }
+  #106 = { 
+    title = "Junkyard"
+    descr = "Face the junkyard inhabitants"
+    map = missions/junkyard
+    type : gt_speciallocation {
+	   max_officers = 8
+       recr_points = 24
+	   }
+    pos = 2459,-912,1981
+	max_officerslots = 8
+  }
+  #107 = { 
+    title = "Corrupted Fields"
+    descr = "Find the horrors of the Underworld"
+    map = missions/cf
+    type : gt_speciallocation {
+      recr_points = 0
+    }
+    pos = 2459,-912,1981
+  }
+  #109 = {
+    title = "The Renegades� Hideout"
+    descr = "Deal with the Jaar Lash renegades."
+    map = missions/rh
+    type : gt_speciallocation
+    pos = 2459,-912,1981
+  }
+  #110 = {
+    title = "Bridges of trial"
+    descr = "Accept the challenge of the invincible warrior."
+    map = missions/bt
+    type : gt_speciallocation {
+      recr_points = 0
+    }
+    pos = 2459,-912,1981
+  }
+}
+
+earth_terrain = {
+  Jungle = 74,97,29
+  Desert = 164,104,44
+  Snow = 255,255,255
+  Temperate = 211,253,93
+  Ocean = 0,79,158
+}
+
+random_map_templates {
+  hell      = { name = "Hell Hole outskirts"; tileset = R16;       apply_water = 0; }
+  des       = { name = "The Sahaar desert";   tileset = R14;       apply_water = 0; }
+  desert_p  = { name = "The Misty Plains";    tileset = desert_p;  apply_water = 0; }
+  dry       = { name = "The Glowing Pits";    tileset = temperate; apply_water = 0; }
+  Jungle_a  = { name = "The jungles of Inca"; tileset = R23j;      apply_water = 0; }
+  mushroom  = { name = "The Gray Barrens";    tileset = mushroom;  apply_water = 0; }
+  forest    = { name = "The Lost Coast";      tileset = forest;    apply_water = 0; }
+  cold      = { name = "Tay-Rammin tundra";   tileset = cold;      apply_water = 0; }
+-- test only
+  Jungle    = { tileset = temperate; apply_water = 0; }   --{ tileset = _Jungle_r; }
+  Desert    = { tileset = R14; apply_water = 0; }         --{ tileset = _Desert; apply_water = 0; }
+  Snow      = { tileset = _gold_grey; }
+  Temperate = { tileset = _grey_brown; }
+  tem_r     = { tileset = temperate_r; }
+  hell_test = { tileset = hell new; apply_water = 0; }
+  Jungle_test = { tileset = jungle new; apply_water = 0; }
+  Test = { tileset = Test; apply_water = 0; }
+}
+
+random_map_params {
+  -- Random map parameters for different numbers of players:
+  -- size is measured in tiles, where 1 tile = 2 meters
+  --                                                                              Minimal player-       Minimal player-    Minimal player-
+  --    Map size    Artifact count, min/max       Xenolite count, min/max         player distance       xenolite distance  artifact distance
+  2 = { size = 128; min_items = 3; max_items = 6; min_mines = 4;  max_mines = 6;  min_player_dist = 80; min_res_dist = 30; min_item_dist = 15; }
+  3 = { size = 128; min_items = 3; max_items = 6; min_mines = 6;  max_mines = 9;  min_player_dist = 80; min_res_dist = 30; min_item_dist = 15; }
+  4 = { size = 192; min_items = 3; max_items = 7; min_mines = 8;  max_mines = 12; min_player_dist = 80; min_res_dist = 30; min_item_dist = 15; }
+  5 = { size = 256; min_items = 5; max_items = 8; min_mines = 10; max_mines = 15; min_player_dist = 80; min_res_dist = 30; min_item_dist = 15; }
+  6 = { size = 256; min_items = 6; max_items = 9; min_mines = 12; max_mines = 18; min_player_dist = 80; min_res_dist = 30; min_item_dist = 15; }
+  
+  starting_location_radius = 6                  -- in tiles, totally flattened area in the middle
+  starting_location_outer_radius = 10           -- in tiles, incl. the transition to the surrounding terrain
+  starting_location_max_height_difference = 500 -- in units, spots with greater height amplitude are rejected
+  
+  resource_radius = 5                           -- in tiles, totally flattened area around the xenolite
+  resource_outer_radius = 8                     -- in tiles, incl. the transition to the surrounding terrain
+  min_resource_distance = 40                    -- in tiles, minimal distance between two xenolite deposits
+
+  min_item_distance = 40                        -- in tiles, minimal distance between between two artifacts
+}

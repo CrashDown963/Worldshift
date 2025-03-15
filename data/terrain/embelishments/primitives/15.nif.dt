@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\primitives\15.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object10";
+    translation = xpoint3:"0,0,106.6549072265625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

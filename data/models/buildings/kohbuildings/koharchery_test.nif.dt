@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\buildings\kohbuildings\koharchery_test.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"53.2541046142578125,59.244800567626953125,1.14386081695556640625";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"-185.65234375,106.871246337890625,57.285770416259765625";
+    rotation = {
+      0 = xpoint3:"-0.47118937969207763671875,-0.882032096385955810546875,0";
+      1 = xpoint3:"-0.882032096385955810546875,0.471189320087432861328125,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Object03";
+    translation = xpoint3:"-185.65234375,106.871246337890625,57.285770416259765625";
+    rotation = {
+      0 = xpoint3:"-0.47118937969207763671875,-0.882032096385955810546875,0";
+      1 = xpoint3:"-0.882032096385955810546875,0.471189320087432861328125,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+}

@@ -1,0 +1,74 @@
+Unit RenegadeEgg : BaseUnit {
+  name = "Alien Egg"
+  icon = 4,30
+  
+  model = data/models/buildings/alienegg/alien_egg_corrupted.kfm {
+    die = data/models/buildings/alienegg/alien_egg_die.nif
+  }
+  
+  skin {
+    base = data/terrain/embelishments/mutated/alien-egg2-corrupted-diff.dds
+    mask = data/terrain/embelishments/mutated/alien-egg2-corrupted-mask.dds
+    normal = data/terrain/embelishments/mutated/alien-egg2-corrupted-nm.dds
+  }
+  
+  destruction = animation
+  movable = 0
+  scale = 0.8
+
+  stats : {
+    hp = 300
+    armor = 25
+    damage = 0
+  }
+
+  hp_gen = stat:hp * 60
+
+  actions {
+  }
+
+  abilities {
+  }
+
+  CWeaponController fake_weapon {
+    fire_node = pt_top
+  }
+
+  CAlertController alert {
+    timeout = 0
+    alert_lua = SpiderEggAlert
+    retreat_lua = SpiderEggRetreat
+  }
+  
+  CAutoDieController auto_die {
+    active = 0
+    duration = 5
+    with_damage = 1
+    death_effect = SpawnAliensEffect
+  }
+
+  CBuffEffect SpawnAliensEffect {
+    function = RenegadeEggSpawn
+  }
+  
+  CSpawnEffect SpawnAliensEffect2 {
+    range = 300
+    random_spawn = 1
+    copy_target_list = 1
+
+    spawn {
+      RenegadeTrisat = 3
+    }
+
+    spawn {
+      RenegadeTritech = 2
+    }
+    
+     spawn {
+      RenegadeShifter = 1
+    }
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}

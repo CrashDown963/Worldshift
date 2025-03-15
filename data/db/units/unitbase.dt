@@ -1,0 +1,793 @@
+
+
+BaseUnit {
+  name = Base Unit
+  movable = 1
+  
+  tags = unit
+  
+  icon = 1,6
+
+  max_auras_taken = 1
+  take_auras  { PsiSpringAura }
+
+  -- blood
+  blood_drops_consts = blood_drops_consts
+  blood_consts = blood_consts
+
+-- STATS, KEEP THEM COHERENT!!!
+  
+  sight = stat:range + 300
+  hull = stat:hp
+  hp_multiplier = 1.5
+  battery = stat:psi
+  power = stat:psi_gen
+  armor = stat:armor
+  no_hp_regen_time = stat:recovery_time
+  no_regen_time = stat:recovery_time
+  aggro_range = 500
+	sel_ui = unit
+	speed_mod_hi = 170
+	speed_mod_lo = 30
+	
+  stats {
+    hp = 100
+    hp_gen = 60
+    armor = 0
+    psi = 0
+    psi_gen = 60
+    range = 900
+    damage = 1
+    precision = 100
+    
+    overtraining = 0
+   
+    effectiveness_armor = 0
+    effectiveness_credits = 0
+
+    autoheal_boost = 1
+    
+    speed_mod = 100
+    damage_taken_mod = 100
+    healing_taken_mod = 100
+    recovery_time = 2
+    
+    crit_chance = 5
+  }
+
+-- END OF STATS
+
+  port_time_modifier = 1.0
+  movement_type = crawl
+
+-- XP MODS
+
+  xp_mods {
+    base = 1.0
+    killing_blow = 1.0
+    heal = 1.0
+    enemy_dies_in_sight = 1.0
+    damage_done = 1.0
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  } 
+
+
+  actions {
+    Stop
+    Move
+    Attack
+    UseSwitch
+    PickItemDef
+  }
+  
+  immune_to {}  
+  
+  reacts {
+    fire {	  
+      duration = 0.4
+      pt_chest {
+        model = data/models/effects/Fire/FireReact.nif { fixed_up = 1 }
+        --stack = reset,once,replay (chose one of these, once is default for looped and replay for nonlooped attachments)
+      }
+--      colorize {
+--        color = 255,50,50
+--        fade_in = 0.1
+--        fade_out = 0.3
+--      }
+    }
+
+    nature_grace {
+      pt_top {
+        model = Data/Models/Effects/Magic/HealGoldReact.nif
+        loop = 0
+      }
+    }
+    
+    heal {
+      pt_top {
+        model = data/models/effects/magic/HealSmallReact.nif
+        loop = 0
+      }
+    }
+    
+    nanofix {
+      pt_ground {
+        model = data/models/effects/MiscReacts/NanoFixReact.nif
+        loop = 0
+      }
+    }
+    
+    clone {
+      pt_ground {
+        model = data/models/effects/MiscReacts/NanoFixReact.nif
+        loop = 0
+      }
+    }
+
+    teleport_officer {
+      pt_ground {
+        model = data/models/effects/MiscReacts/OfficerTeleport.nif
+        loop = 0
+      }
+    }
+    
+    teleport_officer_humans {
+      pt_ground {
+        model = data/models/effects/MiscReacts/OfficerTeleport.nif
+        loop = 0
+      }
+    }
+    
+    teleport_officer_mutants {
+      pt_ground {
+        model = data/models/effects/MiscReacts/OfficerTeleport_mutants.nif
+        loop = 0
+      }
+    }
+    
+    teleport_officer_aliens {
+      pt_ground {
+        model = Data/Models/Effects/MiscReacts/OfficerTeleport_aliens.nif
+        loop = 0
+      }
+    }
+    
+    reinforce {
+      pt_ground {
+        model = data/models/effects/MiscReacts/OfficerTeleport.nif
+        loop = 0
+      }
+    }
+    
+    talk_balloon {
+      pt_top = data/models/effects/MiscReacts/Conversation.nif { fixed_up = 1 }
+    }
+    
+    inject {
+      pt_top {
+        model = data/models/effects/magic/HealSmallReact.nif
+        loop = 0
+      }
+      pt_ground {
+		model = data/models/effects/MiscReacts/Inject_React.nif {
+			CTrailController InjectTrail  {
+				  emitter = Trail01
+				  texture = data/textures/trails/Trail_5.dds
+				  tex_ratio = float: 1
+				  start_width = 35
+				  end_width = 0
+				  ttl = 20
+				  simple_time = 1
+				  additive = 1
+                  z_write = 0
+				  material_alpha = 1
+				  diffuse = color: 1, 1, 1
+				  ambient = color: 0.5, 0.5, 0.5
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 3
+				  color1 = colora: 0.73, 0.31, 0.31, 1
+
+				  time2 = 30
+				  color2 = colora: 0.73, 0.56, 0.31, 1
+
+				  time3 = 60
+				  alpha3 = 0.6
+
+				  time4 = 100
+				  color4 = colora: 1, 0, 0, 0
+		   }
+		   CTrailController InjectTrail01 : InjectTrail {emitter = Trail02}
+		   CTrailController InjectTrail02 : InjectTrail {emitter = Trail03}
+		   CTrailController InjectTrail03 : InjectTrail {emitter = Trail04}
+	  }
+     }
+    }
+
+    stun {
+      pt_top = data/models/effects/magic/BasicStun.nif
+    }
+    
+    ensnare {
+      pt_ground = Data/Models/Effects/MiscReacts/HuntersNet.nif
+    }
+    
+    stasis_shot {
+      pt_top = data/models/effects/magic/BasicStun.nif
+    }
+
+    dimension_chain {
+      pt_ground = Data/Models/Effects/MiscReacts/HuntersNet.nif
+    }
+
+    mind_control {
+      pt_top = data/models/effects/MiscReacts/Fear.nif
+    }
+    
+    corruption {
+      pt_center = data/models/effects/MiscReacts/Fear.nif { scale = 1.5 }   
+    }
+
+    fear {
+	  duration = 15
+      pt_top = data/models/effects/MiscReacts/Fear.nif
+--       colorize {
+--         color = 150,50,150
+--         fade_in = 0.1
+--         fade_out = 0.3
+--       }
+    }
+    
+    horrify {
+      pt_top = data/models/effects/MiscReacts/Horrify_react.nif { fixed_up = 1 }
+    }
+
+    freeze {
+      colorize {
+        color = 70,110,450
+        fade_in = 0.1
+        fade_out = 0.3
+      }
+      pt_ground = data/models/effects/MiscReacts/Freeze.nif { scale = 0.7 }     
+    }
+    
+    slow {
+      duration = 10
+      pt_top = data/models/effects/magic/BasicStun.nif
+      --pt_ground = data/models/effects/magic/Slow.nif
+    }
+
+    poison {
+      pt_top = data/models/effects/MiscReacts/Poison_react.nif { fixed_up = 1 }
+--      colorize {
+--        color = 50,255,50
+--        fade_in = 0.4
+--        fade_out = 0.6
+--      }
+    }
+
+    relief {
+      pt_ground = data/models/effects/magic/ReliefReact.nif
+      pt_top = data/models/effects/magic/HealSmallReact.nif
+    }
+
+    full_restore {
+      pt_ground = data/models/effects/magic/HealFXGround.nif
+      pt_top = data/models/effects/magic/HealSmallReact.nif
+    }
+    
+    drainpsy_small {
+      pt_ground = data/models/effects/MiscReacts/PsyGain.nif
+    }
+    
+    spread_psi = {
+      pt_ground = data/models/effects/StoneGhost/StoneGhostWave.nif { 
+        scale = 0.25
+        stack = reset --replay
+      }
+    }
+
+    spirit_sanctum = {
+      pt_ground = data/models/effects/StoneGhost/StoneGhostWave.nif { 
+        scale = 0.25
+        stack = reset --replay
+      }
+    }
+
+    spirit_trap = {
+      pt_ground = data/models/effects/StoneGhost/StoneGhostWave.nif { 
+        scale = 0.25
+        stack = reset --replay
+      }
+    }
+
+    thunder {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }
+
+    lightning {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }
+
+    damage_transfer {
+      pt_ground = data/models/effects/magic/HealFXGround.nif
+    }
+    
+    vitality_surge {
+      pt_ground = data/models/effects/magic/HealFXGround.nif
+    }
+    
+    laser {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }  
+    
+    drain_life {
+      pt_chest = data/models/effects/miscreacts/LifeDrain.nif
+    }
+
+    drain_enemy_receive_react {
+      pt_chest = Data/Models/Effects/Magic/passivedmgreact.nif
+    }  
+
+    drain_enemy_send_react {
+      pt_chest = Data/Models/Effects/Magic/passivedmgreact.nif
+    }  
+
+    xp {
+      pt_ground = data/models/effects/miscReacts/LevelUp.nif
+    }  
+
+    proton_shot {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }  
+
+    respawn_react {
+      pt_chest = Data/Models/Effects/Magic/passivedmgreact.nif
+    }  
+    
+    frenzied_blades {
+      pt_top = data/models/effects/magic/BasicStun.nif
+    }
+
+    confusion_react {
+      pt_top = data/models/effects/MiscReacts/ConfusionReact.nif { fixed_up = 1 }
+    }
+
+    discharge {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }  
+
+    powerburn {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }  
+
+    power_fuse {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }  
+
+    expose_target {
+      pt_top = data/models/effects/MiscReacts/expose_target.nif { fixed_up = 1 }
+    }
+
+    rupture {
+      pt_chest = data/models/effects/MiscReacts/Rupture.nif 
+    }
+
+    reduced_precision {
+      pt_top = data/models/effects/MiscReacts/reduced_precision.nif { fixed_up = 1 }
+    }
+    
+    chill {
+      duration = 4
+      pt_center = data/models/effects/MiscReacts/Chill.nif 
+      colorize {
+        color = 50,50,255
+        fade_in = 0.1
+        fade_out = 0.2
+      }
+    }
+    
+    paralyze {
+      duration = 10
+      pt_ground = data/models/effects/MiscReacts/ParalyzingField.nif 
+--      colorize {
+--        color = 50,255,50
+--        fade_in = 0.4
+--        fade_out = 0.6
+--      }
+    }
+
+    cleanse {
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif 
+    }
+
+    battle_shout {
+      pt_ground = data/models/effects/MiscReacts/Battle_shout.nif
+    }
+
+    fortify_self {
+      infinite = 1
+      pt_top = data/models/effects/MiscReacts/GuardianFortify.nif {
+        fixed_up = 1 
+      }
+    }
+    
+    fortify {
+      pt_center = data/models/effects/MiscReacts/GuardianFortify_React.nif { fixed_up = 1 }
+    }
+    
+    marker_arrow {
+      pt_ground = data/models/MiscObjects/Markers/Marker_arrow_ground.nif { fixed_up = 1 }
+      pt_top = data/models/MiscObjects/Markers/Marker_arrow_top.nif { fixed_up = 1; auto_size_base = 0 }
+    }
+    
+    marker_attack {
+      pt_ground = data/models/MiscObjects/Markers/Marker_attack_ground.nif { fixed_up = 1 }
+      pt_top = data/models/MiscObjects/Markers/Marker_attack_top.nif { fixed_up = 1; auto_size_base = 0 }
+    }
+    
+    marker_defend {
+      pt_ground = data/models/MiscObjects/Markers/Marker_defend_ground.nif { fixed_up = 1 }
+      pt_top = data/models/MiscObjects/Markers/Marker_defend_top.nif { fixed_up = 1; auto_size_base = 0 }
+    }
+    
+    marker_heal {
+      pt_ground = data/models/MiscObjects/Markers/Marker_heal_ground.nif { fixed_up = 1 }
+      pt_top = data/models/MiscObjects/Markers/Marker_heal_top.nif { fixed_up = 1; auto_size_base = 0 }
+    }
+
+    death_rumble {	  
+      duration = 0.8
+      pt_ground {
+        model = data/models/effects/MiscReacts/React_AuraDamage.nif
+      }
+--      colorize {
+--        color = 255,50,50
+--        fade_in = 0.1
+--        fade_out = 0.3
+--      }
+    }
+
+    hollow_voice {
+      duration = 0.8
+      pt_chest {
+        model = data/models/effects/Fire/FireReact.nif { fixed_up = 1 }
+      }
+--      colorize {
+--        color = 255,50,50
+--        fade_in = 0.1
+--        fade_out = 0.3
+--      }
+    }
+    
+    manipulate {
+      pt_ground {
+        model = Data/Models/Effects/MiscReacts/React_AuraArmor.nif {
+          stack = replay
+        }
+      }  
+    }    
+    
+    enrage {
+      infinite = 1
+      pt_ground {
+        model = Data/Models/Effects/MiscReacts/React_AuraArmor.nif { fixed_up = 1}
+      }
+    }
+
+    overclock {
+      pt_ground = data/models/effects/MiscReacts/React_AuraArmor.nif 
+    }
+    
+    lzweapon_red {
+      infinite = 1
+      pt_ground {
+        model = data/models/effects/MiscReacts/React_AuraDamage.nif { fixed_up = 1}
+      }
+    }
+    lzweapon_blue {
+      infinite = 1
+      pt_ground {
+        model = Data/Models/Effects/MiscReacts/React_AuraArmor.nif { fixed_up = 1}
+      }
+    }
+    lzweapon_yellow {
+      infinite = 1
+      pt_ground = data/models/effects/MiscReacts/ParalyzingField_Yellow.nif 
+    }
+    lzweapon_green {
+      infinite = 1
+      pt_ground = data/models/effects/MiscReacts/ParalyzingField.nif 
+    }
+    
+  }
+  
+  beam_end_points {
+    pt_chest
+    pt_head
+    pt_top
+    pt_ground
+    pt_hand
+--	special {
+--		MyBeamID {
+--			special points here
+--		}
+--	}
+  
+  }
+
+  drainpsy {
+    time = 2
+    qty = 10
+    distance = 1300
+  }
+
+
+
+  CAbilityController AbilityController
+  
+  faction_specific = 1
+  commander_xp_points = 1 -- given to commander when unit dies
+  
+  xp_boost_attachment = data/models/effects/magic/drainhands.nif
+  xp_boost_pt = pt_top
+}
+
+--------------------------------------------------------------- BASE MOB
+
+BaseMob : BaseUnit {
+  name = Mob
+  tags = unit, organic, mob
+  subgroup = Mobs
+  race = common
+
+  hull = var:hp
+  hp_multiplier = 1.5
+  battery = var:energy
+  power = var:energy_gen
+
+  sight = 1500
+  sight_incombat = 3000
+  hp = 200
+  hp_gen = 120
+  energy = 0
+  energy_gen = 120
+  armor = 0
+  chase_range = 5000
+  range = 1000
+  damage = 20
+  speed = 500
+  walk_speed = 250
+  sel_ui = mob
+
+--  co_spawns = 1000                -- 0: solo; number: auto "link" range; group_name: predefined group
+--  spawn_radius = 1000             -- range around spawn point
+--  spawn_area                      -- = area_name (only spawn within this area)
+--  spawn_min_interval = 0          -- min time between spawns, 0 - no check
+--  spawn_max_alive = 0             -- max number of units alive from this spawn, 0 - no max
+--  spawn_max_times = 0             -- max number of spawns (i.e. spawn x times then stop), 0 - no max
+--  spawn_condition                 -- = condition_name (only spawn if specified condition exists and is true)
+--  spawn_sync                      -- = group_name (spawners from this group spawn together)
+--  spawn_cast                      -- cast this (usually just anim/react/effect) when spawned
+--  respawn_min_time = 0            -- min time between normal respawns, 0 - no normal respawn
+--  respawn_min_reanimate_time = 5  -- min time after death to reanimate, 0 - no reanimate
+--  respawn_max_times = 0           -- max number of respawns, 0 - no limit   
+--  respawn_sync                    -- = grp_name (all mobs from this group should respawn at the same time)
+--  respawn_condition               -- = condition_name (only respawn if specified condition exists and is true)
+--  respawn_cast                    -- cast this (usually just anim/react/effect) when respawned
+--  despawn_min_time = 0            -- min time after (re)spawn to despawn, 0 - no minimum
+--  despawn_condition               -- = condition_name (only despawn if specified condition exists and is true)
+--  despawn_sync = grp_name         -- = grp_name (all mobs from this group should despawn at the same time)
+--  despawn_cast                    -- cast this (usually just anim/react/effect) before despawning
+
+  respawn_cast = CastRespawn
+  
+  impacts : LivingUnitImpacts
+
+  COrientationController orientation {
+    type = COrientationController 
+    rot_speed = 180 
+    max_tilt = 0 
+  }
+}
+
+CastRespawn {
+  react = respawn_react
+}
+
+--------------------------------------------------------------- BASE ANIMAL
+
+BaseAnimal : BaseMob {
+  name = "Animal"
+  tags = unit, organic, mob, animal
+  subgroup = Animals
+  sight = 500
+  range = 100
+  damage = 10
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = Scene Root
+    shoot_anim = ATTACK
+  }
+}
+
+
+--------------------------------------------------------------- UNDERWORLD
+
+UnderworldUnit : BaseUnit {
+  name = "Underworld Creature"
+  tags = unit, underworld
+  immune_to :{
+    ParalyzingField
+  }
+  stats : {
+    hp_gen = 180
+  }
+}
+
+--------------------------------------------------------------- MACHINES
+
+MachineUnit : BaseUnit {
+  name = "Machine"
+  tags = unit, bot
+  machine = 1
+
+  stats : {
+    power = 0
+    power_gen = 60
+    hp_gen = 180
+  }
+  battery = stat:power
+  power = stat:power_gen
+  
+  actions := {
+    PickItem = DISABLE
+  }
+  impacts : MachineUnitImpacts
+
+  immune_to :{
+    Corruption
+    Growl
+    Threaten
+    ParalyzingField
+    SpiritSanctum
+    SpiritTrap
+  }  
+
+  refpoints {
+    repair = 5
+  }
+
+  -- general purpose restore points!
+  nano_restore_points = pt_head,pt_center,pt_top
+}
+
+BaseMachineMob : BaseMob {
+  name = "MachineMob"
+  tags = unit, bot, mob, repairable_unit
+  machine = 1
+
+  impacts : MachineUnitImpacts
+  
+  immune_to :{
+    Corruption
+    Growl
+    Threaten
+    ParalyzingField
+    SpiritSanctum
+    SpiritTrap
+  }  
+
+  refpoints {
+    repair = 5
+  }
+
+  -- general purpose restore points!
+  nano_restore_points = pt_head,pt_center,pt_top
+}
+
+
+BaseUnderworldMob : BaseMob {
+  name : UnderworldUnit.name
+  tags = unit, underworld, mob
+  immune_to :{
+    ParalyzingField
+  }
+}
+
+
+BaseBoss : BaseMob {
+  boss = 1
+  respawn_min_reanimate_time = 0
+  immune_to :{
+    E_multifreeze
+    E_freeze
+    E_multistun
+    E_stun
+    S_stun
+    S_multistun
+    stun
+    S_fear
+    S_multifear
+    fear
+    slow
+    DimensionChain
+  }
+}
+
+BaseMachineBoss : BaseMachineMob {
+  boss = 1
+  respawn_min_reanimate_time = 0
+  immune_to :{
+    E_multifreeze
+    E_freeze
+    E_multistun
+    E_stun
+    S_stun
+    S_multistun
+    stun
+    S_fear
+    S_multifear
+    fear
+    slow
+    DimensionChain
+  }
+}
+
+--------------------------------------------------------------- IMPACTS 
+
+
+LivingUnitImpacts {
+	bullet {
+	--	1 = data/models/effects/impacts/blood_impact.kfm 
+		2 = data/models/effects/impacts/blood_impact2.kfm {scale = 2}
+		3 = data/models/effects/impacts/blood_impact3.kfm {scale = 2}
+		4 = data/models/effects/impacts/blood_impactPart.kfm {scale = 2}
+		5 = data/models/effects/impacts/blood_impactPart2.kfm {scale = 2}
+	}
+
+	melee {
+		1 = data/models/effects/impacts/melee_blood_impact2.kfm {scale = 2}
+		2 = data/models/effects/impacts/melee_blood_impactPart2.kfm {scale = 2}
+	}
+
+	small_energy {
+		1 = data/models/effects/impacts/simple sparks.nif
+	}
+	
+	fire {
+		1 = data/models/effects/impacts/simple sparks.nif
+	}
+	
+	ion {
+		1 = data/models/effects/impacts/IonHitReact.nif
+	}
+	
+} 
+
+MachineUnitImpacts {
+	bullet {
+		1 = data/models/effects/impacts/simple sparks.nif
+	}
+	small_energy {
+		1 = data/models/effects/impacts/simple sparks.nif
+	}
+	fire {
+		1 = data/models/effects/impacts/simple sparks.nif
+	}
+	
+	ion {
+		1 = data/models/effects/impacts/IonHitReact.nif
+	}
+} 
+
+

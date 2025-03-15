@@ -1,0 +1,81 @@
+dstate S_fear {
+  debuff = 1
+  id = Fear
+  name = "Fear"
+  text = "This unit is horror-stricken and cannot execute orders."
+  icon = 3,6
+  type = fear
+  program = PrgFear { test = 0 }
+  duration = 10
+  priority = 5
+  react = fear
+}
+
+dstate S_madden {
+  debuff = 1
+  id = Madden
+  name = "Madden"
+  text = "This unit has panicked and does not distinguish friends from foes."
+  icon = 3,8
+  type = fear
+  program = PrgMadden
+  duration = 15
+  priority = 5
+  react = fear
+}
+
+dstate S_stun {
+  debuff = 1
+  id = Stun
+  name = "Stun"
+  text = "This unit is stunned and cannot do anything at the moment."
+  icon = 3,9
+  type = stun
+  program = PrgStun
+  duration = 5
+  priority = 10
+  react = stun
+}
+
+dstate S_freeze {
+  debuff = 1
+  id = Freeze
+  name = "Freeze"
+  text = "This unit is frozen and cannot do anything at the moment."
+  icon = 3,7
+  type = stun
+  program = PrgFreeze
+  duration = 10
+  priority = 15
+  react = freeze
+}
+
+dstate S_confuse {
+  id = Confuse
+  type = confusion
+  program = PrgConfuse
+  priority = 2
+}
+
+CMultiEffect S_multistate {
+  effect = dstate {
+  }
+}
+
+CMultiEffect S_multistun : S_stun {
+  effect = dstate {}
+}
+
+CMultiEffect S_multifear : S_fear {
+  effect = dstate {}
+}
+
+CMultiEffect S_multifreeze : S_freeze {
+  effect = dstate {}
+}
+
+CMultiEffect E_multiconfuse {
+  effect = dstate {}
+  priority = 2
+}
+

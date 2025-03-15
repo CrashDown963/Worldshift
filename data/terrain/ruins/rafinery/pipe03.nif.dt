@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\rafinery\pipe03.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Pipe01-origin";
+    translation = xpoint3:"1.7457826137542724609375,3.7746124267578125,384.736114501953125";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"1,0,0";
+    }
+  }
+}

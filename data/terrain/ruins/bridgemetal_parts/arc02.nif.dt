@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\bridgemetal_parts\arc02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Arc04";
+    translation = xpoint3:"-1.0005035400390625,0.760570526123046875,1455.6829833984375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

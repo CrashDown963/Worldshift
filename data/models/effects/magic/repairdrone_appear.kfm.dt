@@ -1,0 +1,23 @@
+model = {
+  file = str:"data\models\effects\magic\repairdrone_appear.kfm";
+  animations = {
+    activate = {
+      loop = int:"0";
+      duration = fixp:"1.83333337306976318359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.966666698455810546875";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.83333337306976318359375";
+        }
+      }
+    }
+  }
+}

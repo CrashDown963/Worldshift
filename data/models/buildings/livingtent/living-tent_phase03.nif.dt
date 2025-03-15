@@ -1,0 +1,97 @@
+model = {
+  file = str:"data\models\buildings\livingtent\living-tent_phase03.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Phase03";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"ROOT";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"ROOT NonAccum";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Phase03-Object";
+          translation = xpoint3:"33.861507415771484375,-38.980236053466796875,51.926166534423828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"pt_work_1";
+          translation = xpoint3:"281.799102783203125,-319.13470458984375,29.888916015625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"pt_work_2";
+          translation = xpoint3:"-287.326446533203125,-60.45778656005859375,29.888916015625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"pt_work_3";
+          translation = xpoint3:"-158.5438995361328125,296.785400390625,29.888916015625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #4 = {
+          scale = fixp:"1";
+          name = str:"pt_work_5";
+          translation = xpoint3:"267.29791259765625,76.67694854736328125,29.888916015625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #5 = {
+          scale = fixp:"1";
+          name = str:"pt_work_4";
+          translation = xpoint3:"193.4083251953125,345.78875732421875,29.888916015625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

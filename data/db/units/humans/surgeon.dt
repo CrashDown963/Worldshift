@@ -1,0 +1,232 @@
+Surgeon Surgeon : BaseUnit {
+  name = "Surgeon"
+  descr = "Special unit trained in giving first aid on the battlefield"
+
+  model = data/models/units/Surgeon/Surgeon.kfm
+  scale = 1.05
+  race = humans
+  officer = 1
+  icon = 1,4
+
+  tags = unit, organic
+  speed = 450
+  physics {
+    default = data/models/units/Surgeon/Medic_Proxy.pml
+    die = data/models/units/Surgeon/Medic.pml
+  }
+  destruction = ragdoll
+  take_auras : { RestorationCoreAura }
+
+  sounds {
+    start = data/speech/summoning/surgeon summoned.wav
+    attack = data/speech/confirmations/surgeon/surgeon attack/
+    select = data/speech/selecting/surgeon select/
+    joke = data/speech/selecting/surgeon joke/
+    confirm = data/speech/confirmations/surgeon/surgeon confirm/
+    destruction = data/speech/deaths/surgeon death/
+    engage = data/speech/engage alerts/surgeon engage/
+    damage = data/speech/engage alerts/surgeon damage/
+    move = data/speech/confirmations/surgeon/surgeon move/
+  }
+
+  stats : {
+    armor = 2
+    hp = 350
+    range = 1600
+    damage = 8
+ 
+    attack_rate = 1
+    attack_proximity = 10
+    attack_precision = 1
+
+    psi = 280
+
+    bandage_range = 1750
+    bandage_amount = 70
+    bandage_cooldown = 2
+    bandage_crit = 0
+
+    relief_duration = 8
+    relief_healpersec = 15
+    relief_psicost = 120
+
+    resurect_psicost = 0
+
+    mend_power = 80
+    mend_heal = 280
+  }
+  
+  relief_radius = 600
+  bandage_follow_range = 1750
+  relief_range = 1600
+  
+  aggro_range = 0
+  
+  impacts : LivingUnitImpacts
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+
+    damage = stat:damage
+    range_far = stat:range * 0.25
+    range_near = stat:range * 0.15
+    proximity_bonus = 8
+    fire_node = pt_shoot_1
+    --aim_node = pt_aim
+
+    aim_tolerance = 45
+    shoot_anim = shoot
+    idle_time = 1.5
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 0.7
+		    E = 125,255,20
+ 	    }
+    }
+    spot_impact = 750
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+  
+  abilities : SurgeonAbilities
+  
+  actions : {
+    Heal;
+    ActionRelief;
+    MendAction;
+    MakeOreExtractor -- fake
+  }
+  
+  animation {
+    auto_show_hide {
+      Bone_Gun {
+        shoot
+        shoot_idle
+      } 
+    }
+    cast_mend_channeling = cast_prepare
+    cast_relief = cast_prepare
+    anim_set IDLE = loop {
+      idle = 800
+      idle_rare_1 = 200
+      idle_rare_2 = 200
+    }
+  }
+
+  -- mend restore
+  mend_range = stat:range
+  mend_max_range = stat:range
+  mend_duration = 5
+  mend_beam_timelife = 1
+  mend_beam_spawn_time = 1
+  mend_beam = MendBeam
+  mend_source = pt_hand
+  mend_attach = data/models/effects/magic/drainhands.nif
+  --mend_beam_color = 1,0.2,0.1
+  cost : pvp.humans.unit_costs.Officer
+  cost_sloc : pvp.humans.sloc_costs.Officer
+}
+
+action ActionRelief {
+  name = "Relief"
+  descr = "The Surgeon activates a special Relief Cell that will heal each second [stat:relief_healpersec] hit points to all friendly living units around it. Relief Cell will stay active for [stat:relief_duration] seconds. "
+  visible = 1
+  tags = location
+  icon = 9,1
+  program = PrgRelief
+  min_power = stat:relief_psicost 
+  cooldown = 30
+  delay_cooldown = 1
+}
+
+
+SurgeonAbilities {
+  FirstAid {
+    name = "First Aid"
+    text = "The Surgeon will automatically bandage wounded units every [stat:bandage_cooldown]seconds, healing them for [stat:bandage_amount] with a [stat:bandage_crit]% chance for twice the amount, also removing one harmful effect. Right-click on a friendly target to make the Surgeon following him and putting special attention on his hit points."
+    icon = 3,0
+  }
+}
+
+CastBandage {
+  power = 0
+  cooldown = stat:bandage_cooldown
+  
+  cast {
+    prepare {
+      anim = cast_prepare
+      attach {
+        pt_hand = data/models/effects/magic/HealHandsBandage.nif
+      }
+    }
+    finish {
+      anim = cast_finish
+      attach {
+        pt_hand = data/models/effects/magic/HealHandsBandage.nif
+      }
+    }
+  }  
+  cast self {
+    prepare {
+      anim = cast_prepare
+      attach {
+        pt_hand = data/models/effects/magic/HealHandsBandage.nif
+      }
+    }  
+    finish {
+      anim = cast_finish
+      attach {
+        pt_hand = data/models/effects/magic/HealHandsBandage.nif
+      }
+    }
+  }
+
+  effect = E_set {
+    effect = E_heal {
+      amount = stat:bandage_amount
+      crit_chance = stat:bandage_crit
+    }
+    effect = E_cleanse {
+      amount = 1
+      max_rank = 6
+    }
+  }  
+}
+
+action Heal {
+  tags = healable
+  program = PrgHeal
+  can_default = 1
+  weight = 2
+}
+
+action MendAction {
+  name = "Mend"
+  descr = "The Surgeon uses her skills to mend wounded friendly unit, healing him for [stat:mend_heal] hit points over [mend_duration] seconds."
+  tags = healable,ally
+  visible = 1
+  icon = 13,2
+  min_power = stat:mend_power
+  program = PrgMend
+  cooldown = 20
+  delay_cooldown = 1
+  sound = data/sounds/effects/common/Ment_loop02.wav
+}
+
+

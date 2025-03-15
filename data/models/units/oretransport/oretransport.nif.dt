@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\units\oretransport\oretransport.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"3.333333492279052734375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Chopter";
+    translation = xpoint3:"0,0,129.0567779541015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-0.99864292144775390625,0";
+      2 = xpoint3:"0,0,-0.99864292144775390625";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Chopter NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

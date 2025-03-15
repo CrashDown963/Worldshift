@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\pointy_rocks\crystal-test1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"0.30743408203125,-5.594757080078125,698.9876708984375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

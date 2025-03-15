@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\ruins\power_post\power_post01_jungle.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"El. stulb";
+    translation = xpoint3:"-1.127899169921875,-1.2150115966796875,222.0361175537109375";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"green";
+    translation = xpoint3:"-2.9033050537109375,-13.64409923553466796875,317.68963623046875";
+    rotation = {
+      0 = xpoint3:"0.706682682037353515625,0,0.70753061771392822265625";
+      1 = xpoint3:"0.70753061771392822265625,0,-0.706682682037353515625";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

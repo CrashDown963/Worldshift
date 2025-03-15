@@ -1,0 +1,90 @@
+CMapAnim BigMeteorite {
+	model = Data/Models/Effects/Magic/RainOfFire_Big.kfm 
+          CTrailController trail_smoke {
+          emitter = SmallAsteroid
+          material = data/models/Effects/Trails/Trail_Meteorite.nif
+          tex_ratio = float: 5.3
+	  start_width = 60
+    	  end_width = 300
+    	  ttl = 40
+    	  --simple_time = 90
+    	  
+
+
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+
+          time3 = 18
+          color3 = colora: 0.2, 0.2, 0.2, 1
+
+          time4 = 50
+          color4 = colora: 0.2, 0.2, 0.2, 1
+          
+          time5 = 100
+          color5 = colora: 0.2, 0.2, 0.2, 0
+		}
+	
+}
+
+CMapAnim SmallMeteorite {
+	model = Data/Models/Effects/Magic/RainOfFire_Small.kfm 
+	  CTrailController trail_smoke {
+          emitter = SmallAsteroid
+          material = data/models/Effects/Trails/Trail_Meteorite.nif
+          tex_ratio = float: 5.3
+		  ttl = 27
+    	  
+    	  
+
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+
+          time3 = 18
+          color3 = colora: 0.2, 0.2, 0.2, 1
+
+          time4 = 25
+          color4 = colora: 0.2, 0.2, 0.2, 1
+          
+          time5 = 100
+          color5 = colora: 0.2, 0.2, 0.2, 0
+		}
+	
+}
+
+
+CMapAnim BigLightningStrike01 {
+	model = Data/Models/Effects/Magic/LightningStrikes01.kfm
+}
+
+CMapAnim BigLightningStrike02 {
+	model = Data/Models/Effects/Magic/LightningStrikes02.kfm
+}
+
+CMapAnim BigLightningStrike03 {
+	model = Data/Models/Effects/Magic/LightningStrikes03.kfm
+}
+
+
+CMapAnim SmallLightningStrike01 {
+	model = Data/Models/Effects/Magic/LightningStrikes01.kfm
+}
+
+CMapAnim SmallLightningStrike02 {
+	model = Data/Models/Effects/Magic/LightningStrikes02.kfm
+}
+
+CMapAnim SmallLightningStrike03 {
+	model = Data/Models/Effects/Magic/LightningStrikes03.kfm
+}

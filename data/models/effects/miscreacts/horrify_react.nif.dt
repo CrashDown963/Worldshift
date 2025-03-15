@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\effects\miscreacts\horrify_react.nif";
+  animation = {
+    loop = fixp:"2.400000095367431640625";
+    duration = fixp:"3";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Plane04";
+      translation = xpoint3:"1.8187572956085205078125,-1.26009476184844970703125,72.95674896240234375";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+Mob Ragho : BaseMob {
+  name = "Ragho"
+  icon = 3,9
+  race = mutants
+  model = Data/Models/Units/Shaman/Shaman.kfm
+  
+  skin {
+    base = Data/Models/Units/Shaman/shaman-ragho-diff.dds
+    mask = Data/Models/Units/Shaman/shaman-ragho-mask.dds
+  }
+  
+  conv_icon_row = 4
+  conv_icon_col = 1
+
+  physics {
+    default = data/models/units/Trooper/TownGuard_Proxy.pml
+    die = Data/Models/Units/Shaman/Shaman.pml
+  }
+  
+  destruction = ragdoll
+  take_auras : { xp_boost; RestorationCoreAura }
+  
+  hp = 440
+  armor = 3
+  range = 2200
+  damage = 20
+  drnlife_damage = 100
+  energy = 300
+  energy_gen = 120
+  rejuvenation_range = 500
+  freeze_psi_cost = 200
+  rejuvenation_psicost = 140
+  rejuvenation_amount = 120
+  xp = 1
+  indestructible = 1
+  
+  impacts : LivingUnitImpacts
+
+  attack_spell = PyrokinesisSpell
+  fight_method = DrainLifeAttack
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+ 
+  animation {
+    cast_drainpsy_channeling = drainpsi_loop
+    
+    cast_pyrokinesis_prepare = cast_praparation
+    cast_pyrokinesis_finish = cast_finish
+    cast_freeze_prepare = cast_praparation
+    cast_freeze_finish = cast_finish
+    cast_drnlife_channeling = cast_praparation
+    
+    cast_rejuvenation_prepare = cast_praparation
+    cast_rejuvenation_finish = cast_finish
+  }
+
+  drainpsy_attachments {
+    anim = cast_drainpsy_channeling
+    infinite = 1
+    attach {
+      pt_hand = data/models/effects/magic/drainhands.nif
+    }
+  } 
+  
+  drainpsy_p2p_attachment = pt_hand
+  drainpsy_react = drainpsy_small
+   
+  -- drnlife cast spell
+  drnlife_range = var:range * 0.9
+  drnlife_max_range = var:range
+  drnlife_duration = 5
+  drnlife_beam_timelife = 2.0
+  drnlife_beam_spawn_time = 1
+  drnlife_beam = DrainLifeLightning
+  drnlife_react = drain_life
+  drnlife_source = pt_hand
+  drnlife_attach = data/models/effects/magic/drainhands.nif
+  drnlife_beam_color = 0.8,0.6,0.1
+  drnlife_heal_perc = 30
+}
+
+CHealEffect E_shaman_drainheal {
+  amount = 10
+  react = heal
+  area = 500
+}

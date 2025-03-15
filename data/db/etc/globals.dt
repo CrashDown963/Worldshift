@@ -1,0 +1,240 @@
+-- various consts
+consts {
+  pick_item_duration = 3 -- secs to pick an item
+  
+  aura_color_friendly = -15, -30, -15
+  aura_color_hostile = -30, -15, -15
+}
+
+human_start_units {
+  Commander
+  Technician
+  Technician
+}
+
+mob_spawns {
+  mobs {
+    FatDealer
+    WildBrute
+    Greenskin
+    Kikkert
+  }
+  vars {
+    waypoint_radius = 1000
+  }
+  Xenolite = 6,10
+  Artifact1 = 4,6
+  Artifact2 : Artifact1
+  Artifact3 : Artifact1
+}
+
+-- selection colors
+selection_colors {
+  ours = 40,180,0
+  ally = 0,60,0
+  enemy = 140,10,0
+  neutral = 0,0,255
+  artifact = 255,255,0
+}
+
+-- all ability related definitions
+abi {
+  -- how many times an ability would happen in 10 mins
+  rare = 10
+  normal = 30
+  sometimes = 60
+  often = 90
+  frequently = 120
+  very_freq = 150
+  constantly = 200
+
+  -- area sizes
+  small = 800
+  medium = 1800
+  large = 2500
+  
+  -- range types
+  near = 900
+  average = 1500
+  far = 2200
+  
+  -- status groups
+  fight = fight,spellcast             -- fighting (only between shooting, i.e. when idle)
+  idle = idle	                        -- idle
+  target_hit = target_hit             -- when shooting at target
+  always = fight,idle,spellcast
+  approach = approach                 -- when moving towards enemy
+  combat = approach,fight,spellcast   -- when "in combat"
+  killing_blow = killing_blow         -- when target is killed
+  
+  -- target types
+  current = current                 -- currently active target
+  self = self                       -- myself
+  enemy = enemy                     -- chose random enemy as target
+  ally = ally                       -- choose an ally
+}
+
+area {
+  mini = 500
+  small = 900
+  medium = 1500
+  large = 2200
+}
+
+range {
+  near = 900
+  average = 1500
+  far = 2200
+}
+-- common reacts
+
+reacts {
+  fire {
+    duration = 5
+    attach { 
+      pt_chest  = data/models/effects/Fire/FireReact.nif { 
+		scale = 4.3 
+		fixed_up = 1 
+		}
+     -- pt_head   = data/models/effects/Fire/FireReact.nif { scale = 2 }
+     -- pt_hand   = data/models/effects/magic/FireHands.nif { scale = 4 }
+     -- pt_foot   = data/models/effects/Fire/FireReact.nif { scale = 1 }
+    }
+  }
+}
+
+-- common casts
+casts {
+
+  cast tc1 {
+    prepare {
+	  duration = 6
+      anim = cast_preparation     
+      attach{
+        pt_hand = data/models/effects/magic/FireHands.nif
+        pt_ground = data/models/effects/magic/FireHands.nif
+      }
+    }
+    finish {
+      anim = cast_instant   
+       attach {
+		 pt_hand = data/models/effects/magic/FireFXFinish.nif
+      }
+    }
+  }
+
+  cast tc2 {
+    prepare {
+	  duration = 4
+      anim = cast_preparation     
+      attach {
+        pt_hand = data/models/effects/magic/HealHands.nif {
+          fixed_up = 1
+        }
+        --pt_hand = data/models/effects/magic/FireHands.nif
+	      }
+    }
+    finish {
+      anim = cast_finish   
+      attach {
+		--pt_hand = data/models/effects/magic/FireFXFinish.nif
+        pt_hand = data/models/effects/magic/HealFXFinish.nif
+	  }
+    }
+    projectile = linear {
+      speed = 3000
+      damage = 50
+      damage_type = fire
+      model = data/models/effects/magic/Fireball.nif
+      start_point = pt_top
+    }
+  }  
+
+  cast tc3 {
+    finish {
+      anim = cast_instant
+      attach {
+		    pt_hand = data/models/effects/magic/FireFXFinish.nif
+		    pt_ground = data/models/effects/magic/HealFXGround.nif
+		  }
+    }
+    projectile = chase {
+      speed = 3000
+      damage = 50
+      damage_type = fire
+      model = data/models/effects/magic/Fireball.nif
+      start_point = pt_top
+      spot_impact = 1000
+      spot_impact_type = bullet
+    }
+  }  
+  
+  cast tc4 {
+    prepare {
+      duration = 64
+      attach {
+        pt_ground = data/models/effects/magic/HealFXGround.nif {
+			CTrailController trail {
+				emitter = Plane07
+				texture = data/textures/trails/energy_trail1.dds
+				tex_ratio = float: 4.0
+				start_width = 20
+				end_width = 0
+				ttl = 32
+				simple_time = 1
+				additive = 1
+                                z_write = 0
+				material_alpha = 0.5
+				diffuse = color: 1, 1, 1
+				ambient = color: 0.5, 0.5, 0.5
+				emissive = color: 1, 1, 1
+
+				time0 = 0
+				color0 = colora: 1, 1, 1, 0
+
+				time1 = 3
+				color1 = colora: 0.10, 0.10, 0.90, 1
+
+				time2 = 30
+				color2 = colora: 0, 0, 0.90, 1
+
+				time3 = 60
+				alpha3 = 0.6
+
+				time4 = 100
+				color4 = colora: 0, 0, 1, 0
+			}  
+
+CTrailController trail1 : trail {
+				emitter = Plane06
+				}  
+CTrailController trail2 : trail {
+				emitter = Plane05
+				}  
+    
+CTrailController trail3 : trail {
+				emitter = Plane04
+				}  
+CTrailController trail4 : trail {
+				emitter = Plane03
+				}  
+CTrailController trail5 : trail {
+				emitter = Plane02
+				}  
+        }
+      }  
+    }
+  }
+
+}
+
+farm_consts {
+  spots_per_field = 2
+  spots_radius = 200
+
+  decals_fadein = 0.5
+
+  -- Kai transport
+  food_routes_for_kai_transport = 5
+  food_per_kai_transport = 50
+}

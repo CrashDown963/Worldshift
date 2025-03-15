@@ -1,0 +1,6 @@
+Alien Dominator2_Temp: Alien {
+  race = aliens
+  linkable = 1
+  model = Data/Models/Units/Dominator/Dominator2.nif
+}
+

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\rocks\common_stone5.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"stone";
+    translation = xpoint3:"0,0,4.081939697265625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0.999975681304931640625,-0.006975832395255565643310546875";
+      2 = xpoint3:"0,0.006975832395255565643310546875,0.999975681304931640625";
+    }
+  }
+}

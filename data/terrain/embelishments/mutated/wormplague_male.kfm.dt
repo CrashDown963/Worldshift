@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\terrain\embelishments\mutated\wormplague_male.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_very_rare = {
+      loop = int:"1";
+      duration = fixp:"2.3666667938232421875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.3666667938232421875";
+        }
+      }
+    }
+  }
+}

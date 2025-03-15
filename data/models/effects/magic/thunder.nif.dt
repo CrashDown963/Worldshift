@@ -1,0 +1,147 @@
+model = {
+  file = str:"data\models\effects\magic\thunder.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"14.53333377838134765625";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"BaseDummy";
+        translation = xpoint3:"0,0,424.872161865234375";
+        rotation = {
+          0 = xpoint3:"0.59542119503021240234375,0.803413689136505126953125,0";
+          1 = xpoint3:"-0.803413689136505126953125,0.59542119503021240234375,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray02Dust-Emitter";
+          translation = xpoint3:"0,0,-621.47613525390625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray02Fragments-Emitter";
+          translation = xpoint3:"0,0,-621.47613525390625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"FunnelDummy";
+          translation = xpoint3:"0,0,1651.662353515625";
+          rotation = {
+            0 = xpoint3:"0.999968230724334716796875,0.007967635057866573333740234375,0";
+            1 = xpoint3:"-0.007967635057866573333740234375,0.999968230724334716796875,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Cone02";
+            translation = xpoint3:"0,0,111.96172332763671875";
+            rotation = {
+              0 = xpoint3:"-0.70719873905181884765625,0.70701491832733154296875,0";
+              1 = xpoint3:"-0.70701491832733154296875,-0.70719873905181884765625,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray02Dust02-Emitter";
+          translation = xpoint3:"0,0,-621.47613525390625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #4 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning01";
+          translation = xpoint3:"0,-518.076171875,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #5 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning02";
+          translation = xpoint3:"-520.1724853515625,0,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #6 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning03";
+          translation = xpoint3:"0,518.0758056640625,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #7 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning04";
+          translation = xpoint3:"520.17193603515625,0,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Drag01";
+    translation = xpoint3:"886.66180419921875,-340.10211181640625,-7.0981426239013671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Wind01";
+    translation = xpoint3:"-232.30487060546875,-754.99273681640625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

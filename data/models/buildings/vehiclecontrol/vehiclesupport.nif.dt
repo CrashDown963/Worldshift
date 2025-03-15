@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\buildings\vehiclecontrol\vehiclesupport.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"VecihleSuport";
+    translation = xpoint3:"-30.449420928955078125,154.105621337890625,76.64990234375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

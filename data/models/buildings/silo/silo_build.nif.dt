@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\silo\silo_build.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Silo";
+    translation = xpoint3:"3.1018197536468505859375,31.73297119140625,227.94207763671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object03";
+    translation = xpoint3:"3.1018197536468505859375,31.73297119140625,227.94207763671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"3.1018197536468505859375,31.73297119140625,227.94207763671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Silo-build";
+    translation = xpoint3:"-4.88922119140625,31.376556396484375,116.68017578125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

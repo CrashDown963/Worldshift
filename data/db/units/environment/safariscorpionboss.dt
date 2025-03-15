@@ -1,0 +1,73 @@
+Mob SafariScorpionBoss : BaseBoss {
+  name = "Scorpion"
+  icon = 7,30
+  boss_icon = 1,4
+  model = data/models/lifeforms/Scorpion/Scorpion.kfm
+  
+  destruction = animation
+  scale = 2
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs
+  }
+  
+  stats : {
+    range = 250
+    damage = 250
+    armor = 25
+    hp = 50000
+    speed = 600
+    crit_chance = 0
+  }  
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  speed = stat:speed
+  
+  drop_item = 460
+  
+  COrientationController orientation {
+    rot_speed = 130
+    max_tilt = 60
+  } 
+  
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+      hit_2
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK
+    shoot_snd = data/sounds/effects/melee little pierce/
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    idle_time = 1
+    spot_impact = 500
+    spot_impact_type = melee
+  }
+
+  abilities {
+    HatchEggAbi {
+      when : abi.combat
+      target = ally { def = SafariEgg; min_alive_time = 4 }
+      condition = ScorpionBossLowHealth
+      cooldown = 8
+      range = 50000
+      program = PrgHatchEgg {
+        egg_react = confusion_react
+        healing_perc = 20
+      }
+    }
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}

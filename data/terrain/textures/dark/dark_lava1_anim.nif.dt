@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\dark\dark_lava1_anim.nif";
+  animation = {
+    loop = fixp:"16.666667938232421875";
+    duration = fixp:"0";
+  }
+}

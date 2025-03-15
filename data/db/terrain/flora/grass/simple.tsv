@@ -1,0 +1,18 @@
+id	model	vars	fade_near	fade_far	density_min	density_max	slope_max	alpha_max	scale
+
+Green_Grass1	test-grass1.nif		{shadow=0}	4000	5000	0.1	0.3	30		float:1.5
+Green_Grass2	test-grass3.nif		{shadow=0}	4000	5000	0.1	0.3	30		float:1.5
+Green_Grass3	test-grass5.nif		{shadow=0}	4000	5000	0.1	0.3	30		float:1.5
+Flat_Plant1	flatplant1.nif		50	5000	0.1	0.3			
+Flat_Plant4	flatplant4.nif		50	5000	0.1	0.3			
+Pointy_Bush	pointybushbig.nif		50	5000	0.1	0.3
+sharp_grass	sharp_grass.nif	
+sharp_grass2	sharp_grass2.nif
+sharp_grass3	sharp-grass_03.nif
+RedFlower_normal	Redflower.nif <roundshadow02> { shadow = 0 }		50	5000	0.1	0.3
+Thin_Grass3	thin-grass3.nif
+Òhin_Grass5	thin-grass5.nif
+hell-grass1	hell-grass1.nif
+hell-grass2	hell-grass2.nif
+hell-grass3	hell-grass3.nif
+hell-grass4	hell-grass4.nif

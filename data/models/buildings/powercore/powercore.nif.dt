@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\buildings\powercore\powercore.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"POWER CORE";
+    translation = xpoint3:"-6.43963623046875,-24.539020538330078125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"decal_plane";
+    translation = xpoint3:"0.075897216796875,-14.1759490966796875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

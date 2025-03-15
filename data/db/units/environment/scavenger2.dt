@@ -1,0 +1,6 @@
+Mob Scavenger2 : Scavenger {
+  skin {
+    base = data/models/units/Scavenger/Scavenger_yellow_diff.dds
+  }
+  boss = 0
+}

@@ -1,0 +1,335 @@
+Mob Kroggol : BaseBoss {
+  name = "Kroggol"
+  race = humans
+  icon = 2,20
+  boss_icon = 2,4
+  conv_icon_row = 5
+  conv_icon_col = 1
+  model = data/models/units/Assassin/Assassin.kfm
+  scale = 1.5
+  boss = 1
+  
+  impacts : LivingUnitImpacts
+  
+  stats :{
+    hp = 30000
+    armor = 8
+    range = 10000
+    damage = 300
+    melee_damage = 200
+    
+    crit_chance = 0
+
+    expose_target_armor_perc = 40
+    expose_target_armor_duration = 10
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  poison_shot_damage = var:damage * 0.2
+  sight_incombat = -1
+  chase_range = -1
+  
+  frenzy_duration = 15
+  frenzy_stack_count = 5
+  frenzy_crit_chance = 20
+  
+  destruction = ragdoll
+  
+  physics {
+    default = data/models/units/assassin/Scout_Proxy.pml
+    die = data/models/units/assassin/Scout.pml
+  }
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  animation {
+    anim_set MELEE {
+      hit_1
+      hit_2
+    }
+  }
+  
+  conditions {
+    SpawnAssassins = CheckVar {
+      variable = hit_points_percent
+      operator = <
+      value = 90
+    }
+    SpawnBrutes = CheckVar {
+      variable = hit_points_percent
+      operator = <
+      value = 50
+    }
+    InCombat = InCombat {
+    }
+    Run = CheckCondition {
+      condition = InCombat
+      operator = HasBeenTrueFor
+      time = 30
+    }
+  }
+
+  abilities {
+    Run {
+      when : abi.fight
+      --chance = 20
+      condition = Run
+      cooldown = 30
+      target = named_group { 
+        group = KroggolRunPositions  
+        no_enemy_in_range = 500
+      }
+      program = PrgMove { 
+        speed = 1000
+        cancel_on_cc = 1
+      }
+    }
+    
+    --SpawnBrute {
+    --  when : abi.fight
+    --  condition = SpawnBrutes
+    --  cooldown = 11
+    --  cast {
+    --    prepare {
+    --      anim = shoot_idle_down
+    --    }
+    --    finish {
+    --      anim = shoot_down
+    --    }
+    --  }
+    --  effect = E_spawn {
+    --    spawn {
+    --      KroggolBruteAdd = 1
+    --    }
+    --  }
+    --}
+  
+    SpawnAssassin {
+      --name = Proton Grenade
+      when : abi.fight
+      condition = SpawnAssassins
+      --icon = 13,0
+      target = named_group { 
+        group = KroggolAssasinsPositions
+        no_ally_in_range = 300
+      }
+      --range = var:range * 1.5
+      cooldown = 10
+      sound = data/sounds/effects/common/proton_grenade.wav
+
+      cast {
+        prepare {
+          anim = shoot_idle_up
+        }
+        finish {
+          anim = shoot_up
+          attach {
+            pt_shoot_1 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif
+          }
+        }
+      }
+    
+      projectile = parabolic {
+        damage_type = energy
+        start_point = pt_shoot_1
+        angle = 60
+        --speed = 4000
+        model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif {
+          CTrailController trail_1 {
+            emitter = root
+            texture = data/model/effects/Trails/Lightning_Trail_Drain.dds
+            tex_ratio = float: 1.7
+            start_width = 95
+            end_width = 270
+            ttl = 10
+            simple_time = 1
+            additive = 1
+            z_write = 0
+            material_alpha = 0.8
+            diffuse = color: 1, 1, 1
+            ambient = color: 0.5, 0.5, 0.5
+            emissive = color: 1, 1, 1
+  
+            time0 = 0
+            color0 = colora: 0.2, 0.2, 1, 0
+  
+            time1 = 3
+            color1 = colora: 0.2, 0.2, 1, 1
+  
+            time2 = 30
+            color2 = colora: 0.2, 0.2, 1, 1
+  
+            time3 = 60
+            alpha3 = 0.8
+            
+            time4 = 100
+            color4 = colora: 0.4, 0.4, 1, 0
+          }
+          
+          CTrailController trail_2 {
+            emitter = root
+            texture = data/model/effects/Trails/Trail3.dds
+            tex_ratio = float: 0.6
+            start_width = 135
+            end_width = 25
+            ttl = 14
+            simple_time = 1
+            additive = 1
+            z_write = 0
+            material_alpha = 1
+            diffuse = color: 1, 1, 1
+            ambient = color: 0.5, 0.5, 0.5
+            emissive = color: 1, 1, 1
+  
+            time0 = 0
+            color0 = colora: 1, 0.3, 1, 0.6
+  
+            time1 = 2
+            color1 = colora: 0.3, 0.2, 1, 0.8
+  
+            time2 = 30
+            color2 = colora: 0.3, 0.2, 1, 0.8
+  
+            time3 = 65
+            alpha3 = 0.7
+            
+            time4 = 100
+            color4 = colora: 0.2, 0.1, 1, 0
+          }
+        }
+  
+        effect = E_spawn {
+          spawn_at_exact_location = 1
+          spawn {
+            KroggolAssassinAdd = 1
+          }
+        }
+
+        --ground_hit_effect = ProtonShotTerrainHitEffect
+        --expire_effect = ProtonExpire
+      }
+    }
+
+    Melee {
+      cast { finish { anim = MELEE } }
+      when : abi.fight
+      target = current
+      range = 150
+      effect = E_damage {
+        amount = stat:melee_damage
+        react = rupture
+      }
+    }
+
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 0
+    idle_only = 1
+    --range_far = var:range * 0.5
+    --range_near = var:range * 0.1
+    --proximity_bonus = 0.1
+    min_range = 150
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = .2
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 900
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 1.5
+		    E = 40,250,40
+	    }
+
+      effect = E_set {
+      --  random = 1
+      --  
+      --  effect = E_revealfowbuff {
+      --    id = Poison
+      --    name = "Poison"
+      --    text = "This unit is suffering poison damage."
+      --    icon = 2,14
+      --    type = damage
+      --    damage = var:poison_shot_damage
+      --    damage_type = poison
+      --    show_text_feedback = 1
+      --    duration = 10
+      --    tick = 2
+      --    discard_react = 1
+      --    react = poison
+      --  }
+      
+        effect = E_buff {
+          target_self = 1
+          id = Frenzy
+          name = "Frenzy"
+          text = "This unit is frenzied. Its critical chance is increased."
+          icon = 4,3
+          type = frenzy
+          duration = var:frenzy_duration
+          stack_count = var:frenzy_stack_count
+          stats_change {
+            crit_chance = { abs = var:frenzy_crit_chance }
+          }
+          react = battle_shout
+          --repeat_react = 1
+          discard_react = 1
+        }
+      
+        
+        effect = E_debuff {
+          id = ExposeTarget
+          name : ExposeTargetAbi.effect.name
+          text : ExposeTargetAbi.effect.text
+          type = damage
+          damage = 0 --stat:damage
+          
+          stats_change {
+            armor = { perc = stat:expose_target_armor_perc * -1 }
+          }
+      
+          duration = stat:expose_target_armor_duration 
+          discard_react = 1
+          react = expose_target
+          stack_count = 5
+        }
+      }
+    }
+    
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }  
+}
+

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\pointy_rocks\cobble_stone1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"stone";
+    translation = xpoint3:"71.611236572265625,-40.421161651611328125,-0.1435933411121368408203125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

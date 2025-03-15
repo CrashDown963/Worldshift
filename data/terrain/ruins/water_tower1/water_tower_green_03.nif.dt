@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\ruins\water_tower1\water_tower_green_03.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Break-stage03";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0,0,-1";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"objdefault";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,113 @@
+Commander Commander2 : BaseUnit {
+  commander = 1
+  model = Data/Models/Units/Commander/Commander2.nif
+  race = humans
+  tags = unit, organic
+  speed = 450
+  take_auras : { RestorationCoreAura }
+  
+  stats :{
+    hp = 750
+    armor = 120
+
+    psi = 100
+    psi_gen = 2
+
+    range = 1600
+    damage = 50
+  }
+  
+  
+  physics {
+    default = data/models/units/Judge/Judge_Proxy.pml
+    die = data/models/units/Commander/Commander.pml
+  }
+  destruction = ragdoll
+
+  impacts : LivingUnitImpacts
+  
+  movement_type = crawl
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+  }
+
+  actions : BaseUnit.actions {
+    PickItem
+    TeleportOfficerAction
+    ConfuseAction
+    RenewAction
+  }
+  
+  animation {
+    teleport_officer = walk
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.35
+    range_near = stat:range * 0.14
+    proximity_bonus = 2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/hitech beam/
+    aim_tolerance = 45
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle_1
+    idle_time = 1.2
+    spot_impact = 850
+    spot_impact_type = bullet
+    damage_type = energy
+    
+   muzzle_fx CommMuzzle {
+     model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+     frequency	= 1
+     active_fraction = 20 
+     active_variation = 0
+     length_variation = 20
+     width_variation = 5
+     scale = 3
+     instances = 64
+     emit = 0,0,255
+   }
+
+   instant_shot CommShot {
+     model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+     dist_start = 20
+     travel_start = 100
+     travel_end = 20
+     duration = 0.2
+     time_fraction_to_lag_end = 20
+     width = 10
+     instances = 128
+     color_alpha {
+       0 = 100,20,250,0
+       20 = 120,20,250,255
+       80 = 120,20,250,100
+       150 = 30,30,250,50
+     }
+   }
+}

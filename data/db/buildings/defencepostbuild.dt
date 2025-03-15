@@ -1,0 +1,11 @@
+Turret DefencePostBuild : BaseTurret {
+  name = "Defence Post"
+  icon = 2,26
+  model = Data/Models/buildings/DefencePost/DefencePost_build.nif
+  race = humans
+
+  stats :{
+    hp = 2000
+  }
+  
+}

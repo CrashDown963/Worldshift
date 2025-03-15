@@ -1,0 +1,86 @@
+model = {
+  file = str:"data\models\units\ancientshade\ancientshade.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1.333333492279052734375";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-450,0";
+        time = fixp:"1.333333492279052734375";
+        distance = fixp:"450";
+        speed = fixp:"337.4999598716385662555694580078125";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.333333492279052734375";
+        }
+      }
+    }
+    cast_preparation = {
+      loop = int:"1";
+      duration = fixp:"1.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.66666698455810546875";
+        }
+      }
+    }
+    cast_finish = {
+      loop = int:"0";
+      duration = fixp:"0.666666507720947265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.666666507720947265625";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"0";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.83333301544189453125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+  }
+}

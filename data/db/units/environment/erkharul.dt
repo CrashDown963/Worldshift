@@ -1,0 +1,312 @@
+Mob ErkhArul : BaseBoss  {
+  name = "Erkh Arul"
+  icon = 1,29
+  boss_icon = 2,3
+  conv_icon_row = 6
+  conv_icon_col = 2
+  model = data/models/units/erkharul/erkharul.kfm
+  
+  physics {
+    default = data/models/units/erkharul/erkharul.pml
+    die = data/models/units/erkharul/erkharul.pml
+    attach_destr_node_01 = data/models/effects/Fire/Fire&Smoke1.nif { fixed_up = 1 }
+    attach_destr_perc = 100
+  }
+  destruction = ragdoll
+  
+  stats : {
+    hp = 200000
+    armor = 55
+    range = 7500
+    damage = 450
+    
+    thunder_hit_damage = 120
+    thunder_hit_area = 250
+    thunder_hit_area_damage = 40
+    thunder_hit_area_tick = 1
+    
+    feed_psi_cost = 200
+    feed_duration = 5
+    feed_tick = 0.5
+    feed_base = 100
+    feed_add_damage = 10
+    feed_add_heal = 15
+    feed_area = 5000
+  }
+  
+  immune_to : {
+    confusion
+  }
+  
+  hp = stat:hp
+  energy = 3000
+  energy_gen = 3000
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  feed_base_damage = stat:feed_base
+  feed_base_heal = stat:feed_base * 0.2
+  
+  attachments {
+    pt_effect01 = data/models/effects/Fire/Fire_small.nif { scale = 1.15; fixed_up = 0 }
+    pt_effect02 = data/models/effects/Fire/Fire_small.nif { scale = 1.15; fixed_up = 0 }
+    pt_effect03 = data/models/effects/Fire/Fire_small.nif { scale = 1.1; fixed_up = 1 }
+    pt_effect04 = data/models/effects/Fire/Fire_small.nif { scale = 1.1; fixed_up = 1 }
+    pt_effect05 = data/models/effects/Fire/Fire_small.nif { scale = 1.1; fixed_up = 1 }
+    pt_effect06 = data/models/effects/Fire/Fire_small.nif { scale = 0.17; fixed_up = 0 }
+    pt_effect07 = data/models/effects/Fire/Fire_small.nif { scale = 0.17; fixed_up = 0 }
+  }
+  
+  ondeath = SayPrm { text_key = str:"killed by slaves" }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = shoot
+    fire_node = pt_shoot_1
+    shoot_snd = Data/Sounds/Units/Hellfire/shot
+    projectile = chase {
+      model = data/models/projectiles/fire/HellfireShot.nif {
+        scale = 2
+        CTrailController trail {
+          emitter = Core
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          ttl = 24
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+          time3 = 15
+          color3 = colora: 0, 0, 0, 0.6
+          time4 = 50
+          color4 = colora: 0, 0, 0, 0.4
+          time5 = 100
+          color5 = colora: 0, 0, 0, 0
+        }
+      }
+      react = fire
+	    speed = 2500
+    }
+  }
+
+  abilities {
+    Feed {
+      cooldown = 20
+      chance = 20
+      when : abi.fight
+      target = current { min_hp = 100; aoe_range = 1000; aoe_min_enemy_hp = 300 }
+      range = stat:range
+      icon = 13,4
+      tags = enemy
+      min_power = stat:feed_psi_cost
+      power = stat:feed_psi_cost
+      
+      cast {
+        finish {
+          duration = stat:feed_duration
+          anim = feed
+          sound = data/sounds/effects/common/feed.wav
+          attach {
+            pt_cast = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+          }
+        }
+      }
+    
+      remove_effects = 1
+      
+      effect = E_chain {
+        sound = data/sounds/effects/common/electro arc.wav
+        debuff = 1
+        id = Feed
+        name : FeedAction.spell.effect.name
+        text : FeedAction.spell.effect.text
+        icon = 2,3
+        type = damage
+        duration = stat:feed_duration
+        tick = stat:feed_tick
+        -- immediate_tick = 1
+        
+        --enemy = 0 
+        --ally = 1
+        --tags = organic
+  
+        damage = var:feed_base_damage
+        chooser = nearest         -- random | nearest | nearest_to_caster | nearest_to_first
+        spread_damage_and_add = stat:feed_add_damage -- if not ommited means damage done per tick is: damage / num_affected + spread_damage_and_add
+        max_hops = 5              -- maximum hops (depth), 0 means single target, etc.
+        max_affected = 20         -- omit or 0 means no maximum
+        max_spreads = 3           -- spreads means new buff copies caused by us (to others)
+        max_spreads_per_tick = 3  -- 
+        min_spreads_per_tick = 1  -- if not enough targets are found no spread will happen
+        keep_spreading = 1        -- try to spreads each tick (1) or only on 1st tick (0)
+        spread_dist = 1000        -- max spread distance (from current to next)
+        max_dist_to_caster = 2000 -- omit or <= 0 means no check
+        max_dist_to_first = 1500  -- omit or <= 0 means no check
+        remove_spreads = 1        -- whether to remove spreads when finished / cleansed
+        check_caster = 1          -- end if caster dies
+        stack_per_caster = 1
+        
+        caster_effect_on_start = E_feed {
+          id = Feed
+          name : FeedAction.spell.effect.caster_effect_on_start.name
+          text : FeedAction.spell.effect.caster_effect_on_start.text
+          icon = 2,2
+          type = heal
+          area = stat:feed_area
+          --tags = organic
+          hp = var:feed_base_heal
+          add_heal_per_affected = stat:feed_add_heal
+          duration = stat:feed_duration
+          tick = stat:feed_tick
+          react = heal
+        }
+        
+        react = lightning
+        p2pray = MasterFeedBeam
+        p2pray_srcnode = pt_shoot_1   -- only valid for caster to target ray, omit = no such ray
+        p2pray_dstnode = pt_center    -- serves as both source and dest for rays between targets
+        --p2pray_duration = 0.5       -- omit = rays stay as long as buff stays
+      }
+    }
+    
+    ShipHeal {
+      cooldown = 40
+      when : abi.combat
+      target = ally { def = ErkhArulAlienShip; area = 10000; }
+      program = PrgErkhArulShipHeal {
+        duration = 15
+        heal_perc = 10
+      }
+    }
+    
+    ThunderStorm {
+      chance = 10
+      cooldown = 60
+      when : abi.combat
+      
+      program = PrgErkhArulThunderStorm {
+        duration = 15
+        beams_min = 1
+        beams_max = 3
+        sleep_time_min = 0.1
+        sleep_time_max = 1.5
+        area = 5000
+        lightnings = BigLightningStrike01, BigLightningStrike02, BigLightningStrike03
+        effect = ErkhArulThunderEffect
+      }
+    }
+    
+    Devastation {
+      when : abi.combat
+      target = self { aoe_range = 500; aoe_min_enemy_count = 1; }
+      
+      cast {
+        finish {
+          anim = cast_global
+        }
+      }
+      
+      effect = ErkhArulDevastationEffect
+    }
+    
+    Infestation {
+      chance = 10
+      cooldown = 60
+      when : abi.combat
+      target = enemy { area = 6000 }
+      
+      cast {
+        finish {
+          anim = cast_instans
+        }
+      }
+      
+      effect = ErkhArulInfestationEffect
+    }
+  }
+  
+  CSetEffect ErkhArulThunderEffect {
+    effect = E_damage {
+      sound = data/sounds/effects/dark wind bolts/
+      amount : ErkhArul.stats.thunder_hit_damage
+      react = fire
+    }
+    effect = E_area_effect {
+      epicenter {
+        spawn ThunderStormHit
+      }
+    }
+  }
+  
+  CDamageEffect ErkhArulDevastationEffect {
+    area = 3000 { 
+      anim = data/Models/Effects/Fire/FireSweep.kfm
+      sound = DATA/sounds/Effects/FireSweep
+      scale = 5
+      zoffset = -250
+    }
+    
+    amount = 300
+    friendly_fire = 0
+  }
+  
+  CSpawnEffect ErkhArulInfestationEffect {
+    duration = 4
+    sound = data/sounds/effects/common/infest.wav
+    one_time_only = 1
+    spawn_prg = PrgPlayAnim {
+      anim = spawn_1
+    }
+    spawn {
+      RenegadeHatchling = 30
+    }
+    sound = data/sounds/effects/global actions/horrify/
+  }
+  
+  CCallMapLuaDamageMonitor damage_monitor {
+  }
+  
+}
+
+Actor ThunderStormHit {
+  decal = molten_spot_area
+  scale = 0.3
+  CAutoDieController AutoDie {
+    duration = 4
+  }
+
+  hull = 0
+  sight = 0
+  selectable = 0
+  attackable = 0
+  no_mouse_targetable = 1
+  discard_area = 150
+
+  CEffectAura ThunderStormAura {
+    range = 150
+    faction = enemy
+    exclude_self = 1
+    non_stackable = 1
+    effect = E_debuff {
+      name = "Incinerate"
+      text = "This unit is suffering damage from the molten area caused by a lightning strike."
+      icon = 1,14
+      id = ThunderStormIncinerate
+      type = damage
+      damage : ErkhArul.stats.thunder_hit_area_damage
+      damage_type = fire
+      duration = -1
+      tick : ErkhArul.stats.thunder_hit_area_tick
+      immediate_tick = 0
+      discard_react = 1
+      react = fire
+      stack_count = 1
+      cleansable = 0
+    }
+  }
+  
+}

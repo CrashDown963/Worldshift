@@ -1,0 +1,51 @@
+RainOfFire RainOfFire {
+  hull = 0
+
+  --Ramge for secondary impacts
+  sec_range = 500, 1000
+  sec_parts = 10,10
+
+  --secondary spawn objects offset
+  sec_spawnoffstime = 0.1,0.2
+  sec_spawntime = 0.1,4
+
+  --models
+  pri_model = BigMeteorite
+  sec_model = SmallMeteorite
+
+  pri_explosion = RainOfFirePriEffect
+  sec_explosion = RainOfFireSecEffect
+}
+
+CAreaEffect RainOfFirePriEffect {
+  range = 500
+  epicenter {
+    spawn ExplosionBig_04
+    physics_radius = 250 
+    physics_power = 7000
+  }
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = 100
+      react = fire
+      friendly_fire = 1
+    }
+  }
+}
+
+CAreaEffect RainOfFireSecEffect {
+  range = 500
+  epicenter {
+    spawn ExplosionBig_01
+    physics_radius = 150 
+    physics_power = 5000
+  }
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = 20
+      react = fire
+      friendly_fire = 1
+    }
+  }
+}
+

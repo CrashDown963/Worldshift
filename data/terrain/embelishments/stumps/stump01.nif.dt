@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\stumps\stump01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Stump01";
+    translation = xpoint3:"-28.694416046142578125,1.17057037353515625,4.83399200439453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

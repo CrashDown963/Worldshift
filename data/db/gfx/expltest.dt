@@ -1,0 +1,6 @@
+CMapAnim ExplTest {
+  model = data/models/testobjects/Exp_Grnd_2m/ExplTest.kfm
+  scale = 1
+  clone_mode = reuse deepcopy
+
+}

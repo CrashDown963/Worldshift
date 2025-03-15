@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\embelishments\mutated\purple-mushroom_small_01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

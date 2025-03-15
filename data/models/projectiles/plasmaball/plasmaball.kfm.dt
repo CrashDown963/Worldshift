@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\projectiles\plasmaball\plasmaball.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"6.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"6.66666698455810546875";
+        }
+      }
+    }
+  }
+}

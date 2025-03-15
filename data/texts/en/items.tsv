@@ -1,0 +1,163 @@
+﻿sid	text
+	
+//// Unit statistics	
+stat.psi	Power
+stat.hp_gen	Hit Point Generation
+stat.psi_gen	Power Generation
+stat.expose_target_chance	Expose Chance
+stat.expose_target_armor_duration	Expose Duration
+stat.crit_chance	Critical Hit Chance
+stat.rocket_precision_damage_perc	Concussion Rocket Effectiveness
+stat.rocket_precision_duration	Concussion Rocket Duration
+stat.rocket_precision_chance	Concussion Rocket Chance
+stat.rocket_damage	Rocket Damage
+stat.inject_hp	Inject Healing
+stat.confuse_duration	Confuse Duration
+stat.confuse_armor_perc_buff	Confuse Armor Increase
+stat.inject_power_cost	Inject Power Cost
+stat.confuse_power	Confusion Power Cost
+stat.barrage_cost	Barrage Power Cost
+stat.nano_fix_power	Nanofix Power Cost
+stat.nano_fix_heal	Nanofix Healing
+stat.repairdrones_power	Repair Drones’ Power
+stat.repairdrones_heal_radius	Repair Drones’ Work Radius
+stat.repairdrones_repair_per_tick	Repair Drones’ Healing
+stat.overcharge_chance	Overcharge Chance
+stat.overcharge_stun_duration	Overcharge Stun Duration
+stat.shield_hull	Shield Durability
+stat.shield_regen	Shield Generation
+stat.shield_fullabsorbchance	Shield Deflection
+stat.shield_percentabsorbtion	Shield Mitigation
+stat.sweep_damage	Fire Sweep Damage
+stat.sweep_power_cost	Fire Sweep Power Cost
+stat.discharge_chance	Discharge Chance
+stat.proton_shot_damage	Proton Grenade Damage
+stat.proton_shot_radius	Proton Grenade Radius
+stat.proton_shot_psi	Proton Grenade Power Cost
+stat.voiceofcommand_duration	Voice of Command Duration
+stat.voiceofcommand_damage_perc	Voice of Command Damage Increase
+stat.voiceofcommand_power	Voice of Command Power Cost
+stat.rupture_chance	Rupture Chance
+stat.rupture_stun_duration	Rupture Stun Duration
+stat.bandage_amount	First Aid Healing
+stat.bandage_crit	First Aid Critical Chance
+stat.bandage_cooldown	First Aid Cooldown
+stat.bandage_range	First Aid Range
+stat.relief_duration	Relief Cell Duration
+stat.relief_healpersec	Relief Cell Healing
+stat.relief_psicost	Relief Power Cost
+stat.mend_power	Mend Power Cost
+stat.mend_heal	Mend Healing
+stat.throw_grenade_chance	Grenade Chance
+stat.grenade_damage	Grenade Damage
+stat.grenade_radius	Grenade Radius
+stat.growl_duration	Growl Duration
+stat.growl_chance	Growl Chance
+stat.ignite_duration	Ignite Duration
+stat.whirlwind_chance	Whirlwind Chance
+stat.illusion_power_cost	Illusions Power Cost
+stat.fortify_power_cost	Fortify Power Cost
+stat.fortify_armor_add_perc	Fortify Armor Increase
+stat.fortify_armor	Fortify Armor Addition
+stat.shift_stun_duration	Shift Stun Duration
+stat.holy_aura_heal	Holy Aura Healing
+stat.pyrowave_chance	Pyroblast Chance
+stat.lightning_power	Lightning Power Cost
+stat.lightning_damage	Lightning Damage
+stat.holyshock_power	Holy Shock Power Cost
+stat.freeze_duration	Freeze Duration
+stat.freeze_power	Freeze Power Cost
+stat.hollow_voice_chance	Hollow Voice Chance
+stat.hollow_voice_damage	Hollow Voice Damage
+stat.hollow_voice_area	Hollow Voice Size
+stat.death_rumble_chance	Death Rumble Chance
+stat.death_rumble_damage	Death Rumble Damage
+stat.death_rumble_area	Death Rumble Size
+stat.howl_fear_duration	Howl Fear Duration
+stat.drain_life_chance	Drain Life Chance
+stat.rejuvenation_psicost	Renew Power Cost
+stat.rejuvenation_amount	Renew Healing
+stat.purify_psicost	Purify Power Cost
+stat.chill_psi_cost	Frost Wave Power Cost
+stat.chill_duration	Chill Duration
+stat.incinerate_psi_cost	Incinerate Power Cost
+stat.incinerate_damage	Incinerate Damage
+stat.drain_psi_amount	Drain Power Amount
+stat.drain_psi_chance	Drain Power Chance
+stat.unholy_aura_heal	Unholy Aura Healing
+stat.corruption_damage	Corruption Damage
+stat.corruption_duration	Corruption Duration
+stat.unholy_power_cooldown	Unholy Power Cooldown
+stat.chain_shot_chance	Chain Shot Chance
+stat.chain_shot_hops	Chain Shot Chains
+stat.fear_shock_power	Fear Shock Power Cost
+stat.fear_shock_duration	Fear Shock Duration
+stat.stasis_shot_chance	Stasis Shot Chance
+stat.stasis_shot_duration	Stasis Shot Duration
+stat.power_fuse_perc	Power Fuse Effectiveness
+stat.power_fuse_area	Power Fuse Range
+stat.dimension_chain_duration	Dimension Chain Duration
+stat.dimension_chain_power	Dimension Chain Power Cost
+stat.dimension_chain_area	Dimension Chain Size
+stat.dimension_chain_cooldown	Dimension Chain Cooldown
+stat.vitality_surge_gain	Vitality Surge Healing
+stat.vitality_surge_power	Vitality Surge Power Cost
+stat.harvest_chance	Harvest Chance
+stat.harvest_damage	Harvest Damage
+stat.harvest_duration	Harvest Duration
+stat.harvest_cooldown	Harvest Cooldown
+stat.confuse_chance	Imminence Chance
+stat.vortex_power	Vortex Power Cost
+stat.vortex_heal	Vortex Healing
+stat.feed_psi_cost	Feed Power Cost
+stat.feed_base	Feed Strength
+stat.nether_nova_psi_cost	Nether Nova Power Cost
+stat.nether_nova_radius	Nether Nova Size
+stat.nether_nova_damage	Nether Nova Damage
+stat.charging_field_area	Charging Field Size
+stat.charging_field_psi_perc	Charging Field Power Generation
+stat.breed_power	Breed Power Cost
+stat.enfeeble_chance	Enfeeble Chance
+stat.enfeeble_damage_reduction_perc	Enfeeble Damage Reduction
+stat.enfeeble_duration	Enfeeble Duration
+stat.power_leak_chance	Power Leak Chance
+stat.power_leak_drain	Power Leak Drain
+stat.feedback_chance	Feedback Chance
+stat.feedback_heal	Feedback Heal
+stat.healing_taken_mod	Healing Taken
+stat.life_leech_boost	Life Leech Rate
+stat.hp	Hit Points
+stat.armor	Armor
+stat.damage	Damage
+stat.drain_life_boost	Drain Life Rate
+	
+//// Generic item descriptions	
+generic_item.ALIEN_MASTER	This item improves the statistics of your Master.
+generic_item.ALIEN_ARBITER	This item improves the statistics of your Arbiters.
+generic_item.ALIEN_DOMINATOR	This item improves the statistics of your Dominators.
+generic_item.ALIEN_HARVESTER	This item improves the statistics of your Harvesters.
+generic_item.ALIEN_MANIPULATOR	This item improves the statistics of your Manipulators.
+generic_item.ALIEN_POWER	This item is related to Power, one of the aspects of the Cult.
+generic_item.ALIEN_CORRUPTION	This item is related to Corruption, one of the aspects of the Cult.
+generic_item.ALIEN_DOGMA	This item is related to Dogma, one of the aspects of the Cult.
+generic_item.HUMAN_COMMANDER	This item improves the statistics of your Lord Commander.
+generic_item.HUMAN_ASSASSIN	This item improves the statistics of your Assassins.
+generic_item.HUMAN_CONSTRUCTOR	This item improves the statistics of your Constructors.
+generic_item.HUMAN_JUDGE	This item improves the statistics of your Judges.
+generic_item.HUMAN_SURGEON	This item improves the statistics of your Surgeons.
+generic_item.HUMAN_DEFENCE	This item is related to Xenotronics, one of the scientific disciplines of the Humans.
+generic_item.HUMAN_IMPLANTS	This item is related to Nanotechnology, one of the scientific disciplines of the Humans.
+generic_item.HUMAN_WEAPONS	This item is related to Metachemistry, one of the scientific disciplines of the Humans.
+generic_item.MUTANT_HIGHPRIEST	This item improves the statistics of your High Priest.
+generic_item.MUTANT_ADEPT	This item improves the statistics of your Sorcerers.
+generic_item.MUTANT_GUARDIAN	This item improves the statistics of your Guardians.
+generic_item.MUTANT_SHAMAN	This item improves the statistics of your Shamans.
+generic_item.MUTANT_STONEGHOST	This item improves the statistics of your Stone Ghosts.
+generic_item.MUTANT_BLOOD	This item is related to Blood, one of the aspects of the Tribes.
+generic_item.MUTANT_MIND	This item is related to Mind, one of the aspects of the Tribes.
+generic_item.MUTANT_NATURE	This item is related to Nature, one of the aspects of the Tribes.
+	
+//// Group tags	
+all	All units
+psi	All units with power
+shield	All units with shields

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\scavengerruins\scavengerruin08.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Skavi-Ruin08";
+    translation = xpoint3:"-263.696044921875,105.3509521484375,125.2974090576171875";
+    rotation = {
+      0 = xpoint3:"0.89857494831085205078125,0,0.4388201534748077392578125";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"-0.4388201534748077392578125,0,0.89857494831085205078125";
+    }
+  }
+}

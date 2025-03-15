@@ -1,0 +1,76 @@
+Mob SafariEgg : BaseMob {
+  name = "Scorpion Egg"
+  icon = 4,30
+  
+  model = data/models/buildings/alienegg/alien_egg_corrupted.kfm {
+    die = data/models/buildings/alienegg/alien_egg_die.nif
+  }
+
+  destruction = animation
+  movable = 0
+
+  stats : {
+    hp = 600
+    armor = 55
+    damage = 0
+  }  
+
+  hp_gen = stat:hp * 60
+  target_priority = -1
+  co_spawns = 5000
+  sight = 0
+  sight_in_combat = 0
+  
+  ondeath = PrgCreateEffect {
+    default = SafariEggSpawnBugsEffect
+    infected = SafariEggSpawnScorpionEffect
+  }
+
+  sounds {
+    destruction = data/sounds/destruction/units/eggs
+  }
+
+  actions {
+  }
+
+  abilities {
+  }
+
+  CWeaponController fake_weapon {
+    fire_node = pt_top
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}
+
+CSpawnEffect SafariEggSpawnBugsEffect {
+  spawn {
+    SafariBug = 5
+  }
+  
+  call_map_lua = onEggSpawn
+}
+
+CSpawnEffect SafariEggSpawnScorpionEffect {
+  spawn {
+    SafariScorpion = 1
+  }
+  
+  call_map_lua = onEggSpawn
+}
+
+Unit SafariEggPlaceholder {
+  name = "Scorpion Egg"
+  attackable = 0
+
+  model = data/models/buildings/alienegg/alien_egg_corrupted.kfm
+  
+  skin {
+    base = data/terrain/embelishments/mutated/alien-egg2-corrupted-diff.dds
+    mask = data/terrain/embelishments/mutated/alien-egg2-corrupted-mask.dds
+    normal = data/terrain/embelishments/mutated/alien-egg2-corrupted-nm.dds
+  }
+
+  movable = 0
+}

@@ -1,0 +1,14 @@
+Building MutHouse2DC : BaseBuilding {
+  name = Mutant House
+  model = Data/Models/buildings/MutHouse/MutHouse-2DC.nif
+  race = mutants
+  maxpoplimit = 5
+  indestructible = 1
+
+  actions {
+    HouseToTownHall;
+    HouseToStables;
+    HouseToMight;
+    HouseToSouls;
+  }
+}

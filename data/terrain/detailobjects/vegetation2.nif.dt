@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\detailobjects\vegetation2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Plane01";
+    translation = xpoint3:"2.788516998291015625,-0.871189117431640625,64.81157684326171875";
+    rotation = {
+      0 = xpoint3:"0.70459651947021484375,0.70960819721221923828125,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"-0.70960819721221923828125,0.704596579074859619140625,0";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Plane02";
+    translation = xpoint3:"-4.56273651123046875,4.0446014404296875,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

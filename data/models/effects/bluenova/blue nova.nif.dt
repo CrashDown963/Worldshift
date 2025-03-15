@@ -1,0 +1,77 @@
+model = {
+  file = str:"data\models\effects\bluenova\blue nova.nif";
+  animation = {
+    loop = fixp:"3.3333332538604736328125";
+    duration = fixp:"2.6666667461395263671875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"0,0,71.654876708984375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Drag01";
+        translation = xpoint3:"71.35645294189453125,-156.0831146240234375,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Plane03";
+        translation = xpoint3:"0,-11.31946659088134765625,68.64031219482421875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"Nova";
+        translation = xpoint3:"2.386246204376220703125,-4.313632488250732421875,181.5843505859375";
+        rotation = {
+          0 = xpoint3:"-0.76604473590850830078125,-0.642787277698516845703125,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"0.642787277698516845703125,-0.76604473590850830078125,0";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray02_Flyaway-Emitter";
+        translation = xpoint3:"0,0,71.654876708984375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

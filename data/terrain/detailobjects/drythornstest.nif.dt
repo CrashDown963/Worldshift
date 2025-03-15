@@ -1,0 +1,137 @@
+model = {
+  file = str:"data\terrain\detailobjects\drythornstest.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object04";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Object03";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"Object06";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"Object07";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"Object05";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"Object08";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #8 = {
+    scale = fixp:"1";
+    name = str:"Object09";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #9 = {
+    scale = fixp:"1";
+    name = str:"Object10";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #10 = {
+    scale = fixp:"1";
+    name = str:"Object11";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #11 = {
+    scale = fixp:"1";
+    name = str:"Object12";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #12 = {
+    scale = fixp:"1";
+    name = str:"Object13";
+    translation = xpoint3:"-164.03778076171875,281.16717529296875,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

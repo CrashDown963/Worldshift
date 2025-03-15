@@ -1,0 +1,6 @@
+CEmbelishment MetalBridge {
+  model = Data/Models/buildings/Bridge_Test/Bridge_Test.nif
+  passable = 1
+  group = Embelishments
+  subgroup = Special
+}

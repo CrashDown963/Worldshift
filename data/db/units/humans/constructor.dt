@@ -1,0 +1,216 @@
+Constructor Constructor : MachineUnit {
+  name = "Constructor"
+  descr = "DESCRIPTION"
+  model = Data/Models/Units/BattleDroid/BattleDroid.kfm
+  race = humans
+  officer = 1
+  icon = 4,4
+  explosion = ExplosionMedium_03
+
+  can_build = 1
+
+  actions : BaseUnit.actions {
+    NanofixAction;
+    RepairDrones;
+    MakeOreExtractor
+  }
+
+  sounds {
+    start = data/speech/summoning/constructor summoned.wav
+    attack = data/speech/confirmations/constructor/constructor attack/
+    select = data/speech/selecting/constructor select/
+    joke = data/speech/selecting/constructor joke/
+    confirm = data/speech/confirmations/constructor/constructor confirm/
+    destruction = data/speech/deaths/constructor death/
+    engage = data/speech/engage alerts/constructor engage/
+    damage = data/speech/engage alerts/constructor damage/
+    move = data/speech/confirmations/constructor/constructor move/
+  }
+
+  abilities {
+    OverchargeAbi
+    AINanofix {
+      action = NanofixAction
+      when   : abi.always
+      target = ally {
+        health_hp_taken = stat:nano_fix_heal / 2
+      }  
+      tags = bot
+      range = 3000
+    }
+    AIRepairDrones {
+      action = RepairDrones
+      when   : abi.always
+      target = ally { 
+        health_under = 60
+      }  
+      tags = bot
+      range = 1500
+      cooldown = stat:repairdrones_time_to_live
+    }
+  }
+  
+  animation {
+    cast_nano_fix_prepare = cast_preparation
+    cast_nano_fix_finish = cast_finish
+    cast_repairdrones_channeling = cast_finish
+    plant_structure = cast_preparation
+  }
+
+  stats := {
+
+    hp = 420
+    armor = 7
+    range = 1600
+
+    damage = 14
+    
+    power = 300
+
+
+    nano_fix_power = 50
+    nano_fix_heal = 200
+    nano_fix_cooldown = 10
+    
+    overcharge_chance = 10
+    overcharge_stun_duration = 4
+
+    repairdrones_power = 100
+    repairdrones_number = 3
+    repairdrones_time_to_live = 20
+    repairdrones_repair_per_tick = 20
+    repairdrones_tick_time = 1
+    repairdrones_heal_radius = 300
+    repairdrones_health = 400
+  }
+
+  -- nano fix
+  nano_fix_range = stat:range * 0.7
+  
+  -- repair drones
+  repairdrones_beam_timelife = 0.5
+  repairdrones_beam_source = pt_cast
+  repairdrones_beam = RepairDronesBeam
+  repairdrones_appearanim = RepairDroneAppear
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    damage_type = energy
+    damage = stat:damage
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    fire_node = pt_shoot_1
+    idle_time = 2
+    shoot_snd = data/sounds/weapons/med juicy beam/
+
+    min_bursts = 1
+    max_bursts = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    
+    projectile = linear {
+      --spot_impact = 800
+      --spot_impact_type = small_energy
+      speed = 2200
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/effects/StoneGhost/StoneGhostProjectile.nif {
+        scale = 1.8
+      } 
+    }
+  }
+  cost : pvp.humans.unit_costs.Officer
+  cost_sloc : pvp.humans.sloc_costs.Officer
+}
+
+
+CSpellAction NanofixAction {
+  name = "Nanofix"
+  descr = "The Constructor beams a cloud of highly energized microscopic Cell Bots that will instantly repair the targeted friendly machine for [stat:nano_fix_heal] hit points."
+  visible = 1
+  icon = 9,3
+  --can_default = 1
+  tags = repairable_unit,ally
+  max_range = var:nano_fix_range
+  min_power = stat:nano_fix_power
+  cooldown = stat:nano_fix_cooldown
+
+    
+  spell {
+    power = stat:nano_fix_power
+    cast {
+      prepare {
+        sound = data/sounds/effects/common/nanofix.wav
+        duration = 0.2
+        anim = cast_preparation
+      }
+      finish {
+        anim = cast_finish
+      }
+    }
+
+    projectile = beam {
+      start_point = pt_hand
+      beam = NanoFixBeam -- { add relevant parameters for tune: scale, emittanc, etc }
+      duration = 0.60
+    }
+
+    effect = E_heal {
+      amount = stat:nano_fix_heal
+      react = nanofix
+    }
+  }
+}
+
+action RepairDrones {
+  name = "Repair Drones"
+  descr = "The Constructor activates his 3 Repair Drones that will follow him and will repair damaged machines nearby (including Constructor himself). Repair Drones will stay active for [stat:repairdrones_time_to_live] sec. Each Drone is capable of repairing [stat:repairdrones_repair_per_tick] hit points every tick."
+  instant = 1
+  visible = 1
+  icon = 6,8
+  min_power = stat:repairdrones_power
+  power = stat:repairdrones_power
+  program = PrgRepairDrones
+  cooldown = 30
+}
+
+OverchargeAbi {
+  text = "Constructor has [stat:overcharge_chance]% chance to perform an energy lighting shot instead of his normal attack that does double damage on its target. Also, this overcharged bolt creates an 'energy nova' around the affected target, inflicting half damage to all enemy units in small area and also stunning them for [stat:overcharge_stun_duration] sec."
+  icon = 6,0
+  chance = stat:overcharge_chance
+  when   : abi.fight
+  range  = stat:range
+  target = current
+  cast {
+    prepare {
+      anim = shoot
+    }
+    finish {
+      sound = data/sounds/weapons/med juicy beam/
+      anim = shoot_idle
+    }
+  }
+  
+  projectile = linear {
+    start_point = pt_shoot_1
+    speed = 2200
+    ground_hit_effect = BulletTerrainHitEffect
+    model = data/models/effects/StoneGhost/StoneGhostProjectile.nif {
+      scale = 5
+    }
+    damage = stat:damage * 2
+  }
+
+  effect = E_set {
+    sound = data/sounds/effects/common/Overcharge.wav
+    effect = S_multistun {
+      multi_area = 400 { anim = data/models/effects/magic/healingwave.nif }
+      duration = stat:overcharge_stun_duration
+    }
+    effect = E_damage {
+      amount = stat:damage / 2
+      area = 500
+    }
+  }
+}
+

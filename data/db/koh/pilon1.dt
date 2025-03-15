@@ -1,0 +1,7 @@
+Building Pilon1 : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/Pilon1.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\detailobjects\junglebushestest.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"206.2872314453125,-335.70068359375,3.450824260711669921875";
+    rotation = {
+      0 = xpoint3:"-0.99930036067962646484375,0.0374064482748508453369140625,0";
+      1 = xpoint3:"-0.0374064482748508453369140625,-0.99930036067962646484375,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

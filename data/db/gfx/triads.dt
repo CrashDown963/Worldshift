@@ -1,0 +1,9 @@
+CMapAnim TriadCreate {
+  model = Data/Models/Effects/MiscReacts/TriadForm.kfm
+  scale = 1.3
+}
+
+CMapAnim TriadSeparate {
+  model = Data/Models/Effects/MiscReacts/TriadForm.kfm
+  scale = 1.3
+}

@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\flora\grass\tropical\thick_plants2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

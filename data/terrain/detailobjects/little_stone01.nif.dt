@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\terrain\detailobjects\little_stone01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"stone_1";
+    translation = xpoint3:"1.19643628597259521484375,2.038797855377197265625,-9.2805118560791015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"stone_2";
+    translation = xpoint3:"1.19643628597259521484375,2.038797855377197265625,-9.2805118560791015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"stone_3";
+    translation = xpoint3:"1.19643628597259521484375,2.038797855377197265625,-9.2805118560791015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

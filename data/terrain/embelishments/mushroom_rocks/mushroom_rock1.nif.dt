@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\mushroom_rocks\mushroom_rock1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Mushroom_Rock1";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0.18842883408069610595703125,0.982086837291717529296875,0";
+      1 = xpoint3:"-0.982086837291717529296875,0.18842883408069610595703125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

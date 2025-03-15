@@ -1,0 +1,97 @@
+_SUSPENDED = {}
+_THREADS = {}
+_WAITING = {}
+
+local function IsThreadWaiting(thread)
+  local threadsToWait = _WAITING[thread]
+  if not threadsToWait then return false end
+  for _, th in pairs(threadsToWait) do
+    if coroutine.status(th) ~= "dead" then
+      return true
+    end
+  end
+  return false
+end
+
+local function ProcessThread(ind, crt, time)
+  local ok, duration = coroutine.resume(crt)
+  if duration == "SUCCESS" then
+    table.remove(_THREADS, ind)
+    _WAITING[crt] = nil
+    return
+  end
+  
+  if not ok then
+    table.remove(_THREADS, ind)
+    _WAITING[crt] = nil
+    print("Thread terminated. Return value is: " .. tostring(duration))
+  end
+  
+  if duration and ok then
+    table.remove(_THREADS, ind)
+    if type(duration) == "number" then
+      table.insert(_SUSPENDED, { thread = crt, time = time + duration })
+    else
+      _WAITING[crt] = nil
+      print("Thread terminated. Return value is: " .. tostring(duration))
+    end
+  end
+end
+
+local function Main()
+  while true do
+    local time = GetTime()
+    for i, v in ipairs(_THREADS) do
+      if not IsThreadWaiting(v) then
+        ProcessThread(i, v, time)
+      end
+    end
+    for i,v in ipairs(_SUSPENDED) do
+      if v.time < time then
+        table.remove(_SUSPENDED, i)
+        table.insert(_THREADS, v.thread)
+      end
+    end
+    sleep()
+  end
+end
+
+function CreateThread(crt)
+  local thread = coroutine.create(crt);
+  table.insert(_THREADS, thread)
+  return thread
+end
+
+function RunAfter(duration, func)
+  local crtFunc = function()
+    local s1 = CheckpointData.session
+    coroutine.yield(duration)
+    local s2 = CheckpointData.session
+    if s1 == s2 then
+      func()
+    end  
+    return "SUCCESS"
+  end
+  
+  local crt = coroutine.create(crtFunc);
+  table.insert(_THREADS, crt)
+  return crt
+end
+
+function WaitFor(threads)
+  local currentCrt = coroutine.running()
+  if not currentCrt then
+    print("Cannot wait for other threads in the main thread")
+    return false
+  end
+  if "thread" == type(threads) then
+    _WAITING[currentCrt] = { threads }
+  else
+    _WAITING[currentCrt] = threads
+  end
+  coroutine.yield()
+  return true
+end
+
+_CRT = coroutine.create(Main)
+sleep = coroutine.yield

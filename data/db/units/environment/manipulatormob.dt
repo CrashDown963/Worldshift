@@ -1,0 +1,84 @@
+Mob ManipulatorMob : BaseMob {
+  name : Manipulator.name
+  descr : Manipulator.descr
+  race = aliens
+  icon = 7,11
+
+  model = Data/Models/Units/Manipulator/Manipulator.kfm {
+  die = Data/Models/Units/Manipulator/Manipulator_die.nif
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Manipulator/Manipulator.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+  
+  hp = 420
+  armor = 2
+  range = 1600
+  damage = 10
+  energy = 400
+
+  stats : {
+    vortex_power = 140
+    vortex_cooldown = 60
+    vortex_range = 1000
+    vortex_area = 800
+    vortex_heal = 50
+    vortex_duration = 9
+  }
+
+  take_auras : { RestorationCoreAura }
+  
+  blend_aim = pt_center {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 45
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 45
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    fire_node = pt_cast
+    spot_impact_type = melee
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 2500
+      scale = 0.25
+    }
+  }
+  
+  actions :{
+    DarkVortexAction
+  }
+  
+  ai = 1
+
+  abilities {
+    LifeLeechAbi
+    
+    AIDarkVortex {
+      action = DarkVortexAction
+      when   : abi.always
+      target = ally { 
+        health_hp_taken = 100;
+        aoe_range = 500;
+        aoe_min_wounded_count = 1
+        aoe_min_wounded_health = 200
+      }
+      range = 2000
+    }
+  }
+}

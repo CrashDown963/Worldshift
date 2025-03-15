@@ -1,0 +1,7 @@
+Building Mill : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/Mill.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

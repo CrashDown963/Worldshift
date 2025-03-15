@@ -1,0 +1,6 @@
+Mob Scavenger4 : Scavenger {
+  icon = 6,25
+  skin {
+    base = data/models/units/Scavenger/Scavenger_black_diff.dds
+  }
+}

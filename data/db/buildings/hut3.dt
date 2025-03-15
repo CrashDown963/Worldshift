@@ -1,0 +1,10 @@
+Building Hut3 : BaseBuilding {
+  name : Hut.name
+  model = Data/Models/buildings/Hut3/Hut3.nif
+  race = mutants
+  maxpoplimit = 5
+  indestructible = 1
+  target_priority = 500
+  req_type = Hut
+  req_produce_range = 1
+}

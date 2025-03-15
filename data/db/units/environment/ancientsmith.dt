@@ -1,0 +1,348 @@
+Mob AncientSmith : BaseBoss {
+  name = "Ancient Smith"
+  icon = 7,22
+  race = humans
+  model = data/Models/units/smith/smith.kfm
+  destruction = animation
+  scale = 2.5
+  boss_icon = 1,3
+  conv_icon_row = 5
+  conv_icon_col = 5
+  
+  stats :{
+    damage = 90
+    armor = 45
+  }
+  
+  hp = 25000
+  armor = stat:armor
+  energy = 4500
+  energy_gen = 1
+  range = 1800
+  damage = stat:damage
+  renew_hp = 5000
+  
+  sight = 2000
+  sight_incombat = 5000
+  chase_range = 5000
+  
+  grenade_range = var:range * 2
+  grenade_blast_radius = 650
+  grenade_damage = 200
+  grenade_cooldown = 7
+  
+  confuse_power = 100
+  confuse_armor_perc_buff = 50
+  confuse_duration = 10
+  confuse_cooldown = 10
+  
+  clone_cooldown = 15
+  
+  berserk_range = 3000
+  berserk_damage_add_perc = 100
+  berserk_damage_add_abs = 15
+  
+  heal_interval = 1
+  heal_amount = 50
+  heal_area = 3000
+  
+  melee_range = 400
+  melee_damage = 250
+  melee_cone_angle = 90
+  
+  destruction = ragdoll
+  ondeath = SayPrm { text_key = str:"ill be back" }
+
+  impacts : LivingUnitImpacts
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+  }
+  
+  CPeriodicEffectsController PowerAnim {
+    interval = 3
+    effect = E_heal {
+      amount = 0
+      area = 1 { anim = data/models/effects/Magic/AuraDamage.nif }
+    }
+  }
+  
+  CEffectAura AncientSmithBerserkAura {
+    range = var:berserk_range
+    faction = ally
+    non_stackable = 1
+    effect = E_buff {
+      id = Berserk
+      name = "Berserk"
+      text = "This unit’s damage is increased by the Berserk aura of a nearby Ancient Smith."
+      icon = 4,7
+      type = damage_buff
+      stats_change {
+        damage = {
+          perc = var:berserk_damage_add_perc
+          abs = var:berserk_damage_add_abs
+        }
+      }
+      ally = 1
+      tick = 5
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      stack_count = 1
+    }
+  }
+  
+  CPeriodicEffectsController AncientSmithHealAura {
+    interval = var:heal_interval
+    effect = E_heal {
+      amount = var:heal_amount
+      area = var:heal_area
+      react = relief
+    }
+  }
+  
+  abilities {
+    CloneAbi {
+      cooldown = var:clone_cooldown
+      when : abi.combat
+      range  = var:range
+      target = enemy
+      power = 50
+      
+      cast {
+        finish {
+          anim = cast
+          attach {
+            pt_hand = data/models/Effects/Fire/Fire_small_green.nif { fixed_up = 1 }
+          }
+        }
+      }
+      
+      program = PrgCloneTarget {
+        clone_react = clone
+        target_react = clone
+      }
+    }
+    
+    RenewAbi {
+      when : abi.always
+      cooldown = 15
+      power = 100
+      target = self { health_under = 60 }
+      effect = E_buff {
+        id = Renew
+        sound = data/sounds/effects/common/inject.wav
+        name : InjectAction.effect.name
+        text : InjectAction.effect.text
+        type = heal
+        hp = var:renew_hp   -- restore X hp
+        duration = 10       -- for Y secs total
+        tick = 2            -- every Z secs
+        area { anim = data/models/effects/magic/healingwave.nif }
+        react = inject
+      }
+    }
+    
+    GrenadeAbi {
+      cooldown = var:grenade_cooldown
+      when : abi.combat
+      range  = var:grenade_range
+      target = current { no_ally_in_range = 300 }
+      sound = data/sounds/effects/common/grenade.wav
+      
+      cast {
+        finish {
+          anim = shoot
+          duration = 1.33
+        }
+      }
+
+      projectile = parabolic {
+        angle = 0
+        start_point = pt_shoot_1
+        spot_impact = 800
+        spot_impact_type = small_energy
+        damage_type = energy
+        effect = SmithGrenade
+    
+        decal_settings ground_hit_decal = barrage_decal1
+        
+        model = data/models/Projectiles/Grenade/grenade2.nif {
+          CTrailController trail {
+    			  emitter = Root
+    			  texture = data/textures/trails/energy_trail1.dds
+    			  tex_ratio = float: 4.0
+    			  start_width = 14
+    			  end_width = 0
+    			  ttl = 12
+    			  simple_time = 1
+    			  additive = 1
+    			  z_write = 0
+    			  material_alpha = 0.5
+    			  diffuse = color: 1, 1, 1
+    			  ambient = color: 0.5, 0.5, 0.5
+    			  emissive = color: 1, 1, 1
+    			  time0 = 0
+    			  color0 = colora: 1, 1, 1, 0
+    			  time1 = 3
+    			  color1 = colora: 1, 1, 1, 0.4
+    			  time2 = 30
+    			  color2 = colora: 1, 1, 1, 0.25
+    			  time4 = 100
+    			  color4 = colora: 1, 1, 1, 0
+    		  }
+    	  }
+      }
+    }
+    
+    ConfuseAbi {
+      cooldown = var:confuse_cooldown
+      when : abi.combat
+      range  = var:range
+      target = enemy { aoe_range = 500; aoe_min_enemy_hp = 500; }
+          
+      max_range = var:range
+      min_power = var:confuse_power
+      cooldown = 18
+      power = var:confuse_power
+      
+      cast {
+        finish {
+          anim = cast
+          attach {
+            pt_hand = data/models/effects/magic/Debuff_hands.nif
+          }
+        }
+      }
+      
+      effect = E_set {
+        sound  = data/sounds/effects/common/confuse.wav
+        effect = E_buff {
+          sound  = data/sounds/effects/common/confuse.wav
+          target_self = 1
+          id = Confuse
+          name = "Confusion"
+          text = "The Lord Commander’s armor is increased during a Confusion maneuver."
+          icon = 1,12
+          type = armor
+          stats_change {
+            armor = { perc = var:confuse_armor_perc_buff  }
+          }
+          duration = var:confuse_duration
+        }
+        effect2 = E_multiconfuse {
+          multi_area = 500
+          duration = var:confuse_duration
+          area { anim = data/models/effects/magic/Confusion_wave.nif }
+          react = confusion_react
+          
+          id = Confusion
+          name = "Confusion"
+          text = "This unit is threatened by a Lord Commander and cannot attack anyone else."
+          icon = 4,12
+          type = confusion
+          debuff = 1
+          program = PrgConfuse
+          tick = 1
+          immediate_tick = 1
+          discard_react = 1
+        }
+      }  
+    }
+    
+    PummelAbi {
+      when = fight
+      chance = 100
+      target = enemy {
+        area = var:melee_range
+      }
+
+      cast { finish { anim = hit_1 } }
+      effect = SmithPummelHit
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    range_far = var:range * 0.35
+    range_near = var:range * 0.14
+    proximity_bonus = 1.5
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/hitech beam/
+    aim_tolerance = 45
+    shoot_anim = shoot
+    spot_impact = 850
+    spot_impact_type = bullet
+    damage_type = energy
+    
+    muzzle_fx ion_rifle_judge {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
+      frames = 1 
+      frequency = 1.0
+      active_fraction	= 10
+      active_variation = 5
+      length_variation = 10
+      width_variation	= 10
+      instances = 64
+      emit = 52,118,255
+    }
+    
+    projectile = linear {
+      spot_impact = 700
+      speed = 4000
+      model = Data/Models/Effects/TraceBullet/JudgeShot.nif
+      Scale = 1.5
+      E = 52,118,255
+      react = ion
+      ground_hit_effect =  BulletTerrainHitEffect 
+    }
+  }
+}
+
+CAreaEffect SmithGrenade {
+  range = var:grenade_blast_radius
+ 
+  epicenter {
+    spawn GrenadeExplodeAnim
+    physics_radius = var:grenade_blast_radius 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      friendly_fire = 1
+      amount = var:grenade_damage
+    }
+  }
+}
+
+CMultiEffect SmithPummelHit {
+  effect = CDamageEffect
+  multi_area = var:melee_range
+  cone_angle = var:melee_cone_angle
+  amount = var:melee_damage
+  epicenter {
+    physics_radius = var:melee_range
+    physics_power = 1000
+    physics_elevation = 300
+  }
+}

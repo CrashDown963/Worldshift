@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\detailobjects\pointybushsmall.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"roundshadow06";
+    translation = xpoint3:"2.4915945529937744140625,4.791595458984375,5";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"-1.18270671367645263671875,0.3880157470703125,45.532684326171875";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"1,0,0";
+    }
+  }
+}

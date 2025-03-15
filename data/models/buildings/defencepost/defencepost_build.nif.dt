@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\buildings\defencepost\defencepost_build.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"DP";
+    translation = xpoint3:"0,-17.87801361083984375,56.05420684814453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"decal_plane";
+    translation = xpoint3:"-3.900970458984375,-18.099514007568359375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

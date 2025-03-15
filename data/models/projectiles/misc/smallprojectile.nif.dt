@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\projectiles\misc\smallprojectile.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-0.984807789325714111328125,0,0.1736480891704559326171875";
+      2 = xpoint3:"0.1736480891704559326171875,0,0.984807789325714111328125";
+    }
+  }
+}

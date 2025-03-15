@@ -1,0 +1,5 @@
+Unit BattleYamu_test : PlaceholderUnit {
+  model = Data/Models/units/BattleYamu_test/Battle_Yamu_test.nif
+  race = mutants
+}
+  

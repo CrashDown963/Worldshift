@@ -1,0 +1,73 @@
+model = {
+  file = str:"data\models\units\assaultbot\assaultbot_break.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"2.6666667461395263671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.6666667461395263671875";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"2";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-199.811431884765625,0";
+        time = fixp:"2";
+        distance = fixp:"199.811431884765625";
+        speed = fixp:"99.9057159423828125";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.7666666507720947265625";
+        }
+        #2 = {
+          name = str:"Foot01_down";
+          time = fixp:"1.833333492279052734375";
+        }
+        #3 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"0.900000095367431640625";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-299.802764892578125,0";
+        time = fixp:"0.900000095367431640625";
+        distance = fixp:"299.802764892578125";
+        speed = fixp:"333.114147932268679141998291015625";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.466666698455810546875";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"0.900000095367431640625";
+        }
+      }
+    }
+  }
+}

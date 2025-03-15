@@ -1,0 +1,10 @@
+LifeForm Eel {
+  name = "Eel"
+  movable = 0
+  model = data/models/lifeforms/Eel/eel.kfm
+  water_snap = 1
+  --scale = 0.5
+  hull = 0
+  sight = 0
+  selectable = 0
+}

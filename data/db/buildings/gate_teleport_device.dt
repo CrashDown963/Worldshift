@@ -1,0 +1,7 @@
+Building Gate_Teleport_Device : BaseBuilding {
+  model = Data/Models/buildings/Gate_Teleport_Device/Gate_Teleport_Device.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

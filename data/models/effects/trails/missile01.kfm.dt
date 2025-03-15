@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\effects\trails\missile01.kfm";
+  animations = {
+    Start = {
+      loop = int:"0";
+      duration = fixp:"1.33333337306976318359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.33333337306976318359375";
+        }
+      }
+    }
+    Fly = {
+      loop = int:"1";
+      duration = fixp:"1.96666681766510009765625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"sound";
+          time = fixp:"0.63333332538604736328125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.96666681766510009765625";
+        }
+      }
+    }
+  }
+}

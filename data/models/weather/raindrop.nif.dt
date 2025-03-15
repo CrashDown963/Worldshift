@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\weather\raindrop.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"raindrops";
+    translation = xpoint3:"13.468280792236328125,-5.652307987213134765625,4.58533477783203125";
+    rotation = {
+      0 = xpoint3:"-0.50000011920928955078125,-0.86602532863616943359375,0";
+      1 = xpoint3:"0.86602532863616943359375,-0.50000011920928955078125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

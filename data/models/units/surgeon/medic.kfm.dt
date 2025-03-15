@@ -1,0 +1,241 @@
+model = {
+  file = str:"data\models\units\surgeon\medic.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"1.033333301544189453125";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-193.92425537109375,0";
+        time = fixp:"1.033333301544189453125";
+        distance = fixp:"193.92425537109375";
+        speed = fixp:"187.6686400151811540126800537109375";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.033333301544189453125";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"0.866666316986083984375";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-300.127899169921875,0";
+        time = fixp:"0.866666316986083984375";
+        distance = fixp:"300.127899169921875";
+        speed = fixp:"346.301561850123107433319091796875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.866666316986083984375";
+        }
+      }
+    }
+    relief_1 = {
+      loop = int:"1";
+      duration = fixp:"3";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3";
+        }
+      }
+    }
+    bandage_1 = {
+      loop = int:"1";
+      duration = fixp:"1.6666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6666660308837890625";
+        }
+      }
+    }
+    adrenalin = {
+      loop = int:"1";
+      duration = fixp:"1.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.5";
+        }
+      }
+    }
+    shoot_idle = {
+      loop = int:"1";
+      duration = fixp:"2.33333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.33333301544189453125";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"1";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    shoot_idle_up = {
+      loop = int:"1";
+      duration = fixp:"1.333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.333332061767578125";
+        }
+      }
+    }
+    shoot_up = {
+      loop = int:"1";
+      duration = fixp:"1.1666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.1666660308837890625";
+        }
+      }
+    }
+    shoot_idle_down = {
+      loop = int:"1";
+      duration = fixp:"1.6666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6666660308837890625";
+        }
+      }
+    }
+    shoot_down = {
+      loop = int:"1";
+      duration = fixp:"0.9333343505859375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.9333343505859375";
+        }
+      }
+    }
+    bandage = {
+      loop = int:"1";
+      duration = fixp:"2.1666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.4666652679443359375";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.1666660308837890625";
+        }
+      }
+    }
+    bandage_self = {
+      loop = int:"1";
+      duration = fixp:"2.166667938232421875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.3333339691162109375";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.166667938232421875";
+        }
+      }
+    }
+    relief = {
+      loop = int:"1";
+      duration = fixp:"3";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"2";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"3";
+        }
+      }
+    }
+  }
+}

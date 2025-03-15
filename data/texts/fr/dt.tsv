@@ -1,0 +1,551 @@
+﻿sid	text:fr
+	
+// UNITS //////////////////////////////////////////////////////////////////////	
+	
+Assassin.name	Assassin
+Assassin.descr	Unité à longue portée, plus forte à distance maximum. Ses tirs lui permettent d’affaiblir l’armure de l’ennemi pendant plusieurs secondes.
+AssaultBot.name	Robot d’assaut
+AssaultBot.descr	Unité mécanisée à armure résistante. Peut tirer des fusées qui réduisent l’efficacité de l’attaque des ennemis touchés. Peut tirer des volées de missiles à longue portée.
+Commander.name	Seigneur commandant
+Commander.descr	Le Seigneur commandant dispose d’une lourde armure et d’un bonus de proximité. Il peut se soigner et attirer les attaques ennemies sur lui.
+Constructor.name	Mécanicien
+Constructor.descr	Officier mécanisé capable de réparer rapidement les machines au combat. Son attaque de base peut toucher plusieurs ennemis pour les paralyser.
+Crew.name	Technicien
+Crew.descr	Les techniciens réparent automatiquement les bâtiments lorsqu’il n’y a pas d’ennemi dans les environs.
+EliteTrooper.name	Soldat de choc
+EliteTrooper.descr	Les soldats de choc sont des troupes d’élite intervenant en renfort temporaire. Ils ne peuvent pas se contrôler directement.
+Hellfire.name	Feu de l’enfer
+Hellfire.descr	Unité mécanisée lente et puissante avec lourde armure et bouclier. Peut déclencher de grosses attaques à courte portée.
+Judge.name	Juge
+Judge.descr	Solide officier, efficace contre les ennemis qui usent l’énergie. Capable d’améliorer les attaques des soldats et de les promouvoir au statut Élite.
+ProtonTurret.name	Tourelle Proton
+ProtonTurret.descr	Tourelles de défense que l’on peut ajouter aux tours de contrôle.
+RepairDrone.name	Drone de réparation
+Ripper.name	Ripper
+Ripper.descr	Unité de mêlée mécanisée et rapide. Peut paralyser l’ennemi quand elle attaque.
+Surgeon.name	Chirurgien
+Surgeon.descr	Spécialiste formé pour soigner les unités organiques même lorsqu’elles sont au combat. Autrement, c’est un faible combattant, son attaque est très puissante à bout portant.
+Technician.name	Technicien
+Technician.descr	Personnel non combattant formé pour s’occuper de tous les types de dispositifs et d’artéfacts.
+Trooper.name	Soldat
+Trooper.descr	Relativement peu onéreux, il offre un bonus de proximité. Tire occasionnellement des grenades lorsqu’il combat. Peut être promu au rang Élite pour augmenter ses chances de coup critique.
+	
+AlienEgg.name	Œuf
+AlienEgg.descr	Entité biomécanique générée par un portail ou une formatrice. Sert de système de défense et libère des éclosions une fois détruit.
+Arbiter.name	Médiateur
+Arbiter.descr	Unité à longue portée, plus forte à distance maximum. Ses tirs peuvent toucher plusieurs cibles en même temps. Peut déclencher la panique chez l’ennemi et le pousser à courir dans tous les sens.
+Dominator.name	Dominateur
+Dominator.descr	Puissante unité de contrôle de foule capable de paralyser l’ennemi et d’épuiser son énergie. Ses attaques ne sont pas du tout entravées par l’armure ennemie.
+Harvester.name	Moissonneur
+Harvester.descr	Unité de mêlée à armure lourde qui ralentit les ennemis organiques proches et peut les paralyser. Également capable de se soigner tout seul.
+Hatchling.name	Éclosion
+Hatchling.descr	Version plus petite et plus faible du trisat. Peut attirer les attaques ennemies.
+Manipulator.name	Manipulateur
+Manipulator.descr	Soigneur dont les attaques de base peuvent dérober la vie des ennemis touchés et la transmettre aux alliés proches. Capable de générer un tourbillon de guérison qui soigne aléatoirement les alliés proches pendant un moment.
+Master.name	Maître
+Master.descr	Puissante unité offensive de soins. Capable de dérober la vie des ennemis et de la redistribuer aux alliés proches. Peut aussi déclencher une puissante attaque de zone.
+Overseer.field_name	Surveillant de terrain
+Overseer.power_name	Surveillant de puissance
+field_name.name	Surveillant de terrain
+power_name.name	Surveillant de puissance
+Overseer.descr	Bonne unité d’attaque. Dispose d’une forme spéciale qui réapprovisionne les alliés en énergie.
+Shifter.name	Modificateur
+Shifter.descr	L’attaque du modificateur peut affaiblir sa cible ou épuiser son énergie. Son bouclier peut aussi se cloner pour lui faire prendre la forme d’un trisat ou d’un tritech allié proche. Le modificateur peut libérer une éclosion.
+Trisat.name	Trisat
+Trisat.descr	Unité de mêlée classique qui ralentit les ennemis proches. Son efficacité augmente pendant un moment une fois qu’il a infligé un certain niveau de dégâts.
+Tritech.name	Tritech
+Tritech.descr	Unité de portée classique. Capable de se soigner pendant qu’elle attaque.
+	
+AncientShade.name	Ombre ancienne
+AncientShade.descr	Créature des enfers dont les attaques ne sont pas altérées par l’armure ennemie.
+Brute.name	Brute
+Brute.descr	Unité de mêlée à bonne armure capable d’attirer les attaques ennemies. Devient plus forte après avoir délivré un coup mortel.
+Guardian.name	Gardien
+Guardian.descr	Unité de mêlée puissante. Peut créer des copies d’elle-même et adopter un état spécial qui confère un bonus de défense aux unités proches.
+GuardianIllusion.name	Illusion de gardien
+GuardianIllusion.descr	Une copie du gardien
+HighPriest.name	Grand prêtre
+HighPriest.descr	Magicien puissant et aux talents multiples. Capable de soigner les alliées organiques et de geler l’ennemi. Dispose d’une forte attaque spéciale à distance.
+HowlingHorror.name	Horreur monstrueuse
+HowlingHorror.descr	Unité de mêlée des enfers. Lente mais puissante. Dispose d’une forme de fantôme spéciale qui lui permet de se soigner.
+Shaman.name	Chaman
+Shaman.descr	Guérisseur dont l’attaque de base vole la vie des ennemis touchés et la redistribue aux alliés proches. Capable de soigner les alliés du secteur et de supprimer les effets négatifs.
+Sorcerer.name	Sorcier
+Sorcerer.descr	Spécialiste des éléments de feu et de glace. Son attaque de base ralentit l’ennemi. Capable de générer des taches en fusion au sol qui brûlent les unités qui passent dessus.
+StoneGhost.name	Fantôme de pierre
+StoneGhost.descr	Créature des enfers capable de voler les pouvoirs ennemis et de les redistribuer aux alliés proches. Il apporte aussi des soins permanents aux alliés infernaux proches. Peut infecter une cible organique de manière à lui faire générer des vers d’âme quand elle meurt.
+Warrior.name	Guerrier
+Warrior.descr	Unité de portée classique. Ses attaques sont plus fortes à portée maximum.
+Worker.name	Travailleur
+Worker.descr	Unité non combattante capable de réparer et construire des structures.
+Worm.name	Vers d’âme
+Worm.descr	Créature des enfers générée par le sort de corruption du fantôme de pierre.
+	
+// BUILDINGS //////////////////////////////////////////////////////////////////	
+	
+ControlTower.name	Tour de contrôle
+ControlTower.descr	La tour de contrôle sert de point fortifié et à extraire la xénolite. Elle peut s’améliorer avec des tourelles de défense et un détecteur de mouvement. On peut aussi s’en servir pour commander des unités.
+OreExtractor.name	Extracteur de minerai
+OreExtractor.descr	L’extracteur de minerai sert de système de défense et à extraire la xénolite. Il peut s’améliorer en tour de contrôle.
+	
+Temple.name	Temple
+Temple.descr	Le Temple exploite l’énergie tirée de la xénolite. Il attaque aussi les ennemis proches et réapprovisionne les points de vie et d’énergie des alliés proches. Vous pouvez l’utiliser pour commander des unités ou invoquer des travailleurs.
+Shrine.name	Tombeau
+Shrine.descr	Le tombeau exploite l’énergie de la xénolite ; il soigne aussi les alliés proches. Vous pouvez l’utiliser pour invoquer des travailleurs. Le tombeau peut s’améliorer en temple.
+	
+Portal.name	Portail
+Portal.descr	Le portail consomme de la xénolite. Il génère aussi des œufs et a une influence négative sur les ennemis proches. Vous pouvez utiliser le portail pour commander des unités ou construire des formatrices à distance.
+Breeder.name	Formatrice
+Breeder.descr	La formatrice consomme de la xénolite et génère des œufs. Vous pouvez l’utiliser pour commander des unités de second rang (trisats et tritechs). La formatrice peut s’améliorer en portail.
+	
+// RESOURCES AND OTHER OBJECTS ////////////////////////////////////////////////	
+	
+Artifact1.descr	Ceci est un ancien artéfact. Vous pouvez l’examiner avec votre chef de campagne.
+Artifact1.name	Artéfact
+Artifact2.descr	Ceci est un ancien artéfact. Vous pouvez l’examiner avec votre chef de campagne.
+Artifact2.name	Artéfact
+BehaviorWaypoint.name	NPC behavior waypoint
+MissionAreaCorner.name	Coin de secteur de mission
+PersonnelCarrier.name	Transporteur personnel
+ReliefCell.name	Cellule curative
+Thunder.name	Tornade
+Vortex.name	Tourbillon
+Xenolite.name	Xénolite
+XenoliteBarge.name	Barge à xénolite
+	
+// SPECIALIZATIONS ////////////////////////////////////////////////////////////	
+	
+I_A1A.name	Folie
+I_A1A.text	La frénésie de vos trisats durera [stats.frenzy_duration] secondes de plus une fois qu’ils cessent de causer des dégâts.
+I_A1H.name	Durabilité
+I_A1H.text	Toutes vos unités régulières auront [stats.hp] points de vie de plus.
+I_A1M.name	Foyer de foudre
+I_A1M.text	Les éclairs de votre Grand prêtre causeront [stats.lightning_damage] de dégâts en plus.
+I_A2A.name	Surpuissance
+I_A2A.text	Toutes vos unités régulières causeront [stats.damage] de dégâts directs en plus.
+I_A2H.name	Surcadence
+I_A2H.text	Toutes vos unités cybernétiques se répareront [stats.hp_gen] plus vite, sans délai de récupération, et causeront aussi [stats.damage] de dégâts directs en plus.
+I_A2M.name	Maîtrise du gel
+I_A2M.text	L’action Gel de votre Grand prêtre durera [stats.freeze_duration] secondes de plus.
+I_B1A.name	Prophétie
+I_B1A.text	Le pouvoir de votre Maître se régénérera [stats.psi_gen] plus vite.
+I_B1H.name	Esquive
+I_B1H.text	Vos Rippers auront [stats.elusion]% de chances d’ignorer complètement les attaques directes venant de combats de mêlée.
+I_B1M.name	Formation aux armes
+I_B1M.text	Vos guerriers auront [stats.crit_chance]% de chances en plus de porter une attaque critique en infligeant le double de dégâts.
+I_B2A.name	Foyer de feu
+I_B2A.text	Le tritech aura [stats.crit_chance]% de chances en plus de causer le double de dégâts à sa cible.
+I_B2H.name	Feu cinglant
+I_B2H.text	Toutes vos unités auront [stats.crit_chance]% de chances en plus d’infliger le double de dégâts (critiques) avec leur attaque directe.
+I_B2M.name	Maîtrise de puissance
+I_B2M.text	Votre Grand prêtre et vos aînés régénéreront leur puissance [stats.psi_gen] fois plus vite.
+I_B3A.name	Division bio
+I_B3A.text	Quand un tritech est tué, il y a [stats.bio_split_chance]% de chances que 2 à 3 incubux soient générés par son cadavre.
+I_B3H.name	Motivation
+I_B3H.text	Les soldats ont [stats.motivation]% de chances d’accéder au rang Élite après avoir déclenché une attaque critique sur leur cible.
+I_B3M.name	Sombre lien
+I_B3M.text	Toutes vos unités infernales (ombre ancienne, horreur monstrueuse, fantôme de pierre et ver d’âme) verront leurs points de vie se régénérer [stats.hp_gen] plus vite, sans délai de récupération.
+I_C1A.name	Faim démoniaque
+I_C1A.text	L’action Nourrir de votre Maître ajoutera [stats.feed_add_heal] de soins en plus à chaque intervalle pour chaque cible concernée.
+I_C1H.name	Précision
+I_C1H.text	Tous vos soldats infligeront [stats.damage] de dégâts directs en plus.
+I_C1M.name	Protection naturelle
+I_C1M.text	Toutes vos unités régulières gagneront [stats.hp] de points de vie en plus.
+I_C2A.name	Imminence
+I_C2A.text	À chaque frappe, le moissonneur aura [stats.confuse_chance]% de chances de stresser sa cible en la forçant à concentrer ses attaques sur lui.
+I_C2H.name	Maîtrise des premiers soins
+I_C2H.text	Les premiers soins du chirurgien ont [stats.bandage_crit]% de chances en plus de soigner avec effets doubles.
+I_C2M.name	Grâce curative
+I_C2M.text	L’aura sainte de votre Grand prêtre apportera [stats.holy_aura_heal] de points de vie en plus.
+I_D1A.name	Cure protectrice
+I_D1A.text	Toutes vos unités verront leurs points de vie se régénérer [stats.hp_gen] plus vite sans délai de récupération.
+I_D1H.name	Armure protectrice
+I_D1H.text	Le Seigneur commandant gagne [stats.armor] d’armure et de points de vie en plus.
+I_D1M.name	Foyer nature
+I_D1M.text	Vos chamans auront [stats.drain_life_chance]% chances de plus d’épuiser la vie en attaquant l’ennemi. Chaque fois qu’ils épuiseront de la vie, les chamans enlèveront aussi un effet positif à leur cible.
+I_D2A.name	Armure à charge
+I_D2A.text	Votre Maître et tous vos surveillants auront [stats.hp] points de vie en plus.
+I_D2H.name	Surentraînement
+I_D2H.text	Tous vos officiers auront [stats.hp] points de vie en plus.
+I_D2M.name	Foyer élémental
+I_D2M.text	Grand prêtre, sorcier et chaman infligeront [stats.damage] de dégâts en plus avec leur attaque de base.
+I_D3A.name	Bio-cycle
+I_D3A.text	Quand un trisat meurt à la vue d’un Maître, il a [stats.bio_cycle_chance]% de chances que le Maître le recycle à ses côtés avec 25% de points de vie. Les trisats recyclés perdent tous les effets bénéfiques qu’ils avaient avant de mourir.
+I_D3H.name	Afflux de puissance
+I_D3H.text	Votre Seigneur commandant et vos officiers récupéreront leur puissance plus vite de  [stats.psi_gen].
+I_D3M.name	Formation de bête
+I_D3M.text	Vos brutes auront [stats.hp] de points de vie en plus et [stats.armor] d’armure supplémentaire. Également, les brutes auront [stats.ignite_on_strike_chance] de chances de s’enflammer après chaque attaque au lieu de ne le faire qu’après avoir délivré un coup mortel.
+	
+// GLOBAL ACTIONS /////////////////////////////////////////////////////////////	
+	
+AirAssaultAction.name	Assaut aérien
+AirAssaultAction.descr	Appelle un soutien aérien de la ville mère. Une escadrille de vaisseaux d’attaque bombardera toute la carte pendant un court instant en concentrant ses tirs sur les cibles ennemies. Il faut éviter de se trouver près des bâtiments ou forces ennemis !
+EliteSquadAction.name	Troupes de choc
+EliteSquadAction.descr	Appelle une petite équipe de soldats de choc surentraînés qui sont téléportés à l’endroit indiqué. Ils combattent à vos côtés mais ne peuvent recevoir d’ordres. Si aucun ennemi ne se trouve dans les environs, les soldats de choc survivants sont téléportés vers la ville mère.
+ProtonBlastAction.name	Souffle proton
+ProtonBlastAction.descr	Appelle les canons de défense de la ville mère sur la zone sélectionnée. Le souffle proton cause de sérieux dégâts à toutes les unités dans un large secteur mais attention aux projections !
+	
+	
+MindVisionAction.name	Vision mentale
+MindVisionAction.descr	Dirige l’énergie de la nature dans le secteur sélectionné et accorde une vision pendant X secondes.
+ThunderAction.name	Orage
+ThunderAction.descr	Crée un ouragan qui ravage le secteur sélectionné et déclenche des éclairs occasionnels qui endommagent l’ennemi.
+NaturesGraceAction.name	Grace naturelle
+NaturesGraceAction.descr	Commande les pouvoirs de la nature pour soigner instantanément toutes les blessures et répare tous les dégâts subits par les unités alliées dans le secteur sélectionné.
+	
+	
+HorrifyAction.name	Effroi
+HorrifyAction.descr	Effraie toutes les unités ennemies dans un petit secteur et les fait courir n’importe où en tirant dans tous les sens.
+MarkOfChaosAction.name	Signe du chaos
+MarkOfChaosAction.descr	S’applique à tous les ennemis dans un large secteur en leur infligeant quelques dégâts au fil du temps et en les rendant visibles sur la mini-carte pendant la durée de l’effet.
+InfestAction.name	Infestation
+InfestAction.descr	Génère une infestation d’éclosions à l’endroit indiqué. Elles combattent à vos côtés mais ne peuvent recevoir d’ordres. Si aucun ennemi n’est à proximité, les éclosions survivantes disparaissent.
+	
+// BUILDING ACTIONS ///////////////////////////////////////////////////////////	
+	
+BreederUpgrade.name	Portail
+BreederUpgrade.descr	Améliore la formatrice en portail
+CancelUnitProduce.name	Annuler la production d’unité
+DetectMotionAction.name	Scanneur de mouvement
+DetectMotionAction.descr	Amélioration permettant à la tour de contrôle de détecter toute unité en déplacement à une certaine distance.
+OreExtractorUpgrade.name	Tour de contrôle
+OreExtractorUpgrade.descr	Améliore l’extracteur de minerai en tour de contrôle.
+PerimeterDefenseAction.name	Défense de secteur
+PerimeterDefenseAction.descr	Amélioration qui ajoute trois tourelles de défense à la tour de contrôle.
+PossessAction.name	Possession
+PossessAction.descr	Infeste le dépôt de xénolite sélectionné avec des spores de construction. Si aucun bâtiment n’est construit à cet endroit pendant un certain temps, une formatrice est générée automatiquement.
+RallyPoint.name	Définir le point de ralliement
+ShiftingRayAction.name	Rayon mouvant
+ShiftingRayAction.descr	Téléporte toutes les unités alliées près du Maître à la destination spécifiée.
+ShrineUpgrade.name	Temple
+ShrineUpgrade.descr	Améliore le tombeau en temple.
+SummonWorkersAction.name	Invocation de travailleurs
+SummonWorkersAction.descr	Invoque plusieurs travailleurs capables de réparer les structures et construire des tombeaux sur les dépôts de xénolite.
+FireLashAction.name	Fouet de feu
+FireLashAction.descr	Amélioration qui augmente considérablement les défenses du temple.
+	
+// UNIT ACTIONS ///////////////////////////////////////////////////////////////	
+	
+Reinforce.name	Appel de renforts
+Reinforce.descr	 
+RainOfFireAction.name	Pluie de feu
+RainOfFireAction.descr	Projette à la surface une quantité de météorites arrachées à la ceinture astéroïdale terrestre nouvellement formée et provoque de gros dégâts dans le secteur désigné.
+ActionRelief.name	Cure
+ActionRelief.descr	Le chirurgien active une cellule curative spéciale qui fait récupérer [stat:relief_healpersec] points de vie par seconde à toutes les unités alliées proches. La cellule curative reste active pendant [stat:relief_duration] secondes.
+Barrage.name	Barrage
+Barrage.descr	Tire une courte volée de fusées ioniques à longue distance. Chaque fusée inflige [stat:rocket_damage] de dégâts à toutes les cibles dans une zone restreinte.
+BreedAction.name	Formation
+BreedAction.descr	Le modificateur invoque 5 éclosions sur la zone sélectionnée. Elles attaquent automatiquement tous les ennemis proches.
+ConfuseAction.name	Confusion
+ConfuseAction.descr	Manœuvre tactique qui force les ennemis d’un petit secteur à concentrer leurs attaques sur le Seigneur commandant pendant [stat:confuse_duration] secondes et qui augmente la résistance de son armure de [stat:confuse_armor_perc_buff]% pour la même durée. Cet effet peut être plus court si les ennemis affectés perdent de vue le Seigneur commandant.
+CorruptionAction.name	Corruption
+CorruptionAction.descr	Le fantôme de pierre corrompt les unités ennemies dans le secteur sélectionné. Elles subissent [stat:corruption_damage] points de dégâts par intervalle pendant [stat:corruption_duration] secondes. Si la cible meurt alors qu’elle est sous l’effet de la corruption, un petit nombre de vers d’âme est généré pour protéger le secteur et attaquer les ennemis.
+DarkVortexAction.name	Tourbillon des ténèbres
+DarkVortexAction.descr	Crée un tourbillon d’énergie infernale qui frappe occasionnellement les unités alliées proches avec de la lumière des enfers afin de leur faire récupérer [stat:vortex_heal] points de vie. Le tourbillon reste actif pendant [stat:vortex_duration] secondes avant de disparaître.
+DominatorDimensionChainAction.name	Chaîne dimensionnelle
+DominatorDimensionChainAction.descr	Tous les ennemis du secteur sélectionné sont pris dans une stase dimensionnelle pendant [stat:dimension_chain_duration] secondes. Pendant la stase, les ennemis sont paralysés et subissent le double de dégâts de toutes les sources.
+DominatorPowerFuseAction.name	Fusion d’énergie
+DominatorPowerFuseAction.descr	Toutes les unités ennemies autour du dominateur perdent instantanément [stat:power_fuse_perc]% de leur puissance.
+FateLinkAction.name	Lien de destin
+FateLinkAction.descr	L’ombre ancienne utilise son savoir pour établir un puissant lien avec une unité alliée pendant [stat:fatelink_duration] secondes. Tout dégât subi par l’unité alliée sera distribué entre cette unité et toutes les ombres anciennes qui y sont liées à cet instant. Le lien est détruit si l’ombre ancienne se déplace ou si l’unité alliée liée passe hors de vue.
+FearShockAction.name	Choc de peur
+FearShockAction.descr	Provoque la peur chez tous les ennemis du secteur sélectionné, ce qui les pousse à courir dans tous les sens pendant [stat:fear_shock_duration] secondes.
+FeedAction.name	Alimentation
+FeedAction.descr	Le Maître canalise une lumière infernale qui provoque [feed_base_damage] de dégâts à chaque intervalle pendant [stat:feed_duration] secondes. Il épuise aussi la même quantité de vie de la cible affectée et la distribue aux alliés proches de lui afin de les soigner. Le rayon touche une cible avant de se diriger sur la suivante. L’efficacité des soins augmente à chaque nouvelle cible touchée mais le niveau de dégâts infligés diminue.
+FireSweep.name	Sillon de feu
+FireSweep.descr	Crée un souffle dans le secteur entourant les feux de l’enfer et inflige [stat:sweep_damage] à toutes les cibles proches. Attention aux projections !
+FocusAction.name	Focus
+FocusAction.descr	Removes all harmful effects from all friendly units in the selected area, increase their hitpoints by 25% and power by 15% for [stat:focus_duration] seconds.
+FortifyAction.name	Fortification
+FortifyAction.descr	Le gardien utilise ses pouvoirs pour émettre une aura qui donne [stat:fortify_armor_add_perc]% plus [stat:fortify_armor] d’armure supplémentaire à toutes les unités alliées proches. Tandis que le gardien est fortifié, son pouvoir ne se régénère pas et les effets sont annulés s’il reçoit l’ordre de se déplacer. Cet effet n’est pas cumulatif.
+FreezeAction.name	Gel
+FreezeAction.descr	Le Grand prêtre utilise son pouvoir pour faire apparaître un souffle glacial sur le secteur désigné et congeler tous les ennemis sur place pendant [stat:freeze_duration] secondes.
+FrostWaveAction.name	Vague de gel
+FrostWaveAction.descr	Le sorcier envoie instantanément une puissante vague de gel qui ralentit toutes les unités affectées de [stat:chill_perc]% pendant [stat:chill_duration] secondes.
+HolyShockAction.name	Choc saint
+HolyShockAction.descr	Le Grand prêtre concentre et utilise les puissances de la nature pour restaurer intégralement les points de vie d’une unité alliée.
+HowlAction.name	Mugissement
+HowlAction.descr	Déclenche la peur chez tous les ennemis proches pendant [stat:howl_fear_duration] secondes et les transforme en fantômes pendant [stat:howl_duration] secondes. L’horreur fantomatique récupère [stat:howl_hp_perc]% points de vie par intervalle et ignore [stat:howl_ignore_perc]% de tout dégât qu’on tente de lui infliger.
+IllusionAction.name	Illusion
+IllusionAction.descr	Le gardien utilise ses pouvoirs pour créer deux copies de lui-même. Ces copies durent [illusions_duration] secondes avant de disparaître et sont aussi mortelles que le gardien lui-même !
+IncinerateAction.name	Incinération
+IncinerateAction.descr	Le sorcier chauffe et fait fondre le sol à l’endroit sélectionné. Toutes les unités qui se trouvent à l’endroit fondu subissent [stat:incinerate_damage] points de dégâts par intervalle. Les effets durent [stat:incinerate_duration] secondes.
+InjectAction.name	Injection
+InjectAction.descr	Le Seigneur commandant s’injecte une puissante mixture médicale qui restaure [stat:inject_hp] points de vie pendant [stat:inject_duration] secondes.
+LightningAction.name	Foudre
+LightningAction.descr	Le Grand prêtre concentre ses pouvoirs dans un coup de foudre mortel qui cause à l’ennemi [stat:lightning_damage] points de dégâts.
+MendAction.name	Guérison
+MendAction.descr	Le chirurgien utilise ses pouvoirs et gadgets pour soigner une unité alliée blessée et lui fait récupérer un total de [stat:mend_heal] points de vie pendant [mend_duration] secondes.
+MorphAction.name	Transformation
+MorphAction.descr	Transforme le surveillant de terrain en surveillant de puissance
+MorphAction.descr_field	Transforme le surveillant de terrain en surveillant de puissance
+MorphAction.descr_power	Transforme le surveillant de puissance en surveillant de terrain
+NanofixAction.name	Nano-réparation
+NanofixAction.descr	Le constructeur dirige un nuage de robots cellulaires microscopiques de haute énergie qui réparent instantanément la machine alliée ciblée en lui faisant récupérer [stat:nano_fix_heal] points de vie.
+NetherNovaAction.name	Nova infernale
+NetherNovaAction.descr	Le Maître crée un souffle d’énergie infernale qui inflige [stat:nether_nova_damage] de dégâts à tous les ennemis dans le secteur proche.
+ProtonShotAction.name	Grenade proton
+ProtonShotAction.descr	Le juge lance une grenade proton spéciale qui inflige [stat:proton_shot_damage] points de dégâts à tous les ennemis dans le secteur proche et leur brûle [proton_shot_power_burn] points de puissance, ce qui augmente légèrement le niveau total de dégâts provoqués.
+PurifyAction.name	Purification
+PurifyAction.descr	Supprime instantanément tous les effets nocifs subis par les unités alliées dans le secteur sélectionné.
+RenewAction.name	Renouveau
+RenewAction.descr	Le chaman utilise ses pouvoirs pour restaurer instantanément [stat:rejuvenation_amount] points de vie à toutes les unités alliées dans le secteur sélectionné.
+RepairDrones.name	Drones de réparation
+RepairDrones.descr	Le constructeur active ses 3 drones de réparation qui le suivent et réparent les machines endommagées proches, lui y compris. Les drones de réparation restent actifs pendant [stat:repairdrones_time_to_live] secondes. Chaque drone est capable de restaurer [stat:repairdrones_repair_per_tick] points de vie par intervalle.
+VoiceofCommandAction.name	Feu radical
+VoiceofCommandAction.descr	Commande tous les soldats et autres unités de second rang dans un petit secteur et augmente l’efficacité de leur attaque de [stat:voiceofcommand_damage_perc]% pendant [stat:voiceofcommand_duration] secondes.
+TeleportOfficerAction.name	Officier de téléportation
+TrackAction.name	Suivi
+TrackAction.descr	Coup puissant qui place une sonde de suivi dans la cible de l’assassin. Pendant [stat:poison_shot_duration] secondes, la cible suivie subit [stat:poison_shot_damage] points de dégâts par intervalle et apparaît aussi sur la mini-carte.
+UnholyPowerAction.name	Pouvoir impie
+UnholyPowerAction.descr	Le fantôme de pierre tire de l’énergie des enfers et recharge toutes les unités alliées proches. L’effet ajoute [stat:unholy_power_restore_perc]% de la puissance totale de l’unité concernée chaque seconde. L’effet dure [stat:unholy_power_duration] secondes ou jusqu’à ce que le fantôme de pierre soit déplacé ou tué.
+VitalitySurgeAction.name	Afflux de vitalité
+VitalitySurgeAction.descr	Restaure instantanément [stat:vitality_surge_gain]% des points de vie du moissonneur.
+Worker.WorkerRepairAction.name	Réparation de bâtiment
+	
+// BUILDING ABILITIES /////////////////////////////////////////////////////////	
+	
+ControlTower.abilities.LargeCrew.name	Grande équipe
+ControlTower.abilities.LargeCrew.text	DESCRIPTION
+ControlTower.abilities.MotionScanner.name	Scanneur de mouvement
+ControlTower.abilities.MotionScanner.text	La tour de contrôle détecte toutes les unités mobiles à une certaine distance.
+OreExtractor.abilities.SmallCrew.name	Petite équipe
+OreExtractor.abilities.SmallCrew.text	DESCRIPTION
+	
+Shrine.abilities.SpiritTapAbi.name	Gain d’esprit
+Shrine.abilities.SpiritTapAbi.text	Toutes les [stat:spirit_sanctum_interval] secondes, le tombeau régénère [stat:spirit_sanctum_hp_perc]% des points de vie de toute unité alliée vivante dans un rayon moyen l’entourant.
+Temple.abilities.DarkWindAbi.name	Vent des ténèbres
+Temple.abilities.DarkWindAbi.text	DESCRIPTION
+Temple.abilities.FireLashAbi.name	Fouet de feu
+Temple.abilities.FireLashAbi.text	Description du fouet de feu
+Temple.abilities.SpiritSanctumAbi.name	Sanctuaire spirituel
+Temple.abilities.SpiritSanctumAbi.text	Toutes les [stat:spirit_sanctum_interval] secondes, le temple régénère [stat:spirit_sanctum_hp_perc]% des points de vie et [stat:spirit_sanctum_power_perc]% de la puissance de toute unité alliée vivante dans un large secteur l’entourant.
+	
+Breeder.abilities.BreedEggs.name	Formation des œufs
+Breeder.abilities.BreedEggs.text	La formatrice génère des œufs qui servent de système de défense.
+Portal.abilities.BreedEggs.name	Formation des œufs
+Portal.abilities.BreedEggs.text	Le portail génère des œufs qui servent de système de défense. Il peut contenir plus d’œufs que la formatrice.
+Portal.abilities.CorruptionField.name	Champ de corruption
+Portal.abilities.CorruptionField.text	Le champ de corruption du portail inflige [corruption_field_damage] points de dégâts par intervalle aux ennemis proches.
+Portal.abilities.SuppressionField.name	Champ de suppression
+Portal.abilities.SuppressionField.text	Le champ de suppression du portail ralentit les ennemis proches de [suppression_field_slow_perc]%.
+	
+// ABILITIES //////////////////////////////////////////////////////////////////	
+	
+Ability_Rupture.name	Rupture
+Ability_Rupture.text	L’attaque du Ripper a [stat:rupture_chance]% de chances de paralyser sa cible pendant [stat:rupture_stun_duration] secondes.
+AlienEgg.abilities.ClammyAcid.name	Flux d’acide
+AlienEgg.abilities.ClammyAcid.text	Les œufs lancent des flux d’acide sur les ennemis proches, réduisant ainsi l’efficacité de leur armure de [stat:clammy_acid_armor_perc]%. Cet effet s’additionne 5 fois.
+AlienEgg.abilities.Hatchlings.name	Éclosions
+AlienEgg.abilities.Hatchlings.text	Si l’œuf est détruit, les éclosions qu’il contient deviennent folles et attaquent immédiatement les ennemis proches.
+AlienEgg.abilities.Sizzle.name	Grésillement
+AlienEgg.abilities.Sizzle.text	L’œuf relâche occasionnellement des jets d’énergie grésillante. Ces décharges réduisent les dégâts causés par tous les ennemis proches de [sizzle_damage_reduction_perc]%.
+AncientShade.abilities.UnholyAttackAbi.name	Attaque impie
+AncientShade.abilities.UnholyAttackAbi.text	L’attaque par défaut de l’ombre pénètre complètement à l’intérieur de l’armure de l’ennemi.
+Assassin.abilities.Sharpshooter.name	Tireur de précision
+Assassin.abilities.Sharpshooter.text	Les assassins sont dévastateurs à portée maximum mais leur efficacité chute rapidement avec la distance. Essayez de les positionner comme il faut pour leur éviter le combat rapproché.
+AssaultBotAbilities.Rocket.name	Fusée de commotion
+AssaultBotAbilities.Rocket.text	Sur chaque attaque, le robot d’assaut a [stat:rocket_precision_chance]% de chances de lancer également une fusée de commotion sur une cible proche. L’explosion réduit l’efficacité des ennemis touchés et le niveau de dégâts de leur attaque de base de [stat:rocket_precision_damage_perc]%. Les effets s’additionnent jusqu’à 5 fois.
+Brute.abilities.GrowlAbi.name	Grondement
+Brute.abilities.GrowlAbi.text	La brute a [stat:growl_chance]% de chances d’attirer l’attention de sa cible sur chaque attaque. La cible concentre alors ses attaques sur la brute pendant [stat:growl_duration] secondes.
+Brute.abilities.IgniteOnHitAbi.name	Allumage
+Brute.abilities.IgniteOnHitAbi.text	Après avoir frappé sa cible, la brute a [stat:ignite_on_strike_chance]% de chances de s’enrager et de prendre feu pendant [stat:ignite_duration] secondes. La brute en flammes inflige [ignite_damage] de dégâts en plus sur un maximum de [ignite_targets] cibles lui faisant face.
+Brute.abilities.IgniteOnKillAbi.name	Allumage
+Brute.abilities.IgniteOnKillAbi.text	Après avoir délivré un coup mortel à une cible, la brute s’enrage et prend feu pendant [stat:ignite_duration] secondes La brute en flammes inflige [ignite_damage] de dégâts en plus à un maximum de [ignite_targets] cibles lui faisant face.
+ChainShotAbi.name	Tir en chaîne
+ChainShotAbi.text	Le médiateur a [stat:chain_shot_chance]% de chances de déclencher une réaction en chaîne sur chaque tir et de causer des dégâts à plus d’ennemis.
+ChargeAbi.name	Charge
+ChargeAbi.text	Quand il approche d’un ennemi, le gardien est capable de sprinter dans les derniers mètres. Il se met ainsi instantanément à portée de combat.
+DeathRumbleAbi.name	Roulement de mort
+DeathRumbleAbi.text	L’horreur a [stat:death_rumble_chance]% de chances d’invoquer une nova impie qui inflige [stat:death_rumble_damage] de points de dégâts à tout ennemi proche.
+DischargeAbi.name	Décharge
+DischargeAbi.text	L’attaque du juge a [stat:discharge_chance]% de chances de supprimer [stat:discharge_damage] points de puissance à sa cible et de les convertir en dégâts.
+DominatorBlightRayAbi.name	Anéantissement
+DominatorBlightRayAbi.text	L’attaque par défaut du dominateur ignore totalement l’armure ennemie.
+DominatorStasisShotAbi.name	Tir de stase
+DominatorStasisShotAbi.text	Le dominateur a [stat:stasis_shot_chance]% de chances de paralyser sa cible pendant [stat:stasis_shot_duration] secondes et de lui infliger le double de dégâts avec son tir.
+EnfeebleAbi.name	Affaiblissement
+EnfeebleAbi.text	Sur chaque attaque, le modificateur a [stat:enfeeble_chance]% de chances d’affaiblir toutes les unités ennemies entourant sa cible pendant [stat:enfeeble_duration] secondes. Ceci réduit les dégâts qu’elles provoquent de [stat:enfeeble_damage_reduction_perc]%. L’effet s’additionne jusqu’à 5 fois.
+ExposeTargetAbi.name	Exposition
+ExposeTargetAbi.text	Sur chaque tir, l’assassin a [stat:expose_target_chance]% de chances de transpercer l’armure de sa cible. Ceci réduit son efficacité de [stat:expose_target_armor_perc]% pendant [stat:expose_target_armor_duration] secondes. Cet effet s’additionne jusqu’à 5 fois.
+FeedbackAbi.name	Feed-back
+FeedbackAbi.text	Le tritech a [stat:feedback_chance]% de chances de récupérer [stat:feedback_heal] points de vie pour se soigner quand il tire.
+Harvester.abilities.ImminenceAbi.name	Imminence
+Harvester.abilities.ImminenceAbi.text	Sur chaque attaque, le moissonneur a [stat:confuse_chance]% de chances d’attirer l’attention de sa cible. Elle concentrera ses attaques sur lui pendant 10 secondes.
+HarvesterHarvestAbi.name	Moisson
+HarvesterHarvestAbi.text	Sur chaque attaque, le moissonneur a [stat:harvest_chance]% de chances d’exécuter une frappe spéciale qui touche et paralyse toutes les cibles qui l’entourent.
+HarvesterParalyzingField.name	Champ de paralysie
+HarvesterParalyzingField.text	Le moissonneur ralentit les déplacements de tous les ennemis vivants proches de [stat:paralyzing_field_speed_reduction_perc]%.
+Hatchling.abilities.ThreatenAbi.name	Menace
+Hatchling.abilities.ThreatenAbi.text	Sur chaque attaque, l’éclosion a [stat:threaten_chance]% de chances de menacer sa cible. Elle la force à concentrer ses attaque sur elle pendant [stat:threaten_duration] secondes.
+HellfireAbilities.Shield.name	Champ de force
+HellfireAbilities.Shield.text	Un puissant champ de force est activé automatiquement quand le feu de l’enfer est attaqué. Le champ de force dure [stat:shield_hull], avec un taux de charge de [stat:shield_regen] et [stat:shield_fullabsorbchance]% de chances de déviation complète et d’absorption de dégâts de [stat:shield_percentabsorbtion]%.
+HollowVoiceAbi.name	Voix caverneuse
+HollowVoiceAbi.text	L’horreur a [stat:hollow_voice_chance]% de chances de déclencher un grondement avec sa voix caverneuse. Elle inflige [stat:hollow_voice_damage] points de dégâts à tous les ennemis qui lui font face.
+HolyAuraAbi.name	Aura sainte
+HolyAuraAbi.text	Les pouvoirs du Grand prêtre rassemblent l’énergie naturelle qui l’entoure. Il soigne toutes les unités qui l’entourent en leur faisant récupérer [stat:holy_aura_heal] points de vie toutes les [stat:holy_aura_tick] secondes.
+LeadershipAbi.name	Leadership
+LeadershipAbi.text	En attaquant l’ennemi et en observant le combat, le juge gagne des charges dont il se sert automatiquement pour promouvoir les soldats au rang Élite. Les soldats d’élite ont plus de chances d’infliger le double de dégâts à leurs cibles.
+LeechAbi.name	Sangsue
+LeechAbi.text	Sur chaque attaque, le fantôme de pierre a [stat:drain_psi_chance]% de chances de voler jusqu’à [stat:drain_psi_amount] points de puissance à sa cible afin de les redistribuer à toutes les unités alliées proches.
+LifeLeechAbi.name	Sangsue de vie
+LifeLeechAbi.text	Sur chaque attaque, le manipulateur vole [stat:damage] points de vie à sa cible et les répand autour de lui. Il soigne ainsi toutes les unités alliées proches.
+LongRangeAbi.name	Longue portée
+LongRangeAbi.text	Le médiateur inflige beaucoup de dégâts mais n’est efficace qu’à portée maximum. Attaquer à courte distance réduit énormément son efficacité.
+NanofixAbi.name	Nano-réparation
+NanofixAbi.text	Crée une vague de nano-particules qui réparent instantanément une machine en lui faisant récupérer [stat:nano_fix_heal] points de vie.
+OverchargeAbi.name	Surcharge
+OverchargeAbi.text	Le constructeur a [stat:overcharge_chance]% de chances de déclencher un éclair d’énergie à la place de son attaque classique. Il inflige ainsi le double de dégâts à sa cible. Cet éclair surchargé crée aussi une nova d’énergie autour de la cible touchée qui inflige la moitié des dégâts à toute unité ennemie dans un secteur proche et la paralyse pendant [stat:overcharge_stun_duration] secondes.
+OverseerChargingFieldAbi.name	Champ de charge
+OverseerChargingFieldAbi.text	Le surveillant de puissance a une aura qui restaure [stat:charging_field_psi_perc]% de la puissance de toutes les unités alliées proches toutes les [stat:charging_field_tick] secondes.
+OverseerPlasmaShieldAbi.name	Bouclier plasma
+OverseerPlasmaShieldAbi.text	Puissant bouclier qui s’active automatiquement quand le surveillant de puissance est attaqué. Le bouclier plasma dure [stat:shield_hull], son taux de charge est de [stat:shield_regen]. Il a [stat:shield_fullabsorbchance]% de chances de déviation complète et un taux d’absorption de dégâts de [stat:shield_percentabsorbtion]%.
+PlasmaShieldAbi.name	Bouclier plasma
+PlasmaShieldAbi.text	Puissant bouclier qui s’active automatiquement quand le Maître est attaqué. Le bouclier plasma dure [stat:shield_hull], son taux de charge est de [stat:shield_regen]. Il a [stat:shield_fullabsorbchance]% de chances de déviation complète et un taux d’absorption de dégâts de [stat:shield_percentabsorbtion]%.
+PowerLeakAbi.name	Perte de puissance
+PowerLeakAbi.text	L’attaque par défaut du modificateur a [power_leak_chance]% de chances de réduire la puissance de l’ennemi de [power_leak_drain]%.
+PyroblastAbi.name	Pyrochoc
+PyroblastAbi.text	À chaque attaque, le Grand prêtre a [stat:pyrowave_chance]% de chances de générer une puissante vague de feu qui peut endommager jusqu’à 2 cibles supplémentaires.
+RepairDronesAbi.name	Drones de réparation
+RepairDronesAbi.text	Lance des drones qui réparent le constructeur et les machines alliées proches.
+Shaman.abilities.DrainLife.name	Drain de vie
+Shaman.abilities.DrainLife.text	Le chaman a [stat:drain_life_chance]% de chances d’infliger [stat:damage] points de dégâts à sa cible en cours et de soigner toutes les unités alliées vivantes dans un petit secteur autour de lui en leur faisant récupérer [drain_life_heal] points de vie.
+ShiftAbi.name	Décalage
+ShiftAbi.text	Pendant qu’il combat, le gardien peut utiliser ses pouvoirs pour passer d’une dimension à l’autre et se déplacer ainsi autour de sa cible. Le décalage provoque le double de dégâts et paralyse la cible pendant [stat:shift_stun_duration] secondes.
+Shifter.abilities.CloneShieldAbi.name	Bouclier clone
+Shifter.abilities.CloneShieldAbi.text	Le bouclier clone s’active automatiquement quand le modificateur est attaqué. Sa durée est de [stat:shield_hull], son taux de charge de [stat:shield_regen], il a [stat:shield_fullabsorbchance]% de chances de déviation complète et un taux d’absorption de dégâts de [stat:shield_percentabsorbtion]%. Chaque fois qu’il dévie complètement une attaque, il peut aussi se cloner et protéger un trisat ou un tritech voisin de manière aléatoire.
+Sorcerer.abilities.ChillAbi.name	Refroidissement
+Sorcerer.abilities.ChillAbi.text	L’attaque par défaut du sorcier ralentit sa cible de [stat:chill_perc]% pendant [stat:chill_duration] secondes.
+SurgeonAbilities.FirstAid.name	Premiers soins
+SurgeonAbilities.FirstAid.text	Le chirurgien soigne automatiquement les unités blessées dans un rayon moyen autour de lui. Il leur permet de récupérer [stat:bandage_amount] points de vie et de supprimer un effet négatif. Faites un clic droit sur une cible alliée pour que le chirurgien la suive et surveille ses points de vie de près.
+Trisat.abilities.FrenzyAbi.name	Frénésie
+Trisat.abilities.FrenzyAbi.text	Le trisat entre en frénésie tous les [stat:frenzy_threshold] de dégâts qu’il inflige, ce qui augmente son armure de [stat:frenzy_armor] et les dégâts qu’il cause de [stat:frenzy_damage]%. L’effet s’accumule jusqu’à 3 fois et disparaît si le trisat ne frappe rien pendant [stat:frenzy_duration] secondes.
+Trisat.abilities.ParalyzingFieldAbi.name	Champ de paralysie
+Trisat.abilities.ParalyzingFieldAbi.text	Le trisat ralentit les déplacements de tous les ennemis vivants proches de [stat:paralyzing_field_speed_reduction_perc]%.
+TrooperAbilities.Grenade.name	Lancer de grenade
+TrooperAbilities.Grenade.text	Sur chaque attaque, le soldat a [stat:throw_grenade_chance]% de chances de lancer une grenade explosive sur sa cible. La grenade infligera [stat:grenade_damage] de dégâts dans un petit secteur. Cependant, le soldat n’utilisera pas cette capacité s’il y a un risque que la grenade blesse des unités alliées.
+UnholyAuraAbi.name	Aura impie
+UnholyAuraAbi.text	Le fantôme de pierre maintient un lien avec les enfers et soigne toutes les créatures infernales (fantôme de pierre, ombre ancienne, horreur monstrueuse, ver d’âme) proches de lui en leur faisant récupérer [stat:unholy_aura_heal] points de vie par [stat:unholy_aura_interval] seconde.
+Warrior.abilities.SharpShooterAbi.name	Tireur de précision
+Warrior.abilities.SharpShooterAbi.text	Le guerrier est très efficace quand il tire à distance maximum mais il perd rapidement son efficacité quand il est forcé de combattre de près.
+WhirlwindAbi.name	Tornade
+WhirlwindAbi.text	Quand il combat, le gardien a [stat:whirlwind_chance]% de chances d’exécuter un coup spécial qui inflige des dégâts à toutes les cibles proches.
+	
+// BUFFS //////////////////////////////////////////////////////////////////////	
+	
+AlienEgg.SizzleAura.effect.name	Grésillement
+AlienEgg.SizzleAura.effect.text	Cette unité est affaiblie par l’influence des œufs extra-terrestres du secteur.
+AlienEgg.weapon.effect.name	Flux d’acide
+AlienEgg.weapon.effect.text	L’armure de cette unité est affaiblie par un flux d’acide.
+AssaultBotAbilities.Rocket.effect.name	Dégâts réduits
+AssaultBotAbilities.Rocket.effect.text	L’efficacité de cette unité a été réduite par une fusée de commotion.
+BigOne.abilities.VenomousBiteAbi.effect.name	Poison
+BigOne.abilities.VenomousBiteAbi.effect.text	Cette unité est affectée par du poison.
+BigOne.abilities.VenomShowerAbi.effect.name	Poison
+BigOne.abilities.VenomShowerAbi.effect.text	Cette unité est affectée par du poison.
+BigOne.ParalyzingFieldAura.effect.name	Poison de lenteur
+BigOne.ParalyzingFieldAura.effect.text	Cette unité est ralentie par un poison paralysant.
+Brute.abilities.GrowlAbi.effect.name	Grondement
+Brute.abilities.GrowlAbi.effect.text	Cette unité est menacée par une brute et ne peut attaquer personne.
+Brute.abilities.IgniteOnHitAbi.effect.name	Allumage
+Brute.abilities.IgniteOnHitAbi.effect.text	Cette unité est dans un état spécial qui augmente son efficacité.
+Brute.abilities.IgniteOnKillAbi.effect.name	Allumage
+Brute.abilities.IgniteOnKillAbi.effect.text	Cette unité est dans un état spécial qui augmente son efficacité.
+ChainShotAbi.effect.name	Tir en chaîne
+ChainShotAbi.effect.text	Cette unité subit des dégâts d’un tir en chaîne.
+ChillSpell.effect.name	Refroidissement
+ChillSpell.effect.text	Cette unité est ralentie par l’attaque d’un sorcier.
+ConfuseAction.spell.effect.effect.name	Confusion
+ConfuseAction.spell.effect.effect.text	L’armure du Seigneur commandant est améliorée pendant une manœuvre de confusion.
+CorruptionAction.spell.effect.name	Corruption
+CorruptionAction.spell.effect.text	Cette unité est empoisonnée par un sort de corruption.
+DarkWind.FireLashHit.IncinerateAura.effect.name	Incinération
+DarkWind.FireLashHit.IncinerateAura.effect.text	Cette unité souffre de dégâts causés par le feu d’un point chaud déclenché par un éclair lancé d’un temple ennemi proche.
+DominatorDimensionChainAction.spell.effect.effect.name	Chaîne dimensionnelle
+DominatorDimensionChainAction.spell.effect.effect.text	Cette unité est prise dans une chaîne dimensionnelle et ne peut plus bouger.
+EnfeebleAbi.effect.name	Affaiblissement
+EnfeebleAbi.effect.text	Cette unité a été affaiblie par une attaque de modificateur.
+ExposeTargetAbi.effect.name	Cible en danger
+ExposeTargetAbi.effect.text	Cette unité est affaiblie par un tir d’assassin.
+FeedAction.spell.effect.caster_effect_on_start.name	Alimentation
+FeedAction.spell.effect.caster_effect_on_start.text	Cette unité est soignée par une action Alimentation.
+FeedAction.spell.effect.name	Alimentation
+FeedAction.spell.effect.text	Cette unité est soignée par une action Alimentation.
+FrostWaveAction.spell.effect.name	Refroidissement
+FrostWaveAction.spell.effect.text	Cette unité est ralentie par l’attaque d’un sorcier.
+Guardian.FortifyAura.effect.name	Fortification
+Guardian.FortifyAura.effect.text	L’armure de cette unité est renforcée par l’aura de fortification d’un gardien proche.
+Harvester.abilities.ImminenceAbi.effect.name	Imminence
+Harvester.abilities.ImminenceAbi.effect.text	Cette unité est menacée par un moissonneur et ne peut plus attaquer personne.
+Harvester.ParalyzingFieldAura.effect.name	Champ de paralysie
+Harvester.ParalyzingFieldAura.effect.text	Cette unité est ralentie par un champ de paralysie.
+Hatchling.abilities.ThreatenAbi.effect.name	Menace
+Hatchling.abilities.ThreatenAbi.effect.text	Cette unité est menacée par une éclosion et ne peut plus attaquer personne.
+HowlArmor.name	Armure de mugissement
+HowlArmor.text	Cette unité est dans un état spécial qui améliore son armure.
+HowlFear.name	Peur de mugissement
+HowlFear.text	Cette unité est frappée de terreur et ne peut plus obéir aux ordres.
+HowlHeal.name	Soin de mugissement
+HowlHeal.text	Cette unité est dans un état spécial qui améliore sa régénération de santé.
+IncinerateSpot.IncinerateAura.effect.name	Incinération
+IncinerateSpot.IncinerateAura.effect.text	Cette unité subit des brûlures par un sort d’incinération.
+InjectAction.effect.name	Injection
+InjectAction.effect.text	Le Seigneur commandant régénère sa santé sous l’influence de soins injectés.
+JurranAssassin.weapon.alt_projectile.effect.name	Poison
+JurranAssassin.weapon.alt_projectile.effect.text	Cette unité est affectée par du poison.
+M33Breeder.CorruptionFieldAura.effect.name	Champ de corruption
+M33Breeder.CorruptionFieldAura.effect.text	Cette unité est contaminée par un champ de corruption.
+M33Breeder.SuppressionFieldAura.effect.name	Champ de suppression
+M33Breeder.SuppressionFieldAura.effect.text	Cette unité est ralentie par un champ de suppression.
+MarkOfChaosAction.effect.name	Signe du chaos
+MarkOfChaosAction.effect.text	Cette unité subit des dégâts infligés par un signe du chaos.
+MutantsThunder.ThunderSlowAura.effect.name	Orage de lenteur
+MutantsThunder.ThunderSlowAura.effect.text	Cette unité est ralentie par un orage.
+Overseer.ChargingFieldAura.effect.name	Champ de charge
+Overseer.ChargingFieldAura.effect.text	La puissance de cette unité est réapprovisionnée par un champ de charge.
+Portal.CorruptionFieldAura.effect.name	Champ de corruption
+Portal.CorruptionFieldAura.effect.text	Cette unité est contaminée par un champ de corruption.
+Portal.SuppressionFieldAura.effect.name	Champ de suppression
+Portal.SuppressionFieldAura.effect.text	Cette unité est ralentie par un champ de suppression.
+S_fear.name	Peur
+S_fear.text	Cette unité est frappée de terreur et ne peut plus obéir aux ordres.
+S_freeze.name	Gel
+S_freeze.text	Cette unité est gelée et ne peut plus rien faire pour l’instant.
+S_madden.name	Exaspération
+S_madden.text	Cette unité est prise de panique et ne distingue plus ses alliés de ses ennemis.
+S_stun.name	Paralysie
+S_stun.text	Cette unité est paralysée et ne peut rien faire pour l’instant.
+SalingAssassin.weapon.alt_projectile.effect.name	Poison
+SalingAssassin.weapon.alt_projectile.effect.text	Cette unité est affectée par du poison.
+Shrine.SpiritTrapAura.effect.name	Gain d’esprit
+Shrine.SpiritTrapAura.effect.text	Les points de vie de cette unité sont régénérés par l’aura de gain d’esprit d’un temple proche.
+SpittingScorpion.abilities.VenomousBiteAbi.effect.name	Poison
+SpittingScorpion.abilities.VenomousBiteAbi.effect.text	Cette unité est affectée par du poison.
+StoneGhost.UnholyPowerAura.effect.name	Pouvoir impie
+StoneGhost.UnholyPowerAura.effect.text	Le pouvoir de cette unité est réapprovisionné par un fantôme de pierre proche.
+VoiceofCommandAction.effect.name	Feu radical
+VoiceofCommandAction.effect.text	L’efficacité des attaques de cette unité a été améliorée par un juge proche.
+Temple.SpiritSanctumAura.effect.name	Sanctuaire spirituel
+Temple.SpiritSanctumAura.effect.text	Les points de vie et l’énergie de cette unité sont régénérés par l’aura de sanctuaire spirituel d’un temple proche.
+TrackAction.spell.effect.name	Poison
+TrackAction.spell.effect.text	Cette unité est affectée par du poison.
+Trisat.frenzy.effect.name	Frénésie
+Trisat.frenzy.effect.text	Cette unité est prise de frénésie. Son armure et ses points de dégâts ont été augmentés.
+Trisat.ParalyzingFieldAura.effect.name	Champ de paralysie
+Trisat.ParalyzingFieldAura.effect.text	Cette unité est ralentie par le champ de paralysie d’un trisat.
+VarunAssassin.weapon.alt_projectile.effect.name	Poison
+VarunAssassin.weapon.alt_projectile.effect.text	Cette unité est affectée par du poison.
+Vasilii.weapon.projectile.effect.effect.name	Poison
+Vasilii.weapon.projectile.effect.effect.text	Cette unité est affectée par du poison.
+VenomousScorpion.abilities.VenomousBiteAbi.effect.name	Poison
+VenomousScorpion.abilities.VenomousBiteAbi.effect.text	Cette unité est affectée par du poison.
+VenomousScorpion.ParalyzingFieldAura.effect.name	Poison de lenteur
+VenomousScorpion.ParalyzingFieldAura.effect.text	Cette unité est ralentie par un poison paralysant.
+E_PlaguedCorrosion.name	Corrosion de Fléau
+E_PlaguedCorrosion.text	Cette unité reçoit moins de points de vie lorsqu’elle se fait soigner.
+LavaTrap.IncinerateAura.effect.name	Incinération
+LavaTrap.IncinerateAura.effect.text	Cette unité souffre de dégâts causés par une tache en fusion au sol.
+QueenProtector.abilities.Taunt.effect.effect.name	Confusion
+QueenProtector.abilities.Taunt.effect.effect.text	Cette unité est menacée par un protecteur de reine et ne peut plus attaquer personne.
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.name	Poison
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.text	Cette unité est affectée par du poison.

@@ -1,0 +1,63 @@
+Mob SafariBug : BaseMob {
+  name = "Scorpo"
+  model = data/models/lifeforms/Scorpo/scorpo.kfm
+  scale = 0.8
+  icon = 6,30
+  destruction = animation
+  
+  range = 50
+  hp = 250
+  damage = 15
+  sight = 5000
+  sight_in_combat = 8000
+  speed = 250
+  poison_range = 400
+  poison_damage = 30
+  
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = Scene Root
+    shoot_anim = ATTACK
+    shoot_snd = data/sounds/units/safari bug/hits
+  }
+
+  abilities {
+    when : abi.idle
+    target = enemy
+    range = var:sight_in_combat
+    program = PrgAttack
+  }
+  
+  ondeath_effect = SafariBugPoison
+}
+
+CAreaEffect SafariBugPoison {
+  range : SafariBug.poison_range
+ 
+  epicenter {
+    spawn SafariBugPoisonAnim
+    physics_radius : SafariBug.poison_range
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount : SafariBug.poison_damage
+    }
+  }
+}
+
+CMapAnim SafariBugPoisonAnim {
+  model = data/Models/Effects/MediumExplosion/ExplosionPlasma_Green.kfm
+  sound = Data/Sounds/Effects/PoisonSpores/
+  scale = 1
+  decals = explosion_crater2
+  physics_impact = 500
+}

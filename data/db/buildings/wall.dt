@@ -1,0 +1,30 @@
+CWall Wall : BaseBuilding {
+  name = "Wall"
+  model = Data/Models/buildings/Wall/Wall.nif
+  {
+    destr_phase_01 = Data/Models/buildings/Wall/Wall_break1.nif
+    destr_phase_02 = Data/Models/buildings/Wall/Wall_break2.nif
+  }
+  race = mutants
+  --clone_mode = deepcopydeepcopy
+  indestructible = 1
+  stats :{
+    hp = 3000
+  }
+
+  destruction {
+    phase_0 {
+      model = destr_phase_01
+      hull = 50
+    }
+    phase_1 {
+      model = destr_phase_02
+      hull = 1
+    }
+  }
+}
+
+CWallHandle WallHandle {
+  name = Wall handle
+  model = Data/Models/buildings/Wall/wall_handle.nif
+}

@@ -1,0 +1,53 @@
+﻿sid	text
+	
+tip	TIP
+waiting_for_players	Waiting for player(s)
+lobby_error_gameisinprogress	The game you are trying to join is already in progress.
+game_is_playing	(Playing)
+update_found	A NEW UPDATE IS AVAILABLE!
+update	UPDATE!
+aniso_slider	Anisotropic
+crash	WorldShift has encountered a problem!
+beta_welcome1	Welcome to the pre-beta version of WorldShift!
+beta_welcome2	For additional information or feedback please visit
+beta_welcome3	http://forums.blackseastudios.com
+	
+game_news	GAME NEWS
+delete_news	DISMISS
+	
+sounds_enabled	Sounds enabled
+	
+online_players	Online players: [#]
+	
+leader_is_dead_title	Your Field Leader is dead!
+leader_is_dead_text	Other players can revive him by selecting their Field Leader and right-clicking the Revive switch, which can be found where your Field Leader has died.
+	
+	
+buddylist_status_playing_full	Playing [#]
+	
+	
+dmmeters_ttl	Deathmatch Meters
+dmmeters_stl	(players<color = 52,157,255> preparing </>and<color = 183,94,216> playing</>)
+dmmeters_rnd	Random
+dmmeters_arn	Arranged
+dmmeters_src	Searching
+dm_lfg	LOOKING FOR GAMES
+dm_match_att	Match attempts
+dm_players	Players waiting to be matched
+dm_team1	TEAM 1
+dm_team2	TEAM 2
+dm_search	Searching...
+start_game_tip_disabled	The game cannot be started until all the players click their ‘Ready’ buttons.
+	
+screen resolution	SCREEN RESOLUTION
+	
+cdkey_validation	CD KEY VALIDATION
+ws_update	WORLDSHIFT UPDATE
+downloading	Downloading
+	
+location_unlocked	A new special location has been unlocked!
+	
+chat_channel_int_form	International #[#]
+chat_channel_loc_form	Local #[#]
+chat_channel_int_short	International
+chat_channel_loc_short	Local

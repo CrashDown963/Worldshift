@@ -1,0 +1,53 @@
+﻿sid	text:de
+	
+tip	TIPP
+waiting_for_players	Wartet auf Spieler
+lobby_error_gameisinprogress	Das Spiel, dem Sie beitreten möchten, hat bereits begonnen.
+game_is_playing	(Spiel läuft)
+update_found	NEUES UPDATE VERFÜGBAR!
+update	UPDATE!
+aniso_slider	Anisotrope Filterung
+crash	Es ist ein Fehler bei WorldShift aufgetreten!
+beta_welcome1	Willkommen zur Vor-Beta-Version von WorldShift!
+beta_welcome2	Weitere Information bzw. Kontaktmöglichkeiten unter
+beta_welcome3	http://forums.blackseastudios.com
+	
+game_news	NEUES ZUM SPIEL
+delete_news	ENTFERNEN
+	
+sounds_enabled	Audio eingeschaltet
+	
+online_players	Spieler online: [#]
+	
+leader_is_dead_title	Ihr Anführer ist tot!
+leader_is_dead_text	Andere Spieler können ihn wiederbeleben, indem sie ihren Anführer auswählen und mit der rechten Maustaste am Sterbeort Ihres Anführers die „Wiederbeleben“-Funktion benutzen.
+	
+	
+buddylist_status_playing_full	Spielt: [#]
+	
+	
+dmmeters_ttl	Deathmatch-Anzeigen
+dmmeters_stl	(Spieler<color = 52,157,255> in Vorbereitung </>und<color = 183,94,216> im Spiel</>)
+dmmeters_rnd	Zufall
+dmmeters_arn	Fest
+dmmeters_src	Sucht
+dm_lfg	SUCHT SPIELE
+dm_match_att	Gestartete Spielersuchen
+dm_players	Kandidaten für die Spielersuche
+dm_team1	TEAM 1
+dm_team2	TEAM 2
+dm_search	Sucht …
+start_game_tip_disabled	Das Spiel kann nicht begonnen werden, solange nicht alle Spieler die „Fertig“-Schaltfläche aktiviert haben.
+	
+screen resolution	BILDSCHIRMAUFLÖSUNG
+	
+cdkey_validation	CD-SCHLÜSSEL-VALIDIERUNG
+ws_update	WORLDSHIFT-UPDATE
+downloading	Download läuft
+	
+location_unlocked	Neue Spezialkarte verfügbar!
+	
+chat_channel_int_form	International #[#]
+chat_channel_loc_form	Regional #[#]
+chat_channel_int_short	International
+chat_channel_loc_short	Regional

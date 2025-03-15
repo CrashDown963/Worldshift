@@ -1,0 +1,10 @@
+Building OilPump : BaseBuilding {
+  model = Data/Models/buildings/OilPump/Oil-Pump.kfm
+  clone_mode = reuse deepcopy
+  race = common
+  stats :{
+    hit_points = 800
+  }
+  no_mouse_targetable = 1
+  no_minimap = 1
+}

@@ -1,0 +1,78 @@
+Turret DefencePost : BaseTurret {
+  name = "Defence Post"
+  model = Data/Models/buildings/DefencePost/DefencePost.kfm {
+  constr_phase_0 = Data/Models/buildings/DefencePost/DefencePost_build.nif
+  }
+  race = humans
+  icon = 5,5
+
+  stats :{
+    hp = 1200
+    range = 1800
+    damage = 50
+  }
+  sight = stat:range + 300
+
+  pitch_speed = 30
+  min_pitch = -70
+  max_pitch = 30
+  yaw_speed = 90
+  target_priority = 2000
+  
+  construction {
+    phase_0 {
+      model = constr_phase_0
+    }
+  }
+  
+  CAlertController alert {
+    timeout = 15
+    layered_anims = 0
+  }
+
+  CWeaponController weapon {
+    range = stat:range
+    active = 1
+    idle_only = 1
+    root_node = rot_z
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    aim_tolerance = 15
+--    shoot_anim = shoot
+    shoot_snd = data/sounds/weapons/m60 mg/
+    fire_rate = 1.2 
+    idle_time = 0.7
+    spot_impact = 800
+    spot_impact_type = bullet
+
+    trace MG_trace {
+      model = Data/Models/Effects/TraceBullet/trace_bullet.nif  
+      variant = 0
+      start_dist = 10
+      end_dist = 10
+      frequency = 5
+      ttl = 1
+      length = 320
+      target_size = 15
+      velocity  = 90
+      length_end = 320
+      instances = 128
+    }
+    muzzle_fx MG_muzzle {
+--    model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+--    model = data/models/effects/MuzzleFlash/muzzle_flash_light.nif
+      model = data/models/effects/MuzzleFlash/muzzle_flash_MGanim.nif
+      frames = 4
+      frequency = 10
+      active_fraction = 40
+      active_variation = 5
+      length_variation = 20
+      width_variation = 5
+      scale = 3
+      instances = 64
+      emit = 255,160,80
+      low_dmmer = 0.5
+    }
+ 
+  }
+}

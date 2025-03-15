@@ -1,0 +1,175 @@
+Alien AlienBase: BaseUnit {
+  name = "Alien"
+  race = aliens
+
+  create_fow_proxy = 1
+
+
+  model = Data/Models/Units/UnitPlaceholder/Unit.kfm
+
+  stats :{
+    hp = 1000
+    range = 1300
+    speed = 462
+    aura_hp_bonus = 0
+    aura_dmg_bonus = 0
+    charged_damage_bonus = 0
+    port_time = 5
+    consume_time = 3
+    charges_on_produce = 0
+  }
+
+  sight = stat:range + 300
+
+  --min_attack_range = 2000
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+
+  -- consumed minions, needed for activate
+  activate_minions = 3
+  
+  -- consumed minions, needed for full charge
+  charge_minions = 3
+
+  -- when consuming minions, search within this range for minions
+  consume_minions_range = 1000
+
+  -- when consumed -> the minion disappear with this animation
+  minion_disappear_anim = MinionDisappear
+
+  -- charge attachments
+  charge_attachment01 = Data/Models/Effects/Aliens/ChargeAttachment01.nif
+  charge_attachment02 = Data/Models/Effects/Aliens/ChargeAttachment02.nif
+  charge_attachment03 = Data/Models/Effects/Aliens/ChargeAttachment03.nif
+  charge_attachment_point = pt_center
+  charge_no_orientation = 1
+
+
+  -- transfer charge
+  transfer_charge_max_range = 1000
+
+
+  -- deactivation menu
+  actions_inactive  {
+    ConsumeMinionsAction;
+  }
+  
+  actions :{
+  }
+  
+  animation {
+    deactivated_idle = channeling
+    cast_twist_perception_prepare = channeling
+  }
+
+
+  reacts : {
+    -- react when unit sends charge
+    transfer_charge_send {	  
+      pt_ground = data/models/effects/magic/HealFXGround.nif
+    }
+
+    -- react when unit receives charge
+    transfer_charge_receive {	  
+      pt_ground = data/models/effects/magic/HealFXGround.nif
+    }
+
+    -- when link health is initiated -> this react is started
+    link_health_start {	  
+      pt_ground = data/models/effects/magic/HealFXGround.nif
+    }
+
+    -- when damage is taken -> this react is started
+    link_health_damage {	  
+      pt_chest = Data/Models/Effects/Magic/passivedmgreact.nif
+      
+    }
+    
+  }
+
+  -- alien blood
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}
+
+
+
+Alien Alien: AlienBase {
+
+  create_fow_proxy = 0
+
+  physics {
+    --default = Data/Models/Units/UnitPlaceholder/Unit_Proxy.pml
+    --die = Data/Models/Units/UnitPlaceholder/Unit.pml
+    default = auto
+    die = auto
+
+  }
+  
+  stats :{
+  }
+
+  animation :{
+  }
+  
+  actions :{
+  }
+  
+  destruction = ragdoll
+  impacts : AlienUnitImpacts
+
+  tags = unit, organic
+}
+
+--casts
+CastTwistPerception {
+  cast {
+    prepare {
+      anim = cast_twist_perception_prepare
+      duration = 1
+      attach {
+        pt_hand = data/models/effects/magic/FireHands.nif
+      }
+    }
+  }
+  charges = 1
+}
+
+CastCharge {
+  cast {
+    prepare {
+      anim = cast_charge
+      duration = stat:consume_time
+      attach {
+        --pt_hand = data/models/effects/magic/FireHands.nif
+      }
+    }
+  }
+}
+
+
+--------------------------------------------------------------- IMPACTS 
+
+AlienUnitImpacts {
+	bullet {
+		1 = data/models/effects/impacts/aliens_blood_impact.kfm
+		2 = data/models/effects/impacts/aliens_blood_impactPart.kfm
+		3 = data/models/effects/impacts/aliens_blood_impactPart2.kfm
+	}
+	melee {
+		1 = data/models/effects/impacts/melee_aliens_blood_impact.kfm
+		2 = data/models/effects/impacts/melee_aliens_blood_impactPart2.kfm
+	}
+
+	small_energy {
+		1 = data/models/effects/impacts/simple sparks.nif
+	}
+	fire {
+		1 = data/models/effects/impacts/simple sparks.nif
+	}
+	
+} 

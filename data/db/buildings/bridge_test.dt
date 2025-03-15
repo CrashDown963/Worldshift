@@ -1,0 +1,7 @@
+Building Bridge_Test : BaseBuilding {
+  model = Data/Models/buildings/Bridge_Test/Bridge_Test.nif
+  race = humans
+  selectable = 0
+  attackable = 0
+  no_mouse_targetable = 1
+}

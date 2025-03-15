@@ -1,0 +1,94 @@
+Mob MasterMob : BaseMob {
+  model = Data/Models/Units/Master/Master.kfm {
+    die = Data/Models/Units/Master/Master_die.nif
+  }
+  name : Master.name
+  descr : Master.descr
+  race = aliens
+  icon = 1,12
+
+  hp = 600
+  armor = 12
+  range = 1600
+  damage = 60
+  energy = 380
+
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Master/Master.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+
+  stats :{
+    shield_hull = 250
+    shield_regen  = 150
+    shield_fullabsorbchance = 20
+    shield_percentabsorbtion = 50
+    
+    feed_psi_cost = 120
+    feed_duration = 4
+    feed_tick = 0.4
+    feed_base_damage = 50
+    feed_add_damage = 5
+    feed_base_heal = 50
+    feed_add_heal = 5
+    
+    nether_nova_psi_cost = 80
+    nether_nova_radius = 800
+    nether_nova_damage = 180
+  }
+
+  take_auras : { RestorationCoreAura }
+
+  actions :{
+    FeedAction
+    NetherNovaAction
+    TeleportOfficerAction
+    Reinforce
+    MakeBreeder
+    PickItemDef
+  }
+  
+  abilities {
+    PlasmaShieldAbi
+    AIFeed {
+      action = FeedAction
+      when   : abi.fight
+      target = current { min_hp = 100; aoe_range = 1000; aoe_min_enemy_hp = 300 }
+      range = var:range
+    }
+    AINetherNova {
+      action = NetherNovaAction
+      when   : abi.fight
+      min_power = 200
+      target = current { aoe_range = 600; aoe_min_enemy_hp = 500; aoe_min_enemy_count = 4 }
+      range = var:range
+    }
+  }
+
+  attack_spell = MasterCastSpell
+
+  animation {
+    plant_structure = cast_preparation
+    pick_item = cast_preparation
+  }
+  
+  CShieldController shield {
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    regen_tick = 2
+    reactivate_threshold = 30
+    -- regen_boost_perc = 100
+    -- regen_boost_timeout = 20
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+}
+

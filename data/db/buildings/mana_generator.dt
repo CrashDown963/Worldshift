@@ -1,0 +1,7 @@
+Building Mana_Generator : BaseBuilding {
+  model = Data/Models/buildings/Mana_Generator/Mana_Generator.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

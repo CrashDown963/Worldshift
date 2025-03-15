@@ -1,0 +1,25 @@
+﻿sid	text
+
+ALERT	WARNUNG
+PROMPT	BESTÄTIGUNG
+no_such_user	[#] - Dieser Spieler ist nicht online.
+random_loc	ZUFÄLLIGE KARTE
+gs_isc_atlasconnect	Verbindung mit dem Wettkampf-Dienst wird hergestellt …
+battle points cost:	Schlachtpunkte kosten:
+obj.Find the renegade commander	Finde den abtrünnigen Kommandanten!
+accepted	Akzeptiert
+rejected	Zurückgewiesen
+Triad.descr	Jaar Lash Verteidigungsanlage.
+ErkhArulAlienShip.name	Alien-Schiff
+ErkhArulAlienShip.descr	
+rank1v1txt	RANG
+rating1v1txt	WERTUNG
+wins1v1txt	SIEGE
+losses1v1txt	NIEDERLAGEN
+streak1v1txt	SIEGE IN FOLGE
+	
+video_sett	GRAFIK-EINSTELLUNGEN
+audio_sett	AUDIO-EINSTELLUNGEN
+player_sett	SPIELER-EINSTELLUNGEN
+player_frame	SPIELER
+player_profile	Profil

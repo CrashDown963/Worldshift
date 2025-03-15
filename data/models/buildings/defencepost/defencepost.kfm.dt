@@ -1,0 +1,75 @@
+model = {
+  file = str:"data\models\buildings\defencepost\defencepost.kfm";
+  animations = {
+    alert_in = {
+      loop = int:"0";
+      duration = fixp:"1.3639583587646484375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.3639583587646484375";
+        }
+      }
+    }
+    alert = {
+      loop = int:"1";
+      duration = fixp:"0.2666666507720947265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.2666666507720947265625";
+        }
+      }
+    }
+    alert_out = {
+      loop = int:"0";
+      duration = fixp:"1.3666665554046630859375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.3666665554046630859375";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.19999980926513671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.19999980926513671875";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"0";
+      duration = fixp:"0.3333332538604736328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.3333332538604736328125";
+        }
+      }
+    }
+  }
+}

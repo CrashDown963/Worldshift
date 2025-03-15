@@ -1,0 +1,84 @@
+Unit ErkhArulAlienShip {
+  name = "Alien ship"
+  descr = "DESCRIPION"
+  model = data/models/buildings/alienshipzul'thark/alienship.kfm
+  sel_ui = building
+  icon = 1,31
+  
+  physics {
+    default = data/models/buildings/alienshipzul'thark/alienship.pml
+    die = data/models/buildings/alienshipzul'thark/alienship.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/TrailSmoke/DestrSmoke02.nif
+    attach_destr_node_04 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_05 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_node_06 = data/models/Effects/Fire/Fire_Ani1.nif
+    attach_destr_perc = 100
+  }
+  destruction = ragdoll
+  explosion = ErkhArulAlienShipExplosion
+  
+  stats {
+    hp = 5000
+    armor = 55
+    sweep_damage = 50
+  }
+  
+  hp = stat:hp
+  hull = stat:hp
+  armor = stat:armor
+
+  CAutoDieController AutoDie {
+    active = 0
+    duration = 30
+  }
+  
+  CPeriodicEffectsController PeriodicDamage {
+    interval = 3
+    effect = E_damage {
+      area = 600 { 
+        anim = data/Models/Effects/Fire/FireSweep.kfm {
+          emit = 20,200,0
+        }
+        sound = DATA/sounds/Effects/FireSweep/
+        scale = 1.5
+      }
+      amount = stat:sweep_damage 
+      friendly_fire = 0
+    }
+  }
+  
+  ondeath = PrgCallMapLua { func = ShipDestroyed }
+}
+
+Unit ErkhArulAlienShipPlaceholder {
+  name = "Alien ship placeholder"
+  model = data/models/buildings/alienshipzul'thark/alienship.kfm
+  invulnerable = 1
+  hidden = 1
+}
+
+CDamageEffect ShipDestroyedEffect {
+  area = 800
+  amount = 300
+}
+
+CMultiEffect ShipHitsGroundEffect {
+  multi_area = 500 {
+    anim = Data/Models/Effects/Puffs&Dust/ShipLand_Dirt.nif
+  }
+  
+  effect = CDamageEffect
+  amount = 200
+  target = enemy
+}
+
+CMapAnim ErkhArulAlienShipExplosion {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_02.kfm
+  sound = DATA/sounds/Effects/ExplosionBig/
+  scale = 1.9
+  decals = explosion_crater2
+  physics_impact = 1000
+}

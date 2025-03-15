@@ -1,0 +1,26 @@
+flock01 {
+  birds_num = 5,12
+  birds = Bird01
+  offset = 1000, 1000, 300
+  --flags = fly, land, walk
+  flags = fly, land
+  altitude = 1000
+  
+  keep_distance_radius=200
+  steer_center_radius=500
+  match_heading_radius=500
+  live_time = 600
+}
+
+flock02 {
+  birds_num = 1,1
+  birds = MutantBird
+  offset = 1000, 1000, 300
+  flags = fly
+  altitude = 1000
+  
+  keep_distance_radius=200
+  steer_center_radius=500
+  match_heading_radius=500
+  live_time = 600
+}

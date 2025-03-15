@@ -1,0 +1,199 @@
+﻿style	text
+firm	Black Sea Studios
+whiteline	
+default	
+position	Direzione del progetto
+default	Vesselin Handjiev
+default	
+position	Assistente di direzione
+default	Tsvetan Tsvetanov
+default	
+position	Direzione tecnica
+default	Panayot Yanazov
+default	
+position	Art Director
+default	Vesselin Efremov
+default	
+position	Responsabile design
+default	Vesselin “Frujin” Handjiev
+default	
+position	Responsabile Programmazione
+default	Panayot Yanazov
+default	
+position	Responsabile Arte
+default	Vesselin Efremov
+default	
+position	Programmazione
+default	Alexander Alexandrov<nl>Mikhail Balabanov<nl>Michael Peykov<nl>Mihail Moskov<nl>Oleg Zlatarski<nl>Panayot Yanazov<nl>Sergey Georgiev<nl>Tsvetan Tsvetanov
+default	
+position	Arte
+default	Stoyan Stoyanov<nl>Alexander Botev<nl>Dilyan Tonchev<nl>Todor Kolev<nl>Georgi Murdzhev<nl>Stoyan “Toma” Mollov<nl>Cvetoslav Gergov<nl>Plamen “Paco” Tamnev<nl>Veronika Chorbadjieva<nl>Nikolay Loukianov<nl>Nikolai Georgiev<nl>Ina Simova<nl>Sergey Samuilov
+default	
+dark	e ancora
+default	
+default	Christo Christov<nl>Dimitar Rusev<nl>Nadia Petkova<nl>Rossen Manchev<nl>Kosta Atanasov<nl>Stoyan Seimenov<nl>Julian Panov
+default	
+position	Artista tecnico
+default	Stoyan “Toma” Mollov
+default	
+position	Audio design
+default	Vesselin Handjiev
+default	
+position	Effetti speciali
+default	Borislav Slavov<nl>Vesselin Handjiev
+default	
+position	Musica
+default	Borislav Slavov a.k.a. Glorian
+default	Victor Stoyanov
+default	
+position	Dialoghi
+default	Mikhail Balabanov
+default	
+position	Design del gioco
+default	Vesselin Handjiev<nl>Michael Peykov<nl>Alexander Alexandrov
+default	
+position	Sceneggiatura della campagna
+default	Mikhail Balabanov
+default	
+position	Design delle missioni cooperative
+default	Vesselin Handjiev<nl>Michael Peykov<nl>Veronika Chorbadjieva<nl>Sergey Georgiev
+default	
+position	Design dei livelli
+default	Veronika Chorbadjieva<nl>Veselin Handjiev
+default	
+position	Scripts delle mappe
+default	Michael Peykov<nl>Sergey Georgiev
+default	
+position	Responsabile della localizzazione
+default	Mikhail Balabanov
+default	
+position	Marketing e P.R.
+default	Ina Simova
+default	Julia Krasteva
+default	
+position	Responsabile d'ufficio
+default	Julia Krasteva
+default	
+firm	Keyfactor
+whiteline	
+default	
+position	Direttore P.R.
+default	Sabine Kaiser
+default	
+position	Responsabile P.R.
+default	Jens Friedrich
+default	
+position	Produttore esecutivo
+default	Frank Fay
+default	
+position	Produttore esecutivo
+default	Alexander Köhler
+default	
+position	Assistente di produzione
+default	Markus Michel
+default	
+position	Responsabile QA
+default	Alwin Mangundirjo
+default	
+position	Responsabile QA
+default	Kay Knecht
+default	
+position	Ingegneri QA
+default	Dorina Küster<nl>Patrick Galaske<nl>Stefan Grötzschel<nl>Pascal Skeib<nl>Florian Turbansich<nl>Erna Mangundirjo<nl>Maik Zimmer<nl>Patrick Urankar<nl>Johannes de Frênes
+default	
+position	Informazione aggiuntiva
+default	Benedikt Leurs
+default	
+firm	FX Interactive
+whiteline	
+default	
+position	Direttore Editoriale
+default	Pablo de la Nuez
+default	
+position	Responsabile Edizione
+default	Pablo Aranda
+default	
+position	Responsabile Software e Localizzazione
+default	Fernando Conde
+default	
+position	Adattamento testi e Manuale
+default	Federica Costa<nl>Carol Micó
+default	
+position	Testing
+default	Javier Gil<nl>Alejandro Bermúdez<nl>Francesco Menna
+default	
+position	Design programma d'installazione e Wannaplay
+default	Alberto Zuya
+default	
+position	Extra e contenuti Wannaplay
+default	David Saavedra
+default	
+position	Design e impostazione grafica del manuale
+default	Ismael Garduño
+default	
+position	Copertina
+default	Nacho Ruiz
+default	
+position	Doppiaggio
+firm	Jinglebell
+whiteline	
+default	
+position	Direzione del doppiaggio
+default	Giorgio Papetti
+default	
+position	Responsabile del progetto
+default	Alessandra Neve
+default	
+position	Tecnico di sala
+default	Chris Blake
+default	
+position	Voci
+default	Riccardo Rovatti<nl>Daniela Fava<nl>Gianni Gaude<nl>Dario Oppido<nl>Antonio Paiola<nl>Alessandro Messina<nl>Matteo Zanotti<nl>Claudio Moneta<nl>Luca Bottale<nl>Lorenzo Scattorin<nl>Benedetta Ponticelli<nl>Luca Sandri<nl>Monica Bonetto<nl>Marco Balzarotti
+default	
+position	Video e modelli originali della copertina
+firm	5th Degree
+whiteline	
+url	www.5th-degree.com
+default	
+position	LOD delle unità
+firm	Pilgrim Interactive
+whiteline	
+default	Ivelin G. Ivanov<nl>Georgi Georgiev<nl>Milovan Kolev<nl>Vasil Dikov<nl>Ana Ivanova
+default	
+position	Testing di compatibilità
+firm	PMTC Belgium
+whiteline	
+default	
+firm	NVIDIA
+whiteline	
+default	Reinhard Doepfer
+default	
+position	Sito Ufficiale
+firm	Byteberry Ltd.
+whiteline	
+url	www.byteberry.com
+default	
+default	Samples asiatici cortesia di Spectrasonics Heart of Asia 
+default	Samples africani cortesia di Spectrasonics Heart of Africa
+default	Samples di percussione di “Percussive Adventures” 1 & 2
+default	Samples di “Voices of Native America” cortesia di QUP Arts
+default	
+dark	Ringraziamenti speciali
+default	
+default	La comunità di Knights of Honor per il suo appoggio<nl>Le nostre mogli e fidanzate per la loro pazienza<nl>Chaos Group per il suo fantastico V-Ray renderer
+default	
+default	Frank Fay<nl>Ulf Neumann<nl>Gabriel Hacker<nl>Chandra Schanz<nl>Ivo Petrov<nl>Pavel Genevski
+default	
+default	InterBGCom
+whiteline	 
+default	
+default	
+default	
+default	
+default	Questo prodotto contiene tecnologia di software registrata da GameSpy Industries, Inc. © 1999-2008 GameSpy Industries, Inc. GameSpy e il disegno “Powered By GameSpy” sono marchi commerciali di GameSpy Industries, Inc. Tutti i diritti riservati.
+default	 
+default	Usa Bink Video. Copyright © 1991-2008 de RAD Game Tools, Inc.
+default	
+default	Usa AGEIA PhysX™ de AGEIA Technologies, Inc.
+default	
+default	Utilizza il motore Gamebryo™ di Emergent Game Technologies.

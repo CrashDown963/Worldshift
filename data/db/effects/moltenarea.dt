@@ -1,0 +1,15 @@
+--
+-- Molten spot
+--
+
+CMoltenSpot MoltenArea {
+  dps = 40
+  radius = 100
+  decal_id = sid: molten_spot_area
+  glow_min = 0.85
+  glow_max = 1
+  emittance_period = 4
+
+--  flame_model = data/models/effects/Fire/Fire_Ani1_Small.nif
+--  smoke_model = data/models/effects/smoke/smokesmall2.nif
+}

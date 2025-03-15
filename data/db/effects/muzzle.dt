@@ -1,0 +1,52 @@
+--
+-- muzzle flashes
+--
+
+muzzle_fx light_inf1 {
+	model = data/models/effects/MuzzleFlash/muzzle_flash.nif
+	frequency	= 10
+	active_fraction	= 40
+	active_variation	= 5
+	length_variation	= 20
+	width_variation	= 5
+	scale	= 1
+	instances = 64
+        emit = 255,255,255
+}
+
+muzzle_fx light_inf {
+	model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+	frequency	= 10
+	active_fraction	= 40
+	active_variation	= 5
+	length_variation	= 20
+	width_variation	= 5
+	scale	= 1
+	instances = 64
+        emit = 255,255,255
+}
+
+muzzle_fx light_inf_light {
+	model = data/models/effects/MuzzleFlash/muzzle_flash_light.nif
+	frequency	= 10
+	active_fraction	= 40
+	active_variation	= 5
+	length_variation	= 20
+	width_variation	= 5
+	scale	= 1
+	instances = 64
+        emit = 255,255,255
+}
+
+muzzle_fx nomad {
+	model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+	frequency	= 1
+        duration = 0.125
+	active_fraction	= 100	
+	active_variation	= 0
+	length_variation	= 20
+	width_variation	= 5
+	scale	= 1
+	instances = 64
+        emit = 255,255,255
+}

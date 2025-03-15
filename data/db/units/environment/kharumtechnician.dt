@@ -1,0 +1,102 @@
+Mob KharumTechnician : BaseMob {
+  name : Technician.name
+  descr : Technician.descr
+  icon = 4,25
+  model = data/models/units/Technician/technician.kfm
+  destruction = animation
+  race = humans
+
+  tags = unit, organic, lowrank
+  speed = 450
+  take_auras : { RestorationCoreAura }
+
+  armor = 0
+  hp = 100
+  range = 1100
+  damage = 25
+
+  impacts : LivingUnitImpacts
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+  
+  abilities {
+    Fix {
+      when   : abi.always
+      target = ally {
+        tags = bot
+        health_hp_taken = 100
+      }  
+      range = 3000
+
+      cast {
+        prepare {
+          duration = 0.2
+          anim = work_up_1
+        }
+        finish {
+          anim = work_up_1
+        }
+      }
+
+      projectile = beam {
+        start_point = pt_shoot_1
+        beam = NanoFixBeam -- { add relevant parameters for tune: scale, emittanc, etc }
+        duration = 0.60
+      }
+
+      effect = E_heal {
+        amount = 300
+        react = nanofix
+      }
+    }  
+  }
+
+  animation {
+    anim_set WORK = loop {
+      work_up_1 = 100, 2,4
+      mine_1 = 100, 1,2
+      work_down = 100, 2,4
+      mine_rare_1 = 10, 1,1
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+--    range_far = 500
+--    range_near = 100
+--    proximity_bonus = 3
+    fire_node = pt_shoot_1
+    --aim_node = pt_aim
+    fire_rate = 1.5
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 0.5
+		    E = 255,200,0
+ 	    }
+    }
+    spot_impact = 1000
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+  actions {}
+}
+
+Mob KharumBossTechnician : KharumTechnician {
+}

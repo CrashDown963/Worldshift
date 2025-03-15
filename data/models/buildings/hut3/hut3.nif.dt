@@ -1,0 +1,97 @@
+model = {
+  file = str:"data\models\buildings\hut3\hut3.nif";
+  animation = {
+    loop = fixp:"6.66666698455810546875";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"HUT3";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Plane01";
+    translation = xpoint3:"268.90283203125,-927.48468017578125,601.91693115234375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Plane02";
+    translation = xpoint3:"268.90283203125,-927.48468017578125,601.91693115234375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"SideSmoke_Top";
+    translation = xpoint3:"218.428497314453125,81.23593902587890625,583.904541015625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray01-Emitter";
+    translation = xpoint3:"218.6251373291015625,79.72345733642578125,519.46978759765625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"LightDummy";
+    translation = xpoint3:"370.558441162109375,-79.96783447265625,363.83111572265625";
+    rotation = {
+      0 = xpoint3:"0.707106769084930419921875,0.7044160366058349609375,0.0616284199059009552001953125";
+      1 = xpoint3:"-0.7071068286895751953125,0.7044160366058349609375,0.061628423631191253662109375";
+      2 = xpoint3:"0,-0.087155751883983612060546875,0.99619472026824951171875";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"HangingRope";
+      translation = xpoint3:"1.38885772228240966796875,-1.78216397762298583984375,-73.75849151611328125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"LightBBoard";
+      translation = xpoint3:"-1.450127124786376953125,-1.26173675060272216796875,-105.80799102783203125";
+      rotation = {
+        0 = xpoint3:"0.7071068286895751953125,0,0.707106769084930419921875";
+        1 = xpoint3:"0.707106769084930419921875,0,-0.7071068286895751953125";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

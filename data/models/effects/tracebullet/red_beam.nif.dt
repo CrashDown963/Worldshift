@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\effects\tracebullet\red_beam.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

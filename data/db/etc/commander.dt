@@ -1,0 +1,10 @@
+commander_experience {
+  -- advancing formula is 2000 + 1000 * (level - 1)
+  adv_base = 100
+  adv_per_level = 50
+  
+  -- experience points gained when...
+  
+  -- unit is killed within this radius
+  unit_radius = 5000  -- radius to check for
+}

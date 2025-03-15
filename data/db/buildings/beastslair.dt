@@ -1,0 +1,7 @@
+Building BeastsLair : BaseBuilding {
+  name = Beasts Lair
+  model = Data/Models/buildings/BeastsLair/BeastLair.nif
+  race = mutants
+  target_priority = 500
+  req_produce_range = 1
+}

@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\buildings\alienshipzul'thark\alienship.kfm";
+  animations = {
+    spawn = {
+      loop = int:"0";
+      duration = fixp:"0.599999964237213134765625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.5";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"0.599999964237213134765625";
+        }
+      }
+    }
+    idle_1 = {
+      loop = int:"1";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Building WallCorner : BaseBuilding {
+  model = Data/Models/buildings/WallCorner/WallCorner.nif
+  race = mutants
+  maxpoplimit = 5
+  indestructible = 1
+  target_priority = 0
+  stats :{
+    hp = 3000
+  }
+}

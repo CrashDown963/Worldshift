@@ -1,0 +1,12 @@
+Mob Ape : BaseAnimal {
+  name = "Ape"
+  icon = 1,7
+  model = data/models/lifeforms/Ape/ape.kfm
+  destruction = animation
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+      hit_2
+    }
+  }
+}

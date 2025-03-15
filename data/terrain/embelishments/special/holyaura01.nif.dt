@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\special\holyaura01.nif";
+  animation = {
+    loop = fixp:"3.333333492279052734375";
+    duration = fixp:"0.83333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

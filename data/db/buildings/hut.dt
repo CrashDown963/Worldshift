@@ -1,0 +1,8 @@
+Building Hut : BaseBuilding {
+  name = "Hut"
+  model = Data/Models/buildings/Hut/Hut.nif
+  race = mutants
+  maxpoplimit = 5
+  indestructible = 1
+  target_priority = 500
+}

@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\models\units\cargocopter\cargocopter.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"2.0000002384185791015625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.0000002384185791015625";
+        }
+      }
+    }
+    fly = {
+      loop = int:"1";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+  }
+}

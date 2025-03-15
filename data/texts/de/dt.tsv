@@ -1,0 +1,551 @@
+﻿sid	text:de
+	
+// UNITS //////////////////////////////////////////////////////////////////////	
+	
+Assassin.name	Assassine
+Assassin.descr	Eine Fernkampfeinheit, am stärksten bei maximaler Kampfentfernung. Seine Schüsse können die Panzerung des Ziels für einige Sekunden schwächen.
+AssaultBot.name	Sturmbot
+AssaultBot.descr	Gut gepanzerte mechanische Einheit. Feuert gelegentlich Raketen, die die Angriffseffektivität getroffener Feinde reduzieren. Kann Salven von Raketen über weite Entfernungen abfeuern.
+Commander.name	Lord Commander
+Commander.descr	Der Lord Commander ist stark gepanzert und erhält einen Kontaktbonus. Er kann sich selbst heilen und feindliche Angriffe auf sich ziehen.
+Constructor.name	Ingenieur
+Constructor.descr	Ein mechanischer Offizier, der Maschinen im Kampf reparieren kann. Sein regulärer Angriff kann mehrere Feinde treffen und sie betäuben.
+Crew.name	Techniker
+Crew.descr	Techniker reparieren automatisch Gebäude, wenn keine Feinde in der Nähe sind.
+EliteTrooper.name	Stoßtrupp-Soldat
+EliteTrooper.descr	Stoßtrupp-Soldaten gehören einer Eliteeinheit an, die als kurzzeitige Verstärkung eingesetzt wird. Sie können nicht direkt befehligt werden.
+Hellfire.name	Höllenfeuer
+Hellfire.descr	Langsame und starke mechanische Fernkampfeinheit mit dicker Panzerung und Schild. Kann einen gewaltigen Nahkampf-Flächenangriff durchführen.
+Judge.name	Vollstrecker
+Judge.descr	Ein starker Offizier, gut geeignet für den Kampf gegen Feinde, die Energie verbrauchen. Kann die Angriffe der Soldaten verstärken und ihnen Elitestatus verleihen.
+ProtonTurret.name	Protonen-Geschütz
+ProtonTurret.descr	Verteidigungsgeschütztürme, die einem Kontrollturm hinzugefügt werden können.
+RepairDrone.name	Reparaturdrohne
+Ripper.name	Schlitzer
+Ripper.descr	Eine schnelle, mechanische Nahkampfeinheit. Hat die Chance, den Feind beim Angriff zu betäuben.
+Surgeon.name	Chirurgin
+Surgeon.descr	Eine Spezialistin, die dazu ausgebildet ist, organische Einheiten im Kampf zu heilen. Sie ist im Allgemeinen eine schwache Kämpferin, aber sehr stark bei Angriffen aus nächster Nähe.
+Technician.name	Techniker
+Technician.descr	Nicht für den Kampf ausgebildete Einheiten, die sich um Geräte und Artefakte aller Art kümmern.
+Trooper.name	Soldat
+Trooper.descr	Relativ kostengünstig, mit Bonus auf kurzer Distanz. Wirft im Kampf gelegentlich Granaten. Kann zum Elitestatus befördert werden, um seine Chance auf schwere Treffer zu erhöhen.
+	
+AlienEgg.name	Ei
+AlienEgg.descr	Eine biomechanische Einheit, die von Portalen oder Brütern hervorgebracht wird. Eier dienen zur Verteidigung und setzen ihre Brut frei, wenn sie zerstört werden.
+Arbiter.name	Tyrann
+Arbiter.descr	Eine Fernkampfeinheit, am stärksten bei maximaler Kampfentfernung. Die Schüsse können mehrere Ziele auf einmal treffen. Kann Panik und chaotisches Fluchtverhalten unter den Feinden auslösen.
+Dominator.name	Unterdrücker
+Dominator.descr	Eine starke Einheit zur Massenkontrolle, die Feinde lähmt und ihnen Energie entzieht. Keine Panzerung kann die Angriffe schwächen.
+Harvester.name	Seelenernter
+Harvester.descr	Eine schwer gepanzerte Nahkampfeinheit, die organische Feinde in der Umgebung verlangsamt und sie betäuben kann. Kann sich zudem selbst heilen.
+Hatchling.name	Brut
+Hatchling.descr	Eine kleinere, schwächere Version des Trisat. Kann feindliche Angriffe auf sich ziehen.
+Manipulator.name	Manipulator
+Manipulator.descr	Ein Heiler, dessen regulärer Angriff getroffenen Feinden das Leben entzieht und es den Verbündeten in der Nähe zuführt. Kann einen heilenden Wirbel verursachen, der zufällig bestimmte Verbündete in der Nähe heilt.
+Master.name	Meister
+Master.descr	Eine starke Offensiv- und Heilereinheit. Kann Feinden Leben entziehen und es an Verbündete in der Nähe weitergeben. Verfügt zudem über einen starken Flächenangriff.
+Overseer.field_name	Feldaufseher
+Overseer.power_name	Energieaufseher
+field_name.name	Feldaufseher
+power_name.name	Energieaufseher
+Overseer.descr	Gute Offensiv-Einheit. Verfügt über eine Spezialform, die die Energie der Verbündeten in der Nähe auffüllen kann.
+Shifter.name	Wandler
+Shifter.descr	Der Angriff des Wandlers schwächt manchmal die Angriffe des Ziels oder entzieht ihm Energie. Der Schild des Wandlers hat die Chance, sich selbst auf einen Trisat oder Tritech in der Nähe zu klonen. Der Wandler kann Brut hervorbringen.
+Trisat.name	Trisat
+Trisat.descr	Eine reguläre Nahkampfeinheit, die Feinde in der Nähe verlangsamt. Steigert nach Verursachen einer bestimmten Schadensmenge zeitweise die eigene Effektivität.
+Tritech.name	Tritech
+Tritech.descr	Eine reguläre Fernkampfeinheit. Hat die Chance, sich selbst beim Angriff zu heilen.
+	
+AncientShade.name	Ewiger Schatten
+AncientShade.descr	Eine Unterweltkreatur, deren Angriffe die Panzerung der Feinde vollständig ignorieren.
+Brute.name	Untier
+Brute.descr	Eine gut gepanzerte Nahkampfeinheit, die feindliche Angriffe auf sich ziehen kann. Wird nach Versetzen eines tödlichen Schlags zeitweilig stärker.
+Guardian.name	Hüterin
+Guardian.descr	Eine starke Nahkampfeinheit. Kann Kopien von sich erstellen, die selbstständig kämpfen. Kann sich zudem in einen Spezialzustand versetzen, der Einheiten in der Umgebung einen Verteidigungsbonus verleiht.
+GuardianIllusion.name	Hüterinnen Illusion
+GuardianIllusion.descr	Kopie einer Hüterin.
+HighPriest.name	Hohepriester
+HighPriest.descr	Ein mächtiger und vielseitiger Magier. Kann organische Verbündete heilen und Feinde erstarren lassen. Verfügt über einen starken Spezial-Fernangriff.
+HowlingHorror.name	Horror
+HowlingHorror.descr	Langsame, mächtige Unterwelt-Nahkampfeinheit. Verfügt über eine spezielle Geisterform zur Selbstheilung.
+Shaman.name	Schamane
+Shaman.descr	Ein Heiler, dessen regulärer Angriff getroffenen Feinden Lebenskraft entzieht und sie auf Verbündete in der Nähe verteilt. Kann Verbündete in einem Bereich heilen und negative Effekte aufheben.
+Sorcerer.name	Zauberer
+Sorcerer.descr	Ein Spezialist im Umgang mit den Elementen Feuer und Eis. Sein regulärer Angriff verlangsamt den Feind. Kann Lavapfützen auf dem Boden erschaffen, die daraufstehende Einheiten verbrennen.
+StoneGhost.name	Steingeist
+StoneGhost.descr	Eine Unterweltkreatur, die Feinden Energie entziehen und sie an Verbündete in der Nähe weitergeben kann. Heilt zudem fortlaufend umstehende Verbündete aus der Unterwelt. Kann ein organisches Ziel infizieren, sodass es Seelenwürmer hervorbringt, wenn es stirbt.
+Warrior.name	Krieger
+Warrior.descr	Reguläre Fernkampfeinheit. Die Angriffe sind auf maximaler Distanz am stärksten.
+Worker.name	Arbeiter
+Worker.descr	Nicht für den Kampf ausgebildete Einheit für die Reparatur und das Errichten von Gebäuden.
+Worm.name	Seelenwurm
+Worm.descr	Eine durch den Zerfallszauber eines Steingeists hervorgerufene Unterweltkreatur.
+	
+// BUILDINGS //////////////////////////////////////////////////////////////////	
+	
+ControlTower.name	Kontrollturm
+ControlTower.descr	Der Kontrollturm dient als Xenolit-Extraktor und Festung und kann mit Verteidigungsgeschütztürmen und einem Bewegungsmelder aufgerüstet werden. Außerdem kann er zum Ausheben von Truppen eingesetzt werden.
+OreExtractor.name	Erz-Extraktor
+OreExtractor.descr	Der Erz-Extraktor baut Xenolit ab und dient als Verteidigungsanlage. Kann zu einem Kontrollturm aufgerüstet werden.
+	
+Temple.name	Tempel
+Temple.descr	Der Tempel macht die Energie des Xenolits nutzbar. Er greift zudem Feinde in der Nähe an und füllt die Energie und Trefferpunkte von Verbündeten in der Nähe auf. Dient auch zum Ausheben von Einheiten und Arbeitern.
+Shrine.name	Schrein
+Shrine.descr	Der Schrein macht die Energie des Xenolits nutzbar und heilt Verbündete in der Nähe. Dient auch zum Herbeirufen von Arbeitern. Der Schrein kann zu einem Tempel aufgerüstet werden.
+	
+Portal.name	Portal
+Portal.descr	Das Portal verbraucht Xenolit. Es bringt zudem Eier hervor und hat einen negativen Einfluss auf Feinde in der Umgebung. Das Portal dient zum Ausheben von Einheiten und zum Bau von Brütern in entfernten Bereichen.
+Breeder.name	Brüter
+Breeder.descr	Der Brüter verbraucht Xenolit und produziert Eier. Er dient zum Ausheben einfacher Einheiten (Trisats und Tritechs) und kann zu einem Portal aufgerüstet werden.
+	
+// RESOURCES AND OTHER OBJECTS ////////////////////////////////////////////////	
+	
+Artifact1.descr	Dies ist ein altes Artefakt. Sie können es mit Ihrem Anführer untersuchen.
+Artifact1.name	Artefakt
+Artifact2.descr	Dies ist ein altes Artefakt. Sie können es mit Ihrem Anführer untersuchen.
+Artifact2.name	Artefakt
+BehaviorWaypoint.name	NPC behavior waypoint
+MissionAreaCorner.name	Mission area corner
+PersonnelCarrier.name	Personenfrachter
+ReliefCell.name	Heilzelle
+Thunder.name	Tornado
+Vortex.name	Wirbel
+Xenolite.name	Xenolit
+XenoliteBarge.name	Xenolit-Frachter
+	
+// SPECIALIZATIONS ////////////////////////////////////////////////////////////	
+	
+I_A1A.name	Wahnsinn
+I_A1A.text	Nachdem sie aufgehört haben, Schaden zu verursachen, dauert die Erzürnung Ihrer Trisats weitere [stats.frenzy_duration] Sekunden an.
+I_A1H.name	Robustheit
+I_A1H.text	Ihre regulären Einheiten erhalten [stats.hp] zusätzliche Trefferpunkte.
+I_A1M.name	Donnerfokus
+I_A1M.text	Der Blitzschlag Ihres Hohepriesters verursacht einen zusätzlichen Schaden von [stats.lightning_damage].
+I_A2A.name	Überwältigen
+I_A2A.text	Ihre regulären Einheiten verursachen einen zusätzlichen direkten Schaden von [stats.damage].
+I_A2H.name	Übertakten
+I_A2H.text	Die automatische Reparatur Ihrer kybernetischen Einheiten wird um [stats.hp_gen] beschleunigt. Die Erholungszeit entfällt. Sie verursachen außerdem einen zusätzlichen direkten Schaden von [stats.damage].
+I_A2M.name	Erstarrungsbeherrschung
+I_A2M.text	Der Erstarrungszauber Ihres Hohepriesters hält [stats.freeze_duration] Sekunden länger an.
+I_B1A.name	Prophezeiung
+I_B1A.text	Ihr Meister regeneriert seine Energie um [stats.psi_gen] schneller.
+I_B1H.name	Ausweichen
+I_B1H.text	Ihre Schlitzer haben eine Chance von [stats.elusion]%, direkte Fernangriffe aus der Nahkampfreichweite vollständig zu ignorieren.
+I_B1M.name	Waffentraining
+I_B1M.text	Ihre Krieger haben eine zusätzliche Chance von [stats.crit_chance]%, bei schweren Angriffen doppelten Schaden zu verursachen.
+I_B2A.name	Feuerfokus
+I_B2A.text	Ihre Tritechs erhalten eine zusätzliche Chance von [stats.crit_chance]%, ihrem Ziel doppelten Schaden zuzufügen.
+I_B2H.name	Vernichtungsfeuer
+I_B2H.text	Alle Ihre Einheiten haben eine um [stats.crit_chance]% höhere Chance, mit direkten Angriffen doppelten (schweren) Schaden anzurichten.
+I_B2M.name	Energiebeherrschung
+I_B2M.text	Ihr Hohepriester und alle Ihre Ältesten regenerieren ihre Energie um [stats.psi_gen] schneller.
+I_B3A.name	Zellteilung
+I_B3A.text	Wird ein Tritech vernichtet, erhalten Sie eine Chance von [stats.bio_split_chance]%, dass aus seinem Körper eine Brut von 2 - 3 Jungen entsteht.
+I_B3H.name	Motivation
+I_B3H.text	Soldaten haben eine Chance von [stats.motivation]%, Elitestatus zu erhalten, wenn sie einen schweren Angriff auf ihr Ziel ausgeführt haben.
+I_B3M.name	Schattenbindung
+I_B3M.text	Alle Ihre Unterwelteinheiten (Ewiger Schatten, Horror, Steingeist und Seelenwurm) regenerieren ihre Trefferpunkte [stats.hp_gen] schneller und ohne Erholungszeit.
+I_C1A.name	Dämonenhunger
+I_C1A.text	Durch die Lebensraubaktion Ihres Meisters erhalten Sie eine zusätzliche Heilung von [stats.feed_add_heal] pro Zeiteinheit und betroffenem Ziel.
+I_C1H.name	Präzision
+I_C1H.text	Alle Ihre Soldaten verursachen zusätzlichen direkten Schaden von [stats.damage].
+I_C1M.name	Natürlicher Schutz
+I_C1M.text	Alle Ihre regulären Einheiten erhalten [stats.hp] zusätzliche Trefferpunkte.
+I_C2A.name	Unheil
+I_C2A.text	Der Seelenernter erhält bei jedem Schlag eine Chance von [stats.confuse_chance]%, sein Ziel zu belasten, und es so zu zwingen, seine Angriffe auf den Seelenernter zu konzentrieren.
+I_C2H.name	Nothilfe-Beherrschung
+I_C2H.text	Die Nothilfe der Chirurgin hat eine zusätzliche Chance von [stats.bandage_crit]%, den doppelten Schaden zu heilen.
+I_C2M.name	Heilungssegen
+I_C2M.text	Die „Aura des Segens“ Ihres Hohepriesters heilt zusätzliche [stats.holy_aura_heal] Trefferpunkte.
+I_D1A.name	Grenzheilung
+I_D1A.text	Alle Ihre Einheiten regenerieren Trefferpunkte [stats.hp_gen] schneller, ohne sich zu erholen.
+I_D1H.name	Grenzpanzerung
+I_D1H.text	Der Lord Commander erhält zusätzliche [stats.armor] Panzerungs- und Trefferpunkte.
+I_D1M.name	Naturfokus
+I_D1M.text	Ihre Schamanen erhalten eine zusätzliche Chance von [stats.drain_life_chance]%, den Feinden Leben zu entziehen, während sie angreifen. Außerdem heben sie mit jedem Lebensentzug auch einen positiven Effekt bei ihren Zielen auf.
+I_D2A.name	Panzerladung
+I_D2A.text	Ihr Meister und alle Ihre Wächter erhalten [stats.hp] zusätzliche Trefferpunkte.
+I_D2H.name	Spezialtraining
+I_D2H.text	Alle Ihre Offiziere erhalten [stats.hp] zusätzliche Trefferpunkte.
+I_D2M.name	Elementarfokus
+I_D2M.text	Ihr Hohepriester, Zauberer und Schamane verursachen mit ihren direkten Angriffen zusätzlichen Schaden von [stats.damage].
+I_D3A.name	Lebenskreislauf
+I_D3A.text	Stirbt ein Trisat in Sichtweite seines Meisters, erhält letzterer eine Chance von [stats.bio_cycle_chance]%, ihn in seiner Nähe mit 25% Trefferpunkten wiederzubeleben. Wiederbelebte Trisats verlieren alle positiven Effekte, die sie vorher hatten.
+I_D3H.name	Energieschub
+I_D3H.text	Ihr Lord Commander und alle Ihre Offiziere regenerieren Ihre Energie um [stats.psi_gen] schneller.
+I_D3M.name	Abrichtung
+I_D3M.text	Ihre Untiere erhalten [stats.hp] zusätzliche Trefferpunkte und eine zusätzliche Panzerung von [stats.armor]. Außerdem erhalten die Untiere nach jedem Angriff (statt nur nach tödlichen Schlägen) eine Chance von [stats.ignite_on_strike_chance] auf „Entflammung“.
+	
+// GLOBAL ACTIONS /////////////////////////////////////////////////////////////	
+	
+AirAssaultAction.name	Luftangriff
+AirAssaultAction.descr	Ruft Luftunterstützung aus der Heimatstadt. Für kurze Zeit bombardiert eine Flugstaffel die ganze Karte und konzentriert das Feuer auf feindliche Ziele. Also halten Sie Abstand von feindlichen Truppen und Gebäuden!
+EliteSquadAction.name	Stoßtrupp-Soldaten
+EliteSquadAction.descr	Ruft einen kleinen, speziell ausgebildeten Stoßtrupp, der zum angewiesenen Ort teleportiert wird. Die Stoßtrupp-Soldaten kämpfen auf Ihrer Seite, unterstehen aber nicht Ihrem Befehl. Befinden sich keine feindlichen Ziele in der Nähe, werden die überlebenden Stoßtrupp-Soldaten zurück in die Heimatstadt teleportiert.
+ProtonBlastAction.name	Protonenschlag
+ProtonBlastAction.descr	Veranlasst die Verteidigungsgeschütze der Heimatstadt, ein bestimmtes Gebiet zu beschießen. Das Protonenfeuer fügt allen Einheiten in großem Umkreis ernsthaften Schaden zu, allerdings auch Ihren eigenen!
+	
+	
+MindVisionAction.name	Vision
+MindVisionAction.descr	Lenkt die Naturenergien in ein bestimmtes Gebiet und macht es für X Sekunden sichtbar.
+ThunderAction.name	Unwetter
+ThunderAction.descr	Erschafft über einem bestimmten Gebiet einen Tornado, der Feinden mit Blitzschlägen Schaden zufügt.
+NaturesGraceAction.name	Segen der Natur
+NaturesGraceAction.descr	Befiehlt der Naturgewalt, sofort alle Schäden verbündeter Einheiten in einem bestimmten Gebiet zu heilen.
+	
+	
+HorrifyAction.name	Entsetzen
+HorrifyAction.descr	Versetzt alle feindlichen Einheiten in einem kleinen Gebiet in Panik, sodass sie wild um sich schießend weglaufen.
+MarkOfChaosAction.name	Zeichen des Chaos
+MarkOfChaosAction.descr	Kennzeichnet alle feindlichen Einheiten in einem großen Gebiet, fügt ihnen kontinuierlich geringen Schaden zu und macht sie für die Dauer des Effekts auf der Karte sichtbar.
+InfestAction.name	Befall
+InfestAction.descr	Ruft einen Brut-Befall der markierten Stelle hervor. Die Brut kämpft auf Ihrer Seite, untersteht aber nicht Ihrem Befehl. Befinden sich keine feindlichen Ziele in der Nähe, verschwindet die überlebende Brut.
+	
+// BUILDING ACTIONS ///////////////////////////////////////////////////////////	
+	
+BreederUpgrade.name	Portal
+BreederUpgrade.descr	Rüstet den Brüter zum Portal auf.
+CancelUnitProduce.name	Einheitenproduktion abbrechen
+DetectMotionAction.name	Bewegungsmelder
+DetectMotionAction.descr	Eine Aufrüstung, durch die der Kontrollturm alle bewegten Einheiten in einer bestimmten Reichweite erkennt.
+OreExtractorUpgrade.name	Kontrollturm
+OreExtractorUpgrade.descr	Rüstet den Erz-Extraktor zum Kontrollturm auf.
+PerimeterDefenseAction.name	Geschütztürme
+PerimeterDefenseAction.descr	Eine Aufrüstung, durch die der Kontrollturm drei Verteidigungsgeschütztürme erhält.
+PossessAction.name	Ergreifen
+PossessAction.descr	Infiziert ein ausgewähltes Xenolit-Vorkommen mit Konstruktionssporen. Wird hier in einer bestimmten Zeit nichts gebaut, entsteht automatisch ein Brüter.
+RallyPoint.name	Sammelpunkt festlegen
+ShiftingRayAction.name	Teleportation
+ShiftingRayAction.descr	Teleportiert alle verbündeten Einheiten in der Umgebung des Meisters zum angegebenen Ziel.
+ShrineUpgrade.name	Tempel
+ShrineUpgrade.descr	Rüstet den Schrein zum Tempel auf.
+SummonWorkersAction.name	Arbeiter rufen
+SummonWorkersAction.descr	Ruft mehrere Arbeiter herbei, die Gebäude reparieren können und Schreine in der Nähe von Xenolit-Vorkommen errichten.
+FireLashAction.name	Feuerpeitsche
+FireLashAction.descr	Eine Aufrüstung, die die Tempelverteidigung deutlich steigert.
+	
+// UNIT ACTIONS ///////////////////////////////////////////////////////////////	
+	
+Reinforce.name	Verstärkung rufen
+Reinforce.descr	
+RainOfFireAction.name	Feuerregen
+RainOfFireAction.descr	Zieht einige Meteoriten aus den noch jungen Erdgürteln auf die Erdoberfläche und verursacht verheerenden Schaden im Zielgebiet.
+ActionRelief.name	Heilzelle
+ActionRelief.descr	Die Chirurgin aktiviert eine besondere Heilzelle, die bei verbündeten Einheiten in ihrer Umgebung [stat:relief_healpersec] Trefferpunkte pro Sekunde heilt. Die Heilzelle bleibt [stat:relief_duration] Sekunden lang aktiv.
+Barrage.name	Bombardement
+Barrage.descr	Feuert eine kleine Salve von Ionenraketen aus großer Entfernung. Jede Rakete verursacht [stat:rocket_damage] Schaden in engem Umkreis.
+BreedAction.name	Befall
+BreedAction.descr	Der Wandler beschwört fünf Brut-Einheiten in das ausgewählte Gebiet. Sie greifen automatisch alle Feinde in ihrer Umgebung an.
+ConfuseAction.name	Verwirren
+ConfuseAction.descr	Ein taktisches Manöver, durch das alle Feinde in einem kleinen Bereich [stat:confuse_duration] Sekunden lang ihre Angriffe auf den Lord Commander konzentrieren, wobei dessen Panzerung gleichzeitig um [stat:confuse_armor_perc_buff]% verstärkt wird. Die Effektdauer wird verkürzt, wenn die betroffenen Feinde den Blickkontakt zum Lord Commander verlieren.
+CorruptionAction.name	Zerfall
+CorruptionAction.descr	Der Steingeist schädigt alle feindlichen Einheiten im ausgewählten Gebiet, wodurch sie [stat:corruption_duration] Sekunden lang [stat:corruption_damage] Schadenspunkte pro Zeiteinheit erleiden. Stirbt das Ziel währenddessen, entstehen einige Seelenwürmer, die das Gebiet beschützen und Feinde angreifen.
+DarkVortexAction.name	Höllenwirbel
+DarkVortexAction.descr	Erschafft einen Wirbel aus Unterweltenergie, der gelegentlich verbündete Einheiten in der Umgebung mit Unterweltlicht trifft und bei ihnen [stat:vortex_heal] Trefferpunkte heilt. Der Wirbel dauert [stat:vortex_duration] Sekunden an und verschwindet anschließend.
+DominatorDimensionChainAction.name	Dimensionssperre
+DominatorDimensionChainAction.descr	Alle Feinde im ausgewählten Gebiet sind [stat:dimension_chain_duration] Sekunden lang in einer Dimensionsstarre gefangen. Im Starrezustand sind Feinde betäubt, und erlittener Schaden jeglicher Art wird verdoppelt.
+DominatorPowerFuseAction.name	Energieentzug
+DominatorPowerFuseAction.descr	Alle feindlichen Einheiten in der Umgebung des Unterdrückers verlieren augenblicklich [stat:power_fuse_perc]% ihrer Energie.
+FateLinkAction.name	Schicksalsband
+FateLinkAction.descr	Der Ewige Schatten setzt sein Wissen ein, um [stat:fatelink_duration] Sekunden lang ein mächtiges Band mit einer verbündeten Einheit zu erschaffen. Jeglicher Schaden, den diese Einheit erleidet, wird aufgeteilt zwischen ihr und allen Ewigen Schatten, mit denen sie verbunden ist. Das Band wird zerstört, wenn der Ewige Schatten sich bewegt oder die verbündete Einheit sich aus seinem Blickfeld bewegt.
+FearShockAction.name	Furchtschock
+FearShockAction.descr	Flößt allen Feinden im ausgewählten Gebiet Angst ein, wodurch sie [stat:fear_shock_duration] Sekunden lang chaotisch fortlaufen.
+FeedAction.name	Lebensraub
+FeedAction.descr	Der Meister bündelt mächtiges Unterweltlicht, das [stat:feed_duration] Sekunden lang [feed_base_damage] Schaden pro Zeiteinheit verursacht. Es entzieht dem betroffenen Ziel gleichzeitig die gleiche Menge Leben und heilt damit verbündete Einheiten in der Umgebung des Meisters. Der Strahl wird beim Ziel aufgeteilt und springt auf weitere Ziele über. Die Effizienz der Heilung steigt mit jedem weiteren Ziel, der verursachte Schaden wird jedoch reduziert.
+FireSweep.name	Feuersbrunst
+FireSweep.descr	Verwüstet die Umgebung des Höllenfeuers und allen Zielen in seiner Nähe verursacht [stat:sweep_damage] Schaden. Achten Sie darauf, keine Verbündeten zu treffen!
+ManipulateAction.name	Manipulate
+ManipulateAction.descr	Removes all harmful effects from all friendly units in the selected area, increase their hitpoints by 25% and power by 15% for [stat:focus_duration] seconds.
+FortifyAction.name	Festigung
+FortifyAction.descr	Die Hüterin erschafft mit ihrer Energie eine Aura, welche die Panzerung aller verbündeter Einheiten in ihrer Umgebung um [stat:fortify_armor_add_perc]% und zusätzlich um [stat:fortify_armor] Punkte verbessert. Solange die Hüterin mit der Festigung beschäftigt ist, regeneriert sie ihre Energie nicht. Der Effekt hört auf zu wirken, sobald sie sich von ihrer Position entfernt. Dieser Effekt kann nicht vervielfacht werden.
+FreezeAction.name	Erstarrung
+FreezeAction.descr	Der Hohepriester setzt seine Energie ein, um einen Kältestrahl auf ein ausgewähltes Gebiet zu beschwören, wodurch seine Feinde [stat:freeze_duration] Sekunden lang erstarren.
+FrostWaveAction.name	Frostwelle
+FrostWaveAction.descr	Der Zauberer beschwört unmittelbar eine mächtige Frostwelle, die [stat:chill_duration] Sekunden lang alle betroffenen Einheiten um [stat:chill_perc]% verlangsamt.
+HolyShockAction.name	Vitalstoss
+HolyShockAction.descr	Der Hohepriester bündelt die Energien der Natur, um sie zur Regenerierung aller Trefferpunkte einer verbündeten Einheit zu verwenden.
+HowlAction.name	Schrei
+HowlAction.descr	Flößt allen Feinden in der Umgebung [stat:howl_fear_duration] Sekunden lang Angst ein und verwandelt sich für [stat:howl_duration] Sekunden in einen Geisterschatten. Der Geisterschatten heilt sich pro Zeiteinheit [stat:howl_hp_perc]% seiner Trefferpunkte und ignoriert [stat:howl_ignore_perc]% des gesamten erlittenen Schadens.
+IllusionAction.name	Illusion
+IllusionAction.descr	Die Hüterin erschafft mit ihrer Energie zwei Doppelgängerinnen. Die Illusionen bleiben [illusions_duration] Sekunden und verschwinden anschließend. Sie sind ebenso tödlich wie die Hüterin!
+IncinerateAction.name	Entzünden
+IncinerateAction.descr	Der Zauberer erhitzt im ausgewählten Gebiet den Boden und bringt ihn zum Schmelzen. Alle Einheiten, die auf den Lavapfützen stehen, erleiden pro Zeiteinheit [stat:incinerate_damage] Schaden. Der Effekt wirkt [stat:incinerate_duration] Sekunden.
+InjectAction.name	Injektion
+InjectAction.descr	Der Lord Commander injiziert sich selbst ein mächtiges Heilmittel, wodurch er in [stat:inject_duration] Sekunden [stat:inject_hp] Trefferpunkte regeneriert.
+LightningAction.name	Blitzschlag
+LightningAction.descr	Der Hohepriester bündelt seine Energie in einem tödlichen Blitz, der seinen Feinden [stat:lightning_damage] Schaden zufügt.
+MendAction.name	Versorgen
+MendAction.descr	Die Chirurgin setzt ihre Fähigkeiten und Geräte ein, um eine verbündete Einheit zu versorgen, und heilt über einen Zeitraum von [mend_duration] Sekunden insgesamt [stat:mend_heal] Trefferpunkte.
+MorphAction.name	Verwandlung
+MorphAction.descr	Verwandelt den Feldaufseher in einen Energieaufseher.
+MorphAction.descr_field	Verwandelt den Feldaufseher in einen Energieaufseher.
+MorphAction.descr_power	Verwandelt den Energieaufseher in einen Feldaufseher.
+NanofixAction.name	Nanoreparatur
+NanofixAction.descr	Der Ingenieur setzt eine Wolke energiegeladener, mikroskopisch kleiner Zellenbots frei, welche die ausgewählte verbündete Maschine umgehend repariert und ihr [stat:nano_fix_heal] Trefferpunkte regeneriert.
+NetherNovaAction.name	Höllennova
+NetherNovaAction.descr	Der Meister erzeugt mit Unterweltenergie eine Explosion, die allen Feinden in einem kleinen Gebiet [stat:nether_nova_damage] Schaden zufügt.
+ProtonShotAction.name	Protonengranate
+ProtonShotAction.descr	Der Vollstrecker feuert eine spezielle Protonengranate, die bei allen Feinden in einem kleinen Gebiet [stat:proton_shot_damage] Schaden verursacht und ihnen [proton_shot_power_burn] Energie entzieht, wodurch der Gesamtschaden etwas erhöht wird.
+PurifyAction.name	Reinigung
+PurifyAction.descr	Entfernt umgehend alle schädlichen Effekte von verbündeten Einheiten im ausgewählten Gebiet.
+RenewAction.name	Erneuerung
+RenewAction.descr	Der Schamane setzt seine Energie ein, um umgehend bei allen verbündeten Einheiten im ausgewählten Gebiet [stat:rejuvenation_amount] Trefferpunkte zu heilen.
+RepairDrones.name	Reparaturdrohnen
+RepairDrones.descr	Der Ingenieur aktiviert seine drei Reparaturdrohnen, die ihm folgen und beschädigte Einheiten in der Umgebung reparieren (ihn selbst eingeschlossen). Die Reparaturdrohnen bleiben [stat:repairdrones_time_to_live] Sekunden lang aktiv. Jede Drohne kann pro Zeiteinheit [stat:repairdrones_repair_per_tick] Trefferpunkte reparieren.
+VoiceofCommandAction.name	Sperrfeuer
+VoiceofCommandAction.descr	Beordert alle Soldaten und rangniederen Einheiten in ein kleines Gebiet. Ihre Angriffseffizienz wird [stat:voiceofcommand_duration] Sekunden um [stat:voiceofcommand_damage_perc]% verbessert.
+TeleportOfficerAction.name	Offizier teleportieren
+TrackAction.name	Verfolgung
+TrackAction.descr	Ein mächtiger Schuss, der dem Ziel des Assassinen eine Sonde implantiert. Das verfolgte Ziel erleidet [stat:poison_shot_duration] Sekunden lang pro Zeiteinheit [stat:poison_shot_damage] Punkte Schaden. Zudem ist es auf der Karte sichtbar.
+UnholyPowerAction.name	Finstere Macht
+UnholyPowerAction.descr	Der Steingeist entzieht der Unterwelt Energie und erfüllt alle verbündeten Einheiten in der Umgebung mit Energie. Der Effekt steigert die Gesamtenergie der betroffenen Einheit pro Sekunde um [stat:unholy_power_restore_perc]%. Der Effekt hält [stat:unholy_power_duration] Sekunden oder bis der Steingeist bewegt wird bzw. stirbt.
+VitalitySurgeAction.name	Lebensschub
+VitalitySurgeAction.descr	Regeneriert umgehend [stat:vitality_surge_gain]% der Trefferpunkte des Seelenernters.
+Worker.WorkerRepairAction.name	Gebäudereparatur
+	
+// BUILDING ABILITIES /////////////////////////////////////////////////////////	
+	
+ControlTower.abilities.LargeCrew.name	Reparaturgroßeinsatz
+ControlTower.abilities.LargeCrew.text	DESCRIPTION
+ControlTower.abilities.MotionScanner.name	Bewegungsmelder
+ControlTower.abilities.MotionScanner.text	Der Kontrollturm erkennt alle bewegten Einheiten in einem bestimmten Umkreis.
+OreExtractor.abilities.SmallCrew.name	Reparatureinsatz
+OreExtractor.abilities.SmallCrew.text	DESCRIPTION
+	
+Shrine.abilities.SpiritTapAbi.name	Geistesgabe
+Shrine.abilities.SpiritTapAbi.text	Alle [stat:spirit_sanctum_interval] Sekunden stellt der Schrein [stat:spirit_sanctum_hp_perc]% der Trefferpunkte aller lebenden verbündeten Einheiten in einem mittelgroßen Umkreis wieder her.
+Temple.abilities.DarkWindAbi.name	Dunkelwind
+Temple.abilities.DarkWindAbi.text	DESCRIPTION
+Temple.abilities.FireLashAbi.name	Feuerpeitsche
+Temple.abilities.FireLashAbi.text	Fire Lash description
+Temple.abilities.SpiritSanctumAbi.name	Geist-Heiligtum
+Temple.abilities.SpiritSanctumAbi.text	Alle [stat:spirit_sanctum_interval] Sekunden stellt der Tempel [stat:spirit_sanctum_hp_perc]% der Trefferpunkte und [stat:spirit_sanctum_power_perc]% der Energie aller lebenden verbündeten Einheiten in einem großen Umkreis wieder her.
+	
+Breeder.abilities.BreedEggs.name	Bruteier
+Breeder.abilities.BreedEggs.text	Der Brüter bringt Eier hervor, die der Verteidigung dienen.
+Portal.abilities.BreedEggs.name	Bruteier
+Portal.abilities.BreedEggs.text	Das Portal bringt Eier hervor, die der Verteidigung dienen. Es kann mehr Eier unterhalten als der Brüter.
+Portal.abilities.CorruptionField.name	Schadensfeld
+Portal.abilities.CorruptionField.text	Das Schadensfeld des Portals fügt Feinden in der Nähe [corruption_field_damage] Schadenspunkte pro Zeiteinheit zu.
+Portal.abilities.SuppressionField.name	Unterdrückungsfeld
+Portal.abilities.SuppressionField.text	Das Unterdrückungsfeld des Portals verlangsamt die Feinde in der Nähe um [suppression_field_slow_perc]%.
+	
+// ABILITIES //////////////////////////////////////////////////////////////////	
+	
+Ability_Rupture.name	Riss
+Ability_Rupture.text	Der Angriff des Schlitzers hat eine Chance von [stat:rupture_chance]%, das Ziel [stat:rupture_stun_duration] Sekunden lang zu betäuben.
+AlienEgg.abilities.ClammyAcid.name	Säureeruption
+AlienEgg.abilities.ClammyAcid.text	Die Eier schießen Säureladungen auf Feinde in der Nähe, wodurch deren Panzerungsschutz um [stat:clammy_acid_armor_perc]% reduziert wird. Der Effekt wirkt maximal fünffach.
+AlienEgg.abilities.Hatchlings.name	Brut
+AlienEgg.abilities.Hatchlings.text	Werden Eier zerstört, so wird die Brut darin wütend und greift automatisch Feinde in der Nähe an.
+AlienEgg.abilities.Sizzle.name	Energieschlag
+AlienEgg.abilities.Sizzle.text	Das Ei gibt von Zeit zu Zeit knisternde Energiestöße ab. Diese Entladungen verringern den Schaden, der von Feinden in der Nähe verursacht wird, um [sizzle_damage_reduction_perc]%.
+AncientShade.abilities.UnholyAttackAbi.name	Schreckensangriff
+AncientShade.abilities.UnholyAttackAbi.text	Der Schatten-Standardangriff durchdringt die Panzerung des Feindes vollständig.
+Assassin.abilities.Sharpshooter.name	Scharfschütze
+Assassin.abilities.Sharpshooter.text	Assassinen erreichen auf maximale Entfernung ihr Höchstmaß an Zerstörungskraft. Ihre Effektivität lässt aber nach, wenn ihr Ziel näher kommt. Suchen Sie im Kampf also einen passenden Platz für den Assassinen, und halten Sie ihn dem Nahkampf möglichst fern.
+AssaultBotAbilities.Rocket.name	Blendrakete
+AssaultBotAbilities.Rocket.text	Der Sturmbot hat bei jedem Angriff eine Chance von [stat:rocket_precision_chance]%, eine zusätzliche Blendrakete auf ein Ziel in der Nähe abzufeuern. Die Explosion der Rakete reduziert die Effektivität der getroffenen Feinde, sodass diese mit ihren Standardangriffen [stat:rocket_precision_damage_perc]% weniger Schaden anrichten. Der Effekt wirkt maximal fünffach.
+Brute.abilities.GrowlAbi.name	Knurren
+Brute.abilities.GrowlAbi.text	Das Untier hat bei jedem Angriff eine Chance von [stat:growl_chance]%, die Aufmerksamkeit seines Ziels auf sich zu ziehen. Das Ziel konzentriert seine Angriffe dann [stat:growl_duration] Sekunden lang auf das Untier.
+Brute.abilities.IgniteOnHitAbi.name	Entflammung
+Brute.abilities.IgniteOnHitAbi.text	Nach einem gelungenen Angriff hat das Untier eine Chance von [stat:ignite_on_strike_chance], in Raserei zu verfallen, sodass es [stat:ignite_duration] Sekunden lang in Flammen gehüllt ist. Das entflammte Untier fügt [ignite_targets] Zielen vor ihm [ignite_damage] Punkte zusätzlichen Schaden zu.
+Brute.abilities.IgniteOnKillAbi.name	Entflammung
+Brute.abilities.IgniteOnKillAbi.text	Nach einem tödlichen Angriff auf sein Ziel verfällt das Untier in Raserei, sodass es [stat:ignite_duration] Sekunden lang in Flammen gehüllt ist. Das entflammte Untier fügt [ignite_targets] Zielen vor ihm [ignite_damage] zusätzlichen Schaden zu.
+ChainShotAbi.name	Schusskette
+ChainShotAbi.text	Der Tyrann hat bei jedem Schuss eine Chance von [stat:chain_shot_chance]%, eine Kettenreaktion auszulösen, die mehreren zusätzlichen Feinden Schaden zufügt.
+ChargeAbi.name	Attacke
+ChargeAbi.text	Wenn sie sich einem Gegner näher, prescht die Hüterin die letzten Meter schnell nach vorne, wodurch sie sofort in Kampfreichweite gelangt.
+DeathRumbleAbi.name	Todesdonner
+DeathRumbleAbi.text	Der Schrecken hat eine Chance von [stat:death_rumble_chance]%, eine Schreckensnova herbeizubeschwören, die allen Feinden in der Nähe [stat:death_rumble_damage] Punkte Schaden zufügt.
+DischargeAbi.name	Entladung
+DischargeAbi.text	Der Angriff des Vollstreckers hat eine Chance von [stat:discharge_chance]%, seinem Ziel [stat:discharge_damage] Energiepunkte zu entziehen und diese in Schaden umzuwandeln.
+DominatorBlightRayAbi.name	Vernichtungsstrahl
+DominatorBlightRayAbi.text	Die Standardangriffe des Unterdrückers ignorieren die Panzerung der Feinde.
+DominatorStasisShotAbi.name	Starreschuss
+DominatorStasisShotAbi.text	Der Unterdrücker hat eine Chance von [stat:stasis_shot_chance]%, sein Ziel [stat:stasis_shot_duration] Sekunden lang zu betäuben und mit dem Schuss doppelten Schaden anzurichten.
+EnfeebleAbi.name	Schwächung
+EnfeebleAbi.text	Der Wandler hat bei jedem Angriff eine Chance von [stat:enfeeble_chance]%, alle feindlichen Einheiten, die sich in der Nähe seines Ziels befinden, [stat:enfeeble_duration] Sekunden lang zu schwächen. Der Schaden dieser Einheiten wird hierdurch um [stat:enfeeble_damage_reduction_perc]% reduziert. Der Effekt wirkt maximal fünffach.
+ExposeTargetAbi.name	Offenlegen
+ExposeTargetAbi.text	Der Assassine hat bei jedem Schuss eine Chance von [stat:expose_target_chance]%, die Panzerung des Ziels zu durchdringen, wodurch dessen Effektivität [stat:expose_target_armor_duration] Sekunden lang um [stat:expose_target_armor_perc]% gemindert wird. Der Effekt wirkt maximal fünffach.
+FeedbackAbi.name	Gegenwirkung
+FeedbackAbi.text	Der Tritech hat beim Schuss eine Chance von [stat:feedback_chance]%, sich selbst zu heilen (Heilung: [stat:feedback_heal] Trefferpunkte).
+Harvester.abilities.ImminenceAbi.name	Unheil
+Harvester.abilities.ImminenceAbi.text	Der Seelenernter hat bei jedem Angriff eine Chance von [stat:confuse_chance]%, die Aufmerksamkeit seines Ziels auf sich zu lenken, sodass das Ziel seine Angriffe 10 Sekunden lang auf den Seelenernter konzentriert.
+HarvesterHarvestAbi.name	Krallenhieb
+HarvesterHarvestAbi.text	Der Seelenernter hat bei jedem Angriff eine Chance von [stat:harvest_chance]%, einen Spezialangriff auszuführen, der alle Ziele um ihn herum trifft und betäubt.
+HarvesterParalyzingField.name	Lähmungsfeld
+HarvesterParalyzingField.text	Der Seelenernter verlangsamt die Bewegung aller lebenden Feinde in ihrer Nähe um [stat:paralyzing_field_speed_reduction_perc]%.
+Hatchling.abilities.ThreatenAbi.name	Bedrohung
+Hatchling.abilities.ThreatenAbi.text	Die Brut hat bei jedem Angriff eine Chance von [stat:threaten_chance]%, ihr Ziel zu bedrohen. Das bringt das Ziel dazu, seine Angriffe [stat:threaten_duration] Sekunden lang auf sie zu konzentrieren.
+HellfireAbilities.Shield.name	Kraftfeld
+HellfireAbilities.Shield.text	Ein mächtiger Schild, der automatisch aktiviert wird, wenn die Höllenfeuer-Einheit angegriffen wird. Das Kraftfeld hat einen Robustheitswert von [stat:shield_hull] Punkten, eine Ladungsrate von [stat:shield_regen], eine Komplettabwehrchance von [stat:shield_fullabsorbchance]% und eine Schadensabsorption von [stat:shield_percentabsorbtion]%.
+HollowVoiceAbi.name	Höllenstimme
+HollowVoiceAbi.text	Der Schrecken hat eine Chance von [stat:hollow_voice_chance]%, in seiner Unterweltstimme zu knurren, womit er allen Feinden vor ihm [stat:hollow_voice_damage] Punkte Schaden zufügt.
+HolyAuraAbi.name	Aura des Segens
+HolyAuraAbi.text	Der Hohepriester bündelt die Kraft der Natur bei sich, wodurch alle verbündeten Einheiten alle [stat:holy_aura_tick] Sekunden [stat:holy_aura_heal] Trefferpunkte zurückerhalten.
+LeadershipAbi.name	Befehlshaber
+LeadershipAbi.text	Durch Angriffe auf Feinde und genaue Beobachtung des Kampfes erhält der Vollstrecker Ladungen, die er automatisch dafür einsetzt, Soldaten in der Nähe zum Elitestatus zu befördern. Elitesoldaten haben eine erhöhte Chance, ihren Zielen doppelten Schaden zuzufügen.
+LeechAbi.name	Egel
+LeechAbi.text	Der Steingeist hat bei jedem Angriff eine Chance von [stat:drain_psi_chance]%, seinem Ziel bis zu [stat:drain_psi_amount] Energiepunkte zu stehlen und dieselbe Menge auf alle verbündeten Einheiten in der Nähe zu übertragen.
+LifeLeechAbi.name	Lebensegel
+LifeLeechAbi.text	Bei jedem Angriff entzieht der Manipulator seinem Ziel [stat:damage] Trefferpunkte und gibt sie an die Umgebung ab. So heilt er alle verbündeten Einheiten in der Nähe.
+LongRangeAbi.name	Fernkampf
+LongRangeAbi.text	Der Tyrann fügt großen Schaden zu, ist aber nur auf maximale Kampfentfernung effizient. Greift er aus der Nähe an, ist der Schaden deutlich geringer.
+NanofixAbi.name	Nanoreparatur
+NanofixAbi.text	Erzeugt eine Welle von Nanopartikeln, die eine Maschine sofort repariert (Wirkung: [stat:nano_fix_heal] Trefferpunkte).
+OverchargeAbi.name	Überladung
+OverchargeAbi.text	Mit einer Chance von [stat:overcharge_chance]% führt der Ingenieur statt seines normalen Angriffs einen Energieblitzschlag aus. Der Blitz fügt dem Ziel doppelten Schaden zu und erzeugt eine Energienova um das Ziel, die allen feindlichen Einheiten in einem kleinen Umkreis halben Schaden zufügt und diese [stat:overcharge_stun_duration] Sekunden lang betäubt.
+OverseerChargingFieldAbi.name	Ladungsfeld
+OverseerChargingFieldAbi.text	Der Energieaufseher verfügt über eine Aura, die alle [stat:charging_field_tick] Sekunden [stat:charging_field_psi_perc]% der Energie aller verbündeten Einheiten in der Nähe wiederherstellt.
+OverseerPlasmaShieldAbi.name	Plasmaschild
+OverseerPlasmaShieldAbi.text	Ein wirkungsvoller Schild, der automatisch aktiviert wird, wenn der Aufseher angegriffen wird. Der Plasmaschild verfügt über einen Robustheitswert von [stat:shield_hull] Punkten, eine Ladungsrate von [stat:shield_regen], eine Komplettabwehrchance von [stat:shield_fullabsorbchance]% und eine Schadensabsorption von [stat:shield_percentabsorbtion]%.
+PlasmaShieldAbi.name	Plasmaschild
+PlasmaShieldAbi.text	Ein wirkungsvoller Schild, der automatisch aktiviert wird, wenn der Meister angegriffen wird. Der Plasmaschild verfügt über einen Robustheitswert von [stat:shield_hull] Punkten, eine Ladungsrate von [stat:shield_regen], eine Komplettabwehrchance von [stat:shield_fullabsorbchance]% und eine Schadensabsorption von [stat:shield_percentabsorbtion]%.
+PowerLeakAbi.name	Energieleck
+PowerLeakAbi.text	Der Standardangriff des Wandlers hat eine Chance von [power_leak_chance]%, die Energie des Feindes um [power_leak_drain]% zu verringern.
+PyroblastAbi.name	Pyrowelle
+PyroblastAbi.text	Der Hohepriester hat bei jedem Angriff eine Chance von [stat:pyrowave_chance]%, eine gefährliche Feuerwelle zu erzeugen, die bis zu zwei zusätzlichen Zielen Schaden zufügt.
+RepairDronesAbi.name	Reparaturdrohnen
+RepairDronesAbi.text	Erzeugt Drohnen, die den Ingenieur und alle in der Nähe befindlichen verbündeten Maschinen repariert.
+Shaman.abilities.DrainLife.name	Lebensentzug
+Shaman.abilities.DrainLife.text	Mit einer Chance von [stat:drain_life_chance]% fügt der Schamane seinem aktuellen Ziel [stat:damage] Schadenspunkte zu und heilt [drain_life_heal] Trefferpunkte bei allen lebenden verbündeten Einheiten in einem kleinen Bereich um ihn herum.
+ShiftAbi.name	Teleportation
+ShiftAbi.text	Im Kampf kann die Hüterin ihre Energie verwenden, um sich durch ein Dimensionstor um ihr Ziel herum zu teleportieren. Die Teleportation verursacht doppelten Schaden und betäubt das Ziel für [stat:shift_stun_duration] Sekunden.
+Shifter.abilities.CloneShieldAbi.name	Klonschild
+Shifter.abilities.CloneShieldAbi.text	Der Schild wird aktiviert, wenn der Wandler angegriffen wird. Die Robustheit beträgt [stat:shield_hull], die Ladungsrate [stat:shield_regen],die Abwehrchance [stat:shield_fullabsorbchance]% und die Schadensabsorption von [stat:shield_percentabsorbtion]%. Wenn der Klonschild einen Angriff abwehrt, wird ein weiterer Schild geklont, der einen benachbarten Trisat oder Tritech beschützt.
+Sorcerer.abilities.ChillAbi.name	Langsamkeit
+Sorcerer.abilities.ChillAbi.text	Durch den Standardangriff des Zauberers wird sein Ziel für [stat:chill_duration] Sekunden um [stat:chill_perc]% verlangsamt.
+SurgeonAbilities.FirstAid.name	Nothilfe
+SurgeonAbilities.FirstAid.text	Die Chirurgin heilt automatisch verletzte Einheiten in mittlerer Umgebung, stellt [stat:bandage_amount] Trefferpunkte wieder her und entfernt einen Schadenseffekt. Klicken Sie mit der rechten Maustaste auf ein verbündetes Ziel, damit die Chirurgin ihm folgt und sich gezielt um seine Trefferpunkte kümmert.
+Trisat.abilities.FrenzyAbi.name	Erzürnung
+Trisat.abilities.FrenzyAbi.text	Der Trisat ist nach jedem Schaden von [stat:frenzy_threshold], den er anrichtet, erzürnt, was seine Panzerung um [stat:frenzy_armor] verstärkt und seinen Schaden um [stat:frenzy_damage]% erhöht. Die Verbesserung wirkt bis zu dreifach und klingt ab, wenn der Trisat [stat:frenzy_duration] Sekunden lang nichts trifft.
+Trisat.abilities.ParalyzingFieldAbi.name	Lähmungsfeld
+Trisat.abilities.ParalyzingFieldAbi.text	Der Trisat verlangsamt die Bewegungen aller lebenden Feinde in seiner Nähe um [stat:paralyzing_field_speed_reduction_perc]%.
+TrooperAbilities.Grenade.name	Handgranate
+TrooperAbilities.Grenade.text	Der Soldat hat bei jedem Angriff eine Chance von [stat:throw_grenade_chance]%, eine Sprenggranate auf sein Ziel zu werfen. Die Granate verursacht in einem kleinen Bereich [stat:grenade_damage] Schadenspunkte. Der Soldat verwendet diese Fähigkeit allerdings nicht, wenn die Gefahr besteht, dass er mit der Granate verbündete Einheiten verletzt.
+UnholyAuraAbi.name	Schreckensaura
+UnholyAuraAbi.text	Der Steingeist hält eine Verbindung zur Unterwelt aufrecht und heilt alle [stat:unholy_aura_interval] Sekunden alle Unterweltkreaturen in seiner Nähe (Steingeist, Ewiger Schatten, Horror, Seelenwurm; Heilung: [stat:unholy_aura_heal] Trefferpunkte).
+Warrior.abilities.SharpShooterAbi.name	Scharfschütze
+Warrior.abilities.SharpShooterAbi.text	Mit Schüssen aus maximaler Entfernung ist der Krieger sehr effektiv. Er verliert an Effektivität, wenn er in einen Nahkampf verwickelt wird.
+WhirlwindAbi.name	Wirbelsturm
+WhirlwindAbi.text	Im Kampf hat die Hüterin eine Chance von [stat:whirlwind_chance]%, eine Spezialbewegung auszuführen, die allen benachbarten Zielen Schaden zufügt.
+
+// BUFFS //////////////////////////////////////////////////////////////////////	
+
+AlienEgg.SizzleAura.effect.name	Energieschlag
+AlienEgg.SizzleAura.effect.text	Diese Einheit wird durch den Einfluss von Alieneiern in der Nähe geschwächt.
+AlienEgg.weapon.effect.name	Säureeruption
+AlienEgg.weapon.effect.text	Die Panzerung dieser Einheit wird durch eine Säureeruption geschwächt.
+AssaultBotAbilities.Rocket.effect.name	Schadensminderung
+AssaultBotAbilities.Rocket.effect.text	Die Effektivität der Einheit wurde durch eine Blendrakete geschwächt.
+BigOne.abilities.VenomousBiteAbi.effect.name	Gift
+BigOne.abilities.VenomousBiteAbi.effect.text	Diese Einheit nimmt Giftschaden.
+BigOne.abilities.VenomShowerAbi.effect.name	Gift
+BigOne.abilities.VenomShowerAbi.effect.text	Diese Einheit nimmt Giftschaden.
+BigOne.ParalyzingFieldAura.effect.name	Verlangsamungsgift
+BigOne.ParalyzingFieldAura.effect.text	Diese Einheit wird durch lähmendes Gift verlangsamt.
+Brute.abilities.GrowlAbi.effect.name	Knurren
+Brute.abilities.GrowlAbi.effect.text	Diese Einheit wird von einem Untier bedroht und kann kein anderes Ziel angreifen.
+Brute.abilities.IgniteOnHitAbi.effect.name	Entflammung
+Brute.abilities.IgniteOnHitAbi.effect.text	Diese Einheit befindet sich in einem Spezialzustand, der ihre Effektivität steigert.
+Brute.abilities.IgniteOnKillAbi.effect.name	Entflammung
+Brute.abilities.IgniteOnKillAbi.effect.text	Diese Einheit befindet sich in einem Spezialzustand, der ihre Effektivität steigert.
+ChainShotAbi.effect.name	Schusskette
+ChainShotAbi.effect.text	Diese Einheit erleidet Schaden durch eine Schusskette.
+ChillSpell.effect.name	Langsamkeit
+ChillSpell.effect.text	Diese Einheit wird durch den Angriff eines Zauberers verlangsamt.
+ConfuseAction.spell.effect.effect.name	Verwirrung
+ConfuseAction.spell.effect.effect.text	Die Panzerung des Lord Commanders wird bei einem Verwirrungsmanöver verstärkt.
+CorruptionAction.spell.effect.name	Zerfall
+CorruptionAction.spell.effect.text	Diese Einheit erleidet Giftschaden durch einen Zerfallszauber.
+DarkWind.FireLashHit.IncinerateAura.effect.name	Verbrennung
+DarkWind.FireLashHit.IncinerateAura.effect.text	Diese Einheit erleidet Feuerschaden durch ein Wärmefeld, das durch einen Blitzschlag von einem feindlichen Tempel in der Nähe erzeugt wurde.
+DominatorDimensionChainAction.spell.effect.effect.name	Dimensionssperre
+DominatorDimensionChainAction.spell.effect.effect.text	Diese Einheit ist in einer Dimensionssperre gefangen und kann sich nicht bewegen.
+EnfeebleAbi.effect.name	Schwächung
+EnfeebleAbi.effect.text	Diese Einheit wird durch einen Wandler-Angriff geschwächt.
+ExposeTargetAbi.effect.name	Offenlegung
+ExposeTargetAbi.effect.text	Die Panzerung dieser Einheit wurde durch den Schuss eines Assassinen geschwächt.
+FeedAction.spell.effect.caster_effect_on_start.name Lebensraub
+FeedAction.spell.effect.caster_effect_on_start.text	Diese Einheit wird durch eine Lebensraubaktion geheilt.
+FeedAction.spell.effect.name	Lebensraub
+FeedAction.spell.effect.text	Diese Einheit erleidet Schaden durch eine Lebensraubaktion.
+FrostWaveAction.spell.effect.name	Langsamkeit
+FrostWaveAction.spell.effect.text	Diese Einheit wird durch den Angriff eines Zauberers verlangsamt.
+Guardian.FortifyAura.effect.name	Festigung
+Guardian.FortifyAura.effect.text	Die Panzerung dieser Einheit wird durch die Festigungsaura einer Hüterin in der Nähe gestärkt.
+Harvester.abilities.ImminenceAbi.effect.name	Unheil
+Harvester.abilities.ImminenceAbi.effect.text	Diese Einheit wird von einem Seelenernter bedroht und kann keinen anderen Feind angreifen.
+Harvester.ParalyzingFieldAura.effect.name	Lähmungsfeld
+Harvester.ParalyzingFieldAura.effect.text	Diese Einheit wird durch ein Lähmungsfeld verlangsamt.
+Hatchling.abilities.ThreatenAbi.effect.name	Bedrohung
+Hatchling.abilities.ThreatenAbi.effect.text	Diese Einheit wird von einer Brut bedroht und kann keinen anderen Feind angreifen.
+HowlArmor.name	Schreipanzerung
+HowlArmor.text	Diese Einheit befindet sich in einem Spezialzustand, der ihre Panzerung verstärkt.
+HowlFear.name	Schrei Angst
+HowlFear.text	Diese Einheit ist von Angst erfüllt und kann keine Befehle ausführen.
+HowlHeal.name	Schreiheilung
+HowlHeal.text	Diese Einheit befindet sich in einem Spezialzustand, der ihre Gesundheitsregeneration beschleunigt.
+IncinerateSpot.IncinerateAura.effect.name	Verbrennung
+IncinerateSpot.IncinerateAura.effect.text	Diese Einheit erleidet Schaden durch einen Verbrennungszauber.
+InjectAction.effect.name	Injektion
+InjectAction.effect.text	Der Lord Commander regeneriert seine Gesundheit durch den Einfluss injizierter Medikamente.
+JurranAssassin.weapon.alt_projectile.effect.name	Gift
+JurranAssassin.weapon.alt_projectile.effect.text	Diese Einheit nimmt Giftschaden.
+M33Breeder.CorruptionFieldAura.effect.name	Schadensfeld
+M33Breeder.CorruptionFieldAura.effect.text	Diese Einheit wird durch ein Schadensfeld vergiftet.
+M33Breeder.SuppressionFieldAura.effect.name	Unterdrückungsfeld
+M33Breeder.SuppressionFieldAura.effect.text	Diese Einheit wird durch ein Unterdrückungsfeld verlangsamt.
+MarkOfChaosAction.effect.name	Chaoszeichen
+MarkOfChaosAction.effect.text	Diese Einheit nimmt Schaden durch das Chaoszeichen.
+MutantsThunder.ThunderSlowAura.effect.name	Unwetterverlangsamung
+MutantsThunder.ThunderSlowAura.effect.text	Diese Einheit wird durch ein Unwetter verlangsamt.
+Overseer.ChargingFieldAura.effect.name	Ladungsfeld
+Overseer.ChargingFieldAura.effect.text	Die Energie dieser Einheit wird durch ein Ladungsfeld erneuert.
+Portal.CorruptionFieldAura.effect.name	Schadensfeld
+Portal.CorruptionFieldAura.effect.text	Diese Einheit wird durch ein Schadensfeld vergiftet.
+Portal.SuppressionFieldAura.effect.name	Unterdrückungsfeld
+Portal.SuppressionFieldAura.effect.text	Diese Einheit wird durch ein Unterdrückungsfeld verlangsamt.
+S_fear.name	Angst
+S_fear.text	Diese Einheit ist von Angst erfüllt und kann keine Befehle ausführen.
+S_freeze.name	Erstarrung
+S_freeze.text	Diese Einheit ist erstarrt und kann zurzeit nichts machen.
+S_madden.name	Raserei
+S_madden.text	Diese Einheit ist panisch und kann Freund und Feind nicht unterscheiden.
+S_stun.name	Betäubung
+S_stun.text	Diese Einheit ist betäubt und kann zurzeit nichts machen.
+SalingAssassin.weapon.alt_projectile.effect.name	Gift
+SalingAssassin.weapon.alt_projectile.effect.text	Diese Einheit nimmt Giftschaden.
+Shrine.SpiritTrapAura.effect.name	Geistesgabe
+Shrine.SpiritTrapAura.effect.text	Die Trefferpunkte dieser Einheit werden durch die Aura der Geistesgabe eines nahegelegenen Tempels regeneriert.
+SpittingScorpion.abilities.VenomousBiteAbi.effect.name	Gift
+SpittingScorpion.abilities.VenomousBiteAbi.effect.text	Diese Einheit nimmt Giftschaden.
+StoneGhost.UnholyPowerAura.effect.name	Schreckensenergie
+StoneGhost.UnholyPowerAura.effect.text	Die Energie dieser Einheit wird durch einen Steingeist in der Nähe erneuert.
+VoiceofCommandAction.effect.name	Sperrfeuer
+VoiceofCommandAction.effect.text	Die Effizienz der Angriffe dieser Einheit wurde durch einen Vollstrecker in der Nähe verbessert.
+Temple.SpiritSanctumAura.effect.name	Geist-Heiligtum
+Temple.SpiritSanctumAura.effect.text	Die Trefferpunkte und die Energie dieser Einheit werden durch die Aura des Geist-Heiligtums eines nahegelegenen Tempels erneuert.
+TrackAction.spell.effect.name	Gift
+TrackAction.spell.effect.text	Diese Einheit nimmt Giftschaden.
+Trisat.frenzy.effect.name	Erzürnung
+Trisat.frenzy.effect.text	Diese Einheit ist erzürnt. Ihre Panzerung ist stärker, und ihre Schadenspunkte sind erhöht.
+Trisat.ParalyzingFieldAura.effect.name	Lähmungsfeld
+Trisat.ParalyzingFieldAura.effect.text	Diese Einheit wird durch ein Trisat-Lähmungsfeld verlangsamt.
+VarunAssassin.weapon.alt_projectile.effect.name	Gift
+VarunAssassin.weapon.alt_projectile.effect.text	Diese Einheit nimmt Giftschaden.
+Vasilii.weapon.projectile.effect.effect.name	Gift
+Vasilii.weapon.projectile.effect.effect.text	Diese Einheit nimmt Giftschaden.
+VenomousScorpion.abilities.VenomousBiteAbi.effect.name	Gift
+VenomousScorpion.abilities.VenomousBiteAbi.effect.text	Diese Einheit nimmt Giftschaden.
+VenomousScorpion.ParalyzingFieldAura.effect.name	Verlangsamungsgift
+VenomousScorpion.ParalyzingFieldAura.effect.text	Diese Einheit wird durch lähmendes Gift verlangsamt.
+E_PlaguedCorrosion.name	Plagebefall
+E_PlaguedCorrosion.text	Diese Einheit erhält weniger Trefferpunkte, wenn sie geheilt wird.
+LavaTrap.IncinerateAura.effect.name	Verbrennung
+LavaTrap.IncinerateAura.effect.text	Diese Einheit nimmt Schaden durch eine Lavapfütze.
+QueenProtector.abilities.Taunt.effect.effect.name	Verwirrung
+QueenProtector.abilities.Taunt.effect.effect.text	Diese Einheit wird durch einen Königinnen-Beschützer bedroht und kann keinen anderen Feind angreifen.
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.name	Gift
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.text	Diese Einheit nimmt Giftschaden.

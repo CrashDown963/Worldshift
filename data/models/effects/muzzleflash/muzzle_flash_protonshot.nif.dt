@@ -1,0 +1,57 @@
+model = {
+  file = str:"data\models\effects\muzzleflash\muzzle_flash_protonshot.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0.3333333432674407958984375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Plane02";
+      translation = xpoint3:"0.69428253173828125,6.41609954833984375,0";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Plane01";
+      translation = xpoint3:"0.69428253173828125,6.41609954833984375,0";
+      rotation = {
+        0 = xpoint3:"0,0.7071068286895751953125,-0.707106769084930419921875";
+        1 = xpoint3:"-1,0,0";
+        2 = xpoint3:"0,0.707106769084930419921875,0.7071068286895751953125";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Plane03";
+      translation = xpoint3:"0.69428253173828125,-17.9316539764404296875,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"GlowPlane";
+      translation = xpoint3:"0.69428253173828125,-54.77471160888671875,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,-1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+  }
+}

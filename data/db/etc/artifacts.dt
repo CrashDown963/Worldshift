@@ -1,0 +1,46 @@
+artifact Artifact1 {
+  create_fow_proxy = 1
+  model = data/models/artifacts/artifact1/Artefact.kfm
+  emit = 0,137,255
+  sel_ui = artifact
+  hide_in_fog = 1
+  name = "Atifact 1"
+  descr = "Artifact 1 description text"
+  icon = 1,5
+}
+
+artifact Artifact2 {
+  create_fow_proxy = 1
+  model = data/models/artifacts/artifact1/Artefact.kfm
+  scale = 0.7
+  emit = 100,10,0
+  sel_ui = artifact
+  hide_in_fog = 1
+  name = "Atifact 2"
+  descr = "Artifact 2 description text"
+  icon = 1,5
+}
+
+artifact Artifact3 {
+  create_fow_proxy = 1
+  model = data/models/artifacts/artifact1/Artefact.kfm
+  emit = 255,128,0
+  sel_ui = artifact
+  hide_in_fog = 1
+  name = "Atifact 3"
+  descr = "Artifact 3 description text"
+  icon = 1,5
+}
+
+artifact CommonDungeonArtefact {
+  create_fow_proxy = 1
+  drop_list = 
+  model = data/models/artifacts/artifact1/Artefact.kfm
+  scale = 0.7
+  emit = 100,10,0
+  sel_ui = artifact
+  hide_in_fog = 1
+  name : Artifact2.name
+  descr : Artifact2.descr
+  icon = 1,5
+}

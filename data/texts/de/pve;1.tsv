@@ -1,0 +1,31 @@
+sid	text:de
+	
+Bill.name	Bill der Raketenforscher
+BSAHowlingHorror.name	Reptil
+ArrowForward.name	Pfeil
+AlienShip.name	Tharkshs Schiff
+AlienShip.descr	Das ist Tharkshs Schiff.
+	
+// Corrupted Fields	
+CorruptedHighPriest.name	Korrumpierter Hohepriester
+CorruptedShade.name	Korrumpierter Schatten
+CorruptedShaman.name	Korrumpierter Schamane
+CorruptedGhost.name	Korrumpierter Geist
+CorruptedGhostMinion.name	Korrumpierter Geistscherge
+CorruptedShadeMinion.name	Korrumpierter Schattenscherge
+	
+// Ancient Corridors	
+AncientSmith.name	Alter Smith
+AncientSmithCloneEast.name	Alter Smith
+AncientSmithCloneWest.name	Alter Smith
+AncientSmithMinion.name	Alter Smith
+	
+// Renegades’ Hideout	
+ZulThark.name	Zul’Thark
+ErkhArul.name	Erkh Arul
+	
+// Bridges of Trial	
+LanZealot.name	Lan Zelot
+Berserker.name	Berserker
+TBMonster.name	Monster
+Kroggol.name	Kroggol

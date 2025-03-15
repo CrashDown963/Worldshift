@@ -1,0 +1,144 @@
+Unit Trisat : BaseUnit {
+  name = "Trisat"
+  descr = "DESCRIPTION"
+  race = aliens
+  tags = unit, organic, lowrank
+  icon = 3,3
+
+  physics {
+    default = Data/Models/Units/Trisat/Trisat_Proxy.pml
+    die = Data/Models/Units/Trisat/Bug_die.pml
+  }
+  
+  destruction = ragdoll
+  
+  sounds {
+    select = data/sounds/units/alien bugs/select/
+    confirm = data/sounds/units/alien bugs/confirm/
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  stats : {
+    hp = 240
+    armor = 2
+    range = 100
+    damage = 14
+        
+    shield_hull = 180
+    shield_regen  = 120
+    shield_fullabsorbchance = 25
+    shield_percentabsorbtion = 25
+
+    frenzy_threshold = 40
+    frenzy_duration = 10
+    frenzy_damage = 10
+    frenzy_armor = 2
+    
+    bio_cycle_chance = 0
+
+    paralyzing_field_range = 250
+    paralyzing_field_speed_reduction_perc = 20
+  }
+  speed = 450
+  
+  sight = stat:range + 1000
+  aggro_range = var:sight
+
+  model = data/models/units/Trisat/Trisat.kfm {
+  die = data/models/units/Trisat/BugDie.nif
+  }
+  
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+  
+  CFrenzyController frenzy {
+    threshold = stat:frenzy_threshold
+    reset_time = stat:frenzy_duration
+    max_applications = 3
+    tex_frenzy = data/models/units/trisat/trisat-frenzy-diffuse.dds
+    tex_normal = data/models/units/trisat/trisat-diffuse.dds
+    effect = E_buff {
+      id = Frenzy
+      name = "Frenzy"
+      text = "This unit is frenzied. Its armor and damage points are increased."
+      icon = 3,14
+      type = frenzy
+      duration = -1 --stat:frenzy_duration
+      stack_count = 3
+      stats_change {
+        damage = { perc = stat:frenzy_damage }
+        armor = { abs = 2 }
+      }
+      react = stun
+      repeat_react = 1
+    }
+  }
+  
+  CEffectAura TrisatParalyzingFieldAura {
+    range = stat:paralyzing_field_range
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = TrisatParalyzingField
+      name = "Paralyzing Field"
+      text = "This unit is slowed down by a Trisat’s Paralazyng Field."
+      icon = 3,15
+      type = slow
+      stats_change {
+        speed_mod = { perc = stat:paralyzing_field_speed_reduction_perc * -1 }
+      }
+      tick = 1
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = paralyze
+      stack_count = 1
+      exclude_self = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+
+  actions : BaseUnit.actions {
+    MakeBreeder -- fake
+  }
+
+  abilities {
+    FrenzyAbi {
+      name = "Frenzy"
+      text = "Trisat gets frenzy after every [stat:frenzy_threshold] damage he inflicts, increasing his armor with [stat:frenzy_armor] and damage done by [stat:frenzy_damage]%. The buff stacks up to 3 times and fades away if the Trisat doesn't chew anything for [stat:frenzy_duration] seconds."
+      icon = 1,0
+    }  
+    ParalyzingFieldAbi {
+      name = "Paralyzing Field"
+      text = "Trisat slows down the movement of all living enemies close to him by [stat:paralyzing_field_speed_reduction_perc]%."
+      icon = 5,0
+    }
+  }    
+
+  take_auras : { RestorationCoreAura }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = shoot
+    idle_time = 0.4
+    shoot_idle_1 = shoot_idle
+    shoot_snd = data/sounds/effects/melee little pierce/
+    fire_node = ROOT
+    spot_impact_type = melee
+  }
+  cost : pvp.aliens.unit_costs.Trisat
+  cost_sloc : pvp.aliens.sloc_costs.Trisat
+}

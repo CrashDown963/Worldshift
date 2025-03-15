@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\lifeforms\spidernest\spidernest.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    spit = {
+      loop = int:"0";
+      duration = fixp:"1.1666667461395263671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.6666667461395263671875";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.1666667461395263671875";
+        }
+      }
+    }
+  }
+}

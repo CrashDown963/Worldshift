@@ -1,0 +1,7 @@
+CMapAnim NetherNova {
+  model = data/Models/Effects/Magic/NetherNova.nif
+//  sound = DATA/sounds/Effects/ExplosionBig/
+  scale = 1
+//  decals = explosion_crater2
+  physics_impact = 5000
+}

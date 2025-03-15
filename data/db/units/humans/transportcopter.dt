@@ -1,0 +1,16 @@
+Transporter TransportCopter : BaseUnit {
+  speed = 1000
+  model = data/Models/units/TransportCopter/TransportCopter.kfm
+  race = humans
+  tags = unit, bot
+  movement_type = hover
+   sounds {
+	start = data/sounds/units/copter/
+  }
+ 
+  COrientationController orientation {
+    rot_speed = 45
+    max_tilt = 0
+  }  
+  
+}

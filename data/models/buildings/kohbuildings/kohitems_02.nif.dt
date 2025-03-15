@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\buildings\kohbuildings\kohitems_02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object03";
+    translation = xpoint3:"3.6253204345703125,6.887786865234375,25.7718048095703125";
+    rotation = {
+      0 = xpoint3:"-0.50000011920928955078125,0.86602532863616943359375,0";
+      1 = xpoint3:"-0.86602532863616943359375,-0.50000011920928955078125,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"__NDL_MultiMtl_Node";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

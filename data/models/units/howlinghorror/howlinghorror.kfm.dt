@@ -1,0 +1,152 @@
+model = {
+  file = str:"data\models\units\howlinghorror\howlinghorror.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"2.8666667938232421875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.8666667938232421875";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"1.33333301544189453125";
+      movement = {
+        start = xpoint3:"0,-0.080715179443359375,0";
+        velocity = xpoint3:"0,-333.919284820556640625,0";
+        time = fixp:"1.33333301544189453125";
+        distance = fixp:"333.919281005859375";
+        speed = fixp:"250.43952054134570062160491943359375";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot01_down";
+          time = fixp:"0.30000019073486328125";
+        }
+        #2 = {
+          name = str:"snd:footstep";
+          time = fixp:"0.30000972747802734375";
+        }
+        #3 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.96666622161865234375";
+        }
+        #4 = {
+          name = str:"snd:footstep";
+          time = fixp:"0.96667575836181640625";
+        }
+        #5 = {
+          name = str:"end";
+          time = fixp:"1.33333301544189453125";
+        }
+      }
+    }
+    Hit_1 = {
+      loop = int:"0";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.83333301544189453125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    Hit_2 = {
+      loop = int:"0";
+      duration = fixp:"1.46666622161865234375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.76666736602783203125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.46666622161865234375";
+        }
+      }
+    }
+    Hit_3 = {
+      loop = int:"0";
+      duration = fixp:"2.266666412353515625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.6000003814697265625";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.266666412353515625";
+        }
+      }
+    }
+    flex = {
+      loop = int:"0";
+      duration = fixp:"1.3999996185302734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.3999996185302734375";
+        }
+      }
+    }
+    flex_idle = {
+      loop = int:"1";
+      duration = fixp:"2.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.5";
+        }
+      }
+    }
+  }
+}

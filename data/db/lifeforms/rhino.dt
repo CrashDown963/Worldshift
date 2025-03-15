@@ -1,0 +1,13 @@
+Mob Rhino : BaseAnimal {
+  name = "Rhino"
+  icon = 2,14
+  model = data/models/lifeforms/Rhino/Rhino.kfm
+  destruction = animation
+
+  animation {
+    anim_set ATTACK = loop {
+      Hit_1
+      Hit_2
+    }
+  }
+}

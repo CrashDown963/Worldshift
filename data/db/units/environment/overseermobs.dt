@@ -1,0 +1,227 @@
+Mob FieldOverseerMob : BaseMob {
+  name : Overseer.field_name
+  descr : Overseer.descr
+  icon = 3,16
+  model = data/models/units/BladeOverseer/BladeOverseer.kfm
+  destruction = animation
+  race = aliens
+
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  stats : {
+    hp = 380
+    armor = 4
+    damage = 16
+    psi = 300
+    range = 1600
+    
+    field_fire_rate = 2.5
+    power_fire_rate = 1.5
+
+    plasma_shield_hull = 200
+    plasma_shield_regen = 120
+    plasma_shield_fullabsorbchance = 10
+    plasma_shield_percentabsorbtion = 25
+  }
+
+  hp = stat:hp
+  armor = stat:armor
+  damage = stat:damage
+  psi = stat:psi
+  range = stat:range
+  aggro_range = var:sight
+
+  take_auras : { RestorationCoreAura }
+
+  abilities {
+    OverseerPlasmaShieldAbi
+  }
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 80
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 80
+    }
+    shoot_left = 0 {
+      shoot_left_down = -45
+      shoot_left_up = 80
+    }
+    shoot_right = 0 {
+      shoot_right_down = -45
+      shoot_right_up = 80
+    }
+  }
+
+  CShieldController plasma_shield {
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:plasma_shield_hull
+    regen_per_minute = stat:plasma_shield_regen
+    projectile_destroy_probability = stat:plasma_shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:plasma_shield_percentabsorbtion
+    }
+  }
+
+  CMultiWeaponController field_weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = alternative
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_left
+    shoot_anim_2 = shoot_right
+    shoot_idle_1 = shoot_idle
+    shoot_idle_2 = shoot_idle
+    idle_time = 1
+    min_bursts = 2
+    max_bursts = 2
+    aim_node = pt_aim
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    fire_rate = stat:field_fire_rate
+    damage = stat:damage
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    instant_shot FOverseerShot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+      dist_start = 100
+      travel_start = 100
+      travel_end = 0
+      duration = 0.7
+      time_fraction_to_lag_end = 1
+      width = 35
+      instances = 128
+      color_alpha {
+        0 = 105,25,155,180
+        5 = 105,25,155,180
+        22 = 112,18,180,205
+        100 = 85,5,145,0
+      }
+    }
+	}
+}
+
+Mob PowerOverseerMob : BaseMob {
+  name = Power Overseer
+  icon = 4,18
+  model = Data/Models/Units/EnergyOverseer/EnergyOverseer.kfm
+  destruction = animation
+  race = aliens
+
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  stats : {
+    hp = 380
+    armor = 4
+    damage = 8
+    psi = 300
+    range = 1600
+    
+    field_fire_rate = 2.5
+    power_fire_rate = 1.5
+
+    charging_field_area = 800
+    charging_field_psi_perc = 10
+    charging_field_tick = 5
+  }
+
+  hp = stat:hp
+  armor = stat:armor
+  damage = stat:damage
+  psi = stat:psi
+  range = stat:range
+  aggro_range = var:sight
+
+  take_auras : { RestorationCoreAura }
+
+  abilities {
+    OverseerChargingFieldAbi
+  }
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 80
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 80
+    }
+    shoot_left = 0 {
+      shoot_left_down = -45
+      shoot_left_up = 80
+    }
+    shoot_right = 0 {
+      shoot_right_down = -45
+      shoot_right_up = 80
+    }
+  }
+
+  CEffectAura PowerOverseerMobChargingFieldAura {
+    range = stat:charging_field_area
+    faction = ally
+    exclude_self = 1
+    non_stackable = 1
+    effect = E_buff {
+      id = PowerOverseerMobChargingField
+      type = restore_psi
+      perc = stat:charging_field_psi_perc
+      tick = stat:charging_field_tick
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      repeat_react = 1
+      react = spread_psi
+      stack_count = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+
+  CMultiWeaponController power_weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = simultaneous
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    aim_node = pt_aim
+    shoot_anim = shoot
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    fire_rate = stat:power_fire_rate
+    damage = stat:damage
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+
+    instant_shot POverseerShot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+      dist_start = 100
+      travel_start = 100
+      travel_end = 0
+      duration = 0.7
+      time_fraction_to_lag_end = 1
+      width = 35
+      instances = 128
+      color_alpha {
+        0 = 255,128,0,180
+        5 = 255,128,0,180
+        22 = 0,255,0,205
+        100 = 0,128,0,0
+      }
+    }
+	}
+}

@@ -1,0 +1,87 @@
+Unit RenegadeHatchling : BaseUnit {
+  name = "Hatchling"
+  race = aliens
+  tags = unit, organic, lowrank
+  icon = 3,30
+  scale = 0.9
+
+  model = data/models/units/Trisat/Trisat.kfm {
+    die = data/models/units/Hatchling/Hatchling_die.nif
+  }
+  
+  skin {
+    base = data/models/units/Hatchling/Hatchling-diffuse.dds
+    mask = data/models/units/Hatchling/Hatchling-mask.dds
+    ignore_on_model = data/models/units/Hatchling/Hatchling_die.nif
+  }
+    
+  destruction = animation
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  stats : {
+    hp = 60
+    armor = 0
+    range = 100
+    damage = 40
+    
+    threaten_duration = 12
+    threaten_chance = 20
+  }
+
+  aggro_range = 3000
+  waypoint_radius = 500
+  
+  spawn_react = respawn_react
+
+  actions {
+  }
+  
+  abilities {
+    ThreatenAbi {
+      name = "Threaten"
+      text = "Hatchling has [stat:threaten_chance]% chance on each attack to threaten its target, forsing it to focus attacks on the Hatchling itself for [stat:threaten_duration] seconds."
+      icon = 13,0
+      when : abi.target_hit
+      chance = stat:threaten_chance
+      target = current
+      effect = S_confuse {
+        duration = stat:threaten_duration       -- for Y secs total
+        react = confusion_react
+        id = Threaten
+        name = "Threaten"
+        text = "This unit is threatened by a Hatchling and cannot attack anyone else."
+        icon = 2,8
+        type = confusion
+        program = PrgConfuse
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+      }
+    }  
+  }
+
+  take_auras : { RestorationCoreAura }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    idle_time = 0.5
+    damage = stat:damage
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact_type = melee
+  }
+  
+  CAutoDieController AutoDie {
+    --duration = 20
+    no_enemy_despawn_time = 15
+    show_progress = 0
+  }
+}

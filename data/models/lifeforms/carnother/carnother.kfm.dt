@@ -1,0 +1,125 @@
+model = {
+  file = str:"data\models\lifeforms\carnother\carnother.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_rare = {
+      loop = int:"1";
+      duration = fixp:"3.16666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.16666698455810546875";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"0.666666507720947265625";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-400,0";
+        time = fixp:"0.666666507720947265625";
+        distance = fixp:"400";
+        speed = fixp:"600.0001431442797183990478515625";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.666666507720947265625";
+        }
+      }
+    }
+    hit_1 = {
+      loop = int:"0";
+      duration = fixp:"1.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.033333301544189453125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"1.333333492279052734375";
+        }
+      }
+    }
+    hit_2 = {
+      loop = int:"0";
+      duration = fixp:"2.1666660308837890625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.06666660308837890625";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.1666660308837890625";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"0.83333301544189453125";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-200,0";
+        time = fixp:"0.83333301544189453125";
+        distance = fixp:"200";
+        speed = fixp:"240.0000915862619876861572265625";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.83333301544189453125";
+        }
+      }
+    }
+    die = {
+      loop = int:"0";
+      duration = fixp:"1.33333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.33333301544189453125";
+        }
+      }
+    }
+  }
+}

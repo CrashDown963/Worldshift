@@ -1,0 +1,79 @@
+CMapAnim ExplosionHuge_01 {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_01.kfm
+  sound = DATA/sounds/Effects/LargeExplosion/
+  scale = 2
+  decals = explosion_crater2
+  physics_impact = 5000
+  camera_shake { 
+    start; -- myframe1; myframe2; ... end;
+  }
+}
+
+
+CMapAnim ExplosionHuge_02 {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_02.kfm
+  sound = DATA/sounds/Effects/LargeExplosion/
+  scale = 2
+  decals = explosion_crater2
+  physics_impact = 5000
+  camera_shake { start }
+  CTrailController trail {
+          emitter = FlamingFragments
+          material = data/models/Effects/Trails/Trail_Smoke3.nif
+          tex_ratio = float: 20
+          start_width = 25
+          end_width = 100
+          ttl = 30
+          --simple_time = 90
+    	  
+
+          time0 = 0
+          color0 = colora: 1, 1, 1, 1
+
+          time1 = 3
+          color1 = colora: 1, 1, 1, 1
+
+          time2 = 50
+          color2 = colora: 1, 1, 1, 0.5
+          
+          time3 = 100
+          color3 = colora: 1, 1, 1, 0
+
+        }
+}
+
+CMapAnim ExplosionHuge_02_NoTrails {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_02.kfm
+  sound = DATA/sounds/Effects/LargeExplosion/
+  scale = 2
+  decals = explosion_crater2
+  physics_impact = 5000
+  camera_shake { start }
+}
+
+CMapAnim ExplosionHuge_03 {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_03.kfm
+  sound = DATA/sounds/Effects/LargeExplosion/
+  scale = 2
+  decals = explosion_crater2
+  physics_impact = 5000
+  camera_shake { start }
+}
+
+CMapAnim ExplosionHuge_04 {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_04.kfm
+  sound = DATA/sounds/Effects/LargeExplosion/
+  scale = 2
+  decals = explosion_crater2
+  physics_impact = 5000
+  camera_shake { start }
+}
+
+CMapAnim ExplosionHuge_05 {
+  model = data/Models/Effects/BigExplosion/ExplosionBig_05.kfm
+  sound = DATA/sounds/Effects/LargeExplosion/
+  scale = 2
+  decals = explosion_crater2
+  physics_impact = 5000
+  camera_shake { start }
+}

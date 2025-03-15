@@ -1,0 +1,4 @@
+Mob Unihorn : BaseAnimal {
+  name = "Unihorn"
+  model = data/models/lifeforms/Unihorn/Unihorn.nif
+}

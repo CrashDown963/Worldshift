@@ -1,0 +1,47 @@
+ConstructAction {
+  visible = 1
+  tags = location
+  hide_in_pve = 1
+  program = PrgBuild
+}
+
+CCancelConstructionAction CancelConstruction {
+  instant = 1
+  visible = 1
+}
+
+CSubMenuAction ConstructActionMenu {
+  visible = 1
+  instant = 1
+  hide_in_pve = 1
+}
+
+action MakeOreExtractor {
+  name : OreExtractor.name
+  tags = xenolite
+  program = PrgMakeStructure { id = OreExtractor; time : pvp.make_struct_time }
+  can_default = 1
+  weight = 1
+  hide_in_pve = 1
+  cursor = mining
+}
+
+action MakeShrine {
+  name : Shrine.name
+  tags = xenolite
+  program = PrgMakeStructure { id = Shrine; time : pvp.make_struct_time }
+  can_default = 1
+  weight = 1
+  hide_in_pve = 1
+  cursor = mining
+}
+
+action MakeBreeder {
+  name : Breeder.name
+  tags = xenolite
+  program = PrgMakeStructure { id = Breeder; time : pvp.make_struct_time }
+  can_default = 1
+  weight = 1
+  hide_in_pve = 1
+  cursor = mining
+}

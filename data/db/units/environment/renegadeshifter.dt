@@ -1,0 +1,89 @@
+Mob RenegadeShifter : BaseMob {
+  name : Shifter.name
+  descr : Shifter.descr
+  icon = 6,29
+  race = aliens
+  model = Data/Models/Units/Shifter/Shifter.kfm
+  destruction = animation
+  
+  stats : {
+    shield_hull = 250
+    shield_regen  = 120
+    shield_fullabsorbchance = 20
+    shield_percentabsorbtion = 50
+
+    breed_power = 100
+    breed_range = 1500
+    breed_min_count = 4
+    breed_max_count = 6
+    breed_cooldown = 15
+    
+    enfeeble_chance = 20
+    enfeeble_damage_reduction_perc = 25
+    enfeeble_duration = 10
+    
+    power_leak_chance = 25
+    power_leak_drain = 30
+    
+    hp = 480
+    damage = 20
+    psi = 350
+  }
+  
+  hp = stat:hp
+  armor = 15
+  speed = 360
+  energy = stat:psi
+  range = 1500
+  damage = stat:damage
+  chase_range = -1
+  
+  speed = 370
+  
+  abilities {
+    BreedAbi {
+      when : abi.combat
+      target = enemy
+      range = stat:breed_range
+      cooldown = stat:breed_cooldown
+      min_power = stat:breed_power
+      power = stat:breed_power
+      effect = E_spawn {
+        sound = data/sounds/effects/common/breed.wav
+        spawn_prg = PrgPlayAnim {
+          anim = spawn_1
+        }
+        spawn {
+          RenegadeHatchling = 3
+        }
+      }
+    }
+  }
+
+  take_auras : { RestorationCoreAura }
+  
+  CShieldController shield {
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    call_lua_on_full_absorb = OnShifterShieldFullAbsorb
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = run
+    fire_node = pt_cast
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 2500
+      scale = 0.2
+    }
+  }
+}

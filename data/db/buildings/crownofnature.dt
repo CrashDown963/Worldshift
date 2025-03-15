@@ -1,0 +1,43 @@
+Building CrownOfNature : BaseBuilding {
+  descr = " "
+
+  stats :{
+    hp = 10500
+  }
+
+  sight = 4000
+  model = Data/Models/buildings/CrownOfNature/CrownOfNature.nif
+  race = mutants
+  target_priority = 1500
+  
+  AreaActions CrownOfNatureActions {
+    HighPriest {
+      CoN_MindVisionAction
+      CoN_NaturesGraceAction
+      CoN_RainOfFireAction
+    }
+    faction = ally
+  }
+}
+
+action CoN_MindVisionAction : MindVisionAction {
+  cost = 
+  id = 1101
+  race =
+}
+
+action CoN_RainOfFireAction : RainOfFireAction {
+  cost =
+  id = 1102
+  max_range = 15000
+  force_range = 1
+  cooldown = 60
+  race =
+}
+
+CEffectAction CoN_NaturesGraceAction : NaturesGraceAction {
+  cost =
+  id = 1103
+  cooldown = 20
+  race =
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\crates\cisterna01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"cisterna01";
+    translation = xpoint3:"-12.627025604248046875,0.878444671630859375,116.55157470703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

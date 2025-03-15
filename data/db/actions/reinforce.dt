@@ -1,0 +1,12 @@
+action Reinforce {
+  name = "Call Reinforcements"
+  descr = "Instantly reinforce your army, respawning all your lost units. Has a 180 seconds cooldown"
+  icon = 6,7
+  instant = 1
+  visible = 1
+  special_locations_only = 1
+  cooldown = 180
+  program = PrgReinforce {
+    sound = Data/Sounds/Effects/Teleport/Reinforce.wav
+  }
+}

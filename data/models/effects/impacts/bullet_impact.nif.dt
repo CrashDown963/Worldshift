@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\effects\impacts\bullet_impact.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0.3333333432674407958984375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object36";
+    translation = xpoint3:"5.867396831512451171875,-0.068936802446842193603515625,146.1292724609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Cylinder03";
+    translation = xpoint3:"0,42.909038543701171875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Cylinder03 NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Cylinder04";
+    translation = xpoint3:"-51.367061614990234375,42.909038543701171875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

@@ -1,0 +1,7 @@
+﻿sid	text
+
+obj.Get the human troops in the teleporter cage	Obtenez les troupes dans le téléporteur
+obj.Denkar should divert the guards attention	Denkar devrait détourner les gardes attention
+create_gamebtn	Cliquez ici pour héberger votre propre jeu; shift-clic pour rendre le jeu privé.
+game_is_private	(Privé)
+privategame_msg	Il s’agit d’un jeu privé. Pour vous inscrire, vous devez être invité par l’hôte.

@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\miscobjects\alien_p2p01.nif";
+  animation = {
+    loop = fixp:"1.6666667461395263671875";
+    duration = fixp:"0";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"pt_dst";
+    translation = xpoint3:"0,-250,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"pt_src";
+    translation = xpoint3:"0,250,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

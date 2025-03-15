@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\units\battleyamu_test\battle_yamu_test.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"yamu";
+    translation = xpoint3:"0,-4.4051361083984375,0";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"pt_shoot_1";
+      translation = xpoint3:"0,320.612701416015625,627.0465087890625";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+Turret BridgeProtonTurret : BaseTurret {
+  name : ProtonTurret.name
+  descr : ProtonTurret.descr
+  model = Data/Models/buildings/ProtonTurret/ProtonTurret.kfm {
+  constr_phase_0 = Data/Models/buildings/DefencePost/DefencePost_build.nif
+  }
+  
+  race = humans
+  icon = 4,26
+
+  stats :{
+    hp = 1500
+    range = 2300
+    damage = 60
+    armor = 20
+  }
+  
+  sight = stat:range + 250
+
+  sounds {
+    alert_out = data/sounds/PvP/Humans/Proton Turret/tower down.wav
+    alert_in = data/sounds/PvP/Humans/Proton Turret/tower up.wav
+  }
+
+  pitch_speed = 30
+  min_pitch = -70
+  max_pitch = 30
+  yaw_speed = 90
+  target_priority = 2000
+  
+  construction {
+    phase_0 {
+      model = constr_phase_0
+    }
+  }
+  
+  CAlertController alert {
+    timeout = 15
+    layered_anims = 0
+  }
+  
+  CWeaponController weapon {
+    range = stat:range
+    active = 1
+    idle_only = 0
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    aim_tolerance = 15
+    shoot_anim = shoot
+    shoot_snd = data/sounds/weapons/deep beam/
+    idle_time = 0.5 
+    spot_impact = 1000
+    spot_impact_type = ion
+    root_node = rot_z
+    
+    instant_shot TurretShot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+        dist_start = 100
+        travel_start = 100
+        travel_end = 0
+        duration = 0.3
+        time_fraction_to_lag_end = 1
+        width = 120
+        instances = 128
+        color_alpha {
+        0 = 255,118,52,255
+        5 = 255,118,52,255
+        22 = 255,118,52,255
+        100 = 255,100,45,0
+      }
+    }
+    
+    muzzle_fx ion_shot_turret {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
+      frames = 2
+      frequency = 1.0
+      active_fraction	= 10
+      active_variation = 5
+      length_variation = 4
+      width_variation	= 13
+      scale	= 5
+      instances = 64
+      emit = 255,118,52
+    }
+  }
+}

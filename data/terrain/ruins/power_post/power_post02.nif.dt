@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\power_post\power_post02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"power-post02";
+    translation = xpoint3:"-0.3596439361572265625,0.633419036865234375,223.008880615234375";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

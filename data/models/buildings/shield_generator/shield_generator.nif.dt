@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\buildings\shield_generator\shield_generator.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

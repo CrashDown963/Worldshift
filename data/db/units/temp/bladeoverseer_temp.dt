@@ -1,0 +1,6 @@
+Alien BladeOverseer_Temp: Alien {
+  race = aliens
+  linkable = 1
+  model = Data/Models/Units/BladeOverseer/BladeOverseer.nif
+}
+

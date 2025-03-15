@@ -1,0 +1,126 @@
+﻿sid	text
+	
+// missions	
+earth_spots.#11.title	A bolt from the blue
+earth_spots.#11.descr	Onkar ni’Varra leads an expedition to explore some ancient ruins. His son, Denkar, is responsible for the expedition’s safety.
+earth_spots.#12.title	Destruction
+earth_spots.#12.descr	Denkar returns to the Tamani village from a journey of exploration and discovers that the village is under attack by Dunetown forces.
+earth_spots.#13.title	Treachery!
+earth_spots.#13.descr	Another attack by Dunetown forces is underway at the nearby Wakono village. Its High Priest, Ganthu, must protect his tribe.
+earth_spots.#14.title	Retribution
+earth_spots.#14.descr	Denkar and Ganthu are to pay the Dunetowners’ base a visit, deal with their Lord Commander, and take over an aircraft.
+earth_spots.#15.title	Hostile reception
+earth_spots.#15.descr	Denkar, Ganthu, and Eji are approaching Saling as they persevere through the scorched wastelands that surround the city.
+earth_spots.#16.title	Sneaking in
+earth_spots.#16.descr	Denkar, Ganthu, and Eji are trying to infiltrate Saling. Denkar has to create a diversion so that the two mutants may slip in unnoticed.
+earth_spots.#21.title	A new enemy
+earth_spots.#21.descr	Appointed as a Lord Commander in Aurora, Denkar is sent to defend an installation in the city’s outskirts from unknown attackers.
+earth_spots.#22.title	A place of death
+earth_spots.#22.descr	Denkar returns to the place of his father’s death to retrieve his field diary in the hopes that it may contain clues about the long-lost human city.
+earth_spots.#23.title	Following the crumbs
+earth_spots.#23.descr	Onkar’s diary points to a location somewhere in Inca. Denkar leads a party to explore the ruins and search for more clues.
+earth_spots.#24.title	Into the lair of the beast
+earth_spots.#24.descr	The final ‘crumb’ is a derelict Esperantian outpost in America.
+earth_spots.#25.title	Approaching Esperanza
+earth_spots.#25.descr	Denkar’s party approaches Esperanza only to discover that the city's outskirts are infested with aliens and creatures of the Plague.
+earth_spots.#26.title	Labyrinth
+earth_spots.#26.descr	Having entered Esperanza, Denkar’s party races against the aliens to find the source of the mysterious force sensed by Eji.
+earth_spots.#31.title	Exposed!
+earth_spots.#31.descr	After retrieving the Esperantian artifact, Denkar and his companions must now survive long enough to escape with it.
+earth_spots.#32.title	Broken wings
+earth_spots.#32.descr	The Cult’s forces have downed Tharksh’s ship and are trying to eradicate the party.
+earth_spots.#33.title	Caught in the web
+earth_spots.#33.descr	Kuna ni’Dahl and Arna ni’Varra fly to Denkar’s aid. Their aircraft has also been disabled but Kuna manages to land near the Cult’s anti-air facility.
+earth_spots.#34.title	Chaos
+earth_spots.#34.descr	Having detected the downing of the alien craft, the Jurrans send a raiding party to its location. The local Tribes do not hesitate to engage them in open combat.
+earth_spots.#35.title	Ascent
+earth_spots.#35.descr	Denkar’s party scales the slopes of the ridge surrounding the Hell Hole.
+earth_spots.#36.title	A battle of minds
+earth_spots.#36.descr	In a desperate effort to turn the tables on the Cult once more, Eji has to engage in a telepathic battle with the alien psychic.
+	
+// special locations	
+earth_spots.#101.title	Deadly safari
+earth_spots.#101.descr	Go on a deadly safari where hunters easily become the prey.
+earth_spots.#102.title	Dunetown base
+earth_spots.#102.descr	Infiltrate the Dunetown base.
+earth_spots.#103.title	Bloodsport Arena
+earth_spots.#103.descr	Prove your skill in the arena.
+earth_spots.#104.title	ROM base
+earth_spots.#104.descr	Infiltrate the ROM base.
+earth_spots.#105.title	Kharum
+earth_spots.#105.descr	Save the inhabitants of Kharum from the impending threat.
+earth_spots.#106.title	Junkyard
+earth_spots.#106.descr	Face the inhabitants of the junkyard.
+	
+// story bits titles	
+12 cities	The human cities
+12 saling	Saling
+12 onkar	Onkar ni’Varra
+12 denkar	Denkar ni’Varra
+12 tamani	Tamani
+13 ganthu	Ganthu
+13 eji	Eji
+13 ragho	Ragho
+14 allies	Unexpected allies
+14 mining_base	The Dunetown base
+15 saling	Saling
+16 mutants	Mutants and the cities
+21 aurora	Aurora
+21 order	The Order
+21 kuna	Kuna ni’Dahl
+21 denkar	Denkar ni’Varra
+21 arna	Arna ni’Varra
+21 aliens	Unknown attackers
+22 meeting	The Council’s meeting
+22 lost_city	The Lost City
+22 diary	Onkar’s diary
+23 diary	Onkar’s diary
+24 esperanza	Esperanza
+25 final_clue	The final clue
+26 esperanza	Esperanza
+31 sacrifice	Sacrifice
+31 aliens	Jaar Lash
+31 tharksh	Master Tharksh
+31 seeds	The Seeds
+31 resonator	The Psi Resonator
+32 aa	Jaar Lash anti-air facility
+33 help	Rescue mission
+34 jurra	Jurra
+35 hole	The Hell Hole
+36 acceleration	The Acceleration
+	
+// victory conditions	
+victory_defeat	You have been defeated!
+victory_nolongerdefeated	You are no longer defeated!
+victory_victory	You are victorious!
+victory_nolongervictory	You are no longer victorious!
+victory_playerdefeated	Player [#] is defeated!
+victory_playernolongerdefeated	Player [#] is no longer defeated!
+	
+victory_missiondone	Mission accomplished!
+victory_missionfail	Mission failed!
+Commander_dead	Your Lord Commander is dead!
+HighPriest_dead	Your High Priest is dead!
+Master_dead	Your Master is dead!
+	
+Denkar ni'Varra_dead	Denkar ni’Varra is dead!
+Ganthu_dead	Ganthu is dead!
+Eji_dead	Eji is dead!
+Tharksh_dead	Tharksh is dead!
+Onkar ni'Varra_dead	Onkar ni’Varra is dead!
+Arna ni'Varra_dead	Arna ni’Varra is dead!
+Kuna_dead	Kuna ni’Dahl is dead!
+	
+vic_13defdead	The defenders are dead!
+vic_13vdefdead	The village defenders are dead!
+	
+vic_31psistolen	The Psi Resonator was stolen!
+vic_31psidestr	The Psi Resonator was destroyed!
+	
+vic_32psistolen	The Psi Resonator was stolen!
+vic_32psidestr	The Psi Resonator was destroyed!
+	
+vic_33shipdes	The aircraft is destroyed!
+	
+vic_34psistolen	The Psi Resonator was stolen!
+vic_34psidestr	The Psi Resonator was destroyed!

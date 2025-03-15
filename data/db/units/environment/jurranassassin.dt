@@ -1,0 +1,175 @@
+Mob JurranAssassin : BaseMob {
+  name : Assassin.name
+  descr : Assassin.descr
+  icon = 5,18
+  race = humans
+  model = data/models/units/Assassin/Assassin.kfm
+  impacts : LivingUnitImpacts
+  
+  stats :{
+    hp = 180
+    armor = 2
+    range = 2300
+    damage = 90
+
+    expose_target_chance = 10
+    expose_target_armor_perc = 30
+    expose_target_armor_duration = 20
+    
+    proton_blast_radius = 1600
+    proton_blast_cooldown = 30
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  poison_shot_damage = var:damage * 0.2
+  chase_range = -1
+  
+  destruction = ragdoll
+  
+  physics {
+    default = data/models/units/assassin/Scout_Proxy.pml
+    die = data/models/units/assassin/Scout.pml
+  }
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  animation {
+    anim_seq cast_expose_target_finish {
+      shoot
+      shoot_idle
+    }  
+  }
+
+  abilities {
+    Sharpshooter : Assassin.abilities.Sharpshooter
+    ExposeTargetAbi
+    ProtonBlastAbi {
+      name = Proton Blast
+      when : abi.fight
+      chance = 25
+      icon = 13,0
+      target = current { aoe_range = stat:proton_blast_radius; aoe_min_enemy_hp = 300; aoe_max_ally_health = 200 }
+      range = var:range + 800
+      cooldown = stat:proton_blast_cooldown
+      action = JurranProtonBlastAction
+    }
+  }
+
+  actions : {
+    JurranProtonBlastAction
+  }
+  
+  action JurranProtonBlastAction {
+    name = Proton Blast
+    visible = 1
+    tags = location
+    icon = 8,3
+    feedback = DecalFeedback
+    function = CallMapLua {
+      func = ProtonBlastAction 
+      explosion_name = JurranProtonBlast
+    }
+  }
+
+  CAreaEffect JurranProtonBlast {
+    range = 1000
+    epicenter {
+      spawn ProtonBlastExplosionAnim
+      physics_radius = 1000
+      physics_power = 5000
+    }
+    
+    tags t1 = unit | building {
+      spawn ExplosionDamage {
+        amount = 180
+        react = lightning
+      }
+    }
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    range_far = var:range * 0.9
+    range_near = var:range * 0.5
+    proximity_bonus = 0.1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = .2
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 1.5
+		    E = 40,250,40
+	    }
+    }
+    
+    alt_projectile_chance = 20
+    
+    alt_projectile = linear {
+      type = linear
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 1.5
+		    E = 190,160,40
+      }
+      
+      effect = E_revealfowbuff {
+        id = Poison
+        name = "Poison"
+        text = "This unit is suffering poison damage."
+        icon = 2,14
+        type = damage
+        damage = var:poison_shot_damage
+        damage_type = poison
+        show_text_feedback = 1
+        duration = 10
+        tick = 2
+        discard_react = 1
+        react = poison
+      }
+    }
+    
+    spot_impact = 1000
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+}

@@ -1,0 +1,187 @@
+model = {
+  file = str:"data\models\buildings\mg_turret\mg_turret.nif";
+  animation = {
+    loop = fixp:"5.966666698455810546875";
+    duration = fixp:"5.966666698455810546875";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Root NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"rot_z";
+        translation = xpoint3:"0,12.6727237701416015625,38.304622650146484375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"rot_x";
+          translation = xpoint3:"-0.6142730712890625,81.29697418212890625,86.94189453125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Dummy_Gun01";
+            translation = xpoint3:"-14.385723114013671875,-190.141510009765625,25.095855712890625";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"pt_shoot_2";
+              translation = xpoint3:"0,-34.3662261962890625,0";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+            }
+          }
+          #1 = {
+            scale = fixp:"1";
+            name = str:"Dummy_Gun02";
+            translation = xpoint3:"15.614276885986328125,-184.4086761474609375,25.095855712890625";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"pt_shoot_1";
+              translation = xpoint3:"0,-34.3662261962890625,0";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+            }
+          }
+          #2 = {
+            scale = fixp:"1";
+            name = str:"Shield_Dummy";
+            translation = xpoint3:"0.614276885986328125,-159.577606201171875,25.224945068359375";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0.952233970165252685546875,-0.3053693473339080810546875";
+              2 = xpoint3:"0,0.3053693473339080810546875,0.952233970165252685546875";
+            }
+          }
+          #3 = {
+            scale = fixp:"1";
+            name = str:"CartrigeBeltDummy";
+            translation = xpoint3:"0.2518546879291534423828125,-63.7206878662109375,73.740753173828125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+          #4 = {
+            scale = fixp:"1";
+            name = str:"SprayCartridges01-Emitter";
+            translation = xpoint3:"-44.44378662109375,-89.60042572021484375,37.716400146484375";
+            rotation = {
+              0 = xpoint3:"0.70334064960479736328125,-0.1741381585597991943359375,-0.689193546772003173828125";
+              1 = xpoint3:"0.1571401059627532958984375,0.983632743358612060546875,-0.088168203830718994140625";
+              2 = xpoint3:"0.693266808986663818359375,-0.04628767073154449462890625,0.719192981719970703125";
+            }
+          }
+          #5 = {
+            scale = fixp:"1";
+            name = str:"Antena_Dummy01";
+            translation = xpoint3:"0.614276885986328125,-22.960968017578125,16.510894775390625";
+            rotation = {
+              0 = xpoint3:"0,0,-1";
+              1 = xpoint3:"-0.99998605251312255859375,-0.005272277630865573883056640625,0";
+              2 = xpoint3:"-0.0052722990512847900390625,0.99998605251312255859375,0";
+            }
+          }
+          #6 = {
+            scale = fixp:"1";
+            name = str:"GunSmokeSuperSpray02-Emitter";
+            translation = xpoint3:"-14.51837825775146484375,-217.22576904296875,24.660491943359375";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+          #7 = {
+            scale = fixp:"1";
+            name = str:"GunSmokeSuperSpray01-Emitter";
+            translation = xpoint3:"16.6606273651123046875,-217.22576904296875,24.660491943359375";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+          #8 = {
+            scale = fixp:"1";
+            name = str:"SteamSuperSpray03-Emitter";
+            translation = xpoint3:"0.614274680614471435546875,2.2481689453125,52.89227294921875";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,0.984807789325714111328125,0.17364813387393951416015625";
+              2 = xpoint3:"0,-0.17364813387393951416015625,0.984807789325714111328125";
+            }
+          }
+          #9 = {
+            scale = fixp:"1";
+            name = str:"Omni01";
+            translation = xpoint3:"-7.5040435791015625,-249.95343017578125,32.990081787109375";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+      }
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Gravity01";
+    translation = xpoint3:"-235.626251220703125,-23.9393405914306640625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Deflector01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

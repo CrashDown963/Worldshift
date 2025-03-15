@@ -1,0 +1,96 @@
+decal_groups {
+--  group1 {
+--    max_decals = 10
+--    settings {
+--      blood
+--      blooddrops
+--      footprints
+--    }
+--  }
+
+  explosion_decals {
+    max_decals = 10
+    settings {
+      explosion_crater2
+    }
+  }
+}
+
+decal_settings explosion_crater2_consts {
+  settings_id = explosion_crater2
+  
+  models = {
+    explosion_crater2
+  }
+  
+  max_decals = 5
+  life_time = 30
+  fade_time = 2
+  fast_fade = 0.5
+
+-- negative sizes mean scale, positive sizes mean absolute size in cm
+
+  start_size = -0.5
+  grown_size = -0.5
+  grow_time = 0
+
+-- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+  size_variation = 0
+
+-- angle in degrees relative to the facing of the spawning actor
+-- negative angle means spawn with random rotation
+
+  angle_delta = 0
+}  
+
+decal_settings ground_hit_decal_assault {
+  settings_id = barrage_decal1_assault
+  max_decals = 30
+  skip_in_water = 1
+  life_time = 20
+  fade_time = 5
+  fast_fade = 2
+  -- negative sizes mean scale, positive sizes mean absolute size in cm
+  start_size = -1
+  grown_size = -1
+  grow_time = 1
+
+  -- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+  size_variation = 20
+  -- angle in degrees relative to the facing of the spawning actor
+  -- negative angle means spawn with random rotation
+
+  angle_delta = -1
+  models = {
+    barrage_decal1
+  }
+}
+
+decal_settings ground_hit_decal {
+  settings_id = barrage_decal1
+  max_decals = 50
+  skip_in_water = 1
+  life_time = 30
+  fade_time = 5
+  fast_fade = 2
+
+  -- negative sizes mean scale, positive sizes mean absolute size in cm
+
+  start_size = -1
+  grown_size = -1
+  grow_time = 1
+
+  -- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+  size_variation = 20
+
+  -- angle in degrees relative to the facing of the spawning actor
+  -- negative angle means spawn with random rotation
+
+  angle_delta = -1
+
+  models = {
+    barrage_decal1
+  }
+}

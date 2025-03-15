@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\pointy_rocks\crystal_rock_yellow.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"objZBrushPolyMesh3D01";
+    translation = xpoint3:"1.157379150390625,0,0.1406707763671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

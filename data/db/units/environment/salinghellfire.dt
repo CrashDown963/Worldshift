@@ -1,0 +1,286 @@
+Mob SalingHellfire : BaseMachineMob {
+  name : Hellfire.name
+  icon = 1,21
+  descr : Hellfire.descr
+  race = humans
+  
+  model = data/models/units/HellFire/HellFire.kfm {
+    die = data/models/units/HellFire/HellFire_Break.kfm 
+    rot_z1 {
+      min_yaw = -15
+      max_yaw = 0
+    }
+    rot_z2 {
+      min_yaw = 0
+      max_yaw = 15
+    }
+  }
+  
+  stats : {
+    hp = 420
+    power = 300
+    range = 1600
+    damage = 55
+    armor = 30
+
+    shield_hull = 200
+    shield_regen = 120
+    shield_fullabsorbchance = 15
+    shield_percentabsorbtion = 10
+    shield_activatechance = 30
+ }
+  
+  hp = stat:hp
+  power = stat:power
+  range = stat:range
+  damage = stat:damage
+  armor = stat:armor
+  alt_fire_damage = var:damage * 2
+  
+  destruction = ragdoll
+  explosion = ExplosionBig_02
+  
+  blod_dist {
+    #0 = 10000
+    #1 = 12000
+  }
+
+  -- nano restore points!
+  nano_restore_points = Bone_foot_L2,Bone_foot_R2,Bone_markuch_05,Bone_guz,Bone_markuch_01,Bone_L_hand_2,Bone_L_hand_1,Bone_R_hand_1,Bone_R_sholder,Bone_L_sholder
+
+  physics {
+    default = data/models/units/HellFire/HellFire_Proxy.pml
+    die = data/models/units/HellFire/HellFire.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_04 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_perc = 40
+  }
+
+  foot_prints {
+    desert = hellfire_footprint
+  }
+
+  pitch_speed = 90
+  min_pitch = -30
+  max_pitch = 30
+  yaw_speed = 120
+  min_yaw = -45
+  max_yaw = 45
+  speed = 300
+  
+  sounds {
+    confirm = data/sounds/units/hellfire/confirm/
+    select = data/sounds/units/hellfire/select/
+    footstep = data/sounds/units/hellfire/step/
+    stop = data/sounds/units/hellfire/stop/
+    destruction = data/sounds/destruction/units/hellfire/
+  }
+  
+  abilities {
+    Shield {
+      name : HellfireAbilities.Shield.name
+      text : HellfireAbilities.Shield.text
+      icon = 13,0
+    }
+    FireBall {
+      name = Fire Ball
+      icon = 13,0
+    }
+  }
+  
+  animation {
+    anim_set IDLE = loop {
+      idle = 2000
+      idle_var_1 = 200
+      --idle_var_2 = 50
+      idle_var_3 = 200
+      idle_var_4 = 200
+      --idle_very_rare_1 = 10
+      --idle_very_rare_2 = 10
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 120
+    max_tilt = 0
+  }  
+
+  CMultiWeaponController weapon {
+    damage = 0
+    can_crit = 0
+    count = 2 
+    sync = alternate
+    active = 1
+    idle_only = 0
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_once_right
+    shoot_anim_2 = shoot_once_left
+    shoot_snd = Data/Sounds/Units/Hellfire/shot
+    aim_tolerance = 15
+    idle_time = 0.7
+    spot_impact_type = fire
+    spot_impact = 1200
+    damage_type = fire
+
+    muzzle_anim = SalingHellfireMuzzle
+	  
+    projectile = linear {
+      spot_impact = 1200
+      spot_impact_type = fire
+      speed = 2400
+      model = data/models/projectiles/fire/HellfireShot.nif {
+        CTrailController trail {
+          emitter = Core
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 6
+          ttl = 24
+  
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+  
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+  
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+  
+          time3 = 15
+          color3 = colora: 0, 0, 0, 0.6
+  
+          time4 = 50
+          color4 = colora: 0, 0, 0, 0.4
+  
+          time5 = 100
+          color5 = colora: 0, 0, 0, 0
+        }
+      }
+      
+      react = fire
+      
+      effect = E_damage {
+        area = 100 {
+          model = data/models/projectiles/fire/HellfireShot_HitUnit.nif
+          sound = Data/Sounds/Units/Hellfire/hit
+        }
+        amount = var:damage
+        react = fire
+      }
+      
+      ground_hit_effect = SalingHellfireTerrainHitEffect
+      expire_effect = SalingHellfireExpire
+    }
+    
+    alt_projectile_chance = 30
+    
+    alt_projectile = linear {
+      type = linear
+      spot_impact = 800
+      spot_impact_type = fire
+      speed = 3000
+      start_point = pt_shoot_1
+      
+      effect = E_damage {
+        area = 400 {
+          anim = data/Models/Effects/Fire/FireSweep.kfm 
+          sound = DATA/sounds/Effects/FireSweep/
+          scale = 0.4
+        }
+        
+        amount = var:alt_fire_damage
+        react = fire
+      }
+      
+      ground_hit_effect = SalingHellfireTerrainHitEffect
+      expire_effect = SalingHellfireExpire
+      
+      model = data/models/projectiles/fire/HellfireShot.nif {
+        scale = 1.5
+        CTrailController trail {
+          emitter = Core
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 6
+          ttl = 24
+  
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+  
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+  
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+  
+          time3 = 15
+          color3 = colora: 0, 0, 0, 0.6
+  
+          time4 = 50
+          color4 = colora: 0, 0, 0, 0.4
+  
+          time5 = 100
+          color5 = colora: 0, 0, 0, 0
+        }
+      }
+    }
+  }
+
+  CShieldController shield : Hellfire.shield
+}
+
+CMapAnim SalingHellfireExpire {
+  model = data/models/projectiles/fire/HellfireShot_Expire.nif
+}
+
+CMapAnim SalingHellfireGroundHit {
+  model = data/models/projectiles/fire/HellfireShot_HitGround.nif
+  scale = 0.65
+}
+
+CMapAnim SalingHellfireMuzzle {
+  model = data/models/Effects/MuzzleFlash/MuzzleFlash_Hellfire.nif
+  
+	CTrailController trail {
+	  emitter = SuperSpray02Fire
+	  texture = data/textures/trails/energy_trail1.dds
+	  tex_ratio = float: 1
+	  start_width = 18
+	  end_width = 0
+	  ttl = 6
+	  simple_time = 1
+	  additive = 1
+            z_write = 0
+	  material_alpha = 0.5
+	  diffuse = color: 1, 1, 1
+	  ambient = color: 0.5, 0.5, 0.5
+	  emissive = color: 1, 0.8, 0.9
+
+	  time0 = 0
+	  color0 = colora: 1, 1, 1, 0
+
+	  time1 = 3
+	  color1 = colora: 1, 0.45, 0, 1
+
+	  time2 = 30
+	  color2 = colora: 1, 0.2, 0.2, 1
+
+	  time3 = 60
+	  alpha3 = 0.6
+
+	  time4 = 100
+	  color4 = colora: 1, 0.5, 0.2, 0
+  }
+}
+
+CAnimEffect SalingHellfireTerrainHitEffect {
+  tags t1 = grass | dirt | mud {
+    spawn MoltenSpot
+    spawn SalingHellfireGroundHit
+  }
+  tags t2 = water {
+  	spawn WaterHit
+  }
+}
+

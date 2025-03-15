@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\effects\actionsequence\guardian_charging.nif";
+  animation = {
+    loop = fixp:"4";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Mounted_FX_Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"PCloud02-Emitter";
+      translation = xpoint3:"0.15218353271484375,5.63372898101806640625,119.82624053955078125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

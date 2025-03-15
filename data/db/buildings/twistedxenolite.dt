@@ -1,0 +1,9 @@
+TwistedXenolite TwistedXenolite : BaseBuilding {
+  model = Data/Models/buildings/SquadModule/SquadModule.nif
+  race = aliens
+  maxpoplimit = 5
+  
+  stats : {
+    sacrifice_duration = 20
+  }
+}

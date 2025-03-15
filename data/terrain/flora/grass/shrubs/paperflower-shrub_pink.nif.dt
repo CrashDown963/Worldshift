@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\flora\grass\shrubs\paperflower-shrub_pink.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

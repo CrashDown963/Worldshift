@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\embelishments\waterfall\waterfall_thin.nif";
+  animation = {
+    loop = fixp:"5";
+    duration = fixp:"0";
+  }
+}

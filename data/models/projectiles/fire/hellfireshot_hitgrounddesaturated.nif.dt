@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\projectiles\fire\hellfireshot_hitgrounddesaturated.nif";
+  animation = {
+    loop = fixp:"1.27777850627899169921875";
+    duration = fixp:"1.83333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray01-Emitter";
+    translation = xpoint3:"0,-1.421794891357421875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Drag01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray02-Emitter";
+    translation = xpoint3:"0,-1.421794891357421875,40.684795379638671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray03-Emitter";
+    translation = xpoint3:"0,-1.421794891357421875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,6 @@
+Unit PlasmaSeedDummy : BaseUnit {
+  model = Data/Models/Effects/Aliens/PlasmaSeedDummy.nif
+
+  moveable = 0
+  hull = 100000
+}

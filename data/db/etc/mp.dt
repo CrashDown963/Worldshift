@@ -1,0 +1,193 @@
+voicesays {
+
+  1 {
+    key = Are you ready
+    global = 0
+    alias = ready,rdy
+  }
+
+  2 {
+    key = Confirm
+    global = 0
+    alias = ok,roger,rgr
+  }
+
+  3 {
+    key = Crowd control
+    global = 0
+    alias = cc
+  }
+
+  4 {
+    key = Damage
+    global = 0
+    alias = dps,dd
+  }
+
+  5 {
+    key = Follow me
+    global = 0
+    alias = follow
+  }
+
+  6 {
+    key = Go
+    global = 0
+    alias = go
+  }
+
+  7 {
+    key = Go back
+    global = 0
+    alias = back,go back
+  }
+
+  8 {
+    key = Good game
+    global = 1
+    alias = gg
+  }
+
+  9 {
+    key = Heard
+    global = 0
+    alias = heard
+  }
+
+  10 {
+    key = Hello
+    global = 1
+    alias = hi,hello
+  }
+
+  11 {
+    key = Low power
+    global = 0
+    alias = psi,oop,oom
+  }
+
+  12 {
+    key = Need healing
+    global = 0
+    alias = heal
+  }
+
+  13 {
+    key = Need help
+    global = 0
+    alias = help,hlp
+  }
+
+  14 {
+    key = No
+    global = 1
+    alias = no,n
+  }
+
+  15 {
+    key = Oh dear
+    global = 1
+    alias = dear
+  }
+
+  16 {
+    key = Oh nooo
+    global = 1
+    alias = ohno,oh no
+  }
+
+  17 {
+    key = Oops
+    global = 1
+    alias = ops,oops
+  }
+
+  18 {
+    key = Owned
+    global = 1
+    alias = owned,pwned
+  }
+
+  19 {
+    key = Praise
+    global = 1
+    alias = gj,praise
+  }
+
+  20 {
+    key = Seen enemy
+    global = 0
+    alias = enemy
+  }
+
+  21 {
+    key = Seen worse
+    global = 1
+  }
+
+  22 {
+    key = Sorry
+    global = 1
+    alias = sorry,sry,soz
+  }
+
+  23 {
+    key = Tank
+    global = 0
+    alias = tank
+  }
+
+  24 {
+    key = Taunt
+    global = 1
+    alias = taunt
+  }
+
+  25 {
+    key = Taunt Aliens
+    global = 1
+    alias = taunt aliens,taunt a
+  }
+
+  26 {
+    key = Taunt Humans
+    global = 1
+    alias = taunt humans,taunt h
+  }
+
+  27 {
+    key = Taunt Mutants
+    global = 1
+    alias = taunt tribes,taunt t,taunt m
+  }
+
+  28 {
+    key = Thanks
+    global = 1
+    alias = thanks,thx,ta,ty
+  }
+
+  29 {
+    key = That was close
+    global = 1
+    alias = close
+  }
+
+  30 {
+    key = Wait
+    global = 0
+    alias = wait,w8
+  }
+
+  31 {
+    key = Wait for me
+    global = 0
+    alias = wait me,w8 me
+  }
+
+  32 {
+    key = Yes
+    global = 1
+    alias = yes,y
+  }
+}

@@ -1,0 +1,69 @@
+MissionCommand MissionCommand : BaseBuilding {
+  model = Data/Models/buildings/MissionControl/MissionControl.nif {
+    constr_phase_01 = Data/Models/buildings/MissionControl/MissionControl_build.nif
+    constr_phase_02 = Data/Models/buildings/MissionControl/MissionControl.nif
+
+    destr_phase_01 = Data/Models/buildings/MissionControl/MissionControl.nif
+    destr_phase_02 = Data/Models/buildings/MissionControl/MissionControl.nif
+    
+    "Editable Mesh" {
+		no_mouse_targetable = 1
+    }
+  }
+
+  maxpoplimit = 5
+  pop_limit = 5
+  race = humans
+  sight = 2500
+  --tags = building, bot
+  stats :{
+	port_time = 10 
+    hp = 8000
+  }
+
+  actions {
+  }
+
+  silo = 1
+  target_priority = 1500
+
+  construction {
+    phase_0 {
+      model = constr_phase_01
+      pt_work_1 { 
+        animations { work_down }
+      }
+      pt_work_2 : pt_work_1
+      pt_work_3 : pt_work_1
+      pt_work_4 : pt_work_1
+      pt_work_5 : pt_work_1
+    }
+    phase_1 : phase_0 {
+      model = constr_phase_01
+    }
+
+  }
+
+  destruction {
+    phase_0 {
+      model = destr_phase_01
+      hull = 50
+    }
+
+    phase_1 {
+      model = destr_phase_02
+      hull = 2
+    }
+  }  
+
+  CMissionCommandCaptureController capture : DefaultCapture
+}
+
+CMissionCommandCaptureController DefaultCapture {
+  guard_radius = 2400
+  capture_radius = 800
+  capture_time = 5
+  show_progress = 1
+}
+
+ 

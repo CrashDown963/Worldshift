@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\buildings\livingtent\living-tent_phase01.kfm";
+  animations = {
+    idle = {
+      loop = int:"0";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+  }
+}

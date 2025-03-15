@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\effects\aliens\masterattachment.nif";
+  animation = {
+    loop = fixp:"20";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"FX_Skirt";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Cylinder03";
+      translation = xpoint3:"0.10213147103786468505859375,-2.9016964435577392578125,-189.78472900390625";
+      rotation = {
+        0 = xpoint3:"-0.707106769084930419921875,0.707106769084930419921875,0";
+        1 = xpoint3:"-0.707106769084930419921875,-0.707106769084930419921875,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Spray01TrailFlame01-Emitter";
+      translation = xpoint3:"-0.28473758697509765625,-3.009394168853759765625,22.2125091552734375";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+  }
+}

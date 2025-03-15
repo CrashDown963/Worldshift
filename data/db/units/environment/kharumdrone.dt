@@ -1,0 +1,160 @@
+Mob KharumDrone : BaseMachineMob {
+  name = "Scout Drone"
+  icon = 5,24
+  model = data/models/units/Repair_Drone/Repair_Drone.kfm
+  race = common
+  
+  immune_to : {confusion}
+  
+  movement_type = hover
+  hover_altitude = 300
+  
+  hp = 500
+  armor = 12
+  range = 150
+  damage = 0
+  speed = 520
+  sight = 1400
+  no_evade = 1
+  
+  sight_incombat = 5000
+  chase_range = -1
+  co_spawns = 0
+  run = 1
+  
+  waypoint_radius = 7000
+  wander_stay = 0
+  roam = 1
+  
+  abv_pick = 1
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = Scene Root
+  }
+  
+  ondeath_effect = E_damage {
+    area = 500
+    amount = 500
+  }
+  
+  explosion = ExplosionMedium_03
+  
+  AddsVars {
+    sight_incombat = 5000
+    sight = 5000
+    chase_range = -1
+    roam = 1
+    waypoint_radius = 500
+    CAutoDieController AutoDie {
+      no_enemy_despawn_time = 15
+      show_progress = 0
+    }
+  }
+
+  abilities {
+    SelfDestruct {
+      when : abi.fight
+      target = self
+      damage = 1000000
+    }
+    
+    SpawnAdds {
+      when : abi.approach
+      cooldown = 500
+      target = self
+      effect = E_spawn {
+        range = 1500
+        copy_target_list = 1
+        spawn {
+          GarbageAssaulter : AddsVars = 3 
+        }
+        spawn {
+          GarbageHellfire : AddsVars = 1
+        }
+        spawn {
+          KharumTechnician : AddsVars = 2
+        }  
+      }
+    }
+  }
+}
+
+Mob KharumTacticalDrone : BaseMachineMob {
+  name = "Field Tactical Drone"
+  icon = 3,25
+  model = data/models/units/Repair_Drone/Repair_Drone.kfm
+  scale = 3
+
+  race = common
+  
+  movement_type = hover
+  hover_altitude = 300
+
+  hp = 2500
+  armor = 20
+  range = 2000
+  damage = 20
+  speed = 520
+  sight = 1400
+  sight_incombat = 3000
+  --chase_range = -1
+  
+  --run = 1
+  --waypoint_radius = 0
+  --wander_stay = 0
+  --roam = 0
+  
+  abv_pick = 1
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = pt_ground
+  }
+
+  ondeath_effect = E_damage {
+    area = 1000
+    amount = 500
+  }
+  
+  explosion = ExplosionMedium_03 { scale = 2 }
+
+  AddsVars {
+    sight_incombat = 3000
+    sight = 3000
+    --chase_range = -1
+    --roam = 1
+    waypoint_radius = 500
+    --CAutoDieController AutoDie {
+    --  no_enemy_despawn_time = 15
+    --  show_progress = 0
+    --}
+  }
+
+  abilities {
+    SpawnAdds {
+      when : abi.approach
+      cooldown = 600
+      target = self
+      effect = E_spawn {
+        range = 1500
+        copy_target_list = 1
+        spawn {
+          GarbageAssaulter : AddsVars = 5 
+        }
+        spawn {
+          GarbageHellfire : AddsVars = 2
+        }
+        spawn {
+          KharumTechnician : AddsVars = 3
+        }  
+        spawn {
+          GarbageHealer : AddsVars = 2
+        }  
+      }
+    }
+  }
+}
+

@@ -1,0 +1,109 @@
+Mob ArbiterMob : BaseMob {
+  name : Arbiter.name
+  icon = 7,15
+  descr : Arbiter.descr
+  race = aliens
+  
+  model = Data/Models/Units/Arbiter/Arbiter.kfm {
+    die = Data/Models/Units/Arbiter/Arbiter_die.nif
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Arbiter/Arbiter.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+  
+  icon = 2,3
+
+  hp = 320
+  range = 2000
+  energy = 300
+  damage = 70 
+  armor = 2
+  
+  stats :{
+    chain_shot_chance = 15
+    fear_shock_power = 120
+    fear_shock_cooldown = 45
+    fear_shock_area = 400
+    fear_shock_duration = 5
+    fear_shock_range = 1200
+  }
+  
+  take_auras : { RestorationCoreAura }
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    range_far = var:range * 0.8
+    range_near = var:range * 0.6
+    proximity_bonus = 0.2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Discharge Energy/
+    shoot_anim = shoot
+    shoot_idle_1 = idle
+    idle_time = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 2500
+      scale = 0.25
+      damage = var:damage
+      react = fire
+    }
+  }
+  
+  actions :{
+    FearShockAction
+  }
+
+  abilities {
+    LongRangeAbi
+    ChainShotAbi
+
+    AIFearShock {
+      action = FearShockAction
+      when   : abi.fight
+      target = current { aoe_range = 1000; aoe_min_enemy_count = 4 }
+      range = 1200
+    }
+  }
+}
+
+CEffectAction DummyHorrifyAction {
+  name = "Horrify"
+  descr = "Horrifies all enemy units in a small area, making them running in fear and shooting chaoticly."
+  visible = 1
+  tags = location
+  icon = 12,7
+  feedback = DecalFeedback
+  cooldown = 60
+    
+  effect = S_multifear {
+    id = Horrify
+    multi_area = 1200 { anim = data/models/effects/magic/Horrify.nif }
+    react = horrify
+    duration = 10
+    sound = data/sounds/effects/global actions/horrify/
+    program = PrgMadden {
+      attack_chance = 50
+      attack_count = 3
+    }
+  }
+}

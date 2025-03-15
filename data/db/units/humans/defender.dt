@@ -1,0 +1,114 @@
+Unit Defender : MachineUnit {
+  name = "Defender"
+  icon = 6,5
+  descr = "The first unit added via modding. Honor may be to DotNL and CrashDown963"
+  model = data/models/units/defender/defender.kfm
+  die = data/models/units/HellFire/HellFire_Break.kfm 
+  race = humans
+  cost : pvp.humans.unit_costs.Defender
+  cost_sloc : pvp.humans.sloc_costs.Defender
+  speed = 450
+  scale = 0.7
+  explosion = ExplosionBig_02
+
+  foot_prints {
+    desert = hellfire_footprint
+  }
+
+  pitch_speed = 90
+  min_pitch = -30
+  max_pitch = 30
+  yaw_speed = 120
+  min_yaw = -45
+  max_yaw = 45
+  
+  sounds {
+    confirm = data/sounds/units/hellfire/confirm/
+    select = data/sounds/units/hellfire/select/
+    footstep = data/sounds/units/hellfire/step/
+    stop = data/sounds/units/hellfire/stop/
+    destruction = data/sounds/destruction/units/hellfire/
+  }
+
+  COrientationController orientation {
+    rot_speed = 120
+    max_tilt = 0
+  }  
+
+  -- nano restore points!
+  nano_restore_points = pt_shoot_04,pt_shoot_05
+
+  stats :{
+    hp = 620
+    power = 450
+    range = 1700
+    damage = 70
+    armor = 25
+  }
+  
+  actions : BaseUnit.actions {
+    RepairDrones;
+  }
+
+  CMultiWeaponController weapon {
+    active = 1
+    can_crit = 1
+    idle_only = 0
+    count = 4 
+    sync = alternate 
+    --root_node = gun_slot_2 
+    fire_node_1 = pt_shoot_04
+    fire_node_2 = pt_shoot_05
+    fire_node_3 = pt_shoot_03
+    fire_node_4 = pt_shoot_07
+    shoot_anim_1 = shoot
+    shoot_anim_2 = shoot
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+
+    fire_rate = 5
+    idle_time = 0.01
+    damage = stat:damage
+
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    muzzle_fx ion_rifle_bot {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+		  frames = 4
+		  frequency = 1.0
+		  active_fraction	= 10
+		  active_variation = 5
+		  length_variation = 60
+		  width_variation	= 7
+		  scale	= 4
+		  instances = 64
+          emit = 25,65,195
+	  }
+    
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = small_energy
+      speed = 6000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/V Laser/t_laser.nif {
+        scale = 1
+        E = 25,65,195
+      }
+    }
+  }
+}
+
+action RepairDrones {
+  name = "Repair Drones"
+  descr = "The Constructor activates his 3 Repair Drones that will follow him and will repair damaged machines nearby (including Constructor himself). Repair Drones will stay active for [stat:repairdrones_time_to_live] sec. Each Drone is capable of repairing [stat:repairdrones_repair_per_tick] hit points every tick."
+  instant = 1
+  visible = 1
+  icon = 6,8
+  min_power = stat:repairdrones_power
+  power = stat:repairdrones_power
+  program = PrgRepairDrones
+  cooldown = 30
+}
+
+

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\buildings\hut4\hut4.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"HUT4";
+    translation = xpoint3:"6.13905620574951171875,-148.7596588134765625,209.302032470703125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

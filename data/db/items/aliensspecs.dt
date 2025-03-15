@@ -1,0 +1,183 @@
+AlienSpecItem {
+  race = aliens
+  quality = 1
+  autobind = 1
+  hidden = 1
+}
+
+item I_A1A : AlienSpecItem {
+  name = "Madness"
+  text = "Your Trisat’s Frenzy will last [stats.frenzy_duration] additional seconds after they stop doing damage."
+  icon = 4,1
+  levels = 1,2
+  repo = ALIEN_SPECA1
+  target {
+    Trisat
+  }
+  stats {
+    frenzy_duration = 5/10
+  }
+  --abilities { AA1A { item = I_A1A } }
+}
+
+item I_A2A : AlienSpecItem {
+  name = "Overpower"
+  text = "All your regular units will do [stats.damage] more direct damage."
+  icon = 4,1
+  levels = 1,2
+  repo = ALIEN_SPECA2
+  target {
+    Trisat
+    Tritech
+    Shifter
+    Overseer
+  }
+  stats {
+    damage = 5%/10%
+  }
+  --abilities { AA2A { item = I_A2A } }
+}
+
+item I_B1A : AlienSpecItem {
+  name = "Prophesy"
+  text = "Your Master will regenerate power [stats.psi_gen] faster."
+  icon = 4,1
+  repo = ALIEN_SPECB1
+  target {
+    Master
+  }
+  stats {
+    psi_gen = 20%/50%
+  }
+  --abilities { AB1A { item = I_B1A } }
+}
+
+item I_B2A : AlienSpecItem {
+  name = "Fire Focus"
+  text = "Your Tritech’s will have additional [stats.crit_chance]% chance to do double damage on their target."
+  icon = 4,1
+  levels = 1,3
+  repo = ALIEN_SPECB2
+  target {
+    Tritech
+  }
+  stats {
+    crit_chance = 5/10/20
+  }
+  --abilities { AB2A { item = I_B2A } }
+}
+
+item I_B3A : AlienSpecItem {
+  name = "Bio-Split"
+  text = "When a Tritech is killed there is [stats.bio_split_chance]% chance for a trisat to spawn from his corpse."
+  icon = 4,1
+  levels = 1
+  repo = ALIEN_SPECB3
+  target {
+    Tritech
+  }
+  stats {
+    bio_split_chance = 25
+  }
+  vars {
+    ondeath = BioSplit
+  }
+  abilities { AB3A { item = I_B3A; icon = 7,0 } }
+}
+
+item I_C1A : AlienSpecItem {
+  name = "Demonic Hunger"
+  text = "Your Masters’ feed action will add additional [stats.feed_add_heal] healing every tick and for each affected target."
+  icon = 4,1
+  levels = 1,3
+  repo = ALIEN_SPECC1
+  target {
+    Master
+  }
+  stats {
+    feed_add_heal = 1/2/5
+  }
+  --abilities { AC1A { item = I_C1A } }
+}
+
+item I_C2A : AlienSpecItem {
+  name = "Imminence"
+  text = "Harvester will have [stats.confuse_chance]% chance on every strike to stress his target forcing it to focus attacks on the Harvester."
+  icon = 4,1
+  levels = 1,2
+  repo = ALIEN_SPECC2
+  target {
+    Harvester
+  }
+  stats {
+    confuse_chance = 5/15
+  }
+  abilities {
+    ImminenceAbi { 
+      active = 1 
+      item = I_C2A
+      icon = 6,0
+    }
+  }
+}
+
+item I_D1A : AlienSpecItem {
+  name = "Barrier Cure"
+  text = "All your units will regenerate hit points [stats.hp_gen] faster without recovering."
+  icon = 4,1
+  repo = ALIEN_SPECD1
+  target {
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+    Shifter
+    Overseer
+    Tritech
+    Trisat
+    Hatchling
+  }
+  stats {
+    hp_gen = 50%
+    recovery_time = -100%
+  }
+  abilities { AD1A { item = I_D1A; icon = 3,0 } }
+}
+
+item I_D2A : AlienSpecItem {
+  name = "Charged Armor"
+  text = "Your Master and all your Wardens will get [stats.hp] additional hit points."
+  icon = 4,1
+  levels = 1,3
+  repo = ALIEN_SPECD2
+  target {
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+  }
+  stats {
+    hp = 5%/10%/20%
+  }
+  abilities { AD2A { item = I_D2A; icon = 2,0 } }
+}
+
+item I_D3A : AlienSpecItem {
+  name = "Bio-Cycle"
+  text = "When Trisat dies in the sight of the Master, there is [stats.bio_cycle_chance]% chance for the Master to recycle it near him with 25% hit points. Recycled Trisats will loose all their beneficial effects they might had before they were killed."
+  icon = 4,1
+  repo = ALIEN_SPECD3
+  target {
+    Trisat
+  }
+  stats {
+    bio_cycle_chance = 25
+  }
+  vars {
+    ondeath = BioCycle
+  }
+  abilities { AD3A { item = I_D3A; icon = 7,0 } }
+}
+

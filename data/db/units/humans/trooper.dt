@@ -1,0 +1,393 @@
+Trooper Trooper : BaseUnit {
+  trooper_name = "Trooper"
+  elite_name = "Elite Trooper"
+  name_var = trooper_name
+  
+  descr = "DESCRIPTION"
+  model = data/models/units/Trooper/Trooper.kfm
+  race = humans
+  icon = 1,1
+
+  speed = 450
+  take_auras : { RestorationCoreAura }
+
+  sounds {
+    start = data/speech/summoning/trooper/
+    attack = data/speech/confirmations/trooper/trooper attack/
+    select = data/speech/selecting/trooper select/
+    joke = data/speech/selecting/trooper joke/
+    confirm = data/speech/confirmations/trooper/trooper confirm/
+    destruction = data/speech/deaths/trooper death/
+    engage = data/speech/engage alerts/trooper engage/
+    damage = data/speech/engage alerts/trooper damage/
+    move = data/speech/confirmations/trooper/trooper move/
+  }
+  
+  stats : {
+    throw_grenade_chance = 3
+    grenade_damage = 50
+    grenade_radius = 170
+    hp = 220
+    armor = 5
+    range = 1400
+    damage = 6
+    motivation = 0
+    crit_chance_increase = 5
+  }
+  
+  physics {
+    default = data/models/units/Trooper/TownGuard_Proxy.pml
+    die = data/models/units/Trooper/TownGuard.pml
+  }
+
+  destruction = ragdoll
+
+  tags = unit, organic, lowrank
+
+  movement_type = crawl
+
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  } 
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+    shoot_var_2 = 0 {
+      shoot_var_2_down = -60
+      shoot_var_2_up = 60
+    }
+    shoot_idle_var2 = 0 {
+      shoot_var_2_idle_down = -60
+      shoot_var_2_idle_up = 60
+    }
+    shoot_var_3 = 0 {
+      shoot_var_3_down = -60
+      shoot_var_3_up = 60
+    }
+    shoot_idle_var_3 = 0 {
+      shoot_var_3_idle_down = -60
+      shoot_var_3_idle_up = 60
+    }
+  }
+  
+  animation {
+    anim_set SHOOT_IDLE_VAR_1 = loop {
+      shoot_idle
+      shoot_spice_1
+    }
+  }
+
+  actions : BaseUnit.actions {
+    MakeOreExtractor -- fake
+  }
+  
+  xp_textures {
+    #1 = data/models/units/trooper/trooper-diff05.dds
+    #2 = data/models/units/trooper/trooper-diff03.dds
+  }  
+  
+  xp_textures_masks {
+    #1 = data/models/units/trooper/trooper-mask05.dds
+    #2 = data/models/units/trooper/trooper-mask03.dds
+  }
+  
+  xp_names {
+    #1 = elite_name
+  }
+  
+  xp_icons {
+    #1 = 7,1
+  }
+  
+  CWeaponController weapon {
+	  active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.5
+    range_near = stat:range * 0.2
+    proximity_bonus = 2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/units/trooper/shoot/
+    aim_tolerance = 45
+    shoot_anim_1 = shoot
+    shoot_idle_1 = SHOOT_IDLE_VAR_1
+    shoot_anim_2 = shoot_var_2
+    shoot_idle_2 = shoot_idle_var2
+    shoot_anim_3 = shoot_var_3
+    shoot_idle_3 = shoot_idle_var_3
+    anim_shuffle = 2,4
+    idle_time = 0.5
+    spot_impact = 850
+    spot_impact_type = ion
+    damage_type = energy
+
+	  trace Trooper {
+		  model = Data/Models/Effects/TraceBullet/Trooper_trace.nif	
+		  z_write = 0
+		  variant	= 0
+		  start_dist = 10
+		  end_dist = 10
+		  frequency	= 8
+		  ttl	= 1
+		  length = 200
+		  target_size	= 20
+		  velocity	= 50
+		  length_end = 170
+		  width_scale = 10
+		  instances = 128
+		  emit = 52,118,255
+	  }
+
+ 
+    muzzle_fx ion_rifle {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+		  frames = 4
+		  frequency = 8
+		  active_fraction	= 40
+		  active_variation = 5
+		  length_variation = 40
+		  width_variation	= 7
+		  scale	= 1.5
+		  instances = 64
+		  emit = 52,118,255
+	  }
+  }
+
+	impacts : LivingUnitImpacts  
+  abilities : TrooperAbilities
+
+  animation {
+    sequence_1 = shoot_spice_1
+  }
+
+  _action_sequence {
+    program = PrgSequenceAction
+    action_times = 5,1
+    activation_time = 10,60
+    keyboard_attach01 = data/models/effects/actionsequence/F5.nif, pt_top
+    keyboard_attach02 = data/models/effects/actionsequence/F6.nif, pt_top
+    keyboard_attach03 = data/models/effects/actionsequence/F7.nif, pt_top
+    keyboard_attach04 = data/models/effects/actionsequence/F8.nif, pt_top    
+  }
+
+  cost : pvp.humans.unit_costs.Trooper
+  cost_sloc : pvp.humans.sloc_costs.Trooper
+}
+
+CAnimEffect GrenadeExplodeAnim {
+  tags t1 = grass | dirt | mud | sand | rocks | wet_sand | snow | ice | lava {
+    spawn ExplosionMedium_01 {
+      scale = 1.2
+    }
+  }
+}
+
+CAreaEffect TrooperGrenadeExplode {
+  range = stat:grenade_radius
+ 
+  epicenter {
+    spawn GrenadeExplodeAnim
+    physics_radius = stat:grenade_radius 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      friendly_fire = 1
+      amount = stat:grenade_damage
+      --react = fire
+    }
+  }
+
+
+}
+
+TrooperAbilities {
+  Grenade {
+    name = "Throw Grenade"
+    text = "The Troopers will have [stat:throw_grenade_chance]% chance on each attack to throw an explosive greande towards his target. The grenade will inflict [stat:grenade_damage] damage in a small area. However, the Trooper will not use this ability if there is a danger for the grenade to harm allied units as well."
+    icon = 0,0
+    chance = stat:throw_grenade_chance
+    when   : abi.fight
+    range  = stat:range
+    target = current { no_ally_in_range = 300 }
+    
+    cast up {
+      min_range = 600
+      finish {
+        anim = grenade_up
+      }
+    }
+    
+    cast down {
+      max_range = 600
+      finish {
+        anim = grenade_down
+      }
+    }
+    
+    projectile = parabolic {
+	  start_point = pt_hand
+      spot_impact = 800
+      spot_impact_type = small_energy
+      damage_type = energy
+      
+      effect = TrooperGrenadeExplode
+
+      decal_settings ground_hit_decal = barrage_decal1
+      
+      model = data/models/Projectiles/Grenade/grenade2.nif {
+        CTrailController trail {
+				  emitter = Root
+				  texture = data/textures/trails/energy_trail1.dds
+				  tex_ratio = float: 4.0
+				  start_width = 14
+				  end_width = 0
+				  ttl = 12
+				  simple_time = 1
+				  additive = 1
+				  z_write = 0
+				  material_alpha = 0.5
+				  diffuse = color: 1, 1, 1
+				  ambient = color: 0.5, 0.5, 0.5
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 3
+				  color1 = colora: 1, 1, 1, 0.4
+
+				  time2 = 30
+				  color2 = colora: 1, 1, 1, 0.25
+
+				  time4 = 100
+				  color4 = colora: 1, 1, 1, 0
+			  }
+		  }
+    }
+    
+   }
+}
+
+
+Trooper_Sequence_Finish {
+    cast {
+      finish {
+        anim = grenade_up
+      }
+    }
+    
+    
+    projectile = parabolic {
+      start_point = pt_hand
+      spot_impact = 800
+      spot_impact_type = small_energy
+      damage_type = energy
+      
+      effect = TrooperGrenadeExplode
+
+      decal_settings ground_hit_decal = barrage_decal1
+      
+      model = data/models/Projectiles/Grenade/grenade2.nif {
+        CTrailController trail {
+				  emitter = Root
+				  texture = data/textures/trails/energy_trail1.dds
+				  tex_ratio = float: 4.0
+				  start_width = 14
+				  end_width = 0
+				  ttl = 12
+				  simple_time = 1
+				  additive = 1
+				  z_write = 0
+				  material_alpha = 0.5
+				  diffuse = color: 1, 1, 1
+				  ambient = color: 0.5, 0.5, 0.5
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 3
+				  color1 = colora: 1, 1, 1, 0.4
+
+				  time2 = 30
+				  color2 = colora: 1, 1, 1, 0.25
+
+				  time4 = 100
+				  color4 = colora: 1, 1, 1, 0
+			  }
+		  }
+    }
+
+}
+
+Trooper EliteTrooper : Trooper {
+  name = "Shock Trooper"
+  skin {
+    base = data/models/units/trooper/shock_trooper-diff.dds
+    mask = data/models/units/trooper/shock_trooper-mask.dds
+  }
+  
+  icon = 5,1
+  
+  stats :{
+    hp = 280
+    damage = 14
+  }
+
+  sight = 2500
+  aggro_range = 3000
+  waypoint_radius = 500
+  wander_stay = 2
+  
+  cost =
+  
+  actions {
+  }
+  
+  CWeaponController weapon : {
+    proximity_bonus = 1.25
+    range_far = stat:range * 0.5
+    range_near = stat:range * 0.2
+    delete Trooper 
+    trace elite_Trooper : Trooper.weapon.Trooper {
+       emit = 220,18,25
+    }
+ 
+    delete ion_rifle
+    muzzle_fx elite_ion_rifle : Trooper.weapon.ion_rifle {
+       emit = 220,18,25
+    }
+    
+  }
+
+  sounds : Trooper.sounds {
+    start = data/speech/summoning/shock trooper/
+    select = data/speech/selecting/shock trooper select/
+  }
+
+  spawn_react = teleport_officer_humans
+  
+  CAutoDieController AutoDie {
+    --duration = 20
+    no_enemy_despawn_time = 30
+    show_progress = 0
+  }
+}

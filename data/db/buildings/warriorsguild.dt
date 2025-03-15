@@ -1,0 +1,6 @@
+Building WarriorsGuild : BaseBuilding {
+  model = Data/Models/buildings/WarriorsGuild/WarriorsGuild.nif
+  race = mutants
+  target_priority = 500
+  req_produce_range = 1
+}

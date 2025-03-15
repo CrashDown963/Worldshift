@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\effects\magic\slow.nif";
+  animation = {
+    loop = fixp:"2.1666667461395263671875";
+    duration = fixp:"0";
+  }
+}

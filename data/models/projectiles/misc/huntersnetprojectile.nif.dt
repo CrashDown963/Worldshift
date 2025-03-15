@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\projectiles\misc\huntersnetprojectile.nif";
+  animation = {
+    loop = fixp:"1.6666667461395263671875";
+    duration = fixp:"0";
+  }
+}

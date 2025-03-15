@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\effects\miscreacts\fear.nif";
+  animation = {
+    loop = fixp:"0.5";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray01_streaks-Emitter";
+      translation = xpoint3:"0,-0.42662143707275390625,0";
+      rotation = {
+        0 = xpoint3:"0,-1,0";
+        1 = xpoint3:"0,0,1";
+        2 = xpoint3:"-1,0,0";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray02_Flamy-Emitter";
+      translation = xpoint3:"0,-0.42662143707275390625,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,1";
+        2 = xpoint3:"0,-1,0";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Plane01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

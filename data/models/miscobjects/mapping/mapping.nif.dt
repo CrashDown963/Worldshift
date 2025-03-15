@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\miscobjects\mapping\mapping.nif";
+  animation = {
+    loop = fixp:"0.70000016689300537109375";
+    duration = fixp:"2.033333301544189453125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Plane01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

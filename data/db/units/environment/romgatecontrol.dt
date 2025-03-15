@@ -1,0 +1,9 @@
+Mob ROMGateControl : BaseMob {
+  name = "ROM Gate Control"
+  icon = 6,26
+  model = Data/Models/buildings/DefencePost/DefencePost_build.nif
+  movable = 0
+  hp = 0
+  damage = 0
+  sight = 0
+}

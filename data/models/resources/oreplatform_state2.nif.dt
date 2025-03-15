@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\resources\oreplatform_state2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Root NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Platform";
+        translation = xpoint3:"0,0,60";
+        rotation = {
+          0 = xpoint3:"0.9994490146636962890625,0,0.0331920422613620758056640625";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"-0.0331920422613620758056640625,0,0.9994490146636962890625";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"platform_state2";
+          translation = xpoint3:"0,-1.23645460605621337890625,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

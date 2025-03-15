@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\flora\trees\desert_trees\saguaro-cactus_small_flowers.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"trunk";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"leaves";
+    translation = xpoint3:"14.5091094970703125,-18.8711757659912109375,297.79632568359375";
+    rotation = {
+      0 = xpoint3:"-0.3616960346698760986328125,-0.932296097278594970703125,0";
+      1 = xpoint3:"0.932296097278594970703125,-0.3616960346698760986328125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

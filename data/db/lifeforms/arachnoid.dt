@@ -1,0 +1,13 @@
+Mob Arachnoid : BaseAnimal {
+  name = "Arachnoid"
+  icon = 3,11
+  model = data/models/lifeforms/Arachnoid/Arachnoid.kfm
+  destruction = animation
+  animation {
+    anim_set ATTACK = loop {
+      Hit_1
+      Hit_2
+      Hit_rare
+    }
+  }
+}

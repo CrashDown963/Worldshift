@@ -1,0 +1,97 @@
+model = {
+  file = str:"data\models\effects\bigexplosion\explosionsmall01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"2";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"RootDummy";
+    translation = xpoint3:"0,0,-14.868831634521484375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #6 = {
+      scale = fixp:"1";
+      name = str:"RootDummy NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Drag01";
+        translation = xpoint3:"57.854404449462890625,45.593868255615234375,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Gravity01";
+        translation = xpoint3:"-106.6159210205078125,-61.99549102783203125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,-1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01Sparks-Emitter";
+        translation = xpoint3:"0,0,45.086132049560546875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray03Smoke-Emitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"Flare";
+        translation = xpoint3:"0,0,109.174468994140625";
+        rotation = {
+          0 = xpoint3:"0,-1,0";
+          1 = xpoint3:"0.17124092578887939453125,0,-0.985229194164276123046875";
+          2 = xpoint3:"0.985229194164276123046875,0,0.17124092578887939453125";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray03Flame-Emitter";
+        translation = xpoint3:"0,0,40.443653106689453125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #6 = {
+        scale = fixp:"1";
+        name = str:"SuperSprayFragments-Emitter";
+        translation = xpoint3:"0,0,-1.2798919677734375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

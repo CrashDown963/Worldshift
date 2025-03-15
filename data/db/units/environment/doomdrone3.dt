@@ -1,0 +1,38 @@
+Mob DoomDrone3 : BaseMachineMob {
+  model = data/Models/units/DoomDrone/DoomDrone3.kfm
+  icon = 1,28
+  race = common
+
+  hp = 1500
+  armor = 30
+  range = 150
+  --min_attack_range = 100
+  damage = 50
+  
+  explosion = ExplosionMedium_03
+  sounds {
+    start = data/sounds/effects/doomdroneloop/
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = pt_ground
+    shoot_anim = Hit
+    spot_impact = 1000
+    spot_impact_type = melee
+    shoot_snd = data/sounds/weapons/doomdrone3/
+
+  }
+
+  abilities {
+    Seek {
+      when : abi.combat
+      cooldown = 1000000
+      target = enemy { min_range = 2000; max_range = 3000 }
+      no_buffs { Confusion }
+      program = PrgAttack
+      no_self_buffs { Confusion }
+    }
+  }  
+}

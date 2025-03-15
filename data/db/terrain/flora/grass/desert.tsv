@@ -1,0 +1,30 @@
+id	model	vars	fade_near	fade_far	density_min	density_max	slope_max	alpha_max	scale
+
+steppebush	steppebush.nif
+BrownBushLow3	brownbushlow3.nif		50	5000	0.1	0.3			
+BrownBushLow1	brownbushlow1.nif		50	5000	0.1	0.3			
+BrownBushLow2	brownbushlow2.nif		50	5000	0.1	0.3			
+BrownBushLow4	brownbushlow4.nif		50	5000	0.1	0.3	
+DryThorns1	DryThorns1.nif		4000	5000	0.1	0.3	30		float:1.5
+DryThorns2	DryThorns2.nif		4000	5000	0.1	0.3	30		float:1.5
+DryThorns3	DryThorns3.nif		4000	5000	0.1	0.3	30		float:1.5
+DryThorns4	DryThorns4.nif		4000	5000	0.1	0.3	30		float:1.5
+DryThorns5	DryThorns5.nif		4000	5000	0.1	0.3	30		float:1.5
+DryThorns6	DryThorns6.nif		4000	5000	0.1	0.3	30		float:1.5
+DryThorns7	DryThorns7.nif		4000	5000	0.1	0.3	30		float:1.5
+PointyBush_big	Pointybushbig.nif	{shadow=0}		50	5000	0.1	0.3	
+yellow-grass_01	yellow-grass_01.nif
+yellow-grass_02	yellow-grass_02.nif
+yellow-grass_03	yellow-grass_03.nif
+yellow-grass_04	yellow-grass_04.nif
+tall-yellow-grass_01	tall-yellow-grass_01.nif
+tall-yellow-grass_02	tall-yellow-grass_02.nif
+small-desert-bush_01	small-desert-bush_01.nif
+cat-claw-bush	cat-claw-bush.nif
+cat-claw-bush_2	cat-claw-bush_2.nif
+tundra-grass_01	tundra-grass_01.nif
+tundra-grass_02	tundra-grass_02.nif
+tundra-grass_03	tundra-grass_03.nif
+silver-grass_01	silver-grass_01.nif
+silver-grass_02	silver-grass_02.nif
+cat-claw-bush_green	cat-claw-bush_green.nif

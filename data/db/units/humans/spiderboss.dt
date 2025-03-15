@@ -1,0 +1,8 @@
+Mob Spiderboss : BaseMob {
+
+  model = data/Models/units/Spiderboss/Spiderboss.kfm
+  race = humans
+  tags = unit, bot
+  }
+  
+}

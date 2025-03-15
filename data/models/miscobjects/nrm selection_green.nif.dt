@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\miscobjects\nrm selection_green.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"DR";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"-1,0,0";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"DL";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,-1,0";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"UR";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"UL";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"1,0,0";
+    }
+  }
+}

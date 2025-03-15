@@ -1,0 +1,122 @@
+Mob HarvesterMob : BaseMob {
+  name : Harvester.name
+  descr : Harvester.descr
+  race = aliens
+  icon = 5,11
+
+  model = Data/Models/Units/harvester/harvester.kfm {
+  die = Data/Models/Units/harvester/harvester_die.nif
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/harvester/Harvester.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+
+  destruction = ragdoll
+
+  hp = 720
+  armor = 14
+  range = 125
+  damage = 40
+  energy = 300
+
+  stats : {
+    vitality_surge_gain = 50
+    vitality_surge_power = 200
+    vitality_surge_cooldown = 15
+
+    harvest_chance = 10
+    harvest_damage = 30
+    harvest_range = 500
+    harvest_duration = 3
+    harvest_cooldown = 10
+
+    paralyzing_field_range = 300
+    paralyzing_field_speed_reduction_perc = 40
+    
+    confuse_chance = 20
+  }
+
+  take_auras : { RestorationCoreAura }
+
+  CEffectAura HarvesterMobParalyzingFieldAura {
+    range = stat:paralyzing_field_range
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = HarvesterMobParalyzingField
+      name : Harvester.HarvesterParalyzingFieldAura.effect.name
+      text : Harvester.HarvesterParalyzingFieldAura.effect.text
+      type = slow
+      stats_change {
+        speed_mod = { perc = stat:paralyzing_field_speed_reduction_perc * -1 }
+      }
+      tick = 1
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = paralyze
+      stack_count = 1
+      exclude_self = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = ATTACK_MAIN
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact_type = melee
+  }
+  
+  actions : Alien.actions {
+    VitalitySurgeAction;
+  }
+
+  abilities {
+    HarvesterParalyzingField 
+    HarvesterHarvestAbi 
+
+    ImminenceAbi {
+      name : Harvester.abilities.ImminenceAbi.name
+      text : Harvester.abilities.ImminenceAbi.text
+      icon = 13,0
+      when : abi.target_hit
+      chance = stat:confuse_chance
+      target = current
+      effect = S_confuse {
+        duration = 10
+        react = confusion_react
+        id = Imminence
+        name : Harvester.abilities.ImminenceAbi.effect.name
+        text : Harvester.abilities.ImminenceAbi.effect.text
+        type = confusion
+        program = PrgConfuse
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+      }
+      active = 0
+    }
+    
+    AIVitalitySurge {
+      action = VitalitySurgeAction
+      when   : abi.always
+      target = self { health_under = stat:vitality_surge_gain * -1 + 100 }
+    }
+  }
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+    }
+  }
+}

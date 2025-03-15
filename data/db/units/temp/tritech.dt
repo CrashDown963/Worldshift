@@ -1,0 +1,4 @@
+Unit Tritech2 : Tritech {
+  model = data/models/units/TritechGlow/Tritech.kfm
+  destruction = die
+}

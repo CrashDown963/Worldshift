@@ -1,0 +1,51 @@
+model = {
+  file = str:"data\models\buildings\mg_turret\mg_turret.kfm";
+  animations = {
+    idle1 = {
+      loop = int:"1";
+      duration = fixp:"3.966666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"snd:idle_steam";
+          time = fixp:"2.5";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"3.966666698455810546875";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"1";
+      duration = fixp:"1.966666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.966666698455810546875";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.966666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.966666698455810546875";
+        }
+      }
+    }
+  }
+}

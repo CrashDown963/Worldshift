@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\ruins\vehicles\trash_truck_broken_2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

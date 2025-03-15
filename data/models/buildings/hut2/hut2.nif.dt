@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\buildings\hut2\hut2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

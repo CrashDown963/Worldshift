@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\buildings\squadmodule\squadmodule_bldphase03.kfm";
+  animations = {
+    idle3 = {
+      loop = int:"0";
+      duration = fixp:"1.9666669368743896484375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.9666669368743896484375";
+        }
+      }
+    }
+  }
+}

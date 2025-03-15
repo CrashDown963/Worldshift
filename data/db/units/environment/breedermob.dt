@@ -1,0 +1,19 @@
+Mob BreederMob : BaseMob {
+  name : Breeder.name
+  icon = 4,11
+  descr : Breeder.descr 
+  race = aliens
+  
+  model = Data/Models/buildings/BreederPortal/Breeder.kfm {
+    die = Data/Models/buildings/BreederPortal/Breeder_die.nif
+  }
+  
+  destruction = animation  
+  explosion = ExplosionPlasma_01 
+  movable = 0
+
+  hp = 2000
+  armor = 2
+  range = 0
+  sight = 0
+}

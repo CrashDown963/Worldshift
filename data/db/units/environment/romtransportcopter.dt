@@ -1,0 +1,17 @@
+Mob ROMTransportCopter : BaseMob {
+  speed = 1000
+  model = data/Models/units/TransportCopter/TransportCopter.kfm
+  movement_type = hover
+  sounds {
+  	start = data/sounds/units/copter/
+  }
+  
+  hp = 0
+  damage = 0
+  
+  COrientationController orientation {
+    rot_speed = 45
+    max_tilt = 0
+  }  
+  
+}

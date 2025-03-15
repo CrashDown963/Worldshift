@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\models\artifacts\artifact1\artefact.kfm";
+  animations = {
+    activate = {
+      loop = int:"1";
+      duration = fixp:"15";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"15";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"15.00000095367431640625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"15.00000095367431640625";
+        }
+      }
+    }
+  }
+}

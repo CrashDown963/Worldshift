@@ -1,0 +1,123 @@
+Mob BridgeSurgeon : BaseMob {
+  name = "Surgeon"
+  icon = 7,10
+  race = humans
+  model = data/models/units/Surgeon/Surgeon.kfm
+  scale = 1.5
+
+  physics {
+    default = data/models/units/Surgeon/Medic_Proxy.pml
+    die = data/models/units/Surgeon/Medic.pml
+  }
+  
+  destruction = ragdoll
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  armor = 2
+  hp = 1000
+  range = 2100
+  energy = 800
+  energy_gen = 225
+  
+  stats : {
+    damage = 22
+    rejuvenation_psicost = 40
+    rejuvenation_amount = 400
+
+    bandage_range = 2000
+    bandage_amount = 200
+    bandage_cooldown = 4
+    bandage_crit = 0
+  }
+  
+  rejuvenation_range = stat:bandage_range
+  
+ 
+  impacts : LivingUnitImpacts
+
+  abilities  {
+    Renew : CastRejuvenation {
+      when   : abi.always
+      cooldown = 7
+      target = ally { 
+        tags = organic
+        health_hp_taken = stat:rejuvenation_amount * 0.5
+        aoe_range = 500
+        aoe_min_wounded_count = 2
+        aoe_min_wounded_health = 300
+      }
+      range = stat:bandage_range
+    }
+    
+    Bandage : CastBandage {
+      when : abi.always
+      cooldown = stat:bandage_cooldown
+      target = ally { 
+        tags = organic
+        health_hp_taken = stat:bandage_amount
+      }
+      range = stat:bandage_range
+    }
+  }
+  
+  actions : BaseUnit.actions {
+    RenewAction
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+
+    damage = stat:damage
+    range_far = var:range * 0.4
+    range_near = var:range * 0.2
+    proximity_bonus = 6
+    fire_node = pt_shoot_1
+    --aim_node = pt_aim
+
+    aim_tolerance = 45
+    shoot_anim = shoot
+    idle_time = 1.2
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 0.9
+		    E = 125,255,20
+ 	    }
+    }
+    spot_impact = 750
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+ 
+  animation {
+    cast_rejuvenation_finish = cast_finish
+    auto_show_hide {
+      Bone_Gun {
+        shoot
+        shoot_idle
+      } 
+    }
+  }
+}
+
+Mob LZSurgeon : BridgeSurgeon {
+  respawn_min_time = 120
+}

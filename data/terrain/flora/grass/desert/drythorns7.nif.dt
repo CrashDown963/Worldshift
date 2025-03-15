@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\desert\drythorns7.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object13";
+    translation = xpoint3:"126.516265869140625,214.838653564453125,-0.34064769744873046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

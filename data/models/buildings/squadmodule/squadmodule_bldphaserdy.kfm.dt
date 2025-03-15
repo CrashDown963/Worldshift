@@ -1,0 +1,33 @@
+model = {
+  file = str:"data\models\buildings\squadmodule\squadmodule_bldphaserdy.kfm";
+  animations = {
+    idle5 = {
+      loop = int:"1";
+      duration = fixp:"1.966666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.966666698455810546875";
+        }
+      }
+    }
+    ready_anim = {
+      loop = int:"0";
+      duration = fixp:"1.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.30000019073486328125";
+        }
+      }
+    }
+  }
+}

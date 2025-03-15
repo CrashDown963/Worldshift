@@ -1,0 +1,157 @@
+model = {
+  file = str:"data\terrain\ruins\concrete_buildings\concrete_wall_corner01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box280";
+    translation = xpoint3:"50.4573974609375,641.22528076171875,91.455596923828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Box06";
+    translation = xpoint3:"2.51750659942626953125,652.2862548828125,145.5400390625";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Box281";
+    translation = xpoint3:"8.19431972503662109375,629.50311279296875,145.5400390625";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Box282";
+    translation = xpoint3:"-13.285427093505859375,652.2862548828125,68.7418670654296875";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"Box287";
+    translation = xpoint3:"335.3497314453125,641.22528076171875,91.455596923828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,-1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"Box288";
+    translation = xpoint3:"131.492767333984375,652.2862548828125,145.5400390625";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"Box289";
+    translation = xpoint3:"115.98593902587890625,627.69061279296875,145.5400390625";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #7 = {
+    scale = fixp:"1";
+    name = str:"Box290";
+    translation = xpoint3:"162.3347015380859375,652.2862548828125,68.7418670654296875";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #8 = {
+    scale = fixp:"1";
+    name = str:"Box291";
+    translation = xpoint3:"146.43450927734375,628.53619384765625,68.7418670654296875";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #9 = {
+    scale = fixp:"1";
+    name = str:"Box292";
+    translation = xpoint3:"373.59649658203125,651.5997314453125,140.691558837890625";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #10 = {
+    scale = fixp:"1";
+    name = str:"Box293";
+    translation = xpoint3:"373.59649658203125,625.38336181640625,140.691558837890625";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #11 = {
+    scale = fixp:"1";
+    name = str:"Box294";
+    translation = xpoint3:"399.00982666015625,652.2862548828125,68.7418670654296875";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #12 = {
+    scale = fixp:"1";
+    name = str:"Box295";
+    translation = xpoint3:"264.405517578125,653.755859375,68.7418670654296875";
+    rotation = {
+      0 = xpoint3:"0,0,1";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+  #13 = {
+    scale = fixp:"1";
+    name = str:"wall-corner";
+    translation = xpoint3:"-424.635284423828125,720.4246826171875,91.455596923828125";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #14 = {
+    scale = fixp:"1";
+    name = str:"wall-corner01";
+    translation = xpoint3:"-18.3831005096435546875,72.15802764892578125,91.455596923828125";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

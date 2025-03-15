@@ -1,0 +1,52 @@
+CParticleObject SmokeBig1 {
+ model = data/models/effects/smoke/smokebig1.nif
+ scale = 1
+}
+
+CParticleObject SmokeMed1 {
+ model = data/models/effects/smoke/smokemed1.nif
+ scale = 1
+}
+
+CParticleObject SmokeSmall1 {
+ model = data/models/effects/smoke/smokesmall1.nif
+ scale = 1
+}
+
+CParticleObject SmokeSmall2 {
+ model = data/models/effects/smoke/smokesmall2.nif
+ scale = 1
+}
+
+CParticleObject Smoke_Light_Gray {
+ model = data/models/effects/smoke/Smoke_Light_Gray.nif
+ scale = 1
+}
+
+CParticleObject Swamp_Particles_Big{
+ model = data/models/effects/smoke/SwampParticles_Big.nif
+ group = Embelishments
+ subgroup = Particles
+ scale = 1
+}
+
+CParticleObject Swamp_Particles_Thick{
+ model = data/models/effects/smoke/SwampParticles_Thick.nif
+ group = Embelishments
+ subgroup = Particles
+ scale = 1
+}
+
+CParticleObject Swamp_Particles_Thin{
+ model = data/models/effects/smoke/SwampParticles_Thin.nif
+ group = Embelishments
+ subgroup = Particles
+ scale = 1
+}
+
+CParticleObject Swamp_Particles_Tiny{
+ model = data/models/effects/smoke/SwampParticles_Tiny.nif
+ group = Embelishments
+ subgroup = Particles
+ scale = 1
+}

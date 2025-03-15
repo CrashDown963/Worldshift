@@ -1,0 +1,107 @@
+model = {
+  file = str:"data\models\effects\magic\vortex.nif";
+  animation = {
+    loop = fixp:"15";
+    duration = fixp:"14.66666698455810546875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"BaseDummy";
+        translation = xpoint3:"0,0,592.4893798828125";
+        rotation = {
+          0 = xpoint3:"0.59542119503021240234375,0.803413689136505126953125,0";
+          1 = xpoint3:"-0.803413689136505126953125,0.59542119503021240234375,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"FunnelDummy";
+          translation = xpoint3:"0,0,-569.20635986328125";
+          rotation = {
+            0 = xpoint3:"0.999968230724334716796875,0.007967627607285976409912109375,0";
+            1 = xpoint3:"-0.007967627607285976409912109375,0.999968230724334716796875,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Plane02";
+            translation = xpoint3:"0,0,580.51611328125";
+            rotation = {
+              0 = xpoint3:"0.996857464313507080078125,0.0792159736156463623046875,0";
+              1 = xpoint3:"-0.0792159736156463623046875,0.996857464313507080078125,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+          #1 = {
+            scale = fixp:"1";
+            name = str:"Cone03";
+            translation = xpoint3:"0,0,-128.199188232421875";
+            rotation = {
+              0 = xpoint3:"-0.7070147991180419921875,-0.707198798656463623046875,0";
+              1 = xpoint3:"0.707198798656463623046875,-0.7070147991180419921875,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning01";
+          translation = xpoint3:"0,-518.076171875,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning02";
+          translation = xpoint3:"-520.1724853515625,0,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning03";
+          translation = xpoint3:"0,518.0758056640625,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #4 = {
+          scale = fixp:"1";
+          name = str:"pt_lightning04";
+          translation = xpoint3:"520.17193603515625,0,2408.206298828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

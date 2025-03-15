@@ -1,0 +1,61 @@
+﻿sid	text		actor	map	conv	context
+						
+//// Mission 11 supplement						
+11.obey warning	Es ist ernst, Denkar! Du musst gehorchen, sonst ist die Expedition gescheitert!	Onkar	11	10	(Denkar doesn’t do what he is told)
+11.obey warning 2	Denkar, wenn du meine Befehle missachtest, muss ich die Expedition abbrechen!	Onkar	11	10	(Denkar continues to disobey his father’s orders)
+11.disobey fail	Das reicht! Darüber wird in der Stadt zu reden sein.	Onkar	11	11	(Denkar keeps disobeying, the mission fails)
+						
+//// Mission 13 supplement						
+13.where did he go	Wo ist er hin?	Ganthu	13	15	(Ragho disappears after suffering some damage)
+						
+//// Mission 35 supplement						
+35.spawner 5 disabled	Dieser Empfänger ist deaktiviert.	Tharksh	35	4	(has just disabled a teleportation receiver)
+35.hurry-35	Beeilung! Schnell weg hier!		Kuna ni’Dahl	35	10	
+35.done	Okay, gehen wir weiter.	Denkar ni’Varra	35	10	(Tharksh has just disabled a teleportation receiver)
+						
+//// BSA Supplement						
+bsa.horror coming	Erzittert vor den Zorn des Reptils!	Announcer	bsa	4	(just before releasing the Reptile in the arena)
+bsa.reptile wins	Reptile wins!	Announcer	bsa	13	
+bsa.give sign	Kandidaten, macht euch bereit für den Kampf und gebt uns Bescheid!	Announcer	bsa	14	(between the fights)
+bsa.yamu hit	Das gibt bestimmt eine Narbe! Oder einen hässlichen Fleck am Boden!	Announcer	bsa	15	(Yamu hits a target)
+bsa.yamu dead	Achtung! Gleich fällt das Kampf-Yamu! Mann, was für eine fette Beute ... und reich noch dazu!	Announcer	bsa	16	(Yamu bites the dust)
+bsa.reptile dead	Was für ein ekliges Vieh!	Announcer	bsa	17	(Reptile dead)
+bsa.monster killed	Applaus für die Monster-Bezwinger! Jetzt machen wir eine Pause, damit unsere Helden sich etwas sammeln und für die nächsten Kämpfe vorbereiten können.	Announcer	bsa	18	(Monster boss killed)
+bsa.final battle-bsa	Eine Wahnsinnsleistung! Kandidaten, sammelt euch wieder und gebt ein Zeichen, wenn ihr für den letzten Kampf bereit seid!	Announcer	bsa	19	(Just before final battle)
+bsa.claim prize	Unglaublich! Meine Damen und Herren, ich präsentiere die Sieger des Großen Preises der Kampfsportarena von Saling! Kandidaten, zur Preisverleihung!				
+						
+//// ROM Supplement						
+rom.activate cannon	Diese Hülle brauche ich nicht mehr. Aktiviert das Geschütz!		HF1337	rom	5	(has been just defeated by the players)
+						
+//// Corrupted Fields						CORRUPTED FIELDS
+cf.open cages	Na los, öffnet die Käfige! Ich will Spaß haben!		Corrupted Priest	cf	1	
+cf.final battle-cf	Genießt es, denn dies ist euer letzter Kampf!		Corrupted Priest	cf	2	(engaging the players)
+cf.where am i	Was?! Wo bin ich?		Leader	cf	3	(has just been freed from a mind controlling spell)
+cf.your minds	Ihr gehört mir!		Corrupted Priest	cf	4	(just before mind-controlling the players’ leaders)
+cf.you strong	Ihr seid stark! Wie weit schafft ihr es wohl noch in meinem Reich?		Corrupted Priest	cf	5	(after the players have progressed far enough)
+						
+//// Esperanza						ESPERANZA
+esperanza.creeps	Es ist unheimlich hier.		Leader	esperanza	1	(just entered the dungeon)
+esperanza.didnt we	Hatten wir den nicht schon erledigt?		Leader	esperanza	2	(meeting Ancient Smith again after killing his first clone)
+esperanza.cant kill me	Ich kann nicht sterben! Ich bin unsterblich!		Ancient Smith	esperanza	3	
+esperanza.will meet again	Wir sehen uns wieder!		Ancient Smith	esperanza	4	(said by a clone when he is defeated)
+esperanza.we meet again	So sieht man sich wieder!		Ancient Smith	esperanza	5	(said by the next clone)
+esperanza.mistake	<i>Mich</i> habt ihr erwischt, doch <i>ich</i> bin entwischt. Zu dumm!		Ancient Smith	esperanza	6	(said by the a clone further down the road)
+esperanza.ill be back	Ich … komme wieder!		Ancient Smith	esperanza	7	(after his last clone has been defeated)
+						
+						
+//// Renegades’ Hideout 						RENEGADES’ HIDEOUT
+rh.bow to me	Auf die Knie, Sklaven!		Renegade Master	rh	1	(after detecting the players)
+rh.got what u deserve	Das ist euer Schicksal!		Renegade Master	rh	2	(after beating the players)
+rh.i was wrong	Ich ... hatte ... Unrecht!		Renegade Master	rh	3	(after the players lower his hit points enough)
+rh.killed by slaves	Von Sklaven besiegt! Wie ...		Renegade Master	rh	4	(has just been defeated by the players)
+rh.it is dead	Was immer das war, es ist tot. Eine Gefahr weniger.		Leader	rh	5	(after beating an alien miniboss)
+						
+//// Bridges of Trial						BRIDGES OF TRIAL
+bt.dont disappoint	Ich habe lange auf euch gewartet ... Enttäuscht mich nicht!		Lan Zealot	bt	1	(saluting the players after they enter)
+bt.challenge	Endlich eine Herausforderung!		Lan Zealot	bt	2	(engaging the players)
+bt.victory again	Noch ein Sieg ... Wann wird das aufhören?		Lan Zealot	bt	3	(has just defeated the players)
+bt.disappointed	Mehr habt ihr nicht zu bieten? Ich bin enttäuscht.		Lan Zealot	bt	4	(the players have been defeated w/o reaching him)
+bt.can rest	Endlich! Ich kann ruhen!		Lan Zealot	bt	5	(has just been defeated by the players)
+bt.impressed	Ihr habt es bis hierher geschafft. Beeindruckend! Jetzt erwartet euch die letzte Aufgabe. Viel Glück!		Lan Zealot	bt	6	(the players have cleared the rest of the dungeon)
+bt.bites the dust	Noch ein Opfer ist zu beklagen!		Lan Zealot	bt	7	

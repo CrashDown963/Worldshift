@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\miscobjects\flag\flag.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"1";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,115.7133636474609375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Plane01";
+        translation = xpoint3:"0,0,320.516937255859375";
+        rotation = {
+          0 = xpoint3:"0.707106769084930419921875,0.707106769084930419921875,0";
+          1 = xpoint3:"-0.707106769084930419921875,0.707106769084930419921875,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

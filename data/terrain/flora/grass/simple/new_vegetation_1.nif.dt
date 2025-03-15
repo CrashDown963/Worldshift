@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\simple\new_vegetation_1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"1.626597881317138671875,0.36920833587646484375,-1.54927825927734375";
+    rotation = {
+      0 = xpoint3:"0,0,-1";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,1,0";
+    }
+  }
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\resources\ore_decal.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Decal_workshop";
+    translation = xpoint3:"-6.88240814208984375,42.8902740478515625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

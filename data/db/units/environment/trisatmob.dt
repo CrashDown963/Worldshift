@@ -1,0 +1,62 @@
+Mob TrisatMob : BaseMob {
+  name : Trisat.name
+  icon = 4,12
+  descr : Trisat.descr
+  race = aliens
+
+  model = data/models/units/Trisat/Trisat.kfm {
+    die = data/models/units/Trisat/BugDie.nif
+  }
+  
+  physics {
+    default = Data/Models/Units/Trisat/Trisat_Proxy.pml
+    die = Data/Models/Units/Trisat/Bug_die.pml
+  }
+  
+  destruction = ragdoll
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs/
+  }
+
+  hp = 180
+  armor = 6
+  range = 100
+  damage = 20
+  
+  stats :{
+    shield_hull = 100
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 50
+  }
+    
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    fire_rate = 0.5
+    spot_impact_type = melee
+  }
+
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    --regen_tick = 2
+    -- reactivate_threshold = 30
+    -- regen_boost_perc = 100
+    -- regen_boost_timeout = 20
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+}

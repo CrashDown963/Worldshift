@@ -1,0 +1,94 @@
+Mob ZulThark : BaseBoss {
+  name = "Zul'Thark"
+  icon = 7,25
+  boss_icon = 3,3
+  model = Data/Models/units/Zul'Thark/Zul'Thark.kfm
+  scale = 2
+  
+  immune_to : {
+    confusion
+  }
+  
+  stats : {
+    hp = 75000
+    armor = 60
+    range = 250
+    damage = 350
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      attack_1 = 100,1,1
+      attack_2 = 100,1,1
+      attack_3 = 100,1,1
+      attack_4 = 100,1,1
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    idle_time = 0.7
+    shoot_anim = ATTACK_MAIN
+    shoot_idle_1 = shoot_idle
+    shoot_snd = data/sounds/effects/harvester hit/
+    fire_node = ROOT
+    spot_impact_type = melee
+  }
+
+  abilities {
+    ZulTharkFeedAbi {
+      when : abi.combat
+      chance = 10
+      target = ally { def = RenegadeTritech; }
+      range = 1500
+      program = PrgZulTharkFeed
+    }
+  }
+}
+
+Mob ZulTharkIllusion : BaseMob {
+  name = "Zul'Thark Illusion"
+  model = Data/Models/units/Zul'Thark/Zul'Thark.kfm
+  scale = 1.5
+  alpha = 0.5
+  
+  stats : {
+    hp = 5000
+    armor = 25
+    range = 250
+    damage = 160
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      attack_1 = 100,1,1
+      attack_2 = 100,1,1
+      attack_3 = 100,1,1
+      attack_4 = 100,1,1
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = ATTACK_MAIN
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact_type = melee
+  }
+
+}
+

@@ -1,0 +1,177 @@
+model = {
+  file = str:"data\models\units\turrets\turret_big.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Turret_Base";
+        translation = xpoint3:"0.126598834991455078125,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"rot_z";
+          translation = xpoint3:"0,0,491.82940673828125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Turret_Upper";
+            translation = xpoint3:"2.77413654327392578125,29.4241733551025390625,-10.0086669921875";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"rot_z1";
+              translation = xpoint3:"301.540252685546875,-39.18732452392578125,234.00140380859375";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"weapon_1";
+                translation = xpoint3:"0,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+                #0 = {
+                  scale = fixp:"1";
+                  name = str:"rot_x1";
+                  translation = xpoint3:"0,47.26917266845703125,56.32410430908203125";
+                  rotation = {
+                    0 = xpoint3:"1,0,0";
+                    1 = xpoint3:"0,1,0";
+                    2 = xpoint3:"0,0,1";
+                  }
+                  #0 = {
+                    scale = fixp:"1";
+                    name = str:"canon_1";
+                    translation = xpoint3:"0,0,0";
+                    rotation = {
+                      0 = xpoint3:"1,0,0";
+                      1 = xpoint3:"0,1,0";
+                      2 = xpoint3:"0,0,1";
+                    }
+                    #0 = {
+                      scale = fixp:"1";
+                      name = str:"dulo_1";
+                      translation = xpoint3:"0,0,0";
+                      rotation = {
+                        0 = xpoint3:"1,0,0";
+                        1 = xpoint3:"0,1,0";
+                        2 = xpoint3:"0,0,1";
+                      }
+                      #0 = {
+                        scale = fixp:"1";
+                        name = str:"fire_1";
+                        translation = xpoint3:"0,-337.44293212890625,0";
+                        rotation = {
+                          0 = xpoint3:"1,0,0";
+                          1 = xpoint3:"0,1,0";
+                          2 = xpoint3:"0,0,1";
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            #1 = {
+              scale = fixp:"1";
+              name = str:"rot_z2";
+              translation = xpoint3:"-300.15625,-39.18729400634765625,234.00140380859375";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"weapon_2";
+                translation = xpoint3:"0,0,0";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+                #0 = {
+                  scale = fixp:"1";
+                  name = str:"rot_x2";
+                  translation = xpoint3:"0,47.269138336181640625,56.32410430908203125";
+                  rotation = {
+                    0 = xpoint3:"1,0,0";
+                    1 = xpoint3:"0,1,0";
+                    2 = xpoint3:"0,0,1";
+                  }
+                  #0 = {
+                    scale = fixp:"1";
+                    name = str:"canon_2";
+                    translation = xpoint3:"0,0,0";
+                    rotation = {
+                      0 = xpoint3:"1,0,0";
+                      1 = xpoint3:"0,1,0";
+                      2 = xpoint3:"0,0,1";
+                    }
+                    #0 = {
+                      scale = fixp:"1";
+                      name = str:"dulo_2";
+                      translation = xpoint3:"0,0,0";
+                      rotation = {
+                        0 = xpoint3:"1,0,0";
+                        1 = xpoint3:"0,1,0";
+                        2 = xpoint3:"0,0,1";
+                      }
+                      #0 = {
+                        scale = fixp:"1";
+                        name = str:"fire_2";
+                        translation = xpoint3:"0,-341.515869140625,0";
+                        rotation = {
+                          0 = xpoint3:"1,0,0";
+                          1 = xpoint3:"0,1,0";
+                          2 = xpoint3:"0,0,1";
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

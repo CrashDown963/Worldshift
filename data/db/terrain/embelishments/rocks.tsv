@@ -1,0 +1,21 @@
+id	model	vars	class	
+Common_Stone1	common_stone1.nif	{tex_scale_auto=1}
+Common_Stone2	common_stone2.nif	{tex_scale_auto=1}	
+Common_Stone3	common_stone3.nif	{tex_scale_auto=1}
+Common_Stone4	common_stone4.nif	{tex_scale_auto=1}
+Common_Stone5	common_stone5.nif	{tex_scale_auto=1}
+common_stone8	common_stone8.nif	{tex_scale_auto=1}
+common_stone10	common_stone10.nif	{tex_scale_auto=1}
+common_stone14	common_stone14.nif	{tex_scale_auto=1}
+common_stone15	common_stone15.nif	{tex_scale_auto=1}
+common_stone18	common_stone18.nif	{tex_scale_auto=1}
+cobble_stone4	cobble_stone4.nif	{tex_scale_auto=1}
+Sharp_Rock01	Sharp_Rock01.nif	{tex_scale_auto=1}
+Sharp_Rock02	Sharp_Rock02.nif	{tex_scale_auto=1}
+Sharp_Rock03	Sharp_Rock03.nif	{tex_scale_auto=1}
+Sharp_Rock04	Sharp_Rock04.nif	{tex_scale_auto=1}
+Sharp_Rock05	Sharp_Rock05.nif	{tex_scale_auto=1}
+Sharp_Rock06	Sharp_Rock06.nif	{tex_scale_auto=1}
+Sharp_Rock07	Sharp_Rock07.nif	{tex_scale_auto=1}
+Volcano-Rock_basic	Volcano-Rock_basic.nif	{tex_scale_auto=1}
+stone_pile1	stone_pile1.nif	{tex_scale_auto=1}

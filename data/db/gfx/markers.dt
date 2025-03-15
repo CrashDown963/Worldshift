@@ -1,0 +1,35 @@
+CMapAnim marker_arrow {
+  model = data/models/MiscObjects/Markers/Marker_arrow.nif
+  scale = 1.3
+  CAutoDieController AutoDie {
+    duration = 1
+    show_progress = 0
+  }
+}
+
+CMapAnim marker_attack {
+  model = data/models/MiscObjects/Markers/Marker_attack.nif
+  scale = 1.3
+  CAutoDieController AutoDie {
+    duration = 1
+    show_progress = 0
+  }
+}
+
+CMapAnim marker_defend {
+  model = data/models/MiscObjects/Markers/Marker_defend.nif
+  scale = 1.3
+  CAutoDieController AutoDie {
+    duration = 1
+    show_progress = 0
+  }
+}
+
+CMapAnim marker_heal {
+  model = data/models/MiscObjects/Markers/Marker_heal.nif
+  scale = 1.3
+  CAutoDieController AutoDie {
+    duration = 1
+    show_progress = 0
+  }
+}

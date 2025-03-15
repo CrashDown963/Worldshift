@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\units\unitscopter\unitscopter.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,500";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Root NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Prop_Left_Dummy";
+        translation = xpoint3:"448.76287841796875,14.080013275146484375,494.3907470703125";
+        rotation = {
+          0 = xpoint3:"0,0.1736482083797454833984375,0.9848077297210693359375";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,0.9848077297210693359375,-0.1736482083797454833984375";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Prop_Left";
+          translation = xpoint3:"0,12.78811359405517578125,0";
+          rotation = {
+            0 = xpoint3:"-0.9999997615814208984375,0,0";
+            1 = xpoint3:"0,0,-0.99999964237213134765625";
+            2 = xpoint3:"0,-0.999999821186065673828125,0";
+          }
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Prop_Left_Dummy01";
+        translation = xpoint3:"-448.6370849609375,14.080013275146484375,493.6744384765625";
+        rotation = {
+          0 = xpoint3:"-0.6963641643524169921875,-0.17364813387393951416015625,0.69636428356170654296875";
+          1 = xpoint3:"0.7071068286895751953125,0,0.70710670948028564453125";
+          2 = xpoint3:"-0.1227877438068389892578125,0.984807789325714111328125,0.12278781831264495849609375";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Prop_Right01";
+          translation = xpoint3:"0,12.7880878448486328125,0";
+          rotation = {
+            0 = xpoint3:"-0.9999997615814208984375,0,0";
+            1 = xpoint3:"0,0,-0.99999964237213134765625";
+            2 = xpoint3:"0,-0.999999821186065673828125,0";
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\tundra\violet_spots.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

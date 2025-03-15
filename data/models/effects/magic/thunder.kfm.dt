@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\effects\magic\thunder.kfm";
+  animations = {
+    fade_in = {
+      loop = int:"0";
+      duration = fixp:"3";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3";
+        }
+      }
+    }
+    thunder_idle = {
+      loop = int:"1";
+      duration = fixp:"7.966666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"7.966666698455810546875";
+        }
+      }
+    }
+    fade_out = {
+      loop = int:"0";
+      duration = fixp:"3.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.5";
+        }
+      }
+    }
+  }
+}

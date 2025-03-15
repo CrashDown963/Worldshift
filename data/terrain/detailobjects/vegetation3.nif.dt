@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\terrain\detailobjects\vegetation3.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Group03";
+    translation = xpoint3:"-21.9594745635986328125,-7.170108795166015625,40.31795501708984375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Object02";
+      translation = xpoint3:"35.950183868408203125,123.796478271484375,22.9847564697265625";
+      rotation = {
+        0 = xpoint3:"0,0,-1";
+        1 = xpoint3:"-1,0,0";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Box02";
+      translation = xpoint3:"35.950183868408203125,123.796478271484375,22.9847564697265625";
+      rotation = {
+        0 = xpoint3:"0,0,-1";
+        1 = xpoint3:"-1,0,0";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"roundshadow";
+    translation = xpoint3:"-4.56273651123046875,4.0446014404296875,4.01544189453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

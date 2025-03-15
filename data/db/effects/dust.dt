@@ -1,0 +1,32 @@
+CDustEffect Dust {
+  tags t1 = dirt | mud | sand {
+    attach { 
+      Dust = Data/Models/units/Fav/FAV_DustSpray_DBV.nif
+    }
+  }
+
+//  tags t2 = grass {
+//    attach { 
+//      Dust = Data/Models/Bots/Humans/Fav/FAV_DustSpray_DBV.nif
+//    }
+//  }
+}
+
+CMapAnim DustAndDebris {
+  model = data/Models/Effects/Puffs&Dust/Dust_and_dirt.nif
+  scale = 0.3
+  offscreen_mode = 0
+}
+
+CMapAnim DustAndDebrisSmall {
+  model = data/Models/Effects/Puffs&Dust/Dust_and_dirt.nif
+  scale = 0.2
+  offscreen_mode = 0
+}
+
+CMapAnim DustAndDebrisInstant {
+  model = data/Models/Effects/Puffs&Dust/Dust_and_dirt.nif
+  scale = 0.4
+  offscreen_mode = 0
+  duration = 0.5
+}

@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\buildings\shrinetemple\shrine_build.kfm";
+  animations = {
+    build = {
+      loop = int:"0";
+      duration = fixp:"4";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4";
+        }
+      }
+    }
+  }
+}

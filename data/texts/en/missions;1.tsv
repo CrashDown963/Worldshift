@@ -1,0 +1,28 @@
+﻿sid	text
+
+26 prophecy	The Prophecy
+briefings.26 prophecy	‘When the Redeemer is born, you will know him by his soul, so strong and pure as to tame any living creature and even reach across the gates of death.<nl><nl>And when the Redeemer finds the voice in the realms of the lost hope, he will sing a song to the broken heart of the beast, and the beast will fall asleep, and it will sleep forever.<nl><nl>Then we will be masters in our home once again.’
+	
+// templates	
+random_map_templates.hell.name	Hell Hole outskirts
+random_map_templates.des.name	The Sahaar desert
+random_map_templates.desert_p.name	The Misty Plains
+random_map_templates.dry.name	The Glowing Pits
+random_map_templates.Jungle_a.name	The jungles of Inca
+random_map_templates.mushroom.name	The Gray Barrens
+random_map_templates.forest.name	The Lost Coast
+random_map_templates.cold.name	Tay-Rammin tundra
+	
+earth_spots.#107.title	Corrupted fields
+earth_spots.#107.descr	Banish the horrors of the Underworld back from whence they came.
+	
+earth_spots.#108.title	Ancient corridors
+earth_spots.#108.descr	Go deeper into the labyrinths of the Lost City…if you dare!
+	
+earth_spots.#109.title	The renegades’ hideout
+earth_spots.#109.descr	Deal with the Jaar Lash renegades.
+	
+earth_spots.#110.title	Bridges of trial
+earth_spots.#110.descr	Accept the challenge of the invincible warrior.
+	
+AlienShip_dead	Tharksh’s ship has been destroyed!

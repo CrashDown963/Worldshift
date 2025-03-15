@@ -1,0 +1,80 @@
+Unit Arbiter_LOD : BaseUnit {
+  name : Arbiter.name
+  descr : Arbiter.descr
+  race = aliens
+  model = Data/Models/Units/Arbiter/Arbiter_LOD.kfm
+  officer = 1
+  icon = 2,3
+
+  stats :{
+    hp = 320
+    range = 2000
+    psi = 300
+    damage = 70 
+    armor = 2
+    chain_shot_chance = 10
+    
+    fear_shock_power = 120
+    fear_shock_cooldown = 45
+    fear_shock_area = 600
+    fear_shock_duration = 6
+    fear_shock_range = 1800
+    
+  }
+  speed = 450
+  
+  take_auras : { RestorationCoreAura }
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.8
+    range_near = stat:range * 0.6
+    proximity_bonus = 0.2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/effects/single weapons/arbiter gun.wav
+    shoot_anim = shoot
+    shoot_idle_1 = idle
+    idle_time = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/AlienProjectile.nif
+	    speed = 2500
+      scale = 0.25
+      damage = stat:damage
+      react = fire
+    }
+  }
+  
+  actions :{
+    FearShockAction
+    
+  }
+  
+  abilities {
+    LongRangeAbi
+    ChainShotAbi
+
+    AIFearShock {
+      action = FearShockAction
+      when   : abi.fight
+      target = current { aoe_range = 1000; aoe_min_enemy_count = 4 }
+      range = 2000
+    }
+  }
+  cost : pvp.aliens.unit_costs.Officer
+  cost_sloc : pvp.aliens.sloc_costs.Officer
+}

@@ -1,0 +1,123 @@
+
+PlaceholderUnit : BaseUnit {
+
+  name = Captain Placeholder
+  model = Data/Models/Units/UnitPlaceholder/Unit.kfm
+  physics {
+    default = Data/Models/Units/UnitPlaceholder/Unit_Proxy.pml
+    die = Data/Models/Units/UnitPlaceholder/Unit.pml
+  }
+
+  destruction = ragdoll
+
+  animation {
+    auto_show_hide {
+      default_tool = gun
+      Tool_hammer {
+        work_down_hammer_1
+        work_down_hammer_2
+        work_down_hammer_3
+        work_up_hammer_1
+        work_up_hammer_2
+      }
+      Tool_Kluch {
+        work_down_key_1
+        work_up_key_1
+        work_up_key_2
+      }
+      OreCrate {
+        mine_carry
+      }
+    }
+  
+    anim_set WORK_DOWN_HAMMER = loop {
+      work_down_hammer_1
+      work_down_hammer_2
+      work_down_hammer_3
+    }
+    anim_set WORK_UP_HAMMER = loop {
+      work_up_hammer_1
+      work_up_hammer_2
+    }
+    anim_set WORK_HAMMER = loop {
+      WORK_DOWN_HAMMER = 100, 3,4
+      WORK_UP_HAMMER = 100, 3,4
+    }
+    anim_set WORK_KEY = loop {
+      work_down_key_1 = 100, 2,3
+      work_up_key_1 = 100, 2,3
+      work_up_key_2 = 100, 2,3
+    }
+    anim_set WORK = loop {
+      WORK_HAMMER = 100, 1,2
+      WORK_KEY = 100, 1,2
+    }
+    
+    mine_loop = WORK_HAMMER
+    supply_down_loop = WORK_DOWN_HAMMER
+    supply_up_loop = WORK_UP_HAMMER
+ 
+  }
+
+  tags = unit, organic, commander
+
+  speed = 462
+  //walk_speed = 167
+  movement_type = crawl
+
+  race = humans
+  
+  stats :{
+    hp = 1000
+    sight = 2500
+  }
+
+//  grenade_power_drain = 70;
+
+  min_attack_range = 2000
+  range = 2300
+
+  //havok_model = data/models/bots/arm/miner/miner.hkx
+  
+  impact_default = BulletHitsArmor
+  impact_wounded = BulletHitsArmor
+  impact_dead = BloodSplash
+  player_force_scale = 0.9
+  
+  sounds {
+    reload = data/sounds/weapons/armlightinfantry/reload/
+    destruction = data/sounds/bots/human die/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+    
+  CWeaponController weapon {
+    damage = stat:damage
+    range_far = 500
+    range_near = 100
+    proximity_bonus = 5
+    idle_only = 1
+    can_crit = 1
+    --fire_node = fire
+    fire_node = pt_aim
+    shoot_snd = data/sounds/weapons/armlightinfantry/shoot/
+    fire_rate = 0.69
+    aim_tolerance = 45
+    freeze_time = 0.69
+    shoot_anim = shoot_1
+    min_bursts = 3
+    max_bursts = 6
+    shoot_idle_1 = shoot_idle_1
+    shoot_idle_2 = shoot_idle_2
+    shoot_idle_3 = reload
+    trace = sid:light_inf
+    spot_impact = 650
+    spot_impact_dead = 700
+    muzzle_fx = light_inf
+    //laser_color = 120,30,200
+  }
+
+}

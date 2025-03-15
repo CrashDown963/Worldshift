@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\trees\dead_vegetation\dry_tree_4.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"trunk";
+    translation = xpoint3:"-9.1045856475830078125,15.92887592315673828125,0";
+    rotation = {
+      0 = xpoint3:"-0.866025388240814208984375,-0.500000059604644775390625,0";
+      1 = xpoint3:"0.500000059604644775390625,-0.866025388240814208984375,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

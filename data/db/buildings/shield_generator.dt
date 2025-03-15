@@ -1,0 +1,7 @@
+Building Shield_Generator : BaseBuilding {
+  model = Data/Models/buildings/Tower_Controller/Tower_Controller.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

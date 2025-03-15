@@ -1,0 +1,32 @@
+﻿sid	text
+
+ConfuseAction.spell.effect.effect2.name	Замешательство
+ConfuseAction.spell.effect.effect2.text	Этой единице угрожает Военачальник, и она не может атаковать других врагов.
+
+AncientSmith.abilities.ConfuseAbi.effect.effect.name	Замешательство
+AncientSmith.abilities.ConfuseAbi.effect.effect.text	Благодаря обманному маневру броня Древнего Смита повысилась.
+AncientSmith.abilities.ConfuseAbi.effect.effect2.name	Замешательство
+AncientSmith.abilities.ConfuseAbi.effect.effect2.text	Этой единице угрожает Древний Смит, и она не может атаковать других врагов.
+
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.name	Замешательство
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.text	Благодаря обманному маневру броня Древнего Смита повысилась.
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect2.name	Замешательство
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect2.text	Этой единице угрожает Древний Смит, и она не может атаковать других врагов.
+
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.name	Замешательство
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.text	Благодаря обманному маневру броня Древнего Смита повысилась.
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect2.name	Замешательство
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect2.text	Этой единице угрожает Древний Смит, и она не может атаковать других врагов.
+
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.name	Замешательство
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.text	Благодаря обманному маневру броня Древнего Смита повысилась.
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect2.name	Замешательство
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect2.text	Этой единице угрожает Древний Смит, и она не может атаковать других врагов.
+
+QueenProtector.abilities.Taunt.effect.effect.name	Лечение
+QueenProtector.abilities.Taunt.effect.effect.text	Очки жизни королевы восстанавливаются защитником королевы.
+QueenProtector.abilities.Taunt.effect.effect2.name	Замешательство
+QueenProtector.abilities.Taunt.effect.effect2.text	Этой единице угрожает защитник королевы, и она не может атаковать других врагов.
+
+BridgeTrooper.abilities.Inject.effect.name	Инъекция
+BridgeTrooper.abilities.Inject.effect.text	Десантник восстанавливает свое здоровье благодаря действию медицинского препарата.

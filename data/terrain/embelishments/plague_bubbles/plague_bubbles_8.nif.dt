@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\embelishments\plague_bubbles\plague_bubbles_8.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

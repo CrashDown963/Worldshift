@@ -1,0 +1,13 @@
+Building Portal2: BaseBuilding {
+  movable = 0
+
+  model = Data/Models/buildings/BreederPortal/Portal.nif
+
+  target_priority = 1500
+
+  race = aliens
+  stats :{
+    hp = 2000
+    armor = 20
+    range = 0
+  }

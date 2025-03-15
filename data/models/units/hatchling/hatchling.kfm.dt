@@ -1,0 +1,96 @@
+model = {
+  file = str:"data\models\units\hatchling\hatchling.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+    idle_rare_1 = {
+      loop = int:"1";
+      duration = fixp:"1.599999904632568359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.599999904632568359375";
+        }
+      }
+    }
+    idle_rare_2 = {
+      loop = int:"1";
+      duration = fixp:"1.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.66666698455810546875";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"0.366666316986083984375";
+      movement = {
+        start = xpoint3:"0,-1.10864543914794921875,0";
+        velocity = xpoint3:"0,-155.31033039093017578125,0";
+        time = fixp:"0.366666316986083984375";
+        distance = fixp:"155.310333251953125";
+        speed = fixp:"423.5740400995127856731414794921875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.366666316986083984375";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"1";
+      duration = fixp:"1";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1";
+        }
+      }
+    }
+    shoot_idle = {
+      loop = int:"1";
+      duration = fixp:"1.46666622161865234375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.46666622161865234375";
+        }
+      }
+    }
+  }
+}

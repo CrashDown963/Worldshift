@@ -1,0 +1,33 @@
+CUpgradeAction TurretUpArmor {
+  name = Upgrade Armor
+  instant = 1
+  visible = 1
+  icon = 2,1
+  program = PrgUpgrade
+  duration = 10
+  upgrade {
+    radar_range = 25%
+  }
+}
+
+CUpgradeAction TurretUpShield {
+  name = Upgrade Shield
+  instant = 1
+  visible = 1
+  icon = 2,1
+  program = PrgUpgrade
+  duration = 10
+  upgrade {
+  }
+}
+
+CUpgradeAction TurretUpRotationSpeed {
+  name = Upgrade Rotation Speed
+  instant = 1
+  visible = 1
+  icon = 2,1
+  program = PrgUpgrade
+  duration = 10
+  upgrade {
+  }
+}

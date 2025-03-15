@@ -1,0 +1,7 @@
+action AcidBlow {
+  name = Acid Blow
+  visible = 1
+  tags = location
+  icon = 3,1
+  program = PrgGrenade
+}

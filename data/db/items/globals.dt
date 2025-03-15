@@ -1,0 +1,374 @@
+item_slots {
+  INVENTORY_H { count = 65; accept_all = 1; }
+  INVENTORY_M { count = 65; accept_all = 1; }
+  INVENTORY_A { count = 65; accept_all = 1; }
+  REWARDS   { count = 16; accept_all = 1; }
+  RECYCLE   { count = 1; accept_all = 1; }
+  MISSION   { count = 3; accept_all = 1; }
+  PVP       { count = 5; accept_all = 1; }
+
+  HUMAN_COMMANDER { count = 1; race = humans; icon = 1,2; }
+  HUMAN_SURGEON   { count = 1; race = humans; icon = 3,2; }
+  HUMAN_CONSTRUCTOR   { count = 1; race = humans; icon = 5,2; }
+  HUMAN_ASSASSIN { count = 1; race = humans; icon = 4,2; }
+  HUMAN_JUDGE { count = 1; race = humans; icon = 2,2; }
+  HUMAN_DEFENCE { count = 1; race = humans; icon = 7,2; }
+  HUMAN_IMPLANTS { count = 1; race = humans; icon = 8,2; }
+  HUMAN_WEAPONS { count = 1; race = humans; icon = 6,2; }
+
+  MUTANT_HIGHPRIEST { count = 1; race = mutants; icon = 1,3; }
+  MUTANT_SHAMAN   { count = 1; race = mutants; icon = 3,3; }
+  MUTANT_STONEGHOST   { count = 1; race = mutants; icon = 5,3; }
+  MUTANT_ADEPT { count = 1; race = mutants; icon = 4,3; }
+  MUTANT_GUARDIAN { count = 1; race = mutants; icon = 2,3; }
+  MUTANT_BLOOD { count = 1; race = mutants; icon = 7,3; }
+  MUTANT_NATURE { count = 1; race = mutants; icon = 8,3; }
+  MUTANT_MIND { count = 1; race = mutants; icon = 6,3; }
+
+  ALIEN_MASTER { count = 1; race = aliens; icon = 1,1; }
+  ALIEN_DOMINATOR   { count = 1; race = aliens; icon = 3,1; }
+  ALIEN_HARVESTER   { count = 1; race = aliens; icon = 5,1; }
+  ALIEN_MANIPULATOR { count = 1; race = aliens; icon = 4,1; }
+  ALIEN_ARBITER { count = 1; race = aliens; icon = 2,1; }
+  ALIEN_POWER { count = 1; race = aliens; icon = 7,1; }
+  ALIEN_CORRUPTION { count = 1; race = aliens; icon = 8,1; }
+  ALIEN_DOGMA { count = 1; race = aliens; icon = 6,1; }
+
+-- human spec tree
+  HUMAN_SPECA1 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_A1H; -- bind item to this slot
+    reveal_gems = 10;    -- how many gems to uncover
+    max_stars = 2       -- slot level
+    --req_to_reveal = ID  -- require slot ID to be uncovered to uncover this slot
+    req_stars = 0       -- require already placed stars to be able to upgrade
+    give_stars = 1      -- how many stars player received when uncovered
+  }
+  HUMAN_SPECA2 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_A2H; 
+    reveal_gems = 10;
+    max_stars = 2
+    give_stars = 1
+  }
+  HUMAN_SPECB1 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_B1H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECA1
+    req_stars = 2
+    give_stars = 1
+  }
+  HUMAN_SPECB2 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_B2H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECA2
+    max_stars = 3
+    req_stars = 2
+    give_stars = 1
+  }
+  HUMAN_SPECB3 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_B3H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECB2
+    max_stars = 2
+    req_stars = 2
+    give_stars = 1
+  }
+  HUMAN_SPECC1 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_C1H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECB1
+    max_stars = 2
+    req_stars = 4
+    give_stars = 1
+  }
+  HUMAN_SPECC2 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_C2H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECB2
+    max_stars = 3
+    req_stars = 4
+    give_stars = 1
+  }
+  HUMAN_SPECD1 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_D1H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECC1
+    req_stars = 7
+    give_stars = 1
+  }
+  HUMAN_SPECD2 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_D2H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECC1
+    max_stars = 3
+    req_stars = 7
+    give_stars = 1
+  }
+  HUMAN_SPECD3 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_D3H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECC2
+    req_stars = 7
+    give_stars = 1
+  }
+
+-- mutants spec tree
+  MUTANT_SPECA1 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_A1M; -- bind item to this slot
+    reveal_gems = 10;    -- how many gems to uncover
+    max_stars = 2       -- slot level
+    --req_to_reveal = ID  -- require slot ID to be uncovered to uncover this slot
+    req_stars = 0       -- require already placed stars to be able to upgrade
+    give_stars = 1      -- how many stars player received when uncovered
+  }
+  MUTANT_SPECA2 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_A2M; 
+    reveal_gems = 10;
+    max_stars = 2
+    give_stars = 1
+  }
+  MUTANT_SPECB1 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_B1M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECA1
+    max_stars = 3
+    req_stars = 2
+    give_stars = 1
+  }
+  MUTANT_SPECB2 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_B2M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECA1
+    max_stars = 2
+    req_stars = 2
+    give_stars = 1
+  }
+  MUTANT_SPECB3 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_B3M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECA2
+    max_stars = 1
+    req_stars = 2
+    give_stars = 1
+  }
+  MUTANT_SPECC1 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_C1M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECB1
+    max_stars = 2
+    req_stars = 4
+    give_stars = 1
+  }
+  MUTANT_SPECC2 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_C2M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECB3
+    max_stars = 3
+    req_stars = 4
+    give_stars = 1
+  }
+  MUTANT_SPECD1 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_D1M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECC1
+    req_stars = 7
+    give_stars = 1
+  }
+  MUTANT_SPECD2 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_D2M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECC2
+    max_stars = 2
+    req_stars = 7
+    give_stars = 1
+  }
+  MUTANT_SPECD3 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_D3M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECC2
+    req_stars = 7
+    max_stars = 2
+    give_stars = 1
+  }
+
+-- alien spec tree
+  ALIEN_SPECA1 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_A1A; -- bind item to this slot
+    reveal_gems = 10;    -- how many gems to uncover
+    max_stars = 2       -- slot level
+    --req_to_reveal = ID  -- require slot ID to be uncovered to uncover this slot
+    req_stars = 0       -- require already placed stars to be able to upgrade
+    give_stars = 1      -- how many stars player received when uncovered
+  }
+  ALIEN_SPECA2 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_A2A; 
+    reveal_gems = 10;
+    max_stars = 2
+    give_stars = 1
+  }
+  ALIEN_SPECB1 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_B1A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECB2
+    req_stars = 2
+    max_stars = 2
+    give_stars = 1
+  }
+  ALIEN_SPECB2 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_B2A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECA1
+    max_stars = 3
+    req_stars = 2
+    give_stars = 1
+  }
+  ALIEN_SPECB3 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_B3A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECA2
+    max_stars = 1
+    req_stars = 2
+    give_stars = 1
+  }
+  ALIEN_SPECC1 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_C1A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECB2
+    max_stars = 3
+    req_stars = 4
+    give_stars = 1
+  }
+  ALIEN_SPECC2 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_C2A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECB3
+    max_stars = 2
+    req_stars = 4
+    give_stars = 1
+  }
+  ALIEN_SPECD1 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_D1A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECC1
+    req_stars = 7
+    give_stars = 1
+  }
+  ALIEN_SPECD2 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_D2A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECC2
+    max_stars = 3
+    req_stars = 7
+    give_stars = 1
+  }
+  ALIEN_SPECD3 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_D3A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECC2
+    req_stars = 7
+    give_stars = 1
+  }
+
+  --
+  -- INSPECT SLOTS
+  -- 
+  INSPECT_HUMAN_COMMANDER : HUMAN_COMMANDER
+  INSPECT_HUMAN_SURGEON : HUMAN_SURGEON
+  INSPECT_HUMAN_CONSTRUCTOR : HUMAN_CONSTRUCTOR
+  INSPECT_HUMAN_ASSASSIN : HUMAN_ASSASSIN
+  INSPECT_HUMAN_JUDGE : HUMAN_JUDGE
+  INSPECT_HUMAN_DEFENCE : HUMAN_DEFENCE
+  INSPECT_HUMAN_IMPLANTS : HUMAN_IMPLANTS
+  INSPECT_HUMAN_WEAPONS : HUMAN_WEAPONS
+
+  INSPECT_MUTANT_HIGHPRIEST : MUTANT_HIGHPRIEST
+  INSPECT_MUTANT_SHAMAN : MUTANT_SHAMAN
+  INSPECT_MUTANT_STONEGHOST : MUTANT_STONEGHOST
+  INSPECT_MUTANT_ADEPT : MUTANT_ADEPT
+  INSPECT_MUTANT_GUARDIAN : MUTANT_GUARDIAN
+  INSPECT_MUTANT_BLOOD : MUTANT_BLOOD
+  INSPECT_MUTANT_NATURE : MUTANT_NATURE
+  INSPECT_MUTANT_MIND : MUTANT_MIND
+
+  INSPECT_ALIEN_MASTER : ALIEN_MASTER
+  INSPECT_ALIEN_DOMINATOR : ALIEN_DOMINATOR
+  INSPECT_ALIEN_HARVESTER : ALIEN_HARVESTER
+  INSPECT_ALIEN_MANIPULATOR : ALIEN_MANIPULATOR
+  INSPECT_ALIEN_ARBITER : ALIEN_ARBITER
+  INSPECT_ALIEN_POWER : ALIEN_POWER
+  INSPECT_ALIEN_CORRUPTION : ALIEN_CORRUPTION
+  INSPECT_ALIEN_DOGMA : ALIEN_DOGMA
+
+  -- human spec tree
+  INSPECT_HUMAN_SPECA1 : HUMAN_SPECA1
+  INSPECT_HUMAN_SPECA2 : HUMAN_SPECA2
+  INSPECT_HUMAN_SPECB1 : HUMAN_SPECB1
+  INSPECT_HUMAN_SPECB2 : HUMAN_SPECB2
+  INSPECT_HUMAN_SPECB3 : HUMAN_SPECB3
+  INSPECT_HUMAN_SPECC1 : HUMAN_SPECC1
+  INSPECT_HUMAN_SPECC2 : HUMAN_SPECC2
+  INSPECT_HUMAN_SPECD1 : HUMAN_SPECD1
+  INSPECT_HUMAN_SPECD2 : HUMAN_SPECD2
+  INSPECT_HUMAN_SPECD3 : HUMAN_SPECD3
+
+  -- mutants spec tree
+  INSPECT_MUTANT_SPECA1 : MUTANT_SPECA1
+  INSPECT_MUTANT_SPECA2 : MUTANT_SPECA2
+  INSPECT_MUTANT_SPECB1 : MUTANT_SPECB1
+  INSPECT_MUTANT_SPECB2 : MUTANT_SPECB2
+  INSPECT_MUTANT_SPECB3 : MUTANT_SPECB3
+  INSPECT_MUTANT_SPECC1 : MUTANT_SPECC1
+  INSPECT_MUTANT_SPECC2 : MUTANT_SPECC2
+  INSPECT_MUTANT_SPECD1 : MUTANT_SPECD1
+  INSPECT_MUTANT_SPECD2 : MUTANT_SPECD2
+  INSPECT_MUTANT_SPECD3 : MUTANT_SPECD3
+
+  -- alien spec tree
+  INSPECT_ALIEN_SPECA1 : ALIEN_SPECA1
+  INSPECT_ALIEN_SPECA2 : ALIEN_SPECA2
+  INSPECT_ALIEN_SPECB1 : ALIEN_SPECB1
+  INSPECT_ALIEN_SPECB2 : ALIEN_SPECB2
+  INSPECT_ALIEN_SPECB3 : ALIEN_SPECB3
+  INSPECT_ALIEN_SPECC1 : ALIEN_SPECC1
+  INSPECT_ALIEN_SPECC2 : ALIEN_SPECC2
+  INSPECT_ALIEN_SPECD1 : ALIEN_SPECD1
+  INSPECT_ALIEN_SPECD2 : ALIEN_SPECD2
+  INSPECT_ALIEN_SPECD3 : ALIEN_SPECD3
+}
+
+item_consts {
+  pick_item_chance_for_gem = 0,5,15,50,100
+  destroy_item_chance_for_gem = 100,100,100,100,100
+  destroy_item_give_gems = 3,6,8,10,17
+  gems_to_reset = 10 
+  max_gems = 300
+}

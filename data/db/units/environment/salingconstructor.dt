@@ -1,0 +1,164 @@
+Mob SalingConstructor : BaseMachineMob {
+  name : Constructor.name
+  descr : Constructor.descr
+  icon = 7,20
+  race = humans
+  model = Data/Models/Units/BattleDroid/BattleDroid.kfm
+  
+  stats := {
+    hp = 320
+    armor = 7
+    range = 1800
+    damage = 25
+    
+    overcharge_chance = 15
+    overcharge_stun_duration = 5
+    
+    nano_fix_heal = 120
+  }
+
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+    
+  -- nano fix
+  nano_fix_range = stat:range * 0.7
+  nano_fix_power = 50
+  
+  -- repair drones
+  repairdrones_beam_timelife = 0.5
+  repairdrones_beam_source = pt_cast
+  repairdrones_beam = RepairDronesBeam
+  repairdrones_appearanim = RepairDroneAppear
+  repairdrones_power = 120
+  repairdrones_number = 3
+  repairdrones_repair_each_other = 1
+  repairdrones_max_drones_per_target = 6
+  repairdrones_time_to_live = 60
+  repairdrones_health = 100
+  repairdrones_repair_per_tick = 20
+  repairdrones_tick_time = 2
+  repairdrones_heal_radius = 300
+
+  abilities {
+    OverchargeAbi
+    NanofixAbi
+    RepairDronesAbi
+  }
+  
+  animation {
+    cast_nano_fix_prepare = cast_preparation
+    cast_nano_fix_finish = cast_finish
+    cast_repairdrones_channeling = cast_finish
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    damage_type = energy
+    damage = var:damage
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    fire_node = pt_shoot_1
+    idle_time = 1.2
+    shoot_snd = data/sounds/weapons/med juicy beam/
+
+    min_bursts = 1
+    max_bursts = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    
+    projectile = linear {
+      speed = 2200
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/effects/StoneGhost/StoneGhostProjectile.nif {
+        scale = 1.8
+      }
+    }
+  }
+}
+
+OverchargeAbi {
+  text = "Constructor has [stat:overcharge_chance]% chance to perform an energy lighting shot instead of his normal attack that does double damage on target. Also, the bolt creates an 'energy nova' around the current target that does that does half damage to all enemy units in small area and stuns them for [stat:overcharge_stun_duration] seconds."
+  icon = 13,0
+  chance = stat:overcharge_chance
+  when   : abi.fight
+  range  = var:range
+  target = current
+  
+  cast {
+    prepare {
+      anim = shoot
+    }
+    finish {
+      anim = shoot_idle
+    }
+  }
+  
+  projectile = linear {
+    start_point = pt_shoot_1
+    speed = 2200
+    ground_hit_effect = BulletTerrainHitEffect
+    model = data/models/effects/StoneGhost/StoneGhostProjectile.nif {
+      scale = 5
+    }
+    damage = var:damage * 2
+  }
+
+  effect = E_set {
+    effect = S_multistun {
+      multi_area = 500 { anim = data/models/effects/magic/healingwave.nif }
+      duration = stat:overcharge_stun_duration
+    }
+    effect = E_damage {
+      amount = var:damage / 2
+      area = 500
+    }
+  }
+}
+
+RepairDronesAbi {
+  name = "Repair drones"
+  text = "Creates robotic drones that will repair the Battle Droid and his allied machines"
+  icon = 13,0
+  when : abi.combat
+  target = self
+  cooldown = var:repairdrones_time_to_live + 10
+  program = PrgRepairDrones
+}
+
+NanofixAbi {
+  name = "Nanofix"
+  text = "Creates a wave of nano particles repairing instantly a machine for [stat:nano_fix_heal] hit points."
+  icon = 13,0
+  when : abi.always
+  
+  target = ally { 
+    health_hp_taken = var:nano_fix_heal / 2.0
+    tags = repairable_unit
+  }
+  
+  range = var:nano_fix_range
+  cooldown = 7
+  
+  cast {
+    prepare {
+      anim = cast_nano_fix_prepare
+    }
+    finish {
+      anim = cast_nano_fix_finish
+    }
+  }
+  
+  projectile = beam {
+    start_point = pt_hand
+    beam = NanoFixBeam -- { add relevant parameters for tune: scale, emittanc, etc }
+    duration = 0.2
+  }
+
+  effect = E_heal {
+    amount = var:nano_fix_heal
+    react = nanofix
+  }
+}

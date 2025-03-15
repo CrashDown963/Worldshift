@@ -1,0 +1,48 @@
+Turret M35Triad : BaseBuilding {
+  name : Triad.name
+  descr : Triad.descr
+  icon = 3,12
+  race = aliens
+  model = Data/Models/Units/Trisat/TrisatTriad.kfm
+  
+  stats : {
+    hp = 600
+    armor = 8
+    range = 2200
+    damage = 35
+    speed_mod = 1
+  }
+  
+  sight = stat:range + 300
+
+  movable = 0
+  separate = Trisat
+
+  CWeaponController weapon {
+    active = 1
+    damage = stat:damage
+    range_far = 700
+    range_near = 100
+    proximity_bonus = 1
+    can_crit = 1
+
+    fire_node = pt_shoot_1
+    shoot_snd = Data/Sounds/Units/Hellfire/shot
+    aim_tolerance_yaw   = 180
+    aim_tolerance_pitch = 180
+    fire_rate = 1.2 
+    spot_impact_type = fire
+    spot_impact = 850
+    damage_type = fire
+
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = fire
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+      ground_hit_effect = BulletTerrainHitEffect
+      speed = 2500
+      scale = 0.25
+    }
+  }
+
+}

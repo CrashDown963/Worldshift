@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\units\fav\fav_dustspray_dbv.nif";
+  animation = {
+    loop = fixp:"1";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"SuperSpray01-Emitter";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0.997421562671661376953125,-0.071764878928661346435546875";
+      2 = xpoint3:"0,0.071764878928661346435546875,0.997421562671661376953125";
+    }
+  }
+}

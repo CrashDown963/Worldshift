@@ -1,0 +1,13 @@
+Farm Granary : BaseBuilding {
+  name = Granary
+  model = Data/Models/buildings/Granary/Granary.nif
+  race = mutants
+
+  stats :{
+    hp = 3000
+  }
+  
+  refpoints : {
+    food = 5
+  }
+}

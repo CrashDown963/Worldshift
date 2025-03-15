@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\bridgemetal_parts\pilon03.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object03";
+    translation = xpoint3:"0.30108737945556640625,0.27777862548828125,996.6126708984375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

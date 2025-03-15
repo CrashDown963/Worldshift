@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\effects\miscreacts\battle_shout.nif";
+  animation = {
+    loop = fixp:"3.333333492279052734375";
+    duration = fixp:"0.16666667163372039794921875";
+  }
+}

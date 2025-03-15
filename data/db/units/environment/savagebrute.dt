@@ -1,0 +1,124 @@
+Mob SavageBrute : BaseMob {
+  name = "Savage Brute"
+  icon = 1,17
+  model = Data/Models/units/SavageBrute/Brute.kfm
+
+  physics {
+    default = Data/Models/units/SavageBrute/Brute_Proxy.pml
+    die = Data/Models/units/SavageBrute/Brute.pml
+  }
+
+  destruction = ragdoll
+  
+  hp = 260
+  range = 1200
+  damage = stat:damage
+  armor = stat:armor
+  
+  stats :{
+    damage = 20
+    armor = 5
+  }
+  
+  blend_aim = pt_aim {
+    shoot1 = 0 {
+      shoot_down = -40
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -40
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+	  active = 0
+
+	range_far = 500
+	range_near = 100
+	proximity_bonus = 4
+
+    idle_only = 1
+    fire_node = pt_shoot
+    --aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/m60 mg/
+    fire_rate = 0.5
+    min_bursts = 2
+    max_bursts = 4
+    aim_tolerance = 45
+    shoot_anim = shoot1
+    shoot_idle_1 = shoot_idle
+    spot_impact = 750
+    spot_impact_type = bullet
+    trace Brute {
+		  model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+		  variant	= 0
+		  start_dist = 10
+		  end_dist = 10
+		  frequency	= 9
+		  ttl	= 1
+		  length = 180
+		  target_size	= 15
+		  velocity	= 70
+		  length_end = 180
+		  width_scale = 4
+		  instances = 128
+		  emit = 177,87,56
+	  }
+    muzzle_fx Brute {
+	  model = data/models/effects/MuzzleFlash/muzzle_flash_MGanim.nif
+      frames = 4
+      frequency = 10
+      active_fraction = 40
+      active_variation = 5
+      length_variation = 20
+      width_variation = 5
+      scale = 2.5
+      instances = 64
+      emit = 255,160,80
+      low_dimmer = 1
+	  }
+  }
+
+--  CWeaponController weapon {
+--	  active = 0
+--    damage_min = 20
+--    damage_min_range = 1000
+--    damage_max = 100
+--    damage_max_range = 100
+--    idle_only = 1
+--    fire_node = pt_shoot
+--    shoot_snd = data/sounds/weapons/quasar/
+--    fire_rate = 2.5
+--    aim_tolerance = 45
+--    shoot_anim = shoot
+--    spot_impact = 1000
+--    spot_impact_type = bullet
+--    instant_shot Brute {
+--		  model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+--		  dist_start = 0
+--		  travel_start = 200
+--		  travel_end = 100
+--      duration = 0.3
+----		  duration = 0.4, 0.7, 100, 1000
+--		  time_fraction_to_lag_end = 50
+--		  width = 20
+--		  instances = 128
+--		  color_alpha {
+--			  0 = 220,100,0,255
+--			  100 = 160,80,0,255
+--		  }
+--  	}	
+--    muzzle_fx Brute {
+--		  model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+--		  frequency = 0.4
+--		  active_fraction	= 1
+--		  active_variation = 0
+--		  length_variation = 20
+--		  width_variation	= 5
+--		  scale	= 2.5
+--		  instances = 64
+--		  emit = 255,160,0
+--	  }
+--  }
+}

@@ -1,0 +1,6 @@
+Unit HellFire_v3 : MachineUnit {
+  model = data/models/units/HellFire_v3/HellFire_v3.nif
+  race = humans
+  tags = unit, organic, lowrank 
+}
+

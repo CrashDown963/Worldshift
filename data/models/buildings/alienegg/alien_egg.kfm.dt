@@ -1,0 +1,75 @@
+model = {
+  file = str:"data\models\buildings\alienegg\alien_egg.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    enraged = {
+      loop = int:"1";
+      duration = fixp:"0.7666666507720947265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.7666666507720947265625";
+        }
+      }
+    }
+    egg_build = {
+      loop = int:"0";
+      duration = fixp:"0.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.5";
+        }
+      }
+    }
+    idle_var_2 = {
+      loop = int:"1";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    enraged_var_2 = {
+      loop = int:"1";
+      duration = fixp:"0.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.30000019073486328125";
+        }
+      }
+    }
+  }
+}

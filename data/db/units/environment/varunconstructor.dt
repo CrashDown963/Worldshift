@@ -1,0 +1,81 @@
+Mob VarunConstructor : BaseMachineMob {
+  name : Constructor.name
+  descr : Constructor.descr
+  icon = 1,13
+  race = humans
+  model = Data/Models/Units/BattleDroid/BattleDroid.kfm
+  
+  stats := {
+    hp = 320
+    armor = 7
+    range = 1800
+    damage = 25
+    
+    overcharge_chance = 15
+    overcharge_stun_duration = 5
+    
+    nano_fix_heal = 120
+  }
+
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  chase_range = -1
+    
+  -- nano fix
+  nano_fix_range = stat:range * 0.7
+  nano_fix_power = 50
+  
+  -- repair drones
+  repairdrones_beam_timelife = 0.5
+  repairdrones_beam_source = pt_cast
+  repairdrones_beam = RepairDronesBeam
+  repairdrones_appearanim = RepairDroneAppear
+  repairdrones_power = 120
+  repairdrones_number = 3
+  repairdrones_repair_each_other = 1
+  repairdrones_max_drones_per_target = 6
+  repairdrones_time_to_live = 60
+  repairdrones_health = 100
+  repairdrones_repair_per_tick = 20
+  repairdrones_tick_time = 2
+  repairdrones_heal_radius = 300
+
+  abilities {
+    OverchargeAbi
+    NanofixAbi
+    RepairDronesAbi
+  }
+  
+  animation {
+    cast_nano_fix_prepare = cast_preparation
+    cast_nano_fix_finish = cast_finish
+    cast_repairdrones_channeling = cast_finish
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    damage_type = energy
+    damage = var:damage
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    fire_node = pt_shoot_1
+    idle_time = 1.2
+    shoot_snd = data/sounds/weapons/med juicy beam/
+
+    min_bursts = 1
+    max_bursts = 1
+    spot_impact = 650
+    spot_impact_type = bullet
+    
+    projectile = linear {
+      speed = 2200
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/effects/StoneGhost/StoneGhostProjectile.nif {
+        scale = 1.8
+      }
+    }
+  }
+}

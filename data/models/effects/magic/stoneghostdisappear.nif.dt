@@ -1,0 +1,87 @@
+model = {
+  file = str:"data\models\effects\magic\stoneghostdisappear.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"3.3333332538604736328125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #5 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Gravity01";
+        translation = xpoint3:"0,-190.5427703857421875,103.0274658203125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,-1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Plane01";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"0,0,1";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Plane02";
+        translation = xpoint3:"43.36054229736328125,44.1085662841796875,0";
+        rotation = {
+          0 = xpoint3:"0,0,1";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"Plane03";
+        translation = xpoint3:"-38.84900665283203125,42.84943389892578125,0";
+        rotation = {
+          0 = xpoint3:"0,0,1";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"Plane04";
+        translation = xpoint3:"-23.272308349609375,-48.3178253173828125,0";
+        rotation = {
+          0 = xpoint3:"0,0,1";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"1.04532337188720703125,11.00056552886962890625,99.636016845703125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0.34202039241790771484375,0.939692556858062744140625";
+          2 = xpoint3:"0,-0.939692556858062744140625,0.34202039241790771484375";
+        }
+      }
+    }
+  }
+}

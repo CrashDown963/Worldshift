@@ -1,0 +1,383 @@
+-- mutant actions
+
+CAction MindVisionAction {
+  name = "Mind Vision"
+  descr = "Gather Nature energies into the pointed area, granting visibility for X seconds.�"
+  visible = 1
+  target = location
+  icon = 5,4
+  spawn = FogRevealer
+  reveal_radius = 4000
+  reveal_time = 10
+  ignore_vision = 1
+  id = 1001
+  race = mutants
+  feedback = DecalFeedback
+  cost = 75r
+  cooldown = 45
+}
+
+CAction RainOfFireAction {
+  name = "Rain Of Fire"
+  descr = "Drags down to the surface a number of meteorites that are orbitig the newly formed Earth Belts, causing heavy damage in pointed area."
+  visible = 1
+  target = location
+  icon = 7,4
+  spawn = RainOfFire
+  id = 1002
+  race = mutants
+  feedback = DecalFeedback
+  cost = 200r
+  cooldown = 20
+}
+
+DarkWind MutantsThunder {
+  model = Data/Models/Effects/Magic/Thunder.kfm 
+  scale = 0.75
+  sounds {
+    start = data/sounds/effects/dark wind/
+  }
+  
+  hull = 0
+  sight = 300
+  selectable = 0
+  attackable = 0
+  no_mouse_targetable = 1
+  movable = 1
+  speed = 200
+
+  area = 1200
+  beam_duration = 0.2
+  min_beams = 1
+  max_beams = 3
+  min_beams_interval = 0.4
+  max_beams_interval = 1.2
+  anim_fade_in = fade_in
+  anim_idle = thunder_idle
+  anim_fade_out = fade_out
+  thunder_effect = E_thunder
+  thunder_spawn = BigLightningStrike01, BigLightningStrike02, BigLightningStrike03
+  duration = 30
+  lurk_area = 800
+  wander = 0
+  faction_specific = 1
+
+  CDamageEffect E_thunder {
+    sound = data/sounds/effects/dark wind bolts/
+    amount = 80
+    react = lightning
+  }
+  
+  slow_perc = 70
+
+  CEffectAura ThunderSlowAura {
+    range = 800
+    faction = all
+    tags = unit
+    exclude_self = 1
+    non_stackable = 1
+    effect = E_debuff {
+      id = ThunderSlow
+      name = "Thunderstorm Slow"
+      text = "This unit is slowed down by a Thunderstorm."
+      icon = 3,2
+      type = slow
+      stats_change {
+        speed_mod = { perc = var:slow_perc * -1  }
+      }
+      tick = 1
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = paralyze
+      stack_count = 1
+      exclude_self = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+}
+
+action ThunderAction {
+  name = "Thunder" 
+  descr = "Creates a powerful Thunder at selected area, damaging all enemies everynow and then."
+  visible = 1
+  icon = 3,4
+  id = 1002
+  cooldown = 45
+  feedback = DecalFeedback
+  tags = location
+  cost = 150r
+  race = mutants
+  function = MutantsThunder
+}
+
+CEffectAction NaturesGraceAction {
+  name = "Nature's Grace"
+  descr = "Commands the powers of the Nature to instantly heal all wounds and repair all damage of all friendly units in the pointed area."
+  visible = 1
+  tags = location
+  icon = 9,7
+  feedback = DecalFeedback 
+  aoe_radius = 1200
+  id = 1003
+  race = mutants
+  cost = 150r
+  cooldown = 25
+  stats_index = 1
+  effect = E_set {
+    sound = data/sounds/effects/global actions/natures_grace.wav 
+    effect = E_heal {
+      amount = 20000
+      area : aoe_radius { anim = data/models/effects/magic/NaturesGrace.nif}
+      react = nature_grace
+      global_action : NaturesGraceAction.stats_index
+    }
+    effect = E_heal {
+      amount = 10000
+      heal_psi = 0
+      area : aoe_radius
+    }
+  }
+}
+
+-- alien actions
+
+CShiftingRayAction ShiftingRayAction {
+  name = "Shifting Ray"
+  descr = "Teleport all ally units near Master to specified target destination."
+  visible = 1
+  tags = location
+  icon = 12,4
+  feedback = DecalFeedback
+  aoe_radius = 1200
+  id = 1021
+  race = aliens
+  cost = 200r
+  cooldown = 60
+  max_range = 4000
+  
+  radius = 1200
+  spawn_at_source = BigLightningStrike02
+  react = respawn_react
+}
+
+CEffectAction InfestAction {
+  name = "Infest"
+  descr = "Spawns hatchling infestation at the pointed location. They will fight in your behalf, but can not be given oreders. If there are no enemy targets nearby, the survived hatchlings will vanish."
+  visible = 1
+  tags = location
+  icon = 11,7
+  feedback = DecalFeedback
+  id = 1023
+  race = aliens
+  cost = 200r
+  cooldown = 45
+  effect = SpawnHatchlingsEffect
+}
+
+CSpawnEffect SpawnHatchlingsEffect {
+  duration = 4
+  sound = data/sounds/effects/common/infest.wav
+  one_time_only = 1
+  spawn_prg = PrgPlayAnim {
+    anim = spawn_1
+  }
+  spawn {
+    Hatchling = 16
+  }
+}
+
+-- CEffectAction MarkOfChaosAction {
+MarkOfChaosAction {
+  name = "Mark Of Chaos"
+  descr = "Marks all enemy units in a large area, causing them to suffer small damage over time and making them visible on the minimap for the duration of the effect."
+  visible = 1
+  tags = location
+  icon = 12,7
+  feedback = DecalFeedback
+  id = 1021
+  race = aliens
+  cost = 200r
+  cooldown = 20
+    
+  effect = E_multidebuff {
+    id = MarkOfChaos
+    name = "Mark of Chaos"
+    text = "This unit is taking damage from Mark of Chaos."
+    icon = 3,1
+    type = damage
+    damage = 10
+    multi_area = 1200 { anim = data/models/effects/magic/FreezingBlast.nif }
+    show_text_feedback = 1
+    duration = 60
+    tick = 2
+    react = expose_target
+    attach_flare = 1 { radius = 10 }
+  }
+}
+
+CEffectAction HorrifyAction {
+  name = "Horrify"
+  descr = "Horrifies all enemy units in a small area, making them running in fear and shooting chaoticly."
+  visible = 1
+  tags = location
+  icon = 12,7
+  feedback = DecalFeedback
+  id = 1022
+  race = aliens
+  cost = 250r
+  cooldown = 60
+  aoe_radius = 400
+    
+  effect = S_multifear {
+    id = Horrify
+    multi_area : aoe_radius { anim = data/models/effects/magic/Horrify.nif }
+    react = horrify
+    duration = 8
+    sound = data/sounds/effects/global actions/horrify/
+    program = PrgMadden {
+      attack_chance = 50
+      attack_count = 3
+    }
+  }
+}
+
+-- human actions
+
+CAnimEffect AirStrikeExplosionAnim {
+  tags t1 = default {
+    spawn FireSweep {
+      emit = 30,140,210
+      E = 30,140,210
+    }
+    spawn ExplosionHuge_03 {
+      emit = 30,140,210
+    }
+    spawn ExplosionHuge_04 {
+      emit = 30,140,210
+    }
+  }
+}
+
+CAreaEffect AirStrikeExplosion {
+  range = 600
+  epicenter {
+    spawn AirStrikeExplosionAnim
+    physics_radius = 500
+    physics_power = 2500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = 80
+      react = lightning
+      global_action : AirAssaultAction.stats_index
+    }
+  }
+}
+
+CAnimEffect ProtonBlastExplosionAnim {
+  tags t1 = default {
+    spawn BlueNova {
+      scale = 1.5
+      sound =
+    }
+    spawn ExplosionMedium_03 {
+      scale = 1.0
+      emit = 30,140,210
+      sound =
+    }
+    spawn ExplosionBig_03 {
+      sound =
+      scale = 1.0
+      emit = 30,140,210
+    }
+    spawn ExplosionBig_04 {
+      sound =
+      scale = 1.0
+      emit = 30,140,210
+    }
+  }
+  offscreen_mode = 0
+}
+
+CAreaEffect ProtonBlastExplosion {
+  range = 1000
+  epicenter {
+    spawn ProtonBlastExplosionAnim
+    physics_radius = 1600
+    physics_power = 5000
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = 250
+      react = lightning
+      global_action : ProtonBlastAction.stats_index
+    }
+  }
+}
+
+Actor ProtonBlastBeacon {
+  model = data/models/MiscObjects/ProtonBlastBeacon.kfm
+  sounds {
+  	start = data/sounds/effects/global actions/proton blast/
+  }
+  hull = 0
+  sight = 400
+  attackable = 0
+  selectable = 0
+}
+
+action ProtonBlastAction {
+  name = "Proton Blast"
+  descr = "Calls for the Home Town defensive cannons to aim and shot at pointed area. The Proton Blast will seriously damage all units in a large area but beware the friendly fire!"
+  visible = 1
+  tags = location
+  icon = 8,3
+  feedback = DecalFeedback
+  id = 1011
+  race = humans
+  cost = 150r
+  cooldown = 20
+  function = ProtonBlastAction
+  stats_index = 2
+}
+
+CEffectAction EliteSquadAction {
+  name = "Shock Troops"
+  descr = "Calls for a small squad of trained Shock Troopers to be teleported at the pointed location. They will fight in your behalf, but can not be given oreders. If there are no enemy targets nearby, the survived Shock Troopers will teleport back to the Home Town."
+  visible = 1
+  tags = location
+  icon = 5,8
+  feedback = DecalFeedback
+  id = 1012
+  race = humans
+  cost = 200r
+  cooldown = 45
+  effect = SpawnEliteSquadEffect
+}
+
+CSpawnEffect SpawnEliteSquadEffect {
+  sound = Data/Sounds/Effects/Teleport/TeleportOfficer.wav
+  one_time_only = 1
+  
+  spawn {
+    EliteTrooper = 10
+  }
+}
+
+action AirAssaultAction {
+  name = "Air Assault"
+  descr = "Calls for Home Town air support. A flying squadron of Storm Fighters will bombard the entire zone, focusing fire around enemy targets, for a short duration. Avoid being close to enemy forces or structures!"
+  visible = 1
+  instant = 1
+  icon = 7,6
+  id = 1013
+  race = humans
+  cost = 350r
+  cooldown = 60
+  function = AirAssaultAction
+  stats_index = 3
+}

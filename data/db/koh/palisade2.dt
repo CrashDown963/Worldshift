@@ -1,0 +1,7 @@
+Building Palisade2 : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/Palisade2.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

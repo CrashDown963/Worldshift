@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\textures\water\waves\foam2-1.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"16.666667938232421875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"16.666667938232421875";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+Mob HeavyInfantry : BaseMob {
+  name = "HeavyInfantry"
+  model = data/models/units/HeavyInfantry/HInfantry.kfm
+
+  physics {
+    default = Data/Models/units/HeavyInfantry/HeavyInfantry_Proxy.pml
+    die = Data/Models/units/HeavyInfantry/HeavyInfantry.pml
+  }
+
+  hp = 150
+  armor = 2
+  range = 1300
+  damage = 20
+
+  destruction = ragdoll
+  destruction_sound = data/sounds/bots/human die/
+  
+  impact_default = BulletHitsArmor
+  impact_wounded = BulletHitsArmor
+  impact_dead = BloodSplash
+
+  sounds {
+    reload = data/sounds/weapons/armlightinfantry/reload/
+  }
+   
+  CWeaponController weapon {
+    type = CWeaponController 
+    idle_only = 1 
+    fire_node = pt_shoot_1
+    shoot_snd = data/sounds/weapons/armlightinfantry/shoot/ 
+    fire_rate = 0.69 
+    aim_tolerance = 45 
+    freeze_time = 0.69 
+    min_bursts = 3 
+    max_bursts = 6 
+    shoot_anim = shoot_up 
+    shoot_idle_1 = shoot_idle_up 
+    shoot_idle_2 = shoot_reload 
+    trace = sid:light_inf 
+    spot_impact = 1000 
+    spot_impact_dead = 700 
+    muzzle_fx = light_inf 
+    _laser_color = 120,30,200 
+  }
+}

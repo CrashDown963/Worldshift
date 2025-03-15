@@ -1,0 +1,84 @@
+Mob QueenProtector : BaseMob {
+  name = "Queen Protector"
+  icon = 4,28
+  model = data/Models/units/Queen/Queen_Protector.kfm
+  destruction = animation
+  
+  hp = 500
+  armor = 10
+  range = 250
+  --min_attack_range = 100
+  damage = 20
+  
+  abv_pick = 1
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = pt_ground
+    --shoot_anim = Hit_1
+    spot_impact = 1000
+    spot_impact_type = melee
+  }
+  
+  abilities {
+    Seek {
+      when : abi.combat
+      cooldown = 1000000
+      target = enemy { min_range = 1500; max_range = 3000; aoe_min_enemy_count = 4 }
+      no_buffs { Confusion }
+      program = PrgAttack
+      no_self_buffs { Confusion }
+    }
+
+  sounds {
+      destruction = data/sounds/bosses/queenprotector/Queen_Protector_Destruct.wav 
+    }
+
+    Taunt {
+      when : abi.fight
+      no_self_buffs { Confusion }
+      cooldown = 15
+      target = current { area = 500 } --enemy { aoe_min_enemy_count = 4 }
+      no_buffs { Confusion }
+      effect = E_set {
+        effect = E_heal_creator_on_damage_taken {
+          sound = data/sounds/bosses/queenprotector/queen_protector_confuse.wav
+          id = HealMaster
+          name = "Heal"
+          text = "The Queen is being healed by a Queen Protector."
+          icon = 3,13
+          target_self = 1
+          mul = 0
+          add = 50
+          type = damage_absorb
+          duration = 6
+          tick = 2
+          immediate_tick = 1
+          react = lightning
+          repeat_react = 1
+          p2pray = DrainLifeLightning
+          p2pray_srcnode = pt_top
+          p2pray_dstnode = pt_top
+          --stack_count = 0
+        }
+        effect2 = E_multiconfuse {
+          multi_area = 500
+          duration = 6       -- for Y secs total
+          area { anim = data/models/effects/magic/Confusion_wave.nif }
+          react = confusion_react
+          id = Confusion
+          name = "Confusion"
+          text = "This unit is threatened by a Queen Protector and cannot attack anyone else."
+          icon = 4,2
+          type = confusion
+          debuff = 1
+          program = PrgConfuse
+          tick = 1
+          immediate_tick = 1
+          discard_react = 1
+        }
+      }  
+    }
+  }
+}

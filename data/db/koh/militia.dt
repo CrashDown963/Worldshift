@@ -1,0 +1,48 @@
+Unit Militia : BaseUnit {
+  Halberdier = 1
+  model = data/models/units/KOHUnits/Militia.kfm
+  race = humans
+  tags = unit, organic
+  speed = 450
+
+
+  sight = 1400
+  aggro_range = var:sight
+  stats :{
+    hp = 600
+    armor = 3
+    psi = 0
+    psi_gen = 0
+    range = 50
+    damage = 40
+
+  }
+  min_attack_range = 3	
+  max_attack_range = 3
+
+  impacts : LivingUnitImpacts
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      hit_1 = 100,1,1
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK_MAIN
+    fire_node = Scene Root
+    fire_rate = 0.3
+    spot_impact = 900
+    spot_impact_type = melee
+  }
+}
+  

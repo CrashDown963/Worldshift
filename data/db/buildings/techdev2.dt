@@ -1,0 +1,9 @@
+CRuin TechDEV_2 {
+  model = data/terrain/ruins/techdev/TechDEV_2.nif
+  
+  reacts { 
+    lightning { 
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif
+    }
+  }
+}

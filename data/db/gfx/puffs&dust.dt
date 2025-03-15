@@ -1,0 +1,7 @@
+CMapAnim PuffDust {
+  model = data/Models/Effects/Puffs&Dust/PuffDust.kfm
+}
+
+CMapAnim PuffDustLight {
+  model = data/Models/Effects/Puffs&Dust/PuffDustLight.kfm
+}

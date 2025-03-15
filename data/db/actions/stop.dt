@@ -1,0 +1,6 @@
+action Stop {
+  instant = 1
+  visible = 1
+  program = PrgIdle
+  icon = 2,1
+}

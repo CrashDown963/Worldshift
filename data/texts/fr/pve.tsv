@@ -1,0 +1,147 @@
+﻿sid	text:fr
+	
+AcidBug.name	Insecte acide
+Adam.name	Adam
+AlienBase.name	Extra-terrestre
+Announcer.name	Annonceur
+Ape.name	Singeopard
+Arachnoid.name	Arachnoïde
+Armadillo.name	Armadillo
+Arna ni'Varra.name	Arna ni’Varra
+BaseAnimal.name	Animal
+BaseBuilding.name	Bâtiment
+BaseMachineMob.name	Machine
+BaseTurret.name	Tourelle
+BattleYamu.name	Yamu de combat
+Big_bird.name	Oiseau
+Big_sloth.name	Paresseux
+BigOne.name	La pondeuse
+Bird01.name	Oiseau
+BSABattleYamu.name	Yamu de combat
+BSAHowlingHorror.name	Horreur monstrueuse
+Carnother.name	Carnatrox
+Commander Kean.name	Commandant Kean
+Crococeratops.name	Crococératops
+DefaultAreaAction.name	Secteur
+DefencePost.name	Poste de défense
+DefencePost.descr	Une tourelle de défense automatisée.
+Defender.name	Défenseur
+Denkar ni'Varra.name	Denkar ni’Varra
+Eel.name	Anguille
+Eji.abilities.Charming.name	Charme
+Eji.abilities.Charming.text	S’il le peut, l’ennemi s’attaquera à quelqu’un d’autre.
+Eji.abilities.FullRestoration.name	Restauration complète
+Eji.abilities.FullRestoration.text	Soigne complètement les unités proches. Nécessite une concentration totale.
+Eji.abilities.Restore.name	Restauration
+Eji.abilities.Restore.text	Restaure les points de vie des unités alliées
+Eji.name	Eji
+FatDealer.name	Double-gras
+FireDealer.name	Double-feu
+Frank.name	Frank N. Stein
+Ganthu.name	Ganthu
+GarbageAssaulter.name	Assaillant des ferrailles
+GarbageHealer.name	Guérisseur des ferrailles
+GateMob.name	Porte
+Gates.name	Porte
+GiantMutant.name	Mutant géant
+GiantSpiderEgg.name	Œuf de scorpion géant
+Gorgar.name	Gorgar le tardif
+Greenskin.name	Peau verte
+GreenskinWild.name	Peau verte sauvage
+Havoc.name	Ravage
+HeavyBot.name	Robot lourd
+HeavyInfantry.name	Infanterie lourde
+HF1337.name	HF1337
+HighPriest33.name	Grand prêtre XLII
+HumanShip.name	Transport personnel
+HumanShip.descr	 
+Hut.name	Hutte
+Insect.name	Insecte
+Judge Dread.name	Juge Dread
+Judge Smirnov.name	Juge Smirnov
+Judge Davidov.name	Juge Davidov
+Absolute Judge.name	Juge absolu
+JunkLurker.name	Rodeuses
+Kai_Rider.name	Kai monté
+Kikkert.name	Kikkert
+King_Beetle.name	Roi scarabée
+Kirxxa.name	Kirxxa
+krocus.name	Krockus
+Kuna.name	Kuna ni’Dahl
+M16DetonateCharge1Action.name	Faire exploser la première charge
+M16DetonateCharge2Action.name	Faire exploser la deuxième charge
+M16DetonateCharge3Action.name	Faire exploser la troisième charge
+MachineUnit.name	Machine
+Mercenary.name	Mercenaire
+Millenium Frogger.name	Aigle du millénium
+Mola Ramm.name	Mola Ramm
+MutantBird.name	Oiseau
+MutHouse.name	Maison de mutant
+Nightmare.name	Cauchemar
+Nomad.name	Nomade
+Onkar ni'Varra.name	Onkar ni’Varra
+Onkar.name	Onkar ni’Varra
+PickM23Artifact.name	Examiner les ruines
+PsiResonator.name	Le résonateur Psi
+Pterodacto.name	Ptero
+Ragho.name	Ragho
+Raptor.name	Raptor
+Rhino.name	Rhino
+ROMDefenceTower.name	Tour de défense
+ROMDefenceTurret.name	Tourelle de défense
+ROMDroid.name	Droïde
+ROMGate.name	Porte
+ROMGateControl.name	Commande de porte
+ROMHBot.name	Robot-L
+ROMKillingTurret.name	Tourelle tueuse
+ROMMegaCannon.name	Mégacanon
+ROMMegaCannonPowerCore.name	Noyau d’alimentation de mégacanon
+ROMP2Reinforce.name	Appeler des renforts
+ROMPowerGenerator.name	Générateur d’alimentation
+ROMRipper.name	Ripper
+ROMShieldGenerator.name	Générateur de bouclier
+ROMTowerControl.name	Tour de contrôle
+ROMZBot.name	Robot-Z
+SavageBrute.name	Ga’ro
+Scavenger.name	Charognard
+Scientist.name	Scientifique
+Scorpion.name	Scorpion
+Scout.name	Éclaireur
+SpiderEgg.name	Œuf de scorpion
+SpiderNest.name	Nid d’araignée
+SpiderSpawn.name	Insecte explosif
+SpittingScorpion.name	Scorpion cracheur
+Switch.descr	Sélectionner la bonne unité et faire un clic droit sur l’interrupteur pour l’activer.
+Switch.name	Interrupteur
+Tharksh.name	Tharksh
+TransportShip.name	Vaisseau de transport
+Trashmaster Ditz.name	Trashmaster Ditz
+Trashmaster Ulv.name	Trashmaster Ulv
+Triad.name	Triade
+Trogloc.name	Trogloc
+Turtle.name	Tortue
+UnderworldUnit.name	Créature des enfers
+Unihorn.name	Unicorne
+UseSwitch.name	Utiliser
+Vasilii.name	Vasiliy
+VenomousScorpion.name	Scorpion venimeux
+Wall.name	Mur
+WildBrute.name	Ga’ro sauvage
+Xessk.name	Xessk
+YellowSavage.name	Ga’ro jaune
+RanBoo.name	Ran Boo
+MaleWorm.name	Ver mâle
+Punk.name	Lézard à crête
+SmallWorm.name	Petit ver
+FemaleWorm.name	Ver femelle
+InfantMaleWorm.name	Ver mâle jeune
+InfantFemaleWorm.name	Ver femelle jeune
+KharumDrone.name	Drone éclaireur
+Queen.name	Reine
+Scorpo.name	Scorpo
+BigMutant.name	Jack pourpre
+Bill.name	Bill la fusée
+GuardDroid.name	Droïde garde
+Mech0.name	Machine 0
+KharumTacticalDrone.name	Drone tactique d’opérations
+QueenProtector.name	Protecteur de reine

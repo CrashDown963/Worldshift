@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\units\oretransport\oretransport.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.3333333432674407958984375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.3333333432674407958984375";
+        }
+      }
+    }
+    fly = {
+      loop = int:"1";
+      duration = fixp:"0.6666667461395263671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.6666667461395263671875";
+        }
+      }
+    }
+    landing = {
+      loop = int:"1";
+      duration = fixp:"0.66666662693023681640625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.66666662693023681640625";
+        }
+      }
+    }
+  }
+}

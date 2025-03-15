@@ -1,0 +1,161 @@
+BattleYamu BattleYamu : BaseUnit {
+  name = "Battle Yamu"
+
+  model = Data/Models/units/BAttleYamu/BAttle_Yamu.kfm {
+    rot_x_1 {
+      min_pitch = -45
+      max_pitch = 45
+    }
+    rot_z_1 {
+      min_yaw = -15
+      max_yaw = 15
+    }
+  }
+
+  race = common
+  
+  min_melee_range  = 1
+  max_melee_range  = 100
+  min_cannon_range = 1500
+  max_cannon_range = 2000
+  
+  tags = unit, organic
+
+  impact_default = BloodSplash
+  impact_wounded = BloodSplash
+  impact_dead = BloodSplash
+
+  stats : {
+    hp = 6000
+    armor = 12
+    range = 2700
+    damage = 280
+  }
+
+--  abilities {
+--    TrampleAbi
+--  }
+
+  animation {
+    anim_set HEAD_KNOCK = loop {
+      head_knock_1 = 50
+      head_knock_2 = 50
+    }
+
+    anim_set HEAD_SWING = loop {
+      head_swing_1 = 50
+      head_swing_2 = 50
+    }
+    
+    anim_set HEAD_ATTACK = loop {
+      head_knock_1
+      head_knock_2
+      head_swing_1
+      head_swing_2
+    }
+  }
+
+  COrientationController orientation {
+    rot_speed = 60
+    max_tilt = 20
+  }
+  
+  CWeaponController cannon {
+    active = 1
+    can_crit = 1
+    damage = stat:damage
+    min_range = 700
+--    range_near = 1000
+--    range_far = 1800
+    range = 2000
+    proximity_bonus = 3
+    idle_only = 0
+    fire_node = pt_shoot_1
+--    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Heavy Deep Energy
+    fire_rate = 3.0
+    aim_tolerance = 10
+    shoot_anim = shoot_cannon
+    min_bursts = 1
+    max_bursts = 1
+--    shoot_idle_1 = shoot_idle
+    spot_impact = 650
+    spot_impact_type = bullet
+    face_target = 0
+
+    instant_shot YamuCannon {
+      model = Data/Models/Effects/TraceBullet/ion_trace.nif	
+      dist_start = 0
+      travel_start = 100
+      travel_end = 10
+      duration = 0.2
+--		  duration = 0.4, 0.7, 100, 1000
+      time_fraction_to_lag_end = 50
+      width = 50
+      instances = 128
+      color_alpha {
+        0 = 50,120,200,255
+        100 = 50,120,200,255
+      }
+    }
+  }
+
+  CBattleYamuMeleeController melee {
+
+    -- 'Shoot' animations for this controller are: HEAD_ATTACK (an animation set, for the head attacks),
+    -- and trample_X_Y, where X = front/rear and Y = left/right (for the legs)
+
+    active = 0
+    idle_only = 1
+    damage = stat:damage *  0.2
+--    range_near = 1
+--    range_far = 200
+    range = 200
+    proximity_bonus = 1
+--    min_bursts = 1
+--    max_bursts = 1
+--    shoot_idle_1 = combat_idle
+    fire_node = ROOT
+    fire_rate = 2
+    aim_tolerance = 30
+    face_target = 1
+    
+    zones = 30, 105
+    -- zones = x, y, where:                           		  -x° ___ x°
+    -- head zone is (-x°, x°)                         		    ,'\ /`.
+    -- front leg zones are (-y°, -x°) and (x°, y°)    		-y° |——Y——| y°
+    -- rear leg zones are (-180°, -y°) and (y°, 180°) 		    `._|_.'
+  }
+
+  trample_effect = E_damage {
+    area = 500
+    react = stun
+    amount = stat:damage * 0.1 -- stat:trample_damage
+  }
+  
+  head_effect = E_yamu_head {
+    react = thunder
+    cone_angle = 30
+    melee_range = 400
+    amount = stat:damage * 0.4 -- stat:head_damage
+  }
+}
+  
+--TrampleAbi {
+--  name = "Trample"
+--  text = "Trample description"
+--  icon = 13,0
+--}
+
+--CDamageEffect E_stun {
+--  damage = 1000
+--  react = stun
+--}
+
+CMeleeMultiEffect E_yamu_head {
+  duration = 10
+  damage = stat:damage * 0.4
+  react = stun
+  area = 0
+  effect = CDamageEffect
+}

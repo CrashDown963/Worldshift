@@ -1,0 +1,137 @@
+Unit Ripper : MachineUnit {
+  name = "Ripper"
+  descr = "DESCRIPTION"
+  model = Data/Models/Units/Ripper/Ripper.kfm
+  race = humans
+  tags = unit, bot, lowrank
+  icon = 3,1
+  
+  physics {
+    default = Data/Models/Units/Ripper/Ripper_Proxy.pml
+    die = Data/Models/Units/Ripper/Ripper.pml
+
+    --attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    --attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    --attach_destr_node_03 = data/models/Effects/Smoke/SmokeSmall2.nif
+    --attach_destr_node_04 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    --attach_destr_perc = 18
+	
+  }
+  --destruction = ragdoll
+  explosion = ExplosionMedium_03
+  
+  sight = 1400
+  aggro_range = var:sight
+  stats : {
+    hp = 180
+    armor = 8
+    range = 80
+    damage = 12
+    elusion = 0
+
+    overclock_cooldown = 16
+    overclock_perc = 150
+    overclock_duration = 4
+
+    rupture_chance = 3
+    rupture_stun_duration = 4
+    
+  }
+  
+  actions :{
+    MakeOreExtractor -- fake
+  }
+  
+  speed = 450
+
+  sounds {
+    attack = data/speech/confirmations/ripper/
+    confirm = data/speech/confirmations/ripper/
+    select = data/speech/selecting/ripper select/
+    footstep = data/sounds/units/ripper/step/
+    stop = data/sounds/units/ripper/stop/
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK_MAIN
+    shoot_snd = data/sounds/units/ripper/shoot/
+    
+ --   min_bursts = 1
+ --   max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+--    fire_rate = stat:fire_rate
+    spot_impact = 500
+    spot_impact_type = melee
+  }
+  
+  animation {
+      anim_set ATTACK_MAIN = loop {
+      Hit_1 = 100,1,1
+      Hit_2 = 100,1,1
+      Hit_rare_1 = 100,1,1
+      Hit_rare_2 = 100,1,1
+      }
+  }
+  
+  nano_restore_points = Bip01,Bone15,Bone16,Box03,Bone22,pt_hand,Bone30,Bone39,Box05,pt_chest,Bone01,Bone02,pt_footprint02,pt_foot,Bone08,pt_cast,
+  
+  abilities {
+    Ability_Rupture
+    OverclockAbi
+  }
+  cost : pvp.humans.unit_costs.Ripper
+  cost_sloc : pvp.humans.sloc_costs.Ripper
+}
+
+OverclockAbi {
+  name = "Overclock"
+  text = "The Ripper overclocks his CPU and gains [stat:overclock_perc]% movement speed for [stat:overclock_duration] seconds."
+  icon = 1,0
+  chance = 100
+  when : abi.combat
+  cooldown = stat:overclock_cooldown
+  target = current
+  effect = E_buff {
+    id = Overclock
+    name = "Overclock"
+    text = "Increased movement speed"
+    icon = 1,11
+    target_self = 1
+    type = buff
+    stats_change {
+      speed_mod = { perc = stat:overclock_perc } 
+      }
+    duration = stat:overclock_duration
+    react = overclock
+  }
+}
+  
+Ability_Rupture  {
+  name = "Rupture"
+  text = "Ripper attack has [stat:rupture_chance]% chance to stun its target for [stat:rupture_stun_duration] seconds and cause damage to all surrounding enemies." 
+  icon = 6,0
+  chance = stat:rupture_chance
+  when   : abi.fight
+  range  = stat:range
+  target = current
+  cooldown = 4
+
+  effect = E_set {
+
+    effect = S_stun {
+      duration = stat:rupture_stun_duration
+      discard_react = 1
+      react = rupture
+    }
+  
+    effect = E_damage {
+      amount = stat:damage
+      area = 150 
+    }
+  }
+}

@@ -1,0 +1,5 @@
+CMapAnim RepairDroneAppear {
+  model = Data/Models/Effects/Magic/repairdrone_appear.kfm
+  scale = 1
+  sound = data/sounds/effects/common/repair_drone_up.wav
+}

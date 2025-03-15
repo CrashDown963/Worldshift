@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\ruins\bridgemetal_parts\bridgemetal_part02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

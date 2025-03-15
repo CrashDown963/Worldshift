@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\detailobjects\junglebush5.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"-4.29239654541015625,8.1312255859375,26.2355670928955078125";
+    rotation = {
+      0 = xpoint3:"-0.99930036067962646484375,0.037406452000141143798828125,0";
+      1 = xpoint3:"-0.037406452000141143798828125,-0.99930036067962646484375,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

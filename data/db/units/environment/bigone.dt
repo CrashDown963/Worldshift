@@ -1,0 +1,192 @@
+Mob BigOne: BaseBoss {
+  name = "The Big One"
+  icon = 7,14
+  model = data/Models/units/Spiderboss/Spiderboss.kfm
+  destruction = animation
+  boss_icon = 6,1
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs
+  }
+  
+  stats : {
+    range = 1200
+    damage = 75
+    armor = 15
+    hp = 9500
+    sight = 2500
+    speed = 250
+
+    paralyzing_field_range = 2200
+    paralyzing_field_speed_reduction_perc = 80
+
+    shower_chance = 5
+    shower_damage = 30
+    shower_area = 2000
+    shower_damage_area = 220
+    shower_duration = 5
+  }  
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  sight = stat:sight
+  speed = stat:speed
+  
+  COrientationController orientation {
+    rot_speed = 90
+    max_tilt = 0
+  } 
+    
+  CEffectAura BigOneParalyzingFieldAura {
+    range = stat:paralyzing_field_range
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = SlowPoison
+      name = "Slowing Poison"
+      text = "This unit is slowed down by paralizing poison."
+      icon = 1,6
+      type = slow
+      stats_change {
+        speed_mod = { perc = stat:paralyzing_field_speed_reduction_perc * -1 }
+      }
+      tick = 1
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = paralyze
+      stack_count = 1
+      exclude_self = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+  
+  attack_spell = AttackSpell
+  
+  AttackSpell {
+    range = stat:range
+    cast {
+      finish {
+        anim = cast_loop
+        sound = data/sounds/units/highpriest/pyro/
+        attach {
+          pt_cast01 = data/models/effects/magic/FireFXFinish.nif
+          pt_cast02 = data/models/effects/magic/FireFXFinish.nif
+        }
+      }
+    }
+  
+    projectile = beam {
+      start_point = pt_cast01,pt_cast02
+      beam = DrainLifeLightning
+    }
+    
+    effect = E_damage {
+      amount = stat:damage
+      react = fire
+      can_crit = 1
+    }
+  }
+
+  abilities {
+    ParalyzingFieldAbi {
+      name = Slow Poison
+      text = The spider slows down the movement of all living enemies close to him by [stat:paralyzing_field_speed_reduction_perc]%.
+      icon = 13,0
+    }
+
+    VenomShowerAbi {
+      name = Venom Shower
+      text = The Big One sprays venom from its venom spraying thingies inflicting venomous damage to all units in front of him.
+      icon = 13,0
+      when = fight
+      chance = stat:shower_chance
+      target = enemy {
+        area = stat:shower_area
+      }
+
+      cast { prepare { anim = shoot } }
+      
+      projectile = splitparabolic {
+        secondary_projectiles = 15
+        secondary_radius = 1300
+        
+        primary {
+          projectile = parabolic {
+            start_point = pt_cast01
+            angle = 0
+            model = Data/Models/Effects/TraceBullet/MasterProjectile.nif {
+              scale = 2.5
+            }
+          }
+        }
+        
+        secondary {
+          projectile = parabolic {
+            angle = 0
+            spot_impact = 800
+            spot_impact_type = small_energy
+            damage_type = energy
+            model = Data/Models/Effects/TraceBullet/MasterProjectile.nif {
+              scale = 1.5
+            }
+            effect = E_set {
+              effect = E_spawn {
+                spawn { VenomSpore = 1 }
+              }
+              effect = E_multidebuff {
+                id = venom
+                name = "Poison"
+                text = "This unit is taking damage from poison."
+                icon = 1,5
+                type = damage
+                damage = stat:shower_damage
+                damage_type = poison
+                multi_area = stat:shower_damage_area {
+                  sound = Data/Sounds/Effects/PoisonSpores/
+                }
+                show_text_feedback = 1
+                duration = stat:shower_duration
+                tick = 1
+                immediate_tick = 1
+                discard_react = 1
+                react = poison
+                stack_count = 1
+              }
+            }
+  	      }
+        }
+      }
+    }
+
+    SpawnAbi {
+      name = Spawn
+      text = The Big One lays eggs that if not killed in time will spawn full grown nasty spiders.
+      icon = 13,0
+      cooldown = 20
+      target = self
+      when = fight
+      effect = E_spawn {
+        range = 1500
+        copy_target_list = 1
+        spawn {
+          SpiderEgg = 1,3
+        }
+        spawn {
+          GiantSpiderEgg = 1,2
+        }
+      }
+    }
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}
+
+CMapAnim VenomSpore {
+  model = data/Models/Effects/MediumExplosion/ExplosionPlasma.kfm
+  scale = 1
+}

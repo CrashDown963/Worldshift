@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\flora\grass\simple\thin-grass3.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

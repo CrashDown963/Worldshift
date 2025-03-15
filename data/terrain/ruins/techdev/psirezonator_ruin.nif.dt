@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\ruins\techdev\psirezonator_ruin.nif";
+  animation = {
+    loop = fixp:"3.3666667938232421875";
+    duration = fixp:"0";
+  }
+}

@@ -1,0 +1,6 @@
+Alien ManipulatorTemp: Alien {
+  race = aliens
+  linkable = 1
+  model = Data/Models/Units/Manipulator/Manipulator.nif
+}
+

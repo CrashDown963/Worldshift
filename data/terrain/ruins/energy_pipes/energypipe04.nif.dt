@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\energy_pipes\energypipe04.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"EP-04";
+    translation = xpoint3:"13.53960418701171875,7.8433990478515625,338.2095947265625";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

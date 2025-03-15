@@ -1,0 +1,13 @@
+Building RadarPostBuild : BaseBuilding {
+  model = Data/Models/buildings/RadarPost/RadarPost_Build.nif
+  race = humans
+  
+  stats :{
+    hp = 4000
+  }
+
+  sight = 1500
+  
+  actions {
+  }
+}

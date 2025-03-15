@@ -1,0 +1,133 @@
+model = {
+  file = str:"data\models\units\savagebrute\brute.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"0.8666667938232421875";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-399.81927490234375,0";
+        time = fixp:"0.8666667938232421875";
+        distance = fixp:"399.81927490234375";
+        speed = fixp:"461.3298649601638317108154296875";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot01_down";
+          time = fixp:"0.30000019073486328125";
+        }
+        #2 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.733333587646484375";
+        }
+        #3 = {
+          name = str:"end";
+          time = fixp:"0.8666667938232421875";
+        }
+      }
+    }
+    walk = {
+      loop = int:"1";
+      duration = fixp:"1.19999980926513671875";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-200.684478759765625,0";
+        time = fixp:"1.19999980926513671875";
+        distance = fixp:"200.684478759765625";
+        speed = fixp:"167.23709225095808506011962890625";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"Foot01_down";
+          time = fixp:"0.366666316986083984375";
+        }
+        #2 = {
+          name = str:"Foot02_down";
+          time = fixp:"0.933332920074462890625";
+        }
+        #3 = {
+          name = str:"end";
+          time = fixp:"1.19999980926513671875";
+        }
+      }
+    }
+    shoot_in_01 = {
+      loop = int:"0";
+      duration = fixp:"1.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.5";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"1";
+      duration = fixp:"2.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.5";
+        }
+      }
+    }
+    shoot1 = {
+      loop = int:"1";
+      duration = fixp:"2.66666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.66666698455810546875";
+        }
+      }
+    }
+    shoot_idle = {
+      loop = int:"1";
+      duration = fixp:"2.33333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.33333301544189453125";
+        }
+      }
+    }
+  }
+}

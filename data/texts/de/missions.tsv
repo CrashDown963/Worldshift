@@ -1,0 +1,126 @@
+﻿sid	text:de
+	
+// missions	
+earth_spots.#11.title	Aus heiterem Himmel
+earth_spots.#11.descr	Onkar ni’Varra leitet eine Expedition zur Erkundung alter Ruinen. Sein Sohn Denkar ist verantwortlich für die Sicherheit der Truppe.
+earth_spots.#12.title	Zerstörung
+earth_spots.#12.descr	Als Denkar von einer Erkundungsmission zum Tamani-Dorf zurückkehrt, wird dieses gerade von der Dünenstadt-Armee angegriffen.
+earth_spots.#13.title	Verrat!
+earth_spots.#13.descr	Ein weiterer Angriff der Dünenstadt-Armee erfolgt im nahegelegenen Wakono-Dorf. Der dortige Hohepriester Ganthu muss seinen Stamm beschützen.
+earth_spots.#14.title	Vergeltung
+earth_spots.#14.descr	Denkar und Ganthu wollen dem Stützpunkt der Dünenstadt-Armee einen Besuch abstatten, den Oberbefehlshaber ausschalten und ein Schiff kapern.
+earth_spots.#15.title	Feindseliger Empfang
+earth_spots.#15.descr	Denkar, Ganthu und Eji nähern sich Saling. Ihr Weg führt sie durch das verbrannte Ödland außerhalb der Stadt.
+earth_spots.#16.title	Einschleichen
+earth_spots.#16.descr	Denkar, Ganthu und Eji versuchen, nach Saling einzudringen. Denkar muss ein Ablenkungsmanöver ausführen, damit die beiden Mutanten sich unbemerkt einschleichen können.
+earth_spots.#21.title	Ein neuer Feind
+earth_spots.#21.descr	Denkar ist neuer Lord Commander von Aurora. Er wird ausgesandt, um eine Anlage in den Außenbezirken der Stadt gegen unbekannte Angreifer zu verteidigen.
+earth_spots.#22.title	Ein Ort des Todes
+earth_spots.#22.descr	Denkar kehrt zum Sterbeort seines Vaters zurück, um dessen Feldtagebuch zu bergen. Er hofft, dass es Hinweise auf die verlassene Stadt der Menschen beinhaltet.
+earth_spots.#23.title	Spurensuche
+earth_spots.#23.descr	Onkars Tagebuch verweist auf einen Ort irgendwo in Inca. Unter Denkars Führung soll ein Suchtrupp in den Ruinen nach weiteren Hinweisen Ausschau halten.
+earth_spots.#24.title	In den Hort der Bestie
+earth_spots.#24.descr	Die letzte Spur ist ein verfallener Esperanza-Außenposten in Amerika.
+earth_spots.#25.title	Der Weg nach Esperanza
+earth_spots.#25.descr	Denkars Truppe nähert sich Esperanza und muss feststellen, dass es in den Außenbezirken der Stadt von Aliens und Kreaturen der Plage wimmelt.
+earth_spots.#26.title	Labyrinth
+earth_spots.#26.descr	Im Inneren von Esperanza angelangt versucht Denkars Truppe, vor den Aliens zur Quelle der geheimnisvollen Kraft zu gelangen, die Eji spürt.
+earth_spots.#31.title	Entdeckt!
+earth_spots.#31.descr	Denkar und seine Truppe haben das Esperanza-Artefakt in ihren Besitz gebracht. Jetzt müssen sie damit aus der Stadt entkommen.
+earth_spots.#32.title	Gebrochene Schwingen
+earth_spots.#32.descr	Die Truppen des Kults haben Tharkshs Schiff abgeschossen und versuchen, die Gruppe zu vernichten.
+earth_spots.#33.title	Gefangen im Netz
+earth_spots.#33.descr	Kuna ni’Dahl und Arna ni’Varra eilen Denkar zu Hilfe. Auch ihr Schiff wird beschädigt, aber Kuna kann in der Nähe der Flugabwehrstellung des Kults landen.
+earth_spots.#34.title	Chaos
+earth_spots.#34.descr	Die Jurraner haben den Abschuss des Alien-Schiffs bemerkt und schicken einen Einsatztrupp zur Absturzstelle. Die einheimischen Stämme eröffnen sofort den Kampf.
+earth_spots.#35.title	Aufstieg
+earth_spots.#35.descr	Denkars Gruppe erklimmt den Bergkamm rings um den Höllenschlund.
+earth_spots.#36.title	Schlacht der Gedanken
+earth_spots.#36.descr	Eji versucht verzweifelt, wieder die Oberhand über den Kult zu gewinnen. Sie muss dem Alien-Spiritisten in einem Telepathie-Duell die Stirn bieten.
+	
+// special locations	
+earth_spots.#101.title	Tödliche Safari
+earth_spots.#101.descr	Begeben Sie sich auf eine tödliche Safari, auf der die Jäger schnell zu den Gejagten werden!
+earth_spots.#102.title	Dünenstadt-Stützpunkt
+earth_spots.#102.descr	Infiltrieren Sie den Dünenstadt-Stützpunkt!
+earth_spots.#103.title	Kampfsportarena
+earth_spots.#103.descr	Beweisen Sie Ihr Können in der Arena!
+earth_spots.#104.title	ROM-Stützpunkt
+earth_spots.#104.descr	Infiltrieren Sie den ROM-Stützpunkt!
+earth_spots.#105.title	Kharum
+earth_spots.#105.descr	Retten Sie die Bewohner Kharums vor der drohenden Gefahr!
+earth_spots.#106.title	Schrottplatz
+earth_spots.#106.descr	Stellen Sie sich den Bewohnern des Schrottplatzes!
+	
+// story bits titles	
+12 cities	Die Städte der Menschen
+12 saling	Saling
+12 onkar	Onkar ni’Varra
+12 denkar	Denkar ni’Varra
+12 tamani	Tamani
+13 ganthu	Ganthu
+13 eji	Eji
+13 ragho	Ragho
+14 allies	Unerwartete Verbündete
+14 mining_base	Der Dünenstadt-Stützpunkt
+15 saling	Saling
+16 mutants	Mutanten und Städte
+21 aurora	Aurora
+21 order	Der Orden
+21 kuna	Kuna ni’Dahl
+21 denkar	Denkar ni’Varra
+21 arna	Arna ni’Varra
+21 aliens	Unbekannte Angreifer
+22 meeting	Die Ratssitzung
+22 lost_city	Die vergessene Stadt
+22 diary	Onkars Tagebuch
+23 diary	Onkars Tagebuch
+24 esperanza	Esperanza
+25 final_clue	Der letzte Hinweis
+26 esperanza	Esperanza
+31 sacrifice	Opfer
+31 aliens	Jaar Lash
+31 tharksh	Meister Tharksh
+31 seeds	Die Saat
+31 resonator	Der Psi-Resonator
+32 aa	Flugabwehrstellung der Jaar Lash
+33 help	Rettungsmission
+34 jurra	Jurra
+35 hole	Der Höllenschlund
+36 acceleration	Die Akzeleration
+	
+// victory conditions	
+victory_defeat	Sie wurden besiegt!
+victory_nolongerdefeated	Sie sind nicht mehr unterlegen!
+victory_victory	Sie haben gesiegt!
+victory_nolongervictory	Sie sind nicht mehr siegreich!
+victory_playerdefeated	Spieler [#] ist besiegt!
+victory_playernolongerdefeated	Spieler [#] ist nicht mehr unterlegen!
+	
+victory_missiondone	Mission erfüllt!
+victory_missionfail	Mission gescheitert!
+Commander_dead	Ihr Lord Commander ist tot!
+HighPriest_dead	Ihr Hohepriester ist tot!
+Master_dead	Ihr Meister ist tot!
+	
+Denkar ni'Varra_dead	Denkar ni’Varra ist tot!
+Ganthu_dead	Ganthu ist tot!
+Eji_dead	Eji ist tot!
+Tharksh_dead	Tharksh ist tot!
+Onkar ni'Varra_dead	Onkar ni’Varra ist tot!
+Arna ni'Varra_dead	Arna ni’Varra ist tot!
+Kuna_dead	Kuna ni’Dahl ist tot!
+	
+vic_13defdead	Die Verteidiger sind tot!
+vic_13vdefdead	Die Dorfverteidiger sind tot!
+	
+vic_31psistolen	Der Psi-Resonator wurde geraubt!
+vic_31psidestr	Der Psi-Resonator wurde zerstört!
+	
+vic_32psistolen	Der Psi-Resonator wurde geraubt!
+vic_32psidestr	Der Psi-Resonator wurde zerstört!
+	
+vic_33shipdes	Das Schiff wurde zerstört!
+	
+vic_34psistolen	Der Psi-Resonator wurde geraubt!
+vic_34psidestr	Der Psi-Resonator wurde zerstört!

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\bridgemetal_parts\platformwall01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"-0.8250732421875,-15.124908447265625,650.16455078125";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

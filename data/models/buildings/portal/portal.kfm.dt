@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\portal\portal.kfm";
+  animations = {
+    open = {
+      loop = int:"0";
+      duration = fixp:"1.33333337306976318359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.33333337306976318359375";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.033333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.033333301544189453125";
+        }
+      }
+    }
+    close = {
+      loop = int:"0";
+      duration = fixp:"1.3333332538604736328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.3333332538604736328125";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+Worker Worker : BaseUnit {
+  name = "Worker"
+  descr = "Worker  Desc."
+  model = Data/Models/Units/Worker/Worker.kfm
+  race = mutants
+  icon = 1,2
+  destruction = animation
+  
+  tags = unit, organic, lowrank
+  impacts : LivingUnitImpacts
+  take_auras : { RestorationCoreAura }
+
+  sight = 1400
+
+  stats :{
+    hp = 220
+    armor = 0
+    damage = 3
+    range = 80
+  }
+  speed = 450
+
+  sounds {
+    start = data/speech/summoning/worker summoned.wav
+    attack = data/speech/confirmations/worker/worker attack/
+    select = data/speech/selecting/worker select/
+    confirm = data/speech/confirmations/worker/worker confirm/
+    destruction = data/speech/deaths/worker death/
+    damage = data/speech/engage alerts/worker damage/
+  }
+
+  abilities {
+    RepairAbi {
+      name = "Repair Building"
+      text = "..."
+      icon = 8,0
+    }
+    BuildAbi {
+      name = "Build Shrine"
+      text = "..."
+      icon = 8,0
+    }
+  }
+
+  animation {
+    plant_structure = WORK_1
+    
+    anim_seq WORK_1 = loop {
+      hit_1 = 100, 2,4
+      hit_1_idle = 100, 1,1
+    }
+
+    anim_seq WORK_2 = loop {
+      hit_2 = 100, 2,4
+      hit_2_idle = 100, 1,1
+    }
+
+    anim_seq WORK_3 = loop {
+      hit_3 = 100, 2,4
+      hit_3_idle = 100, 1,1
+    }
+
+    anim_set WORK = loop {
+      WORK_1
+      WORK_2
+      WORK_3
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = hit_1
+    shoot_idle_1 = hit_1_idle
+    fire_node = ROOT
+    spot_impact = 200
+    spot_impact_type = melee
+  }
+
+  can_build = 1
+
+  actions : BaseUnit.actions {
+    WorkerRepairAction
+    MakeShrine
+  }
+
+  action WorkerRepairAction {
+    name = "Repair Building"
+    tags = repairable
+    program = PrgRepair
+    visible = 0
+    icon = 3,6
+    can_default = 1
+    weight = 2
+  }
+
+}
+

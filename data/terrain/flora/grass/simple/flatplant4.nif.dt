@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\simple\flatplant4.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"flatplant";
+    translation = xpoint3:"11.948272705078125,9.9024658203125,8.8002796173095703125";
+    rotation = {
+      0 = xpoint3:"-0.99930012226104736328125,0.0374064482748508453369140625,0";
+      1 = xpoint3:"-0.0374064482748508453369140625,-0.99930012226104736328125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

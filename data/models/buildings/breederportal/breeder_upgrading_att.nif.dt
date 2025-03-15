@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\buildings\breederportal\breeder_upgrading_att.nif";
+  animation = {
+    loop = fixp:"8.3666667938232421875";
+    duration = fixp:"0.83333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Cylinder01";
+      translation = xpoint3:"-1.81610774993896484375,38.206714630126953125,-74.9626617431640625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Cylinder02";
+      translation = xpoint3:"-1.81610810756683349609375,38.206714630126953125,-101.2389678955078125";
+      rotation = {
+        0 = xpoint3:"-0.57357656955718994140625,0.819152057170867919921875,0";
+        1 = xpoint3:"-0.819152057170867919921875,-0.57357656955718994140625,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

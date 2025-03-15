@@ -1,0 +1,4 @@
+Unit Trisat2 : Trisat {
+  model = data/models/units/TrisatGlow/Trisat.kfm
+  destruction = die
+}

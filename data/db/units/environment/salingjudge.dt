@@ -1,0 +1,155 @@
+Mob SalingJudge : BaseMob {
+  name : Judge.name
+  icon = 2,11
+  descr : Judge.descr
+  race = humans
+  model = data/models/units/Judge/Judge.kfm
+  speed = 450
+  take_auras : { RestorationCoreAura }
+  
+  stats : {
+    hp = 450
+    armor = 8
+    range = 1500
+    damage = 35
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+
+  battle_shout_duration = 10
+  battle_shout_cooldown = 12
+  battle_shout_damage_perc = 40
+  battle_shout_area = 500
+  movement_type = crawl
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }
+
+  physics {
+    default = data/models/units/Judge/Judge_Proxy.pml
+    die = data/models/units/Judge/Judge.pml
+  }
+  
+  destruction = ragdoll
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = var:damage
+    range_far = var:range * 0.5 
+    range_near = var:range * 0.2
+    proximity_bonus = 2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Juicy Laser/
+    fire_rate = 0.8
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle_1
+    spot_impact = 650
+    damage_type = energy
+
+    muzzle_fx ion_rifle_judge {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
+		  frames = 2
+		  frequency = 1.0
+		  active_fraction	= 10
+		  active_variation = 5
+		  length_variation = 10
+		  width_variation	= 10
+		  scale	= 4
+		  instances = 64
+          emit = 52,118,255
+	  }
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = ion
+      speed = 5000
+      model = Data/Models/Effects/TraceBullet/JudgeShot.nif
+      Scale = 1
+      E = 52,118,255
+      react = ion
+      ground_hit_effect =  BulletTerrainHitEffect
+      effect = SalingJudgeHit    
+    }
+  }
+  
+  impacts : LivingUnitImpacts
+  
+  abilities {
+    BattleShoutAbi {
+      name = Battle Shout
+      when : abi.fight
+      cooldown = var:battle_shout_cooldown
+      icon = 13,0
+      target = ally { def = SalingTrooper }
+      
+      effect = E_multibuff {
+        id = BattleShout
+        name : VoiceofCommandAction.effect.name
+        text : VoiceofCommandAction.effect.text
+        type = morale
+        
+        stats_change {
+          damage = { perc = var:battle_shout_damage_perc }
+        }
+        
+        duration = var:battle_shout_duration
+        multi_area = var:battle_shout_area { anim = data/models/effects/magic/healingwave.nif }
+        target_id = SalingTrooper
+        ally = 1
+        react = battle_shout
+      }
+    
+      CMapAnim SalingJudgeHit {
+        model = data/models/effects/impacts/IonHitReact.nif
+      }
+    }
+    
+    DischargeAbi {
+      name = Discharge
+      icon = 13,0
+      when : abi.target_hit
+      chance = 20 
+      target = current
+      
+      effect = E_powerburn {
+        id = Discharge
+        burned_power = var:damage
+        damage_amplifier = 100
+        react = discharge
+      }
+    }
+    
+  }
+  
+}
+

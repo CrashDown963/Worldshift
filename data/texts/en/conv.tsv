@@ -1,0 +1,857 @@
+﻿sid	text
+	
+//// Mission 1.1	
+	
+11.incoming	Watch out! There are wild mutants here!
+	
+11.not harmless	It seems this place is not so harmless after all!
+11.take troops	Denkar, take the troops and clear the way ahead, I will stay to protect the technicians.
+	
+11.keep moving	Good job, my son, keep moving.
+	
+11.we are coming	Okay, we’re coming. Make sure the way south is clear.
+	
+11.go south	Go south.
+	
+11.hang around	Good!  We’ll work here for a while. Denkar, you clear the way ahead!
+	
+11.under attack-11	Denkar! We’re under attack, it’s Varunians!
+11.coming	Coming! Quick as I can. Hold on!
+11.save yourself	No! They are too many! It is too late for me! Run! Save yourself! That’s an or...
+11.nooo	Father! No!
+	
+11.avoid patrols	Be careful!  We want to get out of here alive? So we avoid the patrols!
+	
+11.another patrol	Another patrol! Look out!
+	
+11.obey warning	This is serious, Denkar! Show discipline or you’re going to endanger the expedition.
+11.obey warning 2	Denkar, if you can’t take orders, I’m going to shut down this expedition.
+11.disobey fail	That’s  enough! We’ll talk about this back in the city.
+	
+	
+//// Mission 1.2	
+	
+12.under attack-12	The village is under attack! I’ve gotta help them!
+	
+12.road blocked	The Dunetowners have blocked the path. I can’t make it alone, I need to get help.
+	
+12.good start	Good start. But I’m gonna need more.
+	
+12.more help	Good. More support, but it’s still not enough.
+	
+12.got help	This is all I can get. Fingers crossed it’ll be enough!
+	
+12.still need help	I could use some help to break this blockade. I’ve got to get help.
+	
+12.break blockade	OK. Let’s give it our best shot! Clear the way!
+	
+12.village damaged	Everything’s on fire! Damn! Why do that!?
+12.push	We have to take the remaining defenders and push the Dunetowners back.
+	
+	
+//// Mission 1.3	
+	
+13.under attack-13	Master Ganthu, our xenolite is under attack! You must help the defenders!
+13.take me there	Hurry, let’s go!
+	
+13.last of them	It appears that this was the last of them for now. We should try to drive them away! Hmm... their camp must be fortified.
+	
+13.diversion	Master Ganthu, it seems the rear of their camp is not defended. Maybe a skillful magic user can sneak in and create a diversion.
+13.i will go	All right, I’ll go and try to confuse them.
+	
+13.kill him	This is him!
+13.die freak	Die, mutant trash!
+13.trap	Ragho! How could you stoop to treachery! Is ambition to be a chief more important than the tribe’s safety?
+13.me traitor	We needed a crisis. It’s high time everybody sees  that we need a strong, decisive leader... not an old bookworm!
+13.village endangered	The village could be in danger. Ragho may have been blinded, but I doubt the humans will hold to whatever agreement they made.
+	
+13.you die eji sold	Hurry as much as you want! You’re not going to make it!  Your precious brat will be the humans’ toy!
+13.not eji	Leave Eji out of this!
+13.too late	Too late, old man. I promised her already. They have orders to collect <i>curiosities</>!
+	
+13.use skills	You could use these magic skills for the good of the tribe!
+13.strong leader	That’s exactly what I’m doing! Soon the tribe’ll have a strong leader!
+	
+13.come to your senses	It’s not too late for you to come to your senses, Ragho.
+13.no turning back	No turning back now, old man!
+	
+13.where did he go	Where did he go?
+	
+13.disappeared	Disappeared! Again!
+	
+13.not again	Not again...
+	
+13.just die	Come out and fight, ‘chief’!
+	
+13.come	Come, Eji, we must hurry! Ragho has outdone himself. He has struck a deal with the humans to him help become a chief. The village is no longer safe for us!
+13.yes master	I’m ready, master Ganthu!
+	
+13.give child	Stop! You leaving alive is not in the plan, Ganthu. I promised the brat to humans.
+13.what	What!?
+13.never	Harm Eji? Over my corpse, turncoat!!
+	
+13.enough teleporting	So much for the new chief! We have no place in the village now. That is for certain.
+	
+13.what now	And now, master Ganthu?
+13.journey	Eji, it’s time for us to begin your journey, it seems.
+	
+//// Mission 1.4	
+	
+14.need diversion	The way into the camp is shut. We have to get the Dunetowners to open the gate!
+14.mine nearby	I see a xenolite mine to the north. If we attack it hard enough, perhaps they will send some reinforcements through the gate.
+14.lets try	Sounds like a plan. Let’s try.
+	
+14.gate here	Here’s the gate. Let’s hope it stays open long enough.
+	
+14.get them	The savages are attacking us! Get ’em, boys!
+	
+14.officer down	Their officer is dead!
+	
+14.gate opened	The gate’s open! Hurry! Sneak in!
+	
+14.what is this	What are all these animals doing here?
+14.force field	I think could disable the force field for us to pass, but I don’t think we should let these creatures out.
+14.passage	I see a passage to the north. Maybe we can take a detour through there.
+	
+14.unlocking	This console has little security. I’ll disable it now.
+	
+14.can open but beams	These are the controls for the northern gate! I can open it but we’ll need to go around the entire base to use the entrance.
+	
+14.can open no beams	These control the northern gate! I can open it.
+	
+14.opening	Done!
+	
+14.base found	Check out these defenses... No way we are getting in there. Retribution will have to wait.
+14.come get some	The outer perimeter has been breached! Intruders are in the camp!
+14.duel of honor	Let’s hope the shuttle isn’t guarded so heavily.
+14.no duel	Double the patrols. Find and eliminate the intruders!
+14.had to try	We have to hurry.
+	
+14.my ship	They are heading for my shuttle! Stop them!
+14.hurry-14	Hurry, Denkar! Start this flying thing! The whole base is running towards us!
+14.trying	Hold up... I got it! Let’s get out of here!
+	
+	
+//// Mission 1.5	
+	
+15.here we come	The terrain is brutal but there is a way to reach the city by foot.
+	
+15.careful-15	Be careful, the lava erupts all the time!
+	
+15.made through lava	Yes, we made it through.
+15.respect nature	Nature demands respect, Denkar.
+	
+15.found saling base	A Salingian camp! Perfect! Let’s ask them for an escort.
+	
+15.what the	What the...?
+15.treason	Whoa! They certainly recognized me, why are they shooting at us!? That’s treason!
+15.cannot defeat	You can ask them when they <i>stop</> shooting. Right now let’s get out of here!
+15.passage	I see a passage to the right, just in front of the camp!
+	
+15.past saling base	Great... Now we must find another way to approach Saling.
+	
+15.message	Lord ni’Varra, I bring word from our Lord Commander.
+15.no chance	Denkar, Senator ni’Marten ordered me to stop you. I cannot disobey.
+15.offer	You know you stand no chance alone against my troops, but I offer you a fight of honor. Your versus my squad, outside the camp.
+15.trap	It could be a trap!
+15.men of honor	I don’t think so. We Salingians are men of honor.
+15.follow me	Follow me, Lord ni’Varra.
+	
+15.lets dance	Let’s dance!
+	
+15.incredible	It... it is an honor to die from your hand... ni’Varra!
+15.fought well	You fought well, Commander. The honor is mine.
+15.keep promise	I... I will keep my promise... My men won’t harm you. Go now!
+15.humans	Shooting at their own, fighting duels, then suddenly letting you pass... *sigh* Humans...
+15.respect honor	Honor demands respect as well, Ganthu.
+	
+	
+//// Mission 1.6	
+	
+16.alarms 1	This is the place. Remember: Don’t let any guard activate the alarm or the whole damn base will be onto us!
+16.alarms 2	The Rippers aren’t smart enough but any trooper will try to start the alarm as soon as he identifies an intruder.
+16.crowd control	Understood. So if we meet a patrol, we either freeze or confuse the troopers and then finish them off before they run for the alarm.
+16.lets go	OK, let’s go.
+	
+16.got key	This is a key card. It opens the gate.
+	
+16.can sneak	OK, we are in. If I keep my helmet on and don’t get too close, I think I can walk around freely but the guards better not see Eji and you.
+16.not too close	All right, we’ll stay low and count on you to divert their attention.
+	
+16.guards east	Master Ganthu, I sense many guards to the east of the entrance.
+16.cant pass	I see. Denkar, it may be wise for Eji and I to avoid the eastern passage.
+	
+16.kill guards	I think we can neutralize this patrol. Denkar, go for the Trooper!
+	
+16.too many	There are too many troopers here, I don’t think even you could sneak through them, Denkar.
+16.diversion east	Wait here, I’m gonna try the eastern passage. Maybe I can distract them!
+16.careful-16	Be careful!
+	
+16.found bombs	Hmm... xenolite storage facility! Wonder if they’ve got some of those mining explosives... Gotta watch out these guards aren’t around as I check the crates.
+	
+16.got bombs	Perfect! I can plant these on a suitable building and detonate them from a distance. It should make the guards go check it out!
+	
+16.bomb spot	I think this a good place to plant an explosive! I need to be certain though they don’t see me setting the charge.
+	
+16.bomb planted	The explosives are planted!
+	
+16.boom1	Activating explosives!
+	
+16.boom2	Activating explosives!
+	
+16.boom3	Activating the explosives!
+	
+16.heard boom	An explosion! Let’s see what’s is going on.
+	
+16.another block	Another road block… the explosives worked last time, so it’s worth another shot!
+	
+16.third block	Yet another road block.
+16.last one	We are getting close. This should be the last one. Let’s wake em up.
+16.panic	I sense... confusion! I think they will fall for it.
+	
+//// Mission 2.1	
+	
+21.save village	The village is under attack! We must help the defenders!
+21.save lab	Commander ni’Varra, we have specific orders to protect the science facility!
+21.save both	Perhaps we can carry out orders <i>and</> help the village at the same time.
+21.enemy	We have information about a concentration of enemy troops between the village and the lab, and an unknown installation in the north-east.
+	
+21.kuna reinforcements	We can’t hold this much longer, I’m calling for reinforcements!
+	
+21.kuna - where are the reinf	Lilly, reinforcements... Where are they?
+21.lilly - i am afraid i am	I’m afraid I <i>am</> the reinforcements, Judge ni’Dahl. These creatures are everywhere around the city. All our forces are engaged.
+	
+21.knew it	I knew it!
+	
+21.whats this	What <i>is</> this ugly thing!?
+21.destroy it	It seems important for these creatures. Let’s try and bring it down.
+	
+	
+//// Mission 2.2	
+	
+22.score to settle	It seems the Varunians have a lasting interest in this location. We’ll have to fight our way through and I have a score to settle.
+22.take it easy	Be careful, Denkar. Revenge is poor council!
+	
+22.looks hard	Hmm, this is going to be hard.
+22.we can do it	I think we can fight our way through.
+22.casualties	Probably... but at what cost?
+22.not running	If we pick our fights carefully we can do this. I am not running away this time!
+22.clear judgement	I understand your sentiments but be careful not to let them cloud your judgement.
+22.you right	I agree.
+	
+22.assassins	Assassins! Kill them! Fast!
+	
+22.found diary	This is the place. My father’s diary has to be somewhere near the ruin.
+	
+22.look east	Denkar, look east!
+22.where came from	What? Where did they come from?
+22.coming our way	The more important question is where are they heading...
+22.consider running	I know you said you’re not running this time, but I would strongly recommend that you reconsider that conviction!
+22.lets run	Aaaah! Damn! Retreat! Everybody! Go, go, go!
+	
+	
+//// Mission 2.3	
+	
+23.scout the area	We must scout the area. Look out for ancient ruins.
+23.careful-23	Be careful about that base we detected from the shuttle.
+	
+23.stay away from base	The entrance is heavily defended. Better stay away from the base.
+	
+23.check this out	Looks like whoever excavated this stumbled upon something big. Eliminate the guards and show this to the technicians.
+23.need time	We’ll need some time to examine this.
+23.hurry-23	Quickly! We are sitting ducks.
+	
+23.need power	This was part of a large outpost. The equipment seems well preserved, so if we can find and activate the power source, then we might be able to extract information from their computers.
+23.find power	Let’s get moving then. We are looking for something resembling a power source.
+	
+23.start generator	This may be some kind of a power generator. It seems intact. Let’s try to activate it.
+23.expect trouble	But be on your guard! There’s no way those machines are gonna leave us in peace.
+	
+23.heal me	Oops! I think I activated a defense mechanism. There is high voltage on all parts of the generator. Somebody must heal me while I’m working or I’ll be toast in 20 seconds.
+	
+23.generator online	Yes! The power generator is on-line!
+23.go back	Let’s get back to the first site and see if we can get something from the computers!
+	
+23.path blocked	Watch out! The generator has activated a defense field! We can’t go back! We have to find other computers.
+	
+23.found another site	Great! More computers. Technician, check to see if they’re on-line.
+23.affirmative	Yes, ma’am!
+23.no power	The computers are well preserved but there’s no power. Maybe we can find the power source of the outpost.
+	
+23.got it	The computers are operational, ma’am. We have downloaded everything.
+23.go home	Excellent! Denkar, I’ll be glad to get out of here. There is something creepy about those bots that attack us.
+	
+23.victory-23	We’re done in here. Call the transports.
+	
+23.technicians are dead	The technicians are dead. This expedition is a failure.
+	
+	
+//// Mission 2.4	
+	
+24.nasty bugs	They were <i>some</> nasty bugs... Wonder where they came from.
+24.expect more bugs	Something tells me we’re gonna find out real soon!
+	
+24.too hard	They are getting meaner. I don’t know if we can handle a bigger bunch.
+24.have faith	I have the feeling that we are not alone here. Maybe we should find help.
+	
+24.what the	What <i>is</> this place?
+24.nesting place	Hmm, interesting. I wonder... Maybe this artifact attracts the bugs to nest here.
+24.clear nest	Either way, we need to clear this nest to move on.
+24.check artifact	We also must check the artifact.
+	
+24.kill bugs	Engulf them in flames!
+24.must help	Denkar, we must help them!
+	
+24.village attacked	Strangers, our thanks! Abominations of the Plague attack us on all fronts!
+24.join forces	We also have to fight our way through, so let’s join forces.
+	
+24.you saved us	Thank you again. You were invaluable! But tell me... What brought you to this place, <i>both</> human and mutant?
+24.we seek ruins	We seek ancient ruins that should be somewhere near here.
+24.beware monster	There is an entrance to ancient tunnels further down this path but a great monster has settled there. It’s the monster that sends these creatures.
+24.we face monster	Looks like we have to face this monster.
+24.offer reinforcements	Take these brutes as a token of our gratitude. They are fierce but loyal beasts.
+24.thanks for reinforcements	Thank you!
+	
+24.priest dead	Their High Priest is dead... let’s go before they blame us!
+	
+24.giant spider	The entrance to the underground complex is behind the monster. We have to kill it to get in!
+	
+	
+//// Mission 2.5	
+	
+25.be careful-25	Extreme caution everybody! Lots of expeditions have tried to reach the city  but none have returned to tell the tale!
+25.suspect everything	Everything is potentially dangerous, no matter how harmless it looks.
+	
+25.esperanza gates	Look! This must be an entrance to the inner city!
+25.esperanza forcefield	Unbelievable! Still protected by a forcefield. OK, let’s work out how to disable it!
+25.saw a device	I’m sure we passed some kind of device earlier.
+	
+25.mechanism	Hmm... I wonder what this controls.
+	
+25.power source	This looks like a power source... Maybe for the forcefield!
+25.we should try	Well, there’s only one way to know for sure.
+	
+25.forcefield down	Forcefield down!!
+25.controls outside	Weird! The barrier can be controlled from outside.
+25.keep smth in	Maybe it wasn’t to  keep us out but to keep something in!
+25.spooky	A very creepy thought.
+	
+25.rain comment 1	Oh, great. Hordes of creepy creatures <i>and</> pouring rain.
+25.rain comment 2	Let’s hope it is as unpleasant for them as it is for us.
+	
+25.protect gates	We gotta protect the gate, they’ll try and get in for sure!
+	
+25.no more aliens	Hmm, it seems they decided to leave us alone for now.
+25.strange	Something is not right with this calm. They may have adjusted their plans around our presence.
+25.faint song	Wait... I’m sensing something coming from the entrance... like a faint song in my mind.
+25.prophecy	Could it be the song from the prophesy? Can you follow it?
+25.can follow	I think so.
+25.enter	Then let’s go in and get to the bottom of this.
+	
+25.generator restarted	Damn, this thing restarted. Maybe there is something more we need to do.
+	
+	
+//// Mission 2.6	
+	
+26.song north	The song is coming from behind that door to the north!
+26.go north	We go north.
+26.trouble ahead	I smell trouble ahead. Be on your guard!
+	
+26.transport device	Let’s try and get this device off the pedestal, and take with us.
+26.be careful-26	Careful, there may be more traps around it!
+26.what was that	Wait! What was that?
+26.someone coming	Watch out! I sense many enemies approaching!
+	
+26.robot awake	This is not good! The ‘dead’ mech is waking up!
+	
+26.gates opened	Done! I think I just opened the gates.
+	
+26.switch operated	Done! But I’m not sure what I just did.
+26.we will see	Let’s move on and see.
+	
+26.a trap	Hey! This place is full of traps!
+26.only one trap	We’ve only activated one trap. Let’s hope it is the only one.
+26.detour	Either way, the door seems locked. We need to find another route.
+	
+26.second trap	A second trap! Le’s be more careful.
+26.why traps	Who would set traps in a ruin?
+26.guess about traps	Wait a minute! Maybe they’re not traps but just malfunctioning machines. Who knows what magic and technology was used here.
+	
+26.third trap	Here it goes again!
+26.spot traps	Maybe there is a way to see these things in advance.
+26.activate traps	I have the strongest armor, I’ll take lead and activate ’em ahead of us.
+	
+26.control room	This looks like a control room... With a giant mech in the corner.
+26.it is dead	It looks like it has been dead for centuries.
+26.i wouldnt bet	I wouldn’t bet on that!
+	
+26.getting closer	Getting close now! The song is stronger here.
+26.open gate	We have to open this gate somehow.
+	
+26.aliens	Hey, those green guys are on our heels!
+26.hurry-26	Hurry!
+26.look for traps	Damn, if we walk any faster, we’ll set off every trap for sure!
+	
+26.the source	This is it! The song’s source!
+	
+26.aliens2	Watch out, Denkar! The green fellows again!
+26.kill them all	Protect the device!
+	
+//// Mission 3.1	
+	
+31.doomed	The Psi Resonator was destroyed! We are doomed...
+	
+31.resonator alone	This thing is too precious to be left alone!
+	
+31.ship to the east	Tharksh calculates his ship is east of here.
+31.protect the resonator	OK, let’s get to the ship. Tharksh, your minions must protect the Psi Resonator, at all costs.
+	
+31.blown cover	Tharksh thinks that our cover was just compromised. He had to destroy the device, so now he is openly disobeying the Archmaster’s orders.
+31.another master	So there is at least one other Master in the area and those were his minions?
+31.right	Tharksh believes you are correct!
+	
+31.aliens detected	Tharksh detects another alien Master ahead!
+31.how many	Master or Master with minions?
+31.many	A full assault squad.
+31.call reinforcements	Can Tharksh contact his minions?
+31.reinforcements called	Tharksh is requesting reinforcements. They will be able to pass unrecognized.
+31.hold the line	Good. Now we just have to hold the line until they are close enough.
+	
+31.elephant worms	Look, those pink things with the exploding spores again, growing right out of the rock.
+	
+31.tough aliens	Tharksh, your kin is tough!
+31.glad to hear that	Tharksh is glad to hear this.
+31.other ship	Tharksh cannot use this ship. He does not have the codes to control it.
+31.lets continue	To <i>his</> ship then.
+	
+31.master ambush	Tharksh knows this Master. He is his rival in the Hive and did not like Tharksh even before this.
+31.no problem	Hmm... An unexpected opportunity to settle a score!
+	
+31.lets get out of here	Let’s go before more aliens arrive.
+31.ok	Tharksh urges you to board the ship.
+	
+//// Mission 3.2	
+	
+32.protect ship	Quickly, Prepare for battle! The Psi Resonator is still inside the ship! Protect it!
+	
+32.is this your best	Is this the best you uglies can do?
+32.alien roar	...!
+32.oops	Sorry, Tharksh.
+	
+32.waves over	Looks like <b>that</> was the best they can do... for now.
+32.base nearby	Tharksh thinks there is a camp nearby. We should clear it to secure the area.
+	
+32.avoid gas	Hold on! Danger! Avoid this gas.
+32.stop gas	Looks like these creatures have something to do with the gas. Must be a way to stop it!
+	
+32.safe	This should be as safe as it can get. Move through and pray!
+	
+32.found base	Guess this is the camp... Let’s clear it!
+	
+32.resonator alone	This thing is too precious to be left alone!
+	
+32.doomed	The Resonator was destroyed! We are doomed...
+	
+//// Mission 3.3	
+	
+33.defences coming	Enemy attack imminent! Aurora is sending us some perimeter defenses. Protect the ship, we have no other means of amplifying the teleportation signal!
+	
+33.help	We are surrounded! Help!
+	
+33.thanks for help	Thank you for your help, humans! These things ambushed us and pushed us into the swamps. Take some of our beasts and underworld creatures to fight for you!
+33.gift welcome	Your gift is welcome.
+	
+33.sensors misbehaving	Hey, my suit’s sensors are acting weird.
+33.found site	This must be the AA site. Let’s bring this thing down and get out of here!
+	
+33.turret1 online	The first turret is online!
+	
+33.turret2 online	Second turret ready! We’re halfway there!
+	
+33.turret3 online	Third turret online! Just one more and we’re done!
+	
+33.turret4 online	Perimeter defense is fully operational! The ship now has sufficient protection. Now... let’s find out what hit us in mid air and deal with it.
+	
+33.victory-33	The AA complex has been destroyed!
+33.help denkar	Let’s go help Denkar!
+	
+33.gonna blow	Back off! There’ll be an explosion!
+	
+	
+//// Mission 3.4	
+	
+34.follow the path	Move it! Leave the crash site. Get closer to the rescue party.
+	
+34.judge 1 sees enemy	HQ, aliens in sight! Requesting permission to engage!
+34.me friend	Stop! Not enemy! Human! HUMAN!!
+34.you enemy	Damn, they have learned to imitate us! Kill this thing, fast!
+34.fight inevitable	Tharksh does not think they will listen to you.
+34.self defend	We have no choice. We must defend ourselves!
+	
+34.judge 2 sees enemy	HQ, hostiles in sight! Requesting defense facilities!
+34.turrets coming	Watch out, they are teleporting turrets!
+34.handle turrets	Tharksh thinks we should not let them deploy their defenses.
+34.turrets advise	We must destroy the teleportation pads before the turrets arrive!
+	
+34.judge 3 sees enemy	Kill these ugly creatures! Not a step back!
+	
+34.stop right there	Stop right there! You! Step away from those creatures!
+34.no fight	Listen, we don’t want to fight you. Your people attacked us first.
+34.lay your weapons	No, it was these creatures that began to attack our expeditions first! Now lay down your weapons and move away from that device!
+34.wont happen	Either we pass, or do this the hard way.
+34.hard way	Very well. The hard way.
+	
+34.switch	There’s a control panel here. I will try to deactivate the remaining turrets.
+34.hurry-34	Tharksh thinks we have to hurry.
+	
+34.switch done	The turrets are offline!
+	
+34.hunters killed	This ‘cover’ is becoming more and more of a burden. Now <i>everyone</> is attacking us on sight.
+	
+34.stop or i kill you	Stop! Who are you? Why are you helping these hellish creatures?
+34.i mean no harm	We mean no harm! We just need to pass through here on our way east.
+34.you murderer	I sense the blood of my people on your hands! You will pay now, liar!
+34.destroy temple	Destroy down the temple! That’ll make them back off!
+	
+34.sorry ganthu	I’m sorry, Ganthu. We had no choice.
+	
+34.humans fight mutants	There’s a fight going on here! I think the mutants are gonna lose.
+34.they will attack us	Tharksh suggests we help them to even the forces. This way no one will remain to fight us.
+34.we wait-34	We could just wait for the fight to end and face the victor.
+	
+34.transmission	Incoming transmission!
+34.hi guys	Hi, guys, we’re coming for you! We’ve got your location, just stay where you are!
+34.get us out	Am I glad to hear you! It’s crazy down here! Everybody’s fighting and attacking us on sight!
+34.secure the lz	Just make sure that the LZ is secure!
+	
+34.arriving	Arriving over LZ. Prepare for extraction!
+34.who are these	What the...! Ganthu, did Tharksh summon these guys?
+34.tharksh puzzled	Tharksh is as puzzled as I am!
+34.they stole the resonator	Damn, they stole the Psi Resonator!
+34.we must hurry	Hurry up, guys, we must get out of here quickly!
+	
+34.doomed	The psi-resonator is destroyed! We are doomed...
+	
+34.resonator alone	Hey, this thing is too precious to be left alone!
+	
+//// Mission 3.5	
+	
+35.is it a teleporter	The Jaar Lash came right out of this thing. Is it a teleporter?
+35.disable spawner 1	Yes. Tharksh can disable it to prevent more reinforcements from coming.
+35.can we use it	Can’t we use it to get somewhere?
+35.receiver only	It is only a receiver. Besides, it would guide us exactly to where the reinforcements are coming from.
+	
+35.spawner 1 disabled	Tharksh is ready.
+	
+35.disable spawner 2	Another teleporter. I think we hit their first line of defense.
+	
+35.spawner 2 disabled	No more aliens now!
+	
+35.disable spawner 3	Another one! We can’t let them delay us.
+35.cant leave them	We can’t leave these creatures spawning behind us.
+	
+35.spawner 3 disabled	The receiver is disabled.
+35.not funny	Let’s hope we didn’t miss onе.
+	
+35.disable spawner 4	These teleporters seem to be everywhere!
+35.this is the last	This may be the last one. It seems we’ve reached some kind of checkpoint.
+	
+35.describe situation	There is a teleportation pad here but the controls are somewhere behind the shield, that only Jaar Lash can pass through.
+35.we have a plan	Our only option: Tharksh enter, find the controls and teleport us inside.
+35.jaar lash units	Tharksh can take Jaar Lash units with him.
+35.we wait-35	OK then, the rest of us will have to wait here.
+35.dont like	I don’t like the idea of splitting our forces right now.
+35.no choice	We have no choice.
+	
+35.teleporter controls	Tharksh thinks these are the controls for the teleporter. He must activate it while he is still alive!
+	
+35.disable spawner 5	We shouldn’t leave an enabled teleporter behind us!
+35.fast enough	Tharksh will disable the teleporter fast enough.
+	
+35.dead end	A dead end!
+35.enable teleporter	There is a teleporter here but we must eliminate the defenses to reach the control device.
+	
+35.spawner 5 disabled	This receiver is disabled.
+35.hurry-35	We also shouldn’t waste time.
+35.done	OK, let’s move on.
+	
+	
+//// Mission 3.6	
+	
+36.do you sense	Eji, is this the right direction? Do you sense the Psi Resonator?
+36.too far	Yes, the direction is right. I hear the song faintly but I’m too far to connect to the machine.
+36.find spot	Then move on until we’re close enough.
+	
+36.found spot	I think I’m close enough. The alien is already singing to the Shard! We must hurry!
+36.get him	This battle is yours only, Eji. We can’t help you fight it but we will protect you with our lives.
+36.concentration	His mind is... very strong. I’ll need full concentration.
+36.guard eji	It seems the link to the Resonator physically protects Eji. Nevertheless, we should guard her from attacks or she will lose concentration.
+36.attack alien	It may also be a good idea to find and attack their psychic to disrupt <i>his</> concentration.
+	
+36.it is done	It is done.
+36.shard changing	Look! The Shard is changing!
+	
+36.too strong	He’s too strong... Can’t... hold... him...
+36.eji no	Eji! No!
+	
+//// Special Location BSA	
+	
+bsa.greetings	Ladieees and Gentlemeeeen!! The graaaaand prize of the Saling Blood Sport Arena!!
+	
+bsa.enter arena	Contestants! Prepare for battle and enter the arena if you dare!
+	
+bsa.yamu coming	Now face the wrath of mighty Battle Yamu!
+	
+bsa.horror coming	Tremble before the fury of the Reptile!
+bsa.reptile wins	Reptile wins!
+	
+bsa.wave1	The beast is beaten! He was one verrry big and stupid target. NOW! Let’s see how you do with well trained warriors!
+	
+bsa.wave2	Now to add blade-swinging and rocket-spitting machines to the mix!
+	
+bsa.wave3	Wowee! Good job! Real progress!  But we are nasty so we’re throwin’ everything we’ve got at you now – even officers!
+	
+bsa.wave4	Bah... let’s wrap it up  – bring in the Hellfires!
+	
+bsa.clear arena	Contestants, clear the arena!
+	
+bsa.warning1	Warning, contestants! Clear arena immediately!
+	
+bsa.warning2	Second warning: Leave the arena or be shot!
+	
+bsa.kill them	OK, guys, give ’em the ticket!
+	
+bsa.give sign	Contestants! Prepare for battle and give us a sign when ready!
+bsa.yamu hit	Ouch! That will surely make a scar! Or just a wet spot in the dirt!
+bsa.yamu dead	Watch out! The Battle Yamu is going to fall! Wow, that was one giant piece of meat... and crystals!
+bsa.reptile dead	What a slimy thing it was.
+bsa.monster killed	Applause for the monster slayers! Now we will take a short break for our heroes to regroup and prepare for the challenges ahead.
+bsa.final battle-bsa	Astonishing performance! Contestants, regroup and give us a sign when you are ready for the final battle!
+bsa.claim prize	Amazing! Ladies and gentleman, I present to you the winners of the grand prize of the Saling blood sport arena! Contestants, claim your prize!
+//// Special Location ROM	
+	
+rom.intruders	I am detecting intruders! Call my shuttle immediately!
+rom.hurry-rom	They found us! Hurry!
+rom.hurry-rom	They found us! Hurry!
+rom.hurry-rom	They found us! Hurry!
+	
+rom.shuttle arrived	My shuttle is here! Blow up the corridors!
+	
+rom.boss seen	I have a bad feeling about this.
+rom.boss seen	I have a bad feeling about this.
+rom.boss seen	I have a bad feeling about this.
+	
+rom.cancel shuttle	Cancel the shuttle! I will deal with the intruders myself!
+	
+rom.activate cannon	This shell is useless now. Activate the cannon!
+rom.deactivate cannon	Deactivate the damn cannon now? Great!!
+rom.deactivate cannon	Deactivate the damn cannon now? Great!!
+rom.deactivate cannon	Deactivate the damn cannon now? Great!!
+	
+rom.reinforcements	We have a teleportation signal! We can call reinforcements.
+rom.reinforcements	We have a teleportation signal! We can call reinforcements.
+rom.reinforcements	We have a teleportation signal! We can call reinforcements.
+	
+	
+//// Special Location Junkyard	
+	
+junkyard.intruders	Intruders detected! Move everything valuable to the shelters!
+junkyard.hurry-junkyard	Come on! Let’s see what these rusty cans are hiding!
+junkyard.hurry-junkyard	Come on! Let’s see what these rusty cans are hiding!
+junkyard.hurry-junkyard	Come on! Let’s see what these rusty cans are hiding!
+	
+junkyard.ported on time	Made it! Follow me, I see something big on the beach.
+junkyard.ported on time	Made it! Follow me, I see something big on the beach.
+junkyard.ported on time	Made it! Follow me, I see something big on the beach.
+	
+junkyard.late with port	We are too late! They have hidden the goodies!
+junkyard.late with port	We are too late! They have hidden the goodies!
+junkyard.late with port	We are too late! They have hidden the goodies!
+	
+junkyard.reinforcements	We have a teleportation signal! We can call reinforcements!
+junkyard.reinforcements We have a teleportation signal! We can call reinforcements!
+junkyard.reinforcements	We have a teleportation signal! We can call reinforcements!
+	
+junkyard.kirxxa dead	My pet! You shouldn’t have touched Kirxxa, intruders!
+	
+junkyard.gorgar will eat you	Gorgar will eat you!
+	
+junkyard.gorgar dead	Gorgar has fallen! This is getting out of hand!
+	
+junkyard.coming	It’s your last chance to turn back, intruders. I’m coming for you!
+	
+junkyard.call technicians	Technicians, activate the bot production facilities!
+	
+junkyard.a-bot wave	I need reinforcements!
+	
+junkyard.nomad wave	Second-level reinforcements, engage!
+	
+junkyard.machines wave	Activate all emergency reinforcements!
+	
+junkyard.ditz dies no xessk	Core functions terminating...
+	
+junkyard.ditz dies xessk spawns	Release Xessk, let him avenge Kirxxa! Core functions terminating...
+	
+	
+//// Special Location DTB	
+	
+dtb.lets move	Proceed with caution!
+dtb.lets move	Proceed with caution!
+dtb.lets move	Proceed with caution!
+	
+dtb.at cages	Creature cages! If we open them, we better be prepared to face whatever comes out.
+dtb.at cages	Creature cages! If we open them, we better be prepared to face whatever comes out.
+dtb.at cages	Creature cages! If we open them, we better be prepared to face whatever comes out.
+	
+dtb.cages done	This should be over soon.
+dtb.cages done	This should be over soon.
+dtb.cages done	This should be over soon.
+	
+dtb.at adam	Poor creature. Let’s put it out of its misery!
+dtb.at adam	Poor creature. Let’s put it out of its misery!
+dtb.at adam	Poor creature. Let’s put it out of its misery!
+	
+dtb.got company	Father, we have company!
+dtb.entertain guests	Would you entertain our guests for me, Adam?
+dtb.come to adam	Heheh, yes, father! Come, guests, let’s have fun!
+	
+dtb.you killed frank	You killed my father! You will pay!
+	
+dtb.adam dead	Suffer no longer, poor creature.
+dtb.adam dead	Suffer no longer, poor creature.
+dtb.adam dead	Suffer no longer, poor creature.
+dtb.you killed adam	Murderers! What has my Adam done to you? Come! I await you!
+	
+dtb.at frank	We have found their commander. Let’s waste him!
+dtb.at frank	We have found their commander. Let’s waste him!
+dtb.at frank	We have found their commander. Let’s waste him!
+	
+dtb.adam watch me	You dare challenge me? Watch me wipe the floor with these fools, Adam!
+	
+dtb.revenge for adam	Your last mistake! Time for revenge!!
+	
+dtb.frank dead	Good job! We just made the world a little better.
+dtb.frank dead	Good job! We just made the world a little better.
+dtb.frank dead	Good job! We just made the world a little better.
+dtb.come try me	What do you think you’re doing?! This I won't tolerate! Think you’re so tough? Try me if you dare!
+dtb.will come	How could we refuse such an invitation? We're looking forward to seeing your ugly face!
+dtb.will come	How could we refuse such an invitation? We're looking forward to seeing your ugly face!
+dtb.will come	How could we refuse such an invitation? We're looking forward to seeing your ugly face!
+	
+	
+//// Special Location Safari	
+	
+safari.explore	Keep your eyes peeled, One small mistake and you’re dead.
+safari.explore	Keep your eyes peeled, One small mistake and you’re dead.
+safari.explore	Keep your eyes peeled, One small mistake and you’re dead.
+	
+safari.kill queen	This is what I call big prey. Now let’s kill it!
+safari.kill queen	This is what I call big prey. Now let’s kill it!
+safari.kill queen	This is what I call big prey. Now let’s kill it!
+	
+safari.killed queen	A glorious kill!
+safari.killed queen	A glorious kill!
+safari.killed queen	A glorious kill!
+	
+safari.kill mech0	It is just a machine, we can take it down!
+safari.kill mech0	It is just a machine, we can take it down!
+safari.kill mech0	It is just a machine, we can take it down!
+	
+safari.killed mech0	Aaand down it goes!
+safari.killed mech0	Aaand down it goes!
+safari.killed mech0	Aaand down it goes!
+	
+safari.jack in combat	Now the hunters become the hunted!!
+	
+safari.jack dead	Impossible! I have been defeated! So be it, doors to Bill are unlocked now, go challenge him if you dare!
+	
+safari.at bill	The final challenge! We can do it!
+safari.at bill	The final challenge! We can do it!
+safari.at bill	The final challenge! We can do it!
+	
+safari.bill in combat	Aargh, more brave hunters waiting for me to kill! Okay, okay, I kill!
+	
+safari.bill dead	Aaaargh, no!
+	
+	
+//// Special Location Kharum	
+	
+kharum.help village	The villagers will need help. Let’s go.
+kharum.help village	The villagers will need help. Let’s go.
+kharum.help village	The villagers will need help. Let’s go.
+	
+kharum.nomad wave	You are here! A miracle!  We await a more serious attack! Please help us.
+	
+kharum.nomad wave dead	Thanks to you we have survived and are safe, at least for now, but we have one more request... if you will.
+	
+kharum.retaliate	Please, go to where the attackers come from and stop them once and for all!
+	
+kharum.retaliated	We did it! Let’s tell them they’re safe now at the village.
+kharum.retaliated	We did it! Let’s tell them they’re safe now at the village.
+kharum.retaliated	We did it! Let’s tell them they’re safe now at the village.
+	
+kharum.talk to ran boo	Well done, thank you! Now only the final enemy needs defeating. Talk to our guest, please, a man called Ran Boo. He can explain.
+	
+kharum.ran boo spawned	So, you’re after the big robot, huh? To reach it, you have to activate an ancient device in the village here. Not easy, but if you’re willing and ready, let’s go!
+	
+kharum.lets go	Well you got guts anyhow! Now to find the power sources scattered around the desert and activate them. Lead the way!
+	
+kharum.found power source	There is a power source here. I am on it.
+	
+kharum.last power source	Now we have enough power. Let’s go back to the village and activate the device.
+	
+kharum.activating ancient device	Now stay back! I am going to turn it on!
+	
+kharum.ancient device activated	Wow it worked! Not that I, er, doubted it ... Anyhow, let’s go pay the big rusty dude a visit. After you!
+
+kharum.kill Xelrad	This is what I call big prey. Now let’s kill it!
+kharum.kill Xelrad	This is what I call big prey. Now let’s kill it!
+kharum.kill Xelrad	This is what I call big prey. Now let’s kill it!
+	
+kharum.killed Xelrad	A glorious kill!
+kharum.killed Xelrad	A glorious kill!
+kharum.killed Xelrad	A glorious kill!
+
+kharum.i kill you	So much trouble just to come here and be killed by me?! If that is what you want, it will be my pleasure to deliver it.
+	
+	
+//// Corrupted Fields	
+cf.open cages	Come on! Open the cages! I want entertainment!
+cf.final battle-cf	Enjoy the moment, for this is your last battle!
+cf.where am i	Huh?! Where am I?
+cf.where am i	Huh?! Where am I?
+cf.where am i	Huh?! Where am I?
+cf.your minds	Your minds are mine!
+cf.you strong	You are strong! I wonder how far can you go into my domain!
+	
+//// Esperanza	
+esperanza.creeps	This place gives me the creeps.
+esperanza.creeps	This place gives me the creeps.
+esperanza.creeps	This place gives me the creeps.
+esperanza.didnt we	Didn’t we kill him already?
+esperanza.didnt we	Didn’t we kill him already?
+esperanza.didnt we	Didn’t we kill him already?
+esperanza.cant kill me	You can’t kill me, I am eternal!
+esperanza.will meet again	We will meet again!
+esperanza.we meet again	We meet again!
+esperanza.mistake	You killed <i>me</i> but you left <i>me</i> alive. A bad mistake!
+esperanza.ill be back	I... I’ll be back!
+	
+	
+//// Renegades’ Hideout 	
+rh.bow to me	Bow to me, slaves!
+rh.got what u deserve	You got what you deserve!
+rh.i was wrong	I... was... wrong!
+rh.killed by slaves	Killed by slaves! How...
+rh.it is dead	Whatever that was, it’s dead. One less threat.
+rh.it is dead	Whatever that was, it’s dead. One less threat.
+rh.it is dead	Whatever that was, it’s dead. One less threat.
+	
+//// Bridges of Trial	
+bt.dont disappoint	I have been waiting for you for so long... Do not disappoint me!
+bt.challenge	Finally, a challenge!
+bt.victory again	Victory again... won’t this ever end?
+bt.disappointed	Was that the best you could do? I am disappointed.
+bt.can rest	Finally! I can rest!
+bt.impressed	So, you made it this far. I am impressed! Now, only the final challenge remains. Good  luck!
+bt.bites the dust	Another one bites the dust!

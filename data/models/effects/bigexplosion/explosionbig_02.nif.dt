@@ -1,0 +1,187 @@
+model = {
+  file = str:"data\models\effects\bigexplosion\explosionbig_02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"2";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"RootDummy";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #14 = {
+      scale = fixp:"1";
+      name = str:"RootDummy NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Drag01";
+        translation = xpoint3:"57.854404449462890625,45.593868255615234375,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Gravity01";
+        translation = xpoint3:"-106.6159210205078125,-61.99549102783203125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,-1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"0,0,-222.2148590087890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"Flare";
+        translation = xpoint3:"0,0,125.90964508056640625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0.171240746974945068359375,-0.985229194164276123046875";
+          2 = xpoint3:"0,0.985229194164276123046875,0.171240746974945068359375";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"Omni01";
+        translation = xpoint3:"0,0,234.1425628662109375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray02Dust-Emitter";
+        translation = xpoint3:"0,0,17.2547607421875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #6 = {
+        scale = fixp:"1";
+        name = str:"Gases";
+        translation = xpoint3:"0,0,-34.56329345703125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #7 = {
+        scale = fixp:"1";
+        name = str:"FlamingFragments-Emitter";
+        translation = xpoint3:"0,0,232.562591552734375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #8 = {
+        scale = fixp:"1";
+        name = str:"MiniParticles";
+        translation = xpoint3:"0,0,-34.56329345703125";
+        rotation = {
+          0 = xpoint3:"0,-1,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"1,0,0";
+        }
+      }
+      #9 = {
+        scale = fixp:"1";
+        name = str:"Gases01";
+        translation = xpoint3:"0,0,-34.56329345703125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #10 = {
+        scale = fixp:"1";
+        name = str:"Gases02";
+        translation = xpoint3:"0,0,72.09294891357421875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #11 = {
+        scale = fixp:"1";
+        name = str:"Fireball01";
+        translation = xpoint3:"-35.7822418212890625,0,300.274749755859375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0.772167146205902099609375,-0.63541948795318603515625";
+          2 = xpoint3:"0,0.63541948795318603515625,0.772167146205902099609375";
+        }
+      }
+      #12 = {
+        scale = fixp:"1";
+        name = str:"Fireball02";
+        translation = xpoint3:"44.105438232421875,0,300.274749755859375";
+        rotation = {
+          0 = xpoint3:"-0.3951629102230072021484375,-0.918543517589569091796875,-0.01113861985504627227783203125";
+          1 = xpoint3:"0.749689579010009765625,-0.3154662549495697021484375,-0.581761658191680908203125";
+          2 = xpoint3:"0.530859529972076416015625,-0.23824112117290496826171875,0.813283026218414306640625";
+        }
+      }
+      #13 = {
+        scale = fixp:"1";
+        name = str:"Fireball03";
+        translation = xpoint3:"59.5177459716796875,0,273.034637451171875";
+        rotation = {
+          0 = xpoint3:"0.0024870294146239757537841796875,0.999904572963714599609375,0.013591188006103038787841796875";
+          1 = xpoint3:"0,0.01359125413000583648681640625,-0.99990761280059814453125";
+          2 = xpoint3:"-0.9999969005584716796875,0.00248680147342383861541748046875,0";
+        }
+      }
+      #14 = {
+        scale = fixp:"1";
+        name = str:"Gases03";
+        translation = xpoint3:"0,0,72.09294891357421875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-1";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Drag02";
+    translation = xpoint3:"-1567.3951416015625,-130.2271728515625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

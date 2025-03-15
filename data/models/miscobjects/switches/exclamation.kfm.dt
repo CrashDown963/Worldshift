@@ -1,0 +1,145 @@
+model = {
+  file = str:"data\models\miscobjects\switches\exclamation.kfm";
+  animations = {
+    spawn_green = {
+      loop = int:"0";
+      duration = fixp:"0.666666686534881591796875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.666666686534881591796875";
+        }
+      }
+    }
+    idle_green = {
+      loop = int:"1";
+      duration = fixp:"3.9666669368743896484375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.9666669368743896484375";
+        }
+      }
+    }
+    spawn_red = {
+      loop = int:"0";
+      duration = fixp:"0.69999980926513671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.69999980926513671875";
+        }
+      }
+    }
+    idle_red = {
+      loop = int:"1";
+      duration = fixp:"3.96666717529296875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.96666717529296875";
+        }
+      }
+    }
+    idle_work_green = {
+      loop = int:"1";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    success_despawn = {
+      loop = int:"0";
+      duration = fixp:"0.69999980926513671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.69999980926513671875";
+        }
+      }
+    }
+    success_disable = {
+      loop = int:"0";
+      duration = fixp:"0.700000762939453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.700000762939453125";
+        }
+      }
+    }
+    fail_despawn = {
+      loop = int:"0";
+      duration = fixp:"0.69999980926513671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.69999980926513671875";
+        }
+      }
+    }
+    fail_disable = {
+      loop = int:"0";
+      duration = fixp:"0.69999980926513671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.69999980926513671875";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.96666622161865234375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.96666622161865234375";
+        }
+      }
+    }
+  }
+}

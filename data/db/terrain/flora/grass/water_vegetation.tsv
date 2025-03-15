@@ -1,0 +1,17 @@
+id	model	vars	fade_near	fade_far	density_min	density_max	slope_max	alpha_max	scale
+
+lilies	lilies.nif	{water_snap = 1}
+rush	rush.nif	{water_snap = 1}	
+tinia1	tinia1.nif	{water_snap = 1}
+tinia2	tinia2.nif	{water_snap = 1}
+tinia3	tinia3.nif	{water_snap = 1}
+reed1	reed1.nif	{water_snap = 1}
+Papyrus	Papyrus.nif	{water_snap = 1}
+Cattail1	Cattail1.nif	{water_snap = 1}
+Cattail2	Cattail2.nif	{water_snap = 1}
+Water-Taro	Water-Taro.nif	{water_snap = 1}
+MosaicWaterPlant	MosaicWaterPlant.nif	{water_snap = 1}
+Water-Clover_small	Water-Clover_small.nif	{water_snap = 1}
+Swamp-Hibiscus	Swamp-Hibiscus.nif	{water_snap = 1}
+Float1	Float1.nif	{water_snap = 1}
+Float2	Float2.nif	{water_snap = 1}

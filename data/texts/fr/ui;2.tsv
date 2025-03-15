@@ -1,0 +1,109 @@
+﻿sid	text:fr
+	
+err_actiononcooldown	ACTION EN RECOUVREMENT !
+	
+// Settings	
+game_settings	Paramètres de partie
+player_settings	Paramètres du joueur
+video_settings	VIDÉO
+audio_settings	SON
+mute_all_sounds	Tous les sons muets
+master_volume	Volume général
+music_volume	Volume de la musique
+sound_effects_volume	Volume des bruitages
+speech_volume	Volume des voix
+units_aknowlegments	Voix des unités
+subtitles_cutscenes	Sous-titres des cinématiques
+	
+	
+// Login screen tooltips	
+lan_tip	Choisir le mode LAN pour le multijoueur
+internet_tip	Choisir le mode Internet pour le multijoueur
+new_player_tip	Créer un nom de joueur de WorldShift à associer avec un identifiant GameSpy (pour les parties sur Internet)
+enter_game_tip	Entrer dans la partie en utilisant le nom de joueur affiché
+	
+	
+// Lobby UI button tooltips	
+missions_btn_tip	Un joueur en mode Histoire
+locations_btn_tip	Faire une partie en coopération sur un lieu spécial
+deathmatch_btn_tip	Jouer sur Internet contre des adversaires aléatoires
+practice_btn_tip	Faire une partie d’entraînement sur Internet
+skirmish_btn_tip	Faire une partie Escarmouche en LAN
+	
+ability_grid_btn_tip	Gérer les objets et spécialisations dans la grille d’aptitudes
+chat_btn_tip	Consulter votre liste d’amis et les chaînes de discussion
+settings_btn_tip	Modifier les réglages de jeu et de joueur
+	
+chat_views_tip	Cliquer ici pour sélectionner cette discussion
+	
+exit_btn_tip	Quitter vers l’écran d’entrée
+	
+	
+// Game list window	
+location_list_tip	Choisir le lieu de la partie
+1v1_tip	Afficher seulement les parties 1v1
+2v2_tip	Afficher seulement les parties 2v2
+3v3_tip	Afficher seulement les parties 3v3
+small_games_tip	Afficher les parties 1v1 et 2v2
+big_games_tip	Afficher les parties 2v2 et 3v3
+all_games_tip	Ne pas tenir compte de la taille de l’équipe
+	
+create_game_tip	Héberger votre propre partie
+join_game_tip	Rejoindre la partie sélectionnée
+quick_join_tip	Rejoindre une partie au hasard dans la liste
+	
+	
+// Deathmatch window	
+deathmatch_1v1_tip	Régler la taille de l’équipe sur 1 joueur
+deathmatch_2v2_tip	Régler la taille de l’équipe sur 2 joueurs
+deathmatch_3v3_tip	Régler la taille de l’équipe sur 3 joueurs
+deathmatch_team_tip	Basculer entre équipe aléatoire/arrangée
+	
+	
+// Active game window (creating/joining)	
+change_slot_tip	Changer le type de ce créneau de joueur
+change_slot_open_tip	Créneau ouvert, tout joueur peut rejoindre
+change_slot_ai_tip	Joueur IA dans ce créneau
+change_slot_close_tip	Créneau fermé, aucun joueur ne peut rejoindre
+change_ai_tip	Changer la force de l’IA
+change_sides_tip	Changer de camp
+change_faction_tip	Sélectionner une faction
+change_player_color_tip	Sélectionner la couleur du joueur
+select_units_tip	Sélectionner les unités de départ
+player_ready_tip	Afficher si le joueur est prêt à commencer
+invite_player_tip	Inviter un joueur
+leave_game_tip	Quitter la partie (l’annuler si vous hébergez)
+start_game_tip	Démarrer la partie
+	
+	
+// Ability Grid tooltips	
+ability_grid_tab_tip	Voir les objets et spécialisations de cette faction
+reset_spec_tip	Réinitialiser les étoiles allouées aux spécialisations
+	
+	
+// Chat tooltips	
+chat_channel_tip	Cliquer pour assigner un raccourci, clic droit pour sélectionner une couleur
+chat_add_friend_tip	Ajouter à votre liste d’amis
+chat_remove_friend_tip	Retirer de votre liste d’amis
+chat_join_tip	Rejoindre la partie du joueur sélectionné
+chat_tell_tip	Envoyer un message privé
+chat_invite_tip	Inviter le joueur à rejoindre votre partie
+chat_inspect_tip	Consulter la grille d’aptitudes et les statistiques du joueur
+chat_authorize_tip	Autoriser le joueur
+chat_reject_tip	Refuser l’autorisation
+	
+// Settings window	
+logo_background_ttl	Arrière-plan
+logo_background_txt	Cliquer pour sélectionner la couleur
+logo_gradient_ttl	Degrés
+logo_frame_ttl	Cadre
+logo_symbol_ttl	Symbole
+logo_click_txt	Cliquer pour changer, clic droit pour sélectionner la couleur
+	
+// Victory/Defeat screen	
+vic_close_reward	Vous n’avez pas sélectionné votre récompense de mission accomplie. Vraiment continuer ?
+reward_chs_txt	Cliquez sur l’objet que vous voulez acquérir.
+	
+// In-game tooltips	
+leaderdead_tooltip_ttl	Aucun chef de campagne
+leaderdead_tooltip_txt	Votre chef de campagne est mort et vous ne pouvez pas invoquer d’officier. Appelez un nouveau chef de campagne en utilisant un de vos bâtiments.

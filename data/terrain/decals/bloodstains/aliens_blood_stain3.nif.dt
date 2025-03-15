@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\decals\bloodstains\aliens_blood_stain3.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Plane01";
+    translation = xpoint3:"0.372955322265625,-0.367519378662109375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

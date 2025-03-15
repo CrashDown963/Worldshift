@@ -1,0 +1,17 @@
+﻿sid	text:fr
+	
+ResurrectLeader.name	Faire revivre le chef
+ResurrectLeader.descr	Faire revivre un chef de campagne décédé.
+	
+rh.teleport_switch.name	Téléporter
+rh.teleport_switch.descr	Activer la téléportation des unités proches vers un autre secteur.
+rh.bridge_switch.name	Contrôle de pont
+rh.bridge_switch.descr	Étendre le pont de champ de force au-dessus du précipice.
+	
+bt.shield_switch.name	Défense
+bt.shield_switch.descr	Bénéficier d’une aptitude de défense spéciale.
+bt.weapon_switch.name	Attaque
+bt.weapon_switch.descr	Bénéficier d’une aptitude d’attaque spéciale.
+	
+DeviceSwitch.name	Dispositif
+DeviceSwitch.descr	Vous pouvez activer un dispositif proche.

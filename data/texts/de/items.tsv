@@ -1,0 +1,157 @@
+﻿sid	text:de
+	
+//// Unit statistics	
+stat.psi	Energie
+stat.hp_gen	Trefferpunkte – Regeneration
+stat.psi_gen	Energie – Regeneration
+stat.expose_target_chance	Offenlegen – Chance
+stat.expose_target_armor_duration	Offenlegen – Dauer
+stat.crit_chance	Erfolgschance (kritischer Treffer)
+stat.rocket_precision_damage_perc	Blendrakete – Effektivität
+stat.rocket_precision_duration	Blendrakete – Dauer
+stat.rocket_precision_chance	Blendrakete – Chance
+stat.rocket_damage	Raketenschaden
+stat.inject_hp	Injektion – Heilung
+stat.confuse_duration	Verwirren – Dauer
+stat.confuse_armor_perc_buff	Verwirren – Panzerverstärkung
+stat.inject_power_cost	Injektion – Energieaufwand
+stat.confuse_power	Verwirren – Energieaufwand
+stat.barrage_cost	Bombardement – Energieaufwand
+stat.nano_fix_power	Nanoreparatur – Energieaufwand
+stat.nano_fix_heal	Nanoreparatur – Heilung
+stat.repairdrones_power	Reparaturdrohnen – Energie
+stat.repairdrones_heal_radius	Reparaturdrohnen – Wirkungsradius
+stat.repairdrones_repair_per_tick	Reparaturdrohnen – Heilung
+stat.overcharge_chance	Überladung – Chance
+stat.overcharge_stun_duration	Überladung – Betäubungsdauer
+stat.shield_hull	Schild – Dauer
+stat.shield_regen	Schild – Erzeugung
+stat.shield_fullabsorbchance	Schild – Deflexion
+stat.shield_percentabsorbtion	Schild – Minderung
+stat.sweep_damage	Feuersbrunst – Schaden
+stat.sweep_power_cost	Feuersbrunst – Energieaufwand
+stat.discharge_chance	Entladung – Chance
+stat.proton_shot_damage	Protonengranate – Schaden
+stat.proton_shot_radius	Protonengranate – Radius
+stat.proton_shot_psi	Protonengranate – Energieaufwand
+stat.voiceofcommand_duration	Sperrfeuer – Dauer
+stat.voiceofcommand_damage_perc	Sperrfeuer – Schadenserhöhung
+stat.voiceofcommand_power	Sperrfeuer – Energieaufwand
+stat.rupture_chance	Riss – Chance
+stat.rupture_stun_duration	Riss – Betäubungsdauer
+stat.bandage_amount	Nothilfe – Heilung
+stat.relief_duration	Heilzelle – Dauer
+stat.relief_healpersec	Heilzelle – Heilung
+stat.relief_psicost	Heilzelle – Energieaufwand
+stat.mend_power	Versorgen – Energieaufwand
+stat.mend_heal	Versorgen – Heilung
+stat.throw_grenade_chance	Handgranate – Chance
+stat.grenade_damage	Handgranate – Schaden
+stat.grenade_radius	Handgranate – Radius
+stat.growl_duration	Knurren – Dauer
+stat.growl_chance	Knurren – Chance
+stat.ignite_duration	Entflammung – Dauer
+stat.whirlwind_chance	Wirbelsturm – Chance
+stat.illusion_power_cost	Illusion – Energieaufwand
+stat.fortify_power_cost	Festigung – Energieaufwand
+stat.fortify_armor_add_perc	Festigung – Panzerverstärkung
+stat.fortify_armor	Festigung – Panzerzusatz
+stat.shift_stun_duration	Teleportation – Betäubungsdauer
+stat.holy_aura_heal	Aura des Segens – Heilung
+stat.pyrowave_chance	Pyrowelle – Chance
+stat.lightning_power	Blitzschlag – Energieaufwand
+stat.lightning_damage	Blitzschlag – Schaden
+stat.holyshock_power	Vitalstoss – Energieaufwand
+stat.freeze_duration	Erstarrung – Dauer
+stat.freeze_power	Erstarrung – Energieaufwand
+stat.hollow_voice_chance	Höllenstimme – Chance
+stat.hollow_voice_damage	Höllenstimme – Schaden
+stat.hollow_voice_area	Höllenstimme – Reichweite
+stat.death_rumble_chance	Todesdonner – Chance
+stat.death_rumble_damage	Todesdonner – Schaden
+stat.death_rumble_area	Todesdonner – Reichweite
+stat.howl_fear_duration	Schrei Angst - Dauer
+stat.drain_life_chance	Lebensentzug – Chance
+stat.rejuvenation_psicost	Erneuerung – Energieaufwand
+stat.rejuvenation_amount	Erneuerung – Heilung
+stat.purify_psicost	Reinigung – Energieaufwand
+stat.chill_psi_cost	Frostwelle – Energieaufwand
+stat.chill_duration	Langsamkeit – Dauer
+stat.incinerate_psi_cost	Entzünden – Energieaufwand
+stat.incinerate_damage	Entzünden – Schaden
+stat.drain_psi_amount	Energieentzug – Menge
+stat.drain_psi_chance	Energieentzug – Chance
+stat.unholy_aura_heal	Schreckensaura – Heilung
+stat.corruption_damage	Zerfall – Schaden
+stat.corruption_duration	Zerfall – Dauer
+stat.unholy_power_cooldown	Finstere Macht – Intervall
+stat.chain_shot_chance	Schusskette – Chance
+stat.fear_shock_power	Angststoß – Energieaufwand
+stat.fear_shock_duration	Angststoß – Dauer
+stat.stasis_shot_chance	Starreschuss – Chance
+stat.stasis_shot_duration	Starreschuss – Dauer
+stat.power_fuse_perc	Energieentzug – Effektivität
+stat.power_fuse_area	Energieentzug – Reichweite
+stat.dimension_chain_duration	Dimensionssperre – Dauer
+stat.dimension_chain_power	Dimensionssperre – Energieaufwand
+stat.vitality_surge_gain	Lebensschub – Heilung
+stat.vitality_surge_power	Lebensschub – Energieaufwand
+stat.harvest_chance	Krallenhieb – Chance
+stat.harvest_damage	Krallenhieb – Schaden
+stat.harvest_duration	Krallenhieb – Dauer
+stat.harvest_cooldown	Krallenhieb – Intervall
+stat.confuse_chance	Unheil – Chance
+stat.vortex_power	Wirbel – Energieaufwand
+stat.vortex_heal	Wirbel – Heilung
+stat.feed_psi_cost	Lebensraub – Energieaufwand
+stat.feed_base	Lebensraub – Stärke
+stat.nether_nova_psi_cost	Höllennova – Energieaufwand
+stat.nether_nova_radius	Höllennova – Reichweite
+stat.nether_nova_damage	Höllennova – Schaden
+stat.charging_field_area	Ladungsfeld – Reichweite
+stat.charging_field_psi_perc	Ladungsfeld – Energieerzeugung
+stat.breed_power	Züchtung – Energieaufwand
+stat.enfeeble_chance	Schwächung – Chance
+stat.enfeeble_damage_reduction_perc	Schwächung – Schadensminderung
+stat.enfeeble_duration	Schwächung – Dauer
+stat.power_leak_chance	Energieleck – Chance
+stat.power_leak_drain	Energieleck – Entzug
+stat.feedback_chance	Gegenwirkung – Chance
+stat.feedback_heal	Gegenwirkung – Heilung
+stat.healing_taken_mod	Heilung empfangen
+stat.life_leech_boost	Lebensegel – Rate
+stat.hp	Trefferpunkte
+stat.armor	Panzerung
+stat.damage	Schaden
+stat.drain_life_boost	Lebensentzug – Rate
+	
+//// Generic item descriptions	
+generic_item.ALIEN_MASTER	Dieser Gegenstand verbessert die Werte Ihres Meisters.
+generic_item.ALIEN_ARBITER	Dieser Gegenstand verbessert die Werte Ihrer Tyrannen.
+generic_item.ALIEN_DOMINATOR	Dieser Gegenstand verbessert die Werte Ihrer Unterdrücker.
+generic_item.ALIEN_HARVESTER	Dieser Gegenstand verbessert die Werte Ihrer Seelenernter.
+generic_item.ALIEN_MANIPULATOR	Dieser Gegenstand verbessert die Werte Ihrer Manipulatoren.
+generic_item.ALIEN_POWER	Dieser Gegenstand bezieht sich auf „Macht“, einen der Aspekte des Kults.
+generic_item.ALIEN_CORRUPTION	Dieser Gegenstand bezieht sich auf „Korruption“, einen der Aspekte des Kults.
+generic_item.ALIEN_DOGMA	Dieser Gegenstand bezieht sich auf „Dogma“, einen der Aspekte des Kults.
+generic_item.HUMAN_COMMANDER	Dieser Gegenstand verbessert die Werte Ihres Lord Commanders.
+generic_item.HUMAN_ASSASSIN	Dieser Gegenstand verbessert die Werte Ihrer Assassinen.
+generic_item.HUMAN_CONSTRUCTOR	Dieser Gegenstand verbessert die Werte Ihrer Ingenieure.
+generic_item.HUMAN_JUDGE	Dieser Gegenstand verbessert die Werte Ihrer Vollstrecker.
+generic_item.HUMAN_SURGEON	Dieser Gegenstand verbessert die Werte Ihrer Chirurginnen.
+generic_item.HUMAN_DEFENCE	Dieser Gegenstand bezieht sich auf „Xenotronik“, eine der wissenschaftlichen Disziplinen der Menschen.
+generic_item.HUMAN_IMPLANTS	Dieser Gegenstand bezieht sich auf „Nanotechnologie“, eine der wissenschaftlichen Disziplinen der Menschen.
+generic_item.HUMAN_WEAPONS	Dieser Gegenstand bezieht sich auf „Metachemie“, eine der wissenschaftlichen Disziplinen der Menschen.
+generic_item.MUTANT_HIGHPRIEST	Dieser Gegenstand verbessert die Werte Ihres Hohepriesters.
+generic_item.MUTANT_ADEPT	Dieser Gegenstand verbessert die Werte Ihrer Zauberer.
+generic_item.MUTANT_GUARDIAN	Dieser Gegenstand verbessert die Werte Ihrer Hüterinnen.
+generic_item.MUTANT_SHAMAN	Dieser Gegenstand verbessert die Werte Ihrer Schamanen.
+generic_item.MUTANT_STONEGHOST	Dieser Gegenstand verbessert die Werte Ihrer Steingeister.
+generic_item.MUTANT_BLOOD	Dieser Gegenstand bezieht sich auf „Blut“, einen der Aspekte der Stämme.
+generic_item.MUTANT_MIND	Dieser Gegenstand bezieht sich auf „Gedanken“, einen der Aspekte der Stämme.
+generic_item.MUTANT_NATURE	Dieser Gegenstand bezieht sich auf „Natur“, einen der Aspekte der Stämme.
+	
+//// Group tags	
+all	Alle Einheiten
+psi	Alle Einheiten mit Energie
+shield	Alle Einheiten mit Schilden

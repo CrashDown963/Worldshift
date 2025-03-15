@@ -1,0 +1,9 @@
+Building VehicleControlBuild : BaseBuilding {
+  model = Data/Models/buildings/VehicleControl/VehicleControl_Build.nif
+  race = humans
+  stats :{
+    hp = 4000
+  }
+  actions {
+  }
+}

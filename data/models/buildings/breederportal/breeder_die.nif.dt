@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\breederportal\breeder_die.nif";
+  animation = {
+    loop = fixp:"6";
+    duration = fixp:"4.266666889190673828125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"PCloud01-Emitter";
+      translation = xpoint3:"35.0699615478515625,-14.37277984619140625,200.1662139892578125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Plane03";
+      translation = xpoint3:"81.24251556396484375,-54.497314453125,120.5186004638671875";
+      rotation = {
+        0 = xpoint3:"0,-1,0";
+        1 = xpoint3:"1,0,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"Destruction_Bone01";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

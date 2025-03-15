@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\metalbuilding_berserk\metalbuilding_berserkp03.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"0,0,161.224212646484375";
+    rotation = {
+      0 = xpoint3:"0.70710647106170654296875,0.704416334629058837890625,0.0616284310817718505859375";
+      1 = xpoint3:"-0.707107126712799072265625,0.704415738582611083984375,0.061628378927707672119140625";
+      2 = xpoint3:"0,-0.087155722081661224365234375,0.99619472026824951171875";
+    }
+  }
+}

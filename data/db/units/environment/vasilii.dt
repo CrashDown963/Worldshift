@@ -1,0 +1,156 @@
+Mob Vasilii : BaseMob {
+  name = "Vasilii"
+  race = humans
+  icon = 2,20
+  boss_icon = 2,4
+  conv_icon_row = 5
+  conv_icon_col = 1
+  model = data/models/units/Assassin/Assassin.kfm
+  scale = 1.5
+  boss = 1
+  
+  impacts : LivingUnitImpacts
+  
+  stats :{
+    hp = 6000
+    armor = 8
+    range = 2800
+    damage = 100
+
+    expose_target_armor_perc = 40
+    expose_target_armor_duration = 10
+    dumdum_stun_duration = 3
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  poison_shot_damage = var:damage * 0.2
+  chase_range = -1
+  hold_fire = 1
+  
+  destruction = ragdoll
+  
+  physics {
+    default = data/models/units/assassin/Scout_Proxy.pml
+    die = data/models/units/assassin/Scout.pml
+  }
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  animation {
+    anim_seq cast_expose_target_finish {
+      shoot
+      shoot_idle
+    }  
+  }
+
+  abilities {
+    Sharpshooter : Assassin.abilities.Sharpshooter
+    
+    EliteSquad {
+      name = Elite Squad
+      icon = 13,0
+      cooldown = 20
+      target = current
+      when = fight
+      effect = E_spawn {
+        range = 1500
+        copy_target_list = 1
+        spawn {
+          EliteTrooper = 6
+        }
+      }
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    range_far = var:range * 0.5
+    range_near = var:range * 0.1
+    proximity_bonus = 0.1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = .2
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 900
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 1.5
+		    E = 40,250,40
+	    }
+
+      effect = E_set {
+        random = 1
+        
+        effect = E_revealfowbuff {
+          id = Poison
+          name = "Poison"
+          text = "This unit is suffering poison damage."
+          icon = 2,14
+          type = damage
+          damage = var:poison_shot_damage
+          damage_type = poison
+          show_text_feedback = 1
+          duration = 10
+          tick = 2
+          discard_react = 1
+          react = poison
+        }
+        
+        effect = E_debuff {
+          id = ExposeTarget
+          name : ExposeTargetAbi.effect.name
+          text : ExposeTargetAbi.effect.text
+          type = damage
+          damage = stat:damage
+          
+          stats_change {
+            armor = { perc = stat:expose_target_armor_perc * -1 }
+          }
+      
+          duration = stat:expose_target_armor_duration 
+          discard_react = 1
+          react = expose_target
+          stack_count = 5
+        }
+      }
+    }
+    
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+}
+

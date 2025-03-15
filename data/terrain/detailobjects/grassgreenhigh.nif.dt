@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\terrain\detailobjects\grassgreenhigh.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Cylinder16";
+    translation = xpoint3:"-11.005584716796875,8.2903594970703125,-0.075580596923828125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Cylinder15";
+    translation = xpoint3:"-0.17089080810546875,-40.838409423828125,-0.075580596923828125";
+    rotation = {
+      0 = xpoint3:"-0.00982773303985595703125,0.99995172023773193359375,0";
+      1 = xpoint3:"-0.99995172023773193359375,-0.00982773303985595703125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Cylinder14";
+    translation = xpoint3:"35.148410797119140625,15.3075714111328125,-0.075595855712890625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\desert\cat-claw-bush_green.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Plane02";
+    translation = xpoint3:"0,-9.44083118438720703125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

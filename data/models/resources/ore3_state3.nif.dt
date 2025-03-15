@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\resources\ore3_state3.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Decal_plane";
+    translation = xpoint3:"11.096538543701171875,47.346588134765625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"State3";
+    translation = xpoint3:"12.50489044189453125,59.359500885009765625,-13.08959197998046875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"BORAX-state03";
+      translation = xpoint3:"-19.023517608642578125,-73.5272216796875,5.41497802734375";
+      rotation = {
+        0 = xpoint3:"-0.777787983417510986328125,0.628526747226715087890625,0";
+        1 = xpoint3:"-0.628526747226715087890625,-0.777787983417510986328125,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

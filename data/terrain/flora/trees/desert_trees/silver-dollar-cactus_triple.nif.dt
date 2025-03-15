@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\terrain\flora\trees\desert_trees\silver-dollar-cactus_triple.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"trunk";
+    translation = xpoint3:"-12.27038669586181640625,-8.81796169281005859375,0.62098205089569091796875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"leaves";
+    translation = xpoint3:"0.13677692413330078125,14.62111759185791015625,54.3828582763671875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,79 @@
+Unit HeavyBot : MachineUnit {
+  name = "Heavy Bot"
+  model = data/models/units/Heavy_Bot/Heavy_Bot.kfm
+  race = humans
+
+  stats :{
+    hp = 220
+    armor = 20
+    power = 50
+    sight = 2700 
+    damage = 20
+  }
+  
+  min_attack_range = 2200
+  range = 2500
+  speed = 250
+
+  foot_prints {
+    desert = heavybot_footprint
+  }
+  
+  pitch_speed = 90
+  min_pitch = -30
+  max_pitch = 20
+  yaw_speed = 360
+  min_yaw = -30
+  max_yaw = 30
+  destruction = explode
+  explosion = ExplosionBig_01
+  
+  COrientationController orientation {
+    rot_speed = 120
+    max_tilt = 0
+  }  
+  
+  CMultiWeaponController weapon {
+    active = 0
+    idle_only = 1
+    count = 2 
+    sync = alternate 
+    can_crit = 1
+    --root_node = gun_slot_2 
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim = shoot
+    shoot_snd = Data/Sounds/Weapons/Arc Discharge High/
+    fire_rate = .5 
+    damage = stat:damage
+	range_far = 500
+	range_near = 100
+	proximity_bonus = 5
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+  
+    muzzle_fx blue_laser {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+      frequency = 10
+      active_fraction = 40
+      active_variation = 5
+      length_variation = 20
+      width_variation = 5
+      scale = 1.2
+      instances = 64
+      emit = 50,50,255
+    }
+    
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = small_energy
+      speed = 6000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+        scale = 0.5
+        E = 0,125,255
+      }
+    }
+  }
+}

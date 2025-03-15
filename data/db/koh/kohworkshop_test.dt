@@ -1,0 +1,7 @@
+Building KoHArchery_Test : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/KoHArchery_Test.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

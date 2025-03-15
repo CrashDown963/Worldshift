@@ -1,0 +1,31 @@
+Mob Havoc : BaseMachineMob {
+  name = "Havoc"
+  model = Data/Models/units/Havoc/Havoc.kfm
+  explosion = ExplosionMedium_03
+
+  pitch_speed = 90
+  yaw_speed = 180
+
+  range = 3000
+  speed = 285
+  armor = 12
+  
+  COrientationController orientation {
+    rot_speed = 360 
+    max_tilt = 20 
+  }
+
+  CMultiWeaponController weaponL {
+    type = CMultiWeaponController 
+    count = 2 
+    sync = alternate 
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_1@#0
+    projectile = sid:TestRocket 
+    shoot_snd = data/sounds/weapons/missile/ShootMedium/ 
+    fire_rate = 1.5 
+    aim_tolerance = 20 
+  }
+
+  
+}

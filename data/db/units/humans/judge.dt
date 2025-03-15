@@ -1,0 +1,406 @@
+Judge Judge : BaseUnit {
+  name = "Judge"
+  descr = "DESCRIPTION"
+  model = data/models/units/Judge/Judge.kfm
+  scale = 1.05
+  race = humans
+  officer = 1
+  tags = unit, organic
+  xp = 1
+  take_auras : { RestorationCoreAura }
+  icon = 3,4
+  conv_icon_row = 4
+  conv_icon_col = 2
+  
+  chargeable = 1
+  charge_attachment01 = Data/Models/Effects/MiscReacts/Exp_Charge.nif
+  charge_attachment_point = pt_center
+  charge_no_orientation = 1
+  max_energy_charges = 1
+
+  stats :{
+
+    hp = 680
+    armor = 16
+
+    psi = 320
+
+    range = 1600
+    damage = 18
+    xp_boost_amp = 50  -- amplify xp received by 50%
+    xp_share_mod = 50 -- spread half the damage done as experience
+    
+    discharge_chance = 10
+    discharge_hops = 1
+
+    proton_shot_damage = 120
+    proton_shot_radius = 500
+    proton_shot_psi = 140
+    
+    voiceofcommand_duration = 5
+    voiceofcommand_damage_perc = 10
+    voiceofcommand_power = 80
+  }
+  speed = 450
+  promote_xp_cost = 100 -- promote after collected this XP
+  promote_wait_time = 2 -- wait X secs before promoting
+  discharge_damage = stat:damage * 1.5
+  proton_shot_power_burn = stat:proton_shot_damage * 2
+  movement_type = crawl
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+  sounds {
+    start = data/speech/summoning/judge summoned.wav
+    attack = data/speech/confirmations/judge/judge attack/
+    select = data/speech/selecting/judge select/
+    joke = data/speech/selecting/judge joke/
+    confirm = data/speech/confirmations/judge/judge confirm/
+    destruction = data/speech/deaths/judge death/
+    engage = data/speech/engage alerts/judge engage/
+    damage = data/speech/engage alerts/judge damage/
+    move = data/speech/confirmations/judge/judge move/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+
+  physics {
+    default = data/models/units/Judge/Judge_Proxy.pml
+    die = data/models/units/Judge/Judge.pml
+  }
+  destruction = ragdoll
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+  }
+  
+  actions : BaseUnit.actions {
+    ProtonShotAction
+    VoiceofCommandAction
+    MakeOreExtractor -- fake
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.5 
+    range_near = stat:range * 0.2
+    proximity_bonus = 2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/Juicy Laser/
+    fire_rate = 0.8
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle_1
+    damage_type = energy
+
+   muzzle_fx ion_rifle_judge {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
+      frames = 2
+      frequency = 1.0
+      active_fraction	= 10
+      active_variation = 5
+      length_variation = 10
+      width_variation	= 10
+      scale	= 4
+      instances = 64
+      emit = 52,118,255
+    }
+
+   projectile = linear {
+     spot_impact = 700
+     spot_impact_type = ion
+     speed = 4000
+     model = Data/Models/Effects/TraceBullet/JudgeShot.nif
+     Scale = 1
+     E = 52,118,255
+     react = ion
+     ground_hit_effect =  BulletTerrainHitEffect
+     -- effect = JudgeHit    
+   }
+  }
+  
+  impacts : LivingUnitImpacts
+  
+  abilities {
+    LeadershipAbi
+    DischargeAbi
+    
+    AIProtonShot {
+      action = ProtonShotAction
+      when   : abi.fight
+      target = current { aoe_range = stat:proton_shot_radius; aoe_min_enemy_hp = 300; aoe_min_enemy_count = 4 }
+      range = stat:range
+    }
+    AIVoiceofCommandAction { 
+      action = VoiceofCommandAction
+      when   : abi.fight
+      target = ally { 
+        def = Trooper
+        aoe_range = 500
+        aoe_min_ally_count = 5
+      }
+    }  
+  }
+  cost : pvp.humans.unit_costs.Officer
+  cost_sloc : pvp.humans.sloc_costs.Officer
+}
+
+LeadershipAbi {
+  name = "Leadership"
+  text = "By attacking enemies and observing the battle, the Judge gains charges, which he automatically uses for promoting nearby Troopers into Elite status. Elite Troopers has increased chance to inflict double damage on their targets."
+  icon = 2,0
+  when : abi.always
+  chance = -1 -- custom chance
+  range = stat:range
+  target = ally { def = Trooper; max_xp_level = 0 }
+  projectile = PromoteTrooper
+  hp_healed_perc = 100
+  crit_chance_increase = 5
+  cast {
+    finish {
+      anim = idle_rate_1
+    }
+  }
+}
+
+DischargeAbi {
+  name = "Discharge"
+  text = "The Judge’s attack has a [stat:discharge_chance]% chance to deduct [stat:discharge_damage] power from his target and convert it into damage, jumps to [stat:discharge_hops] additional targets doing damage."
+  icon = 4,0
+  when : abi.target_hit
+  chance = stat:discharge_chance
+  target = current
+  sound = data/sounds/effects/common/discharge.wav
+  burned_power = var:discharge_damage
+  
+  effect = E_set {
+
+    effect = E_powerburn {
+      id = Discharge
+      burned_power = var:discharge_damage            -- percent from the target power, removed
+      damage_amplifier = 100           -- percent, converted from the discharged power, into damage
+      react = discharge
+    }
+  
+    effect = E_chain {
+      debuff = 1
+      id = ChainShot
+      name = "Chain Shot"
+      text = "This unit is taking damage from a Chain Shot."
+      icon = 1,10
+      type = damage
+      damage = stat:damage
+      dont_damage_first = 1
+      chooser = nearest
+      max_hops = stat:discharge_hops
+      max_affected = 10
+      max_spreads = 2
+      max_spreads_per_tick = 2
+      min_spreads_per_tick = 1
+	    spread_dist = 1200
+      remove_spreads = 0
+      check_caster = 0
+      discard_react = 0
+      p2pray = ChainShotLightning
+      p2pray_dstnode = pt_center
+      p2pray_duration = 1
+    }
+  }
+}
+
+
+CSpellAction ProtonShotAction {
+  name = "Proton Shot"
+  descr = "The Judge shoots a special parabollic proton charged grenade that inflicts [stat:proton_shot_damage] damage to all enemies in a small area. Proton charged grenade also burns [proton_shot_power_burn] power of affected enemies, slightly increasing the total inflicted damage."
+  visible = 1
+  icon = 12,3
+  tags = location
+  feedback = DecalFeedback
+  max_range = stat:range
+  min_power = stat:proton_shot_psi
+  cooldown = 30
+  aoe_radius = stat:proton_shot_radius
+    
+  spell {
+    power = stat:proton_shot_psi
+    cast {
+      finish {
+        anim = shoot_up
+        sound = data/sounds/effects/common/proton_grenade.wav
+        attach {
+          pt_shoot = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif
+        }
+      }
+    }
+
+    projectile = parabolic {
+      damage_type = energy
+      start_point = pt_cast
+      angle = 60
+      --speed = 4000
+      model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif {
+        CTrailController trail_1 {
+          emitter = root
+          texture = data/model/effects/Trails/Lightning_Trail_Drain.dds
+          tex_ratio = float: 1.7
+          start_width = 95
+          end_width = 270
+          ttl = 10
+          simple_time = 1
+          additive = 1
+          z_write = 0
+          material_alpha = 0.8
+          diffuse = color: 1, 1, 1
+          ambient = color: 0.5, 0.5, 0.5
+          emissive = color: 1, 1, 1
+
+          time0 = 0
+          color0 = colora: 0.2, 0.2, 1, 0
+
+          time1 = 3
+          color1 = colora: 0.2, 0.2, 1, 1
+
+          time2 = 30
+          color2 = colora: 0.2, 0.2, 1, 1
+
+          time3 = 60
+          alpha3 = 0.8
+          
+          time4 = 100
+          color4 = colora: 0.4, 0.4, 1, 0
+        }
+        
+        CTrailController trail_2 {
+          emitter = root
+          texture = data/model/effects/Trails/Trail3.dds
+          tex_ratio = float: 0.6
+          start_width = 135
+          end_width = 25
+          ttl = 14
+          simple_time = 1
+          additive = 1
+          z_write = 0
+          material_alpha = 1
+          diffuse = color: 1, 1, 1
+          ambient = color: 0.5, 0.5, 0.5
+          emissive = color: 1, 1, 1
+
+          time0 = 0
+          color0 = colora: 1, 0.3, 1, 0.6
+
+          time1 = 2
+          color1 = colora: 0.3, 0.2, 1, 0.8
+
+          time2 = 30
+          color2 = colora: 0.3, 0.2, 1, 0.8
+
+          time3 = 65
+          alpha3 = 0.7
+          
+          time4 = 100
+          color4 = colora: 0.2, 0.1, 1, 0
+        }
+      }
+
+      react = proton_shot
+      effect = ProtonShotHit
+      ground_hit_effect = ProtonShotTerrainHitEffect
+      expire_effect = ProtonExpire
+    }
+  }
+}
+
+CMapAnim ProtonGroundHit {
+  model = data/Models/Projectiles/ProtonShot/ProtonShotHitGround.nif
+  scale = 0.8
+}
+
+CMapAnim ProtonExpire {
+  model = data/Models/Projectiles/ProtonShot/ProtonShotExpire.nif
+  scale = 0.8
+}
+
+CAnimEffect ProtonShotTerrainHitEffect {
+  tags t1 = grass | dirt | mud {
+    spawn ProtonGroundHit
+  }
+  tags t2 = water {
+    spawn WaterHit
+  }
+}
+
+CAreaEffect ProtonShotHit {
+  range = stat:proton_shot_radius
+ 
+  epicenter {
+    spawn ProtonShotTerrainHitEffect
+    physics_radius = stat:proton_shot_radius
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn E_damage {
+      amount = stat:proton_shot_damage
+      react = discharge
+    }
+    spawn E_powerburn {
+      id = ProtonShot
+      burned_power = var:proton_shot_power_burn    -- percent from the target power, removed
+      damage_amplifier = 20                    -- percent, converted from the discharged power, into damage
+    }
+  }
+}
+
+action VoiceofCommandAction {
+  name = "Voice of Command"
+  descr = "Commands all Troopers (and other low tier units) in a small area improving their attack efficiency with [stat:voiceofcommand_damage_perc]% for [stat:voiceofcommand_duration] seconds."
+  visible = 1
+  tags = location
+  feedback = DecalFeedback
+  icon = 13,3
+  power = stat:voiceofcommand_power
+  program = PrgCreateEffect
+  cooldown = 20
+  delay_cooldown = 1
+  aoe_radius = 800
+  
+  effect = E_multibuff {
+    id = BattleShout
+    name = "Voice of Command"
+    text = "The efficiency is unit�s attacks has been improved by a nearby Judge."
+    icon = 3,12
+    type = morale
+    stats_change {
+      damage = { perc = stat:voiceofcommand_damage_perc }
+    }
+    duration = stat:voiceofcommand_duration
+    multi_area : aoe_radius { anim = data/models/effects/magic/healingwave.nif }
+    ally = 1
+    stack = 1
+    react = battle_shout
+  }
+
+ CMapAnim JudgeHit {
+  model = data/models/effects/impacts/IonHitReact.nif
+ }
+}
+

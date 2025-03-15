@@ -1,0 +1,57 @@
+model = {
+  file = str:"data\models\effects\impacts\melee_aliens_blood_impact.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0.433333337306976318359375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"-1,0,0";
+      1 = xpoint3:"0,-1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Plane01";
+        translation = xpoint3:"0.55416107177734375,-3.40397930145263671875,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"-1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Plane02";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"-1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

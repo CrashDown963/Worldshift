@@ -1,0 +1,133 @@
+Mob FireDealer : BaseMob {
+  name = "Fire Dealer"
+  icon = 4,16
+  model = data/models/lifeforms/FatDealer/FatDealer.kfm
+  scale = 1.7
+  hp = 420
+  damage = 60
+  range = 1200
+  precision = 100
+  armor = 8
+  
+  skin {
+    base = data/models/lifeforms/FatDealer/FireDealer-diff.dds
+  } 
+
+  physics {
+    default = data/models/lifeforms/FatDealer/FatDealer_Proxy.pml
+    die = data/models/lifeforms/FatDealer/FatDealer.pml
+  }
+  
+  destruction = ragdoll
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    range_far = 1000
+    range_near = 700
+    proximity_bonus = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    aim_tolerance = 45
+    shoot_anim = shoot
+    idle_time = 0.7
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+    
+	  trace fire_dealer {
+		  model = Data/Models/Effects/TraceBullet/Trooper_trace.nif	
+		  z_write = 0
+		  variant	= 0
+		  start_dist = 10
+		  end_dist = 10
+		  frequency	= 12
+		  ttl	= 1
+		  length = 200
+		  target_size	= 20
+		  velocity	= 70
+		  length_end = 200
+		  width_scale = 12
+		  instances = 128
+		  emit = 52,255,98
+	  }
+ 
+    muzzle_fx ion_rifle_fd {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+		  frames = 4
+		  frequency = 8
+		  active_fraction	= 40
+		  active_variation = 5
+		  length_variation = 40
+		  width_variation	= 7
+		  scale	= 5
+		  instances = 64
+		  emit = 52,255,98
+	  }
+	  
+    spot_impact = 1000
+    spot_impact_type = bullet
+    muzzle_fx FatMuzzle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+      frequency	= 1
+      active_fraction = 40 
+      active_variation = 0
+      length_variation = 0
+      width_variation = 2
+      scale = 5
+      instances = 64
+      emit = 155,25,35
+    }
+    shoot_snd = data/Sounds/weapons/browning MG/
+  }
+
+  abilities {
+    FireShock {
+      when : abi.fight
+      chance = 40
+      target = self
+      
+      cast {
+        prepare {
+          anim = idle_rare_1
+        }
+        finish {
+          anim = idle_rare_2
+        }
+      }
+      
+      effect = E_set {
+        effect = E_damage {
+          area = 800 { 
+            anim = data/Models/Effects/Fire/FireSweep.kfm  {
+              emit = 25,155,25
+              scale = 6
+            }
+            sound = DATA/sounds/Effects/FireSweep/
+          }
+          amount = 70
+          react = fire
+          friendly_fire = 0
+        }
+        effect = S_multifear {
+          duration = 10
+          multi_area = 800
+          react = fear
+        }
+      }
+    }  
+  }
+}
+
+
+

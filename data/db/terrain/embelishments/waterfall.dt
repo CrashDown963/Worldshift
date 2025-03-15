@@ -1,0 +1,31 @@
+TypeWaterfall {
+  group = Embelishments
+  subgroup = Waterfall
+}
+
+CEmbelishment Waterfall : TypeWaterfall {
+  model = data/terrain/embelishments/waterfall/waterfall.nif
+  shadow = 0
+  accept_shadow = 0
+  sounds {
+    start=data/sounds/environment/waterfall/
+  }
+}
+  
+CEmbelishment Waterfall_Broad : TypeWaterfall {
+  model = data/terrain/embelishments/waterfall/waterfall_broad.nif
+  shadow = 0
+  accept_shadow = 0
+  sounds {
+    start=data/sounds/environment/waterfall/
+  }
+}
+
+CEmbelishment Waterfall_Thin : TypeWaterfall {
+  model = data/terrain/embelishments/waterfall/waterfall_Thin.nif
+  shadow = 0
+  accept_shadow = 0
+  sounds {
+    start=data/sounds/environment/waterfall/
+  }
+}

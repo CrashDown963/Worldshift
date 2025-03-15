@@ -1,0 +1,5 @@
+CMapAnim ExplGrenade {
+  model = data/models/testobjects/Exp_Grnd_2m/ExplGrenade.kfm
+  clone_mode = reuse deepcopy
+
+}

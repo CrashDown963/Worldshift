@@ -1,0 +1,279 @@
+Unit Master : BaseUnit {
+  model = Data/Models/Units/Master/Master.kfm {
+    die = Data/Models/Units/Master/Master_die.nif
+  }
+  
+  name = "Master"
+  descr = "DESCRIPTION"
+  race = aliens
+  commander = 1
+  tags = unit, organic
+  icon = 3,1
+  conv_icon_row = 2
+  conv_icon_col = 3
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Master/Master.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+  
+  sounds {
+    start = data/speech/summoning/master summoned.wav
+    attack = data/speech/confirmations/master/master attack/
+    select = data/speech/selecting/master select/
+    joke = data/speech/selecting/master joke/
+    confirm = data/speech/confirmations/master/master confirm/
+    destruction = data/speech/deaths/master death/
+    engage = data/speech/engage alerts/master engage/
+    damage = data/speech/engage alerts/master damage/
+    move = data/speech/confirmations/master/master move/
+  }
+
+  attachments {
+    pt_center = data/models/effects/Aliens/MasterAttachment.nif {auto_size_base = 0}
+  }
+
+  stats :{
+    hp = 700
+    armor = 12
+    range = 1600
+    damage = 75
+    psi = 380
+    
+    shield_hull = 250
+    shield_regen  = 150
+    shield_fullabsorbchance = 20
+    shield_percentabsorbtion = 50
+    
+    feed_psi_cost = 160
+    feed_duration = 5
+    feed_tick = 0.5
+    feed_base = 30
+    feed_add_damage = 5
+    feed_add_heal = 1
+    
+    nether_nova_psi_cost = 180
+    nether_nova_radius = 500
+    nether_nova_damage = 180
+  }
+
+  feed_base_damage = stat:feed_base
+  feed_base_heal = stat:feed_base * 0.2
+  
+  speed = 450
+  take_auras : { RestorationCoreAura }
+
+  can_build = 1
+
+  actions :{
+    FeedAction
+    NetherNovaAction
+    TeleportOfficerAction
+    Reinforce
+    MakeBreeder
+    PickItemDef
+  }
+  
+  abilities {
+    PlasmaShieldAbi
+    AIFeed {
+      action = FeedAction
+      when   : abi.fight
+      target = current { min_hp = 100; aoe_range = 1000; aoe_min_enemy_hp = 300 }
+      range = stat:range
+    }
+    AINetherNova {
+      action = NetherNovaAction
+      when   : abi.fight
+      min_power = 200
+      target = current { aoe_range = 600; aoe_min_enemy_hp = 500; aoe_min_enemy_count = 4 }
+      range = stat:range
+    }
+  }
+
+  attack_spell = MasterCastSpell
+  cost : pvp.aliens.unit_costs.Master
+  cost_sloc : pvp.aliens.sloc_costs.Master
+
+  animation {
+    plant_structure = cast_preparation
+    pick_item = cast_preparation
+  }
+  
+  CShieldController shield {
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    regen_tick = 2
+    reactivate_threshold = 30
+    -- regen_boost_perc = 100
+    -- regen_boost_timeout = 20
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+}
+
+PlasmaShieldAbi {
+  name = "Plasma Shield"
+  text = "Powerful shield that is activated automatically when the Master is attacked. Plasma Shield has [stat:shield_hull] durability, [stat:shield_regen] charge rate, [stat:shield_fullabsorbchance]% chance for full deflection and [stat:shield_percentabsorbtion]% damage absorbtion."
+  icon = 2,0
+}
+
+CAreaEffect E_nether_nova {
+  range = stat:nether_nova_radius
+  epicenter {
+    spawn NetherNova
+    physics_radius = stat:nether_nova_radius
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      friendly_fire = 0
+      amount = stat:nether_nova_damage
+      react = fire
+    }
+  }
+}
+
+CSpellAction NetherNovaAction {
+  name = "Nether Nova"
+  descr = "The Master creates an nether energy blast, that inflicts [stat:nether_nova_damage] damage to all enemies in a small area"
+  visible = 1
+  icon = 10,4
+  tags = location
+  feedback = DecalFeedback
+  min_power = stat:nether_nova_psi_cost  
+  cooldown = 30
+  aoe_radius = stat:nether_nova_radius
+  spell {
+    power = stat:nether_nova_psi_cost
+    cast {
+      finish {
+        anim = cast_finish
+        sound = data/sounds/effects/common/nether nova.wav
+        attach {
+          pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+        }
+      }
+    }
+    
+    effect = E_nether_nova
+  }
+}
+
+CFeedHealEffect E_feed {
+}
+
+CSpellAction FeedAction {
+  name = "Feed"
+  descr = "Master channels for a few seconds a powerful nether ligh that does [stat:feed_base_damage] damage each tick for [stat:feed_duration] seconds. The nether light also drains the same amount of life out of the affected target and is spread by the Master to a nearby allies, thus healing them. The light splits on the target and jumps to other tagets as well. The healing efficiency increases with each additional target affected, but the damage inflicted decreases."
+  visible = 1
+  icon = 13,4
+  tags = enemy
+  min_power = stat:feed_psi_cost
+  range = stat:range  
+  cooldown = 25
+  spell {
+    power = stat:feed_psi_cost
+    cast {
+      finish {
+        duration = stat:feed_duration
+        anim = cast_finish
+        sound = data/sounds/effects/common/feed.wav
+        attach {
+          pt_cast = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
+        }
+      }
+    }
+    remove_effects = 1
+    effect = E_chain {
+      sound = data/sounds/effects/common/electro arc.wav
+      debuff = 1
+      id = Feed
+      name = "Feed"
+      text = "This unit is taking damage from a Feed action."
+      icon = 2,3
+      type = damage
+      duration = stat:feed_duration
+      tick = stat:feed_tick
+      -- immediate_tick = 1
+      
+      --enemy = 0 
+      --ally = 1
+      --tags = organic
+
+      damage = var:feed_base_damage
+      chooser = nearest         -- random | nearest | nearest_to_caster | nearest_to_first
+      spread_damage_and_add = stat:feed_add_damage -- if not ommited means damage done per tick is: damage / num_affected + spread_damage_and_add
+      max_hops = 5              -- maximum hops (depth), 0 means single target, etc.
+      max_affected = 20         -- omit or 0 means no maximum
+      max_spreads = 3           -- spreads means new buff copies caused by us (to others)
+      max_spreads_per_tick = 3  -- 
+      min_spreads_per_tick = 1  -- if not enough targets are found no spread will happen
+      keep_spreading = 1        -- try to spreads each tick (1) or only on 1st tick (0)
+      spread_dist = 1000        -- max spread distance (from current to next)
+      max_dist_to_caster = 2000 -- omit or <= 0 means no check
+      max_dist_to_first = 1500  -- omit or <= 0 means no check
+      remove_spreads = 1        -- whether to remove spreads when finished / cleansed
+      check_caster = 1          -- end if caster dies
+      stack_per_caster = 1
+      
+      caster_effect_on_start = E_feed {
+        id = Feed
+        name = "Feed"
+        text = "This unit is being healed by a Feed action."
+        icon = 2,2
+        type = heal
+        area = 1000
+        --tags = organic
+        hp = var:feed_base_heal
+        add_heal_per_affected = stat:feed_add_heal
+        duration = stat:feed_duration
+        tick = stat:feed_tick
+        react = heal
+      }
+      
+      react = lightning
+      p2pray = MasterFeedBeam
+      p2pray_srcnode = pt_cast      -- only valid for caster to target ray, omit = no such ray
+      p2pray_dstnode = pt_center    -- serves as both source and dest for rays between targets
+      --p2pray_duration = 0.5       -- omit = rays stay as long as buff stays
+    }
+  }
+}
+
+MasterCastSpell {
+  cast {
+    prepare {
+      anim = cast_preparation
+      duration = 1.3
+      attach {
+        pt_cast = Data/Models/Effects/Magic/AlienCast01.nif
+      }
+    }
+    finish {
+      sound = data/sounds/effects/master weapon/
+      anim = cast_finish
+      duration = 1.6
+      attach {
+        pt_cast = Data/Models/Effects/Magic/AlienCast01.nif
+      }
+    }
+  }
+
+  projectile = chase {
+    model = Data/Models/Effects/TraceBullet/MasterProjectile_Heavy.nif
+	  speed = 2500
+    scale = 1.2
+    damage = stat:damage
+    react = fire
+  }
+}

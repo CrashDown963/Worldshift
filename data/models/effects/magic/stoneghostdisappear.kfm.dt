@@ -1,0 +1,23 @@
+model = {
+  file = str:"data\models\effects\magic\stoneghostdisappear.kfm";
+  animations = {
+    dissapear = {
+      loop = int:"0";
+      duration = fixp:"2.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.433333337306976318359375";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.5";
+        }
+      }
+    }
+  }
+}

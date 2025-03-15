@@ -1,0 +1,49 @@
+Mob HalberdierMob : BaseMob {
+  model = data/models/units/KOHUnits/Halberdier1.kfm
+  speed = 450
+
+  stats :{
+    hp = 1000
+    armor = 10
+    range = 200
+    damage = 50
+  }
+
+  hp = stat:hp 
+  armor = stat:armor 
+  range = stat:range 
+  damage = stat:damage 
+  sight = 1400
+  aggro_range = var:sight
+
+  min_attack_range = 3	
+  max_attack_range = 3
+
+  impacts : LivingUnitImpacts
+  
+  animation {
+    anim_set ATTACK_MAIN = loop {
+      hit_1 = 100,1,1
+      hit_2 = 100,1,1
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK_MAIN
+    fire_node = Scene Root
+    fire_rate = 0.3
+    spot_impact = 900
+    spot_impact_type = melee
+  }
+}
+  
+  

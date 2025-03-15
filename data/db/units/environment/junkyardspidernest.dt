@@ -1,0 +1,103 @@
+Mob JunkyardSpiderNest : BaseMob  {
+  name : SpiderNest.name
+  movable = 0
+  passable = 1
+  no_mouse_targetable = 1
+  hp = 0
+  icon = 7,17
+  model = data/models/lifeforms/SpiderNest/SpiderNest.kfm
+  sight = -1
+  chase_range = -1
+  sight_area = BossArea
+  
+  abilities {
+    Spit {
+      when : abi.always
+      condition = XesskAlive
+      chance = 30
+      cooldown = 5
+      target = enemy { no_ally_in_range = 500 }
+      range = 10000
+
+      cast {
+        prepare {
+          sound = data/sounds/effects/melee little pierce/
+          anim = spit
+        }
+      }
+
+      projectile = parabolic {
+        angle = 60
+  	    start_point = pt_top
+        spot_impact = 800
+        spot_impact_type = small_energy
+        damage_type = energy
+        
+        effect = E_set {
+          effect = E_spawn {
+            spawn { 
+              JunkLurker = 1 {
+                sight = -1
+                chase_range = -1
+                sight_area = BossArea
+                waypoint_radius = 1000
+                roam = 1
+              }
+            }
+          }
+          effect = E_JunkyardEggExplode
+        }  
+
+        --decal_settings ground_hit_decal = barrage_decal1
+        
+        model = data/models/projectiles/eggprojectile/eggprojectile.nif {
+          CTrailController trail {
+				    emitter = Scene Root
+				    texture = data/textures/trails/energy_trail1.dds
+				    tex_ratio = float: 4.0
+				    start_width = 14
+				    end_width = 0
+				    ttl = 12
+				    simple_time = 1
+				    additive = 1
+				    z_write = 0
+				    material_alpha = 0.5
+				    diffuse = color: 0, 1, 0
+				    ambient = color: 0.0, 0.5, 0.0
+				    emissive = color: 0, 1, 0
+
+				    time0 = 0
+				    color0 = colora: 1, 1, 1, 0
+
+				    time1 = 3
+				    color1 = colora: 1, 1, 1, 0.4
+
+				    time2 = 30
+				    color2 = colora: 1, 1, 1, 0.25
+
+				    time4 = 100
+				    color4 = colora: 1, 1, 1, 0
+			    }
+		    }
+      }
+    }
+  }
+}
+
+CAreaEffect E_JunkyardEggExplode {
+  range = 500
+  epicenter {
+    spawn NetherNova {
+      sound = data/sounds/effects/acidblow/
+    }
+    physics_radius = 500
+    physics_power = 4500
+  }
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      friendly_fire = 0
+      amount = 100
+      --react = fire
+    }
+  }
+}

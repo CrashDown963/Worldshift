@@ -1,0 +1,5 @@
+Mob Scavenger5 : Scavenger2 {
+  skin {
+    base = data/models/units/Scavenger/Scavenger_desert_diff.dds
+  }
+}

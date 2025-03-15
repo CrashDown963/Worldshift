@@ -1,0 +1,38 @@
+Building Extractor2 : BaseBuilding {
+  model = Data/Models/buildings/ControlTower/Extractor2.kfm {
+  die = Data/Models/buildings/ControlTower/Extractor2_break.nif
+  }
+  
+  physics {
+    default = Data/Models/buildings/ControlTower/ControlTower_Proxy.pml
+    die = Data/Models/buildings/ControlTower/Extractor.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/TrailSmoke/DestrSmoke02.nif
+    attach_destr_node_04 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_05 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_node_06 = data/models/Effects/Fire/Fire_Ani1.nif
+    attach_destr_perc = 40
+  }
+  
+  destruction = ragdoll
+  explosion = ExplosionControlTower
+  
+  race = humans
+  silo = 1
+  stats :{
+    hp = 3000
+  }
+  construction {
+    phase_0 {
+      model = constr_phase_0
+    }
+  }
+  
+  CAlertController alert {
+    timeout = 15
+    layered_anims = 0
+  }
+      
+}

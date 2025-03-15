@@ -1,0 +1,25 @@
+Mob CorruptedShadeMinion : BaseUnderworldMob {
+  name = "Corrupted Shade Minion"
+  model = Data/Models/Units/AncientShade/AncientShade.kfm  
+  
+  attachments {
+    FX_ROOT = data/models/effects/Magic/AncientShade_particles.nif
+  }
+  scale = 1.3
+  race = mutants
+  icon = 6,21
+  
+  hp = 450
+  armor = 6
+  damage = 25
+  penetration = 100
+  range = 1700
+  speed = 400
+  count_projectiles = 3
+  
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+  
+  attack_spell = CorruptedShadeAttackSpell
+}

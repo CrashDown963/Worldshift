@@ -1,0 +1,101 @@
+Technician Technician : BaseUnit {
+  name = "Technician"
+  descr = "DESCRIPTION"
+  model = data/models/units/Technician/technician.kfm
+  race = humans
+  icon = 6,1
+
+  tags = unit, organic, lowrank
+  speed = 450
+  take_auras : { RestorationCoreAura }
+
+  stats :{
+    armor = 0
+    hp = 400
+    range = 1100
+    damage = 25
+    aggro_range = 800
+    mine_amount_per_turn = 10
+  }
+
+  impacts : LivingUnitImpacts
+  destruction = animation
+
+  sounds {
+    start = data/speech/summoning/technician summoned.wav
+    attack = data/speech/confirmations/technician/technician attack/
+    select = data/speech/selecting/technician select/
+    joke = data/speech/selecting/technician joke/
+    confirm = data/speech/confirmations/technician/technician confirm/
+    destruction = data/speech/deaths/technician death/
+    engage = data/speech/engage alerts/technician engage/
+    damage = data/speech/engage alerts/technician damage/
+    move = data/speech/confirmations/technician/technician move/
+  }
+
+  ore_credit_ratio = 1.0 -- 1 ore for 1 credit, i.e. 2 doubles the credits
+ 
+  mine {
+    time = 15
+    qty = stat:mine_amount_per_turn
+  }
+  
+  mine_loop_source = pt_shoot_1
+  mine_loop_attach = Data/Models/Effects/Technician/TechnicianWork.nif
+                     
+  animation {
+    anim_set WORK = loop {
+      work_up_1 = 100, 2,4
+      mine_1 = 100, 1,2
+      work_down = 100, 2,4
+      mine_rare_1 = 10, 1,1
+    }
+    
+    anim_set pick_item = loop {
+      work_up_1 = 100, 2,4
+      mine_1 = 100, 1,2
+      work_down = 100, 2,4
+      mine_rare_1 = 10, 1,1
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+--    range_far = 500
+--    range_near = 100
+--    proximity_bonus = 3
+    fire_node = pt_shoot_1
+    --aim_node = pt_aim
+    fire_rate = 1.5
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 1
+    max_bursts = 1
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 0.5
+		    E = 255,200,0
+ 	    }
+    }
+    spot_impact = 1000
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+  
+
+  actions : BaseUnit.actions {
+    Repair;
+    RepairUnit;
+  }
+}

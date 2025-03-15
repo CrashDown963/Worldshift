@@ -1,0 +1,14 @@
+action Attack {
+  tags = enemy
+  program = PrgAttack
+  can_default = 1
+  weight = 1
+  
+  sound_feedback {
+    attack = 70
+    confirm = 30
+  }
+  
+  cursor = attack
+  cursor_ctrl = attack_move
+}

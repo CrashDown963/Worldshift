@@ -1,0 +1,22 @@
+Mob GateMob : BaseMob {
+  name = "Gate"
+  icon = 1,10
+  model = Data/Models/buildings/portal/portal.kfm
+  movable = 0
+  hp = 0
+  damage = 0
+  sight = 0
+  attackable = 0
+  hide_in_fog = 0
+  
+  LuaParams = {
+    gate_open_anim = open
+    gate_close_anim = close
+    pylon_id = Side_Pilon
+    pylon_search_radius = 600
+    pylon_open_anim = open
+    pylon_close_anim = close
+  }
+  despawn_prg : LuaParams = sid:OpenGate 
+  load_lua_method : LuaParams = sid:LoadGate
+}

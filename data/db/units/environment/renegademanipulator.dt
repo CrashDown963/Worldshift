@@ -1,0 +1,123 @@
+Mob RenegadeManipulator : BaseMob {
+  name : Manipulator.name
+  descr : Manipulator.descr
+  race = aliens
+  icon = 5,29
+  
+  tags = unit, organic, mob, renegade
+  
+  model = Data/Models/Units/Manipulator/Manipulator.kfm {
+    die = Data/Models/Units/Manipulator/Manipulator_die.nif
+  }
+  
+  skin {
+    base = Data/Models/Units/Manipulator/Manipulator-renegade-Diffuse.dds
+    mask = Data/Models/Units/Manipulator/Manipulator-renegade-Mask.dds
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Manipulator/Manipulator.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+  
+  stats : {
+    damage = 40
+    hp = 1200
+    psi = 600
+    vortex_power = 100
+    vortex_cooldown = 20
+    vortex_range = 1000
+    vortex_area = 800
+    vortex_heal = 80
+    vortex_duration = 9
+    life_leech_boost = 20
+  }
+  
+  hp = stat:hp
+  armor = 10
+  range = 1600
+  damage = stat:damage
+  energy = stat:psi
+  life_leech_boost = stat:life_leech_boost
+  enrage_duration = 10 -- If you change this be sure to change the AnimateScale duration parameter accordingly
+  chase_range = -1
+  
+  take_auras : { RestorationCoreAura }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    fire_node = pt_shoot
+    aim_node = pt_aim
+    spot_impact_type = melee
+    shoot_snd = data/sounds/effects/single weapons/manipulator shot.wav
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 2500
+      scale = 0.25
+    }
+  }
+  
+  actions :{
+    DarkVortexAction
+  }
+
+  abilities {
+    LifeLeechAbi
+    
+    AIDarkVortex {
+      action = DarkVortexAction
+      when : abi.always
+      target = ally { 
+        health_hp_taken = 100;
+        aoe_range = 500;
+        aoe_min_wounded_count = 1
+        aoe_min_wounded_health = 200
+      }
+      range = 2000
+    }
+    
+    EnrageAbi {
+      when : abi.combat
+      target = ally { tags = renegade }
+      range = 2000
+      min_power = 50
+      power = 50
+      cooldown = 5
+      no_buffs = { Enrage }
+      
+      cast {
+        finish {
+          anim = Vortex_cast
+        }
+      }
+      
+      effect = E_buff {
+        id = Enrage
+        name = "Enrage"
+        text = "This unit�s statistics are increased by a friendly Renegade Manipulator."
+        duration = var:enrage_duration
+        react = enrage
+        stack_count = 1
+        stats_change {
+          damage = { perc = 200 }
+          hp = { perc = 200 }
+          psi = { perc = 200 }
+        }
+        
+        function = AnimateScale {
+          target_scale = 1.3
+          animate_time = 0.8
+          duration : RenegadeManipulator.enrage_duration
+        } 
+      }
+    }
+  }
+}

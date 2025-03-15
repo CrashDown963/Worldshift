@@ -1,0 +1,37 @@
+model = {
+  file = str:"data\models\units\personnelcarrier\personnelcarrier.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"PersonnelCarrier";
+    translation = xpoint3:"-0.49636936187744140625,161.208740234375,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"pt_wing_2";
+      translation = xpoint3:"508.85906982421875,-228.125579833984375,39.73323822021484375";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,0,1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"pt_wing_1";
+      translation = xpoint3:"-512.14654541015625,-228.12548828125,39.73323822021484375";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,0,1";
+        2 = xpoint3:"0,1,0";
+      }
+    }
+  }
+}

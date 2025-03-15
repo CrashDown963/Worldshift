@@ -1,0 +1,83 @@
+Mob SafariScorpion : BaseMob {
+  name = "Safari Scorpion"
+  icon = 6,15
+  model = data/models/lifeforms/Scorpion/Scorpion.kfm
+  destruction = animation
+  scale = 0.5
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs
+  }
+  
+  stats : {
+    range = 170
+    damage = 30
+    armor = 10
+    hp = 4000
+    sight = 4500
+  }  
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  sight = stat:sight
+  sight_in_combat = 6000
+  frenzy_threshold = stat:damage * 3
+  frenzy_damage = 50
+
+  COrientationController orientation {
+    rot_speed = 130
+    max_tilt = 60
+  } 
+  
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+      hit_2
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK
+    shoot_snd = data/sounds/effects/melee little pierce/
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact = 500
+    spot_impact_type = melee
+  }
+  
+  CFrenzyController frenzy {
+    threshold = var:frenzy_threshold
+    max_applications = 10
+    scale_step = 0.06
+    effect = E_buff {
+      id = Frenzy
+      name = "Frenzy"
+      text = "This unit is frenzied. Its damage is increased."
+      icon = 4,3
+      type = frenzy
+      duration = -1
+      stack_count = 10
+      stats_change {
+        damage = { perc = var:frenzy_damage }
+      }
+      react = fire
+      repeat_react = 1
+    }
+  }
+  
+  abilities {
+    when : abi.idle
+    target = enemy
+    range = var:sight_in_combat
+    program = PrgAttack
+  }
+  
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}

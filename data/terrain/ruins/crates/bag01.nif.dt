@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\crates\bag01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"bag01";
+    translation = xpoint3:"1.324066162109375,1.1361236572265625,24.645923614501953125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

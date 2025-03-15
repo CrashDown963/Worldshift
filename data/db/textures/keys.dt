@@ -1,0 +1,1939 @@
+texture_keys {
+
+------- earth textures
+
+  earth4096 {
+    1 = earth_mask1.dds
+    1 = earth_diffuse1.dds
+    1 = earth_nm1.dds
+  }
+
+  earth2048 {
+    1 = earth_clouds1.dds
+    1 = space.dds
+  }
+
+  earth1024 {
+    1 = earth_halo.dds
+    1 = earth_red_glow.dds
+  }
+
+  earth512 {
+    1 = earth_glow.dds
+  }
+
+  earth256 {
+    1  = proturb.dds
+  }
+
+---------- sky stuff
+
+  sky1024 {
+    1 = blood.bmp
+    1 = blue.bmp
+    1 = blue_pinc.bmp
+    1 = desaturated.bmp
+    1 = sky_extinction.bmp
+    1 = sky_extinction_2.bmp
+    1 = sky_hell.bmp
+    1 = sky_mossy.bmp
+    1 = ohra.bmp
+    1 = purple.bmp
+    1 = sky_snow.bmp
+    1 = veroneze.bmp
+    1 = sky_space2.bmp
+  }
+
+  sky2048 {
+    1 = sky_space1.bmp
+  }
+
+  sky512 {
+    1 = sky_day_256.bmp
+  }
+
+--------- terrain
+  terrain512 {
+   
+-- dark
+    1 = dark_big_rock2.dds
+    1 = dark_dirt-col1.dds
+    1 = dark_flat2.dds
+    1 = dark_flat.dds
+    1 = dark_flat-rock1.dds
+    1 = dark_foamy.dds
+    1 = dark_fossils.dds
+    1 = dark_fossils_nm.dds
+    1 = dark_lava1.dds
+    1 = dark_lava1_nm.dds
+    1 = dark_magma1.dds
+    1 = dark_rock1.dds
+    1 = dark_rock2.dds
+    1 = dark_rock-cliffs.dds
+    1 = dark_rock-cliffs_nm.dds
+    1 = dark_rock-glow1.dds
+    1 = dark_rock-mix1.dds
+    1 = dark_rock-mix1_nm.dds
+    1 = dark_stones_magma.dds
+
+-- desert
+    1 = desert_cracked_dirt1.dds
+    1 = desert_cracked_dirt1_nm.dds
+    1 = desert_cracked_mix1.dds
+    1 = desert_cracked_mix1_nm.dds
+    1 = desert_dirt_slots1.dds
+    1 = desert_dirt_slots1_nm.dds
+    1 = desert_dirt_slots1_a.dds
+    1 = desert_dirt_spots1.dds
+    1 = desert_dirt-rocks1.dds
+    1 = desert_dirt-rocks1_nm.dds
+    1 = desert_grass1.dds
+    1 = desert_grass2.dds
+    1 = desert_red1-white1.dds
+    1 = desert_red1-white1_nm.dds
+    1 = desert_red1-white2.dds
+    1 = desert_red_dirt1.dds
+    1 = desert_red_dirt1_nm.dds
+    1 = desert_red_rocks1.dds
+    1 = desert_red_rocks1_nm.dds
+    1 = desert_red_waves1.dds
+    1 = desert_red_waves1_nm.dds
+    1 = desert_small_rocks1.dds
+    1 = desert_small_rocks1_nm.dds
+    1 = desert_small_rocks2.dds
+    1 = desert_small_rocks2_nm.dds
+    1 = desert_small_rocks3.dds
+    1 = desert_small_rocks3_nm.dds
+    1 = desert_white_dirt1.dds
+    1 = desert_white_dirt1_nm.dds
+    1 = desert_white_rocks1.dds
+    1 = desert_white_rocks1_nm.dds
+    1 = desert_white_rocks2.dds
+    1 = desert-grass3.dds
+    1 = desert-redrock1_nm.dds
+    1 = desert-rocks-waves.dds
+    1 = desert-waves1.dds
+    1 = desert-waves1_nm.dds
+
+-- esperanza
+    1 = esperanza_floor1.dds
+    1 = esperanza_floor_green1.dds
+    1 = esperanza_floor_green1_nm.dds
+    1 = esperanza_floor_nm.dds
+
+-- rocky
+    1 = rocky_base1.dds
+    1 = rocky_base1-rock1.dds
+    1 = rocky_base2.dds
+    1 = rocky_big_rock2.dds
+    1 = rocky_lightbase1.dds
+    1 = rocky_lightbase-mix2.dds
+    1 = rocky_lightbase-mix.dds
+    1 = rocky_rock1.dds
+    1 = rocky_rock2.dds
+    1 = rocky_rock3.dds
+    1 = rocky_rock4.dds
+    1 = rocky_rock4_nm.dds
+    1 = rocky_rockwaves.dds
+
+-- snow
+    1 = snow_deep_ice1_nm2.dds
+    1 = snow_deep_ice1_nm.dds
+    1 = snow_frozen_ground1.dds
+    1 = snow_frozen_ground1_nm.dds
+    1 = snow_rocks1.dds
+    1 = snow_rocks1-snow.dds
+
+--temperate
+    1 = temp_dirt1.dds
+    1 = temp_dirt1-stones.dds
+    1 = temp_dirt1-village.dds
+    1 = temp_dirt1-village.nm.dds
+    1 = temp_dirt1-village-stones.dds
+    1 = temp_dirt2.dds
+    1 = temp_dirt3.dds
+    1 = temp_grass1.dds
+    1 = temp_grass1-dirt1.dds
+    1 = temp_grass1-dirt2.dds
+    1 = temp_grass2.dds
+    1 = temp_grass2-dirt1.dds
+    1 = temp_grass3.dds
+    1 = temp_grass3-dirt1.dds
+    1 = temp_grass4.dds
+    1 = temp_grass5.dds
+    1 = temp_grass6.dds
+    1 = temp_grass6-stones.dds
+    1 = temp_grass7.dds
+
+-- tropical
+    1 = tropical_swamp1.nm.dds
+    1 = tropical_swamp1.dds
+    1 = mossy-rocks2.dds
+    1 = mossy-rocks.dds
+    1 = small_stones1.dds
+    1 = small_stones2.dds
+    1 = small_stones2_nm.dds
+    1 = swamp-mud1.dds
+    1 = tropical_dirt1.dds
+    1 = tropical_dirt1-nm.dds
+    1 = tropical_dirt-asphalt1.dds
+    1 = tropical_dirt-bones1.dds
+    1 = tropical_dirt-leaves1.dds
+    1 = tropical_dirt-leaves-stones1.dds
+    1 = tropical_dirt-leaves-stones1.nm.dds
+    1 = tropical_dirt-stones2.dds
+    1 = tropical_dirt-traces1.dds
+    1 = tropical_forest.dds
+    1 = tropical_grass1.dds
+    1 = tropical_grass1_nm.dds
+    1 = tropical_grass2.dds
+    1 = tropical_grass3.dds
+    1 = tropical_grass4.dds
+    1 = tropical_grass5.dds
+    1 = tropical_grass6.dds
+    1 = tropical_grass-dirt1.dds
+    1 = tropical_grass-dirt2-roots.dds
+    1 = tropical_grass-mix1.dds
+    1 = tropical_grass-roots.dds
+    1 = tropical_mud2.dds
+    1 = tropical_mud2_nm.dds
+    1 = tropical_rocks1.dds
+    1 = tropical_rocks1-nm.dds
+    1 = tropical_rocks2.dds
+    1 = tropical_rocks2-nm.dds
+    1 = tropical_rocks3.dds
+    1 = tropical_rocks4.dds
+    1 = tropical_rocks4_nm.dds
+    1 = tropical_small-rocks1.dds
+    1 = tropical_small-rocks1-nm.dds
+    1 = tropical_stone.dds
+    1 = tropical_stone-nm.dds
+
+-- tundra
+    1 = big_rock2.dds
+    1 = big_rock2_nm.dds
+    1 = big_rock2-dirt1.dds
+    1 = desert_dirt_slots1_t.dds
+    1 = dirt-grass1.dds
+    1 = dirt-leaves1.dds
+    1 = greenmoss1.dds
+    1 = rocky_rock1_t.dds
+    1 = tree1.dds
+    1 = violet_spots.dds
+
+-- general
+    1 = asphalt1.dds
+    1 = asphalt2.dds
+    1 = asphalt3.dds
+    1 = asphalt4.dds
+    1 = asphalt4_nm.dds
+    1 = asphalt5.dds
+    1 = asphalt6.dds
+    1 = asphalt7-nm.dds
+    1 = asphalt7.dds
+    1 = asphalt7-marks.dds
+    1 = asphalt7-spots.dds
+    1 = asphalt8.dds
+    1 = asphalt-cracked1.dds
+    1 = asphalt-debris1.dds
+    1 = asphalt-debris1_nm.dds
+    1 = asph-ground1.dds
+    1 = cliffs_jungle1.dds
+    1 = concrete1.dds
+    1 = concrete1_nm.dds
+    1 = crystal.dds
+    1 = dark_rocks4.dds
+    1 = dark_rocks4_nm.dds
+    1 = dark-asphalt-mix_01.dds
+    1 = dark-asphalt-mix_02.dds
+    1 = dark-swamp-mix_01.dds
+    1 = dark-swamp-mix_02.dds
+    1 = dirt_cracked1.dds
+    1 = dirt_cracked_mix2.dds
+    1 = dirt_cracked_mix.dds
+    1 = dirt_forest1.dds
+    1 = dirt_forest2.dds
+    1 = dirt_jungle1.back.dds
+    1 = dirt_jungle1.dds
+    1 = dirt_jungle2.dds
+    1 = dirt_jungle2_nm.dds
+    1 = dirt_jungle3.dds
+    1 = dirt-grass-anim1.dds
+    1 = forest_dirt1-stones.dds
+    1 = forest_grass1.dds
+    1 = forest_grass2.dds
+    1 = forest_grass3.dds
+    1 = forest_ground_01.dds
+    1 = forest_ground_02.dds
+    1 = forest_ground_03.dds
+    1 = forest_mix1.dds
+    1 = forest_rocks1.dds
+    1 = forest_rocks2.dds
+    1 = grass_dry1.dds
+    1 = grass_jungle1.dds
+    1 = grass_jungle2.dds
+    1 = grass_jungle3.dds
+    1 = grass_jungle4.dds
+    1 = grass_jungle5.dds
+    1 = grass_jungle6.dds
+    1 = grass_jungle8.dds
+    1 = grass_leaves1.dds
+    1 = grass-asphalt1.dds
+    1 = grass-asphalt2.dds
+    1 = green_rock1.dds
+    1 = grey_rocks1.dds
+    1 = grey_rocks1_nm.dds
+    1 = jungle-cliffs1.dds
+    1 = jungle-cliffs1_nm.dds
+    1 = lichen_rock1.dds
+    1 = mars_rocks.dds
+    1 = mars_rocks_nm.dds
+    1 = metal_plates.dds
+    1 = metal_plates_nm.dds
+    1 = mud1.dds
+    1 = mushroom-swamp-mix_01.dds
+    1 = pavement1.dds
+    1 = pavement1_nm.dds
+    1 = pavement1-grass.dds
+    1 = rocks_grass_jungle1.dds
+    1 = rocks_grass_jungle1_nm.dds
+    1 = rocks_jungle1.dds
+    1 = rocks_jungle2.dds
+    1 = rocks_jungle2_nm.dds
+    1 = rocks_jungle3.dds
+    1 = rocks_white_stones1.dds
+    1 = rocks_yellow1.dds
+    1 = rocks_yellow1_nm.dds
+    1 = roots-grass1.dds
+    1 = roots-grass1_nm.dds
+    1 = roots-grass2.dds
+    1 = roots-grass2_nm.dds
+    1 = roots-rock1.dds
+    1 = roots-rock1_nm.dds
+    1 = sand1.dds
+    1 = sand2.dds
+    1 = sand3.dds
+    1 = sand4.dds
+    1 = sand_stones1.dds
+    1 = sand-grass1.dds
+    1 = underwater1.dds
+    1 = underwater1_nm.dds
+    1 = underwater2.dds
+    1 = underwater3.dds
+    1 = underwater4.dds
+    1 = underwater5.dds
+    1 = underwater6.dds
+    1 = underwater-sand1.dds
+    1 = urban_dirt1.dds
+    1 = urban_dirt1-grass1.dds
+    1 = urban_rocks1.dds
+    1 = wet_ground_grass1.dds
+  }
+
+  terrain1024 {
+
+-- esperanza
+    1 = esperanza_wall.dds
+    1 = esperanza_wall_nm.dds  
+
+-- general 
+    1 = bricks1.dds
+    1 = bricks1_nm.dds
+    1 = grass_jungle7.dds
+  }
+
+
+  terrain256 {
+
+-- tropical
+    1 = green_sky_refmap.dds
+  }
+
+
+  terrain128 {
+
+-- general
+    1 = road_mark1.dds
+  }
+
+  terrain2 {
+
+-- general
+    1 = black.dds
+    1 = basic_default.dds
+  }
+
+--------- embelishments
+
+
+  embel128 {
+
+-- waterfall
+    1 = waterfall.dds
+    1 = waterfalnm.dds
+    1 = waterfog.dds
+    1 = waterintensewave.dds
+    1 = waterintensewavenm.dds
+  }
+
+  embel256 {
+
+-- insect eggs
+    1 = spider_egg1.dds
+    1 = spider_egg1-nm.dds   
+
+-- mutated
+    1 = alien-egg2-decal-diff.dds
+    1 = alien-egg2-decal-nm.dds
+    1 = barrel-sponge_big.dds
+    1 = barrel-sponge_big_nm.dds
+    1 = barrel-sponge_smal_nm.dds
+    1 = barrel-sponge_small.dds
+    1 = coraltube_parts.dds
+    1 = coraltube-nm_parts.dds
+    1 = net.dds
+
+-- plague bubbles
+    1 = bubbles-diff.dds
+    1 = bubbles-nm.dds
+
+-- stumps 
+    1 = big_stump_diffuse.dds
+    1 = big_trunk_diffuse.dds
+    1 = big_trunk_nmm.dds
+    1 = stumpnmm.dds
+
+-- general 
+    1 = environment_map.dds
+  }
+
+
+  embel512 {
+
+-- crystals
+    1 = crystals_diffuse.dds
+    1 = crystals_nm.dds
+
+-- mushroom rocks
+    1 = mushroom_rock1_diffuse.dds
+    1 = mushroom_rock1_nm.dds
+    1 = mushroom_rock2_nm.dds
+    1 = mushroom_rocknm.dds
+
+-- mushrooms
+    1 = mush-diffuse.dds
+    1 = mush-nm1.dds
+
+-- mutated
+    1 = alien-egg2-diff.dds
+    1 = alien-egg2-mask.dds
+    1 = alien-egg2-nm.dds
+    1 = alien-egg-diff.dds
+    1 = alien-egg-mask.dds
+    1 = alien-egg-nm.dds
+    1 = ashtube.dds
+    1 = ash-tube-nm.dds
+    1 = big_mushroom2.dds
+    1 = big_mushroom2_nm.dds
+    1 = coraltube.dds
+    1 = coraltube-nm.dds
+    1 = dragon_teeth_small.dds
+    1 = dragon_teeth_small_nm.dds
+    1 = dragon-teeth-mushroom_big.dds
+    1 = dragon-teeth-mushroom_big_nm.dds
+    1 = mad-daisy_big.dds
+    1 = mad-daisy_big_dry.dds
+    1 = mad-daisy_big_nm.dds
+    1 = mad-daisy_medium.dds
+    1 = mad-daisy_medium_nm.dds
+    1 = purple-mushroom.dds
+    1 = purple-mushroom_nm.dds
+    1 = sporetube.dds
+    1 = sporetube-nm.dds
+    1 = strangled-mushroom.dds
+    1 = strangled-mushroom_nm.dds
+    1 = tropical-thistle.dds
+    1 = tropical-thistle_01.dds
+    1 = tropical-thistle_nm.dds
+    1 = volcanic-plant.dds
+    1 = volcanic-plant_nm.dds
+
+-- pointy rocks
+    1 = arc_stonenmm.dds
+    1 = cobble_stone1nmm.dds
+    1 = cobble_stone2nmm.dds
+    1 = cobble_stone3nmm.dds
+    1 = smooth_bigrock1_nm.dds
+    1 = smooth_bigrock2_nm.dds
+    1 = smooth_bigrock3_nm.dds
+    1 = stone9.dds
+
+-- rocks
+    1 = common_stone8_nm.dds
+    1 = common_stone10_nm.dds
+    1 = common_stone_diffuse.dds
+    1 = commonstone01_nm.dds
+    1 = commonstone02_nm.dds
+    1 = commonstone03_nm.dds
+    1 = commonstone04_nm.dds
+    1 = commonstone05_nm.dds
+    1 = sharp_rocks01_nm.dds
+
+-- small round stones
+    1 = sharp_stones01_nm.dds
+    1 = stones-small01_nm.dds
+    1 = stones-small02_nm.dds
+
+-- stumps
+    1 = forest-embelishments_01.dds
+    1 = forest-embelishments_01_nm.dds
+    1 = stump01_diffuse.dds
+    1 = stump01_nm.dds
+  }
+
+
+  embel1024 {
+
+-- enormous trees
+    1 = darktree1.dds
+    1 = darktree1_nm.dds
+    1 = darktree1_white.dds
+    1 = bigtree-diff.dds
+    1 = bigtree-nm.dds
+    1 = enormous_tree3_diffuse.dds
+    1 = enormous_tree3_nm.dds
+    1 = enormous_tree_2_nm.dds
+    1 = enormous_tree_2diffuse.dds
+    1 = enormous_tree_2diffuse-red.dds
+    1 = enormous_tree_diffuse.dds
+    1 = enormous_treenm.dds
+    1 = mutanttree1-diff.dds
+    1 = mutanttree1-mask.dds
+    1 = mutanttree1-nm.dds
+    1 = roots-diff.dds
+    1 = roots-nm.dds
+    1 = smallmutanttree-diff.dds
+    1 = smallmutanttree-nm.dds
+
+-- mutated
+    1 = wormplague_diffuse.dds
+    1 = wormplague_nm.dds
+    1 = giant-mushroom_big.dds
+    1 = giant-mushroom_big_nm.dds
+
+-- stonespire
+    1 = stonespirearc-diff.dds
+    1 = stonespirearc-nm.dds
+    1 = stonespire-diff.dds
+    1 = stonespire-diff_dark.dds
+    1 = stonespire-nm.dds
+    1 = stonespire-nm_dark.dds
+    1 = stonespirepart1-diff.dds
+    1 = stonespirepart1-nm.dds
+    1 = stonespirepart2-diff.dds
+    1 = stonespirepart2-nm.dds
+  }
+
+  emb_vh1024h512 {
+
+-- mutated
+    1 = big_mushroom3.dds
+    1 = big_mushroom3_nm.dds
+    1 = big_mushroom4.dds
+    1 = big_mushroom4_nm.dds
+
+
+-- pointy rocks
+    1 = crystal_rock.dds
+    1 = crystal_rock_blue.dds
+    1 = crystal_rock_nm.dds
+    1 = crystal_rock_yellow.dds
+    1 = mineral_rock_nm.dds
+    1 = pointy_rock_big1_diff.dds
+    1 = pointy_rock_big1_nm.dds
+    1 = pointy_rock_big2_nm.dds
+
+-- rocks
+    1 = stone_pile_nm.dds
+    1 = volcanic-rock_basic.dds
+    1 = volcanic-rock_basic_nm.dds
+
+-- stumps
+    1 = stump02_diffuse.dds
+    1 = stump02_nm.dds
+    1 = stump03_diffuse.dds
+    1 = stump03_nm.dds
+  }
+
+--------- buildings
+
+  build2048 {
+    1 = breederportal_diffuse.dds
+    1 = breederportal_mask.dds
+    1 = breederportal_nm.dds
+
+    1 = controltower_diffuse.dds
+    1 = controltower_mask.dds
+    1 = controltower_nm.dds
+    
+    1 = shrine-temple_diffuse.dds
+    1 = shrine-temple_mask.dds
+    1 = shrine-temple_nm.dds
+  }
+
+  build_vhh1024 {
+    1 = farm_diffuse.dds
+    1 = farm_nm.dds
+
+    1 = portal_diffuse.dds
+    1 = portal_nm.dds
+
+    1 = oil-pump_diffuse.dds
+    1 = oil-pump_nm.dds
+
+    1 = watchtower_diffuse.dds
+    1 = watchtower_nm.dds
+
+  }
+
+  build1024 {
+    1 = alienship-diff.dds
+    1 = alienship-mask.dds
+    1 = alienship-normal.dds
+
+    1 = ancientstone_diffuse.dds
+    1 = ancientstone_mask.dds
+    1 = ancientstone_nm.dds
+
+    1 = beastlair_diffuse.dds
+    1 = beastlair_mask.dds
+    1 = beastlair_nm.dds
+
+    1 = build_device_diff.dds
+    1 = build_device_mask.dds
+    1 = build_device_nm.dds
+
+    1 = fieldradar_diffuse.dds
+    1 = fieldradar_nm.dds
+
+    1 = foodfarm_diffuse.dds
+    1 = foodfarm_mask.dds
+    1 = foodfarm_nm.dds
+
+    1 = gate_diffuse.dds
+    1 = gate_nm.dds
+
+    1 = gate_teleport_device_diffuse.dds
+    1 = gate_teleport_device_mask.dds
+    1 = gate_teleport_device_nm.dds
+
+    1 = granary_diffuse.dds
+    1 = granary_mask.dds
+    1 = granary_nm.dds
+
+    1 = hut_diffuse.dds
+    1 = hut_mask.dds
+    1 = hut_nm.dds
+
+    1 = hut1_diffuse.dds
+    1 = hut1_mask.dds
+    1 = hut1_nm.dds
+
+    1 = hut2_diffuse.dds
+    1 = hut2_mask.dds
+    1 = hut2_nm.dds
+
+    1 = hut3_diffuse.dds
+    1 = hut3_mask.dds
+    1 = hut3_nm.dds
+
+    1 = hut4_diffuse.dds
+    1 = hut4_mask.dds
+    1 = hut4_nm.dds
+
+    1 = hut5_diffuse.dds
+    1 = hut5_mask.dds
+    1 = hut5_nm.dds
+
+    1 = livingtent_bphases_nm.dds
+    1 = livingtent_bphases-diffuse.dds
+    1 = tent_diffuse.dds
+    1 = tent_nm.dds
+
+    1 = mana_generator_diffuse.dds
+    1 = mana_generator_mask.dds
+    1 = mana_generator_nm.dds
+ 
+    1 = mcp_diffuse.dds
+
+    1 = missioncontrol2_diffuse.dds
+    1 = missioncontrol2_mask.dds
+    1 = missioncontrol2_nm.dds
+    1 = missioncontrol_diffuse.dds
+    1 = missioncontrol_mask.dds
+    1 = missioncontrol_nm.dds
+
+    1 = muthouse_diffuse.dds
+    1 = muthouse_mask.dds
+    1 = muthouse_nm.dds
+
+    1 = oil_depot-diffuse.dds
+    1 = oil_depot-nm.dds
+
+
+
+    1 = extractor_diffuse.dds
+    1 = extractor_mask.dds
+    1 = extractor_nm.dds
+
+    1 = garbage_portal_diffuse.dds
+    1 = portal_mask.dds
+
+
+    1 = radarpost_diffuse.dds
+    1 = radarpost_mask.dds
+    1 = radarpost_nm.dds
+
+    1 = turret_candle_big_diffuse.dds
+    1 = turret_candle_big_normal.dds
+
+    1 = turret_candle_small_normal.dds
+    1 = turret_small_diffuse.dds
+
+    1 = shield_generator_diffuse.dds
+    1 = shield_generator_mask.dds
+    1 = shield_generator_nm.dds
+
+    1 = shrine_diffuse.dds
+    1 = shrine_mask.dds
+    1 = shrine_nm.dds
+
+    1 = side_pilon_diffuse.dds
+    1 = side_pilon_nm.dds  
+
+    1 = silo_diffuse.dds
+    1 = silo_mask.dds
+    1 = silo_nm.dds
+
+    1 = squadmodule_diffuse.dds
+    1 = squadmodule_mask.dds
+    1 = squadmodule_nm.dds
+
+    1 = teleport-gate_diffuse.dds
+    1 = teleport-gate_nm.dds
+
+    1 = temple_diffuse.dds
+    1 = temple_mask.dds
+    1 = temple_nm.dds
+
+    1 = tower_controller_diffuse.dds
+    1 = tower_controller_mask.dds
+    1 = tower_controller_nm.dds
+
+    1 = vecihlecontrol2_diffuse.dds
+    1 = vecihlecontrol2_mask.dds
+    1 = vecihlecontrol2_nm.dds
+    1 = vecihlecontrol_diffuse.dds
+    1 = vecihlecontrol_mask.dds
+    1 = vecihlecontrol_nm.dds
+    1 = vehiclesuport_diffuse.dds
+    1 = vehiclesuport_nm.dds
+
+    1 = wall_diffuse.dds
+    1 = wall_mask.dds
+    1 = wall_nm.dds
+
+    1 = wallcorner_diffuse.dds
+    1 = wallcorner_nm.dds
+
+    1 = wguild_diffuse.dds
+    1 = wguild_mask.dds
+    1 = wguild_nm.dds
+
+    1 = watchtower2_diffuse.dds
+    1 = watchtower2_mask.dds
+    1 = watchtower2_nm.dds
+
+    1 = xenolite_crate_diff.dds
+    1 = xenolite_crate_mask.dds
+    1 = xenolite_crate_nm.dds
+  }
+
+  build512 {
+    1 = defencepost_decal.dds
+    1 = defencepost_decalnm.dds
+
+    1 = farm_decal.dds
+
+    1 = fieldradar_decal.dds
+
+    1 = living-tent_decal.dds
+
+    1 = mcp_decal.dds
+    1 = mcp_nm.dds
+  
+    1 = mc2_decal.dds
+    1 = mc2_decalnm.dds
+    1 = missioncontrol_decal.dds
+    1 = missioncontrol_decalnm.dds
+
+    1 = extractor_decal.dds
+    1 = extractor_decalnm.dds
+
+    1 = powercore_decal.dds
+    1 = powercore_decalnm.dds
+
+    1 = radarpost_decal.dds
+    1 = radarpost_decalnm.dds
+
+    1 = turret_mask.dds
+
+    1 = rom_turretsmall_mask.dds
+
+    1 = silo_decal.dds
+    1 = silo_decalnm.dds
+
+    1 = squadmodule_decal.dds
+    1 = squadmodule_decalnm.dds
+
+    1 = vecihlecontrol2_decal.dds
+    1 = vecihlecontrol2_decalnm.dds
+    1 = vecihlecontrol_decal.dds
+    1 = vecihlecontrol_decalnm.dds
+
+  }
+
+  build_vh_h512 {
+    1 = garbage_post.dds
+    1 = defencepost_diffuse.dds
+    1 = defencepost_nm.dds
+    1 = defencepost_mask.dds
+
+    1 = turret_big_diffuse.dds
+    1 = turret_big_mask.dds
+    1 = turret_big_normal.dds
+
+    1 = mg_diffuse.dds
+    1 = mg_nm.dds
+
+    1 = obelisk_diffuse.dds
+    1 = obelisk_mask.dds
+    1 = obelisk_nm.dds
+
+    1 = powercore_diffuse.dds
+    1 = powercore_mask.dds
+    1 = powercore_nm.dds
+  }
+
+--------- artifacts
+
+  artifact512 {
+    1 = artefact_diffuse.dds
+    1 = artefact_nm.dds
+  }
+
+  artifact_vhh512 {
+    1 = artefact_decal_diff.dds
+    1 = artefact_decal_nm.dds
+  }
+
+  artifact_vhh256 {
+    1 = artefact_rocks_diff.dds
+    1 = artefact_rocks_nm.dds
+  }
+
+
+--------- life forms
+  
+  life1024 {
+    1 = spidernest_diffuse.dds
+    1 = spidernest_nm.dds
+  }
+
+  lifef512 {
+    1 = crococeratops_diffuse.dds
+    1 = crococeratops_nm.dds
+
+    1 = ape_diffuse.dds
+    1 = ape_mask.dds
+    1 = ape_nm.dds
+    
+    1 = king_beetle_diffuse.dds
+    1 = king_beetle_mask.dds
+    1 = king_beetle_nm.dds
+
+    1 = raptor_diffuse.dds
+    1 = raptor_nm.dds
+
+    1 = rhino_diffuse.dds
+    1 = rhino_mask.dds
+    1 = rhino_nm.dds
+
+    1 = scorpion_diffuse.dds
+    1 = scorpion_maskmap.dds
+    1 = scorpion_nm.dds
+    1 = scorpo_skin_diffuse.dds
+
+    1 = tundraplant1_diffuse.dds
+    1 = tundraplant1_nm.dds
+  }
+
+  lifef256 {
+    1 = eel_diffuse.dds
+    1 = eel_nm.dds
+  
+    1 = mutant_bird_diffuse.dds
+    1 = mutant_bird_nm.dds   
+
+    1 = insect_diffuse.dds
+    1 = insect_mask.dds
+    1 = insect_nm.dds
+
+    1 = turtle_diffuse.dds
+    1 = turtle_nm.dds
+  }
+  
+  lifef_vh_h256 {
+    1 = arachnoid_diffuse.dds
+    1 = arachnoid_mask.dds
+    1 = arachnoid_nm.dds
+
+    1 = armadillo_diff.dds
+    1 = armadillo_nm.dds
+
+    1 = big_sloth_diffuse.dds
+    1 = big_sloth_nm.dds
+
+    1 = carnother_diffuse.dds
+    1 = carnother_mask.dds
+    1 = carnother_nm.dds
+
+    1 = fatdealer-diff.dds
+    1 = fatdealer-mask.dds
+    1 = fatdealer-nm.dds
+    1 = firedealer-diff.dds
+
+    1 = mob_diffuse.dds
+    1 = mob_mask.dds
+    1 = mob_nm.dds
+
+    1 = punk_diff.dds
+
+    1 = scorpo_diffuse.dds
+    1 = scorpo_mask.dds
+    1 = scorpo_nm.dds
+
+    1 = trogloc_diffuse.dds
+    1 = trogloc_nm.dds
+
+    1 = spider_diffuse_stone.dds
+    1 = spider_nm.dds
+   
+  }
+
+  lifef128 {
+    1 = pile_difuse.dds
+    1 = pile_nm.dds
+  }
+
+
+--------- units
+
+  units2048 {
+    1 = yamu_diffuse.dds
+    1 = yamu_nm.dds
+
+    1 = yamu_diffuse_test.dds
+    1 = yamu_nm_test.dds
+
+    1 = bigmutant_nm.dds
+    1 = bigmutant-dif.dds
+    1 = bigmutant-mask.dds
+
+    1 = mech_destroyer_diff.dds
+    1 = mech_destroyer_mask.dds
+    1 = mech_destroyer_nm.dds
+
+    1 = onehandmutant_normalsmap.dds
+
+    1 = queen_diffuse.dds
+    1 = queen_nm.dds
+
+    1 = scavenger_black_diff.dds
+    1 = scavenger_desert_diff.dds
+    1 = scavenger_diffuse.dds
+    1 = scavenger_mask.dds
+    1 = scavenger_nm.dds
+    1 = scavenger_white_diff.dds
+    1 = scavenger_yellow_diff.dds
+    1 = scavenger_yellow_nm.dds
+  }
+
+  units1024 {
+    1 = yamu_mask.dds
+
+    1 = yamu_mask_test.dds
+
+    1 = defender_diffuse.dds
+    1 = defender_nm.dds
+    1 = defender_mask.dds
+
+    1 = core_havoc_diffuse.dds
+    1 = core_havoc_nm.dds
+
+    1 = personnelcarrier_diffuse.dds
+    1 = personnelcarrier_mask.dds
+    1 = personnelcarrier_nm.dds
+
+    1 = smith_clone1_diffuse.dds
+    1 = smith_diffuse.dds
+    1 = smith_mask.dds
+    1 = smith_nm.dds
+  }
+
+  units_vhh1024 {
+    1 = onehandmutant_diffusemap.dds
+    1 = onehandmutant_mask.dds
+  }
+  
+  units512 {
+    1 = cargocopter_diffuse.dds
+    1 = cargocopter_nmbase.dds
+
+    1 = doomdrone_diffuse.dds
+    1 = doomdrone_mask.dds
+    1 = doomdrone_nm.dds
+
+    1 = garbagehellfire_diffuse.dds
+    1 = garbagehellfire_mask.dds
+    1 = gorgarhellfire_diffuse.dds
+    1 = hellfire_diffuse.dds
+    1 = hellfire_mask.dds
+    1 = hellfire_nm.dds
+
+    1 = hellfire2_diffuse.dds
+    1 = hellfire2_mask.dds
+    1 = hellfire2_nm.dds
+
+    1 = hellfire_v3_diffuse.dds
+    1 = hellfire_v3_nm.dds
+
+    1 = howling_horror_diffuse.dds
+    1 = howling_horror_mask.dds
+    1 = howling_horror_nm.dds
+
+    1 = kai_rider_diffuse.dds
+    1 = kai_rider_nm.dds
+
+
+
+    1 = transportcopterdiffuse.dds
+    1 = transportcopternm.dds
+
+    1 = turret_big.dds
+    1 = turret_small.dds
+  }
+
+  units_vhh512 {
+    1 = fido_diffuse.dds
+    1 = fido_nm.dds
+
+    1 = spiderboss_diffuse.dds
+    1 = spiderboss_mask.dds
+    1 = spiderboss_nm.dds
+
+    1 = arm_strider_diffuse.dds
+    1 = arm_strider_nm.dds
+
+    1 = unitscopter_diffuse.dds
+    1 = unitscopter_nm.dds
+
+    1 = xenolitebarge_diffuse.dds
+    1 = xenolitebarge_mask.dds
+    1 = xenolitebarge_nm.dds
+
+    1 = biggad_diffuse.dds
+    1 = biggad_nm.dds
+  }
+ 
+  units256 {
+    1 = ancient_shade_diffuse.dds
+    1 = ancient_shade_mask.dds
+    1 = ancient_shade_nm.dds
+    
+    1 = commander_dna-cell_diffuse.dds
+    1 = commander_dna-cell_nm.dds
+
+    1 = hatchling-diffuse.dds
+    1 = hatchling-mask.dds
+
+    1 = propeller2_diffuse.dds
+    1 = propeller3_diffuse.dds
+    1 = propeller_diffuse.dds
+
+    1 = triad_plane.dds
+    1 = energytrail_aliens.dds
+
+    1 = worm-diff.dds
+    1 = worm-mask.dds
+    1 = worm-nm.dds
+
+    1 = commander_rifle_diffuse.dds
+    1 = commander_rifle_normal.dds
+
+    1 = nomad-diffuse.dds
+    1 = nomad-normal.dds
+  }
+
+  units_vhh256 {
+    1 = arbieter_diffuse.dds
+    1 = arbieter_mask.dds
+    1 = arbiter-diffuse.dds
+    1 = arbiter-mask.dds
+    1 = arbiternm.dds
+    1 = arbiter-nm.dds
+
+    1 = assassincolor.dds
+    1 = assassinmask.dds
+    1 = assassinnm.dds
+
+    1 = assault_junker.dds
+    1 = assault_junker_mask.dds
+    1 = assault_junker_nm.dds
+    1 = assaultbot_diffuse.dds
+    1 = assaultbot_mask.dds
+    1 = assaultbot_nm.dds
+
+    1 = battledroid_diff.dds
+    1 = battledroid_mask.dds
+    1 = battledroid_nm.dds
+
+    1 = bladeoverseer-diff1.dds
+    1 = bladeoverseermask.dds
+    1 = bladeoverseer-nm1.dds
+
+    1 = unit_brute_diffuse.dds
+    1 = unit_brute_mask.dds
+    1 = unit_brute_nm.dds
+
+    1 = com_color.dds
+    1 = comander2_nm.dds
+    1 = comander_mask.dds
+    1 = comander_nm.dds
+    1 = commander2_mask.dds
+    1 = commander_diffuse.dds
+    1 = commander_normalmap.dds
+    1 = commanderdiff.dds
+    1 = commandermask.dds
+    1 = commandernm.dds
+
+    1 = denkardiffusemap.dds
+    1 = denkarmask.dds
+    1 = denkarnm.dds
+
+    1 = dominator-diffuse.dds
+    1 = dominator-nm.dds
+    1 = dominator-mask.dds
+    1 = dominator2-diff.dds
+    1 = dominator2-mask.dds
+    1 = dominator2-nm.dds
+
+    1 = ejidiffusemap.dds
+    1 = ejinormalsmap.dds
+
+    1 = energyoverseerdiff.dds
+    1 = energyoverseermask.dds
+    1 = energyoverseernm.dds
+
+    1 = fav-diffuse.dds
+    1 = fav_nm.dds
+
+    1 = green_skin_diffuse.dds
+    1 = green_skin_nm.dds
+
+    1 = guardian_diffuse.dds
+    1 = guardian_mask.dds
+    1 = gurdian_nm.dds
+
+    1 = harvester-diff.dds
+    1 = harvester-mask.dds
+    1 = harvester-nm.dds
+
+    1 = heavy_bot_diffuse.dds
+    1 = heavy_bot_nm.dds
+
+    1 = high_priest_diffuse.dds
+    1 = high_priest_mew_nm.dds
+    1 = high_priest_new_diffuse.dds
+    1 = high_priest_new_mask.dds
+    1 = high_priest_nm.dds
+    1 = high_priest_corrupted_diffuse.dds
+
+    1 = horror_ghost_diffuse.dds
+    1 = horror_ghost_mask.dds
+    1 = horror_ghost_nm.dds
+
+    1 = judge-diffuse.dds
+    1 = judge-mask.dds
+    1 = judge-nm.dds
+
+    1 = manipulator-diffuse.dds
+    1 = manipulator-mask.dds
+    1 = manipulator-nm.dds
+
+    1 = master-diffuse.dds
+    1 = master-mask.dds
+    1 = master-nm.dds
+
+    1 = mercenary_diffuse.dds
+    1 = mercenary_nm.dds
+
+    1 = diffuse.dds
+    1 = mask.dds
+    1 = nightmare_nm.dds
+
+    1 = onkar_diffuse.dds
+    1 = onkar_nm.dds
+    1 = onkarmask.dds
+
+    1 = priest_diffuse.dds
+    1 = priest_nm.dds
+
+    1 = queenprotector_diffuse.dds
+    1 = queenprotector_nm.dds
+
+    1 = garbage_repair_drone.dds
+    1 = repair_drone_diff.dds
+    1 = repair_drone_mask.dds
+    1 = repair_drone_nm.dds
+
+    1 = riper_mask.dds
+    1 = ripper_diffuse.dds
+    1 = ripper_nm.dds
+
+    1 = rocketlaucher_diffuse.dds
+    1 = rocketlaucher_nm.dds
+
+    1 = brute_diffuse.dds
+    1 = brute_normal.dds
+
+    1 = shamandiffmap.dds
+    1 = shaman-mask.dds
+    1 = shamannormalsmap1.dds
+    1 = shaman_corrupted_diffuse.dds
+    1 = shaman-ragho-diff.dds
+    1 = shaman-ragho-mask.dds
+
+    1 = shifter2diff.dds
+    1 = shifter2maks.dds
+    1 = shifter2nm.dds
+    1 = shifter-diff.dds
+    1 = shifter-mask.dds
+    1 = shifternormalsmap.dds
+
+    1 = sorcerer_diffuse.dds
+    1 = sorcerer_mask.dds
+    1 = sorcerer_nm.dds
+ 
+    1 = stoneghost_diffuse.dds
+    1 = stoneghost_nm.dds
+    1 = stoneghost_mask.dds
+
+    1 = garbagehealer__mask.dds
+    1 = garbagehealer_diffuse.dds
+    1 = garbagehealer_normalmap.dds
+    1 = medic_nm.dds
+    1 = medic-diffuse.dds
+    1 = surgeon_diffuse.dds
+    1 = surgeon_mask.dds
+    1 = surgeon_normalmap.dds
+
+    1 = kango_diffuse.dds
+    1 = kango_nm.dds
+    1 = tech_diffuse.dds
+    1 = tech_nm.dds
+    1 = technician_diffuse.dds
+    1 = technician_mask.dds
+    1 = technician_new.dds
+    1 = technician_normal.dds
+
+    1 = trisat-diffuse.dds
+    1 = trisat-frenzy-diffuse.dds
+    1 = trisat-mask.dds
+    1 = trisat-nm.dds
+
+    1 = tritech-diffuse.dds
+    1 = tritech-mask.dds
+    1 = tritech-nm.dds
+
+    1 = shock_trooper-diff.dds
+    1 = shock_trooper-mask.dds
+    1 = townguard_diffuse.dds
+    1 = townguard_nm.dds
+    1 = trooper-diff01.dds
+    1 = trooper-diff05.dds
+    1 = trooper-diff.dds
+    1 = trooper-mask01.dds
+    1 = trooper-mask05.dds
+    1 = trooper-mask.dds
+    1 = trooper-nm.dds
+
+    1 = warrior_diffuse.dds
+    1 = warrior_nm.dds
+    1 = warrior_mask.dds
+
+    1 = worker_diffuse.dds
+    1 = worker_diffuse_old.dds
+    1 = worker_mask.dds
+    1 = worker_nm.dds
+    1 = worker_nm_old.dds
+  }
+
+
+  units128 {
+
+
+    1 = gsshotgun_diffuse.dds
+    1 = gsshotgun_nm.dds
+
+    1 = mercenary_gun_diffuse.dds
+    1 = mercenary_gun_nm.dds
+  }
+
+  units_vhh128 {
+    1 = hinfantry_body_difuse.dds
+    1 = hinfantry_body_normal.dds
+
+    1 = linfantry_body_difuse.dds
+    1 = linfantry_body_normal.dds
+
+    1 = greenskin_diffuse.dds
+    1 = greenskin_mask.dds
+    1 = greenskin_nm.dds
+
+
+    1 = wild_brute_diffuse.dds
+    1 = wild_brute_nm.dds
+  }
+
+  units_vhh64 {
+    1 = hinfantry_gun_difuse.dds
+    1 = hinfantry_gun_normal.dds
+
+    1 = linfantry_gun_difuse.dds
+    1 = linfantry_gun_normal.dds
+    1 = linfantry_head_difuse.dds
+    1 = linfantry_head_normal.dds
+
+    1 = gun-nomad-diffuse.dds 
+    1 = gun-nomad-normal.dds
+
+    1 = brute_gun_diffuse.dds
+    1 = brute_mask.dds
+    1 = brute_gun_nm.dds
+   
+    1 = townguard_rifle_diffuse.dds
+    1 = townguard_rifle_nm.dds
+
+    1 = wild_brute_railgun_diffuse.dds
+    1 = wild_brute_railgun_nm.dds
+  }
+
+
+--------- ruins
+
+  ruins_vhh1024 {
+    1 = arc_diffuse.dds
+    1 = arc_nm.dds
+    1 = bridgemetalparts_diffuse.dds
+    1 = bridgemetalparts_normal.dds
+
+    1 = metalbuildingberserk_diffuse.dds
+    1 = metalbuildingberserk_normalmap.dds
+    1 = metalbuildingberserk_mask.dds
+
+    1 = asphalt-broken01_diffuse.dds
+    1 = asphalt-broken01_nm.dds
+    1 = asphalt-broken02_diffuse.dds
+    1 = asphalt-broken02_nm.dds
+
+    1 = big_tech_pilon_1diff.dds
+    1 = big_tech_pilon_1mask.dds
+    1 = big_tech_pilon_1nm.dds
+    1 = big_tech_pilon_2diff.dds
+    1 = big_tech_pilon_2mask.dds
+    1 = big_tech_pilon_2nm.dds
+  
+    1 = brick-building01_diffuse.dds
+    1 = brick-building01_nm.dds
+    1 = brick-building01_diffuse_jungle.dds
+    1 = brick-building01_nm_jungle.dds
+    1 = building1_diffuse.dds
+    1 = building1_nm.dds
+    1 = building1_diffuse_jungle.dds
+    1 = building1_nm_jungle.dds
+
+    1 = dship_part1_diff.dds
+    1 = dship_part1_mask.dds
+    1 = dship_part1_nm.dds
+
+    1 = hitech_wall_diff.dds
+    1 = hitech_wall_mask.dds
+    1 = hitech_wall_nm.dds
+    1 = hitech_wallv2_diff.dds
+    1 = hitech_wallv2_mask.dds
+    1 = hitech_wallv2_nm.dds
+
+    1 = liberty_diffuse.dds
+    1 = liberty_nm.dds
+
+    1 = plant_1_diffuse.dds
+    1 = plant_1_nm.dds
+    1 = plant_2_diffuse.dds
+    1 = plant_2_nm.dds
+    1 = plant3_diffuse.dds
+    1 = plant3_nm.dds
+    1 = plant_4_diffuse.dds
+    1 = plant_4_nm.dds
+    1 = plant_5_diffuse.dds
+    1 = plant_5_nm.dds
+    1 = plant_6_diffuse.dds
+    1 = plant_6_nm.dds
+    1 = plant7_diffuse.dds
+    1 = plant7_nm.dds
+    1 = plant8_diffuse.dds
+    1 = plant8_nm.dds
+    1 = plant9_diffuse.dds
+    1 = plant9_nm.dds
+
+    1 = raf_diffuse.dds
+    1 = raf_nm.dds
+
+    1 = scavengerruin_diffuse.dds
+    1 = scavengerruin_nm.dds
+
+    1 = esperanza_det1_diff.dds
+    1 = esperanza_det1_mask.dds
+    1 = esperanza_det1_nm.dds
+    1 = esperanza_det2_3_diff.dds
+    1 = esperanza_det2_3_mask.dds
+    1 = esperanza_det2_3_nm.dds
+    1 = gate_v2_diff.dds
+    1 = gate_v2_mask.dds
+    1 = gate_v2_nm.dds
+
+    1 = tower_diffuse.dds
+    1 = tower_green_diffuse.dds
+
+    1 = water_tower01-diffuse.dds
+    1 = water_tower_green_diffuse.dds
+
+    1 = bus01_diffuse.dds
+    1 = bus01_diffuse_jungle.dds
+    1 = maz537_diffuse.dds
+    1 = maz537_normal.dds
+    1 = mechwreck1_diffuse.dds
+    1 = mechwreck1_normalbase.dds
+  }	
+
+  ruins1024 {
+    1 = platform01_diffuse.dds
+    1 = platform01_nm.dds
+    1 = platform02_diffuse.dds
+    1 = platform02_nm.dds
+
+    1 = bricks-debries01_diffuse.dds
+    1 = bricks-debries01_nm.dds
+    1 = bricks-debries02_diffuse.dds
+    1 = bricks-debries02_nm.dds
+    1 = bricks-debries03_diffuse.dds
+    1 = bricks-debries03_nm.dds
+
+  
+    1 = bus_stop_diffuse.dds
+    1 = bus_stop_green_diffuse.dds
+
+    1 = power_line01_diffuse.dds
+
+    1 = concrete_column-diffuse01.dds
+    1 = concrete_column-nm01.dds
+
+    1 = hitech_wallv3_diff.dds
+    1 = hitech_wallv3_mask.dds
+    1 = hitech_wallv3_nm.dds
+    1 = hitech_wallv4_diff.dds
+    1 = hitech_wallv4_mask.dds
+    1 = hitech_wallv4_nm.dds
+    1 = middle_pilon_diff.dds
+    1 = middle_pilon_mask.dds
+    1 = middle_pilon_nm.dds
+
+    1 = bronze_horror1.dds
+    1 = bronze_horror1_nm.dds
+    1 = bronze_savage_diff.dds
+    1 = bronze_savage_nm.dds
+    1 = metal_kai_statue.dds
+    1 = metal_kai_statue_nm.dds
+
+    1 = pipe01_diffuse.dds
+    1 = pipe01_nm.dds
+
+    1 = esperanza_det4_diff.dds
+    1 = esperanza_det4_mask.dds
+    1 = esperanza_det4_nm.dds
+    1 = psirezonator_diffuse.dds
+    1 = psirezonator_nm.dds
+
+    1 = liani_diffuse.dds
+
+    1 = boat_diffuse.dds
+    1 = boatnmm.dds
+    1 = personnelcarrierdawn_diffuse.dds
+    1 = personnelcarrierdawn_nm.dds
+    1 = tankwreck_diffuse.dds
+    1 = tankwreck_nmbase.dds
+    1 = cisterna_diffuse.dds
+    1 = trash_truck_green_diffuse.dds
+    1 = trash_truck_green_diffuse.dds
+    1 = trash_truck_nm.dds
+  }
+
+  ruins_vhh512 {
+    1 = platformwall_diffuse.dds
+    1 = platformwall_nm.dds
+ 
+    1 = concrete_column_jungle-diffuse01.dds
+    1 = concrete_column_jungle-nm01.dds
+
+    1 = dship_part2_bake.dds
+    1 = dship_part2_diff.dds
+    1 = dship_part2_nm.dds
+    1 = dship_part3_diff.dds
+    1 = dship_part3_mask.dds
+    1 = dship_part3_nm.dds
+
+    1 = energypipes01_diffuse.dds
+    1 = energypipes01_nm.dds
+ 
+    1 = fuel_pump_diffuse.dds
+    1 = fuel_pump_green_diffuse.dds
+    1 = fuel_pump_nm.dds
+
+    1 = metal_brute_statue.dds
+    1 = metal_brute_statue_nm.dds
+    1 = stone_statue1_diff.dds
+    1 = stone_statue1_nm.dds
+
+    1 = techdev_4diff.dds
+    1 = techdev_4mask.dds
+    1 = techdev_4nm.dds
+    1 = techdev_1diff.dds
+    1 = techdev_1mask.dds
+    1 = techdev_1nm.dds
+
+    1 = tower_nm.dds
+
+    1 = lista_diffuse.dds
+    1 = mossy-treebark.dds
+    1 = mossy-treebarknm.dds
+    1 = stvol_diffuse.dds
+
+    1 = water_tower01-nm.dds
+
+    1 = afv_wreck_diffuse.dds
+    1 = afv_wreck_diffuse_cleance.dds
+    1 = afv_wreck_nmmix.dds
+
+    1 = bus01_nm.dds
+    1 = bus01_nm_jungle.dds
+    1 = copter01_diffuse.dds
+    1 = copter01_nm.dds
+    1 = copter01_diffuse_jungle.dds
+    1 = copter01_nm_jungle.dds
+    1 = fordka_diffuse.dds
+    1 = grab_machine_diffuse.dds
+    1 = grab_machine_green_diffuse.dds
+    1 = grab_machine_nm.dds
+    1 = tram_diffuse.dds
+    1 = tram_green_diffuse.dds
+    1 = tram_nm.dds
+  }
+
+  ruins512 {
+    1 = bus_stop_nm.dds
+
+    1 = power_line01_nm.dds
+    1 = trash_diffuse.dds
+    1 = trash_nm.dds
+
+    1 = concrete_wall01_broken_diffuse.dds
+    1 = concrete_wall01_broken_nm.back.dds
+    1 = concrete_wall01_broken_nm.dds
+
+    1 = moss-leaves1.dds
+
+    1 = street_lamp_diffuse.dds
+    1 = street_lamp_1_diffuse.dds
+
+
+    1 = techdev_3diff.dds
+    1 = techdev_3mask.dds
+    1 = techdev_3nm.dds
+    1 = techdev_5diff.dds
+    1 = techdev_5mask.dds
+    1 = techdev_5nm.dds
+    1 = techdev_2diff.dds
+    1 = techdev_2mask.dds
+    1 = techdev_2nm.dds
+
+    1 = car2_diffuse.dds
+    1 = car2_nm.dds
+    1 = car3_diffuse.dds
+    1 = car3_nm.dds
+    1 = fordka_broken_diffuse.dds
+    1 = fordka_broken_nm.dds
+    1 = cisterna_nm.dds
+  }
+
+  ruins_vhh256 {
+    1 = power_post01-diffuse.dds
+    1 = power_post01-nm.dds
+    1 = power_post01-diffuse_jungle.dds
+    1 = power_post01-nm_jungle.dds
+
+    1 = assbot_wreck_diffuse.dds
+    1 = assbot_wreck_normal.dds
+
+    1 = barrel_diffuse1.dds
+  }
+
+  ruins256 {
+
+    1 = generic_nm.dds
+    1 = makara_diffuse.dds
+    1 = makara_nm.dds
+
+    1 = statue-lianas.dds
+
+    1 = fordka_tyre_diffuse.dds
+    1 = fordka_tyre_nm.dds
+    1 = fordka_nm.dds
+    1 = tyre_1.dds
+    1 = tyre_1_nm.dds
+  }
+
+  ruins_64 {
+    1 = streer_lamp_nm.dds
+    1 = street_light_1_nm.dds
+  }
+
+-------- terrain shared
+
+  t_shr_vhh1024 {
+    1 = green_diffuse.dds
+  }
+
+-------- flora
+
+  flora_vhh512 {
+    1 = broad_leaved_tree_1_leaves.dds
+    1 = broad_leaved_tree_2_leaves.dds
+
+    1 = contaminated_birch_01.dds
+    1 = contaminated_birch_01_nm.dds
+    1 = dark_birch.dds
+    1 = dark_birch_nm.dds
+    1 = pony-tail-palm_leaves.dds
+    1 = pony-tail-palm_trunk.dds
+    1 = pony-tail-palm_trunk_nm.dds
+    1 = saguarocactus.dds
+    1 = saguarocactus_nm.dds
+
+    1 = jng_diffuse.dds
+    1 = jungle_tree_1_diffuse.dds
+
+    1 = bananapalm.dds
+    1 = bananapalm_nm.dds
+
+    1 = fan_palm_leaf.dds
+  }
+  
+  flora_512 {
+    1 = big-flat-leaves3.dds
+    1 = big-flat-leaves4.dds
+    1 = thick_leaves1.dds
+
+    1 = yucca-half-dry.dds
+    1 = yucca-half-dry_nm.dds
+
+    1 = bismarck-palm.dds
+    1 = palm4_diffuse.dds
+    1 = palm4_purple_diffuse.dds
+  
+  }
+
+  flora_vhh256 {
+    1 = big-flat-leaves.dds
+    1 = big_bush_diffuse.dds
+    1 = hibiscus.dds
+    1 = paprat-bush1.dds
+    1 = paprat-bush2.dds
+    1 = yellow-fiber-leaves1.dds
+
+    
+    1 = tinia1.dds
+    1 = tinia2.dds
+    1 = tinia3.dds
+
+    1 = 4-5_tree_leaves.dds
+    1 = broad_leaved_tree_6_leaves.dds
+    1 = generic_broad_leaved_tree_leaves.dds
+
+    1 = tree_trunk_nm.dds
+
+    1 = palm_leaves.dds
+    1 = silver-dollar-cactus.dds
+    1 = silver-dollar-cactus_nm.dds
+  }
+
+  flora_256 {
+    1 = aloevera.dds
+    1 = dead-fern.dds
+    1 = green-aloe.dds
+    1 = ocotillo.dds
+    1 = rotten-agave.dds
+    1 = small_agave.dds
+
+    1 = 2green-leaves1.dds
+    1 = 2green-leaves2.dds
+    1 = 2green-leaves3.dds
+    1 = crown-fern.dds
+    1 = cycas_basic.dds
+    1 = ficus-benjamina.dds
+    1 = forest-bush_01.dds
+    1 = forest-bush_02.dds
+    1 = green-hosta.dds
+    1 = paprat2_diffuse.dds
+
+    1 = silver-grass.dds
+
+    1 = paperflower_pink.dds
+
+    1 = hell_grass_02.dds
+
+    1 = cattail.dds
+    1 = mosaicwaterplant.dds
+    1 = papyrus.dds
+    1 = reed1.dds
+
+    1 = water-taro.dds
+
+    1 = column-cactus.dds
+    1 = column-cactus_nm.dds
+    1 = lithop_01.dds
+    1 = lithop_01_nm.dds
+    1 = lithop_02.dds
+    1 = lithop_02_nm.dds
+
+    1 = palm_leaf.dds
+  }
+
+  flora_vhh128 {
+    1 = big_bush2_diffuse.dds
+    1 = jungle_bush.dds
+
+    1 = snowplants.dds
+    1 = steppebush2.dds
+    1 = vegetation1.dds
+
+    1 = bush1.dds
+    1 = cat-claw-bush.dds
+    1 = cat-claw-bush_2.dds
+    1 = cat-claw-bush_green.dds
+    1 = spikedbush.dds
+    1 = newflower2.dds
+    1 = small-desert-bush_01.dds
+    1 = steppebush.dds
+
+    1 = african-violet.dds
+
+    1 = dandelion.dds
+    1 = hydrillafrond.dds
+    1 = jungle_shrub.dds
+    1 = marigold_diffuse.dds
+    1 = paperflower.dds
+
+    1 = flatplants.dds
+    1 = hell_grass_03.dds
+    1 = newflower.dds
+    1 = thin-grass1.dds
+    1 = pointy_plant.dds
+    1 = newbroccoli.dds
+    1 = newbush.dds
+
+    1 = jungle_grass_bush.dds
+    1 = tall_grass1.dds
+    1 = thick_plants1.dds
+
+    1 = float1.dds
+    1 = float2.dds
+    1 = lilies_diffuse.dds
+    1 = rush_2_diffuse.dds
+    1 = rush_diffuse.dds
+    1 = swamp hibiscus.dds
+    1 = water-clover_small.dds
+
+    1 = 4-5_tree_bark.dds
+    1 = broad_leaved_tree_1_bark.dds
+    1 = broad_leaved_tree_2_bark.dds
+    1 = broad_leaved_tree_6_bark.dds
+    1 = generic_broad_leaved_tree_bark.dds
+
+    1 = dry_tree2_diffuse.dds
+    1 = dry_tree4_diffuse.dds
+    1 = sycamorebark.dds
+
+    1 = jungle_tree_1_bark.dds
+
+    1 = palmnm.dds
+    1 = palm_2_bark.dds
+    1 = palm_2_leaves_diffuse.dds
+    1 = palm3_bark_diffuse.dds
+    1 = palm4_bark_diffuse.dds
+    1 = palm_bark.dds
+  }
+
+  flora_128 {
+    1 = tall-yellow-grass.dds
+    1 = tundra-grass_01.dds
+    1 = tundra-grass_02.dds
+    1 = tundra-grass_03.dds
+    1 = yellow_grass_01.dds
+    1 = yellow_grass_02.dds
+    1 = yellow_grass_03.dds
+    1 = yellow_grass_04.dds
+
+    1 = hell_grass_01.dds
+    1 = hell_grass_04.dds
+    1 = thin-grass2.dds
+    1 = sharp_grass2.dds
+    1 = sharp_grass.dds
+    1 = sharp_grass3.dds
+    1 = test-grass1.dds
+    1 = test-grass3.dds
+    1 = test-grass5.dds
+
+    1 = green_jungle_grass_01.dds
+    1 = green_jungle_grass_02.dds
+    1 = thick_plants2.dds
+    1 = thick_plants3.dds
+
+    1 = barrel_cactus.dds
+    1 = barrel_cactus_nm.dds
+   
+  }
+
+-------- decals
+
+  decalsel_512 {
+    1 = area-selection_barrage.dds
+    1 = area-selection_barrage_scale.dds
+  }
+
+  decal_512 {
+    1 = crater1.dds
+    1 = crater1_nm.dds
+    1 = crater2.dds
+    1 = crater2_nm.dds
+    1 = green_stones1.dds
+    1 = green_stones1_nm.dds
+
+    1 = burnt_ground1.dds
+    1 = burnt_ground1-nm.dds
+
+    1 = explosion_crater2_diff.dds
+    1 = explosion_crater2_nm.dds
+
+    1 = field1.dds
+    1 = field1_nm.dds
+
+    1 = fire_burst1.dds
+
+    1 = field.dds
+    1 = field_nm.dds
+  }
+
+  decalsel_256 {
+    1 = area_selection.dds
+    1 = units_selection.dds
+  }
+
+  decal_256 {
+    1 = hell_geyser_dec.dds
+    1 = hell_geyser_dec_nm_spec.dds
+    1 = hell_wet_ground_dec.dds
+    1 = hell_wet_ground_dec_nm_spec.dds
+
+    1 = barrage-decal1.dds
+    1 = barrage-decal1.nm.dds
+
+    1 = bar_decal_02.dds
+    1 = slab1.dds
+
+    1 = molten_spot_big.dds
+    1 = molten-spot1.dds
+    1 = molten-spot1c.dds
+    1 = molten-spot1-nm.dds
+
+    1 = field-quarter.dds
+    1 = icesnow1.dds
+  }
+
+  decalsel_128 {
+    1 = area-selection_barrage_rot.dds
+  }
+
+  decal_128 {
+    1 = cracks1.dds
+    1 = cracks2.dds
+    1 = cracks3.dds
+    1 = cracks4.dds
+    1 = cracks5.dds
+    1 = cracks6.dds
+    1 = cracks7.dds
+
+    1 = aliens_blood_drops1.dds
+    1 = aliens_blood_drops2.dds
+    1 = blood_drops1.dds 
+
+    1 = aliens_blood_stain1.dds
+    1 = aliens_blood_stain2.dds
+    1 = aliens_blood_stain3.dds
+    1 = blood_stains.dds
+    1 = bloodstain02.dds
+    1 = bloodstain03.dds
+
+    1 = bar_decal_01.dds
+    1 = bar_decal_01_nm.dds
+    1 = bar_decal_03.dds
+    1 = bar_decal_04.dds
+    1 = bar_decal_05.dds
+    1 = bar_decal_05_nm.dds
+    1 = bar_decal_pebles_01.dds
+    1 = bar_decal_pebles_01_nm.dds
+
+    1 = icesnow-nm.dds
+
+    1 = uni_cracks1.dds
+    1 = uni_cracks1nm.dds
+  }  
+
+  decal_64 {
+    1 = stones1.dds
+    1 = stones1_nm.dds
+  }
+
+
+
+}
+

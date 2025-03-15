@@ -1,0 +1,85 @@
+decal_settings blood_consts {
+  settings_id = blood
+  max_decals = 50
+  life_time = 30
+  fade_time = 5
+  fast_fade = 2
+
+-- negative sizes mean scale, positive sizes mean absolute size in cm
+
+  start_size = -0.1
+  grown_size = -1
+  grow_time = 3
+
+-- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+  size_variation = 50
+
+-- angle in degrees relative to the facing of the spawning actor
+-- negative angle means spawn with random rotation
+
+  angle_delta = -1
+
+  models = {
+    blood_stain1
+    blood_stain1
+  }
+
+  spawn_possibility = 50
+}
+
+decal_settings blood_drops_consts {
+  settings_id = blooddrops
+  max_decals = 50
+  life_time = 5
+  fade_time = 0.3
+  fast_fade = 0.3
+
+-- negative sizes mean scale, positive sizes mean absolute size in cm
+
+  start_size = -0.5
+  grown_size = -1
+  grow_time = 0.2
+
+-- size variation in percent - a decal instance can be between (100-size_variation) and (100+size_variation) % in size
+
+  size_variation = 10
+
+-- angle in degrees relative to the facing of the spawning actor
+-- negative angle means spawn with random rotation
+
+  angle_delta = -1
+
+  models = {
+    blood_drops1
+  }
+
+  spawn_possibility = 50
+
+--Min/max distance used for spawning blood drops
+  spawn_min_distance = 50
+  spawn_max_distance = 150
+
+--When health < health_spawn_perc -> then spawn drops
+  health_spawn_perc = 60
+}
+
+
+decal_settings alien_blood_consts : blood_consts {
+  settings_id = aliensblood
+
+  models = {
+    aliens_blood_stain1
+    aliens_blood_stain2
+    aliens_blood_stain3
+  }
+}
+
+decal_settings aliens_blood_drops_consts : blood_drops_consts {
+  settings_id = aliensblooddrops
+
+  models = {
+    aliens_blood_drops1
+    aliens_blood_drops2
+  }
+}

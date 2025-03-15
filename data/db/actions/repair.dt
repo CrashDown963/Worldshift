@@ -1,0 +1,13 @@
+action Repair {
+  tags = repairable
+  program = PrgRepair
+  can_default = 1
+  weight = 2
+}
+
+action RepairUnit {
+  tags = repairable_unit
+  program = PrgRepairUnit
+  can_default = 1
+  weight = 2
+}

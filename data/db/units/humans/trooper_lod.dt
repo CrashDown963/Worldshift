@@ -1,0 +1,142 @@
+Trooper Trooper_LOD : BaseUnit {
+  model = data/models/units/Trooper/Trooper_LOD.kfm
+  race = humans
+
+  speed = 450
+  take_auras : { RestorationCoreAura }
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+    confirm = data/sounds/units/trooper/confirm/
+  }
+  
+  stats : {
+    throw_grenade_chance = 2
+    grenade_damage = 50
+    grenade_radius = 150
+    hp = 220
+    armor = 3
+    range = 1400
+    damage = 10
+    motivation = 0
+  }
+  
+  physics {
+    default = data/models/units/Trooper/TownGuard_Proxy.pml
+    die = data/models/units/Trooper/TownGuard.pml
+  }
+
+  destruction = ragdoll
+
+  tags = unit, organic, lowrank
+
+  movement_type = crawl
+
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  } 
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 70
+    }
+  }
+
+  actions : BaseUnit.actions {
+  }
+  
+  xp_textures {
+    #1 = data/models/units/trooper/trooper-diff05.dds
+    #2 = data/models/units/trooper/trooper-diff03.dds
+  }  
+  
+  xp_textures_masks {
+    #1 = data/models/units/trooper/trooper-mask05.dds
+    #2 = data/models/units/trooper/trooper-mask03.dds
+  }  
+  
+  CWeaponController weapon {
+	active = 0
+    can_crit = 1
+    damage = stat:damage
+    range_far = stat:range * 0.6
+    range_near = stat:range * 0.3
+    proximity_bonus = 2
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/units/trooper/shoot/
+    aim_tolerance = 45
+    shoot_anim_1 = shoot
+    shoot_idle_1 = shoot_idle
+    shoot_anim_2 = shoot_var_2
+    shoot_idle_2 = shoot_idle_var2
+    shoot_anim_3 = shoot_var_3
+    shoot_idle_3 = shoot_idle_var_3
+    anim_shuffle = 2,4
+    idle_time = 0.7
+    spot_impact = 850
+    spot_impact_type = ion
+    damage_type = energy
+
+	  trace Trooper {
+		  model = Data/Models/Effects/TraceBullet/Trooper_trace.nif	
+		  z_write = 0
+		  variant	= 0
+		  start_dist = 10
+		  end_dist = 10
+		  frequency	= 8
+		  ttl	= 1
+		  length = 200
+		  target_size	= 20
+		  velocity	= 50
+		  length_end = 170
+		  width_scale = 10
+		  instances = 128
+		  emit = 52,118,255
+	  }
+
+ 
+    muzzle_fx ion_rifle {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+		  frames = 4
+		  frequency = 8
+		  active_fraction	= 40
+		  active_variation = 5
+		  length_variation = 40
+		  width_variation	= 7
+		  scale	= 1.5
+		  instances = 64
+		  emit = 52,118,255
+	  }
+  }
+
+	impacts : LivingUnitImpacts  
+  abilities : TrooperAbilities
+
+  animation {
+    sequence_1 = shoot_spice_1
+  }
+
+  _action_sequence {
+    program = PrgSequenceAction
+    action_times = 5,1
+    activation_time = 10,60
+    keyboard_attach01 = data/models/effects/actionsequence/F5.nif, pt_top
+    keyboard_attach02 = data/models/effects/actionsequence/F6.nif, pt_top
+    keyboard_attach03 = data/models/effects/actionsequence/F7.nif, pt_top
+    keyboard_attach04 = data/models/effects/actionsequence/F8.nif, pt_top    
+  }
+
+}

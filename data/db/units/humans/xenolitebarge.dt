@@ -1,0 +1,10 @@
+Unit XenoliteBarge : MachineUnit {
+  name = "Xenolite Barge"
+  speed = 1000
+  model = data/Models/units/XenoliteBarge/XenoliteBarge.nif
+  race = humans
+  tags = unit, bot
+  movement_type = hover
+  }
+  
+}

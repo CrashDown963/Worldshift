@@ -1,0 +1,4 @@
+Mob Raptor : BaseAnimal  {
+  name = "raptor"
+  model = data/models/lifeforms/Raptor/raptor.nif
+}

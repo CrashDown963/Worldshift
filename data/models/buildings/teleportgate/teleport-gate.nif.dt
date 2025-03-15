@@ -1,0 +1,247 @@
+model = {
+  file = str:"data\models\buildings\teleportgate\teleport-gate.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"4.333333492279052734375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"TELEGATE";
+    translation = xpoint3:"-0.100345611572265625,39.39209747314453125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"pt_spawn";
+    translation = xpoint3:"-0.8681812286376953125,-0.56542205810546875,74.62281036376953125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"pt_exit";
+    translation = xpoint3:"-0.868180096149444580078125,-348.345611572265625,6.40260982513427734375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #3 = {
+    scale = fixp:"1";
+    name = str:"Root_bone";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #8 = {
+      scale = fixp:"1";
+      name = str:"Root_bone NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Bone_D_motor";
+        translation = xpoint3:"190.875457763671875,7.534006595611572265625,130.683837890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Bone_D_cyl01";
+          translation = xpoint3:"3.70880126953125,-23.6151409149169921875,-3.893310546875";
+          rotation = {
+            0 = xpoint3:"0.866025388240814208984375,0,0.5";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"-0.5,0,0.866025388240814208984375";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Bone_D_cyl02";
+          translation = xpoint3:"23.0608978271484375,23.51699066162109375,-15.066253662109375";
+          rotation = {
+            0 = xpoint3:"0.866025388240814208984375,0,0.5";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"-0.5,0,0.866025388240814208984375";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"Bone_D_pylon_b";
+          translation = xpoint3:"-4.6357879638671875,0,70.184051513671875";
+          rotation = {
+            0 = xpoint3:"0.999999821186065673828125,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,0.999999821186065673828125";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Bone_D_pylon_j";
+            translation = xpoint3:"-2.9246368408203125,0,126.763946533203125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Bone_D_motor01";
+        translation = xpoint3:"-190.875457763671875,7.534006595611572265625,130.683837890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"0,0,-1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Bone_D_cyl03";
+          translation = xpoint3:"-23.0608978271484375,23.6151409149169921875,15.06625461578369140625";
+          rotation = {
+            0 = xpoint3:"0.866025388240814208984375,0,0.5";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"-0.5,0,0.866025388240814208984375";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Bone_D_cyl04";
+          translation = xpoint3:"-3.70880126953125,-23.5165424346923828125,3.8933155536651611328125";
+          rotation = {
+            0 = xpoint3:"0.866025388240814208984375,0,0.5";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"-0.5,0,0.866025388240814208984375";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"Bone_D_pylon_b01";
+          translation = xpoint3:"4.6357879638671875,0,-70.184051513671875";
+          rotation = {
+            0 = xpoint3:"0.999999940395355224609375,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,0.999999940395355224609375";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Bone_D_pylon_j01";
+            translation = xpoint3:"2.9246368408203125,0,-126.763946533203125";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Bone_D_antena";
+        translation = xpoint3:"121.8572235107421875,168.3087310791015625,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray01-Emitter";
+        translation = xpoint3:"213.3421783447265625,7.44779682159423828125,230.9402313232421875";
+        rotation = {
+          0 = xpoint3:"-0.642787635326385498046875,0,0.766044437885284423828125";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"-0.766044437885284423828125,0,-0.64278757572174072265625";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray02-Emitter";
+        translation = xpoint3:"-213.3419952392578125,7.44779682159423828125,230.9402313232421875";
+        rotation = {
+          0 = xpoint3:"0.642787635326385498046875,0,-0.766044437885284423828125";
+          1 = xpoint3:"0,-1,0";
+          2 = xpoint3:"-0.766044437885284423828125,0,-0.642787635326385498046875";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"PArray01-Emitter";
+        translation = xpoint3:"488.2840576171875,436.80963134765625,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #7 = {
+        scale = fixp:"1";
+        name = str:"Omni01";
+        translation = xpoint3:"0,0,229.74993896484375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #8 = {
+        scale = fixp:"1";
+        name = str:"SuperSpray03-Emitter";
+        translation = xpoint3:"0,0,231.4198150634765625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+  #4 = {
+    scale = fixp:"1";
+    name = str:"Wind01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #5 = {
+    scale = fixp:"1";
+    name = str:"Drag01";
+    translation = xpoint3:"545.0380859375,60.26189422607421875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #6 = {
+    scale = fixp:"1";
+    name = str:"Drag02";
+    translation = xpoint3:"-545.0380859375,60.26189422607421875,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

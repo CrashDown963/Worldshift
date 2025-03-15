@@ -1,0 +1,37 @@
+CRocket TestRocket3 = {
+  model = data/models/effects/trails/missile01.nif
+  speed = 1200
+  explosion = RocketExplosion
+  damage = 100
+  lifetime = 3
+
+  CTrailController missiletrail = { 
+    emitter = TrailEmitter 
+    texture = data/textures/trails/energy_trail1.dds
+    tex_ratio = float: 4.0
+    start_width = 20 
+    end_width = 0 
+    ttl = 32 
+    simple_time = 1 
+    additive = 1 
+    material_alpha = 0.5 
+    diffuse = color: 1, 1, 1 
+    ambient = color: 0.5, 0.5, 0.5 
+    emissive = color: 1, 1, 1 
+
+    time0 = 0 
+    color0 = colora: 1, 1, 1, 0 
+
+    time1 = 3 
+    color1 = colora: 0.65, 0.60, 0.20, 1 
+
+    time2 = 30 
+    color2 = colora: 1, 0, 0, 0.5 
+
+    time3 = 60 
+    alpha3 = 0 
+
+    time4 = 100
+    color4 = colora: 1, 0, 0, 0 
+  }
+}

@@ -1,0 +1,52 @@
+DenkarUnitSounds {
+  attack = data/speech/confirmations/denkar/denkar attack/
+  select = data/speech/selecting/denkar select/
+  confirm = data/speech/confirmations/denkar/denkar confirm/
+  destruction = data/speech/deaths/denkar death/
+  engage = data/speech/engage alerts/denkar engage/
+  damage = data/speech/engage alerts/denkar damage/
+}
+
+
+ArnaUnitSounds {
+  attack = data/speech/confirmations/arna/arna attack/
+  select = data/speech/selecting/arna select/
+  joke = data/speech/selecting/arna joke/
+  confirm = data/speech/confirmations/arna/arna confirm/
+  destruction = data/speech/deaths/arna death/
+  engage = data/speech/engage alerts/arna engage/
+  damage = data/speech/engage alerts/arna damage/
+  move = data/speech/confirmations/arna/arna move/
+}
+
+
+KunaUnitSounds {
+  attack = data/speech/confirmations/kuna/kuna attack/
+  select = data/speech/selecting/kuna select/
+  confirm = data/speech/confirmations/kuna/kuna confirm/
+  destruction = data/speech/deaths/kuna death/
+  engage = data/speech/engage alerts/kuna engage/
+  damage = data/speech/engage alerts/kuna damage/
+}
+
+
+TharkshUnitSounds {
+  attack = data/speech/confirmations/tharksh/tharksh attack/
+  select = data/speech/selecting/tharksh select/
+  joke = data/speech/selecting/tharksh joke/
+  confirm = data/speech/confirmations/tharksh/tharksh confirm/
+  destruction = data/speech/deaths/master death/
+  engage = data/speech/engage alerts/tharksh engage/
+  damage = data/speech/engage alerts/tharksh damage/
+  move = data/speech/confirmations/tharksh/tharksh move/
+}
+
+GanthuUnitSounds {
+  attack = data/speech/confirmations/ganthu/ganthu attack/
+  select = data/speech/selecting/ganthu select/
+  joke = data/speech/selecting/ganthu joke/
+  confirm = data/speech/confirmations/ganthu/ganthu confirm/
+  destruction = data/speech/deaths/ganthu death/
+  engage = data/speech/engage alerts/ganthu engage/
+  damage = data/speech/engage alerts/ganthu damage/
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\ancient_ruins\ancient_ruin01.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"WG";
+    translation = xpoint3:"-3.63421630859375,239.8501129150390625,167.4453125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

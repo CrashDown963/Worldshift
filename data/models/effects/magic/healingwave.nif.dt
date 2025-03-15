@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\effects\magic\healingwave.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"1.5";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Healing_Wave";
+      translation = xpoint3:"0,0,82";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

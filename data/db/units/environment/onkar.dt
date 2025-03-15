@@ -1,0 +1,141 @@
+Mob Onkar : BaseMob {
+  name = "Onkar ni'Varra"
+  race = humans
+  model = data/Models/units/onkar/onkar.kfm --data/models/units/Commander/Commander.kfm
+  icon = 2,8
+  conv_icon_row = 1
+  conv_icon_col = 4
+
+  take_auras : { RestorationCoreAura }
+  
+  hp = 1000
+  armor = 25
+  energy = 300
+  energy_gen = 1
+  range = 1400
+  damage = 40
+  renew_hp = 200
+  
+  sight = 1000
+  sight_incombat = 1000
+  chase_range = 3000 
+  
+  destruction = animation
+
+  impacts : LivingUnitImpacts
+  
+
+  foot_prints {
+    desert = human_footprint1
+  }
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 60
+    }
+    shoot_idle_1 = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 60
+    }
+  }
+
+  actions {}
+  
+  animation {
+    auto_show_hide {
+      default_tool = commander_gun {
+        cast
+      }
+    }
+
+    teleport_officer = cast
+  }
+  
+  --conditions {
+  --  Renew = CheckVar {
+  --    variable = sid:"hit_points_percent";
+  --    operator = sid:"<=";
+  --    value = int:"80";
+  --  }
+  --}
+  
+  abilities {
+    Renew {
+      when   : abi.always
+      --condition = Renew
+      --interval = 10
+      cooldown = 10
+      power = 100
+      target = self { health_under = 60 }
+      effect = E_buff {
+        id = Renew
+        name : InjectAction.effect.name
+        text : InjectAction.effect.text
+        type = heal
+        hp = var:renew_hp   -- restore X hp
+        duration = 10       -- for Y secs total
+        tick = 2            -- every Z secs
+        area { anim = data/models/effects/magic/healingwave.nif }
+        react = inject
+      }
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    range_far = var:range * 0.35
+    range_near = var:range * 0.14
+    proximity_bonus = 1.5
+    idle_only = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    shoot_snd = data/sounds/weapons/hitech beam/
+    aim_tolerance = 45
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle_1
+    idle_time = 1.0
+    spot_impact = 850
+    spot_impact_type = bullet
+    damage_type = energy
+    
+    muzzle_fx ion_rifle_comm {
+	  model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
+	  frames = 2
+	  frequency = 1.0
+	  active_fraction	= 10
+	  active_variation = 5
+	  length_variation = 42
+	  width_variation	= 7
+	  scale	= 2.2
+	  instances = 64
+      emit = 25,195,65
+	}
+
+   instant_shot SCommShot {
+     model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+     dist_start = 20
+     travel_start = 100
+     travel_end = 20
+     duration = 0.2
+     time_fraction_to_lag_end = 20
+     width = 10
+     instances = 128
+     color_alpha {
+       0 = 100,250,20,0
+       20 = 120,250,20,255
+       80 = 120,250,20,100
+       150 = 30,250,30,50
+     }
+   }
+}

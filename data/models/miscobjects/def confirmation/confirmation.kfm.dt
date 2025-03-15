@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\miscobjects\def confirmation\confirmation.kfm";
+  animations = {
+    confirmation = {
+      loop = int:"0";
+      duration = fixp:"0.800000011920928955078125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.800000011920928955078125";
+        }
+      }
+    }
+  }
+}

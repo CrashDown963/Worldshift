@@ -1,0 +1,75 @@
+model = {
+  file = str:"data\models\buildings\breederportal\portal.kfm";
+  animations = {
+    upgrade = {
+      loop = int:"0";
+      duration = fixp:"2.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.5";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+    alert_in = {
+      loop = int:"1";
+      duration = fixp:"0.033333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.033333301544189453125";
+        }
+      }
+    }
+    alert_out = {
+      loop = int:"1";
+      duration = fixp:"0.033333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.033333301544189453125";
+        }
+      }
+    }
+    alert = {
+      loop = int:"1";
+      duration = fixp:"1.666666507720947265625";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.666666507720947265625";
+        }
+      }
+    }
+  }
+}

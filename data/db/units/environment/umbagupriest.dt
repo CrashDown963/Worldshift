@@ -1,0 +1,290 @@
+Mob UmbaguPriest : BaseMob {
+  name : HighPriest.name
+  icon = 4,15
+  descr : HighPriest.descr
+  race = mutants
+  tags = unit, organic
+  conv_icon_row = 4
+  conv_icon_col = 3
+
+  model = Data/Models/Units/high_priest/high_priest_new.kfm
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/High_Priest/High_Priest.pml
+  }
+  destruction = ragdoll
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+  
+  attachments {
+    pt_staff = data/models/effects/Magic/HighPriest_fx_Attachment.nif
+  }
+ 
+  stats :{
+    hp = 850
+    range = 1800
+    psi = 500
+
+    damage = 35
+    armor = 2
+
+    holy_aura_tick = 5
+    holy_aura_heal = 50
+
+    pyrowave_chance = 10
+
+    lightning_power = 80
+    lightning_damage = 200
+
+    holyshock_power = 80
+    
+    freeze_duration = 6
+    freeze_power = 120
+  }
+  
+  hp = stat:hp
+  range = stat:range
+  psi = stat:psi
+
+  damage = stat:damage
+  armor = stat:armor
+  
+  impacts : LivingUnitImpacts
+  xp = 0
+  take_auras : { RestorationCoreAura }
+  
+  CPeriodicEffectsController HolyAura {
+    interval = stat:holy_aura_tick
+    effect = E_heal {
+      amount = stat:holy_aura_heal
+      area = 1000 { anim = data/models/effects/magic/healingwave.nif { scale = 0.3 } }
+      target_tags = organic
+      react = relief
+    }
+  }
+
+  abilities {
+    PyroblastAbi
+    HolyAuraAbi
+
+    AIHolyShock {
+      action = HolyShockAction
+      when   : abi.always
+      target = ally { health_under = 30; health_hp_taken = 200 }
+      range = stat:range
+    }
+    AIFreeze {
+      action = FreezeAction
+      when   : abi.fight
+      target = current { aoe_range = 1000; aoe_min_enemy_hp = 600 }
+      range = stat:range
+    }
+    AILightning {
+      action = LightningAction
+      when   : abi.fight
+      min_power = 160 -- save for Holy Shock
+      target = enemy { min_hp = 300 }
+      range = stat:range
+    }
+  }
+
+  attack_spell = PyroblastSpell
+  alt_attack_spell = PyrowaveSpell
+  alt_attack_chance = stat:pyrowave_chance 
+
+  -- mounted state attach points!
+  mounted_state_attach = data/models/effects/magic/HighPriestMount.nif
+  mounted_state_attach_node = pt_ground
+
+
+  animation {
+    mount = mount
+    _mount_idle = _mount_idle
+    dismount = dismount
+
+    cast_thunder_prepare = cast_preparation    
+    cast_pyroblast_prepare = cast_preparation
+    cast_pyroblast_finish = cast_finish
+    cast_pyrowave_prepare = cast_preparation
+    cast_pyrowave_finish = cast_finish
+    cast_freezingblast_prepare = cast_preparation
+    cast_freezingblast_finish = cast_finish
+    cast_healing_wave_prepare = cast_preparation
+    cast_absorb_energy_prepare = cast_preparation
+    cast_mind_vision_prepare = cast_preparation
+    cast_ice_shock_prepare = cast_preparation
+    cast_natures_touch_prepare = cast_preparation
+    cast_conjure_food_prepare = cast_preparation --cast_global_loop
+    cast_conjure_food_finish = cast_finish --cast_globall
+    cast_life_bloom_prepare = cast_preparation--cast_global_loop
+    cast_life_bloom_finish = cast_finish --cast_globall
+
+    plant_structure = cast_global_loop
+    pick_item = cast_global_loop
+  }
+  
+  PyroblastAbi {
+    name : PyroblastAbi.name
+    text : PyroblastAbi.text
+  }
+  
+  HolyAuraAbi {
+    name : HolyAuraAbi.name
+    text : HolyAuraAbi.text
+  }
+  
+  PyroblastSpell {
+    cast {
+      prepare {
+        anim = cast_pyroblast_prepare
+        duration = 0.5
+        attach {
+          pt_hand = data/models/effects/magic/FireHands.nif
+        }
+      }
+      finish {
+        anim = cast_pyroblast_finish
+        sound = data/sounds/units/highpriest/pyro/
+        attach {
+          pt_hand = data/models/effects/magic/FireHands.nif
+        }
+      }
+    }
+  
+    projectile = chase {
+      start_point = pt_cast
+      model = data/models/effects/magic/fireball.nif {
+        CTrailController trail_smoke {
+          emitter = RootDummy
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 2.5
+          start_width = 60
+          end_width = 300
+          ttl = 15
+          --simple_time = 90
+  
+            time0 = 0
+            color0 = colora: 1, 0.5, 0, 1
+  
+            time1 = 5
+            color1 = colora: 1, 0, 0, 0.8
+  
+            time2 = 8
+            color2 = colora: 1, 0.2, 0.1, 0.5
+  
+            time3 = 40
+            color3 = colora: 0, 0, 0, 0.6
+  
+            time4 = 100
+            color4 = colora: 0, 0, 0, 0
+        }
+      }
+      speed = 2500
+      scale = 0.35
+    }
+    
+    effect = E_damage {
+      amount = stat:damage
+      react = fire
+      can_crit = 1
+    }
+  }
+  
+  PyrowaveSpell {
+    cast {
+      prepare {
+        anim = cast_pyrowave_prepare
+        duration = 0.5
+        attach {
+          pt_hand = data/models/effects/magic/FireHands.nif
+        }
+      }
+      finish {
+        anim = cast_pyrowave_finish
+        sound = data/sounds/units/highpriest/pyro/
+        attach {
+          pt_hand = data/models/effects/magic/FireFXFinish.nif
+        }
+      }
+    }
+  
+    projectile = chase {
+      start_point = pt_cast
+      model = data/models/effects/magic/fireball.nif {
+        CTrailController trail_smoke {
+          emitter = RootDummy
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 2.5
+          start_width = 60
+          end_width = 300
+          ttl = 15
+          --simple_time = 90
+  
+          time0 = 0
+          color0 = colora: 1, 0.5, 0, 1
+  
+          time1 = 5
+          color1 = colora: 1, 0, 0, 0.8
+  
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+  
+          time3 = 40
+          color3 = colora: 0, 0, 0, 0.6
+  
+          time4 = 100
+          color4 = colora: 0, 0, 0, 0
+        }
+      }
+      speed = 2500
+      scale = 0.85
+    }
+    
+    effect = E_damage {
+      amount = stat:damage
+      react = fire
+    }
+  
+    alt_projectile {
+      count = 2
+      projectile = chase {
+        model = data/models/effects/magic/fireball.nif {
+          CTrailController trail_smoke {
+            emitter = RootDummy
+            material = data/models/Effects/Trails/Trail_Hellfire.nif
+            tex_ratio = float: 2.5
+            start_width = 60
+            end_width = 300
+            ttl = 15
+            --simple_time = 90
+  
+            time0 = 0
+            color0 = colora: 1, 0.5, 0, 1
+  
+            time1 = 5
+            color1 = colora: 1, 0, 0, 0.8
+  
+            time2 = 8
+            color2 = colora: 1, 0.2, 0.1, 0.5
+  
+            time3 = 40
+            color3 = colora: 0, 0, 0, 0.6
+  
+            time4 = 100
+            color4 = colora: 0, 0, 0, 0
+          }
+        }
+        speed = 2500
+        scale = 0.85
+      }
+      
+      effect = E_damage {
+        amount = stat:damage
+        react = fire
+      }
+    }
+  }
+
+  cost : pvp.mutants.unit_costs.HighPriest
+}

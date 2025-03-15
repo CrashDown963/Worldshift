@@ -1,0 +1,119 @@
+AlienEgg AlienEgg : BaseUnit {
+  name = "Egg"
+  race = aliens
+  icon = 7,3
+  model = data/models/buildings/alienegg/alien_egg.kfm {
+    die =  data/models/buildings/alienegg/alien_egg_die.nif
+  }
+  
+  destruction = animation
+
+  movable = 0
+
+  stats : {
+    hp = 80
+    damage = 25
+    range = 1400
+    
+    clammy_acid_armor_perc = 15
+    sizzle_aura_tick = 8
+    sizzle_damage_reduction_perc = 50
+    sizzle_duration = 8
+  }  
+  
+  actions {
+  }
+
+  immune_to :{
+    E_multifreeze
+    E_freeze
+    E_multistun
+    E_stun
+    S_stun
+    S_multistun
+    S_multifear
+    S_fear
+    DimensionChain
+    Horrify
+    Confusion
+    stun
+    fear
+    slow
+  }
+
+  abilities {
+    ClammyAcid {
+      name = "Acid Burst"
+      text = "The Eggs is producing acid bursts at nearby enemies their armor efficiency by [stat:clammy_acid_armor_perc]%. This effect stacks up to 5 times."
+      icon = 5,0
+    }
+    Sizzle {
+      name = "Sizzle"
+      text = "The Egg is sizzling everynow and then and is reducing the damage done to all nearby enemies with [sizzle_damage_reduction_perc]%."
+      icon = 5,0
+    }
+    Hatchlings {
+      name = "Hatchlings"
+      text = "If the Egg is destroyed, the Hatchlings inside will enrage and will automatically attack nearby targets."
+      icon = 7,0
+    }
+  }
+  
+  CPeriodicEffectsController SizzleAura {
+    interval = stat:sizzle_aura_tick
+    effect = E_multidebuff {
+      id = Sizzle
+      name = "Sizzle"
+      text = "This unit is weakened by the influence of alien Eggs nearby."
+      icon = 1,1
+      type = weaken
+      duration = stat:sizzle_duration
+      multi_area = 800 { anim = data/models/effects/plasmaexplosion/plasmaexplosion.kfm { scale = 2 } }
+      stats_change {
+        damage = { perc = stat:sizzle_damage_reduction_perc * -1 }
+      }
+      react = fire
+    }
+  }
+  
+  ondeath = EggSpawnHatchlings
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    fire_rate = 2
+    idle_only = 1
+    fire_node = pt_top
+    shoot_snd = data/sounds/weapons/Discharge Energy/
+    aim_tolerance_pitch = 360
+    aim_tolerance_yaw = 360
+    spot_impact = 650
+    spot_impact_type = bullet
+    damage_type = energy
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 2500
+      scale = 0.25
+      effect = E_debuff {
+        id = ClammyAcid
+        name = "Acid Burst"
+        text = "This unit’s armor is weakened by an Acid Burst."
+        icon = 1,2
+        type = armormelt
+        stats_change {
+          armor = { perc = stat:clammy_acid_armor_perc * -1 }
+        }
+        duration = 20       -- for Y secs total
+        --tick = 20
+        --immediate_tick = 1
+        discard_react = 1
+        react = expose_target
+        stack_count = 5
+      }
+    }
+  }
+
+  give_res : pvp.aliens.egg_res
+  res_tick_time : pvp.aliens.egg_res_tick_time
+}

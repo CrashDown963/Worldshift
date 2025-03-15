@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\units\scavenger\scavenger_yellow.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Scavenger";
+    translation = xpoint3:"-0.379425048828125,-0.60649871826171875,1253.6103515625";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

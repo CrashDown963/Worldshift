@@ -1,0 +1,25 @@
+﻿sid	text
+
+ALERT	ALERT
+PROMPT	PROMPT
+no_such_user	[#] - no such user online.
+random_loc	RANDOM LOCATION
+gs_isc_atlasconnect	Connecting to the competition service...
+battle points cost:	Battle points cost:
+obj.Find the renegade commander	Find the renegade commander
+accepted	accepted
+rejected	rejected
+Triad.descr	Jaar Lash defense facility.
+ErkhArulAlienShip.name	Jaar Lash ship
+ErkhArulAlienShip.descr	
+rank1v1txt	RANK
+rating1v1txt	RATING
+wins1v1txt	WINS
+losses1v1txt	LOSSES
+streak1v1txt	WINNING STREAK
+
+video_sett	VIDEO SETTINGS
+audio_sett	AUDIO SETTINGS
+player_sett	PLAYER SETTINGS
+player_frame	PLAYER
+player_profile	Player Profile

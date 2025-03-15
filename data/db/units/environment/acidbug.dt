@@ -1,0 +1,28 @@
+Mob AcidBug : BaseMob  {
+  name = "Acid Bug"
+  icon = 6,17
+  model = data/models/lifeforms/Insect/insect.kfm
+  
+  hp = 100
+  armor = 6
+  range = 100
+  damage = 5
+    
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = Hit_1
+    fire_node = ROOT
+    spot_impact_type = melee
+  }
+  
+  ondeath_effect = E_damage {
+    area = 1000 { 
+      anim = data/models/effects/acidblow/accid cloud.kfm
+      sound = DATA/sounds/Effects/AcidBlow/
+    }
+    amount = 20
+    friendly_fire = 0
+  }
+}

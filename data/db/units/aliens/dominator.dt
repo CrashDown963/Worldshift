@@ -1,0 +1,329 @@
+Unit Dominator: BaseUnit {
+  name = "Dominator"
+  descr = "Alien mid range DPS and CC officer"
+  model = data/models/units/dominator/dominator.kfm {
+  die = data/models/units/dominator/dominator_die.nif
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = data/models/units/dominator/dominator.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+  
+  sounds {
+    select = data/sounds/units/dominator/select/
+    confirm = data/sounds/units/dominator/confirm/
+  }
+
+  race = aliens
+  scale = 1.15
+  officer = 1
+  tags = unit, organic
+  cost : pvp.aliens.unit_costs.Officer
+  cost_sloc : pvp.aliens.sloc_costs.Officer
+  icon = 1,6
+
+  stats :{
+    hp = 450
+    armor = 7
+    range = 1600
+    damage = 15
+    speed = 450
+    psi = 360
+
+    shield_hull = 150
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+
+    stasis_shot_chance = 10
+    stasis_shot_duration = 4
+
+    power_fuse_perc = 30
+    power_fuse_power = 240
+    power_fuse_cooldown = 30
+    power_fuse_area = 800
+
+    dimension_chain_duration = 4
+    dimension_chain_dmgbonus = 25
+    dimension_chain_area = 300
+    dimension_chain_power = 120
+    dimension_chain_cooldown = 45
+
+    fire_rate = 1.8
+  }
+  
+  speed = 450
+  
+  sight = stat:range + 400
+  aggro_range = var:sight
+  -- This is for the Blight Ray ability
+  penetration = 100
+
+  siege_projectile = SiegeProjectile
+  siege_damage = stat:damage * 0.4
+
+  actions : Alien.actions {
+    DominatorDimensionChainAction
+    DominatorPowerFuseAction
+    MakeBreeder -- fake
+  }
+  
+  abilities {
+    SiegeAbi
+    DominatorBlightRayAbi
+    DominatorStasisShotAbi
+
+    AIDimensionChain {
+      action = DominatorDimensionChainAction
+      when   : abi.fight
+      target = current { aoe_range = 1000; aoe_min_enemy_count = 4 }
+      range = 2000
+    }
+  }
+  
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+
+  take_auras : { RestorationCoreAura }
+
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 80
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 80
+    }
+    shoot_1 = 0 {
+      shoot_1_down = -45
+      shoot_1_up = 80
+    }
+    shoot_2 = 0 {
+      shoot_2_down = -45
+      shoot_2_up = 80
+    }
+  }
+
+  CMultiWeaponController dominator_weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = alternate
+    range_far = stat:range * 0.8
+    range_near = stat:range * 0.4
+    proximity_bonus = 3
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_1
+    shoot_anim_2 = shoot_2
+    shoot_idle_1 = shoot_idle
+    shoot_idle_2 = shoot_idle
+    idle_time = 1
+    min_bursts = 2
+    max_bursts = 2
+    aim_node = pt_aim
+    shoot_snd = data/sounds/effects/single weapons/dominator gun.wav
+    fire_rate = stat:fire_rate
+    damage = stat:damage
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    muzzle_fx dominator_rifle {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction  = 25
+      active_variation = 5
+      length_variation = 42
+      width_variation  = 7
+      scale = 1.3
+      instances = 64
+      emit = 150,255,80
+    }
+    
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = ion
+      speed = 4500
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/V Laser/t_laser.nif {
+        scale = 1.5
+        E = 150,255,80,255
+      }
+    }
+    
+    alt_projectile_chance = stat:stasis_shot_chance
+
+    alt_projectile = linear {
+      type = linear
+      spot_impact = 800
+      spot_impact_type = small_energy
+      speed = 9000
+      ground_hit_effect = BulletTerrainHitEffect
+      damage_multiplier = 2
+      show_damage = 1
+      model = data/models/projectiles/V Laser/t_laser.nif {
+        scale = 1.1
+        E = 150,255,80,255
+      }
+      effect = S_stun {
+        id = StasisShot
+        type = stun
+        duration = stat:stasis_shot_duration
+        react = stasis_shot
+      }
+    }
+	}
+
+}
+
+DominatorStasisShotAbi {
+  id = DominatorStasisShotAbi
+  name = "Stasis shot"
+  text = "Dominator has [stat:stasis_shot_chance]% chance to stun his target for [stat:stasis_shot_duration] seconds and to inflict double damage when shooting."
+  icon = 6,0
+}
+
+DominatorBlightRayAbi {
+  id = DominatorBlightRayAbi
+  name = "Blight ray"
+  text = "Dominators' default attacks are completely ignoring enemy armor. Shoots every [stat:fire_rate]seconds"
+  icon = 1,0
+}
+
+CSpellAction DominatorDimensionChainAction {
+  name = "Dimension Chain"
+  descr = "All enemies in the selected area are caught in a dimensional stasis for [stat:dimension_chain_duration]seconds. While under effect of the stasis the enemies are stunned and they will suffer [stat:dimension_chain_dmgbonus] additional damage from all sources."
+  visible = 1
+  icon = 12,2
+  min_power = stat:dimension_chain_power
+  cooldown = stat:dimension_chain_cooldown
+  range = stat:range
+  tags = location
+  feedback = DecalFeedback
+  aoe_radius = stat:dimension_chain_area
+
+  spell {
+    power = stat:dimension_chain_power
+    cast {
+      prepare {
+        duration = 0.5
+        anim = cast_instant
+      }
+    }
+    effect = E_set {
+      sound = data/sounds/effects/common/dimension chain.wav
+      exclude_self = 1
+      effect = S_multistun {
+        multi_area = stat:dimension_chain_area { anim = data/models/effects/magic/DimensionChain.nif }
+        duration = stat:dimension_chain_duration
+        react = dimension_chain
+      } 
+      effect = E_multidebuff {
+        id = DimensionChain
+        name = "Dimension Chain"
+        text = "This unit is caught in a Dimension Chain and cannot move."
+        icon = 1,15
+        type = vulnerability
+        multi_area = stat:dimension_chain_area
+        duration = stat:dimension_chain_duration
+        stats_change {
+          damage_taken_mod = { perc = stat:dimension_chain_dmgbonus }
+        }
+        tick = 1
+        duration = stat:dimension_chain_duration
+        immediate_tick = 1
+        stack_count = 1
+        exclude_self = 1
+      }
+      --sound = data/sounds/effects/common/inject.wav
+    }
+  }
+}
+
+CSpellAction DominatorPowerFuseAction {
+  name = "Power Fuse"
+  descr = "All enemy units around Dominator will have their power instantly reduced by [stat:power_fuse_perc]%."
+  visible = 1
+  instant = 1
+  icon = 10,5
+  min_power = stat:power_fuse_power
+  cooldown = stat:power_fuse_cooldown 
+  tags = self
+
+  spell {
+    power = stat:power_fuse_power
+
+    cast {
+      prepare {
+        duration = 0.5
+        anim = cast_instant
+      }
+    }
+
+    effect = E_multipowerburn {
+      id = PowerFuse
+      multi_area = stat:power_fuse_area { 
+        anim = data/models/effects/magic/PowerFuse.nif; 
+      }
+      sound = data/sounds/effects/common/power fuse.wav
+      burned_power_perc = stat:power_fuse_perc
+      damage_amplifier = 0
+      react = power_fuse
+    }
+  }
+}
+
+SiegeAbi {
+  name = "Siege Mode"
+  text = "Dominators will go into siege mode and bombard enemies from afar"
+  icon = 5,0
+  when : abi.combat
+  target = self { no_enemy_in_range = 1100 }
+  program = PrgDomSiege
+}
+
+CProjectile SiegeProjectile {
+  type = parabolic
+  angle = 60
+  model = data/models/projectiles/ProtonShot/ProtonShotProjectile_Green.nif
+  effect = SiegeProjectileExplode
+}
+
+CAreaEffect SiegeProjectileExplode {
+  range = 250
+ 
+  epicenter {
+    spawn SiegeExplosion
+    physics_radius = 250 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount : Dominator.siege_damage
+    }
+  }
+}

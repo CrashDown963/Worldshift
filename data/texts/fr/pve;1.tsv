@@ -1,0 +1,31 @@
+﻿sid	text:fr
+	
+Bill.name	Bill le scientifique des fusées
+BSAHowlingHorror.name	Le reptile
+ArrowForward.name	Flèche
+AlienShip.name	Vaisseau de Tharksh
+AlienShip.descr	<nl><nl>La navette de Tharksh.
+	
+// Corrupted Fields	
+CorruptedHighPriest.name	Grand Prêtre corrompu
+CorruptedShade.name	Ombre corrompue
+CorruptedShaman.name	Chaman corrompu
+CorruptedGhost.name	Fantôme corrompu
+CorruptedGhostMinion.name	Serviteur de fantôme corrompu
+CorruptedShadeMinion.name	Serviteur d’ombre corrompu
+	
+// Ancient Corridors	
+AncientSmith.name	Smith l’ancien
+AncientSmithCloneEast.name	Smith l’ancien
+AncientSmithCloneWest.name	Smith l’ancien
+AncientSmithMinion.name	Smith l’ancien
+	
+// Renegades’ Hideout	
+ZulThark.name	Zul’Thark
+ErkhArul.name	Erkh Arul
+	
+// Bridges of Trial	
+LanZealot.name	Lan Zealot
+Berserker.name	Déchaîneur
+TBMonster.name	Monstre
+Kroggol.name	Kroggol

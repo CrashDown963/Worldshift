@@ -1,0 +1,8 @@
+action Build {
+  name = Build
+  tags = construction
+  hide_in_pve = 1
+  program = PrgBuild
+  can_default = 1
+  weight = 1
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\ruins\brick_buildings\brick_broken02.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"LOW-bricks2";
+    translation = xpoint3:"-0.182373046875,-19.01251220703125,58.600940704345703125";
+    rotation = {
+      0 = xpoint3:"0,1,0";
+      1 = xpoint3:"-1,0,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

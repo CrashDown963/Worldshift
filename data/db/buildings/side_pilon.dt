@@ -1,0 +1,8 @@
+Building Side_Pilon : BaseBuilding {
+  model = Data/Models/buildings/portal/Pilon.kfm
+  race = humans
+  hull = 0
+  sight = 0
+  selectable = 0
+  attackable = 0
+}

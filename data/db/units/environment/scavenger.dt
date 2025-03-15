@@ -1,0 +1,43 @@
+Mob Scavenger : BaseMachineMob {
+  name = "Scavenger"
+  model = data/models/units/Scavenger/Scavenger.kfm
+  destruction = animation
+  race = common
+  icon = 3,24
+  boss = 1
+  conv_icon_row = 3
+  conv_icon_col = 1
+  boss_icon = 5,2
+  
+  hp = 50000
+  armor = 50
+  damage = 250
+  range = 350
+  sounds {
+  }
+  
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = Hit_1
+    fire_node = Scene Root
+    idle_time = 1.5
+    spot_impact_type = melee
+    shake_on_hit {
+      Hit_1
+    }
+    shoot_snd = data/sounds/bosses/scavengerhits/
+  }
+  
+  immune_to :{
+    E_multifreeze
+    E_freeze
+    E_multistun
+    E_stun
+    stun
+    fear
+  }
+
+}

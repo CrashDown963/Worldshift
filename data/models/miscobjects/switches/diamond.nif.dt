@@ -1,0 +1,77 @@
+model = {
+  file = str:"data\models\miscobjects\switches\diamond.nif";
+  animation = {
+    loop = fixp:"20";
+    duration = fixp:"19.6333332061767578125";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Root NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"switch_horizontal";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-0.999999940395355224609375";
+          2 = xpoint3:"0,0.999999940395355224609375,0";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Swithch_rot";
+          translation = xpoint3:"0,0,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,0.999999940395355224609375";
+            2 = xpoint3:"0,-0.999999940395355224609375,0";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Plane10";
+          translation = xpoint3:"0,0.338312208652496337890625,-3.7746970653533935546875";
+          rotation = {
+            0 = xpoint3:"-1,0,0";
+            1 = xpoint3:"0,-1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"Plane01";
+          translation = xpoint3:"0,0.3383121192455291748046875,-6.274803638458251953125";
+          rotation = {
+            0 = xpoint3:"-1,0,0";
+            1 = xpoint3:"0,-1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"PCloud01-Emitter";
+    translation = xpoint3:"5.024723052978515625,2.53339385986328125,210.13604736328125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

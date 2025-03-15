@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\build_device\build_device.kfm";
+  animations = {
+    constr_phase0 = {
+      loop = int:"0";
+      duration = fixp:"1.6666667461395263671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6666667461395263671875";
+        }
+      }
+    }
+    constr_phase2 = {
+      loop = int:"1";
+      duration = fixp:"6.63333415985107421875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"6.63333415985107421875";
+        }
+      }
+    }
+    die = {
+      loop = int:"0";
+      duration = fixp:"1.6333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.6333332061767578125";
+        }
+      }
+    }
+  }
+}

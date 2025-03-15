@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\embelishments\pointy_rocks\pointy_rock_big1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

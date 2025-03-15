@@ -1,0 +1,6 @@
+Building TransportShip : BaseBuilding {
+  name = "Transport ship"
+  model = data/Models/units/XenoliteBarge/XenoliteBarge.nif
+  race = humans
+  indestructible = 1
+}

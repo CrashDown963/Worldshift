@@ -1,0 +1,23 @@
+model = {
+  file = str:"data\models\effects\magic\lightningstrikes02.kfm";
+  animations = {
+    idle = {
+      loop = int:"0";
+      duration = fixp:"0.666666686534881591796875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.066666670143604278564453125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"0.666666686534881591796875";
+        }
+      }
+    }
+  }
+}

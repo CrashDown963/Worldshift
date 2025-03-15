@@ -1,0 +1,11 @@
+Technician Crew : Technician {
+  name = "Hans"
+  actions {
+  }
+  spawn_react = respawn_react
+  sounds {
+    select = data/speech/selecting/crew select/
+    joke = data/speech/selecting/crew joke/
+    destruction = data/speech/deaths/technician death/
+  }
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\desert\brownbushlow3.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object03";
+    translation = xpoint3:"-200.38702392578125,-10.598339080810546875,0";
+    rotation = {
+      0 = xpoint3:"0.749752223491668701171875,-0.661718666553497314453125,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0.661718666553497314453125,0.74975216388702392578125,0";
+    }
+  }
+}

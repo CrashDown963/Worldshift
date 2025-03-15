@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\buildings\radarpost\radarpost_build.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Radar Post-build";
+    translation = xpoint3:"2.04004669189453125,2.8020114898681640625,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

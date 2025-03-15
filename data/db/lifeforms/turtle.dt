@@ -1,0 +1,4 @@
+Mob Turtle : BaseAnimal {
+  name = "Turtle"
+  model = data/models/lifeforms/Turtle/turtle.nif
+}

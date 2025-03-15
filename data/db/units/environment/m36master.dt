@@ -1,0 +1,52 @@
+Unit M36Master : BaseUnit {
+  model = Data/Models/Units/Master/Master.kfm {
+    die = Data/Models/Units/Master/Master_die.nif
+  }
+  name : Master.name
+  descr : Master.descr
+  race = aliens
+  commander = 1
+  icon = 3,1
+  --icon = 1,12
+  scale = 1.5
+
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Master/Master.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+  
+  attachments {
+    pt_center = data/models/effects/Aliens/MasterAttachment.nif {auto_size_base = 0}
+    Dummy03 = data/models/Effects/Fire/Fire_small_green.nif {fixed_up = 1; scale = 0.6}
+    Dummy06 = data/models/Effects/Fire/Fire_small_green.nif {fixed_up = 1; scale = 0.6}
+    pt_ground = Data/Terrain/Embelishments/Special/AlienAura_Ball.nif {scale = 0.25}
+  }
+
+  stats :{
+    hp = 600
+    armor = 12
+    range = 1600
+    damage = 60
+    psi = 380
+  }
+  
+  CShieldController psychic_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    projectile_destroy_probability = 0
+    hull = 0
+    effects {
+    }
+  }
+
+  CCallMapLuaDamageMonitor damage_monitor {
+    active = 0
+    ignore_damage = 1
+  }
+
+}

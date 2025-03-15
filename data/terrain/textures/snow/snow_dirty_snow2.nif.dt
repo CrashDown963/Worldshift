@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\snow\snow_dirty_snow2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

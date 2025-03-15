@@ -1,0 +1,17 @@
+Building Obelisk : BaseBuilding {
+  name = Obelisk
+  model = Data/Models/buildings/Obelisk/Obelisk.nif
+  race = common
+  indestructible = 1
+  target_priority = 1500
+  
+  stats :{
+    hp = 3000
+  }
+
+  actions {
+    RallyPoint
+    CancelUnitProduce
+    ProduceWorker
+  }
+}

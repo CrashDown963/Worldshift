@@ -1,0 +1,61 @@
+model = {
+  file = str:"data\models\buildings\shrinetemple\shrine2.kfm";
+  animations = {
+    alert = {
+      loop = int:"1";
+      duration = fixp:"0.86666667461395263671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.86666667461395263671875";
+        }
+      }
+    }
+    alert_in = {
+      loop = int:"0";
+      duration = fixp:"0.033333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.033333301544189453125";
+        }
+      }
+    }
+    alert_out = {
+      loop = int:"0";
+      duration = fixp:"0.033333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.033333301544189453125";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.30000007152557373046875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.30000007152557373046875";
+        }
+      }
+    }
+  }
+}

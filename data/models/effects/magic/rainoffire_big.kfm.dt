@@ -1,0 +1,23 @@
+model = {
+  file = str:"data\models\effects\magic\rainoffire_big.kfm";
+  animations = {
+    fall = {
+      loop = int:"0";
+      duration = fixp:"0.83334338665008544921875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"0.83333337306976318359375";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"0.83334338665008544921875";
+        }
+      }
+    }
+  }
+}

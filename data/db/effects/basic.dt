@@ -1,0 +1,196 @@
+--
+-- damage effects
+--
+
+CDamageEffect E_damage {
+  type = explosion
+}
+
+CDamageEffect E_poison {
+  type = poison
+  react = poison
+}
+
+CDamageEffect ExplosionDamage {
+  amount = 1000
+  type = explosion
+}
+
+--
+-- heal effects
+--
+
+CHealEffect E_heal {
+  amount_min = 500
+  amount_max = 1000
+  react = heal
+}
+
+CHealEffect E_psi {
+  amount = 100
+  react = heal
+  heal_psi = 1
+}
+
+--
+-- stun
+--
+
+CStunEffect E_stun {
+  duration = 10
+  damage = 1000
+  react = stun
+}
+
+CMultiEffect E_multistun {
+  duration = 10
+  damage = 1000
+  react = stun
+  area = 2000
+  effect = CStunEffect
+}
+
+--
+-- slow
+--
+
+--CSlowEffect E_slow {
+--  duration = 10
+--  react = slow
+--}
+
+--
+-- freeze
+--
+
+CStunEffect E_freeze {
+  duration = 10
+  react = freeze
+}
+
+CMultiEffect E_multifreeze {
+  duration = 10
+  react = freeze
+  multi_area = 2000
+  effect = CStunEffect
+}
+
+CBuffEffect E_buff {
+}
+
+CBuffEffect E_debuff {
+  debuff = 1
+}
+
+CMultiEffect E_multibuff : E_buff {
+  effect = CBuffEffect
+}
+
+CMultiEffect E_multidebuff : E_debuff {
+  effect = CBuffEffect
+}
+
+CMultiEffect E_multipowerburn {
+  multi_area = 800
+  burned_power = 10
+  damage_amplifier = 100
+  react = powerburn
+  effect = CPowerBurnEffect
+}
+
+--
+-- mind control
+--
+
+CMindControlEffect E_mindcontrol {
+  debuff = 1
+  type = mindcontrol
+}
+
+--
+-- sets
+--
+
+CSetEffect E_set {
+}
+
+
+CPowerBurnEffect E_powerburn {
+  burned_power = 10
+  damage_amplifier = 100
+  react = powerburn
+}
+
+CRevealFOWBuffEffect E_revealfowbuff {
+}
+
+CIgniteEffect E_ignite {
+}
+
+---
+-- Spawn
+---
+
+CSpawnEffect E_spawn {
+}
+
+---
+-- Teleport
+---
+
+CTeleportEffect E_teleport {
+}
+
+
+---
+-- Cleanse
+---
+
+CCleanseEffect E_cleanse {
+  --amount = all
+  react = cleanse
+}
+
+CMultiEffect E_multicleanse {
+  react = cleanse
+  multi_area = 1000
+  effect = CCleanseEffect
+  --amount = all  
+}
+
+---
+-- Chain
+---
+
+CChainBuffEffect E_chain {
+}
+
+---
+-- Damage Share
+---
+
+CDamageShareEffect E_damage_share {
+}
+
+---
+-- Heal Creator On Damage Taken
+---
+
+CHealCreatorOnDamageTakenEffect E_heal_creator_on_damage_taken {
+}
+
+---
+-- Heal power
+---
+
+CMultiEffect E_multihealpower {
+  heal_psi = 1
+  effect = CHealEffect
+}
+
+---
+-- Area
+---
+
+CAreaEffect E_area_effect {
+}

@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\impacts\aliens_blood_impactpart.kfm";
+  animations = {
+    Impact = {
+      loop = int:"0";
+      duration = fixp:"0.5";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.5";
+        }
+      }
+    }
+  }
+}

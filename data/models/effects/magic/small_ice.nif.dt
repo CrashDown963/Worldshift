@@ -1,0 +1,77 @@
+model = {
+  file = str:"data\models\effects\magic\small_ice.nif";
+  animation = {
+    loop = fixp:"3";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray01-Emitter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray02Smoke-Emitter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Rotate_Dummy";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Ice_cube";
+        translation = xpoint3:"0.1386402547359466552734375,16.620258331298828125,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Ice_cube01";
+        translation = xpoint3:"-15.6227092742919921875,-11.671543121337890625,0";
+        rotation = {
+          0 = xpoint3:"-0.2379575073719024658203125,-0.96571242809295654296875,0.103805124759674072265625";
+          1 = xpoint3:"0.43356716632843017578125,-0.2012492120265960693359375,-0.8783609867095947265625";
+          2 = xpoint3:"0.8691349029541015625,-0.16400623321533203125,0.4665901660919189453125";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Ice_cube02";
+        translation = xpoint3:"15.3041591644287109375,-11.0665073394775390625,0";
+        rotation = {
+          0 = xpoint3:"-0.82971131801605224609375,0.18361534178256988525390625,-0.527128398418426513671875";
+          1 = xpoint3:"0.47150027751922607421875,-0.2749245464801788330078125,-0.83791637420654296875";
+          2 = xpoint3:"-0.2987748682498931884765625,-0.943769931793212890625,0.1415334641933441162109375";
+        }
+      }
+    }
+  }
+}

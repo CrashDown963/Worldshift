@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\terrain\ruins\vehicles\fordka.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Car_Low";
+      translation = xpoint3:"0,0,19.2927341461181640625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"tyre_04";
+        translation = xpoint3:"61.902843475341796875,-121.482940673828125,7.51343536376953125";
+        rotation = {
+          0 = xpoint3:"0,0,-1";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,-1,0";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"tyre_low";
+        translation = xpoint3:"-63.23046112060546875,-121.58179473876953125,8.291168212890625";
+        rotation = {
+          0 = xpoint3:"0,0,-1";
+          1 = xpoint3:"-1,0,0";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"tyre_02";
+        translation = xpoint3:"-64.95658111572265625,136.188751220703125,7.513446807861328125";
+        rotation = {
+          0 = xpoint3:"0,0,-1";
+          1 = xpoint3:"-1,0,0";
+          2 = xpoint3:"0,1,0";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"tyre_03";
+        translation = xpoint3:"64.84700775146484375,136.188751220703125,7.513446807861328125";
+        rotation = {
+          0 = xpoint3:"0,0,-1";
+          1 = xpoint3:"1,0,0";
+          2 = xpoint3:"0,-1,0";
+        }
+      }
+    }
+  }
+}

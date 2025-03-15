@@ -1,0 +1,9 @@
+Building Build_Device : BaseBuilding {
+  model = Data/Models/buildings/Build_Device/Build_Device.nif
+  race = humans
+  hull = 0
+  sight = 0
+  selectable = 0
+  attackable = 0
+  no_mouse_targetable = 1
+}

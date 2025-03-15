@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\buildings\livingtent\living-tent_construction.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Living-Tent-construction";
+    translation = xpoint3:"4.660858154296875,13.3914794921875,252.997833251953125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"LivingTent-ORIGIN01";
+      translation = xpoint3:"-4.53760528564453125,-14.23658466339111328125,-4.24639892578125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"__NDL_MultiMtl_Node";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"decal_plane01";
+      translation = xpoint3:"0,0,-252.997833251953125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

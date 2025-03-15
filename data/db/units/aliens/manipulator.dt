@@ -1,0 +1,245 @@
+Unit Manipulator : BaseUnit {
+  name = "Manipulator"
+  descr = "DESCRIPTION"
+  race = aliens
+  officer = 1
+  tags = unit, organic
+  cost : pvp.aliens.unit_costs.Officer
+  cost_sloc : pvp.aliens.sloc_costs.Officer
+  icon = 4,6
+
+  model = Data/Models/Units/Manipulator/Manipulator.kfm {
+  die = Data/Models/Units/Manipulator/Manipulator_die.nif
+  }
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/Units/Manipulator/Manipulator.pml
+    attach_destr_node_01 = data/models/Effects/Fire/Fire_small_green.nif 
+    attach_destr_perc = 60
+  }
+  
+  destruction = ragdoll
+
+  sounds {
+    select = data/sounds/units/manipulator/select/
+    confirm = data/sounds/units/manipulator/confirm/
+  }
+
+  stats : {
+    hp = 420
+    armor = 2
+    range = 1800
+    damage = 12
+    psi = 400
+
+    shield_hull = 150
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+
+    vortex_power = 140
+    vortex_cooldown = 40
+    vortex_range = 1000
+    vortex_area = 800
+    vortex_heal = 30
+    vortex_duration = 6
+    
+    manipulate_cost = 280
+    manipulate_duration = 10
+    manipulate_cooldown = 30
+    manipulate_area = 600
+    manipulate_power_perc = 5
+    manipulate_hp_perc = 10
+
+    life_leech_boost = 10
+  }
+  speed = 450
+
+  take_auras : { RestorationCoreAura }
+  
+  blend_aim = pt_center {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 45
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 45
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    fire_node = pt_shoot
+    spot_impact_type = melee
+    shoot_snd = data/sounds/effects/single weapons/manipulator shot.wav
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 4500
+      scale = 0.25
+    }
+  }
+  
+  CShieldController shifter_shield {
+    active = 0
+    sound_appear = data/Sounds/Shields/Imperator/Idle/ 
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sounds_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+  
+  actions :{
+    DarkVortexAction;
+    ManipulateAction;
+    MakeBreeder -- fake
+  }
+
+  abilities {
+    LifeLeechAbi
+    
+    AIDarkVortex {
+      action = DarkVortexAction
+      when   : abi.always
+      target = ally { 
+        health_hp_taken = 100;
+        aoe_range = 500;
+        aoe_min_wounded_count = 2
+        aoe_min_wounded_health = 400
+      }
+      range = 2000
+    }
+  }
+}
+
+LifeLeechAbi {
+  name = "Life Leech"
+  text = "With each attack the Manipulator drains [stat:damage] life from his target and spreads it around himself, thus healing all allied unints nearby."
+  icon = 3,0
+  when : abi.target_hit
+  chance = 100
+  target = self
+  effect = E_heal {
+    amount = stat:damage
+    amount_multiplier_perc = stat:life_leech_boost * 10
+    area = 750 { anim = data/models/effects/magic/ReliefAreaEffect.kfm }
+    react = heal
+  }
+}
+
+CSpellAction DarkVortexAction {
+  name = "Dark Vortex" 
+  descr = "Creates a nether energy vortex that does strikes every now and then all allied units neabry with netherlight, thus healing them for [stat:vortex_heal] hit points. The vortex stays for [stat:vortex_duration] sec and then disappears."
+  visible = 1
+  icon = 4,6
+  min_power = stat:vortex_power
+  cooldown = stat:vortex_cooldown
+  range = stat:vortex_range
+  feedback = DecalFeedback
+  tags = location
+  aoe_radius = stat:vortex_area
+
+  spell {
+    power = stat:vortex_power
+    spawn = DarkVortex
+    cast {
+      finish {
+        duration = 1.0
+        anim = shoot
+        sound = data/sounds/units/highpriest/pyro/
+      }
+    }
+  }
+}
+
+DarkVortex DarkVortex {
+	model = Data/Models/Effects/Magic/Vortex.kfm 
+	sounds {
+	start = data/sounds/effects/vortex/
+	}
+  	hull = 0
+		sight = 0
+		selectable = 0
+		attackable = 0
+		no_mouse_targetable = 1
+		duration : Manipulator.stats.vortex_duration
+		area : area.medium
+		beam_name = DarkVortexHealBeam
+		beam_duration = 0.3
+		heal_hp : Manipulator.stats.vortex_heal
+		react = heal
+		min_beams = 1
+		max_beams = 6
+		min_beams_interval = 0.3
+		max_beams_interval = 1
+		anim_fade_in = fade_in
+		anim_idle = thunder_idle
+		anim_fade_out = fade_out
+		vortex_beam_sound = data/sounds/effects/vortex blood/ 
+}
+
+CSpellAction ManipulateAction {
+  name = "manipulate"
+  descr = "Remove all harmful effects from all friendly units, increase their hitpoints by [stat:manipulate_hp_perc]% and power by [stat:manipulate_power_perc]% for [stat:manipulate_duration] seconds."
+  visible = 1
+  tags = location
+  icon = 4,4
+  min_power = stat:manipulate_cost
+  feedback = DecalFeedback
+  max_range = stat:range
+  cooldown = 30
+  aoe_radius = stat:manipulate_area
+  program = PrgCreateEffect
+  
+  spell {
+    power = stat:manipulate_cost
+    
+    cast {
+      finish {
+        duration = 1.0
+        anim = shoot
+        attach {
+          pt_hand = data/models/effects/magic/HealHandsBandage.nif
+          pt_hand = data/models/effects/magic/HealFXFinish.nif
+        }
+      }
+    }
+    effect = E_set {
+      sound = data/sounds/effects/common/purge.wav
+
+      effect = E_multibuff {
+        id = Manipulation
+        ally = 1
+        name = "manipulation"
+        text = "Increased maximum hitpoints and power."
+        icon = 2,4
+        type = buff
+        stats_change {
+          hp = { perc = stat:manipulate_hp_perc }
+          psi = { perc = stat:manipulate_power_perc }
+        }
+        duration = stat:manipulate_duration
+        multi_area : aoe_radius { anim = data/Models/Effects/Magic/AuraArbiter.nif }
+        react = manipulate
+        stack_count = 1
+      }     
+    
+      effect = E_multicleanse {
+        amount = 100
+        ally = 1
+        max_rank = 6
+        multi_area : aoe_radius
+      } 
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Building Cross : BaseBuilding {
+  model = Data/Models/buildings/KoHBuildings/Cross.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

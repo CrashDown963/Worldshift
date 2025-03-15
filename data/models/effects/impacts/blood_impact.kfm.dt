@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\impacts\blood_impact.kfm";
+  animations = {
+    impact = {
+      loop = int:"0";
+      duration = fixp:"0.3333333432674407958984375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.3333333432674407958984375";
+        }
+      }
+    }
+  }
+}

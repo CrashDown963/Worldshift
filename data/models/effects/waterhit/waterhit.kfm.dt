@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\waterhit\waterhit.kfm";
+  animations = {
+    splash = {
+      loop = int:"0";
+      duration = fixp:"2";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\rocky\rocky_base1-rock1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

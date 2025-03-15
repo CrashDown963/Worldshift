@@ -1,0 +1,261 @@
+Mob CorruptedShaman : BaseMob {
+  name = "Corrupted Shaman"
+  icon = 7,21
+  model = Data/Models/Units/Shaman/Shaman.kfm
+  
+  skin {
+    base =  Data/Models/Units/Shaman/shaman_corrupted_diffuse.dds
+  }
+  
+  physics {
+    default = data/models/units/Trooper/TownGuard_Proxy.pml
+    die = Data/Models/Units/Shaman/Shaman.pml
+  }
+  
+  destruction = ragdoll
+  
+  scale = 1.2
+  race = mutants
+  
+  tags = unit, organic
+  impacts : LivingUnitImpacts
+  
+  hp = 300
+  range = 1600
+  armor = 0
+  damage = 25
+
+  drain_life_chance = 25
+  drain_life_purge = 0
+  drain_life_boost = 75
+  
+  rejuvenation_psicost = 100
+  rejuvenation_amount = 250
+  
+  drain_life_boost_modifier = var:drain_life_boost * 10
+  
+  drain_life_damage = var:damage 
+  drain_life_heal = var:damage * 4
+  
+  rejuvenation_range = var:range
+  
+  attachments {
+    pt_ground = data/models/effects/Magic/StoneGhostAttachment.nif {
+			scale = 0.45; 
+			CTrailController GhostTrail01  {
+			  emitter = Trail01
+			  texture = data/textures/trails/Trail3.dds
+			  tex_ratio = float: 1
+			  start_width = 45
+			  end_width = 0
+			  ttl = 18
+			  simple_time = 1
+			  additive = 1
+                z_write = 0
+			  material_alpha = 1
+			  diffuse = color: 0, 0, 0
+			  ambient = color: 0, 0, 0
+			  emissive = color: 1, 1, 1
+
+			  time0 = 0
+			  color0 = colora: 1, 1, 1, 0
+
+			  time1 = 3
+			  color1 = colora: 0.31, 0.31, 0.73, 1
+
+			  time2 = 30
+			  color2 = colora: 0.31, 0.56, 0.73, 1
+
+			  time3 = 60
+			  alpha3 = 0.6
+
+			  time4 = 100
+			  color4 = colora: 0, 0, 1, 0
+		   }
+		   CTrailController InjectTrail02 : GhostTrail01 {emitter = Trail02}
+		   CTrailController InjectTrail03 : GhostTrail01 {emitter = Trail03}
+		   CTrailController InjectTrail04 : GhostTrail01 {emitter = Trail04}
+     }
+  }
+  
+  abilities {
+    DrainLife {
+      when = fight
+      target = current { tags = organic }
+      chance = var:drain_life_chance
+      cast {
+        prepare {
+          anim = cast_drnlife_prepare
+        }
+        finish {
+          anim = cast_finish
+        }
+      }
+
+      projectile = beam {
+        start_point = pt_hand
+        beam = DrainLifeLightning
+        duration = 0.2
+      }
+
+      effect = E_set {
+        effect = E_damage {
+          amount = var:drain_life_damage
+          react = drain_life
+        }
+        effect = E_heal {
+          amount = var:damage
+          amount_multiplier_perc = var:drain_life_boost_modifier
+          tags = organic, ally -- ??
+          area = 800 { anim = data/models/effects/magic/ReliefAreaEffect.kfm }
+          target_self = 1
+        }
+        effect = E_cleanse {
+          amount = 1
+          ally = 1
+          react = cleanse
+          active = var:drain_life_purge
+        }
+      }
+    }
+    
+    Renew {
+      when : abi.always
+      cooldown = 10
+      range = 2000
+      program = PrgRejuvenation
+      target = ally { 
+        health_hp_taken = var:rejuvenation_amount
+        aoe_range = 500;
+        aoe_min_wounded_count = 2
+        aoe_min_wounded_health = 200
+      }
+    }
+    
+    SummonMinions {
+      when : abi.combat
+      cooldown = 65
+      range = 1000
+      target = self
+      no_buffs { Confusion }
+      action = SummonMinionsAction
+    }
+  }
+
+  actions : {
+    SummonMinionsAction
+  }
+  
+  CSpellAction SummonMinionsAction {
+    name = SummonMinions
+    visible = 1
+    
+    cast {
+      prepare {
+        anim = drainpsi_start
+        duration = 1
+        attach {
+          pt_hand = data/models/effects/magic/FireHands.nif
+        }
+      }
+      finish {
+        attach {
+          pt_hand = data/models/effects/magic/FireHands.nif
+          pt_center = data/models/effects/Magic/AncientShade_fx_Attachment.nif
+        }
+        anim = drainpsi_loop
+        duration = 5
+      }
+    }
+    call_map_lua = SummonMinions
+  }
+
+  attack_spell = PyrokinesisSpell
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+ 
+  animation {
+    cast_pyrokinesis_prepare = cast_praparation
+    cast_pyrokinesis_finish = cast_finish
+
+    cast_drnlife_channeling = cast_praparation
+    cast_drnlife_prepare = cast_praparation
+    cast_drnlife_finish = drainpsi_start
+    
+    cast_rejuvenation_prepare = cast_praparation
+    cast_rejuvenation_finish = drainpsi_start
+    
+    cast_purify_prepare = cast_praparation
+    cast_purify_finish = drainpsi_start
+  }
+
+  -- drnlife cast spell
+  drnlife_range = var:range * 0.9
+  drnlife_max_range = var:range
+  drnlife_duration = 5
+  drnlife_beam_timelife = 2.0
+  drnlife_beam_spawn_time = 1
+  drnlife_beam = DrainLifeLightning
+  drnlife_react = drain_life
+  drnlife_source = pt_hand
+  drnlife_attach = data/models/effects/magic/drainhands.nif
+  drnlife_beam_color = 0.8,0.6,0.1
+  drnlife_heal_perc = 30
+}
+
+PyrokinesisSpell {
+  cast {
+    prepare {
+      anim = cast_pyrokinesis_prepare
+      duration = 1
+      attach {
+        pt_hand = data/models/effects/magic/FireHands.nif
+      }
+    }
+    finish {
+      anim = cast_pyrokinesis_finish
+      sound = data/sounds/units/highpriest/pyro/
+      attach {
+        pt_hand = data/models/effects/magic/FireFXFinish.nif
+      }
+    }
+  }
+
+  projectile = chase {
+    model = data/models/effects/magic/fireball.nif {
+  		CTrailController trail_smoke {
+        emitter = RootDummy
+        material = data/models/Effects/Trails/Trail_Hellfire.nif
+        tex_ratio = float: 2.5
+  		  start_width = 40
+    	  end_width = 180
+    	  ttl = 10
+  
+        time0 = 0
+        color0 = colora: 1, 0.5, 0.2, 1
+  
+        time1 = 5
+        color1 = colora: 1, 0.3, 0.2, 0.8
+  
+        time2 = 8
+        color2 = colora: 1, 0.2, 0.1, 0.5
+  
+        time3 = 40
+        color3 = colora: 1, 0.2, 0.1, 0.5
+  
+        time4 = 100
+        color4 = colora: 0.3, 0.3, 0.3, 0
+  		}
+  	}
+    speed = 2500
+    scale = 0.25
+  }
+  
+  effect = E_damage {
+    amount = var:damage
+    react = fire
+    can_crit = 1
+  }
+}

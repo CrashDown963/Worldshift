@@ -1,0 +1,27 @@
+model = {
+  file = str:"data\models\effects\stoneghost\stoneghostwave.nif";
+  animation = {
+    loop = fixp:"3.333333492279052734375";
+    duration = fixp:"1.36666667461395263671875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Plane02";
+    translation = xpoint3:"0,0,176.771575927734375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"freeze_streaks";
+    translation = xpoint3:"0,0,124.28839111328125";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

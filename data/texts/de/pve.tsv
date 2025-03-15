@@ -1,0 +1,147 @@
+﻿sid	text:de
+	
+AcidBug.name	Säurekäfer
+Adam.name	Adam
+AlienBase.name	Alien
+Announcer.name	Sprecher
+Ape.name	Leorilla
+Arachnoid.name	Arachnoid
+Armadillo.name	Gürteltier
+Arna ni'Varra.name	Arna ni’Varra
+BaseAnimal.name	Tier
+BaseBuilding.name	Gebäude
+BaseMachineMob.name	Maschine
+BaseTurret.name	Geschützturm
+BattleYamu.name	Kampf-Yamu
+Big_bird.name	Vogel
+Big_sloth.name	Riesenfaultier
+BigOne.name	Die Gigantin
+Bird01.name	Vogel
+BSABattleYamu.name	Kampf-Yamu
+BSAHowlingHorror.name	Das Reptil
+Carnother.name	Carnivor
+Commander Kean.name	Commander Kean
+Crococeratops.name	Crococeratops
+DefaultAreaAction.name	Gebiet
+DefencePost.name	Defensivgeschütz
+DefencePost.descr	Ein automatisches Defensivgeschütz
+Defender.name	Verteidiger
+Denkar ni'Varra.name	Denkar ni’Varra
+Eel.name	Aal
+Eji.abilities.Charming.name	Verzauberung
+Eji.abilities.Charming.text	Feinde suchen sich nach Möglichkeit ein anderes Ziel.
+Eji.abilities.FullRestoration.name	Ausheilung
+Eji.abilities.FullRestoration.text	Heilt Einheiten in der Umgebung vollständig. Erfordert volle Konzentration.
+Eji.abilities.Restore.name	Regeneration
+Eji.abilities.Restore.text	Regeneriert die Trefferpunkte verbündeter Einheiten.
+Eji.name	Eji
+FatDealer.name	Schwermutant
+FireDealer.name	Feuermutant
+Frank.name	Frank N. Stein
+Ganthu.name	Ganthu
+GarbageAssaulter.name	Schrottjäger
+GarbageHealer.name	Schrottheiler
+GateMob.name	Tor
+Gates.name	Tor
+GiantMutant.name	Kolossmutant
+GiantSpiderEgg.name	Riesenskorpion-Ei
+Gorgar.name	Gorgar 2.0
+Greenskin.name	Grünhaut
+GreenskinWild.name	Wilde Grünhaut
+Havoc.name	Verwüster
+HeavyBot.name	Schwerer Bot
+HeavyInfantry.name	Schwere Infanterie
+HF1337.name	HF1337
+HighPriest33.name	Hohepriester XLII
+HumanShip.name	Personenfrachter
+HumanShip.descr	 
+Hut.name	Hütte
+Insect.name	Insekt
+Judge Dread.name	Vollstrecker Dread
+Judge Smirnov.name	Vollstrecker Smirnov
+Judge Davidov.name	Vollstrecker Davidov
+Absolute Judge.name	Total-Vollstrecker
+JunkLurker.name	Schuttkrabbler
+Kai_Rider.name	Kai-Reiter
+Kikkert.name	Kikkert
+King_Beetle.name	Königskäfer
+Kirxxa.name	Kirxxa
+krocus.name	Krockus
+Kuna.name	Kuna ni’Dahl
+M16DetonateCharge1Action.name	Erste Ladung zünden
+M16DetonateCharge2Action.name	Zweite Ladung zünden
+M16DetonateCharge3Action.name	Dritte Ladung zünden
+MachineUnit.name	Maschine
+Mercenary.name	Söldner
+Millenium Frogger.name	Rasender Adler
+Mola Ramm.name	Mola Ramm
+MutantBird.name	Vogel
+MutHouse.name	Mutantenhaus
+Nightmare.name	Albtraum
+Nomad.name	Nomade
+Onkar ni'Varra.name	Onkar ni’Varra
+Onkar.name	Onkar ni’Varra
+PickM23Artifact.name	Ruinen untersuchen
+PsiResonator.name	Der Psi-Resonator
+Pterodacto.name	Ptero
+Ragho.name	Ragho
+Raptor.name	Raptor
+Rhino.name	Nashorn
+ROMDefenceTower.name	Verteidigungsturm
+ROMDefenceTurret.name	Verteidigungsgeschützturm
+ROMDroid.name	Androide
+ROMGate.name	Tor
+ROMGateControl.name	Torsteuerung
+ROMHBot.name	S-Bot
+ROMKillingTurret.name	Todesgeschützturm
+ROMMegaCannon.name	Megageschütz
+ROMMegaCannonPowerCore.name	Megageschütz Energiezelle
+ROMP2Reinforce.name	Verstärkung rufen
+ROMPowerGenerator.name	Energiegenerator
+ROMRipper.name	Schlitzer
+ROMShieldGenerator.name	Schildgenerator
+ROMTowerControl.name	Turmsteuerung
+ROMZBot.name	Z-Bot
+SavageBrute.name	Ga'ro
+Scavenger.name	Müllsammler
+Scientist.name	Wissenschaftler
+Scorpion.name	Skorpion
+Scout.name	Kundschafter
+SpiderEgg.name	Skorpion-Ei
+SpiderNest.name	Spinnennest
+SpiderSpawn.name	Sprengkäfer
+SpittingScorpion.name	Spei-Skorpion
+Switch.descr	Wählen Sie eine passende Einheit und aktivieren Sie den Auslöser durch einen Rechtsklick.
+Switch.name	Auslöser
+Tharksh.name	Tharksh
+TransportShip.name	Transportschiff
+Trashmaster Ditz.name	Schrottmeister Ditz
+Trashmaster Ulv.name	Schrottmeister Ulv
+Triad.name	Triade
+Trogloc.name	Troglok
+Turtle.name	Schildkröte
+UnderworldUnit.name	Unterwelt-Kreatur
+Unihorn.name	Hornmutant
+UseSwitch.name	Benutzen
+Vasilii.name	Vasiliy
+VenomousScorpion.name	Giftskorpion
+Wall.name	Wand
+WildBrute.name	Wild-Ga'ro
+Xessk.name	Xessk
+YellowSavage.name	Gelb-Ga'ro
+RanBoo.name	Ran Boo
+MaleWorm.name	Männlicher Wurm
+Punk.name	Kammechse
+SmallWorm.name	Kleiner Wurm
+FemaleWorm.name	Weiblicher Wurm
+InfantMaleWorm.name	Junger männlicher Wurm
+InfantFemaleWorm.name	Junger weiblicher Wurm
+KharumDrone.name	Kundschafterdrohne
+Queen.name	Königin
+Scorpo.name	Skorpo
+BigMutant.name	Jack der Gigant
+Bill.name	Bill die Rakete
+GuardDroid.name	Wächter-Android
+Mech0.name	Mech 0
+KharumTacticalDrone.name	Taktische Felddrohne
+QueenProtector.name	Königinnen-Protektor

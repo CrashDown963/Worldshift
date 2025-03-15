@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\ruins\big_tech_pilons\pilon2_part1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

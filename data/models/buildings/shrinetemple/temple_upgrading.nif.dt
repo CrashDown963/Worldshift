@@ -1,0 +1,197 @@
+model = {
+  file = str:"data\models\buildings\shrinetemple\temple_upgrading.nif";
+  animation = {
+    loop = fixp:"6.66666698455810546875";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"LightnigBBP2P_Root01";
+    translation = xpoint3:"-616.66717529296875,-866.861328125,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Gravity01";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"RotationRoot";
+      translation = xpoint3:"0,0,361.0498046875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"GhostDummy01";
+        translation = xpoint3:"4.83551025390625,539.74951171875,286.95654296875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray01-Emitter";
+          translation = xpoint3:"0,0,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"Plane02";
+          translation = xpoint3:"-5.767818927764892578125,4.97004795074462890625,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"BBoardSG02";
+          translation = xpoint3:"-5.767818927764892578125,4.97004795074462890625,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"Plane01";
+          translation = xpoint3:"-5.767818927764892578125,4.97004795074462890625,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"GhostDummy02";
+        translation = xpoint3:"395.454681396484375,-233.82000732421875,240.4586181640625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray02-Emitter";
+          translation = xpoint3:"0,0,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1.1741497516632080078125";
+          name = str:"Plane03";
+          translation = xpoint3:"-5.767821788787841796875,4.970050334930419921875,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"BBoardSG03";
+          translation = xpoint3:"-5.767821788787841796875,4.970050334930419921875,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"Plane04";
+          translation = xpoint3:"-5.767821788787841796875,4.970050334930419921875,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"GhostDummy03";
+        translation = xpoint3:"-385.321136474609375,-257.41650390625,458.3377685546875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"BBoardSG04";
+          translation = xpoint3:"-5.767824649810791015625,4.97003650665283203125,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #1 = {
+          scale = fixp:"1.1741497516632080078125";
+          name = str:"Plane07";
+          translation = xpoint3:"-5.767824649810791015625,4.97003650665283203125,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #2 = {
+          scale = fixp:"1.78399944305419921875";
+          name = str:"Plane08";
+          translation = xpoint3:"-5.767824649810791015625,4.97003650665283203125,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"SuperSpray03-Emitter";
+          translation = xpoint3:"0,0,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\simple\greenflowerbush11.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object01";
+    translation = xpoint3:"38.22113800048828125,-0.722532749176025390625,14.256710052490234375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

@@ -1,0 +1,75 @@
+Mob FatDealer : BaseMob {
+  name = "Fat Dealer"
+  icon = 4,7
+  model = data/models/lifeforms/FatDealer/FatDealer.kfm
+
+  hp = 120
+  damage = 30
+  range = 1600
+  armor = 2
+  
+  physics {
+    default = data/models/lifeforms/FatDealer/FatDealer_Proxy.pml
+    die = data/models/lifeforms/FatDealer/FatDealer.pml
+  }
+  
+  destruction = ragdoll
+  
+  blend_aim = pt_aim {
+    shoot = 0 {
+      shoot_down = -60
+      shoot_up = 60
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -60
+      shoot_idle_up = 60
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    range_far = 1000
+    range_near = 700
+    proximity_bonus = 1
+    fire_node = pt_shoot_1
+    aim_node = pt_aim
+    fire_rate = .2
+    aim_tolerance = 45
+    shoot_anim = shoot
+    min_bursts = 2
+    max_bursts = 2
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+    
+	trace FatDealer {
+		  model = Data/Models/Effects/TraceBullet/Trace_3.nif	
+		  variant	= 0
+		  start_dist = 10
+		  end_dist = 10
+		  frequency	= 5
+		  ttl	= 1
+		  length = 375
+		  target_size	= 15
+		  velocity	= 40
+		  length_end = 180
+		  width_scale = 12
+		  instances = 128
+		  emit = 25,185,55
+	}
+    spot_impact = 1000
+    spot_impact_type = bullet
+     muzzle_fx FatMuzzle {
+     model = data/models/effects/MuzzleFlash/muzzle_flash_add.nif
+     frequency	= 7
+     active_fraction = 20 
+     active_variation = 0
+     length_variation = 20
+     width_variation = 2
+     scale = 1.5
+     instances = 64
+     emit = 25,185,55
+     }
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+}

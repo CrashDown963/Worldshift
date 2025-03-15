@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\buildings\breederportal\breeder_build.kfm";
+  animations = {
+    build_phase_01 = {
+      loop = int:"0";
+      duration = fixp:"4";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"4";
+        }
+      }
+    }
+  }
+}

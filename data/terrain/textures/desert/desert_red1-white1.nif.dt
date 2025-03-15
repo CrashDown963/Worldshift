@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\desert\desert_red1-white1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

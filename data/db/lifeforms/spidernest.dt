@@ -1,0 +1,6 @@
+Mob SpiderNest : BaseAnimal  {
+  name = "SpiderNest"
+  movable = 0
+  icon = 7,17
+  model = data/models/lifeforms/SpiderNest/SpiderNest.kfm
+}

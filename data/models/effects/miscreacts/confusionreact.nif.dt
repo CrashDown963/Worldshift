@@ -1,0 +1,117 @@
+model = {
+  file = str:"data\models\effects\miscreacts\confusionreact.nif";
+  animation = {
+    loop = fixp:"1.966666698455810546875";
+    duration = fixp:"5.333333492279052734375";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,45";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"0,1,0";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Crosshair01";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Line01";
+      translation = xpoint3:"299.2025146484375,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Line02";
+      translation = xpoint3:"-299.2025146484375,0,0";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"Line03";
+      translation = xpoint3:"0,299.2025146484375,0";
+      rotation = {
+        0 = xpoint3:"0,-0.999999940395355224609375,0";
+        1 = xpoint3:"0.999999940395355224609375,0,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"Line04";
+      translation = xpoint3:"0,-299.2025146484375,0";
+      rotation = {
+        0 = xpoint3:"0,0.999999940395355224609375,0";
+        1 = xpoint3:"-0.999999940395355224609375,0,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #5 = {
+      scale = fixp:"1";
+      name = str:"Crosshair_Pulse02";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #7 = {
+      scale = fixp:"1";
+      name = str:"Blizzard01-Emitter";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,1";
+        2 = xpoint3:"0,-1,0";
+      }
+    }
+    #8 = {
+      scale = fixp:"1";
+      name = str:"Dummy01";
+      translation = xpoint3:"0,-0.426624298095703125,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,1";
+        2 = xpoint3:"0,-1,0";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Plane02";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,0,-0.999999940395355224609375";
+          2 = xpoint3:"0,0.999999940395355224609375,0";
+        }
+      }
+    }
+    #9 = {
+      scale = fixp:"1";
+      name = str:"SuperSpray01-Emitter";
+      translation = xpoint3:"0,-0.4266204833984375,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,0,1";
+        2 = xpoint3:"0,-1,0";
+      }
+    }
+  }
+}

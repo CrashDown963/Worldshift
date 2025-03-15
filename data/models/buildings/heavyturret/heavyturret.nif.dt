@@ -1,0 +1,107 @@
+model = {
+  file = str:"data\models\buildings\heavyturret\heavyturret.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Root";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Root NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"rot_z";
+        translation = xpoint3:"0,152.8919830322265625,95.0443572998046875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"useless_bone";
+          translation = xpoint3:"0,-17.36663818359375,317.80133056640625";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0.7071068286895751953125,0.707106769084930419921875";
+            2 = xpoint3:"0,-0.707106769084930419921875,0.7071068286895751953125";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"Actor_Layer2";
+            translation = xpoint3:"0,0,0";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+            #0 = {
+              scale = fixp:"1";
+              name = str:"Left_Cannon";
+              translation = xpoint3:"120.101470947265625,30.815456390380859375,0.882635414600372314453125";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"pt_shoot_2";
+                translation = xpoint3:"0.3362579345703125,-735.91839599609375,-1.47194945812225341796875";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+              }
+            }
+            #1 = {
+              scale = fixp:"1";
+              name = str:"Right_Cannon";
+              translation = xpoint3:"-117.9415435791015625,30.815456390380859375,0.882635414600372314453125";
+              rotation = {
+                0 = xpoint3:"1,0,0";
+                1 = xpoint3:"0,1,0";
+                2 = xpoint3:"0,0,1";
+              }
+              #0 = {
+                scale = fixp:"1";
+                name = str:"pt_shoot_1";
+                translation = xpoint3:"-2.41442108154296875,-735.91839599609375,-1.47194945812225341796875";
+                rotation = {
+                  0 = xpoint3:"1,0,0";
+                  1 = xpoint3:"0,1,0";
+                  2 = xpoint3:"0,0,1";
+                }
+              }
+            }
+          }
+          #1 = {
+            scale = fixp:"1";
+            name = str:"pt_aim";
+            translation = xpoint3:"0,-703.55908203125,0.4385587275028228759765625";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+      }
+    }
+  }
+}

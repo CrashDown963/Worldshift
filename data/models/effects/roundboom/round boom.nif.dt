@@ -1,0 +1,117 @@
+model = {
+  file = str:"data\models\effects\roundboom\round boom.nif";
+  animation = {
+    loop = fixp:"1.83333289623260498046875";
+    duration = fixp:"1.6666667461395263671875";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Smoke 1	-Emitter";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #9 = {
+      scale = fixp:"1";
+      name = str:"Smoke 1	-Emitter NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"Plane03";
+        translation = xpoint3:"0,0,2.427532672882080078125";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"Plane04";
+        translation = xpoint3:"0,0,3.9296514987945556640625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #2 = {
+        scale = fixp:"1";
+        name = str:"Plane05";
+        translation = xpoint3:"0,0,5.191198825836181640625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #3 = {
+        scale = fixp:"1";
+        name = str:"Plane06";
+        translation = xpoint3:"0,0,6.647600650787353515625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #4 = {
+        scale = fixp:"1";
+        name = str:"Plane02";
+        translation = xpoint3:"0.00369942164979875087738037109375,0,0.9648897647857666015625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #5 = {
+        scale = fixp:"1";
+        name = str:"Fireball 2	-Emitter";
+        translation = xpoint3:"-9.6159267425537109375,2.9227068424224853515625,22.229248046875";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #6 = {
+        scale = fixp:"1";
+        name = str:"Fireball 3-Emitter";
+        translation = xpoint3:"1.01209259033203125,6.787441253662109375,5.601715087890625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #7 = {
+        scale = fixp:"1";
+        name = str:"Fireball 04-Emitter";
+        translation = xpoint3:"9.70843791961669921875,1.9565231800079345703125,20.870792388916015625";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+      #8 = {
+        scale = fixp:"1";
+        name = str:"Fire-Emitter";
+        translation = xpoint3:"1.01209259033203125,-6.739136219024658203125,10.65217494964599609375";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+      }
+    }
+  }
+}

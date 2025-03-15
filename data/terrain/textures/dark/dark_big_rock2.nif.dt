@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\textures\dark\dark_big_rock2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

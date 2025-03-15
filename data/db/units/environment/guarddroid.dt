@@ -1,0 +1,150 @@
+Mob GuardDroid : BaseMachineBoss {
+  model = data/models/units/Mech_Destroyer/Mech_Destroyer.kfm
+  name = "Guard Droid"
+  icon = 5,17
+  scale = 0.7
+  destruction = animation
+
+  boss_icon = 4,2
+  
+  stats : {
+    hp = 8000
+    armor = 25
+    damage = 70
+    speed = 350
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  damage = stat:damage
+  speed = stat:speed
+  rocket_damage = 25
+  
+  CMultiWeaponController rockets {
+    active = 1
+    idle_only = 0
+    count = 2
+    sync = alternate 
+    fire_node_1 = pt_cast_1
+    fire_node_2 = pt_cast_2
+    shoot_snd = Data/Sounds/Units/AssaultBot/RocketLaunch
+    fire_rate = 0.3
+    damage = 20
+    precision = 100
+    spot_impact_type = small_energy
+    damage_type = energy
+    min_range = 350
+    range = 5000
+    face_target = 0
+    aim_node = pt_aim
+    aim_tolerance_yaw = 20
+    aim_tolerance_pitch = 180
+      
+    projectile = parabolic {
+      angle = 5
+      dispersion = 370
+      spot_impact = 900
+      spot_impact_type = small_energy
+      effect = GuardDroidRocketEffect
+      
+      decal_settings ground_hit_decal = barrage_decal1
+      
+      model = data/models/projectiles/rocket/Mortar.nif {
+        scale = 1.3
+        CTrailController trail {
+          emitter = Dummy01
+          material = data/models/Effects/Trails/Trail_Smoke3.nif
+          tex_ratio = float: 25
+          start_width = 25
+          end_width = 100
+          ttl = 40
+          --simple_time = 90
+    	  
+          time0 = 0
+          color0 = colora: 1, 1, 1, 1
+          time1 = 3
+          color1 = colora: 1, 1, 1, 1
+          time2 = 50
+          color2 = colora: 1, 1, 1, 0.5
+          
+          time3 = 100
+          color3 = colora: 1, 1, 1, 0
+        }  
+      }
+    }
+  }
+  
+  CMultiWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    count = 2 
+    sync = alternate
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim_1 = shoot_var_1
+    shoot_anim_2 = shoot_var_2
+    aim_node = pt_aim
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+    range = 3000
+    
+    muzzle_fx guard_droid {
+      model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+      frames = 4
+      frequency = 1
+      active_fraction  = 25
+      active_variation = 5
+      length_variation = 42
+      width_variation  = 7
+      scale = 1.3
+      instances = 64
+      emit = 150,255,80
+    }
+    
+    instant_shot guard_droid_shot {
+      model = Data/Models/Effects/TraceBullet/Ion_beam.nif
+      dist_start = 100
+      travel_start = 100
+      travel_end = 0
+      duration = 0.7
+      time_fraction_to_lag_end = 1
+      width = 45
+      instances = 128
+      color_alpha {
+        0 = 255,0,0,180
+        5 = 255,0,0,180
+        22 = 0,0,128,205
+        100 = 0,0,128,0
+      }
+    }
+	}
+	
+  CAnimEffect GuardDroidRocketEffectAnim {
+    tags t1 = grass | dirt | mud | sand | rocks | wet_sand | snow | ice | lava {
+      spawn ExplosionMedium_02 {
+        scale = 1.0
+      }
+    }
+    tags t2 = water {
+    	spawn WaterHit
+    }
+  }
+  
+  CAreaEffect GuardDroidRocketEffect {
+    range = 500
+    epicenter {
+      spawn GuardDroidRocketEffectAnim
+      physics_radius = 250 
+      physics_power = 7000
+    }
+    tags t1 = unit | building {
+      spawn ExplosionDamage {
+        amount = var:rocket_damage
+        --react = fire
+      }
+    }
+  }
+}

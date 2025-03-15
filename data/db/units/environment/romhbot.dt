@@ -1,0 +1,166 @@
+Mob ROMHBot : BaseMachineMob {
+  name = "ROM H-Bot"
+  icon = 7,26
+  race = humans
+  model = data/models/units/Heavy_Bot/Heavy_Bot.kfm
+  
+  
+  physics {
+    default = data/models/units/Heavy_Bot/Heavy_Bot_Proxy.pml
+    die = data/models/units/Heavy_Bot/Heavy_Bot.pml
+
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/TrailSmoke/DestrSmokeFire.nif
+    attach_destr_node_03 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_node_04 = data/models/Effects/Fire/Fire_Ani1_Small.nif
+    attach_destr_perc = 18
+	
+  }
+  --destruction = ragdoll
+  explosion = ExplosionMedium_03
+
+  hp = 500
+  armor = 30
+  --energy = 300
+  --energy_gen = 2
+  range = 2000
+  damage = 150
+  rocket_damage = 20
+  shield_activatechance = 20
+  shield_fullabsorbchance = 10
+  shield_percentabsorb = 10
+
+  pitch_speed = 90
+  min_pitch = -45
+  max_pitch = 20
+  yaw_speed = 360
+  min_yaw = -30
+  max_yaw = 30
+  
+  COrientationController orientation {
+    rot_speed = 120
+    max_tilt = 0
+  }  
+  
+  CMultiWeaponController rockets {
+    active = 1
+    idle_only = 0
+    count = 2 -- 12
+    sync = alternate 
+    fire_node_1 = pt_shoot_3
+    fire_node_2 = pt_shoot_12
+    --fire_node_1 = pt_shoot_3
+    --fire_node_2 = pt_shoot_4
+    --fire_node_3 = pt_shoot_5
+    --fire_node_4 = pt_shoot_6
+    --fire_node_5 = pt_shoot_7
+    --fire_node_6 = pt_shoot_8
+    --fire_node_7 = pt_shoot_9
+    --fire_node_8 = pt_shoot_10
+    --fire_node_9 = pt_shoot_11
+    --fire_node_10 = pt_shoot_12
+    --fire_node_11 = pt_shoot_13
+    --fire_node_12 = pt_shoot_14
+    --face_target = 1
+    aim_tolerance = 70
+    shoot_snd = Data/Sounds/Units/AssaultBot/RocketLaunch
+    shoot_anim = sid:""
+    --shoot_drain = 10 
+    fire_rate = 1
+    damage = var:rocket_damage
+    spot_impact_type = small_energy
+    damage_type = energy
+    min_range = 500
+      
+    projectile = chase {
+      speed = 3000
+  	  --dispersion = 370
+      spot_impact = 800
+      spot_impact_type = small_energy
+      --effect = AssaultBotRocketEffect
+
+      decal_settings ground_hit_decal = barrage_decal1
+
+      model = data/models/projectiles/rocket/Mortar.nif {
+        CTrailController trail {
+          emitter = Dummy01
+          material = data/models/Effects/Trails/Trail_Smoke3.nif
+          tex_ratio = float: 25
+          start_width = 25
+          end_width = 100
+          ttl = 40
+          --simple_time = 90
+    	  
+
+          time0 = 0
+          color0 = colora: 1, 1, 1, 1
+
+          time1 = 3
+          color1 = colora: 1, 1, 1, 1
+
+          time2 = 50
+          color2 = colora: 1, 1, 1, 0.5
+          
+          time3 = 100
+          color3 = colora: 1, 1, 1, 0
+
+        }  
+      }
+    }
+  }
+  
+  CMultiWeaponController weapon {
+    active = 1
+    can_crit = 1
+    idle_only = 0
+    count = 2 
+    sync = simultaneous 
+    fire_node_1 = pt_shoot_1
+    fire_node_2 = pt_shoot_2
+    shoot_anim = shoot
+    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+
+--    fire_rate = 0.8
+    idle_time = 0.3
+    damage = var:damage
+
+    spot_impact_type = small_energy
+    spot_impact = 750
+    damage_type = energy
+ 
+    muzzle_fx ion_rifle_bot {
+		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion.nif
+		  frames = 4
+		  frequency = 1.0
+		  active_fraction	= 10
+		  active_variation = 5
+		  length_variation = 42
+		  width_variation	= 7
+		  scale	= 2.2
+		  instances = 64
+          emit = 25,65,195
+	  }
+    
+    projectile = linear {
+      spot_impact = 800
+      spot_impact_type = small_energy
+      speed = 5000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/V Laser/t_laser.nif {
+        --scale = 0.85
+        E = 25,195,65
+      }
+    }
+  }
+
+  CShieldController shield {
+    drain_on_hit = 0
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    activate_probability = var:shield_activatechance
+    projectile_destroy_probability = var:shield_fullabsorbchance
+    effects {
+      flat_absorbtion = 0
+      percent_absorbtion = var:shield_percentabsorb
+    }
+  }
+}

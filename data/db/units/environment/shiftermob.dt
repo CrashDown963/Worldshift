@@ -1,0 +1,77 @@
+Mob ShifterMob : BaseMob {
+  name : Shifter.name
+  icon = 2,12
+  descr : Shifter.descr
+  race = aliens
+  model = Data/Models/Units/Shifter/Shifter.kfm
+  destruction = animation
+    
+  hp = 480
+  armor = 8
+  range = 0
+  speed = 360
+  energy = 200
+  range = 1500
+  damage = 12
+
+  stats : {
+    shield_hull = 250
+    shield_regen  = 120
+    shield_fullabsorbchance = 20
+    shield_percentabsorbtion = 50
+
+    breed_power = 150
+    breed_range = 1500
+    breed_min_count = 4
+    breed_max_count = 5
+    breed_cooldown = 45
+        
+    enfeeble_chance = 20
+    enfeeble_damage_reduction_perc = 15
+    enfeeble_duration = 10
+    
+    power_leak_chance = 25
+    power_leak_drain = 10
+  }
+  
+  speed = 370
+  actions :{
+    BreedAction
+  }
+  
+  abilities {
+    EnfeebleAbi
+    --PowerLeakAbi
+  }
+
+  take_auras : { RestorationCoreAura }
+  
+  CShieldController shield {
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    --regen_tick = 2
+    -- reactivate_threshold = 30
+    -- regen_boost_perc = 100
+    -- regen_boost_timeout = 20
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    call_lua_on_full_absorb = OnShifterShieldFullAbsorb
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = run
+    fire_node = pt_cast
+    projectile = chase {
+      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
+	    speed = 2500
+      scale = 0.1
+    }
+  }
+}

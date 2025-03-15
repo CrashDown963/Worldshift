@@ -1,0 +1,5 @@
+text_colors {
+  tooltip {
+    lite = 130,120,240
+  }
+}

@@ -1,0 +1,6 @@
+CSequenceAction ActionSequence {
+  name = Sequence Action
+  instant = 1
+  visible = 0
+}
+

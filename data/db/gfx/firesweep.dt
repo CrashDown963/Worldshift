@@ -1,0 +1,7 @@
+CMapAnim FireSweep {
+  model = data/Models/Effects/Fire/FireSweep.kfm
+  sound = DATA/sounds/Effects/FireSweep/
+  scale = 1
+  --decals = explosion_crater2
+  --physics_impact = 5000
+}

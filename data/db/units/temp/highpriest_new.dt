@@ -1,0 +1,11 @@
+HighPriest HighPriest_new : BaseUnit {
+  race = mutants
+  commander = 1
+  
+  tags = unit, organic
+
+  model = Data/Models/Units/high_priest/high_priest_new.kfm
+  
+}
+
+

@@ -1,0 +1,16 @@
+﻿sid	text
+ResurrectLeader.name	Revive Leader
+ResurrectLeader.descr	Bring a dead Field Leader back to life.
+	
+rh.teleport_switch.name	Teleport
+rh.teleport_switch.descr	Activate this to teleport all nearby units to another area.
+rh.bridge_switch.name	Bridge controls
+rh.bridge_switch.descr	Extends the force field bridge over the precipice.
+	
+bt.shield_switch.name	Defense
+bt.shield_switch.descr	Grants you a special defensive ability.
+bt.weapon_switch.name	Offense
+bt.weapon_switch.descr	Grants you a special offensive ability.
+	
+DeviceSwitch.name	Device
+DeviceSwitch.descr	You can operate the nearby device.

@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\decals\decal_crater1.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

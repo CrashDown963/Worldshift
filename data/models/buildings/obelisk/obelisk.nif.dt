@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\models\buildings\obelisk\obelisk.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+}

@@ -1,0 +1,6 @@
+Alien Arbiter2_Temp: Alien {
+  race = aliens
+  linkable = 1
+  model = Data/Models/Units/Arbiter/Arbiter2.nif
+}
+

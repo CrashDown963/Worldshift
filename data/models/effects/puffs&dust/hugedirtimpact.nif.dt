@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\effects\puffs&dust\hugedirtimpact.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"11.66666698455810546875";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Deflector01";
+      translation = xpoint3:"0,-88.552001953125,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"DragDust";
+      translation = xpoint3:"0,-116.11937713623046875,-63.307769775390625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #2 = {
+      scale = fixp:"1";
+      name = str:"Dust_Idle-Emitter";
+      translation = xpoint3:"0,-88.552001953125,-32.603473663330078125";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #3 = {
+      scale = fixp:"1";
+      name = str:"Gravity01";
+      translation = xpoint3:"-106.6159210205078125,-61.99549102783203125,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,-1";
+      }
+    }
+    #4 = {
+      scale = fixp:"1";
+      name = str:"SuperSprayFragments-Emitter";
+      translation = xpoint3:"0,-88.552001953125,37.3890533447265625";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

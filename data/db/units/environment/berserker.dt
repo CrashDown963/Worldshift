@@ -1,0 +1,5 @@
+Mob Berserker : BaseBoss {
+  name = "Berserker"
+  model = data/models/units/berserker/berserker.kfm
+  race = humans
+}

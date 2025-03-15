@@ -1,0 +1,6 @@
+Alien Shifter_MOB: Alien {
+  race = aliens
+  linkable = 1
+  model = Data/Models/Units/Shifter/Shifter_MOB.kfm
+}
+

@@ -1,0 +1,13 @@
+Mob Carnother : BaseAnimal {
+  name = "Carnother"
+  icon = 2,7
+  model = data/models/lifeforms/Carnother/Carnother.kfm
+  destruction = animation
+  
+  animation {
+    anim_set ATTACK = loop {
+      hit_1 = 100,1,1
+      hit_2 = 100,1,1
+    }
+  }
+}

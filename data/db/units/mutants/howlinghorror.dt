@@ -1,0 +1,214 @@
+Unit HowlingHorror : UnderworldUnit {
+  name = "HowlingHorror"
+  descr = "HowlingHorror Description"
+  model = Data/Models/units/HowlingHorror/HowlingHorror.kfm {
+    die = Data/Models/units/HowlingHorror/HowlingHorror_die.nif
+  }
+  scale = 2
+  
+  physics {
+    default = data/models/units/Commander/Commander_Proxy.pml
+    die = Data/Models/units/HowlingHorror/Golem.pml
+    attach_destr_node_01 = data/models/Effects/TrailSmoke/DestrSmoke.nif
+    attach_destr_node_02 = data/models/Effects/Smoke/SmokeSmall2.nif
+    attach_destr_perc = 35
+  }
+  destruction = ragdoll
+  
+  race = mutants
+  cost : pvp.mutants.unit_costs.HowlingHorror
+  cost_sloc : pvp.mutants.sloc_costs.HowlingHorror
+  icon = 4,2
+
+  sounds {
+    confirm = data/sounds/units/howlinghorror/confirm/
+    select = data/sounds/units/howlinghorror/select/
+    destruction = data/sounds/destruction/units/howlinghorror/
+    footstep = data/sounds/effects/footstepheavy/
+  }
+
+  stats: {
+    hp = 1120
+    armor = 18
+    range = 100
+    damage = 40
+    psi = 300
+
+    hollow_voice_chance = 20
+    hollow_voice_damage = 60
+    hollow_voice_cooldown = 5
+    hollow_voice_area = 400
+    hollow_voice_cone_angle = 120
+
+    death_rumble_chance = 5
+    death_rumble_damage = 150
+    death_rumble_cooldown = 5
+    death_rumble_area = 400
+
+    howl_fear_duration = 8
+    howl_duration = 20
+    howl_hp_perc = 5
+    howl_ignore_perc = 50 -- this is actually an armor buff now!!!
+    howl_power = 125
+    howl_cooldown = 60
+    howl_fear_area = 600
+  }
+  speed = 450
+
+  sight = stat:range + 1100
+  aggro_range = var:sight
+  take_auras : { RestorationCoreAura }
+  
+  CWeaponController Melee {
+    active = 0
+    can_crit = 1
+    damage = stat:damage
+    idle_only = 1
+    shoot_anim = MELEE_ATTACK
+    shoot_idle_1 = idle
+    fire_node = ROOT
+    spot_impact = 1100
+    spot_impact_type = melee
+    shoot_snd = data/sounds/effects/howlhits/
+  }
+  
+  animation {
+    anim_set MELEE_ATTACK = loop {
+      Hit_2 = 100,1,1
+    }
+  }
+
+  actions: {
+    HowlAction
+    MakeShrine -- fake
+  }  
+
+  abilities {
+    HollowVoiceAbi
+    DeathRumbleAbi
+  }
+}
+
+HollowVoiceAbi {
+  name = "Hollow Voice"
+  text = "Horror has [stat:hollow_voice_chance]% chance to growl with his underworld tones and does [stat:hollow_voice_damage] damage to all enemies in front of him."
+  when : abi.fight
+  cooldown = stat:hollow_voice_cooldown
+  icon = 0,0
+  chance = stat:hollow_voice_chance
+  target = self
+  sound = data/sounds/effects/common/howlnova.wav
+
+  cast {
+    prepare {
+      anim = Hit_3
+    }
+  }
+  
+  effect = E_damage {
+    area = stat:death_rumble_area  {
+--      anim = data/Models/Effects/Magic/AuraDamage.nif
+--      scale = 1
+      anim = data/Models/Effects/Puffs&Dust/hugedirtimpact.nif
+      scale = 0.1
+    }
+    cone_angle = stat:hollow_voice_cone_angle
+    amount = stat:hollow_voice_chance
+    react = hollow_voice
+  }
+}
+
+DeathRumbleAbi {
+  name = "Death Rumble"
+  text = "Horror has [stat:death_rumble_chance]% chance to stomp the ground and to invoke an Unholy Nova. The Unholy Nova does [stat:death_rumble_damage] amount of damage to all enemies nearby."
+  when : abi.fight
+  cooldown = stat:death_rumble_cooldown
+  icon = 0,0
+  chance = stat:death_rumble_chance
+  target = self
+  sound = data/sounds/effects/common/howlstep.wav
+
+  cast {
+    prepare {
+      anim = Hit_1
+    }
+  }
+
+  effect = E_damage {
+    area = stat:death_rumble_area {
+--      anim = data/Models/Effects/Magic/AuraDamage.nif
+--      scale = 1
+      anim = data/Models/Effects/Puffs&Dust/hugedirtimpact.nif
+      scale = 0.2
+    }
+    amount = stat:death_rumble_damage
+    react = death_rumble
+  }
+}
+
+action HowlAction {
+  name = "Howl"
+  descr = "Fears all enemies nearby for [stat:howl_fear_duration] sec. and turns into Ghost Horror for [stat:howl_duration] seconds. Ghost Horror heals himself for [stat:howl_hp_perc]% hit points every tick. While in Ghost form, the Horror ignores [stat:howl_ignore_perc]% of all incoming damage."
+  visible = 1
+  instant = 1
+  multi_chooser = missing_hp
+  icon = 4,8
+  power = stat:howl_power
+  cooldown = stat:howl_cooldown
+  program = PrgHowl {
+    howl_duration = stat:howl_duration
+    -- ghost_model = Data/Models/units/HorrorGhost/Howling_Horror_Ghost.kfm
+    cast_anim = flex
+    howl_anim = flex_idle
+  }
+}
+
+CBuffEffect HowlArmor : E_buff {
+  id = HowlArmor
+  name = "Howl Armor"
+  text = "This unit is in a special state that increases its armor."
+  icon = 2,9
+  target_self = 1
+--  type = invulnerability
+  type = armor_buff
+  stats_change {
+--    damage_taken_mod = { perc = stat:howl_ignore_perc * -1 }
+    armor = { perc = stat:howl_ignore_perc }
+  }
+  duration = stat:howl_duration
+}
+
+CBuffEffect HowlHeal : E_buff {
+  id = HowlHeal
+  name = "Howl Heal"
+  text = "This unit is in a special state that boosts its health regeneration."
+  icon = 2,11
+  type = heal
+  target_self = 1
+  hp_perc_per_tick = stat:howl_hp_perc
+  -- show_text_feedback = 1
+  duration = stat:howl_duration
+  tick = 1
+}
+
+CMultiEffect HowlFear : S_multifear {
+  id = HowlFear
+  name = "Howl Fear"
+  text = "This unit is horror-stricken and cannot execute orders."
+  icon = 2,10
+  multi_area = stat:howl_fear_area {  
+--    anim = data/Models/Effects/Magic/AuraArmor.nif
+    anim = data/Models/Effects/Puffs&Dust/hugedirtimpact.nif
+    scale = 0.5
+    sound = data/sounds/effects/common/howlnova.wav
+  }
+  discard_react = 1
+  duration = stat:howl_fear_duration
+  program = PrgFear {
+    speed_multiplier = 0.8
+    range = 800
+    sleep_time = 0.5
+    wander = 1
+  }
+}
+

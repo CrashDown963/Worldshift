@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\desert\pointybushbig.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Plane03";
+    translation = xpoint3:"-0.85402011871337890625,0.97441387176513671875,96.62947845458984375";
+    rotation = {
+      0 = xpoint3:"0,-1,0";
+      1 = xpoint3:"0,0,-1";
+      2 = xpoint3:"1,0,0";
+    }
+  }
+}

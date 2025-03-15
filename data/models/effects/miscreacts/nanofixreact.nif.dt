@@ -1,0 +1,67 @@
+model = {
+  file = str:"data\models\effects\miscreacts\nanofixreact.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"1.1666667461395263671875";
+  }
+  #1 = {
+    scale = fixp:"1";
+    name = str:"Dummy01";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"0.70710670948028564453125,-0.7071068286895751953125,0";
+      1 = xpoint3:"0.7071068286895751953125,0.70710670948028564453125,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Plane03";
+      translation = xpoint3:"-110.6013031005859375,0,19.0440654754638671875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Plane02";
+      translation = xpoint3:"110.6013031005859375,0,19.0440654754638671875";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+  #2 = {
+    scale = fixp:"1";
+    name = str:"Dummy02";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"-0.70710670948028564453125,-0.707106769084930419921875,0";
+      1 = xpoint3:"0.707106769084930419921875,-0.70710670948028564453125,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #0 = {
+      scale = fixp:"1";
+      name = str:"Plane04";
+      translation = xpoint3:"110.60129547119140625,0,19.0440654754638671875";
+      rotation = {
+        0 = xpoint3:"-1,0,0";
+        1 = xpoint3:"0,-1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"Plane05";
+      translation = xpoint3:"-110.60129547119140625,0,19.0440654754638671875";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+    }
+  }
+}

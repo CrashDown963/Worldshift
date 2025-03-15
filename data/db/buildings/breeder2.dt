@@ -1,0 +1,8 @@
+Building Breeder2: BaseBuilding {
+  name : Breeder.name
+  descr : Breeder.descr
+  movable = 0
+
+  model = Data/Models/buildings/BreederPortal/Breeder2.nif
+}
+

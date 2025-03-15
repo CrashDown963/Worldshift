@@ -1,0 +1,34 @@
+Unit PsiResonator : MachineUnit {
+  name = "Psi Resonator"  
+  race = humans
+  model = data/models/units/psirezonator/psirezonator.nif
+  icon = 6,3
+  
+  stats : {
+    hp = 600
+    armor = 15
+    damage = 0
+    crit_chance = 0
+    speed = 450
+  }
+  
+  hp = stat:hp
+  armor = stat:armor
+  damage = stat:damage
+  speed = stat:speed
+
+  range = 1600
+
+  CAlertController alert {
+    timeout = 0
+    ally_seek_range = 2000
+    
+    alert_lua = CallMapLua {
+      func = PsiResonatorAlone
+    }
+    
+    retreat_lua = CallMapLua {
+      func = PsiResonatorNotAlone
+    }
+  }
+}

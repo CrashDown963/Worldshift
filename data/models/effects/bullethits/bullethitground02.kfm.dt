@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\bullethits\bullethitground02.kfm";
+  animations = {
+    odle = {
+      loop = int:"0";
+      duration = fixp:"0.83333337306976318359375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.83333337306976318359375";
+        }
+      }
+    }
+  }
+}

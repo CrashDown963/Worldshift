@@ -1,0 +1,4367 @@
+map = int: 1000000
+[#1000000]
+  class = sid: CMap
+  [$vars]
+    backlight_strength = fixp: 0.83999996185302734375
+    fog_distance = FLOAT: 96
+  [/]
+  color_fog = color: 46,49,54
+  sun_direction = FLOAT3: -0.579228,0.579228,-0.573577
+  color_sun = color: 255,232,180
+  color_ambient = color: 33,40,53
+  brightness = FLOAT: 2
+  sun_direction_unit = FLOAT3: -0.579228,0.579228,-0.573577
+  color_sun_unit = color: 255,232,180
+  color_ambient_unit = color: 33,40,53
+  brightness_unit = FLOAT: 2
+  wind_power = FLOAT: 0.3
+  grid_step = int: 200
+  last_effect_id = int: 0
+  base_map = char: 0
+  terrain_set = str: hell
+  terrain_set_type = int: 2
+  [terrainset]
+    [general]
+      id = str: hell
+    [/]
+    [terrain]
+      #1 = str: dark_flat2.nif
+      #2 = str: dark_foamy.nif
+      #3 = str: dark_flat.nif
+      #4 = str: dark_flat-rock1.nif
+      #5 = str: dark_big_rock2.nif
+      #6 = str: dark_dirt-col1.nif
+      #7 = str: dark_flat.nif
+      #8 = str: dark_foamy.nif
+      #9 = str: dark_fossils.nif
+      #10 = str: dark_lava1.nif
+      #11 = str: dark_magma1.nif
+      #12 = str: dark_rock1.nif
+      #13 = str: dark_rock-cliffs.nif
+      #14 = str: dark_rock2.nif
+      #15 = str: dark_flat-rock1.nif
+      #16 = str: dark_rock-mix1.nif
+      #17 = str: dark_stones_magma.nif
+      #18 = str: rocks_white_stones1.dds
+      #19 = str: desert_white_dirt1.nif
+      #20 = str: basic_default.dds
+      #21 = str: basic_default.dds
+      #22 = str: basic_default.dds
+      #23 = str: basic_default.dds
+      #24 = str: basic_default.dds
+    [/]
+    [cliffs]
+      cliffs = int: 13
+      streched = char: 0
+    [/]
+    [rocks]
+      rocks = int: 0
+    [/]
+    [settings]
+      color_ambient = color: 26,40,53
+      color_sun = color: 255,232,180
+      sky_set = str: Blue_pinc
+      backlight_strength = fixp: 0.83999996185302734375
+      brightness = fixp: 2
+      color_fog = color: 130,134,142
+    [/]
+  [/]
+  tree_set = str: 
+  sky_set = str: space1
+  grid_size = lpoint2: 64,64
+  patch_size = int: 16
+  shadow_angles = FLOAT3: 15.000000,19.000000,25.000000
+  [factions]
+    #0 = int: 1000001
+    #1 = int: 1000002
+    #2 = int: 1000003
+    #3 = int: 1000004
+    #4 = int: 1000005
+    #5 = int: 1000006
+    #6 = int: 1000007
+    #7 = int: 1000008
+    #8 = int: 1000009
+    #9 = int: 1000010
+    #10 = int: 1000011
+    #11 = int: 1000012
+  [/]
+  [water_basins]
+    #0 = int: 1000013
+  [/]
+  [patches]
+    #0 = int: 1000014
+    #1 = int: 1000015
+    #2 = int: 1000016
+    #3 = int: 1000017
+    #4 = int: 1000018
+    #5 = int: 1000019
+    #6 = int: 1000020
+    #7 = int: 1000021
+    #8 = int: 1000022
+    #9 = int: 1000023
+    #10 = int: 1000024
+    #11 = int: 1000025
+    #12 = int: 1000026
+    #13 = int: 1000027
+    #14 = int: 1000028
+    #15 = int: 1000029
+  [/]
+  decal_count = int: 0
+  detail_density = FLOAT: 0
+  [objects]
+    [CParticleObject]
+      #0 = int: 1000030
+      #1 = int: 1000031
+      #2 = int: 1000032
+      #4 = int: 1000034
+      #5 = int: 1000035
+      #6 = int: 1000036
+      #8 = int: 1000038
+      #9 = int: 1000039
+      #10 = int: 1000040
+      #11 = int: 1000041
+      #12 = int: 1000042
+      #14 = int: 1000044
+      #15 = int: 1000045
+      #17 = int: 1000047
+      #33 = int: 1000063
+      #41 = int: 1000071
+      #74 = int: 1000104
+      #75 = int: 1000105
+      #76 = int: 1000106
+      #83 = int: 1000113
+      #84 = int: 1000114
+      #85 = int: 1000115
+      #86 = int: 1000116
+      #87 = int: 1000117
+      #88 = int: 1000118
+      #89 = int: 1000119
+      #153 = int: 1000183
+      #154 = int: 1000184
+      #158 = int: 1000188
+      #159 = int: 1000189
+      #162 = int: 1000192
+      #163 = int: 1000193
+      #164 = int: 1000194
+      #181 = int: 1000211
+      #182 = int: 1000212
+      #183 = int: 1000213
+      #184 = int: 1000214
+    [/]
+    [CPointLightObject]
+      #3 = int: 1000033
+      #7 = int: 1000037
+      #13 = int: 1000043
+      #16 = int: 1000046
+      #34 = int: 1000064
+      #42 = int: 1000072
+      #77 = int: 1000107
+      #90 = int: 1000120
+      #91 = int: 1000121
+      #92 = int: 1000122
+      #165 = int: 1000195
+      #166 = int: 1000196
+      #185 = int: 1000215
+    [/]
+    [CRuin]
+      #18 = int: 1000048
+      #19 = int: 1000049
+      #43 = int: 1000073
+      #44 = int: 1000074
+      #45 = int: 1000075
+      #65 = int: 1000095
+      #93 = int: 1000123
+      #94 = int: 1000124
+      #95 = int: 1000125
+      #96 = int: 1000126
+      #97 = int: 1000127
+      #98 = int: 1000128
+      #99 = int: 1000129
+      #100 = int: 1000130
+      #101 = int: 1000131
+      #102 = int: 1000132
+      #103 = int: 1000133
+      #104 = int: 1000134
+      #105 = int: 1000135
+      #106 = int: 1000136
+      #107 = int: 1000137
+      #108 = int: 1000138
+      #109 = int: 1000139
+      #110 = int: 1000140
+      #111 = int: 1000141
+      #112 = int: 1000142
+      #113 = int: 1000143
+      #114 = int: 1000144
+      #115 = int: 1000145
+      #116 = int: 1000146
+      #117 = int: 1000147
+      #118 = int: 1000148
+      #119 = int: 1000149
+      #120 = int: 1000150
+      #121 = int: 1000151
+      #122 = int: 1000152
+      #123 = int: 1000153
+      #124 = int: 1000154
+      #125 = int: 1000155
+      #126 = int: 1000156
+      #127 = int: 1000157
+      #137 = int: 1000167
+      #138 = int: 1000168
+      #139 = int: 1000169
+      #155 = int: 1000185
+      #160 = int: 1000190
+      #161 = int: 1000191
+      #167 = int: 1000197
+      #168 = int: 1000198
+      #169 = int: 1000199
+      #170 = int: 1000200
+      #171 = int: 1000201
+      #172 = int: 1000202
+      #173 = int: 1000203
+      #174 = int: 1000204
+      #175 = int: 1000205
+      #176 = int: 1000206
+      #177 = int: 1000207
+      #178 = int: 1000208
+    [/]
+    [CEmbelishment]
+      #20 = int: 1000050
+      #21 = int: 1000051
+      #22 = int: 1000052
+      #23 = int: 1000053
+      #24 = int: 1000054
+      #25 = int: 1000055
+      #26 = int: 1000056
+      #27 = int: 1000057
+      #28 = int: 1000058
+      #29 = int: 1000059
+      #30 = int: 1000060
+      #31 = int: 1000061
+      #32 = int: 1000062
+      #35 = int: 1000065
+      #36 = int: 1000066
+      #37 = int: 1000067
+      #38 = int: 1000068
+      #39 = int: 1000069
+      #40 = int: 1000070
+      #46 = int: 1000076
+      #47 = int: 1000077
+      #48 = int: 1000078
+      #49 = int: 1000079
+      #50 = int: 1000080
+      #51 = int: 1000081
+      #52 = int: 1000082
+      #53 = int: 1000083
+      #54 = int: 1000084
+      #55 = int: 1000085
+      #56 = int: 1000086
+      #57 = int: 1000087
+      #58 = int: 1000088
+      #59 = int: 1000089
+      #60 = int: 1000090
+      #61 = int: 1000091
+      #62 = int: 1000092
+      #63 = int: 1000093
+      #64 = int: 1000094
+      #66 = int: 1000096
+      #67 = int: 1000097
+      #68 = int: 1000098
+      #69 = int: 1000099
+      #70 = int: 1000100
+      #71 = int: 1000101
+      #72 = int: 1000102
+      #73 = int: 1000103
+      #78 = int: 1000108
+      #79 = int: 1000109
+      #80 = int: 1000110
+      #81 = int: 1000111
+      #82 = int: 1000112
+      #128 = int: 1000158
+      #129 = int: 1000159
+      #130 = int: 1000160
+      #131 = int: 1000161
+      #132 = int: 1000162
+      #133 = int: 1000163
+      #134 = int: 1000164
+      #135 = int: 1000165
+      #136 = int: 1000166
+      #140 = int: 1000170
+      #141 = int: 1000171
+      #142 = int: 1000172
+      #143 = int: 1000173
+      #144 = int: 1000174
+      #145 = int: 1000175
+      #146 = int: 1000176
+      #147 = int: 1000177
+      #148 = int: 1000178
+      #149 = int: 1000179
+      #150 = int: 1000180
+      #151 = int: 1000181
+      #152 = int: 1000182
+      #156 = int: 1000186
+      #157 = int: 1000187
+      #179 = int: 1000209
+      #180 = int: 1000210
+      #186 = int: 1000216
+      #187 = int: 1000217
+      #188 = int: 1000218
+      #189 = int: 1000219
+      #190 = int: 1000220
+      #191 = int: 1000221
+      #192 = int: 1000222
+      #193 = int: 1000223
+      #194 = int: 1000224
+      #195 = int: 1000225
+      #196 = int: 1000226
+      #197 = int: 1000227
+      #198 = int: 1000228
+      #199 = int: 1000229
+      #200 = int: 1000230
+    [/]
+  [/]
+[/]
+[#1000001]
+  class = sid: CFaction
+  team = int: 1
+  name = str: Faction 1
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 1
+[/]
+[#1000002]
+  class = sid: CFaction
+  team = int: 2
+  name = str: Faction 2
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 2
+[/]
+[#1000003]
+  class = sid: CFaction
+  team = int: 3
+  name = str: Faction 3
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 3
+[/]
+[#1000004]
+  class = sid: CFaction
+  team = int: 4
+  name = str: Faction 4
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 4
+[/]
+[#1000005]
+  class = sid: CFaction
+  team = int: 5
+  name = str: Faction 5
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 5
+[/]
+[#1000006]
+  class = sid: CFaction
+  team = int: 6
+  name = str: Faction 6
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 6
+[/]
+[#1000007]
+  class = sid: CFaction
+  team = int: 7
+  name = str: Faction 7
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 7
+[/]
+[#1000008]
+  class = sid: CFaction
+  team = int: 8
+  name = str: Faction 8
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 8
+[/]
+[#1000009]
+  class = sid: CFaction
+  team = int: 9
+  name = str: Faction 9
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 9
+[/]
+[#1000010]
+  class = sid: CFaction
+  team = int: 10
+  name = str: Faction 10
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 10
+[/]
+[#1000011]
+  class = sid: CFaction
+  team = int: 11
+  name = str: Faction 11
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 11
+[/]
+[#1000012]
+  class = sid: CFaction
+  team = int: 12
+  name = str: Faction 12
+  [$vars]
+    start_pos = fixed3: 6400,6400,0
+  [/]
+  index = char: 12
+[/]
+[#1000013]
+  class = sid: CWaterBasin
+  Level = FLOAT: 0
+  Area = int: 0
+  Bounds = lrect: 0,0,-1x-1
+[/]
+[#1000014]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000015]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000016]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000017]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000018]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000019]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000020]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000021]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000022]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000023]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000024]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000025]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000026]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000027]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000028]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000029]
+  class = sid: CTerrainPatch
+  map = int: 1000000
+[/]
+[#1000030]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 645
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 1445.1513671875
+  y = fixp: 1351.847412109375
+  z = fixp: -1265.26708984375
+  handle = int: 645
+  expire_time = fixp: 2147483647
+[/]
+[#1000031]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 647
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.0000002384185791015625
+  x = fixp: 1527.68603515625
+  y = fixp: 1553.327392578125
+  z = fixp: -1250.2613525390625
+  handle = int: 647
+  expire_time = fixp: 2147483647
+[/]
+[#1000032]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 649
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 1203.185791015625
+  y = fixp: 1245.1932373046875
+  z = fixp: -1273.795654296875
+  handle = int: 649
+  expire_time = fixp: 2147483647
+[/]
+[#1000033]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.599999904632568359375
+    max_dist = fixp: 1224.68994140625
+    difuse_color = color: 250,60,2
+    handle = int: 651
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 580
+  scale = fixp: 1
+  x = fixp: 1482.946044921875
+  y = fixp: 1360.590087890625
+  z = fixp: -683.392333984375
+  handle = int: 651
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000034]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 545
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 3956.6591796875
+  y = fixp: 2983.30029296875
+  z = fixp: -2159.094482421875
+  handle = int: 545
+  expire_time = fixp: 2147483647
+[/]
+[#1000035]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 549
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 4514.85693359375
+  y = fixp: 2846.2265625
+  z = fixp: -2131.543212890625
+  handle = int: 549
+  expire_time = fixp: 2147483647
+[/]
+[#1000036]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 551
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.2000000476837158203125
+  x = fixp: 4229.16162109375
+  y = fixp: 2882.10498046875
+  z = fixp: -2137.806396484375
+  handle = int: 551
+  expire_time = fixp: 2147483647
+[/]
+[#1000037]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 1.93000011444091796875
+    max_dist = fixp: 1224.68994140625
+    dragging_start_pos = FLOAT3: 4169.218750,2940.475098,-1752.105957
+    difuse_color = color: 254,76,0
+    handle = int: 623
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 700
+  scale = fixp: 1
+  x = fixp: 4169.21875
+  y = fixp: 2940.47509765625
+  z = fixp: -1452.10595703125
+  handle = int: 623
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000038]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 555
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.3999998569488525390625
+  x = fixp: 7686.7099609375
+  y = fixp: 2388.4345703125
+  z = fixp: -1195.0609130859375
+  handle = int: 555
+  expire_time = fixp: 2147483647
+[/]
+[#1000039]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 557
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.3999998569488525390625
+  x = fixp: 8657.65234375
+  y = fixp: 2414.77197265625
+  z = fixp: -998.338134765625
+  handle = int: 557
+  expire_time = fixp: 2147483647
+[/]
+[#1000040]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 559
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.2000000476837158203125
+  x = fixp: 8825.7119140625
+  y = fixp: 2929.003173828125
+  z = fixp: -1012.8642578125
+  handle = int: 559
+  expire_time = fixp: 2147483647
+[/]
+[#1000041]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani2
+  [$vars]
+    handle = int: 561
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.0000002384185791015625
+  x = fixp: 8726.591796875
+  y = fixp: 2714.707763671875
+  z = fixp: -1017.25634765625
+  handle = int: 561
+  expire_time = fixp: 2147483647
+[/]
+[#1000042]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 563
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.2000000476837158203125
+  x = fixp: 8891.8291015625
+  y = fixp: 2548.92822265625
+  z = fixp: -1014.77239990234375
+  handle = int: 563
+  expire_time = fixp: 2147483647
+[/]
+[#1000043]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.860000133514404296875
+    max_dist = fixp: 1619.75
+    difuse_color = color: 253,82,0
+    handle = int: 621
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 388
+  scale = fixp: 1
+  x = fixp: 8437.740234375
+  y = fixp: 2506.4287109375
+  z = fixp: -613.987548828125
+  handle = int: 621
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000044]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 565
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.999999237060546875
+  x = fixp: 11235.064453125
+  y = fixp: 2874.2529296875
+  z = fixp: -1193.7017822265625
+  handle = int: 565
+  expire_time = fixp: 2147483647
+[/]
+[#1000045]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 569
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.0000002384185791015625
+  x = fixp: 11389.7021484375
+  y = fixp: 3063.619384765625
+  z = fixp: -1198.25
+  handle = int: 569
+  expire_time = fixp: 2147483647
+[/]
+[#1000046]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 1.5799999237060546875
+    max_dist = fixp: 1185.18994140625
+    dragging_start_pos = FLOAT3: 11319.745117,2819.029053,-839.355835
+    difuse_color = color: 251,81,6
+    handle = int: 619
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 360
+  scale = fixp: 1
+  x = fixp: 11341.6240234375
+  y = fixp: 2960.88671875
+  z = fixp: -833.701416015625
+  handle = int: 619
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000047]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 407
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 3159.367919921875
+  y = fixp: 5152.18310546875
+  z = fixp: 259.56378173828125
+  handle = int: 407
+  expire_time = fixp: 2147483647
+[/]
+[#1000048]
+  class = sid: CRuin
+  ID = sid: Plant_4
+  [$vars]
+    handle = int: 288
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3029.810059,5442.225098,-234.917007
+  [/]
+  offset = fixp: -280
+  scale = fixp: 1
+  x = fixp: 3029.81005859375
+  y = fixp: 5442.22509765625
+  z = fixp: -234.9170074462890625
+  handle = int: 288
+  roll = fixp: -7.299998760223388671875
+  pitch = fixp: -9.6000003814697265625
+  yaw = fixp: -30
+[/]
+[#1000049]
+  class = sid: CRuin
+  ID = sid: AFV_wreck3
+  [$vars]
+    handle = int: 401
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3051.822754,4884.884277,133.318573
+  [/]
+  offset = fixp: -140
+  scale = fixp: 1
+  x = fixp: 3051.82275390625
+  y = fixp: 4884.88427734375
+  z = fixp: 133.318572998046875
+  handle = int: 401
+  roll = fixp: 4.10000133514404296875
+  pitch = fixp: 37.3000030517578125
+  yaw = fixp: -120
+[/]
+[#1000050]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart1
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1404.446777,5353.765137,-64.267761
+    tex_id = int: 17
+    handle = int: 290
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 410
+  scale = fixp: 0.9
+  x = fixp: 1404.44677734375
+  y = fixp: 5353.76513671875
+  z = fixp: -64.26776123046875
+  handle = int: 290
+  roll = fixp: -53.3000335693359375
+  pitch = fixp: 9.00000095367431640625
+  yaw = fixp: 0
+[/]
+[#1000051]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1322.404053,4950.348145,-331.512909
+    tex_id = int: 17
+    handle = int: 292
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -44
+  scale = fixp: 1
+  x = fixp: 1322.404052734375
+  y = fixp: 4950.34814453125
+  z = fixp: -331.512908935546875
+  handle = int: 292
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -120
+[/]
+[#1000052]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1491.238647,5128.834961,-1992.299927
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 296
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -902
+  scale = fixp: 0.8
+  x = fixp: 1491.2386474609375
+  y = fixp: 5128.8349609375
+  z = fixp: -1992.2999267578125
+  handle = int: 296
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 75
+[/]
+[#1000053]
+  class = sid: CEmbelishment
+  ID = sid: common_stone14
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 2994.691650,5148.894043,68.200829
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 376
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.7999999523162841796875
+  x = fixp: 3032.394775390625
+  y = fixp: 5208.9189453125
+  z = fixp: 73.2072601318359375
+  handle = int: 376
+  roll = fixp: 62.30004119873046875
+  pitch = fixp: 7.099994659423828125
+  yaw = fixp: 0
+[/]
+[#1000054]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3737.617676,4702.472656,473.038483
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 378
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 2928.205322265625
+  y = fixp: 4986.890625
+  z = fixp: 84.7650146484375
+  handle = int: 378
+  roll = fixp: 29.4999847412109375
+  pitch = fixp: -57.199981689453125
+  yaw = fixp: 30
+[/]
+[#1000055]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1591.037964,4491.418945,1118.271484
+    tex_scale_auto = int: 0
+    tex_id = int: 17
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 380
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 3140
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 1677.7005615234375
+  y = fixp: 4295.07861328125
+  z = fixp: 1204.349365234375
+  handle = int: 380
+  roll = fixp: 1.6000019073486328125
+  pitch = fixp: -67.100006103515625
+  yaw = fixp: -30
+[/]
+[#1000056]
+  class = sid: CEmbelishment
+  ID = sid: common_stone10
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3022.527344,5646.087891,-336.716949
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 382
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -228
+  scale = fixp: 1
+  x = fixp: 3022.52734375
+  y = fixp: 5646.087890625
+  z = fixp: -336.716949462890625
+  handle = int: 382
+  roll = fixp: -6.09999942779541015625
+  pitch = fixp: 62.100009918212890625
+  yaw = fixp: -30
+[/]
+[#1000057]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 2748.191895,5056.136719,-269.779297
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 396
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 280
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 2748.19189453125
+  y = fixp: 5056.13671875
+  z = fixp: -269.779296875
+  handle = int: 396
+  roll = fixp: -88.29998779296875
+  pitch = fixp: -61.59998321533203125
+  yaw = fixp: 90
+[/]
+[#1000058]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 398
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 280
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 2764.810302734375
+  y = fixp: 5206.32275390625
+  z = fixp: -115.0693359375
+  handle = int: 398
+  roll = fixp: -86.09999847412109375
+  pitch = fixp: -63.79998016357421875
+  yaw = fixp: 120
+[/]
+[#1000059]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 403
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 180
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 2896.047119140625
+  y = fixp: 4588.57763671875
+  z = fixp: -41.8936767578125
+  handle = int: 403
+  roll = fixp: -66.00000762939453125
+  pitch = fixp: -46.700000762939453125
+  yaw = fixp: 210
+[/]
+[#1000060]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 892.700928,5889.384277,-2115.094727
+    tex_scale_auto = int: 0
+    tex_id = int: 17
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 507
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -668
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 892.700927734375
+  y = fixp: 5889.38427734375
+  z = fixp: -2115.0947265625
+  handle = int: 507
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000061]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1247.865601,6350.928223,-2528.390625
+    tex_scale_auto = int: 0
+    tex_id = int: 4
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 509
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -668
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 1247.8656005859375
+  y = fixp: 6350.92822265625
+  z = fixp: -2528.390625
+  handle = int: 509
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000062]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1062.279053,6131.176758,-1509.728638
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 511
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 340
+  scale = fixp: 1
+  x = fixp: 1062.279052734375
+  y = fixp: 6131.1767578125
+  z = fixp: -1509.7286376953125
+  handle = int: 511
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000063]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 405
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3200.105957,4807.559570,287.498749
+  [/]
+  offset = fixp: 0
+  scale = fixp: 0.8
+  x = fixp: 3200.10595703125
+  y = fixp: 4807.5595703125
+  z = fixp: 287.498748779296875
+  handle = int: 405
+  expire_time = fixp: 2147483647
+[/]
+[#1000064]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 1.37999999523162841796875
+    max_dist = fixp: 1066.6700439453125
+    difuse_color = color: 244,68,7
+    handle = int: 625
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 180
+  scale = fixp: 1
+  x = fixp: 3356.831787109375
+  y = fixp: 4938.40869140625
+  z = fixp: 517.01715087890625
+  handle = int: 625
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000065]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpireArc
+  [$vars]
+    takes_ao = int: 0
+    handle = int: 15
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3245.227051,3347.820068,-399.950439
+  [/]
+  offset = fixp: 1720
+  scale = fixp: 0.8
+  x = fixp: 3245.22705078125
+  y = fixp: 3347.820068359375
+  z = fixp: -399.950439453125
+  handle = int: 15
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000066]
+  class = sid: CEmbelishment
+  ID = sid: common_stone14
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3247.522217,5707.087402,-122.979362
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 384
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -4
+  scale = fixp: 2.0000002384185791015625
+  x = fixp: 3247.522216796875
+  y = fixp: 5707.08740234375
+  z = fixp: -122.97936248779296875
+  handle = int: 384
+  roll = fixp: -10.0999965667724609375
+  pitch = fixp: 37.299999237060546875
+  yaw = fixp: 30
+[/]
+[#1000067]
+  class = sid: CEmbelishment
+  ID = sid: common_stone14
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3303.622559,5753.978516,-340.025208
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 386
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -48
+  scale = fixp: 1.7999999523162841796875
+  x = fixp: 3506.04443359375
+  y = fixp: 5708.234375
+  z = fixp: -162.0948333740234375
+  handle = int: 386
+  roll = fixp: -17.4999980926513671875
+  pitch = fixp: 49.800006866455078125
+  yaw = fixp: -30
+[/]
+[#1000068]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3434.216309,6016.551270,-534.456482
+    tex_scale_auto = int: 0
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 388
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 3279.842529296875
+  y = fixp: 5952.94189453125
+  z = fixp: -508.97515869140625
+  handle = int: 388
+  roll = fixp: 10.8000011444091796875
+  pitch = fixp: 57.600017547607421875
+  yaw = fixp: 30
+[/]
+[#1000069]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 4528.270508,6096.455078,-1245.604004
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    no_terrain_snap = int: 1
+    handle = int: 490
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -404
+  scale = fixp: 1
+  x = fixp: 4528.2705078125
+  y = fixp: 6096.455078125
+  z = fixp: -1245.60400390625
+  handle = int: 490
+  roll = fixp: 53.29998016357421875
+  pitch = fixp: 92.89998626708984375
+  yaw = fixp: 0
+[/]
+[#1000070]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    no_terrain_snap = int: 1
+    handle = int: 492
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -556
+  scale = fixp: 1
+  x = fixp: 4377.6259765625
+  y = fixp: 5862.0439453125
+  z = fixp: -1180.981201171875
+  handle = int: 492
+  roll = fixp: 53.29998016357421875
+  pitch = fixp: 92.89998626708984375
+  yaw = fixp: 0
+[/]
+[#1000071]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 452
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 9235.521484,5742.544434,1363.310303
+  [/]
+  offset = fixp: 1348
+  scale = fixp: 0.9
+  x = fixp: 9235.521484375
+  y = fixp: 5742.54443359375
+  z = fixp: 1363.310302734375
+  handle = int: 452
+  expire_time = fixp: 2147483647
+[/]
+[#1000072]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.0699999332427978515625
+    max_dist = fixp: 1303.699951171875
+    dragging_start_pos = FLOAT3: 9333.013672,5946.232910,920.978577
+    difuse_color = color: 249,109,6
+    handle = int: 575
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 980
+  scale = fixp: 1
+  x = fixp: 9335.25390625
+  y = fixp: 5740.328125
+  z = fixp: 1003.61456298828125
+  handle = int: 575
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 15
+[/]
+[#1000073]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    dragging_start_pos = FLOAT3: 8125.300781,3517.449219,-151.417908
+    passable = int: 1
+    no_terrain_snap = int: 1
+    handle = int: 269
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -40
+  scale = fixp: 2.999999237060546875
+  x = fixp: 8125.30078125
+  y = fixp: 3517.44921875
+  z = fixp: -151.41790771484375
+  handle = int: 269
+  roll = fixp: 3.6000003814697265625
+  pitch = fixp: -89.5999755859375
+  yaw = fixp: 0
+[/]
+[#1000074]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    dragging_start_pos = FLOAT3: 8027.341309,3526.611572,-140.075317
+    passable = int: 1
+    no_terrain_snap = int: 1
+    handle = int: 271
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -56
+  scale = fixp: 2.999999237060546875
+  x = fixp: 8027.34130859375
+  y = fixp: 3526.611572265625
+  z = fixp: -140.0753173828125
+  handle = int: 271
+  roll = fixp: 3.6000003814697265625
+  pitch = fixp: -89.5999755859375
+  yaw = fixp: 0
+[/]
+[#1000075]
+  class = sid: CRuin
+  ID = sid: EnergyPipe09
+  [$vars]
+    passable = int: 1
+    handle = int: 427
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 9535.525391,5301.788574,1477.775879
+  [/]
+  offset = fixp: 1440
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 9535.525390625
+  y = fixp: 5301.78857421875
+  z = fixp: 1477.77587890625
+  handle = int: 427
+  roll = fixp: 38.199977874755859375
+  pitch = fixp: 99.5999298095703125
+  yaw = fixp: 0
+[/]
+[#1000076]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 6879.302734,3456.964111,-367.109314
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_scale = FPOINT2: 1.000000,1.000000
+    no_terrain_snap = int: 1
+    handle = int: 258
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -420
+  scale = fixp: 1
+  x = fixp: 6879.302734375
+  y = fixp: 3456.964111328125
+  z = fixp: -367.10931396484375
+  handle = int: 258
+  roll = fixp: -17.6999835968017578125
+  pitch = fixp: -81.80010223388671875
+  yaw = fixp: 0
+[/]
+[#1000077]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8423.458984,3616.796387,-380.719025
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_scale = FPOINT2: 1.000000,1.000000
+    no_terrain_snap = int: 1
+    handle = int: 260
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -430
+  scale = fixp: 0.9
+  x = fixp: 8423.458984375
+  y = fixp: 3616.79638671875
+  z = fixp: -380.719024658203125
+  handle = int: 260
+  roll = fixp: -21.3999805450439453125
+  pitch = fixp: -84.30010223388671875
+  yaw = fixp: 30
+[/]
+[#1000078]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart1
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7291.161133,5000.780273,-78.596558
+    passable = int: 1
+    tex_id = int: 17
+    handle = int: 320
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -640
+  scale = fixp: 1
+  x = fixp: 7291.1611328125
+  y = fixp: 5000.7802734375
+  z = fixp: -78.5965576171875
+  handle = int: 320
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -30
+[/]
+[#1000079]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8455.732422,6151.364746,1466.554810
+    passable = int: 1
+    tex_id = int: 17
+    handle = int: 322
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1460
+  scale = fixp: 0.8
+  x = fixp: 8455.732421875
+  y = fixp: 6151.36474609375
+  z = fixp: 1466.5548095703125
+  handle = int: 322
+  roll = fixp: 27.7000217437744140625
+  pitch = fixp: -86.59998321533203125
+  yaw = fixp: 0
+[/]
+[#1000080]
+  class = sid: CEmbelishment
+  ID = sid: common_stone14
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8670.752930,5959.896973,1340.000000
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 330
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1340
+  scale = fixp: 2.5999996662139892578125
+  x = fixp: 8670.7529296875
+  y = fixp: 5959.89697265625
+  z = fixp: 1340
+  handle = int: 330
+  roll = fixp: -62.499988555908203125
+  pitch = fixp: 70.70003509521484375
+  yaw = fixp: -30
+[/]
+[#1000081]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8876.299805,5960.965820,1580.690186
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 332
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1580
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 8876.2998046875
+  y = fixp: 5960.9658203125
+  z = fixp: 1580.690185546875
+  handle = int: 332
+  roll = fixp: -38.299983978271484375
+  pitch = fixp: -70.99997711181640625
+  yaw = fixp: -90
+[/]
+[#1000082]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8881.733398,5922.471680,1580.739380
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 334
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1580
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 8881.7333984375
+  y = fixp: 5922.4716796875
+  z = fixp: 1580.7393798828125
+  handle = int: 334
+  roll = fixp: -38.299983978271484375
+  pitch = fixp: -70.99997711181640625
+  yaw = fixp: -30
+[/]
+[#1000083]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8799.291016,5969.646484,1640.000000
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 336
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1640
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 8799.291015625
+  y = fixp: 5969.646484375
+  z = fixp: 1640
+  handle = int: 336
+  roll = fixp: -32.39995574951171875
+  pitch = fixp: -5.39996814727783203125
+  yaw = fixp: -150
+[/]
+[#1000084]
+  class = sid: CEmbelishment
+  ID = sid: Common_Stone3
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 9524.298828,6527.216797,1343.912598
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 365
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1420
+  scale = fixp: 1
+  x = fixp: 9079.4814453125
+  y = fixp: 6259.119140625
+  z = fixp: 1457.313232421875
+  handle = int: 365
+  roll = fixp: -15.30000209808349609375
+  pitch = fixp: 27.3999996185302734375
+  yaw = fixp: 30
+[/]
+[#1000085]
+  class = sid: CEmbelishment
+  ID = sid: common_stone14
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8995.850586,6158.554688,1521.639893
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 371
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1500
+  scale = fixp: 1
+  x = fixp: 8995.8505859375
+  y = fixp: 6158.5546875
+  z = fixp: 1521.639892578125
+  handle = int: 371
+  roll = fixp: -33.90000152587890625
+  pitch = fixp: 68.1999969482421875
+  yaw = fixp: 0
+[/]
+[#1000086]
+  class = sid: CEmbelishment
+  ID = sid: common_stone14
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8972.805664,6253.579590,1568.605103
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 11
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 374
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 1536
+  scale = fixp: 0.8
+  x = fixp: 8972.8056640625
+  y = fixp: 6253.57958984375
+  z = fixp: 1568.6051025390625
+  handle = int: 374
+  roll = fixp: -20.799999237060546875
+  pitch = fixp: 85.49997711181640625
+  yaw = fixp: 0
+[/]
+[#1000087]
+  class = sid: CEmbelishment
+  ID = sid: Stones_small11
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8439.171875,3627.887695,11.982418
+    passable = int: 1
+    tex_id = int: 11
+    handle = int: 410
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -34
+  scale = fixp: 1
+  x = fixp: 8439.171875
+  y = fixp: 3627.8876953125
+  z = fixp: 11.982418060302734375
+  handle = int: 410
+  roll = fixp: -6.5
+  pitch = fixp: 1.00000011920928955078125
+  yaw = fixp: 0
+[/]
+[#1000088]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_stones11
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 6681.356445,3338.506348,72.883026
+    passable = int: 1
+    tex_id = int: 13
+    handle = int: 412
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 16
+  scale = fixp: 1
+  x = fixp: 6681.3564453125
+  y = fixp: 3338.50634765625
+  z = fixp: 72.883026123046875
+  handle = int: 412
+  roll = fixp: -0.999999237060546875
+  pitch = fixp: -8.899997711181640625
+  yaw = fixp: 0
+[/]
+[#1000089]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7113.641113,4786.918457,-3.407898
+    tex_scale_auto = int: 0
+    tex_id = int: 17
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 415
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -530
+  scale = fixp: 1.7999999523162841796875
+  x = fixp: 7113.64111328125
+  y = fixp: 4786.91845703125
+  z = fixp: -3.40789794921875
+  handle = int: 415
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 90
+[/]
+[#1000090]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 9358.891602,5745.039551,1425.848022
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 10
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 436
+    clone_mode_int = int: 128
+    scale = fixp: 0.35
+  [/]
+  offset = fixp: 1400
+  scale = fixp: 0.35
+  x = fixp: 9358.8916015625
+  y = fixp: 5745.03955078125
+  z = fixp: 1425.8480224609375
+  handle = int: 436
+  roll = fixp: 36.29996490478515625
+  pitch = fixp: 94.5000152587890625
+  yaw = fixp: -180
+[/]
+[#1000091]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 9214.333984,5697.833984,1402.225464
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 10
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 440
+    clone_mode_int = int: 128
+    scale = fixp: 0.35
+  [/]
+  offset = fixp: 1388
+  scale = fixp: 0.35
+  x = fixp: 9214.333984375
+  y = fixp: 5697.833984375
+  z = fixp: 1402.2254638671875
+  handle = int: 440
+  roll = fixp: 188.9998931884765625
+  pitch = fixp: 263.100067138671875
+  yaw = fixp: 120
+[/]
+[#1000092]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 6955.599609,4737.335938,557.587280
+    tex_scale_auto = int: 0
+    tex_id = int: 17
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 455
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -270
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 6963.12060546875
+  y = fixp: 4753.2294921875
+  z = fixp: 587.7353515625
+  handle = int: 455
+  roll = fixp: 66.5999908447265625
+  pitch = fixp: 39.29996490478515625
+  yaw = fixp: -120
+[/]
+[#1000093]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 6971.215820,5469.373535,351.660339
+    passable = int: 1
+    tex_id = int: 17
+    handle = int: 457
+    clone_mode_int = int: 128
+    passabla = int: 1
+  [/]
+  offset = fixp: -528
+  scale = fixp: 0.599999904632568359375
+  x = fixp: 6971.2158203125
+  y = fixp: 5469.37353515625
+  z = fixp: 351.66033935546875
+  handle = int: 457
+  roll = fixp: 69.80001068115234375
+  pitch = fixp: 63.6999969482421875
+  yaw = fixp: 120
+[/]
+[#1000094]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7205.651367,5000.241211,740.026611
+    tex_scale_auto = int: 0
+    tex_id = int: 17
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 460
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -180
+  scale = fixp: 0.599999904632568359375
+  x = fixp: 7151.27587890625
+  y = fixp: 4953.2255859375
+  z = fixp: 691.15130615234375
+  handle = int: 460
+  roll = fixp: -102.79998016357421875
+  pitch = fixp: 44.699977874755859375
+  yaw = fixp: -90
+[/]
+[#1000095]
+  class = sid: CRuin
+  ID = sid: EnergyPipe09
+  [$vars]
+    passable = int: 1
+    handle = int: 429
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 9664.246094,5353.090820,1501.708008
+  [/]
+  offset = fixp: 1456
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 9664.24609375
+  y = fixp: 5353.0908203125
+  z = fixp: 1501.7080078125
+  handle = int: 429
+  roll = fixp: 38.199977874755859375
+  pitch = fixp: 99.5999298095703125
+  yaw = fixp: 0
+[/]
+[#1000096]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11894.479492,4253.922363,-924.370728
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 273
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -252
+  scale = fixp: 1
+  x = fixp: 11894.4794921875
+  y = fixp: 4253.92236328125
+  z = fixp: -924.3707275390625
+  handle = int: 273
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000097]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart1
+  [$vars]
+    takes_ao = int: 0
+    handle = int: 275
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 10260.478516,4641.085449,1004.057495
+  [/]
+  offset = fixp: 1200
+  scale = fixp: 0.7
+  x = fixp: 10228.25390625
+  y = fixp: 4567.314453125
+  z = fixp: 1079.5220947265625
+  handle = int: 275
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -45
+[/]
+[#1000098]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 10020.147461,4434.357910,-1281.290283
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 300
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -252
+  scale = fixp: 0.9
+  x = fixp: 10020.1474609375
+  y = fixp: 4434.35791015625
+  z = fixp: -1281.290283203125
+  handle = int: 300
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000099]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 10189.555664,4703.703613,-37.809204
+    passable = int: 1
+    handle = int: 302
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -90
+  scale = fixp: 1
+  x = fixp: 10189.5556640625
+  y = fixp: 4703.70361328125
+  z = fixp: -37.8092041015625
+  handle = int: 302
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 45
+[/]
+[#1000100]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 10397.153320,4502.170898,-23.149445
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 304
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 348
+  scale = fixp: 0.8
+  x = fixp: 10397.1533203125
+  y = fixp: 4502.1708984375
+  z = fixp: -23.149444580078125
+  handle = int: 304
+  roll = fixp: -186.0999298095703125
+  pitch = fixp: 70.2998809814453125
+  yaw = fixp: 0
+[/]
+[#1000101]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 10573.203125,4413.305664,-19.618103
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 306
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 368
+  scale = fixp: 0.7
+  x = fixp: 10490.2841796875
+  y = fixp: 4372.4619140625
+  z = fixp: -98.400634765625
+  handle = int: 306
+  roll = fixp: -186.0999298095703125
+  pitch = fixp: 70.2998809814453125
+  yaw = fixp: -15
+[/]
+[#1000102]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 326
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -252
+  scale = fixp: 1
+  x = fixp: 11605.783203125
+  y = fixp: 4454.03515625
+  z = fixp: -687.33929443359375
+  handle = int: 326
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 45
+[/]
+[#1000103]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11879.454102,4520.002930,-494.157959
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 328
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -252
+  scale = fixp: 1
+  x = fixp: 11938.98828125
+  y = fixp: 4545.8779296875
+  z = fixp: -401.058135986328125
+  handle = int: 328
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 90
+[/]
+[#1000104]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani2
+  [$vars]
+    handle = int: 530
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.2000000476837158203125
+  x = fixp: 2748.65576171875
+  y = fixp: 6488.48828125
+  z = fixp: -1797.508056640625
+  handle = int: 530
+  expire_time = fixp: 2147483647
+[/]
+[#1000105]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 534
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 2601.467529296875
+  y = fixp: 6407.8974609375
+  z = fixp: -1860.3917236328125
+  handle = int: 534
+  expire_time = fixp: 2147483647
+[/]
+[#1000106]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani2
+  [$vars]
+    handle = int: 536
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.0000002384185791015625
+  x = fixp: 2657.662841796875
+  y = fixp: 6596.86474609375
+  z = fixp: -1900.041015625
+  handle = int: 536
+  expire_time = fixp: 2147483647
+[/]
+[#1000107]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.599999904632568359375
+    max_dist = fixp: 1303.699951171875
+    dragging_start_pos = FLOAT3: 2289.269287,6428.345703,-1538.227051
+    difuse_color = color: 245,79,6
+    handle = int: 629
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 480
+  scale = fixp: 1
+  x = fixp: 2391.173583984375
+  y = fixp: 6539.36572265625
+  z = fixp: -1445.728271484375
+  handle = int: 629
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000108]
+  class = sid: CEmbelishment
+  ID = sid: mushroom_rock
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1946.615723,7072.902344,1253.850586
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 13
+    tex_scale = FPOINT2: 5.000000,5.000000
+    handle = int: 19
+    clone_mode_int = int: 128
+    scale = fixp: 1.4500000476837158203125
+  [/]
+  offset = fixp: -120
+  scale = fixp: 1.4500000476837158203125
+  x = fixp: 1946.61572265625
+  y = fixp: 7072.90234375
+  z = fixp: 1253.8505859375
+  handle = int: 19
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -120
+[/]
+[#1000109]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_stones07
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 2176.388184,7036.129395,1361.569214
+    tex_id = int: 13
+    handle = int: 128
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -16
+  scale = fixp: 1
+  x = fixp: 2165.60400390625
+  y = fixp: 7037.9228515625
+  z = fixp: 1346.5833740234375
+  handle = int: 128
+  roll = fixp: 11.30000019073486328125
+  pitch = fixp: 3.99999980926513671875
+  yaw = fixp: 150
+[/]
+[#1000110]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_stones08
+  [$vars]
+    takes_ao = int: 0
+    tex_id = int: 13
+    handle = int: 130
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -4
+  scale = fixp: 1
+  x = fixp: 1959.9161376953125
+  y = fixp: 6858.9853515625
+  z = fixp: 1369.667724609375
+  handle = int: 130
+  roll = fixp: 7.299997806549072265625
+  pitch = fixp: -5.399998188018798828125
+  yaw = fixp: 0
+[/]
+[#1000111]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 1901.201416,7007.677246,1385.735962
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 132
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -70
+  scale = fixp: 1
+  x = fixp: 1901.201416015625
+  y = fixp: 7007.67724609375
+  z = fixp: 1315.7359619140625
+  handle = int: 132
+  roll = fixp: 12.3000011444091796875
+  pitch = fixp: -2.500000476837158203125
+  yaw = fixp: 0
+[/]
+[#1000112]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 2084.722900,7099.007813,1283.347412
+    tex_scale_auto = int: 0
+    passable = int: 1
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 134
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -76
+  scale = fixp: 1
+  x = fixp: 2084.722900390625
+  y = fixp: 7099.0078125
+  z = fixp: 1283.347412109375
+  handle = int: 134
+  roll = fixp: -8.700000762939453125
+  pitch = fixp: -0.39999973297119140625
+  yaw = fixp: -30
+[/]
+[#1000113]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 513
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.7999994754791259765625
+  x = fixp: 3994.73291015625
+  y = fixp: 7242.2158203125
+  z = fixp: -1746.556396484375
+  handle = int: 513
+  expire_time = fixp: 2147483647
+[/]
+[#1000114]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 520
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 4176.5966796875
+  y = fixp: 7511.8203125
+  z = fixp: -1746.55908203125
+  handle = int: 520
+  expire_time = fixp: 2147483647
+[/]
+[#1000115]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 522
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.2000000476837158203125
+  x = fixp: 4347.0615234375
+  y = fixp: 7188.59228515625
+  z = fixp: -1746.5391845703125
+  handle = int: 522
+  expire_time = fixp: 2147483647
+[/]
+[#1000116]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 524
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.7999994754791259765625
+  x = fixp: 4725.97314453125
+  y = fixp: 7759.6962890625
+  z = fixp: -1746.55908203125
+  handle = int: 524
+  expire_time = fixp: 2147483647
+[/]
+[#1000117]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 528
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 4606.21484375
+  y = fixp: 7965.41796875
+  z = fixp: -1746.55908203125
+  handle = int: 528
+  expire_time = fixp: 2147483647
+[/]
+[#1000118]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 539
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 4499.76904296875
+  y = fixp: 7505.70263671875
+  z = fixp: -1746.55908203125
+  handle = int: 539
+  expire_time = fixp: 2147483647
+[/]
+[#1000119]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 541
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 4418.580078125
+  y = fixp: 7739.9609375
+  z = fixp: -1746.55908203125
+  handle = int: 541
+  expire_time = fixp: 2147483647
+[/]
+[#1000120]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.019999980926513671875
+    max_dist = fixp: 1145.6800537109375
+    dragging_start_pos = FLOAT3: 5769.599609,8556.007813,1291.448242
+    difuse_color = color: 142,189,249
+    handle = int: 192
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 460
+  scale = fixp: 1
+  x = fixp: 5846.10595703125
+  y = fixp: 8573.7197265625
+  z = fixp: 1389.67724609375
+  handle = int: 192
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000121]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 3.400000095367431640625
+    max_dist = fixp: 1224.68994140625
+    dragging_start_pos = FLOAT3: 4177.299805,8570.881836,-351.484497
+    difuse_color = color: 109,191,251
+    handle = int: 198
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 80
+  scale = fixp: 1
+  x = fixp: 4198.9072265625
+  y = fixp: 8594.5634765625
+  z = fixp: -318.713623046875
+  handle = int: 198
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000122]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.599999904632568359375
+    max_dist = fixp: 1540.739990234375
+    difuse_color = color: 243,92,11
+    handle = int: 627
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 400
+  scale = fixp: 1
+  x = fixp: 4256.88037109375
+  y = fixp: 7037.97607421875
+  z = fixp: -1346.035400390625
+  handle = int: 627
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000123]
+  class = sid: CRuin
+  ID = sid: EnergyPipe03
+  [$vars]
+    passable = int: 1
+    handle = int: 51
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5293.040039,9437.843750,1908.480957
+  [/]
+  offset = fixp: 980
+  scale = fixp: 1
+  x = fixp: 5293.0400390625
+  y = fixp: 9437.84375
+  z = fixp: 1908.48095703125
+  handle = int: 51
+  roll = fixp: 6.700000286102294921875
+  pitch = fixp: 51.899974822998046875
+  yaw = fixp: 195
+[/]
+[#1000124]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 55
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5179.595703,8970.180664,2051.150635
+  [/]
+  offset = fixp: 1310
+  scale = fixp: 1
+  x = fixp: 5183.5390625
+  y = fixp: 8969.7578125
+  z = fixp: 2052.540283203125
+  handle = int: 55
+  roll = fixp: -7.50000095367431640625
+  pitch = fixp: 36.500026702880859375
+  yaw = fixp: 0
+[/]
+[#1000125]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 57
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5272.169922,8949.284180,2040.230713
+  [/]
+  offset = fixp: 1164
+  scale = fixp: 1
+  x = fixp: 5250.037109375
+  y = fixp: 8889.0244140625
+  z = fixp: 1961.57568359375
+  handle = int: 57
+  roll = fixp: -7.50000095367431640625
+  pitch = fixp: 36.500026702880859375
+  yaw = fixp: 0
+[/]
+[#1000126]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    passable = int: 1
+    handle = int: 61
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5260.567383,9489.690430,1981.817017
+  [/]
+  offset = fixp: 1048
+  scale = fixp: 1
+  x = fixp: 5260.5673828125
+  y = fixp: 9489.6904296875
+  z = fixp: 1981.8170166015625
+  handle = int: 61
+  roll = fixp: -6.400002002716064453125
+  pitch = fixp: 127.09975433349609375
+  yaw = fixp: 0
+[/]
+[#1000127]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    passable = int: 1
+    handle = int: 64
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5334.137695,9477.235352,1981.354980
+  [/]
+  offset = fixp: 1048
+  scale = fixp: 1
+  x = fixp: 5334.1376953125
+  y = fixp: 9477.2353515625
+  z = fixp: 1981.35498046875
+  handle = int: 64
+  roll = fixp: -7.200001239776611328125
+  pitch = fixp: 127.09975433349609375
+  yaw = fixp: 0
+[/]
+[#1000128]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    handle = int: 66
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5494.266602,8655.414063,770.124634
+  [/]
+  offset = fixp: -32
+  scale = fixp: 1
+  x = fixp: 5494.2666015625
+  y = fixp: 8655.4140625
+  z = fixp: 788.1246337890625
+  handle = int: 66
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -90
+[/]
+[#1000129]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    handle = int: 68
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5397.701660,8417.920898,792.217285
+  [/]
+  offset = fixp: 506
+  scale = fixp: 1
+  x = fixp: 5397.70166015625
+  y = fixp: 8417.9208984375
+  z = fixp: 792.21728515625
+  handle = int: 68
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000130]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    handle = int: 72
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5169.588379,8310.964844,683.573730
+  [/]
+  offset = fixp: 2366
+  scale = fixp: 1
+  x = fixp: 5169.58837890625
+  y = fixp: 8310.96484375
+  z = fixp: 683.57373046875
+  handle = int: 72
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -15
+[/]
+[#1000131]
+  class = sid: CRuin
+  ID = sid: EnergyPipe05
+  [$vars]
+    handle = int: 74
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5497.199707,8508.673828,615.092285
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 5497.19970703125
+  y = fixp: 8508.673828125
+  z = fixp: 615.09228515625
+  handle = int: 74
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000132]
+  class = sid: CRuin
+  ID = sid: EnergyPipe05
+  [$vars]
+    handle = int: 76
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5304.244141,8358.967773,-74.548767
+  [/]
+  offset = fixp: 1302
+  scale = fixp: 1
+  x = fixp: 5313.47216796875
+  y = fixp: 8343.1533203125
+  z = fixp: 739.2877197265625
+  handle = int: 76
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -30
+[/]
+[#1000133]
+  class = sid: CRuin
+  ID = sid: EnergyPipe05
+  [$vars]
+    handle = int: 78
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5532.932129,8838.515625,534.158203
+  [/]
+  offset = fixp: -400
+  scale = fixp: 1
+  x = fixp: 5532.93212890625
+  y = fixp: 8838.515625
+  z = fixp: 534.158203125
+  handle = int: 78
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -120
+[/]
+[#1000134]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 116
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5467.450684,8373.127930,292.778687
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 5460.3359375
+  y = fixp: 8374.974609375
+  z = fixp: 292.065673828125
+  handle = int: 116
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000135]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 122
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5185.048340,8229.685547,19.864014
+  [/]
+  offset = fixp: 1720
+  scale = fixp: 1
+  x = fixp: 5185.04833984375
+  y = fixp: 8229.685546875
+  z = fixp: 19.864013671875
+  handle = int: 122
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000136]
+  class = sid: CRuin
+  ID = sid: EnergyPipe06
+  [$vars]
+    handle = int: 124
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5802.403809,7680.120605,48.466537
+  [/]
+  offset = fixp: -80
+  scale = fixp: 1.5
+  x = fixp: 5802.40380859375
+  y = fixp: 7680.12060546875
+  z = fixp: 48.4665374755859375
+  handle = int: 124
+  roll = fixp: 48.000057220458984375
+  pitch = fixp: 92.00008392333984375
+  yaw = fixp: 0
+[/]
+[#1000137]
+  class = sid: CRuin
+  ID = sid: EnergyPipe02
+  [$vars]
+    passable = int: 1
+    handle = int: 35
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5693.491699,8248.541016,-310.774231
+  [/]
+  offset = fixp: -760
+  scale = fixp: 1.5
+  x = fixp: 5693.49169921875
+  y = fixp: 8248.541015625
+  z = fixp: -310.77423095703125
+  handle = int: 35
+  roll = fixp: -1.8000011444091796875
+  pitch = fixp: -88.09989166259765625
+  yaw = fixp: 90
+[/]
+[#1000138]
+  class = sid: CRuin
+  ID = sid: Plant_5
+  [$vars]
+    handle = int: 126
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3557.704102,8409.450195,1086.895508
+  [/]
+  offset = fixp: 122
+  scale = fixp: 1
+  x = fixp: 3557.7041015625
+  y = fixp: 8409.4501953125
+  z = fixp: 1060.8955078125
+  handle = int: 126
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -45
+[/]
+[#1000139]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    handle = int: 144
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4092.843994,8357.207031,767.023193
+  [/]
+  offset = fixp: 1780
+  scale = fixp: 1
+  x = fixp: 4092.843994140625
+  y = fixp: 8357.20703125
+  z = fixp: 767.023193359375
+  handle = int: 144
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 45
+[/]
+[#1000140]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    handle = int: 148
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4334.848145,8226.948242,932.168335
+  [/]
+  offset = fixp: 2604
+  scale = fixp: 1
+  x = fixp: 4334.84814453125
+  y = fixp: 8226.9482421875
+  z = fixp: 932.1683349609375
+  handle = int: 148
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -15
+[/]
+[#1000141]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    handle = int: 150
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4542.395508,8419.772461,1095.153809
+  [/]
+  offset = fixp: 2734
+  scale = fixp: 1
+  x = fixp: 4542.3955078125
+  y = fixp: 8419.7724609375
+  z = fixp: 1025.15380859375
+  handle = int: 150
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000142]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 156
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4027.458008,8296.996094,146.976440
+  [/]
+  offset = fixp: 1280
+  scale = fixp: 1
+  x = fixp: 4027.4580078125
+  y = fixp: 8296.99609375
+  z = fixp: 146.9764404296875
+  handle = int: 156
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000143]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 158
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4346.602539,8142.042969,263.442627
+  [/]
+  offset = fixp: 2010
+  scale = fixp: 1
+  x = fixp: 4346.6025390625
+  y = fixp: 8142.04296875
+  z = fixp: 263.442626953125
+  handle = int: 158
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000144]
+  class = sid: CRuin
+  ID = sid: EnergyPipe06
+  [$vars]
+    handle = int: 164
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4393.137695,7742.960938,1073.440918
+  [/]
+  offset = fixp: 2820
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 4393.1376953125
+  y = fixp: 7742.9609375
+  z = fixp: 1073.44091796875
+  handle = int: 164
+  roll = fixp: 9.90000438690185546875
+  pitch = fixp: 89.30005645751953125
+  yaw = fixp: 30
+[/]
+[#1000145]
+  class = sid: CRuin
+  ID = sid: EnergyPipe06
+  [$vars]
+    handle = int: 166
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3812.544434,7662.139648,193.443115
+  [/]
+  offset = fixp: 1940
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 3812.54443359375
+  y = fixp: 7662.1396484375
+  z = fixp: 193.443115234375
+  handle = int: 166
+  roll = fixp: 10.10000514984130859375
+  pitch = fixp: 89.90004730224609375
+  yaw = fixp: 30
+[/]
+[#1000146]
+  class = sid: CRuin
+  ID = sid: EnergyPipe06
+  [$vars]
+    handle = int: 168
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4040.736328,7559.865723,-586.559082
+  [/]
+  offset = fixp: 1414
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 4040.736328125
+  y = fixp: 7559.86572265625
+  z = fixp: -332.55908203125
+  handle = int: 168
+  roll = fixp: 1.30000591278076171875
+  pitch = fixp: 89.20006561279296875
+  yaw = fixp: 30
+[/]
+[#1000147]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 170
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4346.602539,8142.042969,-358.557373
+  [/]
+  offset = fixp: 1388
+  scale = fixp: 1
+  x = fixp: 4346.6025390625
+  y = fixp: 8142.04296875
+  z = fixp: -358.557373046875
+  handle = int: 170
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000148]
+  class = sid: CRuin
+  ID = sid: EnergyPipe02
+  [$vars]
+    handle = int: 182
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3838.637207,8638.606445,1117.336426
+  [/]
+  offset = fixp: -1000
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 3840.20849609375
+  y = fixp: 8643.046875
+  z = fixp: -63.09552001953125
+  handle = int: 182
+  roll = fixp: 0.5999977588653564453125
+  pitch = fixp: -89.60004425048828125
+  yaw = fixp: -30
+[/]
+[#1000149]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    handle = int: 184
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4118.530273,8835.211914,-639.366333
+  [/]
+  offset = fixp: -1514
+  scale = fixp: 1.10000002384185791015625
+  x = fixp: 4118.5302734375
+  y = fixp: 8835.2119140625
+  z = fixp: -639.3663330078125
+  handle = int: 184
+  roll = fixp: 11.0000057220458984375
+  pitch = fixp: -89.79982757568359375
+  yaw = fixp: -30
+[/]
+[#1000150]
+  class = sid: CRuin
+  ID = sid: EnergyPipe01
+  [$vars]
+    passable = int: 1
+    handle = int: 186
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4567.857422,9100.950195,782.563110
+  [/]
+  offset = fixp: -54
+  scale = fixp: 1.10000002384185791015625
+  x = fixp: 4567.857421875
+  y = fixp: 9100.9501953125
+  z = fixp: 782.5631103515625
+  handle = int: 186
+  roll = fixp: 11.0000057220458984375
+  pitch = fixp: -89.79982757568359375
+  yaw = fixp: -15
+[/]
+[#1000151]
+  class = sid: CRuin
+  ID = sid: EnergyPipe03
+  [$vars]
+    handle = int: 194
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4048.215332,8517.469727,-396.698334
+  [/]
+  offset = fixp: -610
+  scale = fixp: 1
+  x = fixp: 4048.21533203125
+  y = fixp: 8517.4697265625
+  z = fixp: -396.698333740234375
+  handle = int: 194
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -30
+[/]
+[#1000152]
+  class = sid: CRuin
+  ID = sid: EnergyPipe03
+  [$vars]
+    handle = int: 196
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4219.246094,8693.328125,-518.389160
+  [/]
+  offset = fixp: -560
+  scale = fixp: 1
+  x = fixp: 4277.85107421875
+  y = fixp: 8749.4912109375
+  z = fixp: -453.67791748046875
+  handle = int: 196
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000153]
+  class = sid: CRuin
+  ID = sid: EnergyPipe07
+  [$vars]
+    passable = int: 1
+    handle = int: 202
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3748.772217,9445.911133,1872.261719
+  [/]
+  offset = fixp: 1048
+  scale = fixp: 1
+  x = fixp: 3748.772216796875
+  y = fixp: 9445.9111328125
+  z = fixp: 1872.26171875
+  handle = int: 202
+  roll = fixp: -0.89999904632568359375
+  pitch = fixp: 44.899959564208984375
+  yaw = fixp: -210
+[/]
+[#1000154]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 223
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4131.275391,8709.120117,2180.763184
+  [/]
+  offset = fixp: 1470
+  scale = fixp: 1
+  x = fixp: 4135.890625
+  y = fixp: 8694.736328125
+  z = fixp: 2092.041748046875
+  handle = int: 223
+  roll = fixp: 20.400005340576171875
+  pitch = fixp: 33.50002288818359375
+  yaw = fixp: 0
+[/]
+[#1000155]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 225
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4184.679688,8769.169922,2273.641357
+  [/]
+  offset = fixp: 1402
+  scale = fixp: 1
+  x = fixp: 4184.6796875
+  y = fixp: 8769.169921875
+  z = fixp: 2155.641357421875
+  handle = int: 225
+  roll = fixp: 20.400005340576171875
+  pitch = fixp: 34.300014495849609375
+  yaw = fixp: 0
+[/]
+[#1000156]
+  class = sid: CRuin
+  ID = sid: EnergyPipe05
+  [$vars]
+    handle = int: 249
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3624.587402,9486.916992,1038.679810
+  [/]
+  offset = fixp: 262
+  scale = fixp: 1.10000002384185791015625
+  x = fixp: 3633.47705078125
+  y = fixp: 9491.646484375
+  z = fixp: 1030.4608154296875
+  handle = int: 249
+  roll = fixp: 0.300001049041748046875
+  pitch = fixp: 47.400005340576171875
+  yaw = fixp: -30
+[/]
+[#1000157]
+  class = sid: CRuin
+  ID = sid: EnergyPipe05
+  [$vars]
+    handle = int: 247
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3726.459961,9624.411133,946.997498
+  [/]
+  offset = fixp: 236
+  scale = fixp: 1.10000002384185791015625
+  x = fixp: 3764.548583984375
+  y = fixp: 9567.3359375
+  z = fixp: 1028.159423828125
+  handle = int: 247
+  roll = fixp: 0.300001049041748046875
+  pitch = fixp: 47.400005340576171875
+  yaw = fixp: -30
+[/]
+[#1000158]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3514.037598,8286.732422,-1829.444824
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 8
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -1360
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 3514.03759765625
+  y = fixp: 8286.732421875
+  z = fixp: -1829.44482421875
+  handle = int: 8
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -120
+[/]
+[#1000159]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3943.146729,9392.048828,580.520874
+    passable = int: 1
+    handle = int: 28
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -300
+  scale = fixp: 1
+  x = fixp: 3943.146728515625
+  y = fixp: 9392.048828125
+  z = fixp: 580.5208740234375
+  handle = int: 28
+  roll = fixp: -43.500019073486328125
+  pitch = fixp: -4.899998188018798828125
+  yaw = fixp: 60
+[/]
+[#1000160]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 5510.217285,9422.196289,360.539001
+    passable = int: 1
+    handle = int: 31
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -560
+  scale = fixp: 1
+  x = fixp: 5510.21728515625
+  y = fixp: 9422.1962890625
+  z = fixp: 360.53900146484375
+  handle = int: 31
+  roll = fixp: -43.500019073486328125
+  pitch = fixp: -4.899998188018798828125
+  yaw = fixp: 105
+[/]
+[#1000161]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 5193.526855,8962.534180,786.629700
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 106
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 5193.52685546875
+  y = fixp: 8962.5341796875
+  z = fixp: 786.62969970703125
+  handle = int: 106
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000162]
+  class = sid: CEmbelishment
+  ID = sid: common_stone15
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 5320.559570,8912.377930,854.414673
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 108
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -60
+  scale = fixp: 1
+  x = fixp: 5320.5595703125
+  y = fixp: 8912.3779296875
+  z = fixp: 854.4146728515625
+  handle = int: 108
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 30
+[/]
+[#1000163]
+  class = sid: CEmbelishment
+  ID = sid: Common_Stone3
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3623.839844,8620.818359,941.802185
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 137
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -20
+  scale = fixp: 1
+  x = fixp: 3497.969482421875
+  y = fixp: 8607.509765625
+  z = fixp: 936.15679931640625
+  handle = int: 137
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -120
+[/]
+[#1000164]
+  class = sid: CEmbelishment
+  ID = sid: Common_Stone2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 3782.567139,8659.621094,914.664001
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 140
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -20
+  scale = fixp: 0.8
+  x = fixp: 3768.340576171875
+  y = fixp: 8604.9912109375
+  z = fixp: 920.65899658203125
+  handle = int: 140
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -120
+[/]
+[#1000165]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_Rock01
+  [$vars]
+    takes_ao = int: 0
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 2.000000,2.000000
+    handle = int: 142
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 3651.549560546875
+  y = fixp: 8724.6240234375
+  z = fixp: 927.79486083984375
+  handle = int: 142
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000166]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart1
+  [$vars]
+    takes_ao = int: 0
+    tex_id = int: 13
+    handle = int: 469
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -1208
+  scale = fixp: 1
+  x = fixp: 3225.673095703125
+  y = fixp: 8273.8125
+  z = fixp: -1919.6925048828125
+  handle = int: 469
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -90
+[/]
+[#1000167]
+  class = sid: CRuin
+  ID = sid: EnergyPipe07
+  [$vars]
+    passable = int: 1
+    handle = int: 227
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 7943.953125,7474.462891,1258.247070
+  [/]
+  offset = fixp: 1250
+  scale = fixp: 1
+  x = fixp: 7943.953125
+  y = fixp: 7474.462890625
+  z = fixp: 1258.2470703125
+  handle = int: 227
+  roll = fixp: -86.69995880126953125
+  pitch = fixp: 1.4000012874603271484375
+  yaw = fixp: -15
+[/]
+[#1000168]
+  class = sid: CRuin
+  ID = sid: EnergyPipe03
+  [$vars]
+    passable = int: 1
+    handle = int: 231
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 8177.587402,7832.706055,1292.716919
+  [/]
+  offset = fixp: 1250
+  scale = fixp: 1
+  x = fixp: 8177.58740234375
+  y = fixp: 7832.7060546875
+  z = fixp: 1292.7169189453125
+  handle = int: 231
+  roll = fixp: 90.1000823974609375
+  pitch = fixp: -3.0999991893768310546875
+  yaw = fixp: 165
+[/]
+[#1000169]
+  class = sid: CRuin
+  ID = sid: EnergyPipe05
+  [$vars]
+    passable = int: 1
+    handle = int: 233
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 8265.408203,7378.680664,1291.085815
+  [/]
+  offset = fixp: 1290
+  scale = fixp: 1
+  x = fixp: 8265.408203125
+  y = fixp: 7378.6806640625
+  z = fixp: 1291.0858154296875
+  handle = int: 233
+  roll = fixp: 92.40000152587890625
+  pitch = fixp: -6.19999217987060546875
+  yaw = fixp: 75
+[/]
+[#1000170]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart1
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7603.674316,7298.490723,-90.433487
+    passable = int: 1
+    handle = int: 10
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -260
+  scale = fixp: 0.8
+  x = fixp: 7604.34423828125
+  y = fixp: 7284.36865234375
+  z = fixp: -69.881500244140625
+  handle = int: 10
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -30
+[/]
+[#1000171]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    scale = fixp: 0.9
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8225.261719,8671.620117,-76.645599
+    passable = int: 1
+    handle = int: 12
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -248
+  scale = fixp: 0.9
+  x = fixp: 8225.26171875
+  y = fixp: 8671.6201171875
+  z = fixp: -76.645599365234375
+  handle = int: 12
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -105
+[/]
+[#1000172]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 23
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -400
+  scale = fixp: 0.8
+  x = fixp: 8847.8388671875
+  y = fixp: 8993.7578125
+  z = fixp: 3.646392822265625
+  handle = int: 23
+  roll = fixp: -12.700000762939453125
+  pitch = fixp: 15.50000095367431640625
+  yaw = fixp: 0
+[/]
+[#1000173]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart1
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7507.825195,7467.867676,-104.264374
+    passable = int: 1
+    handle = int: 251
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -260
+  scale = fixp: 0.7
+  x = fixp: 7507.8251953125
+  y = fixp: 7467.86767578125
+  z = fixp: -104.264373779296875
+  handle = int: 251
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -15
+[/]
+[#1000174]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    scale = fixp: 0.9
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8425.648438,8767.420898,-7.822083
+    passable = int: 1
+    handle = int: 253
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -522
+  scale = fixp: 0.8
+  x = fixp: 8425.6484375
+  y = fixp: 8767.4208984375
+  z = fixp: -7.82208251953125
+  handle = int: 253
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -90
+[/]
+[#1000175]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    scale = fixp: 0.9
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8657.405273,8789.099609,102.395752
+    passable = int: 1
+    handle = int: 255
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -422
+  scale = fixp: 0.7
+  x = fixp: 8657.4052734375
+  y = fixp: 8789.099609375
+  z = fixp: 102.395751953125
+  handle = int: 255
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000176]
+  class = sid: CEmbelishment
+  ID = sid: cobble_stone1
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7731.904297,7288.510254,-40.997200
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 4.000000,4.000000
+    handle = int: 280
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -180
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 7696.80322265625
+  y = fixp: 7251.783203125
+  z = fixp: -80.5425567626953125
+  handle = int: 280
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000177]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7737.444336,6444.071289,-65.535507
+    passable = int: 1
+    tex_id = int: 17
+    handle = int: 324
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -200
+  scale = fixp: 1
+  x = fixp: 7737.4443359375
+  y = fixp: 6444.0712890625
+  z = fixp: -65.5355072021484375
+  handle = int: 324
+  roll = fixp: 2.3999998569488525390625
+  pitch = fixp: -0.5
+  yaw = fixp: -135
+[/]
+[#1000178]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_stones03
+  [$vars]
+    takes_ao = int: 0
+    tex_id = int: 13
+    handle = int: 342
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -12
+  scale = fixp: 1
+  x = fixp: 8919.072265625
+  y = fixp: 8674.15234375
+  z = fixp: 410.753326416015625
+  handle = int: 342
+  roll = fixp: -15.30000209808349609375
+  pitch = fixp: -13.00000095367431640625
+  yaw = fixp: 30
+[/]
+[#1000179]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_stones02
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8616.611328,8627.039063,446.529114
+    tex_id = int: 13
+    handle = int: 344
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -16
+  scale = fixp: 1
+  x = fixp: 8613.181640625
+  y = fixp: 8663.9482421875
+  z = fixp: 451.123504638671875
+  handle = int: 344
+  roll = fixp: -5.799999237060546875
+  pitch = fixp: 29.0000057220458984375
+  yaw = fixp: 180
+[/]
+[#1000180]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_stones01
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 9156.204102,8690.700195,40.657028
+    tex_id = int: 13
+    handle = int: 346
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -112
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 9148.109375
+  y = fixp: 8688.0947265625
+  z = fixp: 51.749176025390625
+  handle = int: 346
+  roll = fixp: -7.40000247955322265625
+  pitch = fixp: -11.00000095367431640625
+  yaw = fixp: 15
+[/]
+[#1000181]
+  class = sid: CEmbelishment
+  ID = sid: arc_stone
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7387.735352,6522.698242,804.185913
+    tex_scale_auto = int: 0
+    tex_id = int: 17
+    tex_scale = FPOINT2: 3.000000,3.000000
+    handle = int: 464
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 7387.7353515625
+  y = fixp: 6522.6982421875
+  z = fixp: 804.1859130859375
+  handle = int: 464
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 30
+[/]
+[#1000182]
+  class = sid: CEmbelishment
+  ID = sid: arc_stone
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7337.047852,6561.480957,826.537842
+    tex_scale_auto = int: 0
+    tex_id = int: 17
+    tex_scale = FPOINT2: 3.000000,3.000000
+    handle = int: 466
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 0.8
+  x = fixp: 7396.201171875
+  y = fixp: 6556.04833984375
+  z = fixp: 802.41357421875
+  handle = int: 466
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 60
+[/]
+[#1000183]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 496
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 11995.98046875
+  y = fixp: 7877.388671875
+  z = fixp: 99.760009765625
+  handle = int: 496
+  expire_time = fixp: 2147483647
+[/]
+[#1000184]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 498
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 12179.0537109375
+  y = fixp: 7932.1484375
+  z = fixp: 106.01956939697265625
+  handle = int: 498
+  expire_time = fixp: 2147483647
+[/]
+[#1000185]
+  class = sid: CRuin
+  ID = sid: AssBotWreck_03
+  [$vars]
+    handle = int: 501
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -16
+  scale = fixp: 1
+  x = fixp: 12123.361328125
+  y = fixp: 7869.509765625
+  z = fixp: 80.41504669189453125
+  handle = int: 501
+  roll = fixp: -14.00000476837158203125
+  pitch = fixp: 46.1999969482421875
+  yaw = fixp: 0
+[/]
+[#1000186]
+  class = sid: CEmbelishment
+  ID = sid: Stones_small07
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 12191.545898,8009.769043,117.810577
+    tex_id = int: 10
+    handle = int: 503
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -8
+  scale = fixp: 1
+  x = fixp: 12191.5458984375
+  y = fixp: 8009.76904296875
+  z = fixp: 109.810577392578125
+  handle = int: 503
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000187]
+  class = sid: CEmbelishment
+  ID = sid: Stones_small08
+  [$vars]
+    takes_ao = int: 0
+    tex_id = int: 11
+    handle = int: 505
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -20
+  scale = fixp: 1
+  x = fixp: 11898.78515625
+  y = fixp: 7924.5908203125
+  z = fixp: 76.2014923095703125
+  handle = int: 505
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000188]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 605
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 299.476318359375
+  y = fixp: 11944.2490234375
+  z = fixp: 279.44500732421875
+  handle = int: 605
+  expire_time = fixp: 2147483647
+[/]
+[#1000189]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 607
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 776.2760009765625
+  y = fixp: 12167.5283203125
+  z = fixp: 347.858612060546875
+  handle = int: 607
+  expire_time = fixp: 2147483647
+[/]
+[#1000190]
+  class = sid: CRuin
+  ID = sid: Concrete_Column04_broken
+  [$vars]
+    handle = int: 615
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -400
+  scale = fixp: 1
+  x = fixp: 270.9949951171875
+  y = fixp: 12163.796875
+  z = fixp: -117.428741455078125
+  handle = int: 615
+  roll = fixp: -19.600006103515625
+  pitch = fixp: -15.1000041961669921875
+  yaw = fixp: 0
+[/]
+[#1000191]
+  class = sid: CRuin
+  ID = sid: Concrete_WAll01_broken
+  [$vars]
+    handle = int: 617
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -60
+  scale = fixp: 1
+  x = fixp: 720.11669921875
+  y = fixp: 12110.3251953125
+  z = fixp: 302.0977783203125
+  handle = int: 617
+  roll = fixp: 3.399999141693115234375
+  pitch = fixp: 15.6000003814697265625
+  yaw = fixp: 30
+[/]
+[#1000192]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 583
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 5623.99609375
+  y = fixp: 11436.5263671875
+  z = fixp: -1516.6600341796875
+  handle = int: 583
+  expire_time = fixp: 2147483647
+[/]
+[#1000193]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 589
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 5556.21240234375
+  y = fixp: 11162.890625
+  z = fixp: -1548.57861328125
+  handle = int: 589
+  expire_time = fixp: 2147483647
+[/]
+[#1000194]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 591
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 6381.86181640625
+  y = fixp: 11286.7314453125
+  z = fixp: -1548.57861328125
+  handle = int: 591
+  expire_time = fixp: 2147483647
+[/]
+[#1000195]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.599999904632568359375
+    max_dist = fixp: 829.6300048828125
+    difuse_color = color: 246,120,9
+    handle = int: 200
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 5424.4033203125
+  y = fixp: 9818.0556640625
+  z = fixp: 916.1181640625
+  handle = int: 200
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000196]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 2.599999904632568359375
+    max_dist = fixp: 1422.219970703125
+    dragging_start_pos = FLOAT3: 5387.685547,11373.283203,-1442.402344
+    difuse_color = color: 247,81,9
+    handle = int: 631
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 300
+  scale = fixp: 1
+  x = fixp: 5663.8466796875
+  y = fixp: 11257.7568359375
+  z = fixp: -1248.4400634765625
+  handle = int: 631
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000197]
+  class = sid: CRuin
+  ID = sid: EnergyPipe03
+  [$vars]
+    handle = int: 80
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5344.620117,9820.900391,1300.379517
+  [/]
+  offset = fixp: 416
+  scale = fixp: 1
+  x = fixp: 5338.77392578125
+  y = fixp: 9832.5791015625
+  z = fixp: 1300.1419677734375
+  handle = int: 80
+  roll = fixp: 0.799994182586669921875
+  pitch = fixp: -30.2002239227294921875
+  yaw = fixp: 195
+[/]
+[#1000198]
+  class = sid: CRuin
+  ID = sid: EnergyPipe07
+  [$vars]
+    handle = int: 99
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5389.219727,9973.904297,585.682861
+  [/]
+  offset = fixp: 6
+  scale = fixp: 1
+  x = fixp: 5382.65869140625
+  y = fixp: 9974.337890625
+  z = fixp: 584.02581787109375
+  handle = int: 99
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -165
+[/]
+[#1000199]
+  class = sid: CRuin
+  ID = sid: raf03
+  [$vars]
+    handle = int: 104
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5354.895508,9792.995117,944.843262
+  [/]
+  offset = fixp: -12
+  scale = fixp: 0.599999904632568359375
+  x = fixp: 5352.671875
+  y = fixp: 9793.107421875
+  z = fixp: 944.611328125
+  handle = int: 104
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 90
+[/]
+[#1000200]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    passable = int: 1
+    handle = int: 206
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3493.470703,9944.452148,1420.179199
+  [/]
+  offset = fixp: 878
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 3493.470703125
+  y = fixp: 9944.4521484375
+  z = fixp: 1420.17919921875
+  handle = int: 206
+  roll = fixp: -20.000003814697265625
+  pitch = fixp: -40.399974822998046875
+  yaw = fixp: 0
+[/]
+[#1000201]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    passable = int: 1
+    handle = int: 208
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3432.836426,9908.248047,1417.150391
+  [/]
+  offset = fixp: 886
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 3432.83642578125
+  y = fixp: 9908.248046875
+  z = fixp: 1417.150390625
+  handle = int: 208
+  roll = fixp: -20.000003814697265625
+  pitch = fixp: -40.399974822998046875
+  yaw = fixp: 0
+[/]
+[#1000202]
+  class = sid: CRuin
+  ID = sid: EnergyPipe07
+  [$vars]
+    handle = int: 210
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3679.309814,9673.104492,815.270874
+  [/]
+  offset = fixp: 106
+  scale = fixp: 1
+  x = fixp: 3679.309814453125
+  y = fixp: 9673.1044921875
+  z = fixp: 815.2708740234375
+  handle = int: 210
+  roll = fixp: 1.599998950958251953125
+  pitch = fixp: -41.59993743896484375
+  yaw = fixp: 150
+[/]
+[#1000203]
+  class = sid: CRuin
+  ID = sid: EnergyPipe07
+  [$vars]
+    handle = int: 212
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3554.635010,9595.541992,819.381836
+  [/]
+  offset = fixp: 128
+  scale = fixp: 1
+  x = fixp: 3551.240966796875
+  y = fixp: 9601.322265625
+  z = fixp: 815.5313720703125
+  handle = int: 212
+  roll = fixp: 1.599998950958251953125
+  pitch = fixp: -41.59993743896484375
+  yaw = fixp: 150
+[/]
+[#1000204]
+  class = sid: CRuin
+  ID = sid: Agregat01
+  [$vars]
+    handle = int: 220
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3549.908203,9817.511719,617.317932
+  [/]
+  offset = fixp: 20
+  scale = fixp: 2.0000002384185791015625
+  x = fixp: 3552.786865234375
+  y = fixp: 9812.45703125
+  z = fixp: 619.79364013671875
+  handle = int: 220
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -210
+[/]
+[#1000205]
+  class = sid: CRuin
+  ID = sid: EnergyPipe08
+  [$vars]
+    handle = int: 237
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4995.215820,9975.566406,695.773621
+  [/]
+  offset = fixp: 4
+  scale = fixp: 1.30000007152557373046875
+  x = fixp: 5031.7275390625
+  y = fixp: 9984.8134765625
+  z = fixp: 679.0794677734375
+  handle = int: 237
+  roll = fixp: 87.0001220703125
+  pitch = fixp: 126.499420166015625
+  yaw = fixp: 0
+[/]
+[#1000206]
+  class = sid: CRuin
+  ID = sid: Cisterna01
+  [$vars]
+    handle = int: 241
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 3992.086914,10228.296875,492.293091
+  [/]
+  offset = fixp: -60
+  scale = fixp: 1
+  x = fixp: 3794.997314453125
+  y = fixp: 9951.703125
+  z = fixp: 550.72003173828125
+  handle = int: 241
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 330
+[/]
+[#1000207]
+  class = sid: CRuin
+  ID = sid: Cisterna01
+  [$vars]
+    handle = int: 243
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 4042.633057,10024.130859,506.067566
+  [/]
+  offset = fixp: -44
+  scale = fixp: 1
+  x = fixp: 4062.2197265625
+  y = fixp: 10017.814453125
+  z = fixp: 533.91925048828125
+  handle = int: 243
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 540
+[/]
+[#1000208]
+  class = sid: CRuin
+  ID = sid: EnergyPipe09
+  [$vars]
+    handle = int: 245
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 5063.885254,10009.718750,650.045959
+  [/]
+  offset = fixp: 4
+  scale = fixp: 1
+  x = fixp: 5065.138671875
+  y = fixp: 9992.37109375
+  z = fixp: 671.8922119140625
+  handle = int: 245
+  roll = fixp: -86.39996337890625
+  pitch = fixp: -21.4000110626220703125
+  yaw = fixp: 0
+[/]
+[#1000209]
+  class = sid: CEmbelishment
+  ID = sid: common_stone18
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 5406.432129,9865.167969,527.573608
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 114
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -290
+  scale = fixp: 1
+  x = fixp: 5412.63134765625
+  y = fixp: 9878.3955078125
+  z = fixp: 496.925537109375
+  handle = int: 114
+  roll = fixp: 0.4
+  pitch = fixp: 19.7000026702880859375
+  yaw = fixp: 0
+[/]
+[#1000210]
+  class = sid: CEmbelishment
+  ID = sid: Common_Stone3
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 5786.806641,9442.710938,864.552490
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 120
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.2000000476837158203125
+  x = fixp: 5387.66943359375
+  y = fixp: 9859.787109375
+  z = fixp: 829.748779296875
+  handle = int: 120
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -90
+[/]
+[#1000211]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 593
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 9524.6611328125
+  y = fixp: 10576.4267578125
+  z = fixp: -1644.4674072265625
+  handle = int: 593
+  expire_time = fixp: 2147483647
+[/]
+[#1000212]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1_Small
+  [$vars]
+    handle = int: 595
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 8801.2265625
+  y = fixp: 10145.396484375
+  z = fixp: -1646.8355712890625
+  handle = int: 595
+  expire_time = fixp: 2147483647
+[/]
+[#1000213]
+  class = sid: CParticleObject
+  ID = sid: Fire_Ani1
+  [$vars]
+    handle = int: 597
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.6000001430511474609375
+  x = fixp: 8909.666015625
+  y = fixp: 10250.1435546875
+  z = fixp: -1644.7757568359375
+  handle = int: 597
+  expire_time = fixp: 2147483647
+[/]
+[#1000214]
+  class = sid: CParticleObject
+  ID = sid: Fire_Smoke
+  [$vars]
+    handle = int: 603
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1.399999980926513671875
+  x = fixp: 9251.6181640625
+  y = fixp: 10470.2138671875
+  z = fixp: -1643.064208984375
+  handle = int: 603
+  expire_time = fixp: 2147483647
+[/]
+[#1000215]
+  class = sid: CPointLightObject
+  ID = sid: Light
+  [$vars]
+    dimmer = fixp: 3.400000095367431640625
+    max_dist = fixp: 1640
+    dragging_start_pos = FLOAT3: 9351.137695,10638.475586,-1604.377441
+    difuse_color = color: 254,80,3
+    handle = int: 633
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 380
+  scale = fixp: 1
+  x = fixp: 9291.6064453125
+  y = fixp: 10468.021484375
+  z = fixp: -1262.902587890625
+  handle = int: 633
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000216]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 9295.853516,9638.874023,-1069.589355
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 25
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -900
+  scale = fixp: 1
+  x = fixp: 9295.853515625
+  y = fixp: 9638.8740234375
+  z = fixp: -1069.58935546875
+  handle = int: 25
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000217]
+  class = sid: CEmbelishment
+  ID = sid: cobble_stone2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 7830.011719,10715.267578,-494.114319
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 3.000000,3.000000
+    handle = int: 348
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.3999998569488525390625
+  x = fixp: 7830.01171875
+  y = fixp: 10715.267578125
+  z = fixp: -494.11431884765625
+  handle = int: 348
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000218]
+  class = sid: CEmbelishment
+  ID = sid: cobble_stone1
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8053.132813,10793.771484,-110.300842
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 4.000000,4.000000
+    handle = int: 350
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.2000000476837158203125
+  x = fixp: 8053.1328125
+  y = fixp: 10793.771484375
+  z = fixp: -110.30084228515625
+  handle = int: 350
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000219]
+  class = sid: CEmbelishment
+  ID = sid: stone9
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8673.578125,10745.675781,-424.722504
+    tex_id = int: 13
+    handle = int: 352
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 3.1999990940093994140625
+  x = fixp: 8673.578125
+  y = fixp: 10745.67578125
+  z = fixp: -424.722503662109375
+  handle = int: 352
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 120
+[/]
+[#1000220]
+  class = sid: CEmbelishment
+  ID = sid: common_stone10
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8272.995117,10744.751953,-361.263489
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 354
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -8
+  scale = fixp: 1
+  x = fixp: 8272.9951171875
+  y = fixp: 10744.751953125
+  z = fixp: -361.26348876953125
+  handle = int: 354
+  roll = fixp: 16.3000011444091796875
+  pitch = fixp: -65.600006103515625
+  yaw = fixp: 0
+[/]
+[#1000221]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_Rock07
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 8405.494141,11047.104492,-42.635406
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 2.000000,2.000000
+    handle = int: 357
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 8405.494140625
+  y = fixp: 11047.1044921875
+  z = fixp: -42.635406494140625
+  handle = int: 357
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000222]
+  class = sid: CEmbelishment
+  ID = sid: Sharp_Rock06
+  [$vars]
+    takes_ao = int: 0
+    tex_scale_auto = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 2.000000,2.000000
+    handle = int: 359
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 1
+  x = fixp: 8589.79296875
+  y = fixp: 10977.2802734375
+  z = fixp: -81.21453857421875
+  handle = int: 359
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000223]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    handle = int: 361
+    clone_mode_int = int: 128
+    dragging_start_pos = FLOAT3: 7426.625000,10391.719727,-1148.206299
+  [/]
+  offset = fixp: -400
+  scale = fixp: 1
+  x = fixp: 7560.421875
+  y = fixp: 10902.150390625
+  z = fixp: -1376.57470703125
+  handle = int: 361
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000224]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11326.812500,10498.101563,83.065033
+    passable = int: 1
+    handle = int: 277
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 290
+  scale = fixp: 1
+  x = fixp: 11326.8125
+  y = fixp: 10498.1015625
+  z = fixp: 83.065032958984375
+  handle = int: 277
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000225]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11153.810547,10537.291992,-61.054016
+    passable = int: 1
+    handle = int: 310
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 570
+  scale = fixp: 1
+  x = fixp: 11153.810546875
+  y = fixp: 10537.2919921875
+  z = fixp: -61.05401611328125
+  handle = int: 310
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]
+[#1000226]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11543.997070,10402.289063,36.093628
+    passable = int: 1
+    handle = int: 312
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -60
+  scale = fixp: 1
+  x = fixp: 11543.9970703125
+  y = fixp: 10402.2890625
+  z = fixp: 36.0936279296875
+  handle = int: 312
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -45
+[/]
+[#1000227]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpirePart2
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11462.858398,10353.603516,-167.476166
+    passable = int: 1
+    handle = int: 314
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -250
+  scale = fixp: 1
+  x = fixp: 11462.8583984375
+  y = fixp: 10353.603515625
+  z = fixp: -167.476165771484375
+  handle = int: 314
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -45
+[/]
+[#1000228]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11279.428711,11136.703125,-2125.613770
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 338
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -500
+  scale = fixp: 1
+  x = fixp: 11279.4287109375
+  y = fixp: 11136.703125
+  z = fixp: -2125.61376953125
+  handle = int: 338
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 0
+[/]
+[#1000229]
+  class = sid: CEmbelishment
+  ID = sid: StoneSpire_Dark
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11093.117188,10791.592773,-1925.950562
+    tex_scale_auto = int: 0
+    tex_scale = FPOINT2: 1.000000,1.000000
+    handle = int: 340
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: -680
+  scale = fixp: 1
+  x = fixp: 11093.1171875
+  y = fixp: 10791.5927734375
+  z = fixp: -1925.9505615234375
+  handle = int: 340
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: 60
+[/]
+[#1000230]
+  class = sid: CEmbelishment
+  ID = sid: cobble_stone1
+  [$vars]
+    takes_ao = int: 0
+    dragging_start_pos = FLOAT3: 11655.836914,10618.333008,124.731613
+    tex_scale_auto = int: 0
+    passable = int: 0
+    tex_id = int: 13
+    tex_scale = FPOINT2: 4.000000,4.000000
+    handle = int: 422
+    clone_mode_int = int: 128
+  [/]
+  offset = fixp: 0
+  scale = fixp: 2.2000000476837158203125
+  x = fixp: 11655.8369140625
+  y = fixp: 10618.3330078125
+  z = fixp: 124.7316131591796875
+  handle = int: 422
+  roll = fixp: 0
+  pitch = fixp: 0
+  yaw = fixp: -60
+[/]

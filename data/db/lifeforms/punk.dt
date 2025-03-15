@@ -1,0 +1,4 @@
+Mob Punk : BaseAnimal {
+  name = "Punk"
+  model = data/models/lifeforms/Punk/Punk.kfm
+}

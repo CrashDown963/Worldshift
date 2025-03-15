@@ -1,0 +1,33 @@
+--
+-- bullet traces
+--
+
+trace light_inf {
+	model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+	variant	= 0
+	start_dist = 10
+	end_dist = 10
+	frequency	= 3
+	ttl	= 1
+	length = 120
+	target_size	= 3
+	velocity	= 70
+	length_end = 120
+	instances = 128
+	emit = 255,255,255
+}
+
+trace light_inf1 {
+	model = Data/Models/Effects/TraceBullet/trace_bullet.nif	
+	variant	= 0
+	start_dist = 50
+	end_dist = 50
+	frequency	= 3
+	ttl	= 1
+	length = 120
+	target_size	= 3
+	velocity	= 70
+	length_end = 120
+	instances = 128
+	emit = 255,255,255
+}

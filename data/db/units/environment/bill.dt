@@ -1,0 +1,149 @@
+Mob Bill : BaseBoss  {
+  name = "Bill"
+  icon = 5,27
+  model = data\Models\Units\OnehandMutant\OnehandMutant.kfm
+  destruction = animation
+  scale = 2.5
+  conv_icon_row = 3
+  conv_icon_col = 3
+  boss_icon = 1,2
+  
+  hp = 50000
+  armor = 25
+  range = 250
+  --min_attack_range = 100
+  damage = 350
+  
+  --immune_to :{ Confusion }
+  
+  ondeath = SayPrm { text_key = str:"bill dead" }
+  
+  animation {
+    anim_seq HIT2_PREPARE = loop {
+      Hit_2_in = once
+      Hit_2_loop
+    }
+  }
+
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+    Hit_2_loop = data/sounds/effects/bill/chain swing.wav
+    idle = data/sounds/effects/bill/idle/
+  }
+  jungle_snd = data/sounds/effects/bill/jungle crowd/
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+ 
+    fire_node = ROOT
+    shoot_anim = Hit_1
+    
+    damage = 0
+    spot_impact = 0
+    spot_impact_type = melee
+    projectile = instant {
+      effect = E_BillHit
+    }
+    
+    aim_tolerance_pitch = 180
+    aim_tolerance_yaw = 45
+  }
+  
+  abilities {
+    Stomp {
+      when : abi.fight
+      chance = 10
+      --cooldown = 15
+      range = 500
+      target = enemy_pos
+      
+      cast {
+        prepare { 
+          anim = HIT2_PREPARE 
+          duration = 6
+        }
+        finish  { anim = Hit_2_out }
+      }
+      effect = E_set {
+        sound = data/sounds/effects/bill/chain hit/
+        effect = E_damage {
+          area = 1500
+          amount = 420
+          friendly_fire = 0
+        }
+        effect = S_multistun {
+          duration = 5
+          multi_area = 1500 {  
+            anim = data/models/effects/Puffs&Dust/HugeDirtImpact.nif
+            scale = 1
+          }
+          react = stun
+          epicenter {
+            physics_radius = 1500
+            physics_power = 300
+            physics_elevation = 1600
+            camera_shake = 1
+          }
+        }
+      }
+    }  
+
+    Shift {
+      chance = 100
+      when : abi.combat
+      cooldown = 30
+      target = enemy
+      range = 2500
+      min_range = 750
+      cast {
+        prepare { anim = Hit_2_in }
+        finish  { 
+           anim = Hit_2_out
+        }
+      }
+      damage = 0
+      damage_type = melee
+      effect = E_set {
+        sound = data/sounds/effects/bill/shift hit.wav
+        effect = E_teleport {
+          tgt_pos = in_front
+          change_target = 1
+        }
+        effect = E_damage {
+          area = 1500
+          amount = 150
+          friendly_fire = 0
+        }
+        effect = S_multistun {
+          duration = 8
+          multi_area = 500 {  
+            anim = data/models/effects/Puffs&Dust/HugeDirtImpact.nif
+            scale = 1
+          }
+          react = stun
+          epicenter {
+            physics_radius = 500
+            physics_power = 300
+            physics_elevation = 1600
+            camera_shake = 1
+          }
+        }
+      }
+    }
+  
+  }  
+  
+}
+
+CMultiEffect E_BillHit {
+  sound = data/Sounds/Effects/Bill/crank hit/
+  effect = CDamageEffect
+  multi_area = var:range
+  cone_angle = 170
+  amount = var:damage
+  epicenter {
+    physics_radius = var:range
+    physics_power = 1000
+    physics_elevation = 800
+  }
+}

@@ -1,0 +1,91 @@
+Building SquadModule : BaseBuilding {
+  model = Data/Models/buildings/SquadModule/SquadModule.kfm {
+    constr_phase_0 = Data/Models/buildings/SquadModule/SquadModule_BldPhase00.kfm
+    constr_phase_1 = Data/Models/buildings/SquadModule/SquadModule_BldPhase01.kfm
+    constr_phase_2 = Data/Models/buildings/SquadModule/SquadModule_BldPhase02.kfm
+    constr_phase_3 = Data/Models/buildings/SquadModule/SquadModule_BldPhase03.kfm
+    constr_phase_4 = Data/Models/buildings/SquadModule/SquadModule_BldPhase04.kfm
+    constr_phase_Rdy = Data/Models/buildings/SquadModule/SquadModule_BldPhaseRdy.kfm
+  }
+  
+  race = humans
+  maxpoplimit = 5
+
+  stats :{
+    hp = 4000
+  }
+
+  
+  actions {
+  }
+
+  animation {
+    anim_seq power_activate {
+      power_in = once
+      power_idle
+    }
+
+    power_deactivate = power_out
+  }
+
+  take_auras :{ 
+    PowerCoreAura {
+      anim_activate = power_activate
+      anim_deactivate = power_deactivate
+    }
+  }
+
+  construction {
+    phase_0 {
+      model = constr_phase_0
+      pt_work_1 { 
+        animations { work_up }
+      }
+      pt_work_2 : pt_work_1
+      pt_work_3 {
+		animations { work_down; work_up }
+	  }
+      pt_work_4 : pt_work_3
+      pt_work_5 { 
+        animations { work_down }
+      }
+      pt_work_6 : pt_work_5
+    }
+    phase_1 : phase_0 {
+      model = constr_phase_1
+      play_anim = idle1
+    }
+
+    phase_2 : phase_1 {
+      model = constr_phase_2
+      play_anim = idle2
+      pt_work_1 { 
+        animations { work_up }
+      }
+      pt_work_2 : pt_work_1
+      pt_work_3 {
+		animations { work_down; work_up }
+	  }
+      pt_work_4 : pt_work_3
+      pt_work_5 { 
+        animations { work_down }
+      }
+      pt_work_6 : pt_work_5
+
+    }
+    phase_3 : phase_2 {
+      model = constr_phase_3
+      play_anim = idle3
+    }
+    phase_4 : phase_2 {
+      model = constr_phase_4
+      play_anim = idle4
+    }
+    
+    phase_5 : phase_2 {
+      model = constr_phase_Rdy
+      play_anim = idle5
+      ready_anim = ready_anim
+    }
+  }
+}

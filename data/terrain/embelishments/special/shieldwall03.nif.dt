@@ -1,0 +1,7 @@
+model = {
+  file = str:"data\terrain\embelishments\special\shieldwall03.nif";
+  animation = {
+    loop = fixp:"5";
+    duration = fixp:"0";
+  }
+}

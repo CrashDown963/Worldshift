@@ -1,0 +1,2 @@
+id	class	texture	prev_tex_nrc	prev_tex_hrc	prev_tex_prc	next_tex_nrc	next_tex_hrc	next_tex_prc	thumb_tex_nrc	thumb_tex_hrc	thumb_tex_prc	athumb_tex_nrc	athumb_tex_hrc	athumb_tex_prc
+scroll_def	CBScrollUI::CScrollLook	DATA/Textures/UI/ui.tga	256,0,40x40	296,0,40x40	336,0,40x40	256,40,40x40	296,40,40x40	336,40,40x40	256,80,40x40	296,80,40x40	336,80,40x40	256,120,40x40	256,120,40x40	256,120,40x40

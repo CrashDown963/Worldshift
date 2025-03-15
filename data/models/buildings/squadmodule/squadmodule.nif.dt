@@ -1,0 +1,247 @@
+model = {
+  file = str:"data\models\buildings\squadmodule\squadmodule.nif";
+  animation = {
+    loop = fixp:"1.5";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"ROOT";
+    translation = xpoint3:"0,0,0";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+    #1 = {
+      scale = fixp:"1";
+      name = str:"ROOT NonAccum";
+      translation = xpoint3:"0,0,0";
+      rotation = {
+        0 = xpoint3:"1,0,0";
+        1 = xpoint3:"0,1,0";
+        2 = xpoint3:"0,0,1";
+      }
+      #0 = {
+        scale = fixp:"1";
+        name = str:"ROOT_layer1";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"Squad_module";
+          translation = xpoint3:"0,0,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+          #0 = {
+            scale = fixp:"1";
+            name = str:"__NDL_MultiMtl_Node";
+            translation = xpoint3:"0,0,0";
+            rotation = {
+              0 = xpoint3:"1,0,0";
+              1 = xpoint3:"0,1,0";
+              2 = xpoint3:"0,0,1";
+            }
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"pt_entry_1";
+          translation = xpoint3:"0,-400,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"pt_entry_2";
+          translation = xpoint3:"0,400,0";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #4 = {
+          scale = fixp:"1";
+          name = str:"pt_drone_01";
+          translation = xpoint3:"-134.058624267578125,-193.001678466796875,316.9224853515625";
+          rotation = {
+            0 = xpoint3:"0.70710694789886474609375,0.707106649875640869140625,0";
+            1 = xpoint3:"-0.707106649875640869140625,0.70710694789886474609375,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #5 = {
+          scale = fixp:"1";
+          name = str:"pt_drone_02";
+          translation = xpoint3:"118.9972381591796875,-202.0283203125,316.9224853515625";
+          rotation = {
+            0 = xpoint3:"0.707106769084930419921875,-0.707106769084930419921875,0";
+            1 = xpoint3:"0.707106769084930419921875,0.707106769084930419921875,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #6 = {
+          scale = fixp:"1";
+          name = str:"pt_drone_03";
+          translation = xpoint3:"-149.1241455078125,-3.5837495326995849609375,316.9224853515625";
+          rotation = {
+            0 = xpoint3:"0,1,0";
+            1 = xpoint3:"-1,0,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #7 = {
+          scale = fixp:"1";
+          name = str:"pt_drone_04";
+          translation = xpoint3:"158.0492706298828125,-3.5837495326995849609375,316.9224853515625";
+          rotation = {
+            0 = xpoint3:"0,-1,0";
+            1 = xpoint3:"1,0,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #8 = {
+          scale = fixp:"1";
+          name = str:"pt_drone_05";
+          translation = xpoint3:"-110.072723388671875,200.094482421875,316.9224853515625";
+          rotation = {
+            0 = xpoint3:"-0.707106769084930419921875,0.707106769084930419921875,0";
+            1 = xpoint3:"-0.707106769084930419921875,-0.707106769084930419921875,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #9 = {
+          scale = fixp:"1";
+          name = str:"pt_drone_06";
+          translation = xpoint3:"118.5511474609375,189.6093292236328125,316.9224853515625";
+          rotation = {
+            0 = xpoint3:"-0.707106769084930419921875,-0.707106769084930419921875,0";
+            1 = xpoint3:"0.707106769084930419921875,-0.707106769084930419921875,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #10 = {
+          scale = fixp:"1";
+          name = str:"LightBillboard02";
+          translation = xpoint3:"12.11532878875732421875,224.8023681640625,538.7366943359375";
+          rotation = {
+            0 = xpoint3:"0.996123611927032470703125,0.087964273989200592041015625,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"-0.087964273989200592041015625,0.99612367153167724609375,0";
+          }
+        }
+        #11 = {
+          scale = fixp:"1";
+          name = str:"LightBillboard01";
+          translation = xpoint3:"-6.58101558685302734375,223.40753173828125,625.6217041015625";
+          rotation = {
+            0 = xpoint3:"0,0,-1";
+            1 = xpoint3:"0.52354991436004638671875,0.851994991302490234375,0";
+            2 = xpoint3:"0.851994991302490234375,-0.52354991436004638671875,0";
+          }
+        }
+        #12 = {
+          scale = fixp:"1";
+          name = str:"FanDummy01";
+          translation = xpoint3:"-49.717739105224609375,66.9409027099609375,313.769744873046875";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,1,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+        #13 = {
+          scale = fixp:"1";
+          name = str:"FanDummy02";
+          translation = xpoint3:"49.43987274169921875,67.26342010498046875,313.769744873046875";
+          rotation = {
+            0 = xpoint3:"0,0.999999940395355224609375,0";
+            1 = xpoint3:"-0.999999940395355224609375,0,0";
+            2 = xpoint3:"0,0,1";
+          }
+        }
+      }
+      #1 = {
+        scale = fixp:"1";
+        name = str:"ROOT_Layer2";
+        translation = xpoint3:"0,0,0";
+        rotation = {
+          0 = xpoint3:"1,0,0";
+          1 = xpoint3:"0,1,0";
+          2 = xpoint3:"0,0,1";
+        }
+        #0 = {
+          scale = fixp:"1";
+          name = str:"BoneDummy01";
+          translation = xpoint3:"-205.363037109375,98.1156158447265625,279.926788330078125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+        #1 = {
+          scale = fixp:"1";
+          name = str:"BoneDummy02";
+          translation = xpoint3:"-205.363037109375,-3.59470367431640625,279.926788330078125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+        #2 = {
+          scale = fixp:"1";
+          name = str:"BoneDummy03";
+          translation = xpoint3:"-205.363037109375,-105.305023193359375,279.926788330078125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+        #3 = {
+          scale = fixp:"1";
+          name = str:"BoneDummy04";
+          translation = xpoint3:"204.976470947265625,-105.305023193359375,279.926788330078125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+        #4 = {
+          scale = fixp:"1";
+          name = str:"BoneDummy05";
+          translation = xpoint3:"204.976470947265625,98.1156158447265625,279.926788330078125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+        #5 = {
+          scale = fixp:"1";
+          name = str:"BoneDummy06";
+          translation = xpoint3:"204.976470947265625,-3.59470367431640625,279.926788330078125";
+          rotation = {
+            0 = xpoint3:"1,0,0";
+            1 = xpoint3:"0,0,-1";
+            2 = xpoint3:"0,1,0";
+          }
+        }
+      }
+    }
+  }
+}

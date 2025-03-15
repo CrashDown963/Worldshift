@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\bushes\desert\yucca-bush.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Object02";
+    translation = xpoint3:"-0.3479030132293701171875,0.1556799411773681640625,3.53067684173583984375";
+    rotation = {
+      0 = xpoint3:"0.993903338909149169921875,0,-0.110254712402820587158203125";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0.110254712402820587158203125,0,0.993903338909149169921875";
+    }
+  }
+}

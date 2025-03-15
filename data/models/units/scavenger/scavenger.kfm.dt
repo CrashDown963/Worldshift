@@ -1,0 +1,136 @@
+model = {
+  file = str:"data\models\units\scavenger\scavenger.kfm";
+  animations = {
+    idle = {
+      loop = int:"1";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+    idle_var = {
+      loop = int:"1";
+      duration = fixp:"3.30000019073486328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.30000019073486328125";
+        }
+      }
+    }
+    idle_rare = {
+      loop = int:"1";
+      duration = fixp:"3.299999713897705078125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.299999713897705078125";
+        }
+      }
+    }
+    run = {
+      loop = int:"1";
+      duration = fixp:"2";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-752.67877197265625,0";
+        time = fixp:"2";
+        distance = fixp:"752.67877197265625";
+        speed = fixp:"376.339385986328125";
+      }
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2";
+        }
+      }
+    }
+    shoot = {
+      loop = int:"1";
+      duration = fixp:"1.33333301544189453125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.33333301544189453125";
+        }
+      }
+    }
+    Hit_1 = {
+      loop = int:"0";
+      duration = fixp:"2.3333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.1333332061767578125";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.3333339691162109375";
+        }
+      }
+    }
+    Hit_2 = {
+      loop = int:"0";
+      duration = fixp:"2.46666717529296875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"action";
+          time = fixp:"1.766666412353515625";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.46666717529296875";
+        }
+      }
+    }
+    die = {
+      loop = int:"0";
+      duration = fixp:"2.3333339691162109375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"shake";
+          time = fixp:"1.733333587646484375";
+        }
+        #2 = {
+          name = str:"end";
+          time = fixp:"2.3333339691162109375";
+        }
+      }
+    }
+  }
+}

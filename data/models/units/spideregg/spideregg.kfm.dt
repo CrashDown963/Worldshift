@@ -1,0 +1,61 @@
+model = {
+  file = str:"data\models\units\spideregg\spideregg.kfm";
+  animations = {
+    idle_1 = {
+      loop = int:"1";
+      duration = fixp:"1.30000007152557373046875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.30000007152557373046875";
+        }
+      }
+    }
+    idle_2 = {
+      loop = int:"1";
+      duration = fixp:"1.63333332538604736328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"1.63333332538604736328125";
+        }
+      }
+    }
+    idle_3 = {
+      loop = int:"1";
+      duration = fixp:"2.16666698455810546875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.16666698455810546875";
+        }
+      }
+    }
+    idle_4 = {
+      loop = int:"1";
+      duration = fixp:"2.1333332061767578125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"2.1333332061767578125";
+        }
+      }
+    }
+  }
+}

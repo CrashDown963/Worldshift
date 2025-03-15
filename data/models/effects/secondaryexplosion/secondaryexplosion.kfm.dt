@@ -1,0 +1,19 @@
+model = {
+  file = str:"data\models\effects\secondaryexplosion\secondaryexplosion.kfm";
+  animations = {
+    idle = {
+      loop = int:"0";
+      duration = fixp:"3.333333492279052734375";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"3.333333492279052734375";
+        }
+      }
+    }
+  }
+}

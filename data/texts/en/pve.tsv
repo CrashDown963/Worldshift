@@ -1,0 +1,148 @@
+﻿sid	text
+	
+AcidBug.name	Acid Bug
+Adam.name	Adam
+AlienBase.name	Alien
+Announcer.name	Announcer
+Ape.name	Aypard
+Arachnoid.name	Arachnoid
+Armadillo.name	Armadillo
+Arna ni'Varra.name	Arna ni’Varra
+BaseAnimal.name	Animal
+BaseBuilding.name	Building
+BaseMachineMob.name	Machine
+BaseTurret.name	Turret
+BattleYamu.name	Battle Yamu
+Big_bird.name	Bird
+Big_sloth.name	Sloth
+BigOne.name	The Big One
+Bird01.name	Bird
+BSABattleYamu.name	Battle Yamu
+BSAHowlingHorror.name	Howling Horror
+Carnother.name	Carnother
+Commander Kean.name	Commander Kean
+Crococeratops.name	Crococeratops
+DefaultAreaAction.name	Area
+DefencePost.name	Defense Post
+DefencePost.descr	An automated defense turret
+--Defender.name	Defender
+Denkar ni'Varra.name	Denkar ni’Varra
+Eel.name	Eel
+Eji.abilities.Charming.name	Charm
+Eji.abilities.Charming.text	Enemies will attack someone else, if possible.
+Eji.abilities.FullRestoration.name	Full Restoration
+Eji.abilities.FullRestoration.text	Completely heals nearby units. Requires full concentration.
+Eji.abilities.Restore.name	Restore
+Eji.abilities.Restore.text	Restores friendly units’ hit points
+Eji.name	Eji
+FatDealer.name	Fat Dealer
+FireDealer.name	Fire Dealer
+Frank.name	Frank N. Stein
+Ganthu.name	Ganthu
+GarbageAssaulter.name	Garbage Assaulter
+GarbageHealer.name	Garbage Healer
+GateMob.name	Gate
+Gates.name	Gate
+GiantMutant.name	Giant Mutant
+GiantSpiderEgg.name	Giant Scorpion Egg
+Gorgar.name	Gorgar the Late
+Greenskin.name	Green Skin
+GreenskinWild.name	Wild Green Skin
+Havoc.name	Havoc
+HeavyBot.name	Heavy Bot
+HeavyInfantry.name	Heavy Infantry
+HF1337.name	HF1337
+HighPriest33.name	High Priest XLII
+HumanShip.name	Personnel carrier
+HumanShip.descr	 
+Hut.name	Hut
+Insect.name	Insect
+Judge Dread.name	Judge Dread
+Judge Smirnov.name	Judge Smirnov
+Judge Davidov.name	Judge Davidov
+Absolute Judge.name	Absolute Judge
+JunkLurker.name	Junk Lurker
+Kai_Rider.name	Kai Rider
+Kikkert.name	Kikkert
+King_Beetle.name	King Beetle
+Kirxxa.name	Kirxxa
+krocus.name	Krockus
+Kuna.name	Kuna ni’Dahl
+M16DetonateCharge1Action.name	Detonate the first charge
+M16DetonateCharge2Action.name	Detonate the second charge
+M16DetonateCharge3Action.name	Detonate the third charge
+MachineUnit.name	Machine
+Mercenary.name	Mercenary
+Millenium Frogger.name	Millennium Eagle
+Mola Ramm.name	Mola Ramm
+MutantBird.name	Bird
+MutHouse.name	Mutant House
+Nightmare.name	Nightmare
+Nomad.name	Nomad
+Onkar ni'Varra.name	Onkar ni’Varra
+Onkar.name	Onkar ni’Varra
+PickM23Artifact.name	Examine ruins
+PsiResonator.name	The Psi Resonator
+Pterodacto.name	Ptero
+Ragho.name	Ragho
+Raptor.name	Raptor
+Rhino.name	Rhino
+ROMDefenceTower.name	Defense Tower
+ROMDefenceTurret.name	Defense Turret
+ROMDroid.name	Droid
+ROMGate.name	Gate
+ROMGateControl.name	Gate Control
+ROMHBot.name	H-Bot
+ROMKillingTurret.name	Killing Turret
+ROMMegaCannon.name	Megacannon
+ROMMegaCannonPowerCore.name	Megacannon Power Core
+ROMP2Reinforce.name	Call Reinforcements
+ROMPowerGenerator.name	Power Generator
+ROMRipper.name	Ripper
+ROMShieldGenerator.name	Shield Generator
+ROMTowerControl.name	Tower Control
+ROMZBot.name	Z-Bot
+SavageBrute.name	Ga’ro
+Scavenger.name	Scavenger
+Scientist.name	Scientist
+Scorpion.name	Scorpion
+Scout.name	Scout
+SpiderEgg.name	Scorpion Egg
+SpiderNest.name	Spider Nest
+SpiderSpawn.name	Boom Bug
+SpittingScorpion.name	Spitting Scorpion
+Switch.descr	Select a suitable unit and right-click the switch to activate it.
+Switch.name	Switch
+Tharksh.name	Tharksh
+TransportShip.name	Transport ship
+Trashmaster Ditz.name	Trashmaster Ditz
+Trashmaster Ulv.name	Trashmaster Ulv
+Triad.name	Triad
+Trogloc.name	Trogloc
+Turtle.name	Turtle
+UnderworldUnit.name	Underworld Creature
+Unihorn.name	Unihorn
+UseSwitch.name	Use
+Vasilii.name	Vasiliy
+VenomousScorpion.name	Venomous Scorpion
+Wall.name	Wall
+WildBrute.name	Wild Ga’ro
+Xessk.name	Xessk
+YellowSavage.name	Yellow Ga’ro
+RanBoo.name	Ran Boo
+MaleWorm.name	Male Worm
+Punk.name	Punk Lizard
+SmallWorm.name	Small Worm
+FemaleWorm.name	Female Worm
+InfantMaleWorm.name	Infant Male Worm
+InfantFemaleWorm.name	Infant Female Worm
+KharumDrone.name	Scout Drone
+Queen.name	Queen
+Scorpo.name	Scorpo
+BigMutant.name	Purple Jack
+Bill.name	Bill the Rocket
+GuardDroid.name	Guard Droid
+Mech0.name	Mech 0
+KharumTacticalDrone.name	Field Tactical Drone
+QueenProtector.name	Queen Protector
+Xelrad.name	Xelrad

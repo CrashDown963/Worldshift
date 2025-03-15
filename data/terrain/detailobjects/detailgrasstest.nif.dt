@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\detailobjects\detailgrasstest.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box17";
+    translation = xpoint3:"0.46658229827880859375,-0.04784393310546875,-0.190097033977508544921875";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

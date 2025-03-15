@@ -1,0 +1,292 @@
+Unit Shaman : BaseUnit {
+  name = "Shaman"
+  descr = "Shaman Placeholder Desc."
+  model = Data/Models/Units/Shaman/Shaman.kfm
+  race = mutants
+  officer = 1
+  icon = 2,5
+  
+  physics {
+    default = data/models/units/Trooper/TownGuard_Proxy.pml
+    die = Data/Models/Units/Shaman/Shaman.pml
+  }
+  destruction = ragdoll
+  
+  sounds {
+    start = data/speech/summoning/shaman summoned.wav
+    attack = data/speech/confirmations/shaman/shaman attack/
+    select = data/speech/selecting/shaman select/
+    joke = data/speech/selecting/shaman joke/
+    confirm = data/speech/confirmations/shaman/shaman confirm/
+    destruction = data/speech/deaths/shaman death/
+    engage = data/speech/engage alerts/shaman engage/
+    damage = data/speech/engage alerts/shaman damage/
+  }
+
+  tags = unit, organic
+  impacts : LivingUnitImpacts
+
+  stats :{
+    hp = 420
+    range = 1600
+    psi = 420
+    armor = 0
+    damage = 10
+
+    drain_life_chance = 25
+    drain_life_purge = 0
+    drain_life_boost = 40
+    
+    rejuvenation_psicost = 120
+    rejuvenation_amount = 140
+    
+    purify_psicost = 80
+    purify_range = 2000
+   
+  }
+
+  renew_heal_area = 750
+  
+  speed = 450
+  
+  drain_life_boost_modifier = stat:drain_life_boost * 10
+  
+  drain_life_damage = stat:damage 
+  drain_life_heal = stat:damage * 4
+  
+  rejuvenation_range = stat:range
+
+  xp = 0
+  take_auras : { RestorationCoreAura }
+  
+  abilities {
+    DrainLife {
+      name = "Drain Life"
+      text = "Shaman has [stat:drain_life_chance]% chance to inflict [stat:damage] damage to it's current target and to heal all living friendly untis in a small area around himself for [drain_life_heal] hit points."
+      icon = 3,0
+      when = fight
+      target = current --{ tags = organic }
+      chance = stat:drain_life_chance
+      cast {
+        prepare {
+          anim = cast_drnlife_prepare
+        }
+        finish {
+          anim = cast_finish
+        }
+      }
+
+      projectile = beam {
+        start_point = pt_hand
+        beam = DrainLifeLightning -- { add relevant parameters for tune: scale, emittanc, etc }
+		duration = 0.2
+      }
+
+      effect = E_set {
+        effect = E_damage {
+          amount = var:drain_life_damage
+          react = drain_life
+        }
+        effect = E_heal {
+          amount = var:damage
+          amount_multiplier_perc = var:drain_life_boost_modifier
+          target_tags = organic
+          area = 1000 { anim = data/models/effects/magic/ReliefAreaEffect.kfm }
+          target_self = 1
+        }
+        effect = E_cleanse {
+          amount = 1
+          ally = 1
+          react = cleanse
+          active = stat:drain_life_purge
+        }
+      }
+    }
+    
+    AIRenew {
+      action = RenewAction
+      when   : abi.always
+      target = ally { 
+        health_hp_taken = stat:rejuvenation_amount;
+        aoe_range = 500;
+        aoe_min_wounded_count = 2
+        aoe_min_wounded_health = 400
+      }
+      range = 2000
+    }
+  }
+  
+  actions : BaseUnit.actions {
+    RenewAction
+    PurifyAction
+    MakeShrine -- fake
+  }
+
+  attack_spell = PyrokinesisSpell
+  sounds {
+    destruction = data/sounds/destruction/units/humanoid/
+  }
+ 
+  animation {
+    cast_pyrokinesis_prepare = cast_praparation
+    cast_pyrokinesis_finish = cast_finish
+
+    cast_drnlife_channeling = cast_praparation
+    cast_drnlife_prepare = cast_praparation
+    cast_drnlife_finish = drainpsi_start
+    
+    cast_rejuvenation_prepare = cast_praparation
+    cast_rejuvenation_finish = drainpsi_start
+    
+    cast_purify_prepare = cast_praparation
+    cast_purify_finish = drainpsi_start
+  }
+
+  -- drnlife cast spell
+  drnlife_range = stat:range * 0.9
+  drnlife_max_range = stat:range
+  drnlife_duration = 5
+  drnlife_beam_timelife = 2.0
+  drnlife_beam_spawn_time = 1
+  drnlife_beam = DrainLifeLightning
+  drnlife_react = drain_life
+  drnlife_source = pt_hand
+  drnlife_attach = data/models/effects/magic/drainhands.nif
+  drnlife_beam_color = 0.8,0.6,0.1
+  drnlife_heal_perc = 30
+
+  cost : pvp.mutants.unit_costs.Officer
+  cost_sloc : pvp.mutants.sloc_costs.Officer
+}
+
+
+PyrokinesisSpell {
+  cast {
+    prepare {
+      anim = cast_pyrokinesis_prepare
+      duration = 1
+      attach {
+        pt_hand = data/models/effects/magic/FireHands.nif
+      }
+    }
+    finish {
+      anim = cast_pyrokinesis_finish
+      sound = data/sounds/units/highpriest/pyro/
+      attach {
+        pt_hand = data/models/effects/magic/FireFXFinish.nif
+      }
+    }
+  }
+
+  projectile = chase {
+    model = data/models/effects/magic/fireball.nif {
+		CTrailController trail_smoke {
+          emitter = RootDummy
+          material = data/models/Effects/Trails/Trail_Hellfire.nif
+          tex_ratio = float: 2.5
+		  start_width = 40
+    	  end_width = 180
+    	  ttl = 10
+    	  --simple_time = 90
+    	  
+
+          time0 = 0
+          color0 = colora: 1, 0.5, 0.2, 1
+
+          time1 = 5
+          color1 = colora: 1, 0.3, 0.2, 0.8
+
+          time2 = 8
+          color2 = colora: 1, 0.2, 0.1, 0.5
+
+          time3 = 40
+          color3 = colora: 1, 0.2, 0.1, 0.5
+
+          time4 = 100
+          color4 = colora: 0.3, 0.3, 0.3, 0
+		}
+	}
+    speed = 2500
+    scale = 0.25
+  }
+  
+  effect = E_damage {
+    amount = stat:damage
+    react = fire
+    can_crit = 1
+  }
+}
+
+
+CastRejuvenation {
+  power = stat:rejuvenation_psicost
+  
+  cast {
+    finish {
+      anim = cast_rejuvenation_finish
+      attach {
+        pt_hand = data/models/effects/magic/HealHandsBandage.nif
+        pt_hand = data/models/effects/magic/HealFXFinish.nif
+      }
+    }
+  }
+  
+  effect = E_heal {
+    amount = stat:rejuvenation_amount
+    sound = data/sounds/effects/common/renew.wav
+    area = var:renew_heal_area { anim = data/Models/Effects/Magic/AuraHeal.nif }
+    target_tags = organic
+    react = relief
+  }
+}
+
+action RenewAction {
+  name = "Renew"
+  descr = "Shaman uses his power to instantly restore [stat:rejuvenation_amount] hit points to all friendly units in the pointed area."
+  visible = 1
+  tags = location
+  icon = 10,3
+  program = PrgRejuvenation
+  min_power = stat:rejuvenation_psicost
+  feedback = DecalFeedback
+  max_range = stat:range
+  cooldown = 10
+  delay_cooldown = 1
+  aoe_radius = var:renew_heal_area
+}
+
+CSpellAction PurifyAction {
+  name = "Purify"
+  descr = "Instantly removes all harmful effects from all friendly units in the selected area."
+  visible = 1
+  tags = location
+  icon = 4,7
+  min_power = stat:purify_psicost
+  feedback = DecalFeedback
+  max_range = stat:range
+  cooldown = 6
+  aoe_radius = 600
+
+  spell {
+    power = stat:purify_psicost
+    
+    cast {
+      finish {
+        anim = cast_purify_finish
+        attach {
+          pt_hand = data/models/effects/magic/HealHandsBandage.nif
+          pt_hand = data/models/effects/magic/HealFXFinish.nif
+        }
+      }
+    }
+
+    effect = E_multicleanse {
+      sound = data/sounds/effects/common/purge.wav
+      amount = 100
+      ally = 1
+      max_rank = 6
+      multi_area : aoe_radius { anim = data/models/effects/magic/Purify_area.nif }
+      react = cleanse
+    }
+  }
+}

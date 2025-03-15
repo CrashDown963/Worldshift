@@ -1,0 +1,47 @@
+model = {
+  file = str:"data\models\units\trisat\trisattriad.kfm";
+  animations = {
+    dig_in = {
+      loop = int:"0";
+      duration = fixp:"0.666666686534881591796875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.666666686534881591796875";
+        }
+      }
+    }
+    idle = {
+      loop = int:"1";
+      duration = fixp:"0.633333384990692138671875";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.633333384990692138671875";
+        }
+      }
+    }
+    dig_out = {
+      loop = int:"0";
+      duration = fixp:"0.63333332538604736328125";
+      keyframes = {
+        #0 = {
+          name = str:"start";
+          time = fixp:"0";
+        }
+        #1 = {
+          name = str:"end";
+          time = fixp:"0.63333332538604736328125";
+        }
+      }
+    }
+  }
+}

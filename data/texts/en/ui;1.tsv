@@ -1,0 +1,236 @@
+﻿sid	text	text:de
+		
+version conflict	VERSION CONFLICT	
+differs from the server	Local version differs from the server.	
+		
+		
+//// Victory/Defeat screen		
+stats_caps	STATISTICS	
+items_taken_caps	ITEMS TAKEN	
+chs_rewards_caps	CHOOSE YOUR REWARDS	
+chs_reward_caps	CHOOSE YOUR REWARD	
+mis_complete_caps	MISSION COMPLETE	
+mis_failed_caps	MISSION FAILED	
+battle_points	battle points	
+drag_txt	Drag any items you wish to keep to your inventory.	
+battle_pts_tt_title	Battle Points	
+battle_pts_tt_text	You gain battle points as a reward for participating in Deathmatch or Skirmish battles. Winning nets you more points. Spend battle points to purchase items.<nl><nl>The total amount of your battle points is displayed here.	
+shards_tt_title	Xenoshards	
+shards_tt_text	There is a chance to extract a xenoshard from each item obtained in-game. Rarer items have a greater chance to yield a xenoshard.<nl><nl>The number of shards you got this game is displayed here.	
+chng_off_btn	Change Offer	
+skip_btn	Skip	
+buy_btn	Purchase	
+items_shop	SHOP FOR ITEMS	
+get_off_btn	Get Offer	
+lost_off_txt	Listing items for purchase is free if you win, but costs battle points if you lose.	
+no_bpoints	Not enough battle points.	
+no_bpoints_ttl	Purchase Failed	
+buyfailed_ttl	Purchase Failed	
+buyfailed	Not enough battle points or no available item slots.	
+inactive_spec	Inactive	
+chg_off_btn	Reroll	
+close_caps	CLOSE	
+continue_caps	CONTINUE	
+observe_caps	OBSERVE	
+stats_btn_caps	STATS	
+alert	Alert	
+vic_close_items	There are still items in the temporary repository. Are you sure you want to continue?	
+		
+		
+//// Lobby		
+prac_caps	PRACTICE	
+pvp_caps	DEATHMATCH	
+locations	LOCATIONS	
+chat btn lobby	CHAT	
+		
+		
+//// Settings		
+effects_all	All	
+effects_med	Medium	
+effects_low	Low	
+effects_scale	Effects	
+		
+		
+//// CD Key screen		
+cdkey_invalidkey	INVALID CD KEY!	
+validate	VALIDATE	
+enter cdkey	Enter CD KEY:	
+gs_invalidcdkey	The provided CD Key is not valid. The error message is: ‘[#]’.	
+gs_disconnect	You have been disconnected from the online service. The error message is: ‘[#]’.	
+		
+		
+//// Login		
+GSStatus_GetProfiles	Getting GameSpy profiles	
+GSStatus_CreateProfile	Creating GameSpy profile	
+lan	LAN	
+internet	INTERNET	
+		
+net_login	WorldShift Login	
+net_enter_player_name	WorldShift player name	
+net_enter_password	Password	
+net_newplayer	NEW PLAYER	
+net_choosegsaccount	Choose Your GameSpy ID	
+net_enter_email	E-mail address	
+net_newaccount	New GameSpy ID	
+net_next	Next	
+net_error	Login error	
+net_helpchoosegsaccount	Enter the required info if you already have a GameSpy ID and click ‘Next’, or click ‘New ID’ to create a new one.	
+net_creategsaccount	Create New GameSpy ID	
+net_retype_password	Re-type Password	
+net_create	Create	
+neterr_notsamepasswords	The passwords you entered are different.	
+net_success	Success	
+net_successwscreate	You have successfully created the WorldShift player name ‘[#]’. You can always enter the game by typing your WorldShift player name and password.	
+net_choosegsprofile	Choose Your GameSpy Profile	
+net_profilenames	Profile Names	
+net_wsplayernames	WorldShift Names	
+neterr_profilehaswsname	The GameSpy ID ‘[#]’ already has a WorldShift player name associated with it.	
+neterr_selectprofile	Select a GameSpy ID to create a WorldShift player name for it.	
+net_helpchoosegsprofile	Select the GameSpy ID under which you want to create a new WorldShift player and click ‘Next’.	
+net_playername	Player Name	
+		
+legal_text	© 2008 RTL Television, Black Sea Studios Ltd. Marketed by RTL Games GmbH. Published by RTL Games GmbH. Black Inc. is a label and a registered trademark of RTL Games GmbH. WorldShift is a registered trademark of Black Sea Studios Ltd. Developed by Black Sea Studios Ltd.	
+		
+gs_isc_availabilitycheck	Performing online service availability check...	
+gs_isc_connecting	Connecting to the online service...	
+gs_isc_authcdkey	Authenticating CD Key...	
+gs_isc_checkingforpatch	Checking for updates...	
+gs_isc_joingtitleroom	Joining main room...	
+gs_isc_gettingplayerinfo	Getting player info...	
+gs_isc_elis_presenceconnect	Loading friends list...	
+gs_isc_loadingprofile	Loading player’s profile...	
+gs_isc_done	Done!	
+		
+gs_login_timeout	The login operation timed out.	
+gs_accountalreadycreated	You’ve already created this GameSpy ID.	
+gs_empty_pass	The password field should not be empty.	
+gs_empty_email	The e-mail field should not be empty.	
+gs_empty_wsname	The WorldShift name should not be empty.	
+gs_invalidpassword	The provided password is invalid for the existing GameSpy ID based on the specified e-mail address. If you have forgotten your password, please visit http://www.gamespyid.com.	
+gs_loginincorrect	The provided WorldShift player name and password are invalid. Please check the spelling again. Passwords are case sensitive. If you have forgotten your username or password, please visit http://www.gamespyid.com.	
+gs_invalidemail	There is no GameSpy ID associated with the specified e-mail address.	
+gs_invalidnick	The provided player name is invalid. It must be between 3 and 20 characters long and contain only letters (no blanks).	
+		
+		
+//// In-mission texts		
+checkpoint marked	CHECKPOINT MARKED	
+minimap	Minimap	
+multiselection_tooltip	Click to select only this unit; Alt-click to remove it from the selection.	
+stop_tooltip_ttl	Stop	
+stop_tooltip_txt	Click to stop the selected units or cancel an upgrade or unit production.	
+leader_tooltip_ttl	Field leader	
+leader_tooltip_txt	This is your field leader. Click to select the leader, and click again to center the view.	
+items_toggle_tooltip_ttl	Minimap/Items	
+items_toggle_tooltip_txt	Click to toggle between the minimap and the items you have collected.	
+		
+net_desync	<color=255,0,0>DESYNC DETECTED!</>	
+net_checksumdifferent	<color=255,0,0>Player %s:</> data checksum is different, a desynchronization may occur!	
+net_disconnecting	Disconnecting...	
+net_playerdrop	Player <color=0,255,0>%s</> has been dropped.	
+net_playerexit	Player <color=0,255,0>%s</> has exited.	
+net_playerpaused	Player <color=0,255,0>%s</> has paused the game.	
+net_playerunpaused	Player <color=0,255,0>%s</> has unpaused the game.	
+net_waitplayer	<tab=15>Waiting for %s <tab=100>(%.2d sec.)	
+net_chatformat	<color=%d,%d,%d>[%s]</> <color=%d,%d,%d>[%s]:</> <color=%d,%d,%d>%s</>	
+net_chattoall	to all	
+net_chattoally	to allies	
+		
+unknown.name	Unknown	
+		
+flt.Invulnerable	Invulnerable	
+flt.Alarm! Alarm!	Alarm! Alarm!	
+flt.Immune	Immune	
+		
+		
+//// Autopatching		
+gs_http_downloaderr	An error has occurred while downloading the file.	
+gs_patchfound	A game update is available. Do you want to start the download?	
+gs_http_filesaveerr	An error occurred while saving the file to your hard drive. Check your hard disk free space and run the game as the administrator.	
+dl_patch	DOWNLOADING: [#]%	
+		
+		
+// Miscellaneous		
+quit_prompt	Are you sure you want to quit? Any progress will be lost!	
+		
+		
+// Player Settings		
+logo_name	[#]’s Logo	
+ignore_all_invitations	Ignore ALL game invitations	
+show_friends_invitations	Show game invitations only from players in your friends list	
+allow_inspected	Allow to be inspected	
+statistics_average	STATISTICS AVERAGE<nl>(MULTIPLAYER GAMES)	
+gamedurationtext	Average deathmatch game duration	
+battlepointstext	Current amount of Battle points	
+battlepointsvalue	[#] of [#]	
+gamedurationvalue	[#]:[#] min	
+player_settings	Player	
+accept_cap	ACCEPT	
+		
+		
+// Inspect player		
+abilities	Abilities	
+specializations	Specializations	
+statistics	Statistics	
+avdamage_ttl	Average damage	
+avdamage_txt	Average damage dealt per game	
+avhealing_ttl	Average healing	
+avhealing_txt	Average hit points healed per game	
+avkills_ttl	Average kills	
+avkills_txt	Average number of enemy units destroyed per game	
+avdeaths_ttl	Average deaths	
+avdeaths_txt	Average number of units lost per game	
+avcommand_ttl	Average commands	
+avcommand_txt	Average number of commands issued per game	
+avdamagetaken_ttl	Average damage taken	
+avdamagetaken_txt	Average hit points lost per game	
+achievements	Achievements	
+avracemutants_ttl	Games played with the Tribes	
+avracemutants_txt	Percentage of the games played using the Tribes faction	
+avracehumans_ttl	Games played with the Humans	
+avracehumans_txt	Percentage of the games played using the Human faction	
+avracealiens_ttl	Games played with the Cult	
+avracealiens_txt	Percentage of the games played using the Cult faction	
+		
+		
+// buddy list		
+autorization_request	Player wants to add you to their friends list.	
+revoke	User [#] has revoked their buddy authorization.	
+online	ONLINE	
+offline	OFFLINE	
+show_offline_players	Show offline players	
+online_notification	Player [#] is online.	
+offline_notification	Player [#] is offline.	
+		
+auth_request	You have sent an authorization request to player [#].	
+auth_requestaccepted	Player [#] has authorized your request.	
+		
+buddylist_gt_practice	Practice	
+buddylist_gt_pvp	Deathmatch	
+buddylist_gt_pvpat	Deathmatch (Arranged Team)	
+buddylist_gt_speciallocation	Special Location	
+buddylist_gt_mission	Mission	
+buddylist_gt_unknown	Unknown	
+		
+buddylist_status_offline	Offline	
+buddylist_status_online	Online	
+buddylist_status_staging	[#]: Waiting for players [#]/[#]	
+buddylist_status_stagingfull	[#]: Waiting for start	
+buddylist_status_playing	Playing	
+buddylist_status_authrequest	Hello, I would like to add you to my Friends list!	
+		
+		
+//Invitatinos		
+invitation_msg_ally	The player ‘[#]’ invites you to join their game as an ally.	
+invitation_msg_opponent	The player ‘[#]’ invites you to join their game as an opponent.	
+		
+		
+// CREDITS		
+gslegal_text	This product contains software technology licensed from GameSpy Industries, Inc. © 1999-2008 GameSpy Industries, Inc. GameSpy and the “Powered By GameSpy” design are trademarks of GameSpy Industries, Inc. All rights reserved.	
+		
+		
+//// Game start messages		
+dropped	Dropped!	
+startgame_establishingconnection	ESTABLISHING CONNECTION WITH ALL PLAYERS...	
+startgame_waitingforstart	WAITING TO START THE GAME...	
+lobby_error_cannotestablishconnection	Cannot establish a connection with all players.	
+autojoinerr_cannotestablishconnection	The automatch attempt failed because some of the players were unable to establish a connection to the other players.	

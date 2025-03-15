@@ -1,0 +1,135 @@
+Mob VenomousScorpion : BaseMob {
+  name = "Venomous Scorpion"
+  icon = 6,15
+  model = data/models/lifeforms/Scorpion/Scorpion.kfm {
+    die = Data/Models/Effects/MiscReacts/Spider_die.nif
+  }
+  destruction = animation
+  scale = 0.7
+  
+  sounds {
+    destruction = data/sounds/destruction/units/alien bugs
+  }
+  
+  stats : {
+    range = 170
+    damage = 15
+    armor = 5
+    hp = 320
+    sight = 1500
+
+    paralyzing_field_range = 500
+    paralyzing_field_speed_reduction_perc = 70
+    
+    venomous_bite_damage = 10
+    venomous_bite_duration = 15
+    venomous_bite_chance = 20
+  }  
+  
+  hp = stat:hp
+  armor = stat:armor
+  range = stat:range
+  damage = stat:damage
+  sight = stat:sight
+
+  COrientationController orientation {
+    rot_speed = 130
+    max_tilt = 60
+  } 
+  
+  animation {
+    anim_set ATTACK = loop {
+      hit_1
+      hit_2
+    }
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    damage = stat:damage
+    shoot_anim = ATTACK
+    shoot_snd = data/sounds/effects/melee little pierce/
+    shoot_idle_1 = shoot_idle
+    fire_node = ROOT
+    spot_impact = 500
+    spot_impact_type = melee
+  }
+  
+  CEffectAura VenomousScorpionParalyzingFieldAura {
+    range = stat:paralyzing_field_range
+    faction = enemy
+    non_stackable = 1
+    effect = E_debuff {
+      id = SlowPoison
+      name = "Slowing Poison"
+      text = "This unit is slowed down by paralizing poison."
+      icon = 3,15
+      type = slow
+      stats_change {
+        speed_mod = { perc = stat:paralyzing_field_speed_reduction_perc * -1 }
+      }
+      tick = 1
+      duration = -1
+      immediate_tick = 1
+      discard_react = 1
+      react = paralyze
+      stack_count = 1
+      exclude_self = 1
+      destroy_when_creator_dead = 1
+      destroy_when_target_dead = 1
+    }
+  }
+
+  abilities {
+    SpiderSpawn {
+      name = Spider Spawn
+      text = The spider will spawn a number of explosive Spider Spawns when killed. The Spider Spawns should be swiftly destroyed or they will explode, damaging and stunning all enemies around them.
+      icon = 13,0
+    }
+    ParalyzingFieldAbi {
+      name = Slow Poison
+      text = The spider slows down the movement of all living enemies close to him by [stat:paralyzing_field_speed_reduction_perc]%.
+      icon = 13,0
+    }
+    VenomousBiteAbi {
+      name = Venomous Bite
+      text = The spider has [stat:venomous_bite_chance]% chance to inject poison into his victim causing the poor bastard to lose [stat:venomous_bite_damage] health every second for [stat:venomous_bite_duration] seconds.
+      icon = 13,0
+      when = fight
+      chance = stat:venomous_bite_chance
+      target = enemy {
+        area = stat:range + 500
+      }
+
+      cast { prepare { anim = hit_3 } }
+
+      effect = E_debuff {
+        id = poison
+        name = "Poison"
+        text = "This unit is taking damage from poison."
+        icon = 1,4
+        type = damage
+        damage = stat:venomous_bite_damage
+        damage_type = poison
+        show_text_feedback = 1
+        duration = stat:venomous_bite_duration
+        tick = 1
+        immediate_tick = 1
+        discard_react = 1
+        react = poison
+        stack_count = 3
+      }
+    }
+  }
+
+  ondeath = SpiderSpawn {
+    id = SpiderSpawn
+    min = 2
+    max = 4
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}

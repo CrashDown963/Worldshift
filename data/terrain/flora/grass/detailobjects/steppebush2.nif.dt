@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\detailobjects\steppebush2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Box01";
+    translation = xpoint3:"-183.93841552734375,11.32535457611083984375,0";
+    rotation = {
+      0 = xpoint3:"0.765068829059600830078125,0.643948495388031005859375,0";
+      1 = xpoint3:"-0.643948495388031005859375,0.765068829059600830078125,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

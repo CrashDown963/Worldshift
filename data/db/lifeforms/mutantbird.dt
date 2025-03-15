@@ -1,0 +1,23 @@
+Bird MutantBird {
+  name = "MutantBird"
+  movable = 1
+  model = data/models/lifeforms/MutantBird/mutant_bird.kfm
+  movement_type = fly
+  speed = 400
+
+  selectable = 0
+  attackable = 0
+  no_mouse_targetable = 1
+  hull = 0
+  
+  COrientationController orientation {
+    rot_speed = 180
+    --max_tilt = 0
+  }  
+
+  actions {
+    Stop
+    Move
+  }
+
+}

@@ -1,0 +1,22 @@
+CMapAnim LightningStrikeExplosion01 {
+  model = data/Models/Effects/MediumExplosion/ExplosionMedium02.kfm
+  sound = DATA/sounds/Effects/Lightning/
+  scale = 1
+  decals = explosion_crater2
+  physics_impact = 5000
+}
+
+CMapAnim LightningStrikeExplosion02 {
+  --model = Data/Models/Effects/Magic/LightningStrikes01.kfm
+  sound = DATA/sounds/Effects/ExplosionBig/
+  scale = 1
+  decals = explosion_crater2
+  physics_impact = 5000
+}
+
+
+CMapAnim LightningAOEWave {
+  model = data/Models/Effects/Magic/Lightning_AoE_Wave.kfm
+  scale = 1
+  physics_impact = 5000
+}

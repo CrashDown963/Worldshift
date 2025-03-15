@@ -1,0 +1,61 @@
+RepairDrone RepairDrone : MachineUnit {
+  name = "Repair Drones"
+  model = Data/Models/Units/repairdrone/repairdrone.kfm
+  race = humans
+  movement_type = unbound
+
+  hover_altitude_min = 100
+  hover_altitude_max = 600
+
+  stats := {
+    hp = 300
+  }
+  sounds {
+    die = data/sounds/effects/common/repair_drone_down.wav
+  }
+  --movable = 0
+  selectable = 0
+  destruction = 
+ -- explosion = ExplosionSmall
+
+  physics {
+    default = data/models/units/repairdrone/repairdrone.pml
+    die = data/models/units/repairdrone/repairdrone.pml
+  }
+
+  actions {
+  }
+
+  CTrailController trail {
+				  emitter = Drone_Body
+				  texture = data/textures/trails/energy_trail1.dds
+				  tex_ratio = float: 1
+				  start_width = 23
+				  end_width = 0
+				  ttl = 25
+				  simple_time = 1
+				  additive = 1
+                  z_write = 0
+				  material_alpha = 0.35
+				  diffuse = color: 1, 1, 1
+				  ambient = color: 0.5, 0.5, 0.5
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 8
+				  color1 = colora: 0.6, 0.90, 0.10, 1
+
+				  time2 = 35
+				  color2 = colora: 0, 0.9, 0.0, 0.7
+	  
+				  time3 = 100
+				  color3 = colora: 0, 1, 0, 0
+			  }  
+
+  animation {
+    spin_around = idle_1
+    die = die
+  }
+}

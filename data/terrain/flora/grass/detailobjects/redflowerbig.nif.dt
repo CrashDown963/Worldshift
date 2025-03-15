@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\flora\grass\detailobjects\redflowerbig.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"Cylinder02";
+    translation = xpoint3:"5.72346591949462890625,-0.04677104949951171875,42.122432708740234375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

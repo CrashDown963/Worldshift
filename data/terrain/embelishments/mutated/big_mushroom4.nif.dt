@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\terrain\embelishments\mutated\big_mushroom4.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"mushroom";
+    translation = xpoint3:"-2.158607006072998046875,2.762194156646728515625,-0.01998138427734375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

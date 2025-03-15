@@ -1,0 +1,17 @@
+model = {
+  file = str:"data\models\buildings\watchtower2\watchtower2.nif";
+  animation = {
+    loop = fixp:"0";
+    duration = fixp:"0";
+  }
+  #0 = {
+    scale = fixp:"1";
+    name = str:"WT2";
+    translation = xpoint3:"21.53826141357421875,-24.95526123046875,501.019287109375";
+    rotation = {
+      0 = xpoint3:"1,0,0";
+      1 = xpoint3:"0,1,0";
+      2 = xpoint3:"0,0,1";
+    }
+  }
+}

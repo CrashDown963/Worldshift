@@ -1,0 +1,7 @@
+Building AncientStone : BaseBuilding {
+  name = Ancient Stone
+  model = Data/Models/buildings/AncientStone/AncientStone.nif
+  race = mutants
+  target_priority = 500
+  req_produce_range = 1
+}

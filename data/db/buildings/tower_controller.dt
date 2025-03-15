@@ -1,0 +1,7 @@
+Building Tower_Controller : BaseBuilding {
+  model = Data/Models/buildings/Shield_Generator/Shield_Generator.nif
+  race = humans
+  stats :{
+    hit_points = 800
+  }
+}

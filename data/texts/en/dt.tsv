@@ -1,0 +1,568 @@
+﻿sid	text
+	
+// UNITS //////////////////////////////////////////////////////////////////////	
+	
+Assassin.name	Assassin
+Assassin.descr	A long-range unit which is strongest at his maximum range. His shots have a chance to lower the target’s armor for several seconds.
+AssaultBot.name	Assault Bot
+AssaultBot.descr	Well-armored mechanical unit. Occasionally fires rockets that lower the attack effectiveness of the targeted enemies. Can launch long-range missile volleys.
+Commander.name	Lord Commander
+Commander.descr	The Lord Commander is heavily armored and has a proximity bonus. He can heal himself and attract enemy attacks.
+Constructor.name	Constructor
+Constructor.descr	A mechanical officer that can quickly repair machines during combat. His regular attack has a chance to hit and stun several enemies.
+Crew.name	Technician
+Crew.descr	The technicians automatically repair buildings when there are no enemies nearby.
+Defender.name	Defender
+Defender.descr	The first unit added via modding. Honor may be to DotNL and CrashDown963
+EliteTrooper.name	Shock Trooper
+EliteTrooper.descr	The Shock Troopers are elite troopers which act as a temporary reinforcement. They cannot be controlled directly.
+Hellfire.name	Hellfire
+Hellfire.descr	Slow but powerful ranged mechanical unit with strong armor and a shield. Can launch a strong close-range area attack.
+Judge.name	Judge
+Judge.descr	A tough officer which is effective against power-using enemies. Can promote Troopers to elite status and boost their attacks.
+ProtonTurret.name	Proton Turret
+ProtonTurret.descr	Defense turrets that can be added to a Control Tower.
+RepairDrone.name	Repair Drone
+Ripper.name	Ripper
+Ripper.descr	A fast mechanical melee unit. Has a chance to stun the enemy when attacking.
+Surgeon.name	Surgeon
+Surgeon.descr	А specialist trained to heal organic units even while they fight. Although she is an otherwise weak fighter, her attack is very strong at point-blank range.
+Technician.name	Technician
+Technician.descr	Non-combat personnel trained to deal with all manner of devices and artifacts.
+Trooper.name	Trooper
+Trooper.descr	Relatively cheap and has a proximity bonus. Occasionally throws grenades while fighting. Can be promoted to elite to boost his critical hit chance.
+	
+AlienEgg.name	Egg
+AlienEgg.descr	A biomechanical entity spawned by a Portal or a Breeder. Acts as a defense facility and releases hatchlings when destroyed.
+Arbiter.name	Arbiter
+Arbiter.descr	A long-range unit which is strongest at his maximum range. His shots have a chance to hit several targets at once. Can instill panic among his foes, causing them to flee chaotically.
+Dominator.name	Dominator
+Dominator.descr	A powerful crowd control unit capable of paralyzing enemies and draining their energy. His attacks completely ignore enemies’ armor.
+Harvester.name	Harvester
+Harvester.descr	A heavily armored melee unit that slows nearby organic enemies with the potential to stun them. He also can heal himself.
+Hatchling.name	Hatchling
+Hatchling.descr	A weaker, smaller version of the Trisat. Can attract enemy attacks.
+Manipulator.name	Manipulator
+Manipulator.descr	A healer whose regular attack steals life from targeted enemies and redirects it to nearby allies. Can spawn a healing vortex that heals random nearby allies for a time.
+Master.name	Master
+Master.descr	A powerful offensive and healing unit. Can steal life from the enemies and distribute it to nearby allies. Can also launch a strong area attack.
+Overseer.field_name	Field Overseer
+Overseer.power_name	Power Overseer
+field_name.name	Field Overseer
+power_name.name	Power Overseer
+AttackDrone.name	Sentinel Droid
+Overseer.descr	A good offensive unit. Has a special form that replenishes the power of nearby allies.
+Shifter.name	Shifter
+Shifter.descr	The Shifter’s attack occasionally weakens the target’s attacks or drains its power. The Shifter’s shield also has a chance to clone itself onto a nearby allied Trisat or Tritech. Can also create hatchlings.
+Trisat.name	Trisat
+Trisat.descr	A regular melee unit that slows down nearby enemies. Its effectiveness is increased for a while after it deals a certain amount of damage.
+Tritech.name	Tritech
+Tritech.descr	A regular ranged unit. Has a chance to heal itself while attacking.
+	
+AncientShade.name	Ancient Shade
+AncientShade.descr	An Underworld creature whose attacks completely ignore armor.
+Brute.name	Brute
+Brute.descr	A well-armored melee unit that can attract enemy attacks. Becomes stronger for a while after delivering a killing blow.
+Guardian.name	Guardian
+Guardian.descr	A strong melee unit capable of creating copies of herself that fight independently. Can also enter a special state that grants a defense bonus to nearby units.
+GuardianIllusion.name	Guardian Illusion
+GuardianIllusion.descr	A copy of a Guardian.
+HighPriest.name	High Priest
+HighPriest.descr	A powerful and versatile magic user capable of healing organic allies and freezing enemies. Also has a strong special ranged attack.
+HowlingHorror.name	Howling Horror
+HowlingHorror.descr	Slow but powerful Underworld melee unit. Has a special defensive form that allows itself to heal.
+Shaman.name	Shaman
+Shaman.descr	A healer whose normal attack steals life from targeted enemies and redirects it to nearby allies. Can heal allies in a specific area and remove their negative effects.
+Sorcerer.name	Sorcerer
+Sorcerer.descr	A specialist in the elements of fire and ice whose normal attack slows the enemy. Can create molten spots on the ground that burn the units standing upon them.
+StoneGhost.name	Stone Ghost
+StoneGhost.descr	An Underworld creature who can steal enemies’ power and redistribute it to nearby allies. It also constantly heals nearby Underworld allies. Can infect an organic target so that it will spawn Soul Worms when killed.
+Warrior.name	Warrior
+Warrior.descr	A regular ranged unit. His attacks are strongest at his maximum range.
+Worker.name	Worker
+Worker.descr	A non-combat unit that can repair and build structures.
+Worm.name	Soul Worm
+Worm.descr	An Underworld creature spawned when an enemy afflicted by a Stone Ghost’s Corruption spell dies.
+	
+// BUILDINGS //////////////////////////////////////////////////////////////////	
+	
+ControlTower.name	Control Tower
+ControlTower.descr	The Control Tower acts as a xenolite extractor and fortification point. It may be upgraded with defense turrets and a motion detector, and can also be used to order more units.
+OreExtractor.name	Ore Extractor
+OreExtractor.descr	The Ore Extractor mines xenolite and acts as a defensive facility. It can be upgraded to a Control Tower.
+	
+Temple.name	Temple
+Temple.descr	The Temple harnesses the xenolite’s energy. It also attacks nearby enemies while replenishing the hit points and power of nearby allies. You can use it to order more units or to summon Workers.
+Shrine.name	Shrine
+Shrine.descr	The Shrine harnesses the xenolite’s energy and also heals nearby allies. It can also be used to summon Workers, and may be upgraded to a Temple.
+	
+Portal.name	Portal
+Portal.descr	The Portal consumes xenolite. It also spawns Eggs and has a negative influence on nearby enemies. You can use the Portal to order more units and to remotely build Breeders.
+Breeder.name	Breeder
+Breeder.descr	The Breeder consumes xenolite and spawns Eggs. You can use it to order low-tier units (Trisats and Tritechs). The Breeder can be upgraded to a Portal.
+	
+// RESOURCES AND OTHER OBJECTS ////////////////////////////////////////////////	
+	
+Artifact1.descr	This is an ancient artifact. You can examine it with your field leader.
+Artifact1.name	Artifact
+Artifact2.descr	This is an ancient artifact. You can examine it with your field leader.
+Artifact2.name	Artifact
+Artifact3.descr	This is an ancient artifact. You can examine it with your field leader.
+Artifact3.name	Artifact
+BehaviorWaypoint.name	NPC behavior waypoint
+MissionAreaCorner.name	Mission area corner
+PersonnelCarrier.name	Personnel Carrier
+ReliefCell.name	Relief Cell
+Thunder.name	Twister
+Vortex.name	Vortex
+Xenolite.name	Xenolite
+XenoliteBarge.name	Xenolite Barge
+	
+// SPECIALIZATIONS ////////////////////////////////////////////////////////////	
+	
+I_A1A.name	Terrify
+I_A1A.text	Your Trisats’ Frenzy will last [stats.frenzy_duration] additional seconds after they stop doing damage.
+I_A1H.name	Durability
+I_A1H.text	All your regular units will have [stats.hp] more hit points.
+I_A1M.name	Thunder Focus
+I_A1M.text	Your High Priest’s Lightning action will do [stats.lightning_damage] more damage.
+I_A2A.name	Overpower
+I_A2A.text	All your regular units will do [stats.damage] more direct damage.
+I_A2H.name	Overclocking
+I_A2H.text	All your cybernetic units will auto-repair faster by [stats.hp_gen] without recovery time and will also do [stats.damage] additional direct damage.
+I_A2M.name	Freeze Mastery
+I_A2M.text	Your High Priest’s Freeze action will hold for [stats.freeze_duration] additional seconds.
+I_B1A.name	Prophesy
+I_B1A.text	Your Master will regenerate power faster by [stats.psi_gen].
+I_B1H.name	Elusion
+I_B1H.text	Your Rippers will have [stats.elusion]% chance to completely ignore direct ranged attacks coming from within melee range.
+I_B1M.name	Weapons Training
+I_B1M.text	Your Warriors will have an additional [stats.crit_chance]% chance to deliver a critical hit, inflicting double damage.
+I_B2A.name	Fire Focus
+I_B2A.text	Your Tritechs will have an additional [stats.crit_chance]% chance to deliver a critical hit, inflicting double damage.
+I_B2H.name	Crushing Fire
+I_B2H.text	All your units will have an additional [stats.crit_chance]% chance to deliver a critical hit, inflicting double damage.
+I_B2M.name	Power Mastery
+I_B2M.text	Your High Priest and all your Elders will regenerate their power faster by [stats.psi_gen].
+I_B3A.name	Bio-Split
+I_B3A.text	When a Tritech is killed there is a [stats.bio_split_chance]% chance for 2-3 Hatchlings to spawn from its corpse.
+I_B3H.name	Motivation
+I_B3H.text	Troopers will have [stats.motivation]% chance to become Elite after performing a critical attack on their target.
+I_B3M.name	Dark Binding
+I_B3M.text	All your Underworld units (Ancient Shade, Howling Horror, Stone Ghost, and Soul Worm) will regenerate hit points faster by [stats.hp_gen], with no recovery time.
+I_C1A.name	Demonic Hunger
+I_C1A.text	Your Master’s Feed action will add additional [stats.feed_add_heal] healing per tick for each affected target.
+I_C1H.name	Precision
+I_C1H.text	All your Troopers will do [stats.damage] additional points of direct damage.
+I_C1M.name	Natural Protection
+I_C1M.text	All your regular units will gain [stats.hp] additional hit points.
+I_C2A.name	Imminence
+I_C2A.text	The Harvester will have a [stats.confuse_chance]% chance on every strike to stress his target, forcing it to focus its attacks on the Harvester.
+I_C2H.name	First Aid Mastery
+I_C2H.text	The Surgeon’s First Aid will have an additional [stats.bandage_crit]% chance to heal for twice the usual amount.
+I_C2M.name	Healing Grace
+I_C2M.text	Your High Priest’s Holy Aura will heal for [stats.holy_aura_heal] more hit points.
+I_D1A.name	Barrier Cure
+I_D1A.text	All your units will regenerate hit points faster by [stats.hp_gen] without recovering.
+I_D1H.name	Barrier Armor
+I_D1H.text	The Lord Commander will have [stats.armor] additional armor and hit points.
+I_D1M.name	Nature Focus
+I_D1M.text	Your Shamans will have a [stats.drain_life_chance]% higher chance to drain life while attacking enemies. Also, each time a Shaman drains life, he will purge one positive effect from his target.
+I_D2A.name	Charged Armor
+I_D2A.text	Your Master and all your Wardens will have [stats.hp] additional hit points.
+I_D2H.name	Overtraining
+I_D2H.text	All your Officers will have [stats.hp] more hit points.
+I_D2M.name	Elemental Focus
+I_D2M.text	Your High Priest, Sorcerer, and Shaman will do [stats.damage] more damage with their direct attacks.
+I_D3A.name	Bio-Cycle
+I_D3A.text	When a Trisat dies in sight of the Master, there is a [stats.bio_cycle_chance]% chance for the Master to recycle it with 25% of its hit points. Recycled Trisats will lose all beneficial effects they might have had before they were killed.
+I_D3H.name	Power Surge
+I_D3H.text	Your Lord Commander and all your Officers will restore their power faster by [stats.psi_gen].
+I_D3M.name	Beast Training
+I_D3M.text	Your Brutes will get [stats.hp] more hit points and [stats.armor] additional armor. Also, Brutes will have a [stats.ignite_on_strike_chance] chance to Ignite after each attack, instead of after a killing blow.
+	
+// GLOBAL ACTIONS /////////////////////////////////////////////////////////////	
+	
+AirAssaultAction.name	Air Assault
+AirAssaultAction.descr	Calls for air support from the home city. A squadron of attack aircraft will bombard the entire map for a short time, focusing fire on enemy targets. Avoid being close to enemy forces or structures!
+EliteSquadAction.name	Shock Troops
+EliteSquadAction.descr	Calls for a small squad of elite Shock Troopers to be teleported to the appointed location. They will fight on your side but cannot be given orders. If there are no enemy targets nearby, the surviving Shock Troopers will teleport back to the city.
+ProtonBlastAction.name	Proton Blast
+ProtonBlastAction.descr	Calls for the home city’s defensive cannons to aim and shoot at the selected area. The Proton Blast will seriously damage all units in a large area, but beware friendly fire!
+	
+	
+MindVisionAction.name	Mind Vision
+MindVisionAction.descr	Directs Nature’s energies into the selected area, granting visibility for X seconds.
+ThunderAction.name	Thunderstorm
+ThunderAction.descr	Creates a twister that roams around the selected area, occasionally emitting lightning bolts that damage nearby enemies.
+NaturesGraceAction.name	Nature’s Grace
+NaturesGraceAction.descr	Commands the powers of Nature to instantly heal all wounds and repair all damage of all friendly units in the selected area.
+	
+	
+HorrifyAction.name	Horrify
+HorrifyAction.descr	Horrifies all enemy units in a small area, making them run in fear and shoot chaotically.
+MarkOfChaosAction.name	Mark of Chaos
+MarkOfChaosAction.descr	Marks all enemy units in a large area, causing them to suffer minor damage over time and making them visible on the minimap for the duration of the effect.
+InfestAction.name	Infest
+InfestAction.descr	Spawns a hatchling infestation at the appointed location. They will fight on your side but cannot be given orders. If there are no enemy targets nearby, the surviving hatchlings will vanish.
+	
+// BUILDING ACTIONS ///////////////////////////////////////////////////////////	
+	
+BreederUpgrade.name	Portal
+BreederUpgrade.descr	Upgrades the Breeder to a Portal.
+CancelUnitProduce.name	Cancel Unit Production
+DetectMotionAction.name	Motion Scanner
+DetectMotionAction.descr	An upgrade that allows the Control Tower to detect all units moving within a certain range.
+OreExtractorUpgrade.name	Control Tower
+OreExtractorUpgrade.descr	Upgrades the Ore Extractor to a Control Tower.
+PerimeterDefenseAction.name	Perimeter Defense
+PerimeterDefenseAction.descr	An upgrade that adds three defense turrets to the Control Tower.
+PossessAction.name	Possess
+PossessAction.descr	Infests a select xenolite deposit with construction spores. If no one builds a structure there for a set amount of time, a Breeder is automatically spawned.
+RallyPoint.name	Set Rally Point
+ShiftingRayAction.name	Shifting Ray
+ShiftingRayAction.descr	Teleport all allied units near the Master to the specified destination.
+ShrineUpgrade.name	Temple
+ShrineUpgrade.descr	Upgrades the Shrine to a Temple.
+SummonWorkersAction.name	Summon Workers
+SummonWorkersAction.descr	Summons several Workers who can repair structures and build Shrines at xenolite deposits.
+FireLashAction.name	Fire Lash
+FireLashAction.descr	An upgrade that provides a significant boost to the Temple’s defense.
+	
+// UNIT ACTIONS ///////////////////////////////////////////////////////////////	
+	
+Reinforce.name	Call Reinforcements
+Reinforce.descr	
+RainOfFireAction.name	Rain of Fire
+RainOfFireAction.descr	Drags a number of meteorites from the newly formed Earth Belts down to the planet’s surface, causing heavy damage in the designated area.
+ActionRelief.name	Relief
+ActionRelief.descr	The Surgeon activates a special Relief Cell that heals [stat:relief_healpersec] hit points per second to all friendly living units nearby. The Relief Cell remains active for [stat:relief_duration] seconds.
+Barrage.name	Barrage
+Barrage.descr	Fires a short volley of ion rockets from a distance. Each rocket inflicts [stat:rocket_damage] damage to all targets in a small area.
+BreedAction.name	Breed
+BreedAction.descr	The Shifter summons [stat:breed_hatchlings] Hatchlings at the selected area. They will automatically attack nearby enemies.
+ConfuseAction.name	Confuse
+ConfuseAction.descr	A tactical maneuver that forces all enemies in a small area to focus their attacks on the Lord Commander for [stat:confuse_duration] seconds and increases his armor by [stat:confuse_armor_perc_buff]% for the same period. This effect may be shorter if the affected enemies lose sight of the Lord Commander.
+CorruptionAction.name	Corruption
+CorruptionAction.descr	The Stone Ghost corrupts all enemy units in a select area, causing them to suffer [stat:corruption_damage] points of damage per tick for [stat:corruption_duration] seconds. If the target dies while corrupted, a small number of Soul Worms will spawn, protecting the area and attacking enemies.
+DarkVortexAction.name	Dark Vortex
+DarkVortexAction.descr	Creates a vortex of nether energy that occasionally strikes nearby allied units with nether light, healing [stat:vortex_heal] hit points. The vortex stays for [stat:vortex_duration]seconds and then disappears.
+DominatorDimensionChainAction.name	Dimension Chain
+DominatorDimensionChainAction.descr	All enemies in the selected area will be caught in a dimensional stasis for [stat:dimension_chain_duration]seconds. While in stasis, the enemies are stunned and suffer [stat:dimension_chain_dmgbonus]% more damage from all sources.
+DominatorPowerFuseAction.name	Power Fuse
+DominatorPowerFuseAction.descr	All enemy units around the Dominator instantly lose [stat:power_fuse_perc]% of their power.
+FateLinkAction.name	Fate Link
+FateLinkAction.descr	The Ancient Shade uses its wealth of knowledge to establish a powerful link with a friendly unit for [stat:fatelink_duration] seconds. Any damage received by the friendly unit will be shared between the unit and all Ancient Shades currently linked to it. The link will be destroyed if the Ancient Shade moves.
+FearShockAction.name	Fear Shock
+FearShockAction.descr	Instills fear in all enemies in the selected area, causing them to run in terror for [stat:fear_shock_duration] seconds.
+FeedAction.name	Feed
+FeedAction.descr	The Master channels powerful nether light that does [feed_base_damage] damage each tick for [stat:feed_duration] seconds. It also drains the same amount of life from the affected target and spreads it to any allies near the Master, healing them. The beam splits at the target and jumps to other targets. The healing efficiency increases with each additional target, though the damage decreases.
+FireSweep.name	Fire Sweep
+FireSweep.descr	Blasts the area surrounding the Hellfire, inflicting [stat:sweep_damage] damage to all nearby targets. Beware friendly fire!
+FortifyAction.name	Fortify
+FortifyAction.descr	The Guardian uses her powers to emit an aura that gives [stat:fortify_armor_add_perc]% plus [stat:fortify_armor] additional armor to all nearby allied units. While the Guardian is fortified, her power doesn’t regenerate and the effect will be cancelled if she is ordered to move. This effect doesn’t stack.
+FreezeAction.name	Freeze
+FreezeAction.descr	The High Priest uses his power to conjure a chilling blast at an indicated area, causing all enemies to freeze in place for [stat:freeze_duration] seconds.
+FrostWaveAction.name	Frost Wave
+FrostWaveAction.descr	The Sorcerer instantly expels a powerful Frost Wave that slows down all affected units by [stat:chill_perc]% for [stat:chill_duration] seconds.
+HolyShockAction.name	Holy Shock
+HolyShockAction.descr	The High Priest concentrates and uses Nature’s powers to completely restore the hit points of an allied unit.
+HowlAction.name	Howl
+HowlAction.descr	Instills fear in all nearby enemies for [stat:howl_fear_duration] seconds and turns into a Ghost Horror for [stat:howl_duration] seconds. The Ghost Horror heals itself for [stat:howl_hp_perc]% of its hit points per tick and ignores [stat:howl_ignore_perc]% of all incoming damage.
+IllusionAction.name	Illusion
+IllusionAction.descr	The Guardian uses her powers to create two copies of herself. The Illusions will last for [illusions_duration] seconds and will then disappear. They are as deadly as the Guardian herself!
+IncinerateAction.name	Incinerate
+IncinerateAction.descr	The Sorcerer heats and melts the ground in a selected area. All units standing on the molten spot suffer [stat:incinerate_damage] points of damage per tick. The effect lasts for [stat:incinerate_duration] seconds.
+InjectAction.name	Inject
+InjectAction.descr	The Lord Commander injects himself with a powerful medicinal mixture that restores [stat:inject_hp] hit points over [stat:inject_duration] seconds.
+LightningAction.name	Lightning
+LightningAction.descr	The High Priest channels his power into a deadly bolt of lightning, striking an enemy for [stat:lightning_damage] points of damage.
+ManipulateAction.name	Manipulate
+ManipulateAction.descr	Remove all harmful effects from all friendly units, increase their hitpoints by [stat:manipulate_hp_perc]% and power by [stat:manipulate_power_perc]% for [stat:manipulate_duration]seconds.
+MendAction.name	Mend
+MendAction.descr	The Surgeon uses her skills and gadgetry to mend а wounded friendly unit, restoring a total of [stat:mend_heal] hit points over [mend_duration] seconds.
+MorphAction.name	Morph
+MorphAction.descr	Morphs the Field Overseer into a Power Overseer.
+MorphAction.descr_field	Morphs the Field Overseer into a Power Overseer.
+MorphAction.descr_power	Morphs the Power Overseer into a Field Overseer.
+NanofixAction.name	Nanofix
+NanofixAction.descr	The Constructor beams a cloud of highly energized microscopic Cell Bots onto a friendly machine unit, instantly repairing [stat:nano_fix_heal] hit points.
+NetherNovaAction.name	Nether Nova
+NetherNovaAction.descr	The Master creates a blast of nether energy that inflicts [stat:nether_nova_damage] damage to all enemies in a small area.
+PoisonShotAction.name	Poison Flare
+PoisonShotAction.descr	Shoot a poisonous flare at the selected area, all targets will be slowed for [stat:poison_shot_perc]% and take [stat:poison_shot_damage] damage every 2 seconds for [stat:poison_shot_duration] seconds. Beware friendly fire!
+ProtonShotAction.name	Proton Grenade
+ProtonShotAction.descr	The Judge shoots a special proton grenade that inflicts [stat:proton_shot_damage] points of damage to all enemies in a small area and burns [proton_shot_power_burn] points of power from them, slightly increasing the total inflicted damage.
+PurifyAction.name	Purify
+PurifyAction.descr	Instantly removes all harmful effects from all friendly units in the selected area.
+RenewAction.name	Renew
+RenewAction.descr	The Shaman uses his power to instantly restore [stat:rejuvenation_amount] hit points to all friendly units in the chosen area.
+RepairDrones.name	Repair Drones
+RepairDrones.descr	The Constructor summons [stat:repairdrones_number] Repair Drones that will follow him and repair nearby damaged machines, including himself. The Repair Drones will stay active for [stat:repairdrones_time_to_live] seconds. Each Drone is capable of repairing [stat:repairdrones_repair_per_tick] hit points per tick.
+VoiceofCommandAction.name	Voice of Command
+VoiceofCommandAction.descr	Commands all allies, improving their damage by [stat:voiceofcommand_damage_perc]% for [stat:voiceofcommand_duration] seconds.
+TeleportOfficerAction.name	Teleport Officer
+UnholyPowerAction.name	Unholy Power
+UnholyPowerAction.descr	Stone Ghost drains energy from the Underworld and charges all nearby friendly units. The effect restores [stat:unholy_power_restore_perc]% of the affected unit's total power every second. The effect lasts for [stat:unholy_power_duration] seconds or until the Stone Ghost is moved or killed.
+VitalitySurgeAction.name	Vitality Surge
+VitalitySurgeAction.descr	Instantly restores [stat:vitality_surge_gain]% of the Harvester’s hit points.
+Worker.WorkerRepairAction.name	Repair Building
+	
+// BUILDING ABILITIES /////////////////////////////////////////////////////////	
+	
+ControlTower.abilities.LargeCrew.name	Large Crew
+ControlTower.abilities.LargeCrew.text	DESCRIPTION
+ControlTower.abilities.MotionScanner.name	Motion Scanner
+ControlTower.abilities.MotionScanner.text	The Control Tower detects all units moving within a certain range.
+OreExtractor.abilities.SmallCrew.name	Small Crew
+OreExtractor.abilities.SmallCrew.text	DESCRIPTION
+	
+Shrine.abilities.SpiritTapAbi.name	Spirit Tap
+Shrine.abilities.SpiritTapAbi.text	Every [stat:spirit_sanctum_interval] seconds, the Shrine regenerates [stat:spirit_sanctum_hp_perc]% of the hit points of all organic friendly units in a medium-sized area around the Shrine itself.
+Temple.abilities.DarkWindAbi.name	Dark Wind
+Temple.abilities.DarkWindAbi.text	DESCRIPTION
+Temple.abilities.FireLashAbi.name	Fire Lash
+Temple.abilities.FireLashAbi.text	Fire Lash description
+Temple.abilities.SpiritSanctumAbi.name	Spirit Sanctum
+Temple.abilities.SpiritSanctumAbi.text	Every [stat:spirit_sanctum_interval] seconds, the Temple regenerates [stat:spirit_sanctum_hp_perc]% of the hit points and [stat:spirit_sanctum_power_perc]% of the power of all friendly organic units in a large area around it.
+	
+Breeder.abilities.BreedEggs.name	Breed Eggs
+Breeder.abilities.BreedEggs.text	The Breeder spawns Eggs that serve as a defense facility.
+Portal.abilities.BreedEggs.name	Breed Eggs
+Portal.abilities.BreedEggs.text	The Portal spawns Eggs that serve as a defense facility. It can maintain more eggs than the Breeder.
+Portal.abilities.CorruptionField.name	Corruption Field
+Portal.abilities.CorruptionField.text	The Portal’s Corruption Field inflicts [corruption_field_damage] points of damage per tick to nearby enemies.
+Portal.abilities.SuppressionField.name	Suppression Field
+Portal.abilities.SuppressionField.text	The Portal’s Suppression Field slows the nearby enemies by [suppression_field_slow_perc]%.
+	
+// ABILITIES //////////////////////////////////////////////////////////////////	
+	
+Ability_Rupture.name	Rupture
+Ability_Rupture.text	The Ripper’s attack has [stat:rupture_chance]% chance to stun its target for [stat:rupture_stun_duration] seconds and cause [stat:damage] damage to all surrounding enemies.
+AlienEgg.abilities.ClammyAcid.name	Acid Burst
+AlienEgg.abilities.ClammyAcid.text	The Eggs fire acid bursts at nearby enemies, reducing the efficiency of their armor by [stat:clammy_acid_armor_perc]%. This effect stacks up to 5 times.
+AlienEgg.abilities.Hatchlings.name	Hatchlings
+AlienEgg.abilities.Hatchlings.text	If the Egg is destroyed, the Hatchlings inside will become enraged and automatically attack nearby enemies.
+AlienEgg.abilities.Sizzle.name	Sizzle
+AlienEgg.abilities.Sizzle.text	The Egg occasionally releases sizzling bursts of energy. These discharges reduce the damage dealt by all nearby enemies by [sizzle_damage_reduction_perc]%.
+AncientShade.abilities.UnholyAttackAbi.name	Unholy Attack
+AncientShade.abilities.UnholyAttackAbi.text	The Shade’s default attacks completely penetrate the enemy’s armor.
+Assassin.abilities.Sharpshooter.name	Sharp Shooter
+Assassin.abilities.Sharpshooter.text	Assassins are devastating at their maximum range but their efficiency quickly drops at shorter distances. Try to position them accordingly during combat and avoid forcing them to fight at close range.
+AssaultBotAbilities.Rocket.name	Concussion Rocket
+AssaultBotAbilities.Rocket.text	The Assault Bot has a [stat:rocket_precision_chance]% chance on each attack to also launch a Concussion Rocket at a nearby target. The resulting explosion will reduce the effectiveness of the affected enemies, causing them to do [stat:rocket_precision_damage_perc]% less damage with their default attacks. The effect stacks up to 5 times.
+Brute.abilities.GrowlAbi.name	Growl
+Brute.abilities.GrowlAbi.text	The Brute has a [stat:growl_chance]% chance on each attack to draw its target’s attention, causing the target to focus its attacks exclusively on the Brute for [stat:growl_duration] seconds.
+Brute.abilities.IgniteOnHitAbi.name	Ignite
+Brute.abilities.IgniteOnHitAbi.text	After striking its target, the Brute has a [stat:ignite_on_strike_chance]% chance to fly into a rage, igniting itself for [stat:ignite_duration] seconds. The ignited Brute inflicts additionally [ignite_damage] damage on up to [ignite_targets] targets in front of it.
+Brute.abilities.IgniteOnKillAbi.name	Ignite
+Brute.abilities.IgniteOnKillAbi.text	After performing a killing blow on its target, the Brute will fly into a rage, igniting itself for [stat:ignite_duration] seconds. The ignited Brute inflicts additionally [ignite_damage] damage on up to [ignite_targets] targets in front of it.
+ChainShotAbi.name	Chain Shot
+ChainShotAbi.text	The Arbiter has a [stat:chain_shot_chance]% chance with every shot to trigger a plasma chain reaction, damaging [stat:chain_shot_hops] additional enemies.
+ChargeAbi.name	Charge
+ChargeAbi.text	When approaching an enemy, the Guardian may dart through the last several meters, instantaneously getting within fighting range.
+DeathRumbleAbi.name	Death Rumble
+DeathRumbleAbi.text	The Horror has a [stat:death_rumble_chance]% chance to invoke an Unholy Nova, inflicting [stat:death_rumble_damage] points of damage to all nearby enemies.
+DischargeAbi.name	Discharge
+DischargeAbi.text	The Judge’s attack has a [stat:discharge_chance]% chance to deduct [burned_power] power from his target and convert it into damage, jumps to and damages [stat:discharge_hops] additional targets.
+DominatorBlightRayAbi.name	Blight ray
+DominatorBlightRayAbi.text	The Dominator’s default attacks completely ignore the enemies’ armor.
+DominatorStasisShotAbi.name	Stasis shot
+DominatorStasisShotAbi.text	The Dominator has a [stat:stasis_shot_chance]% chance to stun his target for [stat:stasis_shot_duration] seconds and inflict double damage when shooting.
+EnfeebleAbi.name	Enfeeble
+EnfeebleAbi.text	The Shifter has a [stat:enfeeble_chance]% chance on each attack to enfeeble all enemy units around its target for [stat:enfeeble_duration] seconds, reducing their damage by [stat:enfeeble_damage_reduction_perc]%. The effect stacks up to 5 times.
+ExposeTargetAbi.name	Expose
+ExposeTargetAbi.text	The Assassin has a [stat:expose_target_chance]% chance on every shot to pierce the target’s armor, reducing its effectiveness by [stat:expose_target_armor_perc]% for [stat:expose_target_armor_duration] seconds. This effect stacks up to 5 times.
+FeedbackAbi.name	Feedback
+FeedbackAbi.text	The Tritech has a [stat:feedback_chance]% chance to heal itself for [stat:feedback_heal] hit points when shooting.
+Harvester.abilities.ImminenceAbi.name	Imminence
+Harvester.abilities.ImminenceAbi.text	The Harvester has a [stat:confuse_chance]% chance on each attack to draw his target’s attention, causing the target to focus its attacks on the Harvester for 10 seconds.
+HarvesterHarvestAbi.name	Harvest
+HarvesterHarvestAbi.text	The Harvester has a [stat:harvest_chance]% chance on each attack to perform a special strike that hits all targets around him, stunning them and healing the Harvester for [stat:damage]
+HarvesterParalyzingField.name	Paralyzing Field
+HarvesterParalyzingField.text	The Harvester slows the movement of all nearby organic enemies by [stat:paralyzing_field_speed_reduction_perc]%.
+Hatchling.abilities.ThreatenAbi.name	Threaten
+Hatchling.abilities.ThreatenAbi.text	The Hatchling has a [stat:threaten_chance]% chance on each attack to threaten its target, forcing it to focus its attacks solely on the Hatchling itself for [stat:threaten_duration] seconds.
+HellfireAbilities.Shield.name	Force Field
+HellfireAbilities.Shield.text	A powerful shield that is automatically activated when the Hellfire is attacked. The force field has a durability of [stat:shield_hull], a charge rate of [stat:shield_regen], a [stat:shield_fullabsorbchance]% chance for full deflection and a damage absorption of [stat:shield_percentabsorbtion]%.
+HollowVoiceAbi.name	Hollow Voice
+HollowVoiceAbi.text	The Horror has a [stat:hollow_voice_chance]% chance to call upon his Underworld voice and emit a bone-rattling growl, inflicting [stat:hollow_voice_damage] points of damage to all enemies in front of it.
+HolyAuraAbi.name	Holy Aura
+HolyAuraAbi.text	The High Priest's power surrounds him with Nature’s energy, healing all allied units for [stat:holy_aura_heal] hit points every [stat:holy_aura_tick] seconds.
+InfestationAbi.name	Infestation
+InfestationAbi.text	The Shifter has a [stat:infestation_chance]% chance on each attack to spawn a Hatchling near its current target.
+LeadershipAbi.name	Leadership
+LeadershipAbi.text	By attacking enemies and observing the battle, the Judge gains charges which he automatically uses for promoting nearby Troopers to Elite status. Elite Troopers have an increased chance to inflict double damage on their targets.
+LeechAbi.name	Leech
+LeechAbi.text	The Stone Ghost has a [stat:drain_psi_chance]% chance on each attack to steal up to [stat:drain_psi_amount]power from its target and give the same amount to all nearby friendly units.
+LifeLeechAbi.name	Life Leech
+LifeLeechAbi.text	With each attack, the Manipulator drains [stat:damage] hit points from his target and disperses it, healing all nearby allied units.
+LongRangeAbi.name	Long Range
+LongRangeAbi.text	The Arbiter inflicts great damage but is only efficient at his maximum range. Attacking from a close distance will reduce his damage dramatically.
+TerrifyAbi.name	Terrify
+TerrifyAbi.text	The Ancient Shade instills fear into its enemies, every attack has a [stat:terrify_chance]% chance to terrify all enemies near its target for [stat:terrify_duration] seconds
+NanofixAbi.name	Nanofix
+NanofixAbi.text	Creates a wave of nano particles, instantly repairing a machine for [stat:nano_fix_heal] hit points.
+OverchargeAbi.name	Overcharge
+OverchargeAbi.text	The Constructor has a [stat:overcharge_chance]% chance to perform an energy-based lightning shot instead of his normal attack, inflicting double damage on its target. Also, this overcharged bolt creates an Energy Nova around the affected target, inflicting half damage to all enemy units in a small area and stunning them for [stat:overcharge_stun_duration] seconds.
+OverclockAbi.name	Overclock
+OverclockAbi.text	The Ripper overclocks his CPU and has [stat:overclock_perc]% movement speed for [stat:overclock_duration]seconds when he engages in combat.
+OverseerChargingFieldAbi.name	Charging Field
+OverseerChargingFieldAbi.text	The Power Overseer has an aura that restores [stat:charging_field_psi_perc]% of the power of all nearby allied units every [stat:charging_field_tick] seconds.
+OverseerPlasmaShieldAbi.name	Plasma Shield
+OverseerPlasmaShieldAbi.text	A powerful shield that is automatically activated when the Overseer is attacked. The Plasma Shield has a durability of [stat:shield_hull], a charge rate of [stat:shield_regen], a [stat:shield_fullabsorbchance]% chance for full deflection, and a damage absorption of [stat:shield_percentabsorbtion]%.
+PlasmaShieldAbi.name	Plasma Shield
+PlasmaShieldAbi.text	A powerful shield that is automatically activated when the Master is attacked. The Plasma Shield has a durability of [stat:shield_hull], a charge rate of [stat:shield_regen], a [stat:shield_fullabsorbchance]% chance for full deflection, and a damage absorption of [stat:shield_percentabsorbtion]%.
+PowerLeakAbi.name	Power Leak
+PowerLeakAbi.text	The Shifter has a [stat:power_leak_chance]% chance on each attack to reduce the enemy power by [stat:power_leak_drain]%.
+PyroblastAbi.name	Pyroblast
+PyroblastAbi.text	The High Priest has a [stat:pyrowave_chance]% chance on every attack to spawn a powerful wave of fire, damaging up to 2 additional targets.
+RepairDronesAbi.name	Repair drones
+RepairDronesAbi.text	Launches drones that will repair the Constructor and nearby allied machines.
+Shaman.abilities.DrainLife.name	Drain Life
+Shaman.abilities.DrainLife.text	The Shaman has a [stat:drain_life_chance]% chance to inflict [stat:damage] points of damage to its current target and to heal all living friendly units in a small area around him for [drain_life_heal] hit points.
+ShiftAbi.name	Shift
+ShiftAbi.text	While fighting, the Guardian can use her power to shift through the dimensions, moving herself around her target. This shifting causes double damage and stuns the target for [stat:shift_stun_duration] seconds.
+Shifter.abilities.CloneShieldAbi.name	Clone Shield
+Shifter.abilities.CloneShieldAbi.text	The Clone Shield automatically activates when the Shifter is attacked. It has a durability of [stat:shield_hull], a charge rate of [stat:shield_regen], a [stat:shield_fullabsorbchance]% chance for full deflection, and a damage absorption of [stat:shield_percentabsorbtion]%. Also, every time the Clone Shield fully deflects an incoming attack, it clones and protects one random nearby Officer, Trisat or Tritech."
+Sorcerer.abilities.ChillAbi.name	Chill
+Sorcerer.abilities.ChillAbi.text	The Sorcerer’s default attack slows his target by [stat:chill_perc]% for [stat:chill_duration] seconds.
+SurgeonAbilities.FirstAid.name	First Aid
+SurgeonAbilities.FirstAid.text	The Surgeon will automatically bandage wounded units every [stat:bandage_cooldown]seconds, healing them for [stat:bandage_amount] with a [stat:bandage_crit]% chance for twice the amount, also removing one harmful effect. Right-click on a friendly target to make the Surgeon following him and putting special attention on his hit points.
+Trisat.abilities.FrenzyAbi.name	Frenzy
+Trisat.abilities.FrenzyAbi.text	The Trisat falls into a frenzy after every [stat:frenzy_threshold] damage it inflicts, increasing its armor by [stat:frenzy_armor] and its damage by [stat:frenzy_damage]%. The buff stacks up to 3 times and fades away if the Trisat doesn’t hit anything for [stat:frenzy_duration] seconds.
+Trisat.abilities.ParalyzingFieldAbi.name	Paralyzing Field
+Trisat.abilities.ParalyzingFieldAbi.text	The Trisat slows the movement of all nearby organic enemies by [stat:paralyzing_field_speed_reduction_perc]%.
+TrooperAbilities.Grenade.name	Throw Grenade
+TrooperAbilities.Grenade.text	The Trooper has a [stat:throw_grenade_chance]% chance on each attack to throw an explosive grenade towards his target. The grenade will inflict [stat:grenade_damage] damage in a small area. However, the Trooper will not use this ability if there is a danger for the grenade to harm allied units.
+UnholyAuraAbi.name	Unholy Aura
+UnholyAuraAbi.text	The Stone Ghost maintains a link with the Underworld, healing all Underworld creatures (Stone Ghost, Ancient Shade, Howling Horror, Soul Worm) nearby for [stat:unholy_aura_heal] hit points every [stat:unholy_aura_interval] seconds.
+Warrior.abilities.SharpShooterAbi.name	Sharp Shooter
+Warrior.abilities.SharpShooterAbi.text	The Warrior is very efficient when shooting at his maximum range. However, he quickly loses efficiency if forced into close-range combat.
+WhirlwindAbi.name	Whirlwind
+WhirlwindAbi.text	While fighting, the Guardian has a [stat:whirlwind_chance]% chance to perform a special move, inflicting damage to all adjacent targets.
+	
+// BUFFS //////////////////////////////////////////////////////////////////////	
+	
+AlienEgg.SizzleAura.effect.name	Sizzle
+AlienEgg.SizzleAura.effect.text	This unit is weakened by the influence of nearby alien Eggs.
+AlienEgg.weapon.effect.name	Acid Burst
+AlienEgg.weapon.effect.text	This unit’s armor is weakened by an Acid Burst.
+AssaultBotAbilities.Rocket.effect.name	Reduced Damage
+AssaultBotAbilities.Rocket.effect.text	This unit’s effectiveness has been weakened by a concussion rocket.
+BigOne.abilities.VenomousBiteAbi.effect.name	Poison
+BigOne.abilities.VenomousBiteAbi.effect.text	This unit is taking damage from poison.
+BigOne.abilities.VenomShowerAbi.effect.name	Poison
+BigOne.abilities.VenomShowerAbi.effect.text	This unit is taking damage from poison.
+BigOne.ParalyzingFieldAura.effect.name	Slowing Poison
+BigOne.ParalyzingFieldAura.effect.text	This unit is being slowed by paralyzing poison.
+Brute.abilities.GrowlAbi.effect.name	Growl
+Brute.abilities.GrowlAbi.effect.text	This unit is threatened by a Brute and cannot attack anyone else.
+Brute.abilities.IgniteOnHitAbi.effect.name	Ignite
+Brute.abilities.IgniteOnHitAbi.effect.text	This unit is in a special state that raises its effectiveness.
+Brute.abilities.IgniteOnKillAbi.effect.name	Ignite
+Brute.abilities.IgniteOnKillAbi.effect.text	This unit is in a special state that raises its effectiveness.
+ChainShotAbi.effect.name	Chain Shot
+ChainShotAbi.effect.text	This unit is taking damage from a Chain Shot.
+ChillSpell.effect.name	Chill
+ChillSpell.effect.text	This unit is being slowed by a Sorcerer’s attack.
+ConfuseAction.spell.effect.effect.name	Confusion
+ConfuseAction.spell.effect.effect.text	The Lord Commander’s armor is increased during a Confusion maneuver.
+CorruptionAction.spell.effect.name	Corruption
+CorruptionAction.spell.effect.text	This unit is taking poison damage from a Corruption spell.
+DarkWind.FireLashHit.IncinerateAura.effect.name	Incinerate
+DarkWind.FireLashHit.IncinerateAura.effect.text	This unit is suffering fire damage from a hot spot caused by lightning from a nearby enemy Temple.
+DominatorDimensionChainAction.spell.effect.effect.name	Dimension Chain
+DominatorDimensionChainAction.spell.effect.effect.text	This unit is caught in a Dimension Chain and cannot move.
+EnfeebleAbi.effect.name	Enfeeble
+EnfeebleAbi.effect.text	This unit has been weakened by a Shifter’s attack.
+ExposeTargetAbi.effect.name	Expose Target
+ExposeTargetAbi.effect.text	This unit’s armor is weakened by an Assassin’s shot.
+FeedAction.spell.effect.caster_effect_on_start.name	Feed
+FeedAction.spell.effect.caster_effect_on_start.text	This unit is being healed by a Feed action.
+FeedAction.spell.effect.name	Feed
+FeedAction.spell.effect.text	This unit is taking damage from a Feed action.
+FrostWaveAction.spell.effect.name	Chill
+FrostWaveAction.spell.effect.text	This unit is being slowed by a Sorcerer’s attack.
+Guardian.FortifyAura.effect.name	Fortify
+Guardian.FortifyAura.effect.text	This unit’s armor is strengthened by the Fortify aura of a nearby Guardian.
+Harvester.abilities.ImminenceAbi.effect.name	Imminence
+Harvester.abilities.ImminenceAbi.effect.text	This unit is threatened by a Harvester and cannot attack anyone else.
+Harvester.ParalyzingFieldAura.effect.name	Paralyzing Field
+Harvester.ParalyzingFieldAura.effect.text	This unit is being slowed by a Paralyzing field.
+Hatchling.abilities.ThreatenAbi.effect.name	Threaten
+Hatchling.abilities.ThreatenAbi.effect.text	This unit is threatened by a Hatchling and cannot attack anyone else.
+HowlArmor.name	Howl Armor
+HowlArmor.text	This unit is in a special state that increases its armor.
+HowlFear.name	Howl Fear
+HowlFear.text	This unit is horror-stricken and cannot execute orders.
+HowlHeal.name	Howl Heal
+HowlHeal.text	This unit is in a special state that boosts its health regeneration.
+IncinerateSpot.IncinerateAura.effect.name	Incinerate
+IncinerateSpot.IncinerateAura.effect.text	This unit is taking fire damage from an Incinerate spell.
+InjectAction.effect.name	Inject
+InjectAction.effect.text	The Lord Commander is regenerating his health under the influence of injected medications.
+JurranAssassin.weapon.alt_projectile.effect.name	Poison
+JurranAssassin.weapon.alt_projectile.effect.text	This unit is taking damage from poison.
+M33Breeder.CorruptionFieldAura.effect.name	Corruption Field
+M33Breeder.CorruptionFieldAura.effect.text	This unit is poisoned by a Corruption Field.
+M33Breeder.SuppressionFieldAura.effect.name	Suppression Field
+M33Breeder.SuppressionFieldAura.effect.text	This unit is being slowed by a Suppression Field.
+MarkOfChaosAction.effect.name	Mark of Chaos
+MarkOfChaosAction.effect.text	This unit is taking damage from a Mark of Chaos.
+MutantsThunder.ThunderSlowAura.effect.name	Thunderstorm Slow
+MutantsThunder.ThunderSlowAura.effect.text	This unit is being slowed by a Thunderstorm.
+Overseer.ChargingFieldAura.effect.name	Charging field
+Overseer.ChargingFieldAura.effect.text	This unit’s power is being replenished by a Charging Field.
+Manipulator.Manipulation.effect.name	Manipulation
+Manipulator.Manipulation.effect.text	Increased maximum hitpoints by and power.
+Portal.CorruptionFieldAura.effect.name	Corruption Field
+Portal.CorruptionFieldAura.effect.text	This unit is poisoned by a Corruption Field.
+Portal.SuppressionFieldAura.effect.name	Suppression Field
+Portal.SuppressionFieldAura.effect.text	This unit is being slowed by a Suppression Field.
+OverclockAbi.effect.name	Overclock
+OverclockAbi.effect.text	Increased movement speed
+S_fear.name	Fear
+S_fear.text	This unit is horror-stricken and cannot execute orders.
+S_freeze.name	Freeze
+S_freeze.text	This unit is frozen and cannot do anything at the moment.
+TerrifyAbi.effect.name	Terrified
+TerrifyAbi.effect.text	This unit is horror-stricken and cannot execute orders.
+S_madden.name	Madden
+S_madden.text	This unit has panicked and cannot distinguish friends from foes.
+S_stun.name	Stun
+S_stun.text	This unit is stunned and cannot do anything at the moment.
+SalingAssassin.weapon.alt_projectile.effect.name	Poison
+SalingAssassin.weapon.alt_projectile.effect.text	This unit is taking damage from poison.
+Shrine.SpiritTrapAura.effect.name	Spirit Tap
+Shrine.SpiritTrapAura.effect.text	This unit’s hit points are being regenerated by the Spirit Tap aura of a nearby Temple.
+SpittingScorpion.abilities.VenomousBiteAbi.effect.name	Poison
+SpittingScorpion.abilities.VenomousBiteAbi.effect.text	This unit is taking damage from poison.
+StoneGhost.UnholyPowerAura.effect.name	Unholy Power
+StoneGhost.UnholyPowerAura.effect.text	This unit’s power is being replenished by a nearby Stone Ghost.
+VoiceofCommandAction.effect.name	Voice of Command
+VoiceofCommandAction.effect.text	The efficiency of this unit’s attacks has been improved by a nearby Judge.
+Temple.SpiritSanctumAura.effect.name	Spirit Sanctum
+Temple.SpiritSanctumAura.effect.text	This unit’s hit points and energy are being regenerated by the Spirit Sanctum aura of a nearby Temple.
+E_PoisonShot.name	Slowing Poison
+E_PoisonShot.text	This unit is slowed and taking damage from an Assassin's Poison Flare
+Trisat.frenzy.effect.name	Frenzy
+Trisat.frenzy.effect.text	This unit is frenzied. Its armor and damage points are increased.
+Trisat.ParalyzingFieldAura.effect.name	Paralyzing Field
+Trisat.ParalyzingFieldAura.effect.text	This unit is being slowed by a Trisat’s Paralyzing Field.
+VarunAssassin.weapon.alt_projectile.effect.name	Poison
+VarunAssassin.weapon.alt_projectile.effect.text	This unit is taking damage from poison.
+Vasilii.weapon.projectile.effect.effect.name	Poison
+Vasilii.weapon.projectile.effect.effect.text	This unit is taking damage from poison.
+VenomousScorpion.abilities.VenomousBiteAbi.effect.name	Poison
+VenomousScorpion.abilities.VenomousBiteAbi.effect.text	This unit is taking damage from poison.
+VenomousScorpion.ParalyzingFieldAura.effect.name	Slowing Poison
+VenomousScorpion.ParalyzingFieldAura.effect.text	This unit is being slowed by paralyzing poison.
+E_PlaguedCorrosion.name	Plague Corrosion
+E_PlaguedCorrosion.text	This unit receives less hit points when being healed.
+LavaTrap.IncinerateAura.effect.name	Incinerate
+LavaTrap.IncinerateAura.effect.text	This unit is suffering damage from a molten spot on the ground.
+QueenProtector.abilities.Taunt.effect.effect.name	Confusion
+QueenProtector.abilities.Taunt.effect.effect.text	This unit is threatened by a Queen Protector and cannot attack anyone else.
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.name	Poison
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.text	This unit is taking damage from poison.

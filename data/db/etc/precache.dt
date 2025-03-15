@@ -1,0 +1,9 @@
+precache {
+  all {
+    #1 = data/models/units/HellFire/HellFire.kfm
+    #2 = data/models/units/HellFire/HellFire_Break.kfm
+    #3 = data/Models/Effects/BigExplosion/ExplosionBig_05.kfm
+    #4 = data/models/effects/shield/shield_sphere.nif
+    #5 = data/Models/Effects/BigExplosion/ExplosionBig_02.kfm
+  }
+}

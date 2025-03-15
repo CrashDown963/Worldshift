@@ -1,0 +1,109 @@
+﻿sid	text:de
+	
+err_actiononcooldown	COOLDOWN LÄUFT NOCH!
+	
+// Settings	
+game_settings	Spieleinstellungen
+player_settings	Spieler-Einstellungen
+video_settings	GRAFIK
+audio_settings	AUDIO
+mute_all_sounds	Audio stumm schalten
+master_volume	Allgemeine Lautstärke
+music_volume	Musik-Lautstärke
+sound_effects_volume	Soundeffekt-Lautstärke
+speech_volume	Sprach-Lautstärke
+units_aknowlegments	Audiobestätigung von Einheiten
+subtitles_cutscenes	Untertitel in Filmsequenzen
+	
+	
+// Login screen tooltips	
+lan_tip	LAN-Modus für Mehrspieler-Modus wählen
+internet_tip	Internet-Modus für Mehrspieler-Modus wählen
+new_player_tip	Einen WorldShift-Spielernamen für die GameSpy-ID wählen (für Internet-Spiele)
+enter_game_tip	Mit diesem Spielernamen das Spiel betreten
+	
+	
+// Lobby UI button tooltips	
+missions_btn_tip	Story-Mission für Einzelspieler bestreiten
+locations_btn_tip	Koop-Spiel auf einer Spezialkarte bestreiten
+deathmatch_btn_tip	Über das Internet gegen einen Zufallsgegner antreten
+practice_btn_tip	Trainingsspiel über das Internet bestreiten
+skirmish_btn_tip	Gefecht über LAN bestreiten
+	
+ability_grid_btn_tip	Gegenstände und Spezialisierungen im Fähigkeitenfeld verwalten
+chat_btn_tip	Freundeliste und Chat-Kanäle betrachten
+settings_btn_tip	Spiel- und spielerbezogene Einstellungen verändern
+	
+chat_views_tip	Diese Chat-Ansicht durch Anklicken auswählen
+	
+exit_btn_tip	Zum Zugangsbildschirm
+	
+	
+// Game list window	
+location_list_tip	Zu spielende Karte auswählen
+1v1_tip	Nur „1-vs.-1“-Spiele anzeigen
+2v2_tip	Nur „2-vs.-2“-Spiele anzeigen
+3v3_tip	Nur „3-vs.-3“-Spiele anzeigen
+small_games_tip	„1-vs.-1“- und „2-vs.-2“-Spiele anzeigen
+big_games_tip	„2-vs.-2“- und „3-vs.-3“-Spiele anzeigen
+all_games_tip	Teamgröße ist irrelevant
+	
+create_game_tip	Eigenes Spiel erstellen und starten
+join_game_tip	Ausgewähltem Spiel beitreten
+quick_join_tip	Zufällig ausgewähltem Spiel auf der Liste beitreten
+	
+	
+// Deathmatch window	
+deathmatch_1v1_tip	Teamgröße auf 1 Spieler festlegen
+deathmatch_2v2_tip	Teamgröße auf 2 Spieler festlegen
+deathmatch_3v3_tip	Teamgröße auf 3 Spieler festlegen
+deathmatch_team_tip	Zwischen zufällig ausgewähltem bzw. festem Team wechseln
+	
+	
+// Active game window (creating/joining)	
+change_slot_tip	Typ des Spielerplatzes ändern
+change_slot_open_tip	Freier Platz (jeder Spieler kann beitreten)
+change_slot_ai_tip	Von KI-Gegner belegter Platz
+change_slot_close_tip	Geschlossener Platz (niemand kann beitreten)
+change_ai_tip	KI-Stärke ändern
+change_sides_tip	Seiten wechseln
+change_faction_tip	Fraktion auswählen
+change_player_color_tip	Spielerfarbe auswählen
+select_units_tip	Einheiten bei Spielbeginn festlegen
+player_ready_tip	Zeigt an, ob der Spieler startbereit ist.
+invite_player_tip	Spieler einladen
+leave_game_tip	Spiel verlassen (Spiel wird abgebrochen, wenn Sie der Host sind)
+start_game_tip	Spiel starten
+	
+	
+// Ability Grid tooltips	
+ability_grid_tab_tip	Gegenstände und Spezialisierungen dieser Fraktion betrachten
+reset_spec_tip	Sterne für Spezialisierungen zurücksetzen
+	
+	
+// Chat tooltips	
+chat_channel_tip	Linksklick: Kürzel zuweisen, Rechtsklick: Farbe auswählen
+chat_add_friend_tip	In die Freundeliste aufnehmen
+chat_remove_friend_tip	Von Freundeliste entfernen
+chat_join_tip	Aktuelles Spiel des Spielers betreten
+chat_tell_tip	Persönliche Mitteilung senden
+chat_invite_tip	Spieler zu Ihrem Spiel einladen
+chat_inspect_tip	Fähigkeitenfeld und Statistik dieses Spielers betrachten
+chat_authorize_tip	Spieler autorisieren
+chat_reject_tip	Autorisierung zurückweisen
+	
+// Settings window	
+logo_background_ttl	Hintergrund
+logo_background_txt	Hier klicken, um Farbe zu wählen
+logo_gradient_ttl	Farbverlauf
+logo_frame_ttl	Rahmen
+logo_symbol_ttl	Symbol
+logo_click_txt	Linksklick: Ändern, Rechtsklick: Farbe bestimmen
+	
+// Victory/Defeat screen	
+vic_close_reward	Sie haben noch keine Belohnung für den Abschluss dieser Mission ausgewählt. Möchten Sie wirklich fortfahren?
+reward_chs_txt	Klicken Sie auf den Gegenstand Ihrer Wahl.
+	
+// In-game tooltips	
+leaderdead_tooltip_ttl	Kein Anführer
+leaderdead_tooltip_txt	Ihr Anführer ist tot, und Sie können keine Offiziere ausheben. Fordern Sie über eins Ihrer Gebäude einen neuen Anführer an.

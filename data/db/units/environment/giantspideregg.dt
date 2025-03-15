@@ -1,0 +1,59 @@
+Unit GiantSpiderEgg : BaseUnit {
+  name = "Giant Spider Egg"
+  icon = 5,28
+  model = data/models/Units/SpiderEgg/SpiderEgg.kfm {
+    die =  data/models/Units/SpiderEgg/SpiderEgg_die.nif 
+  }
+
+  destruction = animation
+  movable = 0
+  scale = 0.8
+
+  stats : {
+    hp = 300
+    armor = 25
+    damage = 0
+  }  
+
+  hp_gen = stat:hp * 60
+
+  actions {
+  }
+
+  abilities {
+  }
+
+  CWeaponController fake_weapon {
+    fire_node = pt_top
+  }
+
+  CAlertController alert {
+    timeout = 0
+    alert_lua = SpiderEggAlert
+    retreat_lua = SpiderEggRetreat
+  }
+  
+  CAutoDieController auto_die {
+    active = 0
+    duration = 10
+    with_damage = 1
+    death_effect = SpawnGiantSpidersEffect
+  }
+
+  CSpawnEffect SpawnGiantSpidersEffect {
+    range = 300
+    random_spawn = 1
+    copy_target_list = 1
+
+    spawn {
+      VenomousScorpion = 1
+    }
+
+    spawn {
+      SpittingScorpion = 1
+    }
+  }
+
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}

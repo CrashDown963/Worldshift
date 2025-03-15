@@ -1,0 +1,22 @@
+--
+-- various economy constants
+--
+
+economy_consts {
+  --per 100 health
+  humans_repair_health = 100
+  humans_repair_cost = 3r
+
+  mutants_repair_health = 100
+  mutants_repair_cost = 3r
+
+  aliens_repair_health = 100
+  aliens_repair_cost = 0r
+}
+
+starting_resources {
+  humans  = 100r 30u
+  mutants = 100r 30u
+  aliens = 100r 30u
+}
+
