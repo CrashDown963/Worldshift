@@ -86,22 +86,6 @@ range {
   average = 1500
   far = 2200
 }
--- common reacts
-
-reacts {
-  fire {
-    duration = 5
-    attach { 
-      pt_chest  = data/models/effects/Fire/FireReact.nif { 
-		scale = 4.3 
-		fixed_up = 1 
-		}
-     -- pt_head   = data/models/effects/Fire/FireReact.nif { scale = 2 }
-     -- pt_hand   = data/models/effects/magic/FireHands.nif { scale = 4 }
-     -- pt_foot   = data/models/effects/Fire/FireReact.nif { scale = 1 }
-    }
-  }
-}
 
 -- common casts
 casts {

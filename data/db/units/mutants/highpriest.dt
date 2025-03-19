@@ -39,8 +39,8 @@ Unit HighPriest : BaseUnit {
     damage = 35
     armor = 2
 
-    holy_aura_tick = 5
-    holy_aura_heal = 40
+    holy_aura_tick = 1
+    holy_aura_heal = 10
 
     pyrowave_chance = 5
 
@@ -63,7 +63,6 @@ Unit HighPriest : BaseUnit {
     effect = E_heal {
       amount = stat:holy_aura_heal
       area = 1000 { anim = data/models/effects/magic/healingwave.nif { scale = 0.3 } }
-      target_tags = organic
       react = relief
     }
   }
@@ -71,6 +70,7 @@ Unit HighPriest : BaseUnit {
   can_build = 1  
     
   actions : BaseUnit.actions {
+    Mount
     TeleportOfficerAction;
     FreezeAction;
     LightningAction;
@@ -433,4 +433,12 @@ CSpellAction HolyShockAction {
       react = heal
     }
   }
+}
+
+Mount { 
+  name = "Mount Up"
+  descr = "Mount up"
+  visible = 1
+  icon = 3,5
+  program = PrgMount
 }

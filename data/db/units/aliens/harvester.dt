@@ -32,7 +32,7 @@ Unit Harvester: BaseUnit {
     damage = 35
     psi = 400
     
-	  shield_hull = 150
+	  shield_hull = 100
     shield_regen  = 120
     shield_fullabsorbchance = 10
     shield_percentabsorbtion = 25

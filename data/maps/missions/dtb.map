@@ -384,7 +384,7 @@ map = int: 1000000
                   value = sid: HasBeenTrueFor
                 [/]
                 [time]
-                  value = int: 11
+                  value = int: 6
                 [/]
               [/]
             [/]
@@ -394,6 +394,45 @@ map = int: 1000000
     [/]
     [#8]
       name = sid: SpawnDoorAttackers2
+      type = sid: and
+      [tree]
+        [#1]
+          value = sid: CheckCondition
+          [tree]
+            [condition]
+              value = sid: DoorsEventStarted
+            [/]
+            [operator]
+              value = sid: HasBeenTrueFor
+            [/]
+            [time]
+              value = int: 16
+            [/]
+          [/]
+        [/]
+        [#2]
+          value = sid: not
+          [tree]
+            [condition]
+              value = sid: CheckCondition
+              [tree]
+                [condition]
+                  value = sid: DoorsEventStarted
+                [/]
+                [operator]
+                  value = sid: HasBeenTrueFor
+                [/]
+                [time]
+                  value = int: 21
+                [/]
+              [/]
+            [/]
+          [/]
+        [/]
+      [/]
+    [/]
+    [#9]
+      name = sid: SpawnDoorAttackers3
       type = sid: and
       [tree]
         [#1]
@@ -423,46 +462,7 @@ map = int: 1000000
                   value = sid: HasBeenTrueFor
                 [/]
                 [time]
-                  value = int: 36
-                [/]
-              [/]
-            [/]
-          [/]
-        [/]
-      [/]
-    [/]
-    [#9]
-      name = sid: SpawnDoorAttackers3
-      type = sid: and
-      [tree]
-        [#1]
-          value = sid: CheckCondition
-          [tree]
-            [condition]
-              value = sid: DoorsEventStarted
-            [/]
-            [operator]
-              value = sid: HasBeenTrueFor
-            [/]
-            [time]
-              value = int: 51
-            [/]
-          [/]
-        [/]
-        [#2]
-          value = sid: not
-          [tree]
-            [condition]
-              value = sid: CheckCondition
-              [tree]
-                [condition]
-                  value = sid: DoorsEventStarted
-                [/]
-                [operator]
-                  value = sid: HasBeenTrueFor
-                [/]
-                [time]
-                  value = int: 61
+                  value = int: 31
                 [/]
               [/]
             [/]
@@ -484,7 +484,7 @@ map = int: 1000000
               value = sid: HasBeenTrueFor
             [/]
             [time]
-              value = int: 76
+              value = int: 36
             [/]
           [/]
         [/]
@@ -501,7 +501,7 @@ map = int: 1000000
                   value = sid: HasBeenTrueFor
                 [/]
                 [time]
-                  value = int: 86
+                  value = int: 41
                 [/]
               [/]
             [/]
@@ -558,7 +558,7 @@ map = int: 1000000
           value = sid: HasBeenTrueFor
         [/]
         [time]
-          value = int: 90
+          value = int: 46
         [/]
       [/]
     [/]

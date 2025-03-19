@@ -1,6 +1,6 @@
 music {
-  map_interval = 3,5
-  menu_interval = 5,8
+  map_interval = 1,2
+  menu_interval = 0,1
   map_tracks = 16
   
   -- maps

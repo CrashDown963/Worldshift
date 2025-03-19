@@ -1,0 +1,116 @@
+Unit PsiDetonator : BaseUnit {
+  name = "Psi Detonator"  
+  race = Aliens
+  model = data/models/units/psidetonator/psidetonator.nif
+  icon = 6,3
+  scale = 0.6
+  tags = unit, repairable_unit
+  explosion = ExplosionPlasma_Green
+  hover_altitude_min = 4000
+  hover_altitude_max = 5000
+  movement_type = hover
+  cost : pvp.aliens.unit_costs.PsiDetonator
+  cost_sloc : pvp.aliens.sloc_costs.PsiDetonator
+  attack_spell = PsiDetonatorCastSpell
+  target_priority = 1
+
+  stats : {
+    hp = 280
+    psi = 380
+    armor = 25
+    damage = 80
+    crit_chance = 0
+    range = 1800
+    
+	  shield_hull = 100
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+
+    detonatoraura_radius = 800
+    detonatoraura_heal = 50
+    detonatoraura_perc = 10
+    detonatoraura_tick = 10
+  }
+  
+  speed = 400
+
+  min_attack_range = 70
+
+  attachments {
+    Root Scene = 
+  }
+
+  actions : BaseUnit.actions {
+  }
+    
+  abilities {
+    Charming {
+      name = "Charming"
+      text = "Enemies will prefer to attack someone else if possible"
+      icon = 2,0
+    }
+  }
+
+  CShieldController shifter_shield {
+    active = 0
+    sound_idle = data/Sounds/Shields/Imperator/Idle/
+    sound_hit = data/Sounds/Shields/Imperator/Hit/
+    hull = stat:shield_hull
+    regen_per_minute = stat:shield_regen
+    projectile_destroy_probability = stat:shield_fullabsorbchance
+    effects {
+      percent_absorbtion = stat:shield_percentabsorbtion
+    }
+  }
+
+  CEffectAura DetonatorAura {
+    active = 1
+    range = stat:detonatoraura_radius
+    faction = ally
+    non_stackable = 1
+    effect = E_buff {
+      name = "manipulation"
+      text = "Increased maximum hitpoints and power."
+      icon = 2,4
+      type = buff
+      duration = -1
+      tick = stat:detonatoraura_tick
+      immediate_tick = 1
+      discard_react = 1
+      repeat_react = 1
+      react = detonationaura
+      stack_count = 1
+      destroy_when_creator_dead = 1
+      stats_change {
+          hp = { perc = stat:detonatoraura_perc }
+          psi = { perc = stat:detonatoraura_perc }
+      }
+    }
+  }
+}
+
+PsiDetonatorCastSpell {
+  cast {
+    prepare {
+      duration = 1
+      attach {
+        pt_cast = Data/Models/Effects/Magic/AlienCast01.nif
+      }
+    }
+    finish {
+      sound = data/sounds/effects/master weapon/
+      attach {
+        pt_cast = Data/Models/Effects/Magic/AlienCast01.nif
+      }
+    }
+  }
+
+  projectile = chase {
+    model = Data/Models/Effects/TraceBullet/MasterProjectile_Heavy.nif
+	  speed = 2500
+    scale = 8
+    damage = stat:damage
+    react = fire
+  }
+}

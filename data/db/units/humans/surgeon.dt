@@ -41,7 +41,7 @@ Surgeon Surgeon : BaseUnit {
 
     psi = 280
 
-    bandage_range = 1750
+    bandage_range = 1600
     bandage_amount = 70
     bandage_cooldown = 2
     bandage_crit = 0
@@ -57,7 +57,7 @@ Surgeon Surgeon : BaseUnit {
   }
   
   relief_radius = 600
-  bandage_follow_range = 1750
+  bandage_follow_range = 1600
   relief_range = 1600
   
   aggro_range = 0
@@ -138,7 +138,6 @@ Surgeon Surgeon : BaseUnit {
   mend_beam = MendBeam
   mend_source = pt_hand
   mend_attach = data/models/effects/magic/drainhands.nif
-  --mend_beam_color = 1,0.2,0.1
   cost : pvp.humans.unit_costs.Officer
   cost_sloc : pvp.humans.sloc_costs.Officer
 }
@@ -226,7 +225,7 @@ action MendAction {
   program = PrgMend
   cooldown = 20
   delay_cooldown = 1
-  sound = data/sounds/effects/common/Ment_loop02.wav
+  sound = data/sounds/effects/common/mend.wav
 }
 
 

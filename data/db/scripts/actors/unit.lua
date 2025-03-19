@@ -1692,3 +1692,65 @@ function Actor:PrgDeployTurrets(params)
   map.SpawnObject(this:GetVar("turret_to_spawn", "str"), this:GetPos(), this:GetFaction())
   this:Destroy()
 end
+
+function Unit:PrgRepairing(params)
+  local hBuilding = params.h
+  local res
+  local pt, ptIndex
+  this.onPrgEnd = function()
+    this:SetAnim()
+    this:SetPrimaryTarget()
+  end
+  
+  while true do 
+    this:SetPrimaryTarget(nil, hBuilding)    
+    while Actor.IsValid(hBuilding) do
+      if params.stop_at then
+        if hBuilding:GetHP() >= params.stop_at * hBuilding:GetMaxHP() / 100 then
+          break
+        end
+        if Actor.IsValid(params.h2) and params.h2:FindEnemy(params.h2:GetPos(), params.h2:GetSight()) then
+          if this:DistTo(params.h2) > 100 then
+            this:MoveTo{params.h2, maxRange = 50}
+          end 
+        end
+      end
+      pt, ptIndex = this:FindRepairSpot(hBuilding)
+      if not ptIndex or ptIndex < 1 then break end
+      if this:DistTo(pt) > 50 then
+        if this:MoveTo{pt, maxRange = 50} then       
+          print("Fail")
+          if Actor.IsValid(hBuilding) then
+            hBuilding:UnRegisterRepairActor(this)
+          end  
+          this:SetAnim()
+        end
+      end  
+      local dur = this:SetAnim("WORK")
+      hBuilding:RegisterRepairActor(this)
+      res = this:Repair(hBuilding, dur)
+      this:UnlockRepairSpot(hBuilding, ptIndex)
+      this:SetAnim()
+      ptIndex = nil
+
+      if res == "FINISHED" then 
+        if Actor.IsValid(hBuilding) then
+          hBuilding:UnRegisterRepairActor(this)
+        end  
+        break 
+      end
+    end
+    if params.stop_at then
+      if params.h2 then
+        if Actor.IsValid(params.h2) and this:DistTo(params.h2) > 100 then
+          this:MoveTo{params.h2, maxRange = 50}
+        end 
+      end
+    end
+    hBuilding = this:FindBuildingToRepair()
+    if not hBuilding then
+      this:SetAnim()
+      this:Idle(1)
+    end
+  end  
+end

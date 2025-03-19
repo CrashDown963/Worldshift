@@ -14,7 +14,7 @@ Unit Overseer : BaseUnit {
   destruction = animation
 
   race = aliens
-  tags = unit, organic
+  tags = unit, organic, repairable_unit
   cost : pvp.aliens.unit_costs.Overseer
   cost_sloc : pvp.aliens.sloc_costs.Overseer
 
@@ -94,10 +94,6 @@ Unit Overseer : BaseUnit {
     sound_hit = data/Sounds/Shields/Imperator/Hit/
     hull = stat:shield_hull
     regen_per_minute = stat:shield_regen
-    -- regen_tick = 2
-    -- reactivate_threshold = 30
-    -- regen_boost_perc = 100
-    -- regen_boost_timeout = 20
     projectile_destroy_probability = stat:shield_fullabsorbchance
     effects {
       percent_absorbtion = stat:shield_percentabsorbtion

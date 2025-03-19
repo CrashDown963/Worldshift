@@ -70,7 +70,7 @@ GuardianIllusion.descr	A copy of a Guardian.
 HighPriest.name	High Priest
 HighPriest.descr	A powerful and versatile magic user capable of healing organic allies and freezing enemies. Also has a strong special ranged attack.
 HowlingHorror.name	Howling Horror
-HowlingHorror.descr	Slow but powerful Underworld melee unit. Has a special defensive form that allows itself to heal.
+HowlingHorror.descr	Slow but powerful Underworld melee unit. Has a special defensive stance that allows it to heal itself.
 Shaman.name	Shaman
 Shaman.descr	A healer whose normal attack steals life from targeted enemies and redirects it to nearby allies. Can heal allies in a specific area and remove their negative effects.
 Sorcerer.name	Sorcerer
@@ -87,12 +87,12 @@ Worm.descr	An Underworld creature spawned when an enemy afflicted by a Stone Gho
 // BUILDINGS //////////////////////////////////////////////////////////////////	
 	
 ControlTower.name	Control Tower
-ControlTower.descr	The Control Tower acts as a xenolite extractor and fortification point. It may be upgraded with defense turrets and a motion detector, and can also be used to order more units.
+ControlTower.descr	The Control Tower extracts xenolite. It has defenses and may be upgraded with turrets and a motion detector. You can use it to order more units.
 OreExtractor.name	Ore Extractor
-OreExtractor.descr	The Ore Extractor mines xenolite and acts as a defensive facility. It can be upgraded to a Control Tower.
+OreExtractor.descr	The Ore Extractor mines for xenolite and acts as a defense facility. It can be upgraded to a Control Tower.
 	
 Temple.name	Temple
-Temple.descr	The Temple harnesses the xenolite’s energy. It also attacks nearby enemies while replenishing the hit points and power of nearby allies. You can use it to order more units or to summon Workers.
+Temple.descr	The Temple harnesses the xenolite’s energy. It also attacks nearby enemies and replenishes the hit points and power of nearby allies. You can use it to order more units or to summon Workers.
 Shrine.name	Shrine
 Shrine.descr	The Shrine harnesses the xenolite’s energy and also heals nearby allies. It can also be used to summon Workers, and may be upgraded to a Temple.
 	
@@ -116,6 +116,7 @@ ReliefCell.name	Relief Cell
 Thunder.name	Twister
 Vortex.name	Vortex
 Xenolite.name	Xenolite
+Xenolite.descr	You can construct a building at this xenolite deposit to increase your resource income.
 XenoliteBarge.name	Xenolite Barge
 	
 // SPECIALIZATIONS ////////////////////////////////////////////////////////////	
@@ -190,14 +191,12 @@ EliteSquadAction.descr	Calls for a small squad of elite Shock Troopers to be tel
 ProtonBlastAction.name	Proton Blast
 ProtonBlastAction.descr	Calls for the home city’s defensive cannons to aim and shoot at the selected area. The Proton Blast will seriously damage all units in a large area, but beware friendly fire!
 	
-	
 MindVisionAction.name	Mind Vision
-MindVisionAction.descr	Directs Nature’s energies into the selected area, granting visibility for X seconds.
+MindVisionAction.descr	Directs Nature’s energies into the selected area, granting visibility for several seconds.
 ThunderAction.name	Thunderstorm
 ThunderAction.descr	Creates a twister that roams around the selected area, occasionally emitting lightning bolts that damage nearby enemies.
 NaturesGraceAction.name	Nature’s Grace
 NaturesGraceAction.descr	Commands the powers of Nature to instantly heal all wounds and repair all damage of all friendly units in the selected area.
-	
 	
 HorrifyAction.name	Horrify
 HorrifyAction.descr	Horrifies all enemy units in a small area, making them run in fear and shoot chaotically.
@@ -232,7 +231,7 @@ FireLashAction.descr	An upgrade that provides a significant boost to the Temple�
 // UNIT ACTIONS ///////////////////////////////////////////////////////////////	
 	
 Reinforce.name	Call Reinforcements
-Reinforce.descr	
+Reinforce.descr	Click to restore all units lost from the beginning of the mission.
 RainOfFireAction.name	Rain of Fire
 RainOfFireAction.descr	Drags a number of meteorites from the newly formed Earth Belts down to the planet’s surface, causing heavy damage in the designated area.
 ActionRelief.name	Relief
@@ -268,7 +267,7 @@ FrostWaveAction.descr	The Sorcerer instantly expels a powerful Frost Wave that s
 HolyShockAction.name	Holy Shock
 HolyShockAction.descr	The High Priest concentrates and uses Nature’s powers to completely restore the hit points of an allied unit.
 HowlAction.name	Howl
-HowlAction.descr	Instills fear in all nearby enemies for [stat:howl_fear_duration] seconds and turns into a Ghost Horror for [stat:howl_duration] seconds. The Ghost Horror heals itself for [stat:howl_hp_perc]% of its hit points per tick and ignores [stat:howl_ignore_perc]% of all incoming damage.
+HowlAction.descr	Instills fear in all nearby enemies for [stat:howl_fear_duration] seconds and goes into a defensive stance for [stat:howl_duration] seconds. In this stance, the Horror heals itself for [stat:howl_hp_perc]% of its hit points per tick and ignores [stat:howl_ignore_perc]% of all incoming damage.
 IllusionAction.name	Illusion
 IllusionAction.descr	The Guardian uses her powers to create two copies of herself. The Illusions will last for [illusions_duration] seconds and will then disappear. They are as deadly as the Guardian herself!
 IncinerateAction.name	Incinerate
@@ -280,7 +279,7 @@ LightningAction.descr	The High Priest channels his power into a deadly bolt of l
 ManipulateAction.name	Manipulate
 ManipulateAction.descr	Remove all harmful effects from all friendly units, increase their hitpoints by [stat:manipulate_hp_perc]% and power by [stat:manipulate_power_perc]% for [stat:manipulate_duration]seconds.
 MendAction.name	Mend
-MendAction.descr	The Surgeon uses her skills and gadgetry to mend а wounded friendly unit, restoring a total of [stat:mend_heal] hit points over [mend_duration] seconds.
+MendAction.descr	The Surgeon will mend а wounded friendly unit, restoring a total of [stat:mend_heal] hit points over [mend_duration] seconds.
 MorphAction.name	Morph
 MorphAction.descr	Morphs the Field Overseer into a Power Overseer.
 MorphAction.descr_field	Morphs the Field Overseer into a Power Overseer.
@@ -308,21 +307,21 @@ VitalitySurgeAction.name	Vitality Surge
 VitalitySurgeAction.descr	Instantly restores [stat:vitality_surge_gain]% of the Harvester’s hit points.
 Worker.WorkerRepairAction.name	Repair Building
 	
-// BUILDING ABILITIES /////////////////////////////////////////////////////////	
+///////////////// BUILDING ABILITIES /////////////////////////////////////////////////////////	
 	
 ControlTower.abilities.LargeCrew.name	Large Crew
-ControlTower.abilities.LargeCrew.text	DESCRIPTION
+ControlTower.abilities.LargeCrew.text	If there are no enemies near the Control Tower, its maintenance crew of three Technicians comes out to repair any damage the building may have taken. If the damage exceeds 75%, an additional Technician will show up.
 ControlTower.abilities.MotionScanner.name	Motion Scanner
 ControlTower.abilities.MotionScanner.text	The Control Tower detects all units moving within a certain range.
 OreExtractor.abilities.SmallCrew.name	Small Crew
-OreExtractor.abilities.SmallCrew.text	DESCRIPTION
+OreExtractor.abilities.SmallCrew.text	If the Ore Extractor is damaged and there are no enemies nearby, two technicians will arrive to repair the damage.
 	
 Shrine.abilities.SpiritTapAbi.name	Spirit Tap
 Shrine.abilities.SpiritTapAbi.text	Every [stat:spirit_sanctum_interval] seconds, the Shrine regenerates [stat:spirit_sanctum_hp_perc]% of the hit points of all organic friendly units in a medium-sized area around the Shrine itself.
 Temple.abilities.DarkWindAbi.name	Dark Wind
-Temple.abilities.DarkWindAbi.text	DESCRIPTION
+Temple.abilities.DarkWindAbi.text	When hostile troops approach the Temple, dark clouds gather over its peak, raining lightning strikes down upon the attackers. Each lightning hit deals [stat:dark_wind_damage] points of damage.
 Temple.abilities.FireLashAbi.name	Fire Lash
-Temple.abilities.FireLashAbi.text	Fire Lash description
+Temple.abilities.FireLashAbi.text	The Fire Lash upgrade raises the damage dealt by the Temple’s lightning bolts to [stat:fire_lash_damage]. The bolts also create molten spots on the ground that deal [stat:fire_lash_area_damage] points of damage per tick to any units standing upon them.
 Temple.abilities.SpiritSanctumAbi.name	Spirit Sanctum
 Temple.abilities.SpiritSanctumAbi.text	Every [stat:spirit_sanctum_interval] seconds, the Temple regenerates [stat:spirit_sanctum_hp_perc]% of the hit points and [stat:spirit_sanctum_power_perc]% of the power of all friendly organic units in a large area around it.
 	
@@ -335,7 +334,7 @@ Portal.abilities.CorruptionField.text	The Portal’s Corruption Field inflicts [
 Portal.abilities.SuppressionField.name	Suppression Field
 Portal.abilities.SuppressionField.text	The Portal’s Suppression Field slows the nearby enemies by [suppression_field_slow_perc]%.
 	
-// ABILITIES //////////////////////////////////////////////////////////////////	
+/////////////// ABILITIES //////////////////////////////////////////////////////////////////	
 	
 Ability_Rupture.name	Rupture
 Ability_Rupture.text	The Ripper’s attack has [stat:rupture_chance]% chance to stun its target for [stat:rupture_stun_duration] seconds and cause [stat:damage] damage to all surrounding enemies.
@@ -357,6 +356,8 @@ Brute.abilities.IgniteOnHitAbi.name	Ignite
 Brute.abilities.IgniteOnHitAbi.text	After striking its target, the Brute has a [stat:ignite_on_strike_chance]% chance to fly into a rage, igniting itself for [stat:ignite_duration] seconds. The ignited Brute inflicts additionally [ignite_damage] damage on up to [ignite_targets] targets in front of it.
 Brute.abilities.IgniteOnKillAbi.name	Ignite
 Brute.abilities.IgniteOnKillAbi.text	After performing a killing blow on its target, the Brute will fly into a rage, igniting itself for [stat:ignite_duration] seconds. The ignited Brute inflicts additionally [ignite_damage] damage on up to [ignite_targets] targets in front of it.
+ChainLightningAbi.name	Chain Lightning
+ChainLightningAbi.text	The Sorcerer has a [stat:chainlightning_chance]% chance to cast Chain Lightning for [stat:chainlightning_duration]seconds spreading to nearby targets.
 ChainShotAbi.name	Chain Shot
 ChainShotAbi.text	The Arbiter has a [stat:chain_shot_chance]% chance with every shot to trigger a plasma chain reaction, damaging [stat:chain_shot_hops] additional enemies.
 ChargeAbi.name	Charge
@@ -425,8 +426,8 @@ ShiftAbi.name	Shift
 ShiftAbi.text	While fighting, the Guardian can use her power to shift through the dimensions, moving herself around her target. This shifting causes double damage and stuns the target for [stat:shift_stun_duration] seconds.
 Shifter.abilities.CloneShieldAbi.name	Clone Shield
 Shifter.abilities.CloneShieldAbi.text	The Clone Shield automatically activates when the Shifter is attacked. It has a durability of [stat:shield_hull], a charge rate of [stat:shield_regen], a [stat:shield_fullabsorbchance]% chance for full deflection, and a damage absorption of [stat:shield_percentabsorbtion]%. Also, every time the Clone Shield fully deflects an incoming attack, it clones and protects one random nearby Officer, Trisat or Tritech."
-Sorcerer.abilities.ChillAbi.name	Chill
-Sorcerer.abilities.ChillAbi.text	The Sorcerer’s default attack slows his target by [stat:chill_perc]% for [stat:chill_duration] seconds.
+ChillSpellAbi.name	Chill
+ChillSpellAbi.text	The Sorcerer’s default attack slows his target by [stat:chill_perc]% for [stat:chill_duration] seconds.
 SurgeonAbilities.FirstAid.name	First Aid
 SurgeonAbilities.FirstAid.text	The Surgeon will automatically bandage wounded units every [stat:bandage_cooldown]seconds, healing them for [stat:bandage_amount] with a [stat:bandage_crit]% chance for twice the amount, also removing one harmful effect. Right-click on a friendly target to make the Surgeon following him and putting special attention on his hit points.
 Trisat.abilities.FrenzyAbi.name	Frenzy
@@ -441,8 +442,12 @@ Warrior.abilities.SharpShooterAbi.name	Sharp Shooter
 Warrior.abilities.SharpShooterAbi.text	The Warrior is very efficient when shooting at his maximum range. However, he quickly loses efficiency if forced into close-range combat.
 WhirlwindAbi.name	Whirlwind
 WhirlwindAbi.text	While fighting, the Guardian has a [stat:whirlwind_chance]% chance to perform a special move, inflicting damage to all adjacent targets.
+Worker.abilities.RepairAbi.name	Repair Building
+Worker.abilities.RepairAbi.text	The Worker can repair damaged buildings.
+Worker.abilities.BuildAbi.name	Build Shrine
+Worker.abilities.BuildAbi.text	The Worker can build a new Shrine at a free xenolite deposit.
 	
-// BUFFS //////////////////////////////////////////////////////////////////////	
+//////////////////// EFFECTS //////////////////////////////
 	
 AlienEgg.SizzleAura.effect.name	Sizzle
 AlienEgg.SizzleAura.effect.text	This unit is weakened by the influence of nearby alien Eggs.
@@ -450,22 +455,18 @@ AlienEgg.weapon.effect.name	Acid Burst
 AlienEgg.weapon.effect.text	This unit’s armor is weakened by an Acid Burst.
 AssaultBotAbilities.Rocket.effect.name	Reduced Damage
 AssaultBotAbilities.Rocket.effect.text	This unit’s effectiveness has been weakened by a concussion rocket.
-BigOne.abilities.VenomousBiteAbi.effect.name	Poison
-BigOne.abilities.VenomousBiteAbi.effect.text	This unit is taking damage from poison.
-BigOne.abilities.VenomShowerAbi.effect.name	Poison
-BigOne.abilities.VenomShowerAbi.effect.text	This unit is taking damage from poison.
-BigOne.ParalyzingFieldAura.effect.name	Slowing Poison
-BigOne.ParalyzingFieldAura.effect.text	This unit is being slowed by paralyzing poison.
 Brute.abilities.GrowlAbi.effect.name	Growl
 Brute.abilities.GrowlAbi.effect.text	This unit is threatened by a Brute and cannot attack anyone else.
 Brute.abilities.IgniteOnHitAbi.effect.name	Ignite
 Brute.abilities.IgniteOnHitAbi.effect.text	This unit is in a special state that raises its effectiveness.
 Brute.abilities.IgniteOnKillAbi.effect.name	Ignite
 Brute.abilities.IgniteOnKillAbi.effect.text	This unit is in a special state that raises its effectiveness.
+ChainLightningAbi.effect.name	Chain Lightning
+ChainLightningAbi.effect.text	This unit is taking damage from Chain Lightning!!!!!!.
 ChainShotAbi.effect.name	Chain Shot
 ChainShotAbi.effect.text	This unit is taking damage from a Chain Shot.
-ChillSpell.effect.name	Chill
-ChillSpell.effect.text	This unit is being slowed by a Sorcerer’s attack.
+Chill.effect.name	Chill
+Chill.effect.text	This unit is being slowed by a Sorcerer’s attack.
 ConfuseAction.spell.effect.effect.name	Confusion
 ConfuseAction.spell.effect.effect.text	The Lord Commander’s armor is increased during a Confusion maneuver.
 CorruptionAction.spell.effect.name	Corruption
@@ -522,18 +523,6 @@ Portal.SuppressionFieldAura.effect.name	Suppression Field
 Portal.SuppressionFieldAura.effect.text	This unit is being slowed by a Suppression Field.
 OverclockAbi.effect.name	Overclock
 OverclockAbi.effect.text	Increased movement speed
-S_fear.name	Fear
-S_fear.text	This unit is horror-stricken and cannot execute orders.
-S_freeze.name	Freeze
-S_freeze.text	This unit is frozen and cannot do anything at the moment.
-TerrifyAbi.effect.name	Terrified
-TerrifyAbi.effect.text	This unit is horror-stricken and cannot execute orders.
-S_madden.name	Madden
-S_madden.text	This unit has panicked and cannot distinguish friends from foes.
-S_stun.name	Stun
-S_stun.text	This unit is stunned and cannot do anything at the moment.
-SalingAssassin.weapon.alt_projectile.effect.name	Poison
-SalingAssassin.weapon.alt_projectile.effect.text	This unit is taking damage from poison.
 Shrine.SpiritTrapAura.effect.name	Spirit Tap
 Shrine.SpiritTrapAura.effect.text	This unit’s hit points are being regenerated by the Spirit Tap aura of a nearby Temple.
 SpittingScorpion.abilities.VenomousBiteAbi.effect.name	Poison
@@ -544,12 +533,69 @@ VoiceofCommandAction.effect.name	Voice of Command
 VoiceofCommandAction.effect.text	The efficiency of this unit’s attacks has been improved by a nearby Judge.
 Temple.SpiritSanctumAura.effect.name	Spirit Sanctum
 Temple.SpiritSanctumAura.effect.text	This unit’s hit points and energy are being regenerated by the Spirit Sanctum aura of a nearby Temple.
-E_PoisonShot.name	Slowing Poison
-E_PoisonShot.text	This unit is slowed and taking damage from an Assassin's Poison Flare
 Trisat.frenzy.effect.name	Frenzy
 Trisat.frenzy.effect.text	This unit is frenzied. Its armor and damage points are increased.
 Trisat.ParalyzingFieldAura.effect.name	Paralyzing Field
 Trisat.ParalyzingFieldAura.effect.text	This unit is being slowed by a Trisat’s Paralyzing Field.
+LavaTrap.IncinerateAura.effect.name	Incinerate
+LavaTrap.IncinerateAura.effect.text	This unit is suffering damage from a molten spot on the ground.
+QueenProtector.abilities.Taunt.effect.effect.name	Confusion
+QueenProtector.abilities.Taunt.effect.effect.text	This unit is threatened by a Queen Protector and cannot attack anyone else.
+E_PoisonShot.name	Slowing Poison
+E_PoisonShot.text	This unit is slowed and taking damage from an Assassin's Poison Flare
+S_freeze.name	Freeze
+S_freeze.text	This unit is frozen and cannot do anything at the moment.
+S_stun.name	Stun
+S_stun.text	This unit is stunned and cannot do anything at the moment.
+S_madden.name	Madden
+S_madden.text	This unit has panicked and cannot distinguish friends from foes.
+S_fear.name	Fear
+S_fear.text	This unit is horror-stricken and cannot execute orders.
+TerrifyAbi.effect.name	Terrified
+TerrifyAbi.effect.text	This unit is horror-stricken and cannot execute orders.
+
+//// ENEMY EFFECTS /////////////
+
+SalingAssassin.weapon.alt_projectile.effect.name	Poison
+SalingAssassin.weapon.alt_projectile.effect.text	This unit is taking damage from poison.
+Kai_Rider.frenzy.effect.name	Frenzy
+Kai_Rider.frenzy.effect.text	This unit is frenzied. Its chance for a critical hit is increased.
+CPCorruptedBody.name	Corrupted Body
+CPCorruptedBody.text	This unit’s statistics are increased by a foul power.
+CPCorruptedMind.name	Corrupted Mind
+CPCorruptedMind.text	This unit’s mind is corrupted, forcing it to fight for the enemy.
+AncientSmith.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmith.abilities.ConfuseAbi.effect.effect.text	Ancient Smith’s armor is increased during a Confusion maneuver.
+AncientSmith.AncientSmithBerserkAura.effect.name	Berserk
+AncientSmith.AncientSmithBerserkAura.effect.text	This unit’s damage is increased by the Berserk aura of a nearby Ancient Smith.
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmithCloneEast.abilities.ConfuseAbi.effect.effect.text	Ancient Smith’s armor is increased during a Confusion maneuver.
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmithCloneWest.abilities.ConfuseAbi.effect.effect.text	This unit is threatened by an Ancient Smith and cannot attack anyone else.
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.name	Confusion
+AncientSmithMinion.abilities.ConfuseAbi.effect.effect.text	Ancient Smith’s armor is increased during a Confusion maneuver.
+AncientSmithMinion.AncientSmithFortifyAura.effect.name	Fortify
+AncientSmithMinion.AncientSmithFortifyAura.effect.text	This unit’s armor is strengthened by the Fortify aura of a nearby Ancient Smith.
+RenegadeManipulator.abilities.EnrageAbi.effect.name	Enrage
+RenegadeManipulator.abilities.EnrageAbi.effect.text	This unit’s statistics are being enhanced by a friendly Renegade Manipulator.
+RenegadeDominator.abilities.DimensionChainAbi.effect.effect.name	Dimension Chain
+RenegadeDominator.abilities.DimensionChainAbi.effect.effect.text	This unit is caught in a Dimension Chain and cannot move.
+RenegadeHarvester.abilities.EnsnareAbi.projectile.effect.name	Hunter’s net
+RenegadeHarvester.abilities.EnsnareAbi.projectile.effect.text	This unit is caught in a hunter’s net and cannot act.
+E_bt_shield.name	Special Defense
+E_bt_shield.text	This unit has been granted a special defensive ability.
+E_bt_weapon.name	Special Offense
+E_bt_weapon.text	This unit has been granted a special offensive ability.
+E_PlaguedCorrosion.name	Plague Corrosion
+E_PlaguedCorrosion.text	This unit receives less hit points when being healed.
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.name	Poison
+BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.text	This unit is taking damage from poison.
+BigOne.abilities.VenomousBiteAbi.effect.name	Poison
+BigOne.abilities.VenomousBiteAbi.effect.text	This unit is taking damage from poison.
+BigOne.abilities.VenomShowerAbi.effect.name	Poison
+BigOne.abilities.VenomShowerAbi.effect.text	This unit is taking damage from poison.
+BigOne.ParalyzingFieldAura.effect.name	Slowing Poison
+BigOne.ParalyzingFieldAura.effect.text	This unit is being slowed by paralyzing poison.
 VarunAssassin.weapon.alt_projectile.effect.name	Poison
 VarunAssassin.weapon.alt_projectile.effect.text	This unit is taking damage from poison.
 Vasilii.weapon.projectile.effect.effect.name	Poison
@@ -558,11 +604,3 @@ VenomousScorpion.abilities.VenomousBiteAbi.effect.name	Poison
 VenomousScorpion.abilities.VenomousBiteAbi.effect.text	This unit is taking damage from poison.
 VenomousScorpion.ParalyzingFieldAura.effect.name	Slowing Poison
 VenomousScorpion.ParalyzingFieldAura.effect.text	This unit is being slowed by paralyzing poison.
-E_PlaguedCorrosion.name	Plague Corrosion
-E_PlaguedCorrosion.text	This unit receives less hit points when being healed.
-LavaTrap.IncinerateAura.effect.name	Incinerate
-LavaTrap.IncinerateAura.effect.text	This unit is suffering damage from a molten spot on the ground.
-QueenProtector.abilities.Taunt.effect.effect.name	Confusion
-QueenProtector.abilities.Taunt.effect.effect.text	This unit is threatened by a Queen Protector and cannot attack anyone else.
-BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.name	Poison
-BigOne.abilities.VenomShowerAbi.projectile.secondary.projectile.effect.effect.text	This unit is taking damage from poison.

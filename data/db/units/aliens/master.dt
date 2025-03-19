@@ -204,12 +204,6 @@ CSpellAction FeedAction {
       type = damage
       duration = stat:feed_duration
       tick = stat:feed_tick
-      -- immediate_tick = 1
-      
-      --enemy = 0 
-      --ally = 1
-      --tags = organic
-
       damage = var:feed_base_damage
       chooser = nearest         -- random | nearest | nearest_to_caster | nearest_to_first
       spread_damage_and_add = stat:feed_add_damage -- if not ommited means damage done per tick is: damage / num_affected + spread_damage_and_add

@@ -3,7 +3,7 @@ Unit Hatchling : BaseUnit {
   race = aliens
   tags = unit, organic, lowrank
   icon = 5,3
-  scale = 0.9
+  scale = 0.8
 
   model = data/models/units/Trisat/Trisat.kfm {
     die = data/models/units/Hatchling/Hatchling_die.nif
@@ -27,8 +27,8 @@ Unit Hatchling : BaseUnit {
     range = 100
     damage = 40
     
-    threaten_duration = 4
-    threaten_chance = 5
+    threaten_duration = 1
+    threaten_chance = 2
   }
 
   aggro_range = 3000

@@ -36,12 +36,7 @@ Turret ProtonTurret : BaseTurret {
       model = constr_phase_0
     }
   }
-  
-  CAlertController alert {
-    timeout = 15
-    layered_anims = 0
-  }
-  
+
   CAutoDieController AutoDie {
     die_with_creator = 1
     show_progress = 0

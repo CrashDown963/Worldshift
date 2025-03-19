@@ -90,14 +90,9 @@ BaseUnit {
     fire {	  
       duration = 0.4
       pt_chest {
-        model = data/models/effects/Fire/FireReact.nif { fixed_up = 1 }
+        model = data/models/effects/Fire/firereact.nif { fixed_up = 1 }
         --stack = reset,once,replay (chose one of these, once is default for looped and replay for nonlooped attachments)
       }
---      colorize {
---        color = 255,50,50
---        fade_in = 0.1
---        fade_out = 0.3
---      }
     }
 
     nature_grace {
@@ -238,11 +233,6 @@ BaseUnit {
     fear {
 	  duration = 15
       pt_top = data/models/effects/MiscReacts/Fear.nif
---       colorize {
---         color = 150,50,150
---         fade_in = 0.1
---         fade_out = 0.3
---       }
     }
     
     horrify {
@@ -266,11 +256,6 @@ BaseUnit {
 
     poison {
       pt_top = data/models/effects/MiscReacts/Poison_react.nif { fixed_up = 1 }
---      colorize {
---        color = 50,255,50
---        fade_in = 0.4
---        fade_out = 0.6
---      }
     }
 
     relief {
@@ -316,6 +301,11 @@ BaseUnit {
       pt_ground = data/models/effects/magic/lightning_hit_react.nif 
     }
 
+    chainlightning {
+      infinite = 1
+      pt_ground = data/models/effects/magic/lightning_hit_react.nif { fixed_up = 1 }  
+    }
+
     damage_transfer {
       pt_ground = data/models/effects/magic/HealFXGround.nif
     }
@@ -329,7 +319,7 @@ BaseUnit {
     }  
     
     drain_life {
-      pt_chest = data/models/effects/miscreacts/LifeDrain.nif
+      pt_chest = data/models/effects/miscreacts/drainlife.nif
     }
 
     drain_enemy_receive_react {
@@ -397,11 +387,6 @@ BaseUnit {
     paralyze {
       duration = 10
       pt_ground = data/models/effects/MiscReacts/ParalyzingField.nif 
---      colorize {
---        color = 50,255,50
---        fade_in = 0.4
---        fade_out = 0.6
---      }
     }
 
     cleanse {
@@ -448,11 +433,6 @@ BaseUnit {
       pt_ground {
         model = data/models/effects/MiscReacts/React_AuraDamage.nif
       }
---      colorize {
---        color = 255,50,50
---        fade_in = 0.1
---        fade_out = 0.3
---      }
     }
 
     hollow_voice {
@@ -460,20 +440,21 @@ BaseUnit {
       pt_chest {
         model = data/models/effects/Fire/FireReact.nif { fixed_up = 1 }
       }
---      colorize {
---        color = 255,50,50
---        fade_in = 0.1
---        fade_out = 0.3
---      }
     }
-    
+
+    detonationaura {
+      infinite = 1
+      pt_ground {
+        model = Data/Models/Effects/MiscReacts/React_AuraArmor.nif
+      }
+    }
+   
     manipulate {
       pt_ground {
-        model = Data/Models/Effects/MiscReacts/React_AuraArmor.nif {
-          stack = replay
-        }
-      }  
-    }    
+        model = Data/Models/Effects/MiscReacts/React_AuraDamage.nif
+        stack = replay
+      }
+    }
     
     enrage {
       infinite = 1
@@ -506,7 +487,6 @@ BaseUnit {
       infinite = 1
       pt_ground = data/models/effects/MiscReacts/ParalyzingField.nif 
     }
-    
   }
   
   beam_end_points {
@@ -515,12 +495,6 @@ BaseUnit {
     pt_top
     pt_ground
     pt_hand
---	special {
---		MyBeamID {
---			special points here
---		}
---	}
-  
   }
 
   drainpsy {
@@ -721,6 +695,7 @@ BaseBoss : BaseMob {
     fear
     slow
     DimensionChain
+    Threaten
   }
 }
 
@@ -740,6 +715,7 @@ BaseMachineBoss : BaseMachineMob {
     fear
     slow
     DimensionChain
+    Threaten
   }
 }
 

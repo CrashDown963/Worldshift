@@ -1,0 +1,143 @@
+Unit Eji2 : BaseUnit {
+  name = "Eji"
+  race = mutants
+  officer = 1
+  icon = 1,3
+  tags = unit, organic
+  take_auras : { RestorationCoreAura }
+  model = Data/Models/Units/Eji/Eji.kfm  
+  destruction = animation
+  cost : pvp.mutants.unit_costs.Officer
+  cost_sloc : pvp.mutants.sloc_costs.Officer
+  impacts : LivingUnitImpacts
+  target_priority = 1
+
+  sounds {
+    select = data/speech/selecting/eji select/
+    joke = data/speech/selecting/eji joke/
+    confirm = data/speech/confirmations/eji/eji confirm/
+    destruction = data/speech/deaths/eji death/
+    damage = data/speech/engage alerts/eji damage/
+  }
+
+  speed = 450
+  sight = 1400
+  range = 1600
+  aggro_range = 0
+  
+  stats :{
+    hp = 280
+    armor = 3
+    psi = 460
+    psi_gen = 320
+  }
+
+  
+  abilities {
+    CorruptMindEjiAbi
+    Charming {
+      name = "Charming"
+      text = "Enemies will prefer to attack someone else if possible"
+      icon = 2,0
+    }
+    
+    Restore {
+      name = "Restore"
+      text = "Restores friendly units' hit points"
+      icon = 3,0
+      when : abi.always
+      can_default = 1
+      weight = 2
+      target : abi.ally { health_under = 95 }
+      range = 1700
+      power = 50
+      effect = E_heal {
+        amount = 100
+        react = full_restore
+      }
+      cast {
+        prepare {
+          anim = cast_start
+        }
+        finish {
+          anim = cast_finish
+          attach {
+            pt_ground = data/models/effects/magic/HealFXGround.nif
+          }
+        }
+      }
+    }
+    
+    FullRestoration {
+      name = "Full Restoration"
+      text = "Completely heals nearby units. Requires full concentration."
+      icon = 3,0
+      when : abi.idle
+      target : abi.self
+      area : abi.medium
+      cooldown = 30
+      lua_when = CheckFullRestorationAbility { range = 1500; no_damage_time = 10 }
+      
+      cast {
+        prepare {
+          anim = cast_start
+        }
+        finish {
+          duration = 3
+          anim = cast_finish
+          attach {
+            pt_ground = data/models/effects/magic/HealFXGround.nif
+          }
+        }
+      }
+      
+      effect = E_heal {
+        amount = 500
+        area = 1000 { anim = data/models/effects/magic/healingwave.nif { scale = 1 } }
+        react = full_restore
+      }
+    }
+  }
+  
+  actions : BaseUnit.actions {
+  }
+  
+  COrientationController orientation {
+    rot_speed = 180
+    max_tilt = 0
+  }  
+}
+
+CorruptMindEjiAbi {
+  name = "Corrupted Mind"
+  text = "Eji will mind control big enemies when they get too close"
+  visible = 1
+  when : abi.always
+  chance = 40
+  cooldown = 50
+  target = enemy { min_hp = 200; max_hp = 5000 }
+  tags = organic
+  range = 800
+  min_power = 220
+  power = 50
+
+  cast {
+    prepare {
+      duration = 2
+      anim = cast_start
+      attach {
+        pt_cast = data/models/effects/Magic/StoneGhostAttachment.nif { scale = 1 }
+      }
+    }
+    finish {
+      anim = cast_finish
+    }
+  }
+  
+  effect = E_mindcontrol {
+    id = CorruptedMind
+    duration = 12
+    react = mind_control
+    sound = data/sounds/effects/global actions/horrify/
+  }
+}

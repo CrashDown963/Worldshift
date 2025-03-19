@@ -1,0 +1,153 @@
+Unit BigMutant2 : BaseUnit {
+  name = "Dave, Jack's brother"
+  icon = 1,1
+  model = data/Models/units/BigMutant/BigMutant.kfm
+  destruction = animation
+  race = aliens
+  officer = 1
+  scale = 0.30
+  
+  stats :{
+    hp = 600
+  armor = 25
+  range = 1000
+  damage = 50
+    healing_taken_debuff_amount = 2
+    healing_taken_debuff_duration = 8
+  }
+
+  immune_to : {
+  }
+  
+  ShootProjectile {
+    model = Data/Models/Effects/TraceBullet/MasterProjectile.nif {
+      CTrailController trail {
+			  emitter = Scene Root
+			  texture = data/textures/trails/energy_trail1.dds
+			  tex_ratio = float: 4.0
+			  start_width = 14
+			  end_width = 0
+			  ttl = 12
+			  simple_time = 1
+			  additive = 1
+			  z_write = 0
+			  material_alpha = 0.5
+			  diffuse = color: 0, 1, 0
+			  ambient = color: 0, 0.5, 0
+			  emissive = color: 0, 1, 0
+
+			  time0 = 0
+			  color0 = colora: 0, 1, 0, 0
+
+			  time1 = 3
+			  color1 = colora: 0, 1, 0, 0.4
+
+			  time2 = 30
+			  color2 = colora: 0, 1, 0, 0.25
+
+			  time4 = 100
+			  color4 = colora: 0, 1, 0, 0
+		  }
+    }
+    scale = 0.5
+  }
+
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = pt_shoot_1
+    shoot_anim = shoot
+    shoot_idle_1 = shoot_idle
+    spot_impact = 1000
+    --spot_impact_type = melee
+    min_bursts = 1
+    max_bursts = 1
+    idle_time = 1
+    aim_tolerance_pitch = 180
+    aim_tolerance_yaw = 15
+
+    projectile = splitparabolic {
+      secondary_projectiles = 2
+      secondary_radius = 1000
+      --split_effect = BigMutantShotEffect
+      
+      primary {
+        projectile : ShootProjectile = parabolic {
+          angle = 1
+        }
+      }
+      
+      secondary {
+        projectile : ShootProjectile = parabolic {
+          angle = 0
+          spot_impact = 800
+          spot_impact_type = small_energy
+          damage_type = energy
+          effect = BigMutantShotEffect
+	      }
+      }
+    }
+
+    --projectile : ShootProjectile = linear {
+    --  speed = 2500
+    --}
+  }
+  
+  abilities {
+    Melee {
+      cast { finish { anim = Hit_1 } }
+      when : abi.fight
+      target = current
+      range = 150
+      effect = BigMutantMeleeEffect
+    }
+  }
+  
+}
+
+CBuffEffect E_PlaguedCorrosion {
+  debuff = 1
+  id = PlaguedCorrosion
+  name = "Plagued Corrosion"
+  text = "Reduces the amount of healing taken by [stat:healing_taken_debuff_ammount]% per application"
+  type = healing_taken_debuff
+  cleansable = 0
+  duration = stat:healing_taken_debuff_duration
+  stats_change {
+    healing_taken_mod = { abs = stat:healing_taken_debuff_amount * -1 }
+  }
+  tick = 1
+  immediate_tick = 1
+  discard_react = 1
+  react = paralyze
+  stack_count = 0
+}
+
+CMultiEffect BigMutantMeleeEffect {
+  effect = CDamageEffect
+  multi_area = 500
+  cone_angle = 120
+  amount = 50
+  epicenter {
+    physics_radius = 700
+    physics_power = 1000
+    physics_elevation = 800
+  }
+}
+
+CAreaEffect BigMutantShotEffect {
+  range = 200
+ 
+  epicenter {
+    spawn ExplosionPlasma_01 { scale = 1.5 }
+    physics_radius = 200 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount = 100
+    }
+    spawn E_PlaguedCorrosion
+  }
+}

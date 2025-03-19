@@ -33,16 +33,16 @@ Unit Manipulator : BaseUnit {
     damage = 12
     psi = 400
 
-    shield_hull = 150
+    shield_hull = 100
     shield_regen  = 120
     shield_fullabsorbchance = 10
     shield_percentabsorbtion = 25
 
-    vortex_power = 140
+    vortex_power = 180
     vortex_cooldown = 40
     vortex_range = 1000
     vortex_area = 800
-    vortex_heal = 30
+    vortex_heal = 50
     vortex_duration = 6
     
     manipulate_cost = 280
@@ -175,13 +175,13 @@ DarkVortex DarkVortex {
 		duration : Manipulator.stats.vortex_duration
 		area : area.medium
 		beam_name = DarkVortexHealBeam
-		beam_duration = 0.3
+		beam_duration = 0.2
 		heal_hp : Manipulator.stats.vortex_heal
 		react = heal
 		min_beams = 1
-		max_beams = 6
-		min_beams_interval = 0.3
-		max_beams_interval = 1
+		max_beams = 10
+		min_beams_interval = 0.2
+		max_beams_interval = 0.3
 		anim_fade_in = fade_in
 		anim_idle = thunder_idle
 		anim_fade_out = fade_out

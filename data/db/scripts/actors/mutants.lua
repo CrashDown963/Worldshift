@@ -45,18 +45,18 @@ function Unit:PrgHealingWave(params)
   this:CastSpell(pt, "CastHealingWave")
 end
 
-function Unit:PrgConjureFood(params)
-  local food = this:GetVar("conjure_food")
-  local time = this:GetVar("conjure_time")
-  local focus = params.focus or 0
-  this.onPrgEnd = function() this:SetAnim() end
-  this:SetAnim("cast_conjure_food_prepare")
-  this:Sleep(time)
-  this:PlayAnim("cast_conjure_food_finish")
-  map.AddRes(this:GetFaction(), food, "f")
-  map.SubRes(this:GetFaction(), focus, "o")
-  this:DrainPower(this:GetVar("conjure_power"))
-end
+-- function Unit:PrgConjureFood(params)
+--   local food = this:GetVar("conjure_food")
+--   local time = this:GetVar("conjure_time")
+--   local focus = params.focus or 0
+--   this.onPrgEnd = function() this:SetAnim() end
+--   this:SetAnim("cast_conjure_food_prepare")
+--   this:Sleep(time)
+--   this:PlayAnim("cast_conjure_food_finish")
+--   map.AddRes(this:GetFaction(), food, "f")
+--   map.SubRes(this:GetFaction(), focus, "o")
+--   this:DrainPower(this:GetVar("conjure_power"))
+-- end
 
 function Unit:PrgLifeBloom(params)
   local minRange, maxRange = this:GetAttackRanges(nil)
@@ -420,8 +420,20 @@ function DarkWind:PrgIdle(params)
   this.onPrgEnd()
 end
 
-function DarkWind:PrgFade()
-  local fadeOutAnim = this:GetVar("anim_fade_out", "str") or "thunder_fade_out"
-  this:PlayAnim(fadeOutAnim)
-  this:Destroy()
-end
+-- function DarkWind:PrgFade()
+--   local fadeOutAnim = this:GetVar("anim_fade_out", "str") or "thunder_fade_out"
+--   this:PlayAnim(fadeOutAnim)
+--   this:Destroy()
+-- end
+
+-- function unit:PrgIllusions(params)
+--   this:CreateIllusions()
+-- end
+
+-- function unit:PrgDespawnIllusion(params)
+--   this:Destroy()
+-- end
+
+-- function unit:PrgMount()
+--     this:PlayAnim("mount")
+-- end

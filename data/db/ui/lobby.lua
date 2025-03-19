@@ -2319,10 +2319,11 @@ ShoppingUnits = uiwnd {
     anchors = { TOPLEFT = { "BOTTOMLEFT", "Title", 10,15 }, BOTTOMRIGHT = { "Title", -10,30+15 } },
   },
   
-  Officer_1 = DefShoppingButton { officer = 1 ,index = 1, layer = "+1", anchors = { TOPLEFT = { "BOTTOMLEFT", "BigStars", 0,3 } } },
+  Officer_1 = DefShoppingButton { officer = 1 ,index = 1, layer = "+1", anchors = { TOPLEFT = { "BOTTOMLEFT", "BigStars", -1,3 } } },
   Officer_2 = DefShoppingButton { officer = 1 ,index = 2, layer = "+1", anchors = { LEFT = { "RIGHT", "Officer_1", 3,0 } } },
   Officer_3 = DefShoppingButton { officer = 1 ,index = 3, layer = "+1", anchors = { LEFT = { "RIGHT", "Officer_2", 3,0 } } },
   Officer_4 = DefShoppingButton { officer = 1 ,index = 4, layer = "+1", anchors = { LEFT = { "RIGHT", "Officer_3", 3,0 } } },
+  Officer_5 = DefShoppingButton { officer = 1 ,index = 5, layer = "+1", anchors = { LEFT = { "RIGHT", "Officer_4", 3,0 } } },
   
   SmallStars = DefStarControl {
     layer = "+1",
@@ -2333,7 +2334,7 @@ ShoppingUnits = uiwnd {
     anchors = { TOPLEFT = { "BOTTOMLEFT", "BigStars", 0,90 }, BOTTOMRIGHT = { "BigStars", 0,30+90 } },
   },
   
-  Unit_1 = DefShoppingButton { index = 1, stack_height = 50, stack_dist_max = 10, layer = "+1", anchors = { TOPLEFT = { "BOTTOMLEFT", "SmallStars", 0,3 } } },
+  Unit_1 = DefShoppingButton { index = 1, stack_height = 50, stack_dist_max = 10, layer = "+1", anchors = { TOPLEFT = { "BOTTOMLEFT", "SmallStars", -1,3 } } },
   Unit_2 = DefShoppingButton { index = 2, stack_height = 50, stack_dist_max = 10, layer = "+1", anchors = { LEFT = { "RIGHT", "Unit_1", 3,0 } } },
   Unit_3 = DefShoppingButton { index = 3, stack_height = 50, stack_dist_max = 10, layer = "+1", anchors = { LEFT = { "RIGHT", "Unit_2", 3,0 } } },
   Unit_4 = DefShoppingButton { index = 4, stack_height = 50, stack_dist_max = 10, layer = "+1", anchors = { LEFT = { "RIGHT", "Unit_3", 3,0 } } },
@@ -2344,6 +2345,7 @@ ShoppingUnits = uiwnd {
     this.Officer_2.ui_cost = this.BigStars
     this.Officer_3.ui_cost = this.BigStars
     this.Officer_4.ui_cost = this.BigStars
+    this.Officer_5.ui_cost = this.BigStars
 
     this.Unit_1.ui_cost = this.SmallStars
     this.Unit_2.ui_cost = this.SmallStars

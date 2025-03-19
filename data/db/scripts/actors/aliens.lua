@@ -538,7 +538,12 @@ function Unit:RenegadeEggSpawn(params)
 end
 
 function Unit:PrgDomSiege(params)
+  this.onPrgEnd = function()
+    this:SetAnim()
+    
+  end
   local siegeAnimLength = this:GetAnimLength("siege_start")
+  local standLength = this:GetAnimLength("stand")
   local foot1Time = this:GetAnimKeyTime("siege_start", "Foot02_down")
   local foot2Time = this:GetAnimKeyTime("siege_start", "Foot01_down")
   local shoot1Time = this:GetAnimKeyTime("siege_shoot_1", "action")
@@ -546,7 +551,7 @@ function Unit:PrgDomSiege(params)
   local shoot1Length = this:GetAnimLength("siege_shoot_1")
   local shoot2Length = this:GetAnimLength("siege_shoot_2")
   local firstEnemyFaced = false
-  local searchRange = this:GetVar("sight_in_combat") or 5000
+  local searchRange = this:GetVar("sight_in_combat")
   local leftHand = true
   
   while true do
@@ -557,6 +562,7 @@ function Unit:PrgDomSiege(params)
       this:FaceTo(enemy)
       firstEnemyFaced = true
       this:SetAnim("siege_start")
+      this:SetInteractive(false)
       this:Sleep(foot1Time)
       map.SpawnObject("PuffDust", this:GetNodePos("pt_footprint02"))
       this:Sleep(foot2Time - foot1Time)
@@ -568,9 +574,12 @@ function Unit:PrgDomSiege(params)
     
     local nearestEnemy, range = this:FindNearestEnemy(this:GetPos(), searchRange)
     
-    if range and range < 1200 then
+    if range and range < 650 then
       if firstEnemyFaced then
         this:PlayAnim("stand")
+        this:Sleep(standLength)
+        this:SetInteractive(true)
+
       end
       this:SetAnim()
       return
@@ -600,22 +609,13 @@ function Unit:PrgDomSiege(params)
     else
       if firstEnemyFaced then
         this:PlayAnim("stand")
+        this:Sleep(standLength)
+        this:SetInteractive(true)
       end
       this:SetAnim()
-      if not nearestEnemy then
-        local roam = this:GetVar("roam") or 0
-        local noEvade = this:GetVar("no_evade") or 0
-        if roam > 0 or noEvade > 0 then
-          local path = this:GetVar("path", "str")
-          if path then this:SetVar("path", path) end
-          this:Execute("PrgIdle")
-        else  
-          this:Execute("PrgEvade")
-        end
-      end
       return
     end
-    
     this:Sleep(0.3)
   end
+  this.onPrgEnd()
 end

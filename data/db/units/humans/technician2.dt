@@ -1,0 +1,137 @@
+Technician Technician2 : BaseUnit {
+  name = "Technician"
+  descr = "DESCRIPTION"
+  model = data/models/units/technician/technician2.kfm
+  race = humans
+  officer = 1
+  icon = 3,3
+  tags = unit, organic
+  speed = 450
+  aggro_range = 0
+
+  take_auras : { RestorationCoreAura }
+  impacts : LivingUnitImpacts
+
+  stats :{
+    armor = 0
+    hp = 400
+    range = 1100
+    damage = 8
+    attack_rate = 1
+    attack_proximity = 10
+    attack_precision = 1
+  }
+
+  sounds {
+    attack = data/speech/confirmations/arna/arna attack/
+    select = data/speech/selecting/arna select/
+    joke = data/speech/selecting/arna joke/
+    confirm = data/speech/confirmations/arna/arna confirm/
+    destruction = data/speech/deaths/arna death/
+    engage = data/speech/engage alerts/arna engage/
+    damage = data/speech/engage alerts/arna damage/
+    move = data/speech/confirmations/arna/arna move/
+  }
+       
+  animation {
+    anim_set WORK = loop {
+      work_up_1 = 100, 2,4
+      mine_1 = 100, 1,2
+      work_down = 100, 2,4
+      mine_rare_1 = 10, 1,1
+    }
+    
+    anim_set pick_item = loop {
+      work_up_1 = 100, 2,4
+      mine_1 = 100, 1,2
+      work_down = 100, 2,4
+      mine_rare_1 = 10, 1,1
+    }
+  }
+
+  abilities {
+    TurretsAbi
+    --RepairAbi
+  }
+    
+  actions : BaseUnit.actions {
+    Repair;
+    RepairUnit;
+  }
+  
+  CWeaponController weapon {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+
+    damage = stat:damage
+    range_far = stat:range * 0.25
+    range_near = stat:range * 0.15
+    proximity_bonus = 8
+    fire_node = pt_shoot_1
+
+    aim_tolerance = 45
+    shoot_anim = shoot
+    idle_time = 1.5
+    shoot_idle_1 = shoot_idle
+    damage_type = energy
+
+    projectile = linear {
+      spot_impact = 700
+      spot_impact_type = bullet
+      speed = 8000
+      ground_hit_effect = BulletTerrainHitEffect
+      model = data/models/projectiles/fastenergybolt/fast_energy_bolt.nif {
+		    scale = 0.7
+		    E = 125,255,20
+ 	    }
+    }
+    spot_impact = 750
+    spot_impact_type = bullet
+    muzzle_fx = nomad
+    shoot_snd = data/sounds/Weapons/Small Energy Shot/
+  }
+}
+
+RepairAbi {
+  name = "Repair"
+  text = "Repairs units and buildings."
+  when : abi.always
+  program = PrgRepairing
+}
+
+TurretsAbi {
+  name = Turrets
+  text = "turrets description."
+  visible = 1
+  when : abi.fight 
+  icon = 1,0
+  target = self
+  cooldown = 35
+     
+  cast {
+    finish {
+      anim = work_down
+    }
+  }
+      
+  effect = E_spawn {
+    spawn_prg = PrgDeployTurrets
+    range = 1600
+    spawn {
+      TurretSpawn = 1  
+    }
+  }
+}
+
+Actor TurretSpawn {
+  hull = 0
+  sight = 0
+  model = Data/Models/buildings/ProtonTurret/ProtonTurret.kfm
+  hidden = 1
+  
+  upgrading_anim = ProtonTurretUpgradingAnim
+  upgraded_anim = ProtonTurretUpgradedAnim
+  turret_to_spawn = ProtonTurret2
+  spawn_time = 5
+}

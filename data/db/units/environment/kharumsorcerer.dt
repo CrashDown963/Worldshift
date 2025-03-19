@@ -64,7 +64,7 @@ Mob KharumSorcerer : BaseMob {
     FrostWaveAction
   }
 
-  attack_spell = ChillSpell
+  attack_spell = ChillSpellAbi
   
   animation {
    

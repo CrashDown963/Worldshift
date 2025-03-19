@@ -89,7 +89,7 @@ neterr_selectprofile	Select a GameSpy ID to create a WorldShift player name for 
 net_helpchoosegsprofile	Select the GameSpy ID under which you want to create a new WorldShift player and click ‘Next’.	
 net_playername	Player Name	
 		
-legal_text	© 2008 RTL Television, Black Sea Studios Ltd. Marketed by RTL Games GmbH. Published by RTL Games GmbH. Black Inc. is a label and a registered trademark of RTL Games GmbH. WorldShift is a registered trademark of Black Sea Studios Ltd. Developed by Black Sea Studios Ltd.	
+legal_text	2025 Worldshift Community Patch
 		
 gs_isc_availabilitycheck	Performing online service availability check...	
 gs_isc_connecting	Connecting to the online service...	

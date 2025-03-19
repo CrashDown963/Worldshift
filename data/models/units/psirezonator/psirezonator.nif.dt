@@ -6,7 +6,7 @@ model = {
   }
   #0 = {
     scale = fixp:"1";
-    name = str:"PSI REZONATOR";
+    name = str:"pt_cast";
     translation = xpoint3:"0,0,294.98870849609375";
     rotation = {
       0 = xpoint3:"1,0,0";

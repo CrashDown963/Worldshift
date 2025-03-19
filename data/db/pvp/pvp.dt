@@ -51,6 +51,7 @@ pvp {
       Brute = 3u 20r 5t
       AncientShade = 4u 40r 10t
       HowlingHorror = 6u 80r 15t
+      EliteKaiRider = 3u 35r 10t
       Officer = 0u 100r 5t
     }
     sloc_costs {
@@ -59,6 +60,7 @@ pvp {
       Brute = 3u 30r 10t
       AncientShade = 3u 30r 15t
       HowlingHorror = 4u 70r 20t
+      EliteKaiRider = 3u 35r 10t
       Officer = 0u 100r 4t
     }
     officer_costs_add = int4:0,0,50,100
@@ -95,6 +97,7 @@ pvp {
       Tritech = 2u 20r 5t
       Shifter = 6u 80r 10t
       Overseer = 4u 80r 10t
+      PsiDetonator = 3u 60r 15t
       Officer = 0u 100r 4t
     }
     sloc_costs {
@@ -103,6 +106,7 @@ pvp {
       Tritech = 2u 20r 5t
       Shifter = 3u 80r 10t
       Overseer = 3u 80r 10t
+      PsiDetonator = 3u 60r 15t
       Officer = 0u 100r 4t
     }
     officer_costs_add = int4:0,0,50,100

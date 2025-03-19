@@ -15,7 +15,7 @@ Mob SafariScorpionBoss : BaseBoss {
     range = 250
     damage = 250
     armor = 25
-    hp = 50000
+    hp = 70000
     speed = 600
     crit_chance = 0
   }  

@@ -5,23 +5,26 @@ Unit AncientShade : UnderworldUnit {
   scale = 0.8
   race = mutants
   icon = 7,2
+  speed = 450
+  attack_spell = AncientShadeAttackSpell
+  cost : pvp.mutants.unit_costs.AncientShade
+  cost_sloc : pvp.mutants.sloc_costs.AncientShade
     
   stats :{
     hp = 350
 	  psi = 280
-    damage = 40
+    damage = 15
     penetration = 100
     range = 1800
     
-    fatelink_duration = 15
+    fatelink_duration = 10
     fatelink_power = 220
     
-    terrify_chance = 5
+    terrify_chance = 2
     terrify_cooldown = 20
-    terrify_duration = 3
+    terrify_duration = 6
     terrify_area = 200
   }
-  speed = 450
   
   sounds {
     start = data/sounds/units/ancientshade/ancient shade summoned.wav
@@ -32,14 +35,16 @@ Unit AncientShade : UnderworldUnit {
     destruction = data/sounds/units/ancientshade/die/
   }
 
+  animation {
+  }
+
   abilities {
     UnholyAttackAbi
     TerrifyAbi
   }
     
   actions : BaseUnit.actions {
-    FateLinkAction;
-	  MakeShrine -- fake
+    FateLinkAction
   }
   
   attachments {
@@ -79,20 +84,17 @@ Unit AncientShade : UnderworldUnit {
     }
   }
   
-  attack_spell = AncientShadeAttackSpell
   
-  cost : pvp.mutants.unit_costs.AncientShade
-  cost_sloc : pvp.mutants.sloc_costs.AncientShade
 }
 
 AncientShadeAttackSpell {
   cast {
     prepare {
       anim = cast_preparation
-      duration = 1.5
+      duration = 0.5
       sound = data/sounds/units/highpriest/pyro/
       attach {
-        pt_hand = data/models/effects/Magic/AncientShade_Magic.nif {scale = 0.6}
+        pt_hand = data/models/effects/Magic/AncientShade_Magic.nif {scale = 1}
       }
     }
   }
@@ -100,7 +102,7 @@ AncientShadeAttackSpell {
   projectile = chase {
     start_point = pt_center
     model = data/models/effects/Magic/AncientShade_Projectile.nif {
-      scale = 0.7
+      scale = 1
       CTrailController ShadeTrail  {
         emitter = FX_ROOT
         texture = data/textures/trails/dark-lightnings.dds
@@ -190,20 +192,24 @@ CSpellAction FateLinkAction {
     }
     remove_effects = 1
     effect = E_damage_share {
-    id = BloodLink
-	  name = "Fate Link"
-    text = "This unit is currently linked by an Ancient Shade, all damage taken will be split between you and him."
-	  icon = 2,5
-    type = damage_share
-    duration = -1
-    tick = 2
-    immediate_tick = 1
-    react = lightning
-    repeat_react = 1
-    p2pray = FatelinkBeam
-    p2pray_srcnode = pt_cast
-    p2pray_dstnode = pt_center
-    stack_count = 0
-      }
+      sound = data/sounds/effects/loop/mend.wav
+      id = BloodLink
+	    name = "Fate Link"
+      text = "This unit is currently linked by an Ancient Shade, all damage taken will be split between you and him."
+	    icon = 2,5
+      type = damage_share
+      duration = -1
+      tick = 2
+      immediate_tick = 1
+      react = lightning
+      repeat_react = 1
+      p2pray = FatelinkBeam
+      p2pray_srcnode = pt_center
+      p2pray_dstnode = pt_chest
+      stack_count = 0
+      delay_cooldown = 1      
     }
   }
+}
+
+    --damage_taken_mod = 100

@@ -3,28 +3,30 @@ Unit Defender : MachineUnit {
   icon = 6,5
   descr = "The first unit added via modding. Honor may be to DotNL and CrashDown963"
   model = data/models/units/defender/defender.kfm
-  die = data/models/units/HellFire/HellFire_Break.kfm 
   race = humans
   cost : pvp.humans.unit_costs.Defender
   cost_sloc : pvp.humans.sloc_costs.Defender
-  speed = 450
-  scale = 0.7
-  explosion = ExplosionBig_02
-
-  foot_prints {
-    desert = hellfire_footprint
-  }
-
+  sight_in_combat = 6000
+  sight = stat:range + 400
+  aggro_range = var:sight
+  siege_projectile = SiegeProjectile
+  siege_damage = stat:damage * 1
   pitch_speed = 90
   min_pitch = -30
   max_pitch = 30
   yaw_speed = 120
   min_yaw = -45
   max_yaw = 45
+  speed = 450
+  scale = 0.7
+
+  foot_prints {
+    desert = hellfire_footprint
+  }
   
   sounds {
-    confirm = data/sounds/units/hellfire/confirm/
-    select = data/sounds/units/hellfire/select/
+    confirm = data/sounds/units/defender/confirm/
+    select = data/sounds/units/defender/select/
     footstep = data/sounds/units/hellfire/step/
     stop = data/sounds/units/hellfire/stop/
     destruction = data/sounds/destruction/units/hellfire/
@@ -46,6 +48,10 @@ Unit Defender : MachineUnit {
     armor = 25
   }
   
+  abilities {
+    --SiegeAbi
+  }
+
   actions : BaseUnit.actions {
     RepairDrones;
   }
@@ -63,7 +69,7 @@ Unit Defender : MachineUnit {
     fire_node_4 = pt_shoot_07
     shoot_anim_1 = shoot
     shoot_anim_2 = shoot
-    shoot_snd = Data/Sounds/Units/AssaultBot/Guns
+    shoot_snd = data/sounds/effects/single weapons/defender gun.wav
 
     fire_rate = 5
     idle_time = 0.01
@@ -111,4 +117,35 @@ action RepairDrones {
   cooldown = 30
 }
 
+--SiegeAbi {
+  name = "Siege Mode"
+  text = "Defender will go into siege mode and bombard enemies from afar"
+  icon = 5,0
+  when : abi.combat
+  target = self { no_enemy_in_range = 1200 }
+  program = PrgDefSiege
+}
+
+CProjectile SiegeProjectile {
+  type = parabolic
+  angle = 60
+  model = data/models/projectiles/ProtonShot/ProtonShotProjectile_Green.nif
+  effect = SiegeProjectileExplode
+}
+
+CAreaEffect SiegeProjectileExplode {
+  range = 250
+ 
+  epicenter {
+    spawn SiegeExplosion
+    physics_radius = 250 
+    physics_power = 4500
+  }
+  
+  tags t1 = unit | building {
+    spawn ExplosionDamage {
+      amount : Dominator.siege_damage
+    }
+  }
+}
 

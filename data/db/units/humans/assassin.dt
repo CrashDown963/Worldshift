@@ -248,6 +248,7 @@ CBuffEffect E_PoisonShot {
   icon = 2,14
   debuff = 1
   type = damage
+  enemy = 1
   damage_type = poison
   damage = stat:poison_shot_damage
   duration = stat:poison_shot_duration

@@ -70,22 +70,29 @@ Unit Shaman : BaseUnit {
       cast {
         prepare {
           anim = cast_drnlife_prepare
+          attach {
+            pt_hand = data/models/effects/miscreacts/drainlife.nif
+          }
         }
         finish {
+          duration = 1
           anim = cast_finish
+          attach {
+            pt_chest = data/models/effects/miscreacts/drainlife.nif { scale = 1.2 }
+          }
         }
-      }
-
+      }    
+      
       projectile = beam {
-        start_point = pt_hand
-        beam = DrainLifeLightning -- { add relevant parameters for tune: scale, emittanc, etc }
-		duration = 0.2
+        end_point = pt_chest
+        start_point = pt_chest
+        beam = DrainLifeLightning2
+		    duration = 0.7
       }
 
       effect = E_set {
         effect = E_damage {
           amount = var:drain_life_damage
-          react = drain_life
         }
         effect = E_heal {
           amount = var:damage
@@ -96,7 +103,7 @@ Unit Shaman : BaseUnit {
         }
         effect = E_cleanse {
           amount = 1
-          ally = 1
+          ally = 0
           react = cleanse
           active = stat:drain_life_purge
         }
@@ -119,7 +126,6 @@ Unit Shaman : BaseUnit {
   actions : BaseUnit.actions {
     RenewAction
     PurifyAction
-    MakeShrine -- fake
   }
 
   attack_spell = PyrokinesisSpell
@@ -167,6 +173,7 @@ PyrokinesisSpell {
       duration = 1
       attach {
         pt_hand = data/models/effects/magic/FireHands.nif
+        pt_rhand = data/models/effects/magic/FireHands.nif
       }
     }
     finish {

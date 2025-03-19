@@ -22,7 +22,7 @@ Unit Dominator: BaseUnit {
   race = aliens
   scale = 1.15
   officer = 1
-  tags = unit, organic
+  tags = unit, organic, repairable_unit
   cost : pvp.aliens.unit_costs.Officer
   cost_sloc : pvp.aliens.sloc_costs.Officer
   icon = 1,6
@@ -30,12 +30,12 @@ Unit Dominator: BaseUnit {
   stats :{
     hp = 450
     armor = 7
-    range = 1600
+    range = 1400
     damage = 15
     speed = 450
     psi = 360
 
-    shield_hull = 150
+    shield_hull = 100
     shield_regen  = 120
     shield_fullabsorbchance = 10
     shield_percentabsorbtion = 25
@@ -58,14 +58,12 @@ Unit Dominator: BaseUnit {
   }
   
   speed = 450
-  
+  sight_in_combat = 6000
   sight = stat:range + 400
   aggro_range = var:sight
-  -- This is for the Blight Ray ability
   penetration = 100
-
   siege_projectile = SiegeProjectile
-  siege_damage = stat:damage * 0.4
+  siege_damage = stat:damage * 1
 
   actions : Alien.actions {
     DominatorDimensionChainAction
@@ -301,7 +299,7 @@ SiegeAbi {
   text = "Dominators will go into siege mode and bombard enemies from afar"
   icon = 5,0
   when : abi.combat
-  target = self { no_enemy_in_range = 1100 }
+  target = self { no_enemy_in_range = 1200 }
   program = PrgDomSiege
 }
 

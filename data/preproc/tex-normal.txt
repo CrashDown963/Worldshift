@@ -1338,6 +1338,7 @@ data\models\miscobjects\beam03glow.dds
 data\models\miscobjects\item_shockwave.dds
 data\models\miscobjects\p2pbeam2.dds
 data\models\miscobjects\p2pbeam3.dds
+data\models\miscobjects\lightning_red.dds
 data\models\miscobjects\selection corner.tga
 data\models\miscobjects\selection corner_red.tga
 data\models\projectiles\eggprojectile\spideregg-diffuse.dds
@@ -2325,6 +2326,8 @@ data\terrain\ruins\techdev\gate_v2_nm.dds
 data\terrain\ruins\techdev\gate_v3_diff.dds
 data\terrain\ruins\techdev\gate_v3_mask.dds
 data\terrain\ruins\techdev\gate_v3_nm.dds
+data\models\units\psidetonator\psidetonator_diffuse.dds
+data\models\units\psidetonator\psidetonator_nm.dds
 data\terrain\ruins\techdev\psirezonator_diffuse.dds
 data\terrain\ruins\techdev\psirezonator_nm.dds
 data\terrain\ruins\techdev\techdev_1diff.dds

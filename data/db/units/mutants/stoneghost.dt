@@ -63,18 +63,18 @@ StoneGhost StoneGhost : UnderworldUnit {
     psi = 320
     armor = 0
     range = 1600
-    damage = 9
+    damage = 4
     armor = 2
 
     corruption_psi_cost = 120
     corruption_damage = 10  -- per tick (currently 2 sec)
     corruption_duration = 20
 
-    drain_psi_amount = 30
+    drain_psi_amount = 10
     drain_psi_chance = 25
 
-    hatch_chance = 5
-    hatch_worms = 2
+    hatch_chance = 10
+    hatch_worms = 1
 
     unholy_aura_interval = 5
     unholy_aura_heal = 40
@@ -120,12 +120,8 @@ StoneGhost StoneGhost : UnderworldUnit {
       type = restore_psi
       perc = stat:unholy_power_restore_perc
       damage_type = fire
-      -- show_text_feedback = 1
-      
       duration = stat:unholy_power_duration
-      
       tick = 1
-      --immediate_tick = 1
       discard_react = 1
       repeat_react = 1
       react = spread_psi
@@ -151,21 +147,16 @@ StoneGhost StoneGhost : UnderworldUnit {
     damage = stat:damage
     shoot_anim = shoot
     fire_node = pt_shoot_1
-    idle_time = 2
+    idle_time = 0.5
     shoot_snd = data/sounds/units/stone ghost/shot/
     
     projectile = linear {
-      --spot_impact = 800
-      --spot_impact_type = small_energy
-      speed = 4000
+      speed = 6000
       ground_hit_effect = BulletTerrainHitEffect
-
       model = data/models/effects/StoneGhost/StoneGhostProjectile.nif 
-      scale = 2
-
+      scale = 5
       react = drainpsy_small
     }
-
   }
 
   cost : pvp.mutants.unit_costs.Officer

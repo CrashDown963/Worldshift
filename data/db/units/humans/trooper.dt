@@ -117,8 +117,8 @@ Trooper Trooper : BaseUnit {
 	  active = 0
     can_crit = 1
     damage = stat:damage
-    range_far = stat:range * 0.5
-    range_near = stat:range * 0.2
+    range_far = stat:range * 0.7
+    range_near = stat:range * 0.5
     proximity_bonus = 2
     idle_only = 1
     fire_node = pt_shoot_1

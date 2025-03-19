@@ -1,6 +1,9 @@
 ﻿style	text
-firm	Black Sea Studios
+firm	Worldshift Community Patch
 whiteline	
+default	
+position	Worldshift Community Patch Director
+default	André "DotNL" Valkenburg
 default	
 position	Project Management
 default	Vesselin Handjiev

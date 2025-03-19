@@ -136,8 +136,6 @@ DeathRumbleAbi {
 
   effect = E_damage {
     area = stat:death_rumble_area {
---      anim = data/Models/Effects/Magic/AuraDamage.nif
---      scale = 1
       anim = data/Models/Effects/Puffs&Dust/hugedirtimpact.nif
       scale = 0.2
     }

@@ -61,6 +61,7 @@ item I_B2M : MutantSpecItem {
     Sorcerer
     StoneGhost
     Guardian
+    Eji2
   }
   stats {
     psi_gen = 10%/30%

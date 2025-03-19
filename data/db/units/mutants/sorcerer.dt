@@ -36,30 +36,36 @@ Unit Sorcerer : BaseUnit {
     hp = 540
     range = 1600
     psi = 400
-    damage = 70
+    damage = 60
     armor = 0
     
     chill_psi_cost = 150
     chill_duration = 8
-    chill_perc = 50
+    chill_perc = 30
     
     incinerate_psi_cost = 120
     incinerate_duration = 10
     incinerate_damage = 10
+
+    chainlightning_duration = 6
+    chainlightning_psi_cost = 55
+    chainlightning_tick = 0.1
+    chainlightning_chance = 25
+    chainlightning_add_damage = 8
   } 
-  incinerate_spot_size = 400
+
+  chainlightning_base_damage = stat:damage * 0.3
+
+  incinerate_spot_size = 600
 
   speed = 450
 
   take_auras : { xp_boost; RestorationCoreAura }
   
   abilities {
-    ChillAbi {
-      name = "Chill"
-      text = "Sorcerers' default attack slows down his targets' speed with [stat:chill_perc]% for [stat:chill_duration] seconds."
-      icon = 5,0
-    }
-    
+    ChainLightningAbi
+    ChillSpellAbi      
+        
     AIIncinerate {
       action = IncinerateAction
       when   : abi.fight
@@ -67,14 +73,13 @@ Unit Sorcerer : BaseUnit {
       range = stat:range
     }
   }
-  
+    
   actions : BaseUnit.actions {
     IncinerateAction
     FrostWaveAction
-    MakeShrine -- fake
   }
 
-  attack_spell = ChillSpell
+  attack_spell = ChillSpellAbi
   
   animation {
    
@@ -101,16 +106,81 @@ Unit Sorcerer : BaseUnit {
   cost_sloc : pvp.mutants.sloc_costs.Officer
 }
 
-ChillSpell {
+ChainLightningAbi {
+  name = "Chain Lightning"
+  text = "Chain Lightning description."
+  visible = 1
+  icon = 1,0  
+  cooldown = 8
+  chance = stat:chainlightning_chance
+  when : abi.fight
+  target = enemy { min_hp = 300; aoe_range = 1500; aoe_min_enemy_hp = 500 }
+  range = 2000
+  min_power = stat:psi * 0.3
+  power = stat:chainlightning_psi_cost
+      
+  cast {
+    finish {
+      duration = stat:chainlightning_duration
+      anim = cast_finish
+      sound = data/sounds/effects/common/feed.wav
+      attach {
+        pt_hand = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 1.4 }
+        pt_chest = data/Models/Effects/ActionSequence/Chest_LightningAttachment.nif { 
+          fixed_up = 1
+          scale = 0.7 
+        }
+      }
+    }
+  }
+  
+  remove_effects = 1
+  effect = E_chain {
+    sound = data/sounds/effects/common/electro arc.wav
+    debuff = 1
+    name = "Chain Lightning"
+    text = "The Sorcerer is casting Chain Lightning which spreads to nearby enemies."
+    icon = 2,3
+    type = damage
+    duration = stat:chainlightning_duration
+    tick = stat:chainlightning_tick
+    damage = var:chainlightning_base_damage
+    chooser = nearest
+    spread_damage_and_add = stat:chainlightning_add_damage
+    max_hops = 10
+    max_affected = 0
+    max_spreads = 4
+    max_spreads_per_tick = 3
+    min_spreads_per_tick = 1
+    keep_spreading = 1
+    spread_dist = 500
+    max_dist_to_caster = 2500
+    max_dist_to_first = 2000 
+    remove_spreads = 1
+    check_caster = 1
+    stack_per_caster = 1
+    react = chainlightning
+    p2pray = ChainLightningBeam
+    p2pray_srcnode = pt_staff
+    p2pray_dstnode = pt_center
+  }
+}
+
+ChillSpellAbi {
+  visible = 1
+  name = "Chill"
+  text = "Sorcerers' default attack slows down his targets' speed with [stat:chill_perc]% for [stat:chill_duration] seconds."
+  icon = 5,0
   cast {
     prepare {
-      duration = 1.0
+      duration = 0.5
       anim = cast_chill_prepare     
       attach {
         pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
       }
     }
     finish {
+      duration = 1
       anim = cast_chill_finish   
       sound = data/sounds/units/highpriest/pyro/
       attach {
@@ -152,8 +222,8 @@ ChillSpell {
         color4 = colora: 0.2, 0.2, 1, 0
       } 
 	  }
-    speed = 2500
-    scale = 0.25
+    speed = 3500
+    scale = 1
     damage = stat:damage
   }
   
@@ -180,18 +250,15 @@ CSpellAction FrostWaveAction {
   descr = "Sorcerer nstantly creates a powerful Frost Wave, that slows down all affected units with [stat:chill_perc]% for [stat:chill_duration] seconds."
   visible = 1
   icon = 3,7
-  --instant = 1
   tags = location
   feedback = DecalFeedback
   min_power = stat:chill_psi_cost  
   cooldown = 20
-  aoe_radius = 400
-  
+  aoe_radius = 600
   spell {
     power = stat:chill_psi_cost  
     cast {
       prepare {
---        duration = 1.0
         anim = cast_finish
         attach {
           pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
@@ -242,12 +309,8 @@ CGameObject IncinerateSpot {
       type = damage
       damage = stat:incinerate_damage
       damage_type = fire
-      show_text_feedback = 1
-      
       duration = stat:incinerate_duration
-      
       tick = 1
-      --immediate_tick = 1
       discard_react = 1
       react = fire
       stack_count = 1
@@ -266,12 +329,10 @@ CSpellAction IncinerateAction {
   min_power = stat:incinerate_psi_cost  
   cooldown = 30
   aoe_radius = var:incinerate_spot_size
-  
   spell {
     power = stat:incinerate_psi_cost
     cast {
       prepare {
---        duration = 1.0
         anim = cast_finish
         attach {
           pt_hand = data/models/effects/magic/FireHands.nif

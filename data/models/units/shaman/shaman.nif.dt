@@ -216,7 +216,7 @@ model = {
                       }
                       #0 = {
                         scale = fixp:"1";
-                        name = str:"Bip01 R Hand";
+                        name = str:"pt_rhand";
                         translation = xpoint3:"24.3949432373046875,0,0";
                         rotation = {
                           0 = xpoint3:"0.8896815776824951171875,-0.446522653102874755859375,0.09446741640567779541015625";
