@@ -1,5 +1,5 @@
-Technician Technician2 : BaseUnit {
-  name = "Technician"
+Unit Technician2 : BaseUnit {
+  name = "Engineer"
   descr = "DESCRIPTION"
   model = data/models/units/technician/technician2.kfm
   race = humans
@@ -34,6 +34,7 @@ Technician Technician2 : BaseUnit {
   }
        
   animation {
+    die = die
     anim_set WORK = loop {
       work_up_1 = 100, 2,4
       mine_1 = 100, 1,2
@@ -52,6 +53,7 @@ Technician Technician2 : BaseUnit {
   abilities {
     TurretsAbi
     RepairAbi
+    --RepairUnitAbi
   }
     
   actions : BaseUnit.actions {
@@ -95,8 +97,9 @@ Technician Technician2 : BaseUnit {
 
 RepairAbi {
   name = "Repair"
-  text = "Repairs units and buildings when in combat."
-  when : abi.fight
+  text = "Repairs buildings."
+  when : abi.always
+  target = ally
   program = PrgRepairing
 }
 
@@ -104,20 +107,20 @@ TurretsAbi {
   name = Turrets
   text = "turrets description."
   visible = 1
-  when : abi.fight
+  when : abi.combat
   icon = 1,0
   target = self
   cooldown = 45
      
   cast {
     finish {
-      anim = work_down
+      anim = mine_rare_1
     }
   }
       
   effect = E_spawn {
     spawn_prg = PrgDeployTurrets
-    range = 1600
+    range = 1200
     spawn {
       TurretSpawn = 1  
     }

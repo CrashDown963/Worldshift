@@ -1682,6 +1682,7 @@ function Actor:PrgDeployTurrets(params)
     if animHandle then
       map.StopAnim(animHandle)
     end
+    this:SetAnim()
   end
   
   _, _, animHandle = map.PlayAnim(this:GetPos(), this:GetVar("upgrading_anim", "str"))
@@ -1698,33 +1699,43 @@ end
 
 function Unit:PrgRepairing(params)
   local hBuilding = params.h
-  local res
   local pt
+  local res
 
-  this.onPrgEnd = function()
-    this:SetAnim()
+  -- If the building is not valid or out of range, switch to default behavior (combat or idle)
+  if not Actor.IsValid(hBuilding) or this:DistTo(hBuilding) > 1600 then
+    this:SetAnim()  -- Set default animation (fighting or idle)
+    return
   end
-   
-  while true do 
-    while Actor.IsValid(hBuilding) do
-      pt = this:FindRepairSpot(hBuilding)
-      if not pt then break end
-      if this:DistTo(pt) > 50 then
-        if this:MoveTo{pt, maxRange = 50} then       
-          this:SetAnim()
-        end
-      end  
-      local dur = this:SetAnim("WORK")
-      res = this:Repair(hBuilding, dur)
-      this:SetAnim()
-      if res == "FINISHED" then 
-        break 
+
+  -- If the building needs repair (health is below max)
+  if hBuilding:GetHP() < hBuilding:GetMaxHP() then
+    pt = this:FindRepairSpot(hBuilding)
+    if not pt then return end  -- Exit if no repair spot found
+
+    -- Move to the repair spot if needed
+    local dist = this:DistTo(pt)
+    if dist > 50 and dist <= 1600 then
+      if this:MoveTo{pt, maxRange = 50} then       
+        this:SetAnim("WORK")  -- Set repair animation
       end
     end
-    hBuilding = this:FindBuildingToRepair()
-    if not hBuilding then
-      this:SetAnim()
-      this:Idle(1)
+
+    -- Perform the repair
+    local dur = this:SetAnim("WORK")  -- Set animation for working
+    res = this:Repair(hBuilding, dur)
+    this:SetAnim()  -- Reset animation after repair attempt
+
+    if res == "FINISHED" then 
+      -- Once finished, look for a new building to repair
+      this:PrgRepairing({h = this:FindBuildingToRepair()})
+      return  -- Exit if the repair is finished
     end
-  end  
+  end
+
+  -- If no building to repair, switch to combat or idle
+  hBuilding = this:FindBuildingToRepair()
+  if not hBuilding then
+    this:SetAnim()  -- Switch to default animation if no building to repair
+  end
 end

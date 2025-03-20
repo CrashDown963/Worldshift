@@ -1,9 +1,9 @@
 model = {
   file = str:"data\models\units\defender\defender.kfm";
   animations = {
-    idle = {
+    idle_var_2 = {
       loop = int:"1";
-      duration = fixp:"3.299999713897705078125";
+      duration = fixp:"3.333333492279052734375";
       keyframes = {
         #0 = {
           name = str:"start";
@@ -11,7 +11,7 @@ model = {
         }
         #1 = {
           name = str:"end";
-          time = fixp:"3.299999713897705078125";
+          time = fixp:"3.333333492279052734375";
         }
       }
     }
@@ -29,9 +29,9 @@ model = {
         }
       }
     }
-	idle_var_2 = {
+    idle = {
       loop = int:"1";
-      duration = fixp:"3.333333492279052734375";
+      duration = fixp:"3.299999713897705078125";
       keyframes = {
         #0 = {
           name = str:"start";
@@ -39,13 +39,20 @@ model = {
         }
         #1 = {
           name = str:"end";
-          time = fixp:"3.333333492279052734375";
+          time = fixp:"3.299999713897705078125";
         }
       }
     }
     run = {
       loop = int:"1";
       duration = fixp:"1";
+      movement = {
+        start = xpoint3:"0,0,0";
+        velocity = xpoint3:"0,-764,0";
+        time = fixp:"1";
+        distance = fixp:"764";
+        speed = fixp:"764";
+      }
       keyframes = {
         #0 = {
           name = str:"start";
