@@ -110,6 +110,13 @@ CProduceAction ProduceBrute : ProduceAction {
   icon = 3,9
 }
 
+CProduceAction ProduceEliteKaiRider : ProduceAction {
+  name : EliteKaiRider.name
+  descr : EliteKaiRider.descr
+  produce = EliteKaiRider
+  icon = 3,9
+}
+
 -- aliens
 
 CProduceAction ProduceMaster : ProduceAction {
@@ -145,5 +152,12 @@ CProduceAction ProduceShifter : ProduceAction {
   name : Shifter.name
   descr : Shifter.descr
   produce = Shifter
+  icon = 7,9
+}
+
+CProduceAction ProducePsiDetonator : ProduceAction {
+  name : PsiDetonator.name
+  descr : PsiDetonator.descr
+  produce = PsiDetonator
   icon = 7,9
 }

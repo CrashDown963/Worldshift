@@ -87,7 +87,7 @@ Unit Arbiter : BaseUnit {
     damage_type = energy
 
     projectile = Linear {
-      model = data/models/projectiles/ProtonShot/ProtonShotProjectile_Green.nif
+      model = Data/Models/Effects/TraceBullet/MasterProjectile_Heavy.nif { scale = 3 }
       speed = 6000
       damage = stat:damage
       react = fire

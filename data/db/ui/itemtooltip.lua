@@ -32,7 +32,7 @@ local SlotNames = {
 }
 
 local max_stats = 5
-local max_units = 8
+local max_units = 10
 
 local itemcolors = {
   clr1 = {183,187,200,255},
@@ -228,6 +228,8 @@ DefItemTooltip = uiwnd {
   Unit6 = UnitStatBase { anchors = {TOP = { "BOTTOM", "Unit5", 0, 5}}},
   Unit7 = UnitStatBase { anchors = {TOP = { "BOTTOM", "Unit6", 0, 5}}},
   Unit8 = UnitStatBase { anchors = {TOP = { "BOTTOM", "Unit7", 0, 5}}},
+  Unit9 = UnitStatBase { anchors = {TOP = { "BOTTOM", "Unit8", 0, 5}}},
+  Unit10 = UnitStatBase { anchors = {TOP = { "BOTTOM", "Unit9", 0, 5}}},
 
   Sepline = uiimg {
     layer = "+3",

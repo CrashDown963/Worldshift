@@ -37,6 +37,7 @@ Building Portal : BaseBuilding {
     ProduceTritech
     ProduceOverseer
     ProduceShifter
+    ProducePsiDetonator
     PossessAction
   }
   

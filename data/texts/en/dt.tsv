@@ -31,6 +31,8 @@ Technician.name	Technician
 Technician.descr	Non-combat personnel trained to deal with all manner of devices and artifacts.
 Trooper.name	Trooper
 Trooper.descr	Relatively cheap and has a proximity bonus. Occasionally throws grenades while fighting. Can be promoted to elite to boost his critical hit chance.
+Technician2.name	Engineer
+Technician2.descr	Engineer capable of summoning Turret support.
 	
 AlienEgg.name	Egg
 AlienEgg.descr	A biomechanical entity spawned by a Portal or a Breeder. Acts as a defense facility and releases hatchlings when destroyed.
@@ -58,6 +60,10 @@ Trisat.name	Trisat
 Trisat.descr	A regular melee unit that slows down nearby enemies. Its effectiveness is increased for a while after it deals a certain amount of damage.
 Tritech.name	Tritech
 Tritech.descr	A regular ranged unit. Has a chance to heal itself while attacking.
+PsiDetonator.name	Psi Detonator
+PsiDetonator.descr	Buffs all allys.
+BigMutant2.name	Dave
+BigMutant2.descr	Your mom.
 	
 AncientShade.name	Ancient Shade
 AncientShade.descr	An Underworld creature whose attacks completely ignore armor.
@@ -83,6 +89,11 @@ Worker.name	Worker
 Worker.descr	A non-combat unit that can repair and build structures.
 Worm.name	Soul Worm
 Worm.descr	An Underworld creature spawned when an enemy afflicted by a Stone Ghost’s Corruption spell dies.
+Eji2.name	Psychic
+Eji2.descr	Strong single target healer.
+EliteKaiRider.name	Elite Kai Rider
+EliteKaiRider.descr	Mobile sniper.
+
 	
 // BUILDINGS //////////////////////////////////////////////////////////////////	
 	

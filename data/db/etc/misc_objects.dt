@@ -269,7 +269,7 @@ CP2PGameObject FatelinkBeam {
   p2p_rotate_attach_points = 1
 
   -- Scale texture
-  p2p_size = 2000,0
+  p2p_size = 1500,0
 
   --sine noise time scale per node, .x -> src, .y -> dst
   p2p_sin_noise_time_scale = 3,12

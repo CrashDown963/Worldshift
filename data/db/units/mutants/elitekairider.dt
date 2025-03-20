@@ -1,5 +1,6 @@
 Unit EliteKaiRider : BaseUnit {
   name = "Elite Kai Rider"
+  descr = "Elite Kai Rider is unfinished"
   icon = 5,20
   model = Data/Models/units/Kai_Rider/Kai_Rider.kfm
   destruction = animation
@@ -20,6 +21,17 @@ Unit EliteKaiRider : BaseUnit {
   frenzy_threshold = stat:damage * 3
   frenzy_duration = 15
   frenzy_crit_chance = 10
+
+  actions : BaseUnit.actions {
+  }
+    
+  abilities {
+    Frenzy {
+      name = "Frenzy"
+      text = "The Elite Kai Rider goes into a Frenzy after he has seen enough blood."
+      icon = 1,0
+    }
+  }
 
   COrientationController orientation {
     rot_speed = 180

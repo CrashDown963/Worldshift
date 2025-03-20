@@ -25,6 +25,7 @@ Building Shrine2 : BaseBuilding {
     ProduceBrute
     ProduceAncientShade
     ProduceHowlingHorror
+    ProduceEliteKaiRider
   }
   
 }

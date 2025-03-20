@@ -1,5 +1,6 @@
 Unit PsiDetonator : BaseUnit {
-  name = "Psi Detonator"  
+  name = "Psi Detonator"
+  descr = "Psi Detonator is unfinished"
   race = Aliens
   model = data/models/units/psidetonator/psidetonator.nif
   icon = 6,3
@@ -18,8 +19,7 @@ Unit PsiDetonator : BaseUnit {
     hp = 280
     psi = 380
     armor = 25
-    damage = 80
-    crit_chance = 0
+    damage = 50
     range = 1800
     
 	  shield_hull = 100
