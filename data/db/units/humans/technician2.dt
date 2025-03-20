@@ -15,7 +15,7 @@ Technician Technician2 : BaseUnit {
   stats :{
     armor = 0
     hp = 400
-    range = 1100
+    range = 1600
     damage = 8
     attack_rate = 1
     attack_proximity = 10
@@ -51,7 +51,7 @@ Technician Technician2 : BaseUnit {
 
   abilities {
     TurretsAbi
-    --RepairAbi
+    RepairAbi
   }
     
   actions : BaseUnit.actions {
@@ -95,8 +95,8 @@ Technician Technician2 : BaseUnit {
 
 RepairAbi {
   name = "Repair"
-  text = "Repairs units and buildings."
-  when : abi.always
+  text = "Repairs units and buildings when in combat."
+  when : abi.fight
   program = PrgRepairing
 }
 
@@ -104,10 +104,10 @@ TurretsAbi {
   name = Turrets
   text = "turrets description."
   visible = 1
-  when : abi.fight 
+  when : abi.fight
   icon = 1,0
   target = self
-  cooldown = 35
+  cooldown = 45
      
   cast {
     finish {
