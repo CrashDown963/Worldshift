@@ -8,7 +8,7 @@ BaseUnit {
   
   icon = 1,6
 
-  max_auras_taken = 1
+  max_auras_taken = 3
   take_auras  { PsiSpringAura }
 
   -- blood

@@ -9,18 +9,29 @@ Unit BigMutant2 : BaseUnit {
   officer = 1
   scale = 0.4
   speed = 450
+  aggro_range = stat:range
 
   stats :{
-    hp = 960
+    hp = 720
     psi = 220
     armor = 8
-    range = 1400
+    range = 1000
     damage = 30
     healing_taken_debuff_amount = 2
     healing_taken_debuff_duration = 8
+    shield_hull = 100
+    shield_regen  = 120
+    shield_fullabsorbchance = 10
+    shield_percentabsorbtion = 25
+  }
+
+  actions : BaseUnit.actions {
   }
 
   immune_to : {
+  }
+
+  abilities {
   }
   
   CShieldController shifter_shield {
@@ -65,7 +76,7 @@ Unit BigMutant2 : BaseUnit {
 			  color4 = colora: 0, 1, 0, 0
 		  }
     }
-    scale = 0.5
+    scale = 1.5
   }
 
   CWeaponController weapon {
@@ -78,7 +89,7 @@ Unit BigMutant2 : BaseUnit {
     min_bursts = 1
     max_bursts = 1
     idle_time = 1
-    aim_tolerance_pitch = 220
+    aim_tolerance_pitch = 120
     aim_tolerance_yaw = 15
 
     projectile = splitparabolic {
@@ -93,7 +104,7 @@ Unit BigMutant2 : BaseUnit {
       
       secondary {
         projectile : ShootProjectile = parabolic {
-          angle = 1
+          angle = 0
           spot_impact = 800
           spot_impact_type = small_energy
           damage_type = energy
@@ -101,9 +112,6 @@ Unit BigMutant2 : BaseUnit {
 	      }
       }
     }
-  }
-  
-  abilities {
   }
 }
 
@@ -122,7 +130,7 @@ CBuffEffect E_PlaguedCorrosion {
   immediate_tick = 1
   discard_react = 1
   react = paralyze
-  stack_count = 50
+  stack_count = 15
 }
 
 CAreaEffect DaveShotEffect {

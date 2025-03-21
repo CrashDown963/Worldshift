@@ -46,6 +46,8 @@ Unit Arbiter : BaseUnit {
     
   }
   speed = 450
+
+  aggro_range = stat:range
   
   take_auras : { RestorationCoreAura }
   
@@ -87,7 +89,7 @@ Unit Arbiter : BaseUnit {
     damage_type = energy
 
     projectile = chase {
-      model = Data/Models/Effects/TraceBullet/MasterProjectile_Heavy.nif { scale = 1.5 }
+      model = Data/Models/Effects/TraceBullet/MasterProjectile_Heavy.nif { scale = 1.2 }
       speed = 4000
       damage = stat:damage
       react = fire
@@ -96,7 +98,6 @@ Unit Arbiter : BaseUnit {
   
   actions :{
     FearShockAction
-    MakeBreeder -- fake
   }
   
   abilities {

@@ -29,7 +29,7 @@ Unit Overseer : BaseUnit {
     armor = 4
     damage = 9
     psi = 300
-    range = 1700
+    range = 1800
     
     field_fire_rate = 2.5
     power_fire_rate = 1.5
@@ -62,7 +62,6 @@ Unit Overseer : BaseUnit {
   actions : BaseUnit.actions {
     AttackDrone
     MorphAction
-    MakeBreeder -- fake
   }
 
   abilities {
