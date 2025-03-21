@@ -70,20 +70,18 @@ Unit PsiDetonator : BaseUnit {
     faction = ally
     non_stackable = 1
     effect = E_buff {
-      name = "manipulation"
-      text = "Increased maximum hitpoints and power."
+      name = "Psi Aura"
+      text = "Increased maximum Power."
       icon = 2,4
       type = buff
       duration = -1
       tick = stat:detonatoraura_tick
       immediate_tick = 1
-      discard_react = 1
       repeat_react = 1
       react = detonationaura
       stack_count = 1
       destroy_when_creator_dead = 1
       stats_change {
-          hp = { perc = stat:detonatoraura_perc }
           psi = { perc = stat:detonatoraura_perc }
       }
     }

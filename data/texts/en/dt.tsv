@@ -368,7 +368,7 @@ Brute.abilities.IgniteOnHitAbi.text	After striking its target, the Brute has a [
 Brute.abilities.IgniteOnKillAbi.name	Ignite
 Brute.abilities.IgniteOnKillAbi.text	After performing a killing blow on its target, the Brute will fly into a rage, igniting itself for [stat:ignite_duration] seconds. The ignited Brute inflicts additionally [ignite_damage] damage on up to [ignite_targets] targets in front of it.
 ChainLightningAbi.name	Chain Lightning
-ChainLightningAbi.text	The Sorcerer has a [stat:chainlightning_chance]% chance to cast Chain Lightning for [stat:chainlightning_duration]seconds spreading to nearby targets.
+ChainLightningAbi.text	The Sorcerer has a [stat:chainlightning_chance]% chance to cast Chain Lightning for [stat:chainlightning_duration] seconds spreading to nearby targets.
 ChainShotAbi.name	Chain Shot
 ChainShotAbi.text	The Arbiter has a [stat:chain_shot_chance]% chance with every shot to trigger a plasma chain reaction, damaging [stat:chain_shot_hops] additional enemies.
 ChargeAbi.name	Charge

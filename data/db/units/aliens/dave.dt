@@ -90,7 +90,7 @@ Unit BigMutant2 : BaseUnit {
     max_bursts = 1
     idle_time = 1
     aim_tolerance_pitch = 120
-    aim_tolerance_yaw = 15
+    aim_tolerance_yaw = 10
 
     projectile = splitparabolic {
       secondary_projectiles = 2

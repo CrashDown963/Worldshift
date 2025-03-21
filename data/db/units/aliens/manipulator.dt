@@ -220,13 +220,12 @@ CSpellAction ManipulateAction {
       effect = E_multibuff {
         id = Manipulation
         ally = 1
-        name = "manipulation"
-        text = "Increased maximum hitpoints and power."
+        name = "Manipulation"
+        text = "Increased maximum Hit Points"
         icon = 2,4
         type = buff
         stats_change {
           hp = { perc = stat:manipulate_hp_perc }
-          psi = { perc = stat:manipulate_power_perc }
         }
         duration = stat:manipulate_duration
         multi_area : aoe_radius { anim = data/Models/Effects/Magic/AuraArbiter.nif }

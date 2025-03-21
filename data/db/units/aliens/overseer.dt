@@ -115,7 +115,6 @@ Unit Overseer : BaseUnit {
       tick = stat:charging_field_tick
       duration = -1
       immediate_tick = 1
-      discard_react = 1
       repeat_react = 1
       react = spread_psi
       stack_count = 1

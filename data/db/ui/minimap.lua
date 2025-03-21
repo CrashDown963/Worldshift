@@ -67,6 +67,34 @@ CollectedItemsBtn = uibtn {
   end,
 }
 
+ToggleBarsBtn = uibtn {
+  size = {58,30},
+  anchors = { BOTTOMRIGHT = { "Minimap", "TOPLEFT", 58, 7 } },
+  NormalImage = normalImage {},
+  HighImage = normalImage {},
+  PushImage = normalImage {},
+
+
+  OnClick = function(this)
+    local isGaugeActive = game.ToggleGlobalGauge(false) -- Check current state without changing it
+    game.ToggleGlobalGauge(not isGaugeActive) -- Toggle the state
+  end,
+
+  OnMouseEnter = function(this)
+    Tooltip:AttachTo(Minimap, "BOTTOMRIGHT", Minimap, "TOPRIGHT", {-10,-40})
+    Tooltip.Title:SetStr(TEXT("bars_toggle_tooltip_ttl"))
+    local str = "<p>"..TEXT("bars_toggle_tooltip_txt")
+    Tooltip.Text:SetStr(str)
+    local sz = Tooltip:GetSize()
+    Tooltip:SetSize{sz.x, Tooltip.Text:GetStrHeight() + 48}
+    Tooltip:Show()
+  end,
+
+  OnMouseLeave = function(this)
+    Tooltip:Hide()
+  end,
+}
+
 Minimap = uiwnd {
   size = {wnd_w,wnd_h},
   anchors = { BOTTOMRIGHT = { 0, 0 } },
@@ -120,6 +148,7 @@ CollectedItems = uiwnd {
 function CollectedItems:OnLoad()
   table.insert(GameUI.topWindows.any, this)
   table.insert(GameUI.topWindows.any, CollectedItemsBtn)
+  table.insert(GameUI.topWindows.any, ToggleBarsBtn)
   this:RegisterEvent("MAP_CLOSED")
   this:RegisterEvent("ITEM_PICKED")
 end
