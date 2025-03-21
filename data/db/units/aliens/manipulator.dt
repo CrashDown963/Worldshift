@@ -76,6 +76,7 @@ Unit Manipulator : BaseUnit {
     damage = stat:damage
     shoot_anim = shoot
     shoot_idle_1 = shoot_idle
+    idle_time = 0.5
     fire_node = pt_shoot
     spot_impact_type = melee
     shoot_snd = data/sounds/effects/single weapons/manipulator shot.wav

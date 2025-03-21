@@ -122,8 +122,8 @@ leader_tooltip_ttl	Field leader
 leader_tooltip_txt	This is your field leader. Click to select the leader, and click again to center the view.	
 items_toggle_tooltip_ttl	Minimap/Items	
 items_toggle_tooltip_txt	Click to toggle between the minimap and the items you have collected.	
-bars_toggle_tooltip_ttl	Healthbars	
-bars_toggle_tooltip_txt	DOESNT WORK YET but its supposed to Click to toggle healthbars on and off.
+bars_toggle_tooltip_ttl	Statusbars
+bars_toggle_tooltip_txt	Click to toggle unit statusbars on and off.
 		
 net_desync	<color=255,0,0>DESYNC DETECTED!</>	
 net_checksumdifferent	<color=255,0,0>Player %s:</> data checksum is different, a desynchronization may occur!	

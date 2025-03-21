@@ -52,7 +52,7 @@ Unit Eji2 : BaseUnit {
       range = 1700
       power = 20
       effect = E_heal {
-        amount = 100
+        amount = 120
         react = full_restore
       }
       cast {
@@ -111,14 +111,14 @@ Unit Eji2 : BaseUnit {
 
 CorruptMindEjiAbi {
   name = "Corrupted Mind"
-  text = "Eji will mind control big enemies when they get too close"
+  text = "Eji can mind control big enemies when they get too close"
   visible = 1
   when : abi.always
-  chance = 40
-  cooldown = 50
-  target = enemy { min_hp = 200; max_hp = 5000 }
+  chance = 25
+  cooldown = 60
+  target = enemy { min_hp = 300 }
   tags = organic
-  range = 800
+  range = 600
   min_power = 220
   power = 50
 

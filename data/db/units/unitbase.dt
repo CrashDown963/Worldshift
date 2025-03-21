@@ -683,6 +683,7 @@ BaseBoss : BaseMob {
   boss = 1
   respawn_min_reanimate_time = 0
   immune_to :{
+    E_mindcontrol
     E_multifreeze
     E_freeze
     E_multistun
@@ -703,6 +704,7 @@ BaseMachineBoss : BaseMachineMob {
   boss = 1
   respawn_min_reanimate_time = 0
   immune_to :{
+    E_mindcontrol
     E_multifreeze
     E_freeze
     E_multistun

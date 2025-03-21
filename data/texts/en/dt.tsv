@@ -390,7 +390,7 @@ FeedbackAbi.text	The Tritech has a [stat:feedback_chance]% chance to heal itself
 Harvester.abilities.ImminenceAbi.name	Imminence
 Harvester.abilities.ImminenceAbi.text	The Harvester has a [stat:confuse_chance]% chance on each attack to draw his target’s attention, causing the target to focus its attacks on the Harvester for 10 seconds.
 HarvesterHarvestAbi.name	Harvest
-HarvesterHarvestAbi.text	The Harvester has a [stat:harvest_chance]% chance on each attack to perform a special strike that hits all targets around him, stunning them and healing the Harvester for [stat:damage]
+HarvesterHarvestAbi.text	The Harvester has a [stat:harvest_chance]% chance on each attack to perform a special strike that hits all targets around him, stunning them and healing the Harvester for [stat:damage].
 HarvesterParalyzingField.name	Paralyzing Field
 HarvesterParalyzingField.text	The Harvester slows the movement of all nearby organic enemies by [stat:paralyzing_field_speed_reduction_perc]%.
 Hatchling.abilities.ThreatenAbi.name	Threaten
@@ -412,7 +412,7 @@ LifeLeechAbi.text	With each attack, the Manipulator drains [stat:damage] hit poi
 LongRangeAbi.name	Long Range
 LongRangeAbi.text	The Arbiter inflicts great damage but is only efficient at his maximum range. Attacking from a close distance will reduce his damage dramatically.
 TerrifyAbi.name	Terrify
-TerrifyAbi.text	The Ancient Shade instills fear into its enemies, every attack has a [stat:terrify_chance]% chance to terrify all enemies near its target for [stat:terrify_duration] seconds
+TerrifyAbi.text	The Ancient Shade instills fear into its enemies, every attack has a [stat:terrify_chance]% chance to terrify all enemies near its target for [stat:terrify_duration] seconds.
 NanofixAbi.name	Nanofix
 NanofixAbi.text	Creates a wave of nano particles, instantly repairing a machine for [stat:nano_fix_heal] hit points.
 OverchargeAbi.name	Overcharge
@@ -440,7 +440,7 @@ Shifter.abilities.CloneShieldAbi.text	The Clone Shield automatically activates w
 ChillSpellAbi.name	Chill
 ChillSpellAbi.text	The Sorcerer’s default attack slows his target by [stat:chill_perc]% for [stat:chill_duration] seconds.
 SurgeonAbilities.FirstAid.name	First Aid
-SurgeonAbilities.FirstAid.text	The Surgeon will automatically bandage wounded units every [stat:bandage_cooldown]seconds, healing them for [stat:bandage_amount] with a [stat:bandage_crit]% chance for twice the amount, also removing one harmful effect. Right-click on a friendly target to make the Surgeon following him and putting special attention on his hit points.
+SurgeonAbilities.FirstAid.text	The Surgeon will automatically bandage wounded units every [stat:bandage_cooldown] seconds, healing them for [stat:bandage_amount] with a [stat:bandage_crit]% chance for twice the amount, also removing one harmful effect. Right-click on a friendly target to make the Surgeon following him and putting special attention on his hit points.
 Trisat.abilities.FrenzyAbi.name	Frenzy
 Trisat.abilities.FrenzyAbi.text	The Trisat falls into a frenzy after every [stat:frenzy_threshold] damage it inflicts, increasing its armor by [stat:frenzy_armor] and its damage by [stat:frenzy_damage]%. The buff stacks up to 3 times and fades away if the Trisat doesn’t hit anything for [stat:frenzy_duration] seconds.
 Trisat.abilities.ParalyzingFieldAbi.name	Paralyzing Field
@@ -473,7 +473,7 @@ Brute.abilities.IgniteOnHitAbi.effect.text	This unit is in a special state that 
 Brute.abilities.IgniteOnKillAbi.effect.name	Ignite
 Brute.abilities.IgniteOnKillAbi.effect.text	This unit is in a special state that raises its effectiveness.
 ChainLightningAbi.effect.name	Chain Lightning
-ChainLightningAbi.effect.text	This unit is taking damage from Chain Lightning!!!!!!.
+ChainLightningAbi.effect.text	This unit is taking damage from Chain Lightning.
 ChainShotAbi.effect.name	Chain Shot
 ChainShotAbi.effect.text	This unit is taking damage from a Chain Shot.
 Chill.effect.name	Chill

@@ -28,7 +28,7 @@ Unit Arbiter : BaseUnit {
     hp = 320
     range = 2200
     psi = 300
-    damage = 50 
+    damage = 80 
     armor = 2
     chain_shot_chance = 25
 	  chain_shot_hops = 2

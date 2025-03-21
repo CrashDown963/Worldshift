@@ -66,6 +66,9 @@ CollectedItemsBtn = uibtn {
     Tooltip:Hide()
   end,
 }
+--------------------------------------------------------------------------------------------------------------------------
+-- Track whether health bars are currently active
+local isGaugeActive = false
 
 ToggleBarsBtn = uibtn {
   size = {58,30},
@@ -74,12 +77,27 @@ ToggleBarsBtn = uibtn {
   HighImage = normalImage {},
   PushImage = normalImage {},
 
-
+  -- Toggle health bars when clicking the button
   OnClick = function(this)
-    local isGaugeActive = game.ToggleGlobalGauge(false) -- Check current state without changing it
-    game.ToggleGlobalGauge(not isGaugeActive) -- Toggle the state
+    isGaugeActive = not isGaugeActive -- Flip the state
+    game.ToggleGlobalGauge(isGaugeActive) -- Apply the new state
+    this:updatebars() -- Update button visuals
   end,
 
+  -- Update button appearance based on health bar state
+  updatebars = function(this)
+    if isGaugeActive then
+      this.NormalImage:SetTexture(nil, itemsCoords)
+      this.HighImage:SetTexture(nil, itemsCoords)
+      this.PushImage:SetTexture(nil, itemsCoords)
+    else
+      this.NormalImage:SetTexture(nil, normalCoords)
+      this.HighImage:SetTexture(nil, normalCoords)
+      this.PushImage:SetTexture(nil, normalCoords)
+    end
+  end,
+
+  -- Tooltip on hover
   OnMouseEnter = function(this)
     Tooltip:AttachTo(Minimap, "BOTTOMRIGHT", Minimap, "TOPRIGHT", {-10,-40})
     Tooltip.Title:SetStr(TEXT("bars_toggle_tooltip_ttl"))
@@ -90,10 +108,12 @@ ToggleBarsBtn = uibtn {
     Tooltip:Show()
   end,
 
+  -- Hide tooltip on exit
   OnMouseLeave = function(this)
     Tooltip:Hide()
   end,
 }
+
 
 Minimap = uiwnd {
   size = {wnd_w,wnd_h},

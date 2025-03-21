@@ -18,7 +18,7 @@ pvp {
       Ripper = 1u 15r 5t
       AssaultBot = 4u 40r 10t
       Hellfire = 5u 65r 15t
-      Defender = 3u 40r 15t
+      Defender = 5u 40r 15t
       Officer = 0u 100r 5t
     }
     sloc_costs : pvp.humans.unit_costs {
@@ -27,7 +27,7 @@ pvp {
       Ripper = 1u 20r 5t
       AssaultBot = 3u 40r 15t
       Hellfire = 4u 70r 20t
-      Defender = 3u 40r 15t
+      Defender = 4u 40r 15t
       Officer = 0u 100r 4t
     }
     officer_costs_add = int4:0,0,50,100
@@ -51,7 +51,7 @@ pvp {
       Brute = 3u 20r 5t
       AncientShade = 4u 40r 10t
       HowlingHorror = 6u 80r 15t
-      EliteKaiRider = 3u 35r 10t
+      EliteKaiRider = 4u 35r 10t
       Officer = 0u 100r 5t
     }
     sloc_costs {
@@ -97,7 +97,7 @@ pvp {
       Tritech = 2u 20r 5t
       Shifter = 6u 80r 10t
       Overseer = 4u 80r 10t
-      PsiDetonator = 3u 60r 15t
+      PsiDetonator = 4u 60r 15t
       Officer = 0u 100r 4t
     }
     sloc_costs {

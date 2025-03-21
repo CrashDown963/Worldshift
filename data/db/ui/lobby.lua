@@ -653,14 +653,6 @@ local DefLobbyBtn = DefButton {
     end
   end,
   OnClick = function(this)
-    if Login.demo and (this == Lobby.MissionsBtn) then
-      Demo:Set("mis")
-      return
-    end
-    if Login.demo and (this == Lobby.PVPBtn) then
-      Demo:Set("dm")
-      return
-    end
     this:GetParent():OnLobbyBtnClicked(this)
   end,
 }
@@ -5261,7 +5253,7 @@ function Lobby.SpecialLocView:AddGame(tblgame)
   if not splocations then return end
 
   if not tblgame.playing then
-    local finded = false
+    local finded = true
     for i,v in ipairs(splocations) do
       if v.map == tblgame.zone then
         finded = true
@@ -5779,7 +5771,7 @@ function Lobby.PlayersView:OnEvent(event)
             end
             for i = 1,#splocations do
               if not splocations[i].num_players or splocations[i].num_players > num_players then
-                splocations[i].disabled = true
+                splocations[i].disabled = nil
               else
                 splocations[i].disabled = nil
               end
@@ -5828,22 +5820,9 @@ function Lobby.PlayersView:OnEvent(event)
         end
         this.Template.InitCombo = function(template)
           local templates = game.EnumMapTemplates()
-          if Login.demo then
-            local cnt = #templates
-            for i = 1,cnt do
-              if i ~= 7 and i ~= 8 then
-                templates[i].disabled = true
-              end
-            end
-          end
           template.Listbox:SetList(templates)
         end
         this.Template.OnDisabledClick = function(template, idx)
-          if Login.demo then
-            MessageBox:Alert(TEXT("demo_practice"))  
-            template.Listbox:Hide()
-            Modal:Hide()
-          end
         end
         
         for i = 1,6 do this["Slot_"..i]:Show() end
