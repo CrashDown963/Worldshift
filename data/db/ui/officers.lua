@@ -47,7 +47,7 @@ ChooseOfficer = uiwnd {
   Back = DefCornerFrameImage2 { 
     anchors = { 
       TOPLEFT = { "TOPLEFT", "Off_1", -5,-5 },
-      BOTTOMRIGHT = { "BOTTOMRIGHT", "Off_4", 5,5 },
+      BOTTOMRIGHT = { "BOTTOMRIGHT", "Off_5", 5,5 },
     },
   },
 }
@@ -321,7 +321,7 @@ DefOfficers = uiwnd {
   virtual = true,
 	size = {150,150},
   
-  max_map_officers = 4,
+  max_map_officers = 5,
   officer_slots = 10,
   
   Officer_1 = DefOfficer { anchors = { TOPLEFT = { "TOPLEFT", -17,0 } }, },
@@ -454,7 +454,7 @@ end
 
 function ChooseOfficer:Toggle(officer_btn)
   local race = game.GetPlayerRace()
-  for i = 1,4 do 
+  for i = 1,5 do 
     local name = this[race][i]
     this["Off_" .. i].unit_id = name
   end

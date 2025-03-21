@@ -19,8 +19,8 @@ Unit EliteKaiRider : BaseUnit {
   speed = 450
 
   frenzy_threshold = stat:damage * 3
-  frenzy_duration = 15
-  frenzy_crit_chance = 10
+  frenzy_duration = 10
+  frenzy_crit_chance = 5
 
   actions : BaseUnit.actions {
   }
@@ -97,7 +97,7 @@ Unit EliteKaiRider : BaseUnit {
   CFrenzyController frenzy {
     threshold = var:frenzy_threshold
     reset_time = var:frenzy_duration
-    max_applications = 3
+    max_applications = 5
     effect = E_buff {
       id = Frenzy
       name = "Frenzy"
@@ -105,7 +105,7 @@ Unit EliteKaiRider : BaseUnit {
       icon = 4,3
       type = frenzy
       duration = -1
-      stack_count = 3
+      stack_count = 5
       stats_change {
         crit_chance = { abs = var:frenzy_crit_chance }
       }

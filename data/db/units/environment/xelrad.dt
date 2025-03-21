@@ -85,7 +85,7 @@ Mob Xelrad: BaseBoss {
   
     projectile = beam {
       start_point = pt_cast01,pt_cast02
-      beam = RepairDronesBeam
+      beam = EnergyGeneratorBeam
     }
     
     effect = E_damage {

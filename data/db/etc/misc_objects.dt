@@ -170,7 +170,7 @@ CP2PGameObject DrainLifeLightning2 {
 }
 
 CP2PGameObject ChainShotLightning {
-  model =  Data/Models/MiscObjects/ShieldBeam_P2P.nif
+  model =  Data/Models/MiscObjects/Alien_P2P01.nif
   p2p_src_attach_point = pt_src
   p2p_dst_attach_point = pt_dst
 
@@ -178,7 +178,7 @@ CP2PGameObject ChainShotLightning {
   p2p_rotate_attach_points = 1
 
   -- Scale texture
-  p2p_size = 2500,0
+  p2p_size = 2000,0
 
   --sine noise time scale per node, .x -> src, .y -> dst
   p2p_sin_noise_time_scale = 3,12

@@ -543,7 +543,6 @@ function Unit:PrgDomSiege(params)
     
   end
   local siegeAnimLength = this:GetAnimLength("siege_start")
-  local standLength = this:GetAnimLength("stand")
   local foot1Time = this:GetAnimKeyTime("siege_start", "Foot02_down")
   local foot2Time = this:GetAnimKeyTime("siege_start", "Foot01_down")
   local shoot1Time = this:GetAnimKeyTime("siege_shoot_1", "action")
@@ -562,7 +561,6 @@ function Unit:PrgDomSiege(params)
       this:FaceTo(enemy)
       firstEnemyFaced = true
       this:SetAnim("siege_start")
-      this:SetInteractive(false)
       this:Sleep(foot1Time)
       map.SpawnObject("PuffDust", this:GetNodePos("pt_footprint02"))
       this:Sleep(foot2Time - foot1Time)
@@ -577,9 +575,6 @@ function Unit:PrgDomSiege(params)
     if range and range < 650 then
       if firstEnemyFaced then
         this:PlayAnim("stand")
-        this:Sleep(standLength)
-        this:SetInteractive(true)
-
       end
       this:SetAnim()
       return
@@ -609,8 +604,6 @@ function Unit:PrgDomSiege(params)
     else
       if firstEnemyFaced then
         this:PlayAnim("stand")
-        this:Sleep(standLength)
-        this:SetInteractive(true)
       end
       this:SetAnim()
       return

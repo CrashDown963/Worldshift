@@ -206,6 +206,7 @@ data\models\buildings\silo\silo_mask.dds
 data\models\buildings\silo\silo_nm.dds
 data\models\buildings\squadmodule\lightning_longtrail.dds
 data\models\buildings\squadmodule\Lightning_custom_purple.dds
+data\models\buildings\squadmodule\lightning_tiled_green.dds
 data\models\buildings\squadmodule\lightning_tiled.dds
 data\models\buildings\squadmodule\shokwave_2bw.dds
 data\models\buildings\squadmodule\squadmodulewire.dds
@@ -1434,6 +1435,9 @@ data\models\units\berserker\htboss_normalmap.dds
 data\models\units\bigmutant\bigmutant-dif.dds
 data\models\units\bigmutant\bigmutant-mask.dds
 data\models\units\bigmutant\bigmutant_nm.dds
+data\models\units\alienjack\alienjack-dif.dds
+data\models\units\alienjack\alienjack-mask.dds
+data\models\units\alienjack\alienjack.dds
 data\models\units\bladeoverseer\bladeoverseer-diff1.dds
 data\models\units\bladeoverseer\bladeoverseer-nm1.dds
 data\models\units\bladeoverseer\bladeoverseermask.dds

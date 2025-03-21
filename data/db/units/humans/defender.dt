@@ -41,10 +41,10 @@ Unit Defender : MachineUnit {
   nano_restore_points = pt_shoot_04,pt_shoot_05
 
   stats :{
-    hp = 620
-    power = 450
+    hp = 420
+    power = 220
     range = 1700
-    damage = 70
+    damage = 45
     armor = 25
   }
   
@@ -71,8 +71,8 @@ Unit Defender : MachineUnit {
     shoot_anim_2 = shoot
     shoot_snd = data/sounds/effects/single weapons/defender gun.wav
 
-    fire_rate = 5
-    idle_time = 0.01
+    fire_rate = 2
+    idle_time = 1
     damage = stat:damage
 
     spot_impact_type = small_energy
@@ -87,7 +87,7 @@ Unit Defender : MachineUnit {
 		  active_variation = 5
 		  length_variation = 60
 		  width_variation	= 7
-		  scale	= 4
+		  scale	= 6
 		  instances = 64
           emit = 25,65,195
 	  }
@@ -98,7 +98,7 @@ Unit Defender : MachineUnit {
       speed = 6000
       ground_hit_effect = BulletTerrainHitEffect
       model = data/models/projectiles/V Laser/t_laser.nif {
-        scale = 1
+        scale = 3
         E = 25,65,195
       }
     }

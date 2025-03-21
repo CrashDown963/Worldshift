@@ -950,6 +950,10 @@ texture_keys {
     1 = bigmutant-dif.dds
     1 = bigmutant-mask.dds
 
+    1 = alienjack_nm.dds
+    1 = alienjack-dif.dds
+    1 = alienjack-mask.dds
+
     1 = mech_destroyer_diff.dds
     1 = mech_destroyer_mask.dds
     1 = mech_destroyer_nm.dds

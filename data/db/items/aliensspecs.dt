@@ -32,6 +32,7 @@ item I_A2A : AlienSpecItem {
     Shifter
     Overseer
     AttackDrone
+    PsiDetonator
   }
   stats {
     damage = 5%/10%
@@ -139,6 +140,7 @@ item I_D1A : AlienSpecItem {
     Trisat
     Hatchling
     AttackDrone
+    PsiDetonator
   }
   stats {
     hp_gen = 50%
@@ -159,6 +161,7 @@ item I_D2A : AlienSpecItem {
     Arbiter
     Manipulator
     Dominator
+    BigMutant2
   }
   stats {
     hp = 5%/10%/20%

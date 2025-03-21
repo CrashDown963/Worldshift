@@ -31,7 +31,7 @@ Judge Judge : BaseUnit {
     xp_share_mod = 50 -- spread half the damage done as experience
     
     discharge_chance = 10
-    discharge_hops = 1
+    discharge_hops = 3
 
     proton_shot_damage = 120
     proton_shot_radius = 500
@@ -213,7 +213,7 @@ DischargeAbi {
       chooser = nearest
       max_hops = stat:discharge_hops
       max_affected = 10
-      max_spreads = 2
+      max_spreads = 3
       max_spreads_per_tick = 2
       min_spreads_per_tick = 1
 	    spread_dist = 1200

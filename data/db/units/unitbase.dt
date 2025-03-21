@@ -445,7 +445,7 @@ BaseUnit {
     detonationaura {
       infinite = 1
       pt_ground {
-        model = Data/Models/Effects/MiscReacts/React_AuraArmor.nif
+        model = Data/Models/Effects/MiscReacts/react_auraarmor_green.nif
       }
     }
    

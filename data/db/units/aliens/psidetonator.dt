@@ -33,7 +33,7 @@ Unit PsiDetonator : BaseUnit {
     detonatoraura_tick = 10
   }
   
-  speed = 400
+  speed = 450
 
   min_attack_range = 70
 
