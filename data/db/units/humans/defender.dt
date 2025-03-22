@@ -115,11 +115,11 @@ RocketAbi {
       duration = 2
       sound = 
       anim = shoot_up
-          attach {
-            pt_shoot_01 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
-            pt_shoot_02 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
-          }
-        }
+      attach {
+        pt_shoot_01 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
+        pt_shoot_02 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
+      }
+    }
     finish {
       duration = 1.5
       anim = shoot_up
@@ -212,6 +212,9 @@ RocketAbi {
     }
 
     secondary {
+      attach {
+        pt_shoot_02 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif { scale = 1.8 }
+      }
       projectile = parabolic {
         damage_type = energy
         start_point = pt_shoot_02
