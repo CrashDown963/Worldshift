@@ -15,7 +15,7 @@ Mob Xelrad: BaseBoss {
 
   stats : {
     range = 1200
-    damage = 250
+    damage = 450
     armor = 55
     hp = 70000
     sight = 2500
@@ -169,17 +169,17 @@ Mob Xelrad: BaseBoss {
       name = Spawn
       text = Xelrad lays eggs that if not killed in time will spawn full grown nasty spiders.
       icon = 13,0
-      cooldown = 30
+      cooldown = 15
       target = self
       when = fight
       effect = E_spawn {
         range = 2500
         copy_target_list = 1
         spawn {
-          SpiderEgg = 13
+          SpiderEgg = 8
         }
         spawn {
-          GiantSpiderEgg = 4
+          GiantSpiderEgg = 2
         }
       }
     }

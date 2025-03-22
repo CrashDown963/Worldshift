@@ -220,7 +220,7 @@ DischargeAbi {
       remove_spreads = 0
       check_caster = 0
       discard_react = 0
-      p2pray = ChainShotLightning
+      p2pray = ChainLightningBeam
       p2pray_dstnode = pt_center
       p2pray_duration = 1
     }

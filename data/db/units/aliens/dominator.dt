@@ -183,7 +183,7 @@ Unit Dominator: BaseUnit {
       damage_multiplier = 2
       show_damage = 1
       model = data/models/projectiles/V Laser/t_laser.nif {
-        scale = 1.1
+        scale = 1.6
         E = 150,255,80,255
       }
       effect = S_stun {

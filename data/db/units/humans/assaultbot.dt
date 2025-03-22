@@ -208,7 +208,6 @@ AssaultBotAbilities {
     name = "Concussion Rocket"
     text = "Assault Bot has [stat:rocket_precision_chance]% chance on evach attack to also launch a Concussion Rocket towards nearby targets. The resulting explosion will reduce affected enemies effectiveness, causing them to do [stat:rocket_precision_damage_perc]% less damage with their default attacks. The concussion effect stacks up to 5 times."
     icon = 5,0
-    --price = 0,5
     chance = stat:rocket_precision_chance
     when   : abi.fight
     target : abi.enemy {
@@ -216,7 +215,6 @@ AssaultBotAbilities {
       min_range = var:barrage_min_range
       max_range = var:barrage_range
     }
-    --power = stat:rocket_cost
     projectile : AssaultBot.rockets.projectile  {
       damage = stat:rocket_damage
       start_point = pt_shoot_4
