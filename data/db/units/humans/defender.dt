@@ -125,8 +125,8 @@ RocketAbi {
       anim = shoot_up
       sound = data/sounds/effects/common/proton_grenade.wav
       attach {
-        pt_shoot_01 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif { scale = 1.5 }
-        pt_shoot_02 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif { scale = 1.5 }
+        pt_shoot_01 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif { scale = 1.8 }
+        pt_shoot_02 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif { scale = 1.8 }
       }
     }
   }
