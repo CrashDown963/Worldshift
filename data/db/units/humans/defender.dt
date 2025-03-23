@@ -280,5 +280,5 @@ CMapAnim DefenderRocketMuzzle {
 	  time4 = 100
 	  color4 = colora: 1, 0.5, 0.2, 0
   }
-  scale = 3
+  scale = 4
 }
