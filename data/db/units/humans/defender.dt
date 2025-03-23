@@ -17,12 +17,11 @@ Unit Defender : MachineUnit {
   speed = 450
   scale = 0.7
   rocket_range = stat:range * 2
-  rocket_min_range = stat:range * 0.2
-  rocket_damage = stat:damage * 0.8
+  rocket_min_range = stat:range
+  rocket_damage = stat:damage
   nano_restore_points = pt_shoot_04,pt_shoot_05
-  alt_attack_spell = RocketLaunch
-  alt_attack_chance = stat:rocket_chance 
   destruction = explode
+  sight_in_combat = 4000
 
   foot_prints {
     desert = hellfire_footprint
@@ -41,13 +40,24 @@ Unit Defender : MachineUnit {
     max_tilt = 0
   }  
 
+  blend_aim = pt_center {
+    shoot = 0 {
+      shoot_down = -45
+      shoot_up = 45
+    }
+    shoot_idle = 0 {
+      shoot_idle_down = -45
+      shoot_idle_up = 45
+    }
+  }
+
   stats :{
-    hp = 520
+    hp = 420
     power = 220
-    range = 1000
-    damage = 50
+    range = 1200
+    damage = 15
     armor = 25
-    rocket_chance = 20
+    rocket_radius = 500
   }
   
   abilities {
@@ -62,23 +72,22 @@ Unit Defender : MachineUnit {
     can_crit = 1
     idle_only = 0
     count = 4 
-    sync = alternate 
+    sync = simultaneous
     fire_node_1 = pt_shoot_04
     fire_node_2 = pt_shoot_05
     fire_node_3 = pt_shoot_03
     fire_node_4 = pt_shoot_07
-    shoot_anim_1 = shoot
-    shoot_anim_2 = shoot
+    shoot_anim = shoot
     shoot_snd = data/sounds/weapons/defendershot/defender gun.wav
     fire_rate = 2
-    idle_time = 0.1
     damage = stat:damage
+    range = stat:range
     spot_impact_type = small_energy
     spot_impact = 750
     damage_type = energy
     muzzle_fx defender_lasers {
 		  model = data/models/effects/MuzzleFlash/muzzle_flash_ion2.nif
-		  frames = 2
+		  frames = 4
       frequency = 1.0
       active_fraction	= 10
       active_variation = 5
@@ -86,7 +95,7 @@ Unit Defender : MachineUnit {
       width_variation	= 20
 		  scale	= 6
 		  instances = 64
-          emit = 255,0,0
+      emit = 255,0,0
 	  }
     
     projectile = linear {
@@ -100,66 +109,53 @@ Unit Defender : MachineUnit {
       }
     }
   }
-}
 
-RocketLaunch {
-  name = "RocketLaunch"
-  text = "Defender has [stat:rocket_chance]% chance on each attack to launch Proton Rockets towards nearby targets."
-  visible = 1
-  icon = 5,0
-  min_range = var:rocket_min_range
-  range = var:rocket_range
-  target = location { min_hp = 200; aoe_range = 2000; aoe_min_enemy_hp = 300 }
-  cast {
-    prepare {
-      duration = 0.5
-      sound = 
-      anim = shoot_up
-      attach {
-        pt_shoot_01 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
-        pt_shoot_02 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
-      }
-    }
-    
-    finish {
-      duration = 1.5
-      anim = shoot_up
-      sound = data/sounds/effects/common/proton_grenade.wav
-      attach {
-        pt_shoot_01 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif { scale = 1.8 }
-        pt_shoot_02 = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif { scale = 1.8 }
-      }
-    }
-  }
-
-  projectile = parabolic {
+  CMultiWeaponController rockets {
+    active = 0
+    can_crit = 1
+    idle_only = 1
+    shoot_anim = shoot_up
+    shoot_idle_1 = shoot_up 
+    anim_idle = shoot_idle_up
+    range = var:rocket_range
+    min_range = var:rocket_min_range
+    count = 2
+    idle_time = 6
+    sync = simultaneous
+    fire_node_1 = pt_shoot_01
+    fire_node_2 = pt_shoot_02
+    aim_node = pt_aim
+    shoot_snd = data\sounds\weapons\huge cannon
+    spot_impact_type = small_energy
+    spot_impact = 5000
     damage_type = energy
-    start_point = pt_shoot_01
-    angle = 60
-    speed = 4000
-    react = proton_shot
-    effect = RocketProjectileExplode
-    ground_hit_effect = RocketProjectileExplode
-    expire_effect = ProtonExpire
-    alt_projectile_chance = 100
-    model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif {
-      CTrailController trail_1 {
-        emitter = root
-        texture = data/model/effects/Trails/Lightning_Trail_Drain.dds
-        tex_ratio = float: 1.7
-        start_width = 95
-        end_width = 270
-        ttl = 10
-        simple_time = 1
-        additive = 1
-        z_write = 0
-        material_alpha = 0.8
-        diffuse = color: 1, 1, 1
-        ambient = color: 0.5, 0.5, 0.5
-        emissive = color: 1, 1, 1
+    muzzle_anim = DefenderRocketMuzzle
+    projectile = parabolic {
+      damage_type = energy
+      angle = 75
+      speed = 4000
+      react = proton_shot
+      effect = RocketProjectileExplode
+      ground_hit_effect = RocketProjectileExplode
+      expire_effect = ProtonExpire
+      model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif {
+        CTrailController trail_1 {
+          emitter = root
+          texture = data/model/effects/Trails/Lightning_Trail_Drain.dds
+          tex_ratio = float: 1.7
+          start_width = 95
+          end_width = 270
+          ttl = 10
+          simple_time = 1
+          additive = 1
+          z_write = 0
+          material_alpha = 0.8
+          diffuse = color: 1, 1, 1
+          ambient = color: 0.5, 0.5, 0.5
+          emissive = color: 1, 1, 1
 
-        time0 = 0
-        color0 = colora: 0.2, 0.2, 1, 0
+          time0 = 0
+          color0 = colora: 0.2, 0.2, 1, 0
 
         time1 = 3
         color1 = colora: 0.2, 0.2, 1, 1
@@ -203,86 +199,18 @@ RocketLaunch {
           
         time4 = 100
         color4 = colora: 0.2, 0.1, 1, 0
-      }
-    }     
-  }
-
-  alt_projectile {
-    count = 1
-    projectile = parabolic {
-      damage_type = energy
-      start_point = pt_shoot_02
-      angle = 60
-      speed = 4000
-      react = proton_shot
-      effect = RocketProjectileExplode
-      ground_hit_effect = ProtonTerrainHitEffect
-      expire_effect = ProtonExpire
-      model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif {
-        CTrailController trail_1 {
-          emitter = root
-          texture = data/model/effects/Trails/Lightning_Trail_Drain.dds
-          tex_ratio = float: 1.7
-          start_width = 95
-          end_width = 270
-          ttl = 10
-          simple_time = 1
-          additive = 1
-          z_write = 0
-          material_alpha = 0.8
-          diffuse = color: 1, 1, 1
-          ambient = color: 0.5, 0.5, 0.5
-          emissive = color: 1, 1, 1
-
-          time0 = 0
-          color0 = colora: 0.2, 0.2, 1, 0
-
-          time1 = 3
-          color1 = colora: 0.2, 0.2, 1, 1
-
-          time2 = 30
-          color2 = colora: 0.2, 0.2, 1, 1
-
-          time3 = 60
-          alpha3 = 0.8
-          
-          time4 = 100
-          color4 = colora: 0.4, 0.4, 1, 0
-        }
-        
-        CTrailController trail_2 {
-          emitter = root
-          texture = data/model/effects/Trails/Trail3.dds
-          tex_ratio = float: 0.6
-          start_width = 135
-          end_width = 25
-          ttl = 14
-          simple_time = 1
-          additive = 1
-          z_write = 0
-          material_alpha = 1
-          diffuse = color: 1, 1, 1
-          ambient = color: 0.5, 0.5, 0.5
-          emissive = color: 1, 1, 1
-
-          time0 = 0
-          color0 = colora: 1, 0.3, 1, 0.6
-
-          time1 = 2
-          color1 = colora: 0.3, 0.2, 1, 0.8
-
-          time2 = 30
-          color2 = colora: 0.3, 0.2, 1, 0.8
-
-          time3 = 65
-          alpha3 = 0.7
-          
-          time4 = 100
-          color4 = colora: 0.2, 0.1, 1, 0
         }
       }     
     }
   }
+}
+
+
+RocketLaunch {
+  name = "RocketLaunch"
+  text = "The Defender can launch Proton Rockets towards distant targets."
+  visible = 1
+  icon = 5,0
 }
 
 CAreaEffect RocketProjectileExplode {
@@ -290,19 +218,20 @@ CAreaEffect RocketProjectileExplode {
  
   epicenter {
     spawn DefenderRocketExplosion
-    physics_radius = 500 
+    physics_radius = stat:rocket_radius 
     physics_power = 6000
   }
   
   tags t1 = unit | building {
     spawn ExplosionDamage {
       amount = var:rocket_damage
+      can_crit = 1
     }
   }
 }
 
 CAnimEffect ProtonTerrainHitEffect {
-  tags t1 = grass | dirt | mud {
+  tags t1 = grass | dirt | mud | sand | rocks | wet_sand | snow | ice | lava {
     spawn DefenderRocketExplosion
   }
   tags t2 = water {
@@ -316,4 +245,40 @@ CMapAnim DefenderRocketExplosion {
   scale = 2
   decals = explosion_crater2
   physics_impact = 5000
+}
+
+CMapAnim DefenderRocketMuzzle {
+  model = data/models/effects/MuzzleFlash/muzzle_flash_ProtonShot.nif 
+  
+	CTrailController trail {
+	  emitter = ROOT
+	  texture = data/model/effects/Trails/Trail3.dds
+	  tex_ratio = float: 1
+	  start_width = 180
+	  end_width = 80
+	  ttl = 80
+	  simple_time = 1
+	  additive = 1
+            z_write = 0
+	  material_alpha = 0.5
+	  diffuse = color: 1, 1, 1
+	  ambient = color: 0.5, 0.5, 0.5
+	  emissive = color: 1, 0.8, 0.9
+
+	  time0 = 0
+	  color0 = colora: 1, 1, 1, 0
+
+	  time1 = 3
+	  color1 = colora: 1, 0.45, 0, 1
+
+	  time2 = 30
+	  color2 = colora: 1, 0.2, 0.2, 1
+
+	  time3 = 60
+	  alpha3 = 0.6
+
+	  time4 = 100
+	  color4 = colora: 1, 0.5, 0.2, 0
+  }
+  scale = 3
 }
