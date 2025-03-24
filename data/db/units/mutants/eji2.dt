@@ -27,7 +27,7 @@ Unit Eji2 : BaseUnit {
   
   stats :{
     hp = 280
-    armor = 3
+    armor = 0
     psi = 520
     psi_gen = 480
   }
@@ -50,9 +50,9 @@ Unit Eji2 : BaseUnit {
       weight = 2
       target : abi.ally { health_under = 80 }
       range = 1700
-      power = 20
+      power = 40
       effect = E_heal {
-        amount = 120
+        amount = 200
         react = full_restore
       }
       cast {
@@ -76,7 +76,7 @@ Unit Eji2 : BaseUnit {
       target : abi.self
       area : abi.medium
       cooldown = 30
-      power = 80
+      power = 180
       lua_when = CheckFullRestorationAbility { range = 1500; no_damage_time = 8 }
       
       cast {

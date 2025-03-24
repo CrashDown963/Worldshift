@@ -256,6 +256,7 @@ CAreaEffect RocketProjectileExplode {
     spawn ExplosionDamage {
       amount = var:rocket_damage
       can_crit = 1
+      react = lightning_hit_react
     }
   }
 }

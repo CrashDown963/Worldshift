@@ -627,16 +627,20 @@ MachineUnit : BaseUnit {
   impacts : MachineUnitImpacts
 
   immune_to :{
+    E_mindcontrol
     Corruption
     Growl
     Threaten
     ParalyzingField
     SpiritSanctum
     SpiritTrap
+    S_fear
+    S_multifear
+    fear
   }  
 
   refpoints {
-    repair = 5
+    repair = 10
   }
 
   -- general purpose restore points!
@@ -651,12 +655,16 @@ BaseMachineMob : BaseMob {
   impacts : MachineUnitImpacts
   
   immune_to :{
+    E_mindcontrol
     Corruption
     Growl
     Threaten
     ParalyzingField
     SpiritSanctum
     SpiritTrap
+    S_fear
+    S_multifear
+    fear
   }  
 
   refpoints {

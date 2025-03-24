@@ -28,7 +28,38 @@ Unit HighPriest : BaseUnit {
   }
   
   attachments {
-    pt_staff = data/models/effects/Magic/HighPriest_fx_Attachment.nif
+    pt_staff = data/models/effects/Magic/HighPriest_fx_Attachment.nif { 
+      CTrailController GhostTrail01  {
+				  emitter = Trail01
+				  texture = data/textures/trails/Trail3.dds
+				  tex_ratio = float: 1
+				  start_width = 30
+				  end_width = 0
+				  ttl = 12
+				  simple_time = 1
+				  additive = 1
+                  z_write = 0
+				  material_alpha = 1
+				  diffuse = color: 0, 0, 0
+				  ambient = color: 0, 0, 0
+				  emissive = color: 1, 1, 1
+
+				  time0 = 0
+				  color0 = colora: 1, 1, 1, 0
+
+				  time1 = 3
+				  color1 = colora: 0.31, 0.31, 0.73, 1
+
+				  time2 = 30
+				  color2 = colora: 0.31, 0.56, 0.73, 1
+
+				  time3 = 60
+				  alpha3 = 0.6
+
+				  time4 = 100
+				  color4 = colora: 0, 0, 1, 0
+		   }
+    }
   }
  
   stats :{

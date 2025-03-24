@@ -35,11 +35,9 @@ AssaultBot AssaultBot : MachineUnit {
     rocket_precision_chance = 5
     rocket_damage = 20
   }
-  sight = stat:range + 500
-
   
+  sight = stat:range + 500
   speed = 450
---- params
   barrage_range = stat:range * 1.5
   barrage_min_range = stat:range * 0.5
   pitch_speed = 90

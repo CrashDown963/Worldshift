@@ -16,6 +16,7 @@ Mob Xelrad: BaseBoss {
   stats : {
     range = 1200
     damage = 450
+    psi = 8000
     armor = 55
     hp = 70000
     sight = 2500
