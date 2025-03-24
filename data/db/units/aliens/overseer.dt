@@ -1,4 +1,4 @@
-Unit Overseer : BaseUnit {
+Unit Overseer : MachineUnit {
   field_name = "Field Overseer"
   power_name = "Power Overseer"
   descr = "Overseer description"
@@ -14,7 +14,7 @@ Unit Overseer : BaseUnit {
   destruction = animation
 
   race = aliens
-  tags = unit, organic, repairable_unit
+  tags = unit, organic
   cost : pvp.aliens.unit_costs.Overseer
   cost_sloc : pvp.aliens.sloc_costs.Overseer
 
@@ -28,7 +28,7 @@ Unit Overseer : BaseUnit {
     hp = 380
     armor = 4
     damage = 9
-    psi = 300
+    power = 300
     range = 1800
     
     field_fire_rate = 2.5
@@ -59,7 +59,7 @@ Unit Overseer : BaseUnit {
 
   take_auras : { RestorationCoreAura }
 
-  actions : BaseUnit.actions {
+  actions : {
     AttackDrone
     MorphAction
   }

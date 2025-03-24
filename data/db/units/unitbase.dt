@@ -503,8 +503,6 @@ BaseUnit {
     distance = 1300
   }
 
-
-
   CAbilityController AbilityController
   
   faction_specific = 1

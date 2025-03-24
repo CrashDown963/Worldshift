@@ -1,11 +1,11 @@
-Unit PsiDetonator : BaseUnit {
+Unit PsiDetonator : MachineUnit {
   name = "Psi Detonator"
   descr = "Psi Detonator is unfinished"
   race = Aliens
   model = data/models/units/psidetonator/psidetonator.nif
   icon = 6,3
   scale = 0.6
-  tags = unit, repairable_unit
+  tags = unit
   explosion = ExplosionPlasma_Green
   hover_altitude_min = 4000
   hover_altitude_max = 5000
@@ -17,10 +17,10 @@ Unit PsiDetonator : BaseUnit {
 
   stats : {
     hp = 280
-    psi = 380
+    power = 380
     armor = 25
     damage = 50
-    range = 1800
+    range = 1600
     
 	  shield_hull = 100
     shield_regen  = 120
@@ -41,12 +41,12 @@ Unit PsiDetonator : BaseUnit {
     Root Scene = 
   }
 
-  actions : BaseUnit.actions {
+  actions : {
   }
     
   abilities {
-    Charming {
-      name = "Charming"
+    Electrified {
+      name = "Electrified"
       text = "Enemies will prefer to attack someone else if possible"
       icon = 2,0
     }
@@ -83,6 +83,7 @@ Unit PsiDetonator : BaseUnit {
       destroy_when_creator_dead = 1
       stats_change {
           psi = { perc = stat:detonatoraura_perc }
+          power = { perc = stat:detonatoraura_perc }
       }
     }
   }

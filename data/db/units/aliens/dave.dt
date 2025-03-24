@@ -7,18 +7,21 @@ Unit BigMutant2 : BaseUnit {
   destruction = animation
   race = aliens
   officer = 1
+  tags = unit, organic
   scale = 0.4
   speed = 450
   aggro_range = stat:range
 
+  impacts : LivingUnitImpacts
+
   stats :{
-    hp = 720
+    hp = 780
     psi = 220
     armor = 8
-    range = 1000
+    range = 1200
     damage = 30
     healing_taken_debuff_amount = 2
-    healing_taken_debuff_duration = 8
+    healing_taken_debuff_duration = 12
     shield_hull = 100
     shield_regen  = 120
     shield_fullabsorbchance = 10
@@ -29,6 +32,7 @@ Unit BigMutant2 : BaseUnit {
   }
 
   immune_to : {
+    PlaguedCorrosion
   }
 
   abilities {
@@ -89,8 +93,8 @@ Unit BigMutant2 : BaseUnit {
     min_bursts = 1
     max_bursts = 1
     idle_time = 1
-    aim_tolerance_pitch = 120
-    aim_tolerance_yaw = 10
+    aim_tolerance_pitch = 30
+    aim_tolerance_yaw = 15
 
     projectile = splitparabolic {
       secondary_projectiles = 2
@@ -137,7 +141,7 @@ CAreaEffect DaveShotEffect {
   range = 250
  
   epicenter {
-    spawn ExplosionPlasma_01 { scale = 1.5 }
+    spawn ExplosionPlasma_01
     physics_radius = 250 
     physics_power = 4500
   }

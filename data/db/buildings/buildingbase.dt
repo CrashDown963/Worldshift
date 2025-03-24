@@ -17,6 +17,7 @@ BaseBuilding {
   sel_ui = building
 
   take_auras  { }
+  impacts : MachineUnitImpacts
 
   movable = 0
   --destruction = explode

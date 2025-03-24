@@ -29,7 +29,7 @@ Unit Manipulator : BaseUnit {
   stats : {
     hp = 420
     armor = 2
-    range = 1800
+    range = 1600
     damage = 12
     psi = 400
 

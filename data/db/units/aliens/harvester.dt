@@ -25,6 +25,10 @@ Unit Harvester: BaseUnit {
     confirm = data/sounds/units/harvester/confirm/
   }
 
+  immune_to : {
+    PlaguedCorrosion
+  }
+
   stats : {
     hp = 780
     armor = 22
@@ -112,7 +116,6 @@ Unit Harvester: BaseUnit {
   
   actions : Alien.actions {
     VitalitySurgeAction;
-    MakeBreeder -- fake
   }
 
   abilities {

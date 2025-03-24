@@ -2,7 +2,7 @@ Unit AttackDrone : MachineUnit {
   name = "Attack Drone"
   model = Data/Models/Units/repair_drone/repair_drone.kfm
   race = aliens
-  tags = unit, lowrank, repairable_unit
+  tags = unit, lowrank
   movement_type = hover
   explosion = ExplosionPlasma_Green
   destruction = ExplosionPlasma_Green
@@ -41,7 +41,7 @@ Unit AttackDrone : MachineUnit {
   animation {
   }
   
-  actions {
+  actions : {
   }
 
   CTrailController trail {

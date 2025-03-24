@@ -19,7 +19,7 @@ Unit EliteKaiRider : BaseUnit {
   speed = 450
 
   frenzy_threshold = stat:damage * 3
-  frenzy_duration = 10
+  frenzy_duration = 15
   frenzy_crit_chance = 5
 
   actions : BaseUnit.actions {

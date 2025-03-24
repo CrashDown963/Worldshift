@@ -252,7 +252,7 @@ function HighPriest.Info:OnLoad()
 	this:RegisterEvent("UNIT_POWER")
 	this:RegisterEvent("UNIT_OFFICERGONE")
 	this:RegisterEvent("UNIT_OFFICERREGISTER")
-  this:RegisterEvent("MAP_LOADED")
+  	this:RegisterEvent("MAP_LOADED")
 	
 	this:RegisterEvent("UNIT_AREAACTIONSON")
 	this:RegisterEvent("UNIT_AREAACTIONSOFF")

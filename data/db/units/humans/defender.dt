@@ -16,6 +16,7 @@ Unit Defender : MachineUnit {
   max_yaw = 45
   speed = 450
   scale = 0.7
+  tags = unit
   rocket_range = stat:range * 2
   rocket_min_range = stat:range
   rocket_damage = stat:damage
@@ -26,7 +27,7 @@ Unit Defender : MachineUnit {
   foot_prints {
     desert = hellfire_footprint
   }
-  
+    
   sounds {
     confirm = data/sounds/units/defender/confirm/
     select = data/sounds/units/defender/select/
@@ -76,7 +77,7 @@ Unit Defender : MachineUnit {
     RocketLaunch
   }
 
-  actions : BaseUnit.actions {
+  actions : {
   }
 
   CMultiWeaponController weapon {
@@ -220,14 +221,14 @@ Unit Defender : MachineUnit {
         effect = E_buff {
           name = "Charging Proton Rocket"
           text = "The Defender is charging up his next Proton Rocket volley."
-          icon = 13,3
+          icon = 4,5
           target_self = 1
           visible = 1
           duration = 5
           react = defender_rocket_shot
           sound = data/sounds/weapons/defendershot/charge.wav
           area = 800 { 
-            anim = 
+            anim = data/Models/Effects/MediumExplosion/ExplosionPlasma_purple.kfm
           }
         }
       }
@@ -270,7 +271,7 @@ CAnimEffect ProtonTerrainHitEffect {
 
 CMapAnim DefenderRocketExplosion {
   model = data/Models/Projectiles/ProtonShot/ProtonShotHitGround.nif {
-    scale = 2.5
+    scale = 3
   }
   sound = DATA/sounds/Effects/ExplosionBig/
   decals = explosion_crater2
