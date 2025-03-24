@@ -212,6 +212,7 @@ Unit Defender : MachineUnit {
         color4 = colora: 0.2, 0.1, 1, 0
         }
       }
+      
       effect = E_set {
 
         effect = RocketProjectileExplode
@@ -222,7 +223,7 @@ Unit Defender : MachineUnit {
           icon = 13,3
           target_self = 1
           visible = 1
-          duration = 4.5
+          duration = 5
           react = defender_rocket_shot
           sound = data/sounds/weapons/defendershot/charge.wav
           area = 800 { 
