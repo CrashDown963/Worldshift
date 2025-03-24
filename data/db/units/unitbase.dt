@@ -341,7 +341,7 @@ BaseUnit {
     respawn_react {
       pt_chest = Data/Models/Effects/Magic/passivedmgreact.nif
     }  
-    
+
     frenzied_blades {
       pt_top = data/models/effects/magic/BasicStun.nif
     }

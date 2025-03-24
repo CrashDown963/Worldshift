@@ -148,7 +148,6 @@ Mob BigOne: BaseBoss {
                 multi_area = stat:shower_damage_area {
                   sound = Data/Sounds/Effects/PoisonSpores/
                 }
-                show_text_feedback = 1
                 duration = stat:shower_duration
                 tick = 1
                 immediate_tick = 1

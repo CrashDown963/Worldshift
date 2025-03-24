@@ -60,6 +60,18 @@ Unit Defender : MachineUnit {
     rocket_radius = 500
   }
   
+  reacts {
+    defender_rocket_shot {
+      infinite = 1
+      pt_shoot_01 = data/models/effects/magic/purpleenergyburst_inverse_rotated.nif { scale = 0.1}
+      pt_shoot_02 = data/models/effects/magic/purpleenergyburst_inverse_rotated.nif { scale = 0.1}
+      pt_shoot_01 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
+      pt_shoot_02 = data/models/effects/miscreacts/lightning_swirl_blue.nif { scale = 0.5}
+      pt_shoot_01 = data/models/effects/magic/rocketlaunch.nif { scale = 0.1 }
+      pt_shoot_02 = data/models/effects/magic/rocketlaunch.nif { scale = 0.1 }
+    }
+  }
+
   abilities {
     RocketLaunch
   }
@@ -134,8 +146,7 @@ Unit Defender : MachineUnit {
       damage_type = energy
       angle = 75
       speed = 4000
-      react = proton_shot
-      effect = RocketProjectileExplode
+      react = proton_shot 
       ground_hit_effect = RocketProjectileExplode
       expire_effect = ProtonExpire
       model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif {
@@ -200,14 +211,31 @@ Unit Defender : MachineUnit {
         time4 = 100
         color4 = colora: 0.2, 0.1, 1, 0
         }
-      }     
+      }
+      effect = E_set {
+
+        effect = RocketProjectileExplode
+              
+        effect = E_buff {
+          name = "Charging Proton Rocket"
+          text = "The Defender is charging up his next Proton Rocket volley."
+          icon = 13,3
+          target_self = 1
+          visible = 1
+          duration = 4.5
+          react = defender_rocket_shot
+          sound = data/sounds/weapons/defendershot/charge.wav
+          area = 800 { 
+            anim = 
+          }
+        }
+      }
     }
   }
 }
 
-
 RocketLaunch {
-  name = "RocketLaunch"
+  name = "Proton Rockets"
   text = "The Defender can launch Proton Rockets towards distant targets."
   visible = 1
   icon = 5,0
@@ -240,9 +268,10 @@ CAnimEffect ProtonTerrainHitEffect {
 }
 
 CMapAnim DefenderRocketExplosion {
-  model = data/Models/Projectiles/ProtonShot/ProtonShotHitGround.nif
+  model = data/Models/Projectiles/ProtonShot/ProtonShotHitGround.nif {
+    scale = 2.5
+  }
   sound = DATA/sounds/Effects/ExplosionBig/
-  scale = 2
   decals = explosion_crater2
   physics_impact = 5000
 }
