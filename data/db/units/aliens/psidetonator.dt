@@ -3,7 +3,7 @@ Unit PsiDetonator : MachineUnit {
   descr = "Psi Detonator is unfinished"
   race = Aliens
   model = data/models/units/psidetonator/psidetonator.nif
-  icon = 6,3
+  icon = 7,6
   scale = 0.6
   tags = unit
   explosion = ExplosionPlasma_Green
@@ -38,7 +38,6 @@ Unit PsiDetonator : MachineUnit {
   min_attack_range = 70
 
   attachments {
-    Root Scene = 
   }
 
   actions : {

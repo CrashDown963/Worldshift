@@ -1,4 +1,4 @@
-Mob DominatorMob : BaseMob {
+Mob DominatorMob : BaseAlienMob {
   name : Dominator.name
   descr : Dominator.descr
   icon = 1,16

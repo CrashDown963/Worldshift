@@ -1,4 +1,4 @@
-Mob TritechMob : BaseMob {
+Mob TritechMob : BaseAlienMob {
   name : Tritech.name
   icon = 5,12
   descr : Tritech.descr

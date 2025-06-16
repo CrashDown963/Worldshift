@@ -1,7 +1,8 @@
-Unit BigMutant2 : BaseUnit {
-  name = "Dave, Jack's brother"
+Unit Defiler : AlienUnit {
+  name = "Defiler"
+  descr = "DESCRIPTION"
   icon = 5,6
-  model = data/Models/units/bigmutant/bigmutant.kfm
+  model = data/Models/units/alienjack/alienjack.kfm
   cost : pvp.aliens.unit_costs.Officer
   cost_sloc : pvp.aliens.sloc_costs.Officer
   destruction = animation
@@ -11,17 +12,21 @@ Unit BigMutant2 : BaseUnit {
   scale = 0.4
   speed = 450
   aggro_range = stat:range
+  take_auras : { RestorationCoreAura }
 
-  impacts : LivingUnitImpacts
+  sounds {
+    select = data/sounds/units/arbiter/select/
+    confirm = data/sounds/units/arbiter/confirm/
+  }
 
-  stats :{
-    hp = 780
+  stats : {
+    hp = 680
     psi = 220
     armor = 8
     range = 1200
     damage = 30
     healing_taken_debuff_amount = 2
-    healing_taken_debuff_duration = 12
+    healing_taken_debuff_duration = 15
     shield_hull = 100
     shield_regen  = 120
     shield_fullabsorbchance = 10
@@ -98,17 +103,21 @@ Unit BigMutant2 : BaseUnit {
 
     projectile = splitparabolic {
       secondary_projectiles = 2
-      secondary_radius = 800
+      secondary_radius = 350
       
       primary {
         projectile : ShootProjectile = parabolic {
           angle = 1
+          spot_impact = 800
+          spot_impact_type = small_energy
+          damage_type = energy
+          effect = DaveShotEffect
         }
       }
       
       secondary {
         projectile : ShootProjectile = parabolic {
-          angle = 0
+          angle = 1
           spot_impact = 800
           spot_impact_type = small_energy
           damage_type = energy
@@ -138,7 +147,7 @@ CBuffEffect E_PlaguedCorrosion {
 }
 
 CAreaEffect DaveShotEffect {
-  range = 250
+  range = 350
  
   epicenter {
     spawn ExplosionPlasma_01
@@ -149,6 +158,7 @@ CAreaEffect DaveShotEffect {
   tags t1 = unit {
     spawn ExplosionDamage {
       amount = stat:damage
+      can_crit = 1
     }
     spawn E_PlaguedCorrosion
   }

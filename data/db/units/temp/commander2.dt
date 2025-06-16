@@ -110,4 +110,5 @@ Commander Commander2 : BaseUnit {
        150 = 30,30,250,50
      }
    }
+  }
 }

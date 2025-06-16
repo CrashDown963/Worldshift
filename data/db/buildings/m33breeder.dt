@@ -1,4 +1,4 @@
-Building M33Breeder : BaseBuilding {
+Building M33Breeder : BaseAlienBuilding {
   name : Breeder.name
   descr : Breeder.descr
   icon = 4,11

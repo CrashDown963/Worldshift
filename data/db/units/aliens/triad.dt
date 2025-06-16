@@ -1,14 +1,14 @@
-Turret Triad : BaseBuilding {
+Turret Triad : BaseAlienTurret {
   name = "Triad"
   descr = " "
   race = aliens
   model = Data/Models/Units/Trisat/TrisatTriad.kfm
   
   stats : {
-    hp = 600
+    hp = 6600
     armor = 5
-    range = 1200
-    damage = 15
+    range = 2600
+    damage = 180
     speed_mod = 1
   }
   sight = stat:range + 300
@@ -16,6 +16,8 @@ Turret Triad : BaseBuilding {
   movable = 0
   separate = Trisat
 
+  ondeath_effect = SpawnTriadHatchlings
+  
   CWeaponController weapon {
     active = 1
     --idle_only = 1
@@ -48,4 +50,15 @@ Turret Triad : BaseBuilding {
     }
   }
 
+  CSpawnEffect SpawnTriadHatchlings {
+    spawn {
+      RenegadeTritech = 6
+    }
+    spawn {
+      RenegadeTrisat = 3
+    }
+    spawn {
+      RenegadeHatchling = 9
+    }
+  }
 }

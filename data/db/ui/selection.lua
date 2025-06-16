@@ -894,6 +894,7 @@ Selection.Unit = uiwnd {
   Abi2 = Abi { anchors = { LEFT = { "RIGHT", "Abi1", 0,0 } } },
   Abi3 = Abi { anchors = { LEFT = { "RIGHT", "Abi2", 0,0 } } },
   Abi4 = Abi { anchors = { LEFT = { "RIGHT", "Abi3", 0,0 } } },
+  Abi5 = Abi { anchors = { LEFT = { "RIGHT", "Abi4", 0,0 } } },
   
   EffectsTitle = uitext {
     size = {100, 20},

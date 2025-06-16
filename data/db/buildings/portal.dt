@@ -1,4 +1,4 @@
-Building Portal : BaseBuilding {
+Building Portal : BaseAlienBuilding {
   name = "Portal"
   icon = 6,4
   descr = "Portal description"

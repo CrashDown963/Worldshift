@@ -1,4 +1,4 @@
-Mob RenegadeArbiter : BaseMob {
+Mob RenegadeArbiter : BaseAlienMob {
   name : Arbiter.name
   descr : Arbiter.descr
   icon = 2,29

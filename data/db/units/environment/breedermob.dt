@@ -1,4 +1,4 @@
-Mob BreederMob : BaseMob {
+Mob BreederMob : BaseAlienMob {
   name : Breeder.name
   icon = 4,11
   descr : Breeder.descr 

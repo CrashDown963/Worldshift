@@ -322,6 +322,11 @@ BaseUnit {
       pt_chest = data/models/effects/miscreacts/drainlife.nif
     }
 
+    frenzy {
+      infinite = 1
+      pt_chest = data/models/effects/miscreacts/drainlife.nif { scale = 0.2 }   
+    }
+
     drain_enemy_receive_react {
       pt_chest = Data/Models/Effects/Magic/passivedmgreact.nif
     }  
@@ -574,25 +579,6 @@ CastRespawn {
   react = respawn_react
 }
 
---------------------------------------------------------------- BASE ANIMAL
-
-BaseAnimal : BaseMob {
-  name = "Animal"
-  tags = unit, organic, mob, animal
-  subgroup = Animals
-  sight = 500
-  range = 100
-  damage = 10
-  
-  CWeaponController weapon {
-    active = 0
-    idle_only = 1
-    fire_node = Scene Root
-    shoot_anim = ATTACK
-  }
-}
-
-
 --------------------------------------------------------------- UNDERWORLD
 
 UnderworldUnit : BaseUnit {
@@ -604,6 +590,21 @@ UnderworldUnit : BaseUnit {
   stats : {
     hp_gen = 180
   }
+}
+
+--------------------------------------------------------------- ALIEN
+
+AlienUnit : BaseUnit {
+  name = "Alien"
+  tags = unit, alien
+  immune_to :{
+  }
+  stats : {
+  }
+  impacts : AlienUnitImpacts {
+  }
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
 }
 
 --------------------------------------------------------------- MACHINES
@@ -647,6 +648,26 @@ MachineUnit : BaseUnit {
   nano_restore_points = pt_head,pt_center,pt_top
 }
 
+--------------------------------------------------------------- BASE ANIMAL
+
+BaseAnimal : BaseMob {
+  name = "Animal"
+  tags = unit, organic, mob, animal
+  subgroup = Animals
+  sight = 500
+  range = 100
+  damage = 10
+  
+  CWeaponController weapon {
+    active = 0
+    idle_only = 1
+    fire_node = Scene Root
+    shoot_anim = ATTACK
+  }
+}
+
+------------------------------------------------------------- ENEMIES
+
 BaseMachineMob : BaseMob {
   name = "MachineMob"
   tags = unit, bot, mob, repairable_unit
@@ -684,6 +705,16 @@ BaseUnderworldMob : BaseMob {
   }
 }
 
+BaseAlienMob : BaseMob {
+  name : AlienUnit.name
+  tags = unit, alien, mob
+  immune_to :{
+  }
+  impacts : AlienUnitImpacts {
+  }
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+}
 
 BaseBoss : BaseMob {
   boss = 1
@@ -732,46 +763,63 @@ BaseMachineBoss : BaseMachineMob {
 
 LivingUnitImpacts {
 	bullet {
-	--	1 = data/models/effects/impacts/blood_impact.kfm 
-		2 = data/models/effects/impacts/blood_impact2.kfm {scale = 2}
-		3 = data/models/effects/impacts/blood_impact3.kfm {scale = 2}
-		4 = data/models/effects/impacts/blood_impactPart.kfm {scale = 2}
-		5 = data/models/effects/impacts/blood_impactPart2.kfm {scale = 2}
+		1 = data/models/effects/impacts/blood_impact.kfm 
+		2 = data/models/effects/impacts/blood_impact2.kfm {scale = 5}
+		3 = data/models/effects/impacts/blood_impact3.kfm {scale = 5}
+		4 = data/models/effects/impacts/blood_impactPart.kfm {scale = 5}
+		5 = data/models/effects/impacts/blood_impactPart2.kfm {scale = 5}
 	}
 
 	melee {
-		1 = data/models/effects/impacts/melee_blood_impact2.kfm {scale = 2}
-		2 = data/models/effects/impacts/melee_blood_impactPart2.kfm {scale = 2}
+		1 = data/models/effects/impacts/melee_blood_impact2.kfm {scale = 5}
+		2 = data/models/effects/impacts/melee_blood_impactPart2.kfm {scale = 5}
 	}
 
 	small_energy {
-		1 = data/models/effects/impacts/simple sparks.nif
+		1 = data/models/effects/impacts/simple sparks.nif {scale = 5}
 	}
 	
 	fire {
-		1 = data/models/effects/impacts/simple sparks.nif
+		1 = data/models/effects/impacts/simple sparks.nif {scale = 5}
 	}
 	
 	ion {
-		1 = data/models/effects/impacts/IonHitReact.nif
+		1 = data/models/effects/impacts/IonHitReact.nif {scale = 5}
 	}
-	
 } 
 
 MachineUnitImpacts {
 	bullet {
-		1 = data/models/effects/impacts/simple sparks.nif
+		1 = data/models/effects/impacts/simple sparks.nif {scale = 5}
 	}
 	small_energy {
-		1 = data/models/effects/impacts/simple sparks.nif
+		1 = data/models/effects/impacts/simple sparks.nif {scale = 5}
 	}
 	fire {
-		1 = data/models/effects/impacts/simple sparks.nif
+		1 = data/models/effects/impacts/simple sparks.nif {scale = 5}
 	}
 	
 	ion {
-		1 = data/models/effects/impacts/IonHitReact.nif
+		1 = data/models/effects/impacts/IonHitReact.nif {scale = 5}
 	}
 } 
 
+AlienUnitImpacts {
+	bullet {
+		1 = data/models/effects/impacts/aliens_blood_impact.kfm {scale = 5}
+		2 = data/models/effects/impacts/aliens_blood_impactPart.kfm {scale = 5}
+		3 = data/models/effects/impacts/aliens_blood_impactPart2.kfm {scale = 5}
+	}
+	melee {
+		1 = data/models/effects/impacts/melee_aliens_blood_impact.kfm {scale = 5}
+		2 = data/models/effects/impacts/melee_aliens_blood_impactPart2.kfm {scale = 5}
+	}
 
+	small_energy {
+		1 = data/models/effects/impacts/simple sparks.nif {scale = 5}
+	}
+	fire {
+		1 = data/models/effects/impacts/simple sparks.nif {scale = 5}
+	}
+	
+} 

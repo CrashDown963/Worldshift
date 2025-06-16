@@ -1565,6 +1565,9 @@ data\models\units\judge\judge-mask.dds
 data\models\units\judge\judge-nm.dds
 data\models\units\kai_rider\kai_rider_diffuse.dds
 data\models\units\kai_rider\kai_rider_nm.dds
+data\models\units\elite_kai_rider\elite_kai_rider_diffuse.dds
+data\models\units\elite_kai_rider\elite_kai_rider_nm.dds
+data\models\units\elite_kai_rider\elite_kai_rider_mask.dds
 data\models\units\kohunits\archer_diffuse.dds
 data\models\units\kohunits\archer_mask.dds
 data\models\units\kohunits\archer_nm.dds
@@ -1770,12 +1773,16 @@ data\terrain\decals\barrage\barrage-decal1.nm.dds
 data\terrain\decals\blood drops\aliens_blood_drops1.dds
 data\terrain\decals\blood drops\aliens_blood_drops2.dds
 data\terrain\decals\blood drops\blood_drops1.dds
+data\terrain\decals\blood drops\oil_drops1.dds
 data\terrain\decals\bloodstains\aliens_blood_stain1.dds
 data\terrain\decals\bloodstains\aliens_blood_stain2.dds
 data\terrain\decals\bloodstains\aliens_blood_stain3.dds
 data\terrain\decals\bloodstains\bloodstain02.dds
 data\terrain\decals\bloodstains\bloodstain03.dds
 data\terrain\decals\bloodstains\blood_stains.dds
+data\terrain\decals\bloodstains\oil_stain1.dds
+data\terrain\decals\bloodstains\oil_stain2.dds
+data\terrain\decals\bloodstains\oil_stain3.dds
 data\terrain\decals\burntground\burnt_ground1-nm.dds
 data\terrain\decals\burntground\burnt_ground1.dds
 data\terrain\decals\desert\bar_decal_01.dds
@@ -2330,6 +2337,7 @@ data\terrain\ruins\techdev\gate_v2_nm.dds
 data\terrain\ruins\techdev\gate_v3_diff.dds
 data\terrain\ruins\techdev\gate_v3_mask.dds
 data\terrain\ruins\techdev\gate_v3_nm.dds
+data\models\units\psidetonator\psidetonator_mask.dds
 data\models\units\psidetonator\psidetonator_diffuse.dds
 data\models\units\psidetonator\psidetonator_nm.dds
 data\terrain\ruins\techdev\psirezonator_diffuse.dds

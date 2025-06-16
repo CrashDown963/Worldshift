@@ -34,9 +34,9 @@ ChooseOfficer = uiwnd {
   hidden = true,
   size = {1,1},
  
-  humans = { "Judge", "Surgeon", "Assassin", "Constructor", "Technician2" },
-  aliens = {"Arbiter", "Dominator", "Manipulator", "Harvester", "BigMutant2" },
-  mutants = {"Shaman", "Sorcerer", "Guardian", "StoneGhost", "Eji2"},
+  humans = { "Judge", "Surgeon", "Assassin", "Constructor", "Engineer" },
+  aliens = {"Arbiter", "Dominator", "Manipulator", "Harvester", "Defiler" },
+  mutants = {"Shaman", "Sorcerer", "Guardian", "StoneGhost", "Psychic"},
   
   Off_1 = DefChoose { anchors = { TOPLEFT = {} } },
   Off_2 = DefChoose { anchors = { LEFT = {"RIGHT", "Off_1", 3,0 } } },

@@ -154,22 +154,4 @@ CastCharge {
 
 --------------------------------------------------------------- IMPACTS 
 
-AlienUnitImpacts {
-	bullet {
-		1 = data/models/effects/impacts/aliens_blood_impact.kfm
-		2 = data/models/effects/impacts/aliens_blood_impactPart.kfm
-		3 = data/models/effects/impacts/aliens_blood_impactPart2.kfm
-	}
-	melee {
-		1 = data/models/effects/impacts/melee_aliens_blood_impact.kfm
-		2 = data/models/effects/impacts/melee_aliens_blood_impactPart2.kfm
-	}
 
-	small_energy {
-		1 = data/models/effects/impacts/simple sparks.nif
-	}
-	fire {
-		1 = data/models/effects/impacts/simple sparks.nif
-	}
-	
-} 

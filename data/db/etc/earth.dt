@@ -14,7 +14,7 @@ play_mode = {
     Constructor
     Judge
     Surgeon
-    Technician2
+    Engineer
     ------------
     Trooper
     Ripper
@@ -27,7 +27,7 @@ play_mode = {
     Shaman
     Sorcerer
     StoneGhost
-    Eji2
+    Psychic
     ------------
     Warrior
     Brute
@@ -40,7 +40,7 @@ play_mode = {
     Dominator
     Harvester
     Manipulator
-    BigMutant2
+    Defiler
     ------------
     Trisat
     Tritech

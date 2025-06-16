@@ -1,4 +1,4 @@
-Turret M35Triad : BaseBuilding {
+Turret M35Triad : BaseAlienBuilding {
   name : Triad.name
   descr : Triad.descr
   icon = 3,12
@@ -6,7 +6,7 @@ Turret M35Triad : BaseBuilding {
   model = Data/Models/Units/Trisat/TrisatTriad.kfm
   
   stats : {
-    hp = 600
+    hp = 4600
     armor = 8
     range = 2200
     damage = 35

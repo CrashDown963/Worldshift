@@ -72,9 +72,9 @@
 270	JY Ditz	0	GENERIC	100	1	1					
 280	JY Xessk	280	JY Xessk	100	1	1					100
 280	JY Xessk	0	GENERIC	100	1	1					
-280	JY Xessk	20	Common Hard Boss	50	1	1					
+280	JY Xessk	20	Common Hard Boss	100	1	1	0		50	20	5
 290	CF 1st encounter	310	CF 1st encounter	100	1	1		100			
-290	CF 1st encounter	310	CF 1st encounter	50	1	1			100	10	2
+290	CF 1st encounter	310	CF 1st encounter	50	1	1			100	20	10
 290	CF 1st encounter	0	GENERIC	100	1	1					
 300	CF 2nd encounter	320	CF 2nd encounter	100	1	1			100		
 300	CF 2nd encounter	320	CF 2nd encounter	50	1	1				100	10

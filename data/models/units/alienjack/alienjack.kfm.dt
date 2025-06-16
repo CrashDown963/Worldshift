@@ -1,5 +1,5 @@
 model = {
-  file = str:"data\models\units\bigmutant\bigmutant.kfm";
+  file = str:"data\models\units\alienjack\alienjack.kfm";
   animations = {
     idle = {
       loop = int:"1";

@@ -161,7 +161,7 @@ item I_D2A : AlienSpecItem {
     Arbiter
     Manipulator
     Dominator
-    BigMutant2
+    Defiler
   }
   stats {
     hp = 5%/10%/20%

@@ -41,11 +41,62 @@ BaseBuilding {
     construct = 5
     repair = 5
   }
+}
 
+BaseAlienBuilding {
+  name = "Building"
+  class = Building
+  
+  stats {
+    hp = 2000
+    armor = 0
+    hp_gen = 0
+    recovery_time = 20
+  }
+  
+  armor = stat:armor
+  hull = stat:hp
+  sight = 900
+  no_hp_regen_time = stat:recovery_time
+  tags = building
+  sel_ui = building
 
+  take_auras  { }
+  impacts : AlienUnitImpacts
+
+  movable = 0
+  --destruction = explode
+  explosion = ExplosionPlasma_Green
+  faction_specific = 1
+
+  create_fow_proxy = 1
+  hide_in_fog = 1
+
+  reacts {
+	repair {
+		duration = 100000
+		pt_top {
+			model = Data/Models/Effects/Magic/BuildingsRepair.nif
+			stack = once
+		}
+	}
+  }
+
+  refpoints {
+    construct = 5
+    repair = 5
+  }
 }
 
 BaseTurret : BaseBuilding {
+  name = "Turret"
+  class = Turret
+  
+  stats : {}
+  attackable = 1
+}
+
+BaseAlienTurret : BaseAlienBuilding {
   name = "Turret"
   class = Turret
   

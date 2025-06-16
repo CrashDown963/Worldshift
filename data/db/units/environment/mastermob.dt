@@ -1,4 +1,4 @@
-Mob MasterMob : BaseMob {
+Mob MasterMob : BaseAlienMob {
   model = Data/Models/Units/Master/Master.kfm {
     die = Data/Models/Units/Master/Master_die.nif
   }

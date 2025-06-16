@@ -1,4 +1,4 @@
-Unit Manipulator : BaseUnit {
+Unit Manipulator : AlienUnit {
   name = "Manipulator"
   descr = "DESCRIPTION"
   race = aliens
@@ -54,7 +54,11 @@ Unit Manipulator : BaseUnit {
 
     life_leech_boost = 10
   }
+
+  life_leech_heal = stat:life_leech_boost * 0.1 
+
   speed = 450
+  attack_spell = ManipulatorCastSpell
 
   take_auras : { RestorationCoreAura }
   
@@ -66,24 +70,6 @@ Unit Manipulator : BaseUnit {
     shoot_idle = 0 {
       shoot_idle_down = -45
       shoot_idle_up = 45
-    }
-  }
-  
-  CWeaponController weapon {
-    active = 0
-    can_crit = 1
-    idle_only = 1
-    damage = stat:damage
-    shoot_anim = shoot
-    shoot_idle_1 = shoot_idle
-    idle_time = 0.5
-    fire_node = pt_shoot
-    spot_impact_type = melee
-    shoot_snd = data/sounds/effects/single weapons/manipulator shot.wav
-    projectile = chase {
-      model = Data/Models/Effects/TraceBullet/MasterProjectile.nif
-	    speed = 4500
-      scale = 0.25
     }
   }
   
@@ -103,7 +89,6 @@ Unit Manipulator : BaseUnit {
   actions :{
     DarkVortexAction;
     ManipulateAction;
-    MakeBreeder -- fake
   }
 
   abilities {
@@ -123,19 +108,44 @@ Unit Manipulator : BaseUnit {
   }
 }
 
+ManipulatorCastSpell {
+  cast {
+    prepare {
+      anim = shoot
+      duration = 1
+      attach {
+        pt_shoot = Data/Models/Effects/Magic/AlienCast01.nif
+      }
+    }
+    finish {
+      sound = data/sounds/effects/single weapons/manipulator shot.wav
+      duration = 1
+    }
+  }
+
+  projectile = chase {
+    start_point = pt_shoot
+    model = Data/Models/Effects/TraceBullet/AlienProjectile.nif
+	  speed = 3000
+    scale = 0.1
+    damage = stat:damage
+    can_crit = 1
+    react = fire
+    effect = E_heal {
+      target_self = 1
+      can_crit = 1
+      amount = stat:damage
+      amount_multiplier_perc = stat:life_leech_boost * 10
+      area = 750 { anim = data/models/effects/magic/ReliefAreaEffect.kfm }
+      react = heal
+    }
+  }
+}
+
 LifeLeechAbi {
   name = "Life Leech"
   text = "With each attack the Manipulator drains [stat:damage] life from his target and spreads it around himself, thus healing all allied unints nearby."
   icon = 3,0
-  when : abi.target_hit
-  chance = 100
-  target = self
-  effect = E_heal {
-    amount = stat:damage
-    amount_multiplier_perc = stat:life_leech_boost * 10
-    area = 750 { anim = data/models/effects/magic/ReliefAreaEffect.kfm }
-    react = heal
-  }
 }
 
 CSpellAction DarkVortexAction {

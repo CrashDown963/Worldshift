@@ -1,4 +1,4 @@
-Unit Trisat : BaseUnit {
+Unit Trisat : AlienUnit {
   name = "Trisat"
   descr = "DESCRIPTION"
   race = aliens
@@ -11,7 +11,7 @@ Unit Trisat : BaseUnit {
   }
   
   destruction = ragdoll
-  
+
   sounds {
     select = data/sounds/units/alien bugs/select/
     confirm = data/sounds/units/alien bugs/confirm/
@@ -90,7 +90,7 @@ Unit Trisat : BaseUnit {
     effect = E_debuff {
       id = TrisatParalyzingField
       name = "Paralyzing Field"
-      text = "This unit is slowed down by a Trisat’s Paralazyng Field."
+      text = "This unit is slowed down by a Trisatï¿½s Paralazyng Field."
       icon = 3,15
       type = slow
       stats_change {
@@ -109,7 +109,6 @@ Unit Trisat : BaseUnit {
   }
 
   actions : BaseUnit.actions {
-    MakeBreeder -- fake
   }
 
   abilities {

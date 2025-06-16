@@ -1,4 +1,4 @@
-Mob ManipulatorMob : BaseMob {
+Mob ManipulatorMob : BaseAlienMob {
   name : Manipulator.name
   descr : Manipulator.descr
   race = aliens

@@ -1,4 +1,4 @@
-Mob TriadMob : BaseMob {
+Mob TriadMob : BaseAlienBuilding {
   name : Triad.name
   descr : Triad.descr
   icon = 3,12

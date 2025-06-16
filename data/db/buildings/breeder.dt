@@ -1,4 +1,4 @@
-Building Breeder: BaseBuilding {
+Building Breeder: BaseAlienBuilding {
   name = "Breeder"
   descr = "DESCRIPION"
   movable = 0

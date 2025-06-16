@@ -8,31 +8,37 @@ item_slots {
   PVP       { count = 5; accept_all = 1; }
 
   HUMAN_COMMANDER { count = 1; race = humans; icon = 1,2; }
-  HUMAN_SURGEON   { count = 1; race = humans; icon = 3,2; }
+  HUMAN_SURGEON   { count = 1; race = humans; icon = 3,5; }
   HUMAN_CONSTRUCTOR   { count = 1; race = humans; icon = 5,2; }
   HUMAN_ASSASSIN { count = 1; race = humans; icon = 4,2; }
   HUMAN_JUDGE { count = 1; race = humans; icon = 2,2; }
+  HUMAN_ENGINEER { count = 1; race = humans; icon = 1,7; }
   HUMAN_DEFENCE { count = 1; race = humans; icon = 7,2; }
   HUMAN_IMPLANTS { count = 1; race = humans; icon = 8,2; }
   HUMAN_WEAPONS { count = 1; race = humans; icon = 6,2; }
+  HUMAN_NEUROSCIENCE { count = 1; race = humans; icon = 5,5; }
 
   MUTANT_HIGHPRIEST { count = 1; race = mutants; icon = 1,3; }
   MUTANT_SHAMAN   { count = 1; race = mutants; icon = 3,3; }
   MUTANT_STONEGHOST   { count = 1; race = mutants; icon = 5,3; }
   MUTANT_ADEPT { count = 1; race = mutants; icon = 4,3; }
   MUTANT_GUARDIAN { count = 1; race = mutants; icon = 2,3; }
+  MUTANT_PSYCHIC { count = 1; race = mutants; icon = 3,7; }
   MUTANT_BLOOD { count = 1; race = mutants; icon = 7,3; }
   MUTANT_NATURE { count = 1; race = mutants; icon = 8,3; }
   MUTANT_MIND { count = 1; race = mutants; icon = 6,3; }
+  MUTANT_SPIRIT { count = 1; race = mutants; icon = 4,7; }
 
   ALIEN_MASTER { count = 1; race = aliens; icon = 1,1; }
   ALIEN_DOMINATOR   { count = 1; race = aliens; icon = 3,1; }
   ALIEN_HARVESTER   { count = 1; race = aliens; icon = 5,1; }
   ALIEN_MANIPULATOR { count = 1; race = aliens; icon = 4,1; }
   ALIEN_ARBITER { count = 1; race = aliens; icon = 2,1; }
+  ALIEN_DEFILER { count = 1; race = aliens; icon = 2,7; }
   ALIEN_POWER { count = 1; race = aliens; icon = 7,1; }
   ALIEN_CORRUPTION { count = 1; race = aliens; icon = 8,1; }
   ALIEN_DOGMA { count = 1; race = aliens; icon = 6,1; }
+  ALIEN_ENIGMA { count = 1; race = aliens; icon = 1,4; }
 
 -- human spec tree
   HUMAN_SPECA1 { 
@@ -306,27 +312,33 @@ item_slots {
   INSPECT_HUMAN_CONSTRUCTOR : HUMAN_CONSTRUCTOR
   INSPECT_HUMAN_ASSASSIN : HUMAN_ASSASSIN
   INSPECT_HUMAN_JUDGE : HUMAN_JUDGE
+  INSPECT_HUMAN_ENGINEER : HUMAN_ENGINEER
   INSPECT_HUMAN_DEFENCE : HUMAN_DEFENCE
   INSPECT_HUMAN_IMPLANTS : HUMAN_IMPLANTS
   INSPECT_HUMAN_WEAPONS : HUMAN_WEAPONS
+  INSPECT_HUMAN_NEUROSCIENCE : HUMAN_NEUROSCIENCE
 
   INSPECT_MUTANT_HIGHPRIEST : MUTANT_HIGHPRIEST
   INSPECT_MUTANT_SHAMAN : MUTANT_SHAMAN
   INSPECT_MUTANT_STONEGHOST : MUTANT_STONEGHOST
   INSPECT_MUTANT_ADEPT : MUTANT_ADEPT
   INSPECT_MUTANT_GUARDIAN : MUTANT_GUARDIAN
+  INSPECT_MUTANT_PSYCHIC : MUTANT_PSYCHIC
   INSPECT_MUTANT_BLOOD : MUTANT_BLOOD
   INSPECT_MUTANT_NATURE : MUTANT_NATURE
   INSPECT_MUTANT_MIND : MUTANT_MIND
+  INSPECT_MUTANT_SPIRIT : MUTANT_SPIRIT
 
   INSPECT_ALIEN_MASTER : ALIEN_MASTER
   INSPECT_ALIEN_DOMINATOR : ALIEN_DOMINATOR
   INSPECT_ALIEN_HARVESTER : ALIEN_HARVESTER
   INSPECT_ALIEN_MANIPULATOR : ALIEN_MANIPULATOR
   INSPECT_ALIEN_ARBITER : ALIEN_ARBITER
+  INSPECT_ALIEN_DEFILER : ALIEN_DEFILER
   INSPECT_ALIEN_POWER : ALIEN_POWER
   INSPECT_ALIEN_CORRUPTION : ALIEN_CORRUPTION
   INSPECT_ALIEN_DOGMA : ALIEN_DOGMA
+  INSPECT_ALIEN_ENIGMA : ALIEN_ENIGMA
 
   -- human spec tree
   INSPECT_HUMAN_SPECA1 : HUMAN_SPECA1

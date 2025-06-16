@@ -2,7 +2,6 @@ Unit Defender : MachineUnit {
   name = "Defender"
   icon = 6,5
   descr = "The first unit added via modding. Honor may be to DotNL and CrashDown963"
-  model = data/models/units/defender/defender.kfm
   race = humans
   cost : pvp.humans.unit_costs.Defender
   cost_sloc : pvp.humans.sloc_costs.Defender
@@ -20,9 +19,9 @@ Unit Defender : MachineUnit {
   rocket_range = stat:range * 2
   rocket_min_range = stat:range
   rocket_damage = stat:damage
-  nano_restore_points = pt_shoot_04,pt_shoot_05
   destruction = explode
   sight_in_combat = 4000
+  model = data/models/units/defender/defender.kfm
 
   foot_prints {
     desert = hellfire_footprint
@@ -39,7 +38,7 @@ Unit Defender : MachineUnit {
   COrientationController orientation {
     rot_speed = 120
     max_tilt = 0
-  }  
+  }
 
   blend_aim = pt_center {
     shoot = 0 {
@@ -149,6 +148,7 @@ Unit Defender : MachineUnit {
       speed = 4000
       react = proton_shot 
       ground_hit_effect = RocketProjectileExplode
+      decal_settings ground_hit_decal = barrage_decal1
       expire_effect = ProtonExpire
       model = data/models/projectiles/ProtonShot/ProtonShotProjectile.nif {
         CTrailController trail_1 {

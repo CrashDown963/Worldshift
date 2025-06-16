@@ -1,4 +1,4 @@
-Unit RenegadeHatchling : BaseUnit {
+Unit RenegadeHatchling : BaseAlienMob {
   name = "Hatchling"
   race = aliens
   tags = unit, organic, lowrank

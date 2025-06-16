@@ -1,4 +1,4 @@
-Mob FieldOverseerMob : BaseMob {
+Mob FieldOverseerMob : BaseAlienMob {
   name : Overseer.field_name
   descr : Overseer.descr
   icon = 3,16
@@ -111,7 +111,7 @@ Mob FieldOverseerMob : BaseMob {
 	}
 }
 
-Mob PowerOverseerMob : BaseMob {
+Mob PowerOverseerMob : BaseAlienMob {
   name = Power Overseer
   icon = 4,18
   model = Data/Models/Units/EnergyOverseer/EnergyOverseer.kfm

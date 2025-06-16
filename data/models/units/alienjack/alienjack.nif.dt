@@ -1,5 +1,5 @@
 model = {
-  file = str:"data\models\units\bigmutant\AlienJack.nif";
+  file = str:"data\models\units\alienjack\alienjack.nif";
   animation = {
     loop = fixp:"0";
     duration = fixp:"20.8333339691162109375";

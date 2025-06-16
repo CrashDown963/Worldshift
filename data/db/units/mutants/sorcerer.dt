@@ -36,7 +36,7 @@ Unit Sorcerer : BaseUnit {
     hp = 540
     range = 1600
     psi = 400
-    damage = 60
+    damage = 80
     armor = 0
     
     chill_psi_cost = 150
@@ -142,6 +142,7 @@ ChainLightningAbi {
     text = "The Sorcerer is casting Chain Lightning which spreads to nearby enemies."
     icon = 2,3
     type = damage
+    can_crit = 1
     duration = stat:chainlightning_duration
     tick = stat:chainlightning_tick
     damage = var:chainlightning_base_damage
@@ -173,7 +174,7 @@ ChillSpellAbi {
   icon = 5,0
   cast {
     prepare {
-      duration = 0.5
+      duration = 1
       anim = cast_chill_prepare     
       attach {
         pt_hand = data/models/effects/magic/HealHands.nif { fixed_up = 1 }
@@ -225,6 +226,7 @@ ChillSpellAbi {
     speed = 3500
     scale = 1
     damage = stat:damage
+    can_crit = 1
   }
   
   effect = E_debuff {

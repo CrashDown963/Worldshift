@@ -119,28 +119,32 @@ local text_icon_dy = 5
 
 local DefTechHolderSlots = uiwnd {
   --master
-  ItemSlot_0 = DefUnitSlot { index = 1, anchors = { CENTER = { "LeftFrame" , 0,130 } } }, 
+  ItemSlot_0 = DefUnitSlot { index = 1, anchors = { CENTER = { "LeftFrame" , 0,150 } } }, 
   ItemLabl_0 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_0", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
 
   --officers
-  ItemSlot_1_1 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", -95,-50 } } }, 
-  ItemSlot_1_2 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", -50,-150 } } }, 
-  ItemSlot_1_3 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", 50,-150 } } }, 
-  ItemSlot_1_4 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", 95,-50 } } }, 
+  ItemSlot_1_1 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", -95,-40 } } }, 
+  ItemSlot_1_2 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", -95,-155 } } }, 
+  ItemSlot_1_3 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", 95,-155 } } }, 
+  ItemSlot_1_4 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", 95,-40 } } },
+  ItemSlot_1_5 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", 0,-105 } } }, 
 
   ItemLabl_1_1 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_1_1", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
   ItemLabl_1_2 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_1_2", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
   ItemLabl_1_3 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_1_3", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
   ItemLabl_1_4 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_1_4", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
+  ItemLabl_1_5 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_1_5", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
 
   --common
-  ItemSlot_2_1 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", 0,-297 } } }, 
-  ItemSlot_2_2 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_2_1", "CENTER", -95,50 } } }, 
-  ItemSlot_2_3 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_2_1", "CENTER", 95,50 } } },
+  ItemSlot_2_1 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_0", "CENTER", 0,-315 } } }, 
+  ItemSlot_2_2 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_2_1", "CENTER", -95,40 } } }, 
+  ItemSlot_2_3 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_2_1", "CENTER", 95,40 } } },
+  ItemSlot_2_4 = DefUnitSlot { index = 1, anchors = { CENTER = { "ItemSlot_2_1", "CENTER", 0,105 } } },
 
   ItemLabl_2_1 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_2_1", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
   ItemLabl_2_2 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_2_2", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
   ItemLabl_2_3 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_2_3", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
+  ItemLabl_2_4 = uitext { font = "Verdana,9", color = {194,194,194}, size = {200,20}, anchors = { TOP = { "ItemSlot_2_4", "BOTTOM", 0,text_icon_dy } }, layer = techlayer, },
 }
 
 local DefSpendStar = uiimg {
@@ -305,21 +309,25 @@ TechGrid = uiwnd {
     ItemSlot_2_2 = DefTechHolderSlots.ItemSlot_2_2 { frame_idx = 7, repo = "ALIEN_POWER" },
     ItemSlot_2_1 = DefTechHolderSlots.ItemSlot_2_1 { frame_idx = 8, repo = "ALIEN_CORRUPTION" },
     ItemSlot_2_3 = DefTechHolderSlots.ItemSlot_2_3 { frame_idx = 6, repo = "ALIEN_DOGMA" },
+    ItemSlot_2_4 = DefTechHolderSlots.ItemSlot_2_4 { frame_idx = 10, repo = "ALIEN_ENIGMA" },
     ItemSlot_1_2 = DefTechHolderSlots.ItemSlot_1_2 { frame_idx = 5, repo = "ALIEN_HARVESTER" },
     ItemSlot_1_3 = DefTechHolderSlots.ItemSlot_1_3 { frame_idx = 4, repo = "ALIEN_MANIPULATOR" },
  	  ItemSlot_1_1 = DefTechHolderSlots.ItemSlot_1_1 { frame_idx = 3, repo = "ALIEN_DOMINATOR" },
     ItemSlot_0   = DefTechHolderSlots.ItemSlot_0   { frame_idx = 1, repo = "ALIEN_MASTER" },
     ItemSlot_1_4 = DefTechHolderSlots.ItemSlot_1_4 { frame_idx = 2, repo = "ALIEN_ARBITER" },
+    ItemSlot_1_5 = DefTechHolderSlots.ItemSlot_1_5 { frame_idx = 9, repo = "ALIEN_DEFILER" },
 
 	  ItemLabl_2_2 = DefTechHolderSlots.ItemLabl_2_2 { str = TEXT{"power"} },
 	  ItemLabl_2_1 = DefTechHolderSlots.ItemLabl_2_1 { str = TEXT{"corruption"} },
 	  ItemLabl_2_3 = DefTechHolderSlots.ItemLabl_2_3 { str = TEXT{"dogma"} },
+    ItemLabl_2_4 = DefTechHolderSlots.ItemLabl_2_4 { str = TEXT{"enigma"} },
 	  ItemLabl_1_2 = DefTechHolderSlots.ItemLabl_1_2 { str = TEXT{"Harvester.name"} },
 	  ItemLabl_1_3 = DefTechHolderSlots.ItemLabl_1_3 { str = TEXT{"Manipulator.name"} },
 	  ItemLabl_1_1 = DefTechHolderSlots.ItemLabl_1_1 { str = TEXT{"Dominator.name"} },
 	  ItemLabl_0 = DefTechHolderSlots.ItemLabl_0 { str = TEXT{"Master.name"} },
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Arbiter.name"} },
-	  
+	  ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Defiler.name"} },
+
 	  -- spec
 	  SpecSlot_A1 = DefSpecSlot { row = 5, col = 1, repo = "ALIEN_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 10,20 } } },
 	  SpecSlot_A2 = DefSpecSlot { row = 5, col = 2, repo = "ALIEN_SPECA2",   anchors = { TOPLEFT = { "RightFrame" , "TOP", 30,20 } } },
@@ -365,20 +373,24 @@ TechGrid = uiwnd {
     ItemSlot_2_2 = DefTechHolderSlots.ItemSlot_2_2 { frame_idx = 7, repo = "MUTANT_BLOOD" },
     ItemSlot_2_1 = DefTechHolderSlots.ItemSlot_2_1 { frame_idx = 8, repo = "MUTANT_NATURE" },
     ItemSlot_2_3 = DefTechHolderSlots.ItemSlot_2_3 { frame_idx = 6, repo = "MUTANT_MIND" },
+    ItemSlot_2_4 = DefTechHolderSlots.ItemSlot_2_4 { frame_idx = 10, repo = "MUTANT_SPIRIT" },
     ItemSlot_1_2 = DefTechHolderSlots.ItemSlot_1_2 { frame_idx = 5, repo = "MUTANT_STONEGHOST" },
     ItemSlot_1_3 = DefTechHolderSlots.ItemSlot_1_3 { frame_idx = 4, repo = "MUTANT_ADEPT" },
  	  ItemSlot_1_1 = DefTechHolderSlots.ItemSlot_1_1 { frame_idx = 3, repo = "MUTANT_SHAMAN" },
     ItemSlot_0   = DefTechHolderSlots.ItemSlot_0   { frame_idx = 1, repo = "MUTANT_HIGHPRIEST" },
     ItemSlot_1_4 = DefTechHolderSlots.ItemSlot_1_4 { frame_idx = 2, repo = "MUTANT_GUARDIAN" },
+    ItemSlot_1_5 = DefTechHolderSlots.ItemSlot_1_5 { frame_idx = 9, repo = "MUTANT_PSYCHIC" },
 
 	  ItemLabl_2_2 = DefTechHolderSlots.ItemLabl_2_2 { str = TEXT{"blood"} },
 	  ItemLabl_2_1 = DefTechHolderSlots.ItemLabl_2_1 { str = TEXT{"nature"} },
 	  ItemLabl_2_3 = DefTechHolderSlots.ItemLabl_2_3 { str = TEXT{"mind"} },
+    ItemLabl_2_4 = DefTechHolderSlots.ItemLabl_2_4 { str = TEXT{"spirit"} },
 	  ItemLabl_1_2 = DefTechHolderSlots.ItemLabl_1_2 { str = TEXT{"StoneGhost.name"} },
 	  ItemLabl_1_3 = DefTechHolderSlots.ItemLabl_1_3 { str = TEXT{"Sorcerer.name"} },
 	  ItemLabl_1_1 = DefTechHolderSlots.ItemLabl_1_1 { str = TEXT{"Shaman.name"} },
 	  ItemLabl_0 = DefTechHolderSlots.ItemLabl_0 { str = TEXT{"HighPriest.name"} },
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Guardian.name"} },
+    ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Psychic.name"} },
 	  
 	  -- spec
 	  SpecSlot_A1 = DefSpecSlot { row = 3, col = 1, repo = "MUTANT_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", -30,20 } } },
@@ -426,20 +438,24 @@ TechGrid = uiwnd {
     ItemSlot_2_2 = DefTechHolderSlots.ItemSlot_2_2 { frame_idx = 7, repo = "HUMAN_DEFENCE" },
     ItemSlot_2_1 = DefTechHolderSlots.ItemSlot_2_1 { frame_idx = 8, repo = "HUMAN_IMPLANTS" },
     ItemSlot_2_3 = DefTechHolderSlots.ItemSlot_2_3 { frame_idx = 6, repo = "HUMAN_WEAPONS" },
+    ItemSlot_2_4 = DefTechHolderSlots.ItemSlot_2_4 { frame_idx = 10, repo = "HUMAN_NEUROSCIENCE" },
     ItemSlot_1_2 = DefTechHolderSlots.ItemSlot_1_2 { frame_idx = 5, repo = "HUMAN_CONSTRUCTOR" },
     ItemSlot_1_3 = DefTechHolderSlots.ItemSlot_1_3 { frame_idx = 4, repo = "HUMAN_ASSASSIN" },
  	  ItemSlot_1_1 = DefTechHolderSlots.ItemSlot_1_1 { frame_idx = 3, repo = "HUMAN_SURGEON" },
     ItemSlot_0 =   DefTechHolderSlots.ItemSlot_0   { frame_idx = 1, repo = "HUMAN_COMMANDER" },
     ItemSlot_1_4 = DefTechHolderSlots.ItemSlot_1_4 { frame_idx = 2, repo = "HUMAN_JUDGE" },
+    ItemSlot_1_5 = DefTechHolderSlots.ItemSlot_1_5 { frame_idx = 9, repo = "HUMAN_ENGINEER" },
 
 	  ItemLabl_2_2 = DefTechHolderSlots.ItemLabl_2_2 { str = TEXT{"defence"} },
 	  ItemLabl_2_1 = DefTechHolderSlots.ItemLabl_2_1 { str = TEXT{"implants"} },
 	  ItemLabl_2_3 = DefTechHolderSlots.ItemLabl_2_3 { str = TEXT{"weapon"} },
+    ItemLabl_2_4 = DefTechHolderSlots.ItemLabl_2_4 { str = TEXT{"neuroscience"} },
 	  ItemLabl_1_2 = DefTechHolderSlots.ItemLabl_1_2 { str = TEXT{"Constructor.name"} },
 	  ItemLabl_1_3 = DefTechHolderSlots.ItemLabl_1_3 { str = TEXT{"Assassin.name"} },
 	  ItemLabl_1_1 = DefTechHolderSlots.ItemLabl_1_1 { str = TEXT{"Surgeon.name"} },
 	  ItemLabl_0 = DefTechHolderSlots.ItemLabl_0 { str = TEXT{"Commander.name"} },
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Judge.name"} },
+    ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Engineer.name"} },
 
 	  -- spec
     SpecSlot_A1 = DefSpecSlot { row = 1, col = 1, repo = "HUMAN_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", -30,20 } } },

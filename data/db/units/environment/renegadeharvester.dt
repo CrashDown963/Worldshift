@@ -1,4 +1,4 @@
-Mob RenegadeHarvester : BaseMob {
+Mob RenegadeHarvester : BaseAlienMob {
   name : Harvester.name
   descr : Harvester.descr
   race = aliens

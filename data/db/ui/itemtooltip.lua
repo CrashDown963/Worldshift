@@ -8,27 +8,33 @@ local SlotNames = {
   HUMAN_CONSTRUCTOR = "Constructor.name",
   HUMAN_ASSASSIN = "Assassin.name",
   HUMAN_JUDGE = "Judge.name",
+  HUMAN_ENGINEER = "Engineer.name",
   HUMAN_DEFENCE  = "defence",
   HUMAN_IMPLANTS = "implants",
   HUMAN_WEAPONS = "weapon",
+  HUMAN_NEUROSCIENCE = "neuroscience",
 
   MUTANT_HIGHPRIEST = "HighPriest.name",
   MUTANT_SHAMAN   = "Shaman.name",
   MUTANT_STONEGHOST  = "StoneGhost.name",
   MUTANT_ADEPT  = "Sorcerer.name",
   MUTANT_GUARDIAN  = "Guardian.name",
+  MUTANT_PSYCHIC  = "Psychic.name",
   MUTANT_BLOOD  = "blood",
   MUTANT_NATURE  = "nature",
   MUTANT_MIND = "mind",
+  MUTANT_SPIRIT = "spirit",
 
   ALIEN_MASTER = "Master.name",
   ALIEN_DOMINATOR = "Dominator.name",
   ALIEN_HARVESTER = "Harvester.name",
   ALIEN_MANIPULATOR  = "Manipulator.name",
+  ALIEN_DEFILER  = "Defiler.name",
   ALIEN_ARBITER  = "Arbiter.name",
   ALIEN_POWER  = "power",
   ALIEN_CORRUPTION  = "corruption",
   ALIEN_DOGMA  = "dogma",
+  ALIEN_ENIGMA  = "enigma",
 }
 
 local max_stats = 5

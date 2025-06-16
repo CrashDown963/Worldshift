@@ -1029,7 +1029,9 @@ texture_keys {
     1 = kai_rider_diffuse.dds
     1 = kai_rider_nm.dds
 
-
+    1 = elite_kai_rider_diffuse.dds
+    1 = elite_kai_rider_nm.dds
+    1 = elite_kai_rider_mask.dds
 
     1 = transportcopterdiffuse.dds
     1 = transportcopternm.dds
@@ -1487,6 +1489,9 @@ texture_keys {
     1 = esperanza_det4_nm.dds
     1 = psirezonator_diffuse.dds
     1 = psirezonator_nm.dds
+    1 = psidetonator_diffuse.dds
+    1 = psidetonator_nm.dds
+    1 = psidetonator_mask.dds
 
     1 = liani_diffuse.dds
 

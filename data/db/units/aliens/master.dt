@@ -1,4 +1,4 @@
-Unit Master : BaseUnit {
+Unit Master : AlienUnit {
   model = Data/Models/Units/Master/Master.kfm {
     die = Data/Models/Units/Master/Master_die.nif
   }
@@ -20,7 +20,7 @@ Unit Master : BaseUnit {
   }
   
   destruction = ragdoll
-  
+
   sounds {
     start = data/speech/summoning/master summoned.wav
     attack = data/speech/confirmations/master/master attack/
@@ -248,7 +248,7 @@ MasterCastSpell {
   cast {
     prepare {
       anim = cast_preparation
-      duration = 1.3
+      duration = 0.5
       attach {
         pt_cast = Data/Models/Effects/Magic/AlienCast01.nif
       }
@@ -256,7 +256,7 @@ MasterCastSpell {
     finish {
       sound = data/sounds/effects/master weapon/
       anim = cast_finish
-      duration = 1.6
+      duration = 2
       attach {
         pt_cast = Data/Models/Effects/Magic/AlienCast01.nif
       }

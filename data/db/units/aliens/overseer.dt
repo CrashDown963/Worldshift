@@ -24,6 +24,10 @@ Unit Overseer : MachineUnit {
     destruction = data/sounds/destruction/units/alien bugs/
   }
 
+  impacts : AlienUnitImpacts
+  blood_drops_consts = aliens_blood_drops_consts
+  blood_consts = alien_blood_consts
+
   stats : {
     hp = 380
     armor = 4
@@ -282,3 +286,4 @@ CMapAnim AttackDroneAppear {
   scale = 1
   sound = data/sounds/effects/common/repair_drone_up.wav
 }
+

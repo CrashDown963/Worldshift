@@ -122,8 +122,8 @@ Commander Commander : BaseUnit {
     active = 0
     can_crit = 1
     damage = stat:damage
-    range_far = stat:range * 0.35
-    range_near = stat:range * 0.14
+    range_far = stat:range * 0.7
+    range_near = stat:range * 0.5
     proximity_bonus = 1.5
     idle_only = 1
     fire_node = pt_shoot_1

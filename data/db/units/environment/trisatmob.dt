@@ -1,4 +1,4 @@
-Mob TrisatMob : BaseMob {
+Mob TrisatMob : BaseAlienMob {
   name : Trisat.name
   icon = 4,12
   descr : Trisat.descr

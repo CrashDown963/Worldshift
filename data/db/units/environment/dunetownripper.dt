@@ -1,4 +1,4 @@
-Mob DunetownRipper : BaseMob {
+Mob DunetownRipper : BaseMachineMob {
   name : Ripper.name
   icon = 6,8
   descr : Ripper.descr
@@ -10,8 +10,8 @@ Mob DunetownRipper : BaseMob {
     default = Data/Models/Units/Ripper/Ripper_Proxy.pml
     die = Data/Models/Units/Ripper/Ripper.pml	
   }
-  --destruction = ragdoll
   explosion = ExplosionMedium_03
+  destruction = ragdoll
   
   hp = 250
   armor = 5
@@ -38,11 +38,8 @@ Mob DunetownRipper : BaseMob {
     idle_only = 1
     shoot_anim = ATTACK_MAIN
     shoot_snd = data/sounds/units/ripper/shoot/
- --   min_bursts = 1
- --   max_bursts = 1
     shoot_idle_1 = shoot_idle
     fire_node = ROOT
---    fire_rate = stat:fire_rate
     spot_impact_type = melee
   }
 }

@@ -31,8 +31,8 @@ Technician.name	Technician
 Technician.descr	Non-combat personnel trained to deal with all manner of devices and artifacts.
 Trooper.name	Trooper
 Trooper.descr	Relatively cheap and has a proximity bonus. Occasionally throws grenades while fighting. Can be promoted to elite to boost his critical hit chance.
-Technician2.name	Engineer
-Technician2.descr	Engineer capable of summoning Turret support.
+Engineer.name	Engineer
+Engineer.descr	Engineer capable of summoning Turret support.
 	
 AlienEgg.name	Egg
 AlienEgg.descr	A biomechanical entity spawned by a Portal or a Breeder. Acts as a defense facility and releases hatchlings when destroyed.
@@ -62,8 +62,8 @@ Tritech.name	Tritech
 Tritech.descr	A regular ranged unit. Has a chance to heal itself while attacking.
 PsiDetonator.name	Psi Detonator
 PsiDetonator.descr	Buffs all allys.
-BigMutant2.name	Dave
-BigMutant2.descr	Your mom.
+Defiler.name	Defiler
+Defiler.descr	A medium ranged officer which debuffs the enemies with plagued corrosion.
 	
 AncientShade.name	Ancient Shade
 AncientShade.descr	An Underworld creature whose attacks completely ignore armor.
@@ -89,8 +89,8 @@ Worker.name	Worker
 Worker.descr	A non-combat unit that can repair and build structures.
 Worm.name	Soul Worm
 Worm.descr	An Underworld creature spawned when an enemy afflicted by a Stone Ghost’s Corruption spell dies.
-Eji2.name	Psychic
-Eji2.descr	Strong single target healer.
+Psychic.name	Psychic
+Psychic.descr	Strong single target healer.
 EliteKaiRider.name	Elite Kai Rider
 EliteKaiRider.descr	Mobile sniper.
 
@@ -302,7 +302,7 @@ NetherNovaAction.descr	The Master creates a blast of nether energy that inflicts
 PoisonShotAction.name	Poison Flare
 PoisonShotAction.descr	Shoot a poisonous flare at the selected area, all targets will be slowed for [stat:poison_shot_perc]% and take [stat:poison_shot_damage] damage every 2 seconds for [stat:poison_shot_duration] seconds. Beware friendly fire!
 ProtonShotAction.name	Proton Grenade
-ProtonShotAction.descr	The Judge shoots a special proton grenade that inflicts [stat:proton_shot_damage] points of damage to all enemies in a small area and burns [proton_shot_power_burn] points of power from them, slightly increasing the total inflicted damage.
+ProtonShotAction.descr	The Judge shoots a special proton grenade that inflicts [proton_shot_damage] points of damage to all enemies in a small area and burns [proton_shot_power_burn] points of power from them, slightly increasing the total inflicted damage.
 PurifyAction.name	Purify
 PurifyAction.descr	Instantly removes all harmful effects from all friendly units in the selected area.
 RenewAction.name	Renew
@@ -402,13 +402,13 @@ HollowVoiceAbi.text	The Horror has a [stat:hollow_voice_chance]% chance to call 
 HolyAuraAbi.name	Holy Aura
 HolyAuraAbi.text	The High Priest's power surrounds him with Nature’s energy, healing all allied units for [stat:holy_aura_heal] hit points every [stat:holy_aura_tick] seconds.
 InfestationAbi.name	Infestation
-InfestationAbi.text	The Shifter has a [stat:infestation_chance]% chance on each attack to spawn a Hatchling near its current target.
+InfestationAbi.text	The Shifter has a [stat:infestation_chance]% chance on each attack to spawn [stat:infestation_hatchlings] Hatchlings near its current target.
 LeadershipAbi.name	Leadership
 LeadershipAbi.text	By attacking enemies and observing the battle, the Judge gains charges which he automatically uses for promoting nearby Troopers to Elite status. Elite Troopers have an increased chance to inflict double damage on their targets.
 LeechAbi.name	Leech
 LeechAbi.text	The Stone Ghost has a [stat:drain_psi_chance]% chance on each attack to steal up to [stat:drain_psi_amount]power from its target and give the same amount to all nearby friendly units.
 LifeLeechAbi.name	Life Leech
-LifeLeechAbi.text	With each attack, the Manipulator drains [stat:damage] hit points from his target and disperses it, healing all nearby allied units.
+LifeLeechAbi.text	With each attack, the Manipulator drains [stat:damage] hit points from his target and disperses it, healing all nearby allied units hit points for [life_leech_heal] times the amount.
 LongRangeAbi.name	Long Range
 LongRangeAbi.text	The Arbiter inflicts great damage but is only efficient at his maximum range. Attacking from a close distance will reduce his damage dramatically.
 TerrifyAbi.name	Terrify

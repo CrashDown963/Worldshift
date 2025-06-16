@@ -26,14 +26,13 @@ Judge Judge : BaseUnit {
     psi = 320
 
     range = 1600
-    damage = 18
+    damage = 20
     xp_boost_amp = 50  -- amplify xp received by 50%
     xp_share_mod = 50 -- spread half the damage done as experience
     
     discharge_chance = 10
     discharge_hops = 3
 
-    proton_shot_damage = 120
     proton_shot_radius = 500
     proton_shot_psi = 140
     
@@ -41,11 +40,13 @@ Judge Judge : BaseUnit {
     voiceofcommand_damage_perc = 10
     voiceofcommand_power = 80
   }
+
   speed = 450
   promote_xp_cost = 100 -- promote after collected this XP
   promote_wait_time = 2 -- wait X secs before promoting
   discharge_damage = stat:damage * 1.5
-  proton_shot_power_burn = stat:proton_shot_damage * 2
+  proton_shot_power_burn = stat:damage * 3
+  proton_shot_damage = stat:damage * 5
   movement_type = crawl
 
   foot_prints {
@@ -97,8 +98,8 @@ Judge Judge : BaseUnit {
     active = 0
     can_crit = 1
     damage = stat:damage
-    range_far = stat:range * 0.5 
-    range_near = stat:range * 0.2
+    range_far = stat:range * 0.7 
+    range_near = stat:range * 0.5
     proximity_bonus = 2
     idle_only = 1
     fire_node = pt_shoot_1
@@ -230,7 +231,7 @@ DischargeAbi {
 
 CSpellAction ProtonShotAction {
   name = "Proton Shot"
-  descr = "The Judge shoots a special parabollic proton charged grenade that inflicts [stat:proton_shot_damage] damage to all enemies in a small area. Proton charged grenade also burns [proton_shot_power_burn] power of affected enemies, slightly increasing the total inflicted damage."
+  descr = "The Judge shoots a special parabollic proton charged grenade that inflicts [proton_shot_damage] damage to all enemies in a small area. Proton charged grenade also burns [proton_shot_power_burn] power of affected enemies, slightly increasing the total inflicted damage."
   visible = 1
   icon = 12,3
   tags = location
@@ -359,7 +360,7 @@ CAreaEffect ProtonShotHit {
   
   tags t1 = unit | building {
     spawn E_damage {
-      amount = stat:proton_shot_damage
+      amount = var:proton_shot_damage
       react = discharge
     }
     spawn E_powerburn {

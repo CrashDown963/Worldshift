@@ -1,4 +1,4 @@
-Mob RenegadeDominator : BaseMob {
+Mob RenegadeDominator : BaseAlienMob {
   name : Dominator.name
   descr : Dominator.descr
   race = aliens

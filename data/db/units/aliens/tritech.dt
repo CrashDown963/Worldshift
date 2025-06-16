@@ -1,4 +1,4 @@
-Unit Tritech : BaseUnit {
+Unit Tritech : AlienUnit {
   name = "Tritech"
   descr = "DESCRIPTION"
   race = aliens
@@ -10,7 +10,7 @@ Unit Tritech : BaseUnit {
     die = Data/Models/Units/Trisat/Bug_die.pml
   }
   destruction = ragdoll
-  
+
   sounds {
     select = data/sounds/units/alien bugs/select/
     confirm = data/sounds/units/alien bugs/confirm/

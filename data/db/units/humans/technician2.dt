@@ -1,4 +1,4 @@
-Unit Technician2 : BaseUnit {
+Unit Engineer : BaseUnit {
   name = "Engineer"
   descr = "DESCRIPTION"
   model = data/models/units/technician/technician2.kfm

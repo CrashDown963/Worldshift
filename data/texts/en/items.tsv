@@ -1,12 +1,8 @@
 ﻿sid	text
 	
 //// Unit statistics	
-stat.psi	Power
-stat.hp_gen	Hit Point Generation
-stat.psi_gen	Power Generation
 stat.expose_target_chance	Expose Chance
 stat.expose_target_armor_duration	Expose Duration
-stat.crit_chance	Critical Hit Chance
 stat.rocket_precision_damage_perc	Concussion Rocket Effectiveness
 stat.rocket_precision_duration	Concussion Rocket Duration
 stat.rocket_precision_chance	Concussion Rocket Chance
@@ -31,7 +27,7 @@ stat.shield_percentabsorbtion	Shield Mitigation
 stat.sweep_damage	Fire Sweep Damage
 stat.sweep_power_cost	Fire Sweep Power Cost
 stat.discharge_chance	Discharge Chance
-stat.proton_shot_damage	Proton Grenade Damage
+stat.discharge_hops	Discharge Chains
 stat.proton_shot_radius	Proton Grenade Radius
 stat.proton_shot_psi	Proton Grenade Power Cost
 stat.voiceofcommand_duration	Voice of Command Duration
@@ -74,6 +70,7 @@ stat.death_rumble_chance	Death Rumble Chance
 stat.death_rumble_damage	Death Rumble Damage
 stat.death_rumble_area	Death Rumble Size
 stat.howl_fear_duration	Howl Fear Duration
+stat.drain_life_boost	Drain Life Rate
 stat.drain_life_chance	Drain Life Chance
 stat.rejuvenation_psicost	Renew Power Cost
 stat.rejuvenation_amount	Renew Healing
@@ -107,6 +104,7 @@ stat.harvest_damage	Harvest Damage
 stat.harvest_duration	Harvest Duration
 stat.harvest_cooldown	Harvest Cooldown
 stat.confuse_chance	Imminence Chance
+stat.life_leech_boost	Life Leech Rate
 stat.vortex_power	Vortex Power Cost
 stat.vortex_heal	Vortex Healing
 stat.feed_psi_cost	Feed Power Cost
@@ -122,14 +120,21 @@ stat.enfeeble_damage_reduction_perc	Enfeeble Damage Reduction
 stat.enfeeble_duration	Enfeeble Duration
 stat.power_leak_chance	Power Leak Chance
 stat.power_leak_drain	Power Leak Drain
+stat.infestation_chance	Infestation Chance
+stat.infestation_hatchlings	Infestation Hatchlings
 stat.feedback_chance	Feedback Chance
 stat.feedback_heal	Feedback Heal
-stat.healing_taken_mod	Healing Taken
-stat.life_leech_boost	Life Leech Rate
+
+
 stat.hp	Hit Points
 stat.armor	Armor
 stat.damage	Damage
-stat.drain_life_boost	Drain Life Rate
+stat.psi	Power
+stat.hp_gen	Hit Point Generation
+stat.psi_gen	Power Generation
+stat.crit_chance	Critical Hit Chance
+stat.healing_taken_mod	Healing Taken
+
 	
 //// Generic item descriptions	
 generic_item.ALIEN_MASTER	This item improves the statistics of your Master.
@@ -137,25 +142,31 @@ generic_item.ALIEN_ARBITER	This item improves the statistics of your Arbiters.
 generic_item.ALIEN_DOMINATOR	This item improves the statistics of your Dominators.
 generic_item.ALIEN_HARVESTER	This item improves the statistics of your Harvesters.
 generic_item.ALIEN_MANIPULATOR	This item improves the statistics of your Manipulators.
+generic_item.ALIEN_DEFILER	This item improves the statistics of your Defilers.
 generic_item.ALIEN_POWER	This item is related to Power, one of the aspects of the Cult.
 generic_item.ALIEN_CORRUPTION	This item is related to Corruption, one of the aspects of the Cult.
 generic_item.ALIEN_DOGMA	This item is related to Dogma, one of the aspects of the Cult.
+generic_item.ALIEN_ENIGMA	This item is related to Enigma, one of the aspects of the Cult.
 generic_item.HUMAN_COMMANDER	This item improves the statistics of your Lord Commander.
 generic_item.HUMAN_ASSASSIN	This item improves the statistics of your Assassins.
 generic_item.HUMAN_CONSTRUCTOR	This item improves the statistics of your Constructors.
 generic_item.HUMAN_JUDGE	This item improves the statistics of your Judges.
 generic_item.HUMAN_SURGEON	This item improves the statistics of your Surgeons.
+generic_item.HUMAN_ENGINEER	This item improves the statistics of your Engineers.
 generic_item.HUMAN_DEFENCE	This item is related to Xenotronics, one of the scientific disciplines of the Humans.
 generic_item.HUMAN_IMPLANTS	This item is related to Nanotechnology, one of the scientific disciplines of the Humans.
 generic_item.HUMAN_WEAPONS	This item is related to Metachemistry, one of the scientific disciplines of the Humans.
+generic_item.HUMAN_NEUROSCIENCE	This item is related to Neuroscience, one of the scientific disciplines of the Humans.
 generic_item.MUTANT_HIGHPRIEST	This item improves the statistics of your High Priest.
 generic_item.MUTANT_ADEPT	This item improves the statistics of your Sorcerers.
 generic_item.MUTANT_GUARDIAN	This item improves the statistics of your Guardians.
 generic_item.MUTANT_SHAMAN	This item improves the statistics of your Shamans.
 generic_item.MUTANT_STONEGHOST	This item improves the statistics of your Stone Ghosts.
+generic_item.MUTANT_PSYCHIC	This item improves the statistics of your Psychics.
 generic_item.MUTANT_BLOOD	This item is related to Blood, one of the aspects of the Tribes.
 generic_item.MUTANT_MIND	This item is related to Mind, one of the aspects of the Tribes.
 generic_item.MUTANT_NATURE	This item is related to Nature, one of the aspects of the Tribes.
+generic_item.MUTANT_SPIRIT	This item is related to Spirit, one of the aspects of the Tribes.
 	
 //// Group tags	
 all	All units

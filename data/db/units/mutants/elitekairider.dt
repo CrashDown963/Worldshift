@@ -1,28 +1,42 @@
 Unit EliteKaiRider : BaseUnit {
   name = "Elite Kai Rider"
   descr = "Elite Kai Rider is unfinished"
-  icon = 5,20
-  model = Data/Models/units/Kai_Rider/Kai_Rider.kfm
+  icon = 6,6
+  model = Data/Models/units/elite_kai_rider/elite_kai_rider.kfm
   destruction = animation
   race = mutants
   tags = unit, organic
   cost : pvp.mutants.unit_costs.EliteKaiRider
   cost_sloc : pvp.mutants.sloc_costs.EliteKaiRider
+  take_auras : { RestorationCoreAura }
 
   stats :{
     hp = 320
     armor = 15
     damage = 40
     range = 2200
+    
+    frenzy_crit_chance = 5
   }
 
   speed = 450
 
   frenzy_threshold = stat:damage * 3
   frenzy_duration = 15
-  frenzy_crit_chance = 5
 
   actions : BaseUnit.actions {
+  }
+
+  sounds {
+    start = data/speech/summoning/assassin summoned.wav
+    attack = data/speech/confirmations/assassin/assassin attack/
+    select = data/speech/selecting/assassin select/
+    joke = data/speech/selecting/assassin joke/
+    confirm = data/speech/confirmations/assassin/assassin confirm/
+    destruction = data/speech/deaths/assassin death/
+    engage = data/speech/engage alerts/assassin engage/
+    damage = data/speech/engage alerts/assassin damage/
+    move = data/speech/confirmations/trooper/assassin move/
   }
     
   abilities {
@@ -91,13 +105,13 @@ Unit EliteKaiRider : BaseUnit {
     spot_impact = 1500
     spot_impact_type = bullet
     muzzle_fx = nomad
-    shoot_snd = data/sounds/Units/Assassin/shoot/
+    shoot_snd = data/sounds/Effects/Single Weapons/assassin shot.wav
   }
   
   CFrenzyController frenzy {
     threshold = var:frenzy_threshold
     reset_time = var:frenzy_duration
-    max_applications = 5
+    max_applications = 3
     effect = E_buff {
       id = Frenzy
       name = "Frenzy"
@@ -105,11 +119,11 @@ Unit EliteKaiRider : BaseUnit {
       icon = 4,3
       type = frenzy
       duration = -1
-      stack_count = 5
+      stack_count = 3
       stats_change {
-        crit_chance = { abs = var:frenzy_crit_chance }
+        crit_chance = { abs = stat:frenzy_crit_chance }
       }
-      react = fire
+      react = frenzy
       repeat_react = 1
     }
   } 

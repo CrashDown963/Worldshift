@@ -15,21 +15,21 @@ Mob Xelrad: BaseBoss {
 
   stats : {
     range = 1200
-    damage = 450
+    damage = 750
     psi = 8000
     armor = 55
     hp = 70000
     sight = 2500
     speed = 350
 
-    paralyzing_field_range = 1000
+    paralyzing_field_range = 1500
     paralyzing_field_speed_reduction_perc = 80
 
-    shower_chance = 15
+    shower_chance = 20
     shower_damage = 80
-    shower_area = 1500
+    shower_area = 2000
     shower_damage_area = 80
-    shower_duration = 10
+    shower_duration = 15
   }  
   
   hp = stat:hp
@@ -177,10 +177,10 @@ Mob Xelrad: BaseBoss {
         range = 2500
         copy_target_list = 1
         spawn {
-          SpiderEgg = 8
+          SpiderEgg = 12
         }
         spawn {
-          GiantSpiderEgg = 2
+          GiantSpiderEgg = 3
         }
       }
     }

@@ -1,4 +1,4 @@
-Mob ArbiterMob : BaseMob {
+Mob ArbiterMob : BaseAlienMob {
   name : Arbiter.name
   icon = 7,15
   descr : Arbiter.descr

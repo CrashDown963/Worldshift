@@ -1,4 +1,4 @@
-Mob RenegadeShifter : BaseMob {
+Mob RenegadeShifter : BaseAlienMob {
   name : Shifter.name
   descr : Shifter.descr
   icon = 6,29

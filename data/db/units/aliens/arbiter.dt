@@ -1,4 +1,4 @@
-Unit Arbiter : BaseUnit {
+Unit Arbiter : AlienUnit {
   name = "Arbiter"
   descr = "Arbiter Placeholder Desc."
   race = aliens
@@ -19,7 +19,7 @@ Unit Arbiter : BaseUnit {
     select = data/sounds/units/arbiter/select/
     confirm = data/sounds/units/arbiter/confirm/
   }
-  
+
   officer = 1
   tags = unit, organic
   icon = 2,6
@@ -137,6 +137,7 @@ ChainShotAbi {
     text = "This unit is taking damage from a Chain Shot."
     icon = 1,10
     type = damage
+    can_crit = 1
     damage = stat:damage
     dont_damage_first = 1
     chooser = nearest

@@ -1,4 +1,4 @@
-Unit Dominator: BaseUnit {
+Unit Dominator: AlienUnit {
   name = "Dominator"
   descr = "Alien mid range DPS and CC officer"
   model = data/models/units/dominator/dominator.kfm {
@@ -70,7 +70,7 @@ Unit Dominator: BaseUnit {
     DominatorPowerFuseAction
     MakeBreeder -- fake
   }
-  
+    
   abilities {
     SiegeAbi
     DominatorBlightRayAbi

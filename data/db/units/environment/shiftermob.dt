@@ -1,4 +1,4 @@
-Mob ShifterMob : BaseMob {
+Mob ShifterMob : BaseAlienMob {
   name : Shifter.name
   icon = 2,12
   descr : Shifter.descr

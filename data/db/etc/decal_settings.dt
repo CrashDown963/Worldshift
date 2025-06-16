@@ -24,7 +24,7 @@ decal_settings explosion_crater2_consts {
   }
   
   max_decals = 5
-  life_time = 30
+  life_time = 50
   fade_time = 2
   fast_fade = 0.5
 
@@ -48,7 +48,7 @@ decal_settings ground_hit_decal_assault {
   settings_id = barrage_decal1_assault
   max_decals = 30
   skip_in_water = 1
-  life_time = 20
+  life_time = 50
   fade_time = 5
   fast_fade = 2
   -- negative sizes mean scale, positive sizes mean absolute size in cm
@@ -71,7 +71,7 @@ decal_settings ground_hit_decal {
   settings_id = barrage_decal1
   max_decals = 50
   skip_in_water = 1
-  life_time = 30
+  life_time = 50
   fade_time = 5
   fast_fade = 2
 

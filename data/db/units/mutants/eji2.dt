@@ -1,5 +1,5 @@
-Unit Eji2 : BaseUnit {
-  name = "Eji"
+Unit Psychic : BaseUnit {
+  name = "Psychic"
   race = mutants
   officer = 1
   icon = 5,5
@@ -22,14 +22,15 @@ Unit Eji2 : BaseUnit {
 
   speed = 450
   sight = 1400
-  range = 1600
   aggro_range = 0
   
-  stats :{
+  stats : {
+    range = 1500
     hp = 280
     armor = 0
     psi = 520
-    psi_gen = 480
+    psi_gen = 380
+    restore_amount = 200
   }
 
   
@@ -49,10 +50,10 @@ Unit Eji2 : BaseUnit {
       can_default = 1
       weight = 2
       target : abi.ally { health_under = 80 }
-      range = 1700
-      power = 40
+      range = 1500
+      power = 50
       effect = E_heal {
-        amount = 200
+        amount = stat:restore_amount
         react = full_restore
       }
       cast {
@@ -77,7 +78,7 @@ Unit Eji2 : BaseUnit {
       area : abi.medium
       cooldown = 30
       power = 180
-      lua_when = CheckFullRestorationAbility { range = 1500; no_damage_time = 8 }
+      lua_when = CheckFullRestorationAbility { range = 1500; no_damage_time = 7 }
       
       cast {
         prepare {
@@ -120,14 +121,14 @@ CorruptMindEjiAbi {
   tags = organic
   range = 600
   min_power = 220
-  power = 50
+  power = 220
 
   cast {
     prepare {
       duration = 2
       anim = cast_start
       attach {
-        pt_cast = data/models/effects/Magic/StoneGhostAttachment.nif { scale = 1 }
+        pt_cast = data/models/effects/Magic/AncientShade_Magic.nif { scale = 1.5 }
       }
     }
     finish {
@@ -137,7 +138,7 @@ CorruptMindEjiAbi {
   
   effect = E_mindcontrol {
     id = CorruptedMind
-    duration = 12
+    duration = 15
     react = mind_control
     sound = data/sounds/effects/global actions/horrify/
   }

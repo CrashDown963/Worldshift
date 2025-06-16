@@ -1,4 +1,4 @@
-Mob RenegadeManipulator : BaseMob {
+Mob RenegadeManipulator : BaseAlienMob {
   name : Manipulator.name
   descr : Manipulator.descr
   race = aliens

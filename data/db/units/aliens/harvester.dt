@@ -1,4 +1,4 @@
-Unit Harvester: BaseUnit {
+Unit Harvester: AlienUnit {
   name = "Harvester"
   descr = "Harvester Placeholder Desc."
   race = aliens

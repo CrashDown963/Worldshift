@@ -1,4 +1,4 @@
-Unit Shifter : BaseUnit {
+Unit Shifter : AlienUnit {
   name = "Shifter"
   descr = "Shifter description"
   race = aliens
@@ -45,7 +45,6 @@ Unit Shifter : BaseUnit {
   speed = 450
   actions :{
     BreedAction
-    MakeBreeder -- fake
   }
   
   abilities {
@@ -83,7 +82,7 @@ Unit Shifter : BaseUnit {
     fire_node = pt_cast
     projectile = chase {
       model = Data/Models/Effects/TraceBullet/AlienProjectile.nif
-	    speed = 2500
+	    speed = 3000
       scale = 0.1
     }
   }
