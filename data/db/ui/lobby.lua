@@ -657,6 +657,68 @@ local DefLobbyBtn = DefButton {
   end,
 }
 
+-- DefPVPSlot definition for shop functionality
+local DefPVPSlot = Inventory.DefItemSlot { 
+  virtual = true,
+  repo = "PVP",
+  
+  ItemMoveNif = uinif {
+    layer = "+10",
+    hidden = true,
+    size = {10,10},
+    nif = "Data/Models/MiscObjects/Interface_item_effect.nif",
+    anchors = {CENTER = {2, 0}},
+    scale = 0.35,
+  },	    
+  
+  SelImage = uiimg {
+    layer = "+3",
+    hidden = true,
+    size = {57,57},
+    texture = "data/textures/ui/reward_chosen.dds",
+    coords = {0,0,64,64},
+  },
+  OnLoad = function(this) Inventory.DefItemSlot_OnLoad(this) end,
+  
+  OnMouseDown = function(this)
+    if this:GetItem() then
+      local quality = this:GetItem().quality
+      local race = game.GetPlayerRace()
+      local targetRepo = "INVENTORY_H" -- Default to humans
+      
+      -- Determine correct inventory based on player race
+      if race == "mutants" then
+        targetRepo = "INVENTORY_M"
+      elseif race == "aliens" then
+        targetRepo = "INVENTORY_A"
+      end
+      
+      local res = this:MoveItem(targetRepo)
+      if res and res > 0 then
+        -- Update battle points display in shop
+        local shopView = this:GetParent():GetParent()
+        if shopView.BattlePointsDisplay then
+          shopView.BattlePointsDisplay:UpdateBP()
+        end
+        
+        -- Refresh the shop to show new items
+        shopView:RefreshShop()
+        
+        game.PlaySnd(sounds.item_take) 
+        -- Show animation effect
+        if this.ItemMoveNif then
+          this.ItemMoveNif:Show()
+        end
+        
+        -- Show success message
+        MessageBox:Alert(TEXT{"item_purchased"}, TEXT{"purchase_success"})
+      else
+        MessageBox:Alert(TEXT{"buyfailed"}, TEXT{"buyfailed_ttl"})
+      end
+    end
+  end,
+}
+
 local DefRadioBtn = DefButton {
   virtual = true,
   font = "Tahoma,10b",
@@ -2708,6 +2770,13 @@ Lobby = uiwnd {
     anchors = { LEFT = { "RIGHT", "PVPBtn", 2, 0 } },
     str = TEXT{"prac_caps"},
   },
+
+  ShopBtn = DefLobbyBtn {
+    anchors = { LEFT = { "RIGHT", "PracticeBtn", 2, 0 } },
+    str = TEXT{"shop"},
+    OnMouseEnter = function(this) NTTooltip:DoShow("shop_btn_tip", this, "BOTTOM", "TOP", {0,10}) end,
+    OnMouseLeave = function(this) NTTooltip:Hide() end,
+  },
   
   SettingsBtn = DefLobbyBtn {
     anchors = { TOPRIGHT = { -10, 10 } },
@@ -2946,6 +3015,124 @@ Lobby = uiwnd {
       },
     },
 	},
+	
+	-- shop
+	ShopView = uiwnd {
+    size = {view_w, view_h},
+    hidden = true,
+    anchors = { TOPLEFT = { 10, 60 } },
+    
+    DefBigBackImage {},
+    
+    Title = uiwnd {
+      layer = lobbylayer + 1,
+      anchors = { TOPLEFT = { 15,15 }, BOTTOMRIGHT = { "TOP", -25,40 } },
+      uitext {font = "Verdana,10b", color = {255, 143, 51}, str = TEXT{"shop"}},
+    },
+    
+    BattlePointsDisplay = uiwnd {
+      layer = lobbylayer + 1,
+      size = {200, 30},
+      anchors = { TOPRIGHT = { -15, 15 } },
+      
+      Frame = uiimg {
+        texture = "data/textures/ui/stat_black_back.dds",
+        coords = {0, 0, 227, 29},
+        size = {200, 29},
+      },
+      
+      Text = uitext {
+        layer = "+1",
+        size = {200, 29},
+        anchors = { CENTER = { "CENTER", "Frame", 0,0 } },
+        color = {255, 143, 51},
+        font = "Tahoma,12b",
+        halign = "CENTER",
+      },
+      
+      UpdateBP = function(this)
+        local points = game.GetPlayerBattlePoints()
+        this.Text:SetStr("<p>Battle Points: "..points)
+      end,
+    },
+    
+    ShopArea = uiwnd {
+      size = {view_w-30, view_h-100},
+      anchors = { TOPLEFT = { 15, 60 } },
+      
+      DefSmallBackImage {},
+      
+      -- 5 item slots for PvP shop
+      Rew1 = DefPVPSlot {
+        index = 0,
+        ind = 0,
+        anchors = { TOPLEFT = { 20, 20 } },
+      },
+      
+      Rew2 = DefPVPSlot {
+        index = 1,
+        ind = 1,
+        anchors = { LEFT = { "RIGHT", "Rew1", 15, 0 } },
+      },
+      
+      Rew3 = DefPVPSlot {
+        index = 2,
+        ind = 2,
+        anchors = { LEFT = { "RIGHT", "Rew2", 15, 0 } },
+      },
+      
+      Rew4 = DefPVPSlot {
+        index = 3,
+        ind = 3,
+        anchors = { LEFT = { "RIGHT", "Rew3", 15, 0 } },
+      },
+      
+      Rew5 = DefPVPSlot {
+        index = 4,
+        ind = 4,
+        anchors = { LEFT = { "RIGHT", "Rew4", 15, 0 } },
+      },
+      
+      ChangeOfferBtn = DefButton {
+        size = {120,26},
+        layer = "+1",
+        anchors = { TOP = { "BOTTOM", "Rew1", 0, 20 } },
+        str = TEXT{"chg_off_btn"},
+        
+        OnClick = function(this)
+          if game.RerollPVPItemsOffer() == 1 then
+            local par = this:GetParent():GetParent()
+            par.BattlePointsDisplay:UpdateBP()
+          else
+            MessageBox:Alert(TEXT{"no_bpoints"}, TEXT{"no_bpoints_ttl"})
+          end
+        end,
+      },
+      
+      RefreshBtn = DefButton {
+        size = {120,26},
+        layer = "+1",
+        anchors = { LEFT = { "RIGHT", "ChangeOfferBtn", 10, 0 } },
+        str = TEXT{"refresh"},
+        
+        OnClick = function(this)
+          local par = this:GetParent():GetParent()
+          par:RefreshShop()
+        end,
+      },
+    },
+    
+    RefreshShop = function(this)
+      -- Force refresh of PvP items
+      game.RerollPVPItemsOffer()
+      this.BattlePointsDisplay:UpdateBP()
+    end,
+    
+    OnShow = function(this)
+      this.BattlePointsDisplay:UpdateBP()
+      this:RefreshShop()
+    end,
+  },
 	
 	-- practice
 	PracticeView = uiwnd {
@@ -4731,6 +4918,9 @@ function Lobby:OnLobbyBtnClicked(btn)
     net.ExitLobby()
   elseif btn == this.PracticeBtn then
     view = this.PracticeView 
+    net.ExitLobby()
+  elseif btn == this.ShopBtn then
+    view = this.ShopView
     net.ExitLobby()
   elseif btn == this.AbilityBtn then
     this:OnRightButton(btn)

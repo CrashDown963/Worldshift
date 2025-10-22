@@ -27,8 +27,11 @@ no_bpoints	Not enough battle points.
 no_bpoints_ttl	Purchase Failed	
 buyfailed_ttl	Purchase Failed	
 buyfailed	Not enough battle points or no available item slots.	
+item_purchased	Item purchased successfully!
+purchase_success	Purchase Successful
 inactive_spec	Inactive	
 chg_off_btn	Reroll	
+refresh	REFRESH
 close_caps	CLOSE	
 continue_caps	CONTINUE	
 observe_caps	OBSERVE	

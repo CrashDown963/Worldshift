@@ -154,17 +154,19 @@ Inventory.DefItemSlot = uislot {
       end
     else
       local repo = this:GetInfo()
-      if string.sub(repo, 1, 7) == "MUTANT_" or string.sub(repo, 1, 15) == "INSPECT_MUTANT_" then
-        this.frame_top = this.mutants_top
-        this.lvl_top = this.lvl_mutants_top
-      end
-      if string.sub(repo, 1, 6) == "ALIEN_" or string.sub(repo, 1, 14) == "INSPECT_ALIEN_" then
-        this.frame_top = this.aliens_top
-        this.lvl_top = this.lvl_aliens_top
-      end
-      if string.sub(repo, 1, 6) == "HUMAN_" or string.sub(repo, 1, 14) == "INSPECT_HUMAN_" then
-        this.frame_top = this.humans_top
-        this.lvl_top = this.lvl_humans_top
+      if repo and type(repo) == "string" then
+        if string.sub(repo, 1, 7) == "MUTANT_" or string.sub(repo, 1, 15) == "INSPECT_MUTANT_" then
+          this.frame_top = this.mutants_top
+          this.lvl_top = this.lvl_mutants_top
+        end
+        if string.sub(repo, 1, 6) == "ALIEN_" or string.sub(repo, 1, 14) == "INSPECT_ALIEN_" then
+          this.frame_top = this.aliens_top
+          this.lvl_top = this.lvl_aliens_top
+        end
+        if string.sub(repo, 1, 6) == "HUMAN_" or string.sub(repo, 1, 14) == "INSPECT_HUMAN_" then
+          this.frame_top = this.humans_top
+          this.lvl_top = this.lvl_humans_top
+        end
       end
     end
 
