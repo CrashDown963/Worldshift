@@ -1247,10 +1247,10 @@ function Selection.Mob:Update(h, info)
     this.Shield_prg:Hide()
   end
   
-  this.Health.Text:SetStr(math.floor((info.health/info.max_health)*100).."%")
+  this.Health.Text:SetStr(math.floor(info.health).."/"..math.floor(info.max_health).." ("..math.floor((info.health/info.max_health)*100).."%)")
   
   if info.power and info.power > 0 and info.max_power and info.max_power > 0 then
-    this.Manna.Text:SetStr(math.floor((info.power/info.max_power)*100).."%")
+    this.Manna.Text:SetStr(math.floor(info.power).."/"..math.floor(info.max_power).." ("..math.floor((info.power/info.max_power)*100).."%)")
     this.Manna.Icon:SetShader()
   else
     this.Manna.Text:SetStr("")
@@ -1258,7 +1258,7 @@ function Selection.Mob:Update(h, info)
   end  
   
   if info.shield.maxHull and info.shield.hull then
-    this.Shield.Text:SetStr(math.floor((info.shield.hull/info.shield.maxHull)*100).."%")
+    this.Shield.Text:SetStr(math.floor(info.shield.hull).."/"..math.floor(info.shield.maxHull).." ("..math.floor((info.shield.hull/info.shield.maxHull)*100).."%)")
     this.Shield.Icon:SetShader()
   else
     this.Shield.Text:SetStr("")
@@ -1818,10 +1818,10 @@ function Selection.Building:Update(h, info)
     this.Health_prg:Hide()
   end
 
-  this.Health.Text:SetStr(math.floor((info.health/info.max_health)*100).."%")
+  this.Health.Text:SetStr(math.floor(info.health).."/"..math.floor(info.max_health).." ("..math.floor((info.health/info.max_health)*100).."%)")
   
   if not info.construct and info.power and info.power > 0 and info.max_power and info.max_power > 0 then
-    this.Manna.Text:SetStr(math.floor((info.power/info.max_power)*100).."%")
+    this.Manna.Text:SetStr(math.floor(info.power).."/"..math.floor(info.max_power).." ("..math.floor((info.power/info.max_power)*100).."%)")
     this.Manna:Show()
   else
     this.Manna:Hide()
@@ -1833,7 +1833,7 @@ function Selection.Building:Update(h, info)
     else  
       this.Shield:SetAnchor("TOPLEFT", this.Manna, "BOTTOMLEFT", {0,2})
     end  
-    this.Shield.Text:SetStr(math.floor((info.shield.hull/info.shield.maxHull)*100).."%")
+    this.Shield.Text:SetStr(math.floor(info.shield.hull).."/"..math.floor(info.shield.maxHull).." ("..math.floor((info.shield.hull/info.shield.maxHull)*100).."%)")
     this.Shield:Show()
   else
     this.Shield:Hide()
