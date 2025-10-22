@@ -290,7 +290,7 @@
 42890	1	Aliens	ALIEN_POWER	Runic Chromatic Pulsation	Harvester	Harvester hp = 1%		
 42900	2	Aliens	ALIEN_ARBITER	Thar’Kyn Power Collector	Arbiter	Arbiter psi_gen = 23		
 42910	2	Humans	HUMAN_COMMANDER	Rare Titanium Armor	Commander	Commander armor = 3		
-42920	5	Humans	HUMAN_ASSASSIN	Xenofocus Destroyer	Assassin	Assassin damage = 170000Assassin healing_taken_mod = 31%		
+42920	5	Humans	HUMAN_ASSASSIN	Xenofocus Destroyer	Assassin	Assassin damage = 17Assassin healing_taken_mod = 31%		
 42930	5	Aliens	ALIEN_DOGMA	Dreadful Master Presence	HarvesterTrisat	Harvester harvest_damage = 36Harvester armor = 2Harvester harvest_chance = 1Trisat hp = 3%Trisat healing_taken_mod = 13%		
 42940	2	Humans	HUMAN_IMPLANTS	Expert Vitality Program	Surgeon	Surgeon hp = 6%Surgeon healing_taken_mod = 6%		
 42950	2	Tribes	MUTANT_GUARDIAN	Chant of Wildest Desire	GuardianWarrior	Guardian psi = 5%Warrior healing_taken_mod = 1%		
@@ -2678,7 +2678,7 @@
 66770	1	Humans	HUMAN_SURGEON	Bacterial Heal-Kit 	Surgeon	Surgeon mend_heal = 11		
 66780	1	Aliens	ALIEN_MASTER	Grid Armor 	Master	Master armor = 1		
 66790	4	Aliens	ALIEN_DOMINATOR	Cosmic Fever 	Dominator	Dominator power_fuse_area = 6%		
-66800	1	Humans	HUMAN_ASSASSIN	Sub-cell Training 	Assassin	Assassin hp = 1%		
+66800	1	Humans	HUMAN_ASSASSIN	Sub-cell Training 	Assassin	Assassin hp = 1%Assassin damage = 170000		
 66810	5	Tribes	MUTANT_HIGHPRIEST	Bolt of Pure Light	HighPriest	HighPriest lightning_damage = 81HighPriest hp_gen = 66		
 66820	1	Aliens	ALIEN_MASTER	Power Shard 	Master	Master psi = 3%		
 66830	5	Aliens	ALIEN_CORRUPTION	Black Flame 	OverseerTrisat	Overseer charging_field_psi_perc = 4Overseer psi_gen = 12Trisat armor = 2Trisat hp_gen = 10		

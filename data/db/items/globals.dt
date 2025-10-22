@@ -5,7 +5,7 @@ item_slots {
   REWARDS   { count = 16; accept_all = 1; }
   RECYCLE   { count = 1; accept_all = 1; }
   MISSION   { count = 3; accept_all = 1; }
-  PVP       { count = 5; accept_all = 1; }
+  PVP       { count = 6; accept_all = 1; }
 
   HUMAN_COMMANDER { count = 1; race = humans; icon = 1,2; }
   HUMAN_SURGEON   { count = 1; race = humans; icon = 3,5; }

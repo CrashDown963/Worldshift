@@ -3093,26 +3093,40 @@ Lobby = uiwnd {
         anchors = { LEFT = { "RIGHT", "Rew4", 15, 0 } },
       },
       
+      Rew6 = DefPVPSlot {
+        index = 5,
+        ind = 5,
+        anchors = { LEFT = { "RIGHT", "Rew5", 15, 0 } },
+      },
+      
+      BPTipText = uitext {
+        layer = "+1",
+        size = {500, 30},
+        anchors = { TOPLEFT = { 50, 120 } },
+        color = {200, 200, 200},
+        font = "Tahoma,9",
+        halign = "CENTER",
+        str = TEXT{"bp_tip"},
+      },
+      
       ChangeOfferBtn = DefButton {
         size = {120,26},
         layer = "+1",
-        anchors = { TOP = { "BOTTOM", "Rew1", 0, 20 } },
+        anchors = { TOPLEFT = { 150, 160 } },
         str = TEXT{"chg_off_btn"},
         
         OnClick = function(this)
-          if game.RerollPVPItemsOffer() == 1 then
-            local par = this:GetParent():GetParent()
-            par.BattlePointsDisplay:UpdateBP()
-          else
-            MessageBox:Alert(TEXT{"no_bpoints"}, TEXT{"no_bpoints_ttl"})
-          end
+          -- Always reroll regardless of BP cost
+          game.RerollPVPItemsOffer()
+          local par = this:GetParent():GetParent()
+          par.BattlePointsDisplay:UpdateBP()
         end,
       },
       
       RefreshBtn = DefButton {
         size = {120,26},
         layer = "+1",
-        anchors = { LEFT = { "RIGHT", "ChangeOfferBtn", 10, 0 } },
+        anchors = { TOPLEFT = { 280, 160 } },
         str = TEXT{"refresh"},
         
         OnClick = function(this)
