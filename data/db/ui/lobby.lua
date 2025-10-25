@@ -709,9 +709,6 @@ local DefPVPSlot = Inventory.DefItemSlot {
         if this.ItemMoveNif then
           this.ItemMoveNif:Show()
         end
-        
-        -- Show success message
-        MessageBox:Alert(TEXT{"item_purchased"}, TEXT{"purchase_success"})
       else
         MessageBox:Alert(TEXT{"buyfailed"}, TEXT{"buyfailed_ttl"})
       end
@@ -3066,7 +3063,7 @@ Lobby = uiwnd {
       Rew1 = DefPVPSlot {
         index = 0,
         ind = 0,
-        anchors = { TOPLEFT = { 20, 20 } },
+        anchors = { TOPLEFT = { 80, 40 } },
       },
       
       Rew2 = DefPVPSlot {
@@ -3109,10 +3106,20 @@ Lobby = uiwnd {
         str = TEXT{"bp_tip"},
       },
       
+      RaceTipText = uitext {
+        layer = "+1",
+        size = {500, 50},
+        anchors = { TOPLEFT = { 50, 150 } },
+        color = {180, 180, 180},
+        font = "Tahoma,8",
+        halign = "CENTER",
+        str = "If you want to change the item's race, enter a skirmish game with the race you want, and then exit it",
+      },
+      
       ChangeOfferBtn = DefButton {
         size = {120,26},
         layer = "+1",
-        anchors = { TOPLEFT = { 150, 160 } },
+        anchors = { TOPLEFT = { 150, 200 } },
         str = TEXT{"chg_off_btn"},
         
         OnClick = function(this)
@@ -3126,7 +3133,7 @@ Lobby = uiwnd {
       RefreshBtn = DefButton {
         size = {120,26},
         layer = "+1",
-        anchors = { TOPLEFT = { 280, 160 } },
+        anchors = { TOPLEFT = { 280, 200 } },
         str = TEXT{"refresh"},
         
         OnClick = function(this)
