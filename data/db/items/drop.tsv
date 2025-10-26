@@ -107,7 +107,9 @@
 410	RH Zul Thark	20	Common Hard Boss	100	1	1							
 410	RH Zul Thark	30	Common Dungeon	100	1	2							
 420	RH Final	440	RH Final Master	100	1	1	35	0	0		100			
-420	RH Final	440	RH Final Master	25	1	1	35	0	0	100
+420	RH Final	440	RH Final Master	25	1	1	35	0	0	100		
+420	RH Final	20	Common Hard Boss	100	1	2							
+420	RH Final	0	GENERIC	100	1	1
 430	BRD Monster	450	BRD Start	100	1	1		100					
 430	BRD Monster	450	BRD Start	25	1	1			100				
 430	BRD Monster	0	GENERIC	100	1	2							
@@ -115,7 +117,8 @@
 440	BRD Lan Zealot	460	BRD Lan Zealot	25	1	1				100			
 440	BRD Lan Zealot	0	GENERIC	100	1	1							
 450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	100	1	1	35	0	0		100			
-450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	25	1	1	35	0	0	100
+450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	25	1	1	35	0	0	100		
+450	BRD Lan Zealot Hard	20	Common Hard Boss	100	1	1
 460	Bodo	30	Common Dungeon	100	1	1	0	100	20	0	0		
 460	Bodo	290	Common Low Boss	100	1	1			100	20	10		
 460	Bodo	10	PVP GENERIC	50	1	1					100		
