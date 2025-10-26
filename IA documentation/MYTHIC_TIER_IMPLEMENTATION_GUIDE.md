@@ -207,14 +207,43 @@ ItemColors = {
 
 **File**: `data/db/items/drop.tsv`
 
+**File Structure** (12 columns):
+
+```tsv
+# Col1: SourceID - ID del source (boss/event)
+# Col2: SourceName - Nombre del source
+# Col3: TargetID - ID de la loot table target
+# Col4: TargetName - Nombre de la loot table target
+# Col5: Chance - Probabilidad de que este drop ocurra (0-100)
+# Col6: MinItems - Número mínimo de items que dropea
+# Col7: MaxItems - Número máximo de items que dropea
+# Col8: Mythic% - Probabilidad de tier 1 (Mythic) en esta loot table (0-100)
+# Col9: Common% - Probabilidad de tier 2 (Common) en esta loot table (0-100)
+# Col10: Rare% - Probabilidad de tier 3 (Rare) en esta loot table (0-100)
+# Col11: Epic% - Probabilidad de tier 4 (Epic) en esta loot table (0-100)
+# Col12: Legendary% - Probabilidad de tier 5 (Legendary) en esta loot table (0-100)
+```
+
 **Update probabilities to match new tier system**:
 
 ```tsv
 # SourceID	SourceName	TargetID	TargetName	Chance	MinItems	MaxItems	Mythic%	Common%	Rare%	Epic%	Legendary%
-90	Safari - Bill Hard	90	Safari - Bill Hard	100	1	1	1	0	0	100	20
-280	JY Xessk	280	JY Xessk	100	1	1	5	0	0	0	100
-440	RH Final Master	440	RH Final Master	100	1	1	10	0	0	10	100
+90	Safari - Bill Hard	90	Safari - Bill Hard	100	1	1	35	0	0		100			
+90	Safari - Bill Hard	90	Safari - Bill Hard	25	1	1	35	0	0	100		
+250	JY Gorgar Hard	250	JY Gorgar Hard	100	1	1	35	0	0		100			
+260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	100	1	1	35	0	0		100	10		
+420	RH Final	440	RH Final Master	100	1	1	35	0	0		100			
+450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	100	1	1	35	0	0		100
 ```
+
+**Important Notes**:
+- **Column 8 (Mythic%)**: Add probability for tier 1 (Mythic) drops. Recommended: 35% for hardmodes
+- **Column 9 (Common%)**: Must match loot index.tsv. Set to 0 if loot index has 0 for this tier
+- **Column 10 (Rare%)**: Must match loot index.tsv. Set to 0 if loot index has 0 for this tier
+- **Columns 11-12**: Epic and Legendary probabilities as before
+- **All hardmodes** need explicit 0 values in Common% and Rare% columns to avoid engine errors
+- **Multiple entries per source**: Hardmodes can have multiple drop lines with different Chances
+- **Additional loot tables**: Hardmodes can drop from other tables (e.g., Common Hard Boss, GENERIC) but probabilities must match
 
 ### **Phase 7: Add Mythic Items to Loot Tables**
 
@@ -259,6 +288,28 @@ ItemColors = {
 2. **Drop testing**: Verify Mythic items drop from configured bosses
 3. **Stat verification**: Confirm Mythic items have superior stats
 4. **Balance testing**: Ensure game remains challenging
+
+## 📋 File Structure Reference
+
+### **drop.tsv Column Structure**
+
+**Purpose**: Defines which loot tables can drop from each boss/event and their tier probabilities.
+
+**12 Columns**:
+1. **SourceID** - Boss/event ID
+2. **SourceName** - Boss/event name
+3. **TargetID** - Loot table ID
+4. **TargetName** - Loot table name
+5. **Chance** - Drop chance (0-100)
+6. **MinItems** - Minimum items dropped
+7. **MaxItems** - Maximum items dropped
+8. **Mythic%** - Tier 1 probability (0-100)
+9. **Common%** - Tier 2 probability (0-100) - Must match loot index.tsv
+10. **Rare%** - Tier 3 probability (0-100) - Must match loot index.tsv
+11. **Epic%** - Tier 4 probability (0-100)
+12. **Legendary%** - Tier 5 probability (0-100)
+
+**Critical Rule**: If `loot index.tsv` has a tier at 0%, `drop.tsv` must also have it at 0% (explicit) to avoid engine errors.
 
 ## 🎨 Alternative Color Schemes
 

@@ -9,8 +9,8 @@
 80	Safari - Bill	0	0	100	10	0
 90	Safari - Bill Hard	1	0	0	100	20
 100	DTB - Cages	0	100	25	0	0
-110	DTB - Adam	100	0	100	20	0
-120	DTB - Frank	0	0	100	20	0
+110	DTB - Adam	1	0	100	20	0
+120	DTB - Frank	1	0	100	20	0
 130	BSA - Horror	0	100	100	20	0
 140	BSA - Yamu	0	100	100	20	0
 150	BSA - Champions	0	0	100	20	0
@@ -46,3 +46,4 @@
 450	BRD Start	0	100	10	0	0
 460	BRD Lan Zealot	0	0	100	20	0
 470	BRD Lan Zealot - Hard	2	0	0	100	20
+111	DTB Hard Mythic	35	0	0	100	0

@@ -2965,7 +2965,7 @@
 69640	4	Aliens	ALIEN_MASTER	Sub Zero Enigma Bulwark	Master	Master shield_fullabsorbchance = 3		
 69650	1	Tribes	MUTANT_GUARDIAN	Guardian�s Glaive 	Guardian	Guardian damage = 1		
 69660	3	Tribes	MUTANT_ADEPT	Song of Flames 	Sorcerer	Sorcerer incinerate_psi_cost = -6%		
-69670	4	Tribes	MUTANT_SHAMAN	Chant of Forceful Invocation	Shaman	Shaman crit_chance = 8Shaman hp_gen = 35		
+69670	4	Tribes	MUTANT_SHAMAN	Chant of Forceful Invocation	Shaman	Shaman crit_chance = 8Shaman hp_gen = 35			
 69680	1	Aliens	ALIEN_MASTER	Torsion Shield 	Master	Master shield_hull = 4%		
 69690	1	Tribes	MUTANT_BLOOD	Claw of the Bear 	Guardian	Guardian hp = 1%		
 69700	3	Aliens	ALIEN_DOGMA	Black Seeker Warp	TritechDominator	Tritech crit_chance = 1Dominator power_fuse_area = 3%		
@@ -2980,7 +2980,7 @@
 69790	2	Humans	HUMAN_SURGEON	Improved Heal-Kit 	Surgeon	Surgeon mend_heal = 15Surgeon psi_gen = 10		
 69800	3	Tribes	MUTANT_NATURE	Sacred Step of Avoidance	GuardianHighPriest	Guardian fortify_armor = 1HighPriest pyrowave_chance = 1HighPriest healing_taken_mod = 10%		
 69810	2	Humans	HUMAN_WEAPONS	Field Charged Slugs	AssassinHellfire	Assassin expose_target_chance = 4Hellfire damage = 3		
-69820	1	Tribes	MUTANT_HIGHPRIEST	Claw of the Brute 	HighPriest	HighPriest hp = 1%		
+69820	1	Tribes	MUTANT_HIGHPRIEST	Claw of the Brute 	HighPriest	HighPriest hp = 1%			
 69840	4	Humans	HUMAN_IMPLANTS	Infused Neural Implant “165”	SurgeonTrooper	Surgeon psi = 14%Surgeon armor = 2Trooper crit_chance = 1		
 69850	2	Aliens	ALIEN_POWER	Subcarbon Rune Screen	Trisat	Trisat armor = 2Trisat hp = 2%		
 69860	2	Aliens	ALIEN_POWER	Runic Chromatic Exoskin	Harvester	Harvester healing_taken_mod = 18%Harvester hp = 2%		
@@ -2996,36 +2996,36 @@
 69960	3	Aliens	ALIEN_MANIPULATOR	Thar�Kyn Nova 	Manipulator	Manipulator life_leech_boost = 10Manipulator armor = 2		
 69970	4	Humans	HUMAN_ASSASSIN	Rare Bioactive Covers	Assassin	Assassin armor = 4		
 69980	2	Humans	HUMAN_COMMANDER	Stabilized Particle Phasers	Commander	Commander damage = 8		
-70000	1	Humans	HUMAN_COMMANDER	MYTHIC Godlike Command Core	Commander	Commander damage = 50 Commander hp = 30% Commander psi = 40% Commander crit_chance = 15 Commander armor = 10		
-70001	1	Humans	HUMAN_ASSASSIN	MYTHIC Shadow of the Void	Assassin	Assassin damage = 45	Assassin hp = 25%	Assassin armor = 15	Assassin crit_chance = 12	Assassin expose_target_chance = 10		
-70002	1	Humans	HUMAN_JUDGE	MYTHIC Divine Justice	Judge	Judge damage = 50	Judge hp = 30%	Judge psi = 35%	Judge crit_chance = 15	Judge voiceofcommand_damage_perc = 20		
-70003	1	Humans	HUMAN_SURGEON	MYTHIC Celestial Healer	Surgeon	Surgeon healing_taken_mod = 50%	Surgeon hp = 30%	Surgeon psi_gen = 80	Surgeon armor = 12	Surgeon mend_heal = 50		
-70004	1	Humans	HUMAN_CONSTRUCTOR	MYTHIC Supreme Overlord	Constructor	Constructor damage = 35 Constructor hp = 25% Constructor psi_gen = 100 Constructor repairdrones_heal_radius = 25% Constructor nano_fix_heal = 30		
-70005	1	Humans	HUMAN_ENGINEER	MYTHIC Master Engineer Core	Engineer	Engineer damage = 40 Engineer hp = 28% Engineer psi = 30% Engineer armor = 10		
-70006	1	Humans	HUMAN_DEFENCE	MYTHIC Immortal Defender	HellfireTrooper	Hellfire damage = 40	Hellfire hp = 35%	Hellfire armor = 18Trooper damage = 35	Trooper hp = 30%	Trooper armor = 15		
-70007	1	Humans	HUMAN_IMPLANTS	MYTHIC Neural God Matrix	AssassinJudgeSurgeon	Assassin damage = 25 Assassin crit_chance = 10Judge psi = 25% Judge damage = 25Surgeon healing_taken_mod = 35% Surgeon armor = 10		
-70008	1	Humans	HUMAN_WEAPONS	MYTHIC Legendary Arsenal	AssassinHellfire	Assassin damage = 35 Assassin expose_target_chance = 8Hellfire damage = 40 Hellfire hp = 30% Hellfire armor = 15		
-70009	1	Humans	HUMAN_NEUROSCIENCE	MYTHIC Psionic God Core	JudgeSurgeonEngineer	Judge psi = 30% Judge psi_gen = 100Surgeon psi = 30% Surgeon psi_gen = 80Engineer psi = 25% Engineer hp = 25%		
-70010	1	Aliens	ALIEN_MASTER	MYTHIC Cosmic Devastation	Master	Master damage = 60 Master hp = 35% Master psi = 40% Master psi_gen = 100 Master nether_nova_damage = 30		
-70011	1	Aliens	ALIEN_ARBITER	MYTHIC Eternal Guardian	Arbiter	Arbiter hp = 40% Arbiter armor = 25 Arbiter psi = 35% Arbiter healing_taken_mod = 50% Arbiter damage = 45		
-70012	1	Aliens	ALIEN_DOMINATOR	MYTHIC Dominion Core	Dominator	Dominator damage = 55 Dominator hp = 35% Dominator psi = 40% Dominator stasis_shot_chance = 10 Dominator armor = 20		
-70013	1	Aliens	ALIEN_HARVESTER	MYTHIC Harvester of Souls	Harvester	Harvester hp = 35% Harvester harvest_damage = 80 Harvester armor = 15 Harvester healing_taken_mod = 35% Harvester harvest_chance = 5		
-70014	1	Aliens	ALIEN_MANIPULATOR	MYTHIC Mystic Transcendence	Manipulator	Manipulator life_leech_boost = 40 Manipulator healing_taken_mod = 50% Manipulator psi = 35% Manipulator vortex_heal = 20% Manipulator crit_chance = 12		
-70015	1	Aliens	ALIEN_DEFILER	MYTHIC Defiler of Worlds	Defiler	Defiler damage = 50 Defiler hp = 30% Defiler armor = 18 Defiler psi = 30%		
-70016	1	Aliens	ALIEN_POWER	MYTHIC Astral God Core	HarvesterShifter	Harvester hp = 35% Harvester harvest_damage = 70Shifter hp = 30% Shifter psi = 30%		
-70017	1	Aliens	ALIEN_CORRUPTION	MYTHIC Corruption God Seed	ManipulatorOverseer	Manipulator vortex_heal = 20% Manipulator psi = 30%Overseer charging_field_area = 20% Overseer damage = 35		
-70018	1	Aliens	ALIEN_DOGMA	MYTHIC Dogma of Power	Master	TrisatMaster damage = 50 Master psi = 35%Trisat hp = 35% Trisat healing_taken_mod = 40% Trisat crit_chance = 10		
-70019	1	Aliens	ALIEN_ENIGMA	MYTHIC Enigma of the Void	MasterManipulator	Master damage = 55 Master psi = 40% Master nether_nova_damage = 35Manipulator life_leech_boost = 35 Manipulator psi = 30%		
-70020	1	Tribes	MUTANT_HIGHPRIEST	MYTHIC Primal Ascension	HighPriest	HighPriest damage = 65 HighPriest hp = 40% HighPriest psi = 45% HighPriest lightning_damage = 200% HighPriest pyrowave_chance = 5		
-70021	1	Tribes	MUTANT_SHAMAN	MYTHIC Void Walker	Shaman	Shaman damage = 60 Shaman hp = 35% Shaman psi_gen = 400 Shaman drain_life_boost = 40 Shaman drain_life_chance = 12		
-70022	1	Tribes	MUTANT_ADEPT	MYTHIC Legendary Destroyer	Sorcerer	Sorcerer damage = 65 Sorcerer hp = 40% Sorcerer psi = 55% Sorcerer incinerate_damage = 40 Sorcerer crit_chance = 15		
-70023	1	Tribes	MUTANT_GUARDIAN	MYTHIC Titan Guardian Core	Guardian	Guardian hp = 40% Guardian armor = 20 Guardian hp_gen = 120 Guardian fortify_armor_add_perc = 8 Guardian damage = 50		
-70024	1	Tribes	MUTANT_STONEGHOST	MYTHIC Phantom God Stone	StoneGhost	StoneGhost hp = 35% StoneGhost corruption_damage = 30 StoneGhost unholy_aura_heal = 20 StoneGhost armor = 15		
-70025	1	Tribes	MUTANT_PSYCHIC	MYTHIC Psychic Overlord	Psychic	Psychic damage = 55 Psychic hp = 35% Psychic psi = 45% Psychic crit_chance = 15		
-70026	1	Tribes	MUTANT_BLOOD	MYTHIC Blood God Essence	Brute	Brute hp = 35% Brute growl_chance = 5		
-70027	1	Tribes	MUTANT_NATURE	MYTHIC Nature God Seed	GuardianWarrior	Guardian hp = 38% Guardian healing_taken_mod = 40%Warrior hp = 35% Warrior damage = 40 Warrior armor = 15		
-70028	1	Tribes	MUTANT_MIND	MYTHIC Mind God Matrix	HighPriestShaman	HighPriest psi = 35% HighPriest holy_aura_heal = 15Shaman psi_gen = 350 Shaman drain_life_chance = 10		
-70029	1	Tribes	MUTANT_SPIRIT	MYTHIC Spirit God Core	HighPriestShamanStoneGhost	HighPriest hp = 38% HighPriest psi = 40%Shaman healing_taken_mod = 50% Shaman psi = 35%StoneGhost damage = 35 StoneGhost armor = 12		
-70030	1	Humans	HUMAN_SPECA1	MYTHIC Durable Frame	TrooperRipperAssaultBotHellfire	Trooper hp = 35%Ripper hp = 35% Ripper armor = 18AssaultBot hp = 30% AssaultBot damage = 35Hellfire hp = 40% Hellfire armor = 20		
-70031	1	Aliens	ALIEN_SPECA1	MYTHIC Bio Core	TrisatTritechHarvesterShifter	Trisat hp = 40%Tritech hp = 35% Tritech psi = 25%Harvester hp = 40% Harvester harvest_damage = 60Shifter hp = 35% Shifter psi = 30%		
-70032	1	Tribes	MUTANT_SPECA1	MYTHIC Eternal Core	WarriorBruteGuardian	Warrior hp = 40% Warrior damage = 45 Warrior armor = 20Brute hp = 40% Brute armor = 18Guardian hp = 40% Guardian armor = 20
+70000	1	Humans	HUMAN_COMMANDER	MYTHIC Godlike Command Core	Commander	Commander damage = 50Commander hp = 30%Commander psi = 40%Commander crit_chance = 15Commander armor = 10		
+70001	1	Humans	HUMAN_ASSASSIN	MYTHIC Shadow of the Void	Assassin	Assassin damage = 45Assassin hp = 25%Assassin armor = 15Assassin crit_chance = 12Assassin expose_target_chance = 10		
+70002	1	Humans	HUMAN_JUDGE	MYTHIC Divine Justice	Judge	Judge damage = 50Judge hp = 30%Judge psi = 35%Judge crit_chance = 15Judge voiceofcommand_damage_perc = 20		
+70003	1	Humans	HUMAN_SURGEON	MYTHIC Celestial Healer	Surgeon	Surgeon healing_taken_mod = 50%Surgeon hp = 30%Surgeon psi_gen = 80Surgeon armor = 12Surgeon mend_heal = 50		
+70004	1	Humans	HUMAN_CONSTRUCTOR	MYTHIC Supreme Overlord	Constructor	Constructor damage = 35Constructor hp = 25%Constructor psi_gen = 100Constructor repairdrones_heal_radius = 25%Constructor nano_fix_heal = 30		
+70005	1	Humans	HUMAN_ENGINEER	MYTHIC Master Engineer Core	Engineer	Engineer damage = 40Engineer hp = 28%Engineer psi = 30%Engineer armor = 10		
+70006	1	Humans	HUMAN_DEFENCE	MYTHIC Immortal Defender	HellfireTrooper	Hellfire damage = 40Hellfire hp = 35%Hellfire armor = 18Trooper damage = 35Trooper hp = 30%Trooper armor = 15	
+70007	1	Humans	HUMAN_IMPLANTS	MYTHIC Neural God Matrix	AssassinJudgeSurgeon	Assassin damage = 25Assassin crit_chance = 10Judge psi = 25%Judge damage = 25Surgeon healing_taken_mod = 35%Surgeon armor = 10		
+70008	1	Humans	HUMAN_WEAPONS	MYTHIC Legendary Arsenal	AssassinHellfire	Assassin damage = 35Assassin expose_target_chance = 8Hellfire damage = 40Hellfire hp = 30%Hellfire armor = 15		
+70009	1	Humans	HUMAN_NEUROSCIENCE	MYTHIC Psionic God Core	JudgeSurgeonEngineer	Judge psi = 30%Judge psi_gen = 100Surgeon psi = 30%Surgeon psi_gen = 80Engineer psi = 25%Engineer hp = 25%	
+70010	1	Aliens	ALIEN_MASTER	MYTHIC Cosmic Devastation	Master	Master damage = 60Master hp = 35%Master psi = 40%Master psi_gen = 100Master nether_nova_damage = 30		
+70011	1	Aliens	ALIEN_ARBITER	MYTHIC Eternal Guardian	Arbiter	Arbiter hp = 40%Arbiter armor = 25Arbiter psi = 35%Arbiter healing_taken_mod = 50%Arbiter damage = 45		
+70012	1	Aliens	ALIEN_DOMINATOR	MYTHIC Dominion Core	Dominator	Dominator damage = 55Dominator hp = 35%Dominator psi = 40%Dominator stasis_shot_chance = 10Dominator armor = 20		
+70013	1	Aliens	ALIEN_HARVESTER	MYTHIC Harvester of Souls	Harvester	Harvester hp = 35%Harvester harvest_damage = 80Harvester armor = 15Harvester healing_taken_mod = 35%Harvester harvest_chance = 5		
+70014	1	Aliens	ALIEN_MANIPULATOR	MYTHIC Mystic Transcendence	Manipulator	Manipulator life_leech_boost = 40Manipulator healing_taken_mod = 50%Manipulator psi = 35%Manipulator vortex_heal = 20%Manipulator crit_chance = 12		
+70015	1	Aliens	ALIEN_DEFILER	MYTHIC Defiler of Worlds	Defiler	Defiler damage = 50Defiler hp = 30%Defiler armor = 18Defiler psi = 30%		
+70016	1	Aliens	ALIEN_POWER	MYTHIC Astral God Core	HarvesterShifter	Harvester hp = 35%Harvester harvest_damage = 70Shifter hp = 30%Shifter psi = 30%		
+70017	1	Aliens	ALIEN_CORRUPTION	MYTHIC Corruption God Seed	ManipulatorOverseer	Manipulator vortex_heal = 20%Manipulator psi = 30%Overseer charging_field_area = 20%Overseer damage = 35		
+70018	1	Aliens	ALIEN_DOGMA	MYTHIC Dogma of Power	Master	TrisatMaster damage = 50Master psi = 35%Trisat hp = 35%Trisat healing_taken_mod = 40%Trisat crit_chance = 10	
+70019	1	Aliens	ALIEN_ENIGMA	MYTHIC Enigma of the Void	MasterManipulator	Master damage = 55Master psi = 40%Master nether_nova_damage = 35Manipulator life_leech_boost = 35Manipulator psi = 30%		
+70020	1	Tribes	MUTANT_HIGHPRIEST	MYTHIC Primal Ascension	HighPriest	HighPriest damage = 65HighPriest hp = 40%HighPriest psi = 45%HighPriest lightning_damage = 200%HighPriest pyrowave_chance = 5		
+70021	1	Tribes	MUTANT_SHAMAN	MYTHIC Void Walker	Shaman	Shaman damage = 60Shaman hp = 35%Shaman psi_gen = 400Shaman drain_life_boost = 40Shaman drain_life_chance = 12		
+70022	1	Tribes	MUTANT_ADEPT	MYTHIC Legendary Destroyer	Sorcerer	Sorcerer damage = 65Sorcerer hp = 40%Sorcerer psi = 55%Sorcerer incinerate_damage = 40Sorcerer crit_chance = 15		
+70023	1	Tribes	MUTANT_GUARDIAN	MYTHIC Titan Guardian Core	Guardian	Guardian hp = 40%Guardian armor = 20Guardian hp_gen = 120Guardian fortify_armor_add_perc = 8Guardian damage = 50		
+70024	1	Tribes	MUTANT_STONEGHOST	MYTHIC Phantom God Stone	StoneGhost	StoneGhost hp = 35%StoneGhost corruption_damage = 30StoneGhost unholy_aura_heal = 20StoneGhost armor = 15		
+70025	1	Tribes	MUTANT_PSYCHIC	MYTHIC Psychic Overlord	Psychic	Psychic damage = 55Psychic hp = 35%Psychic psi = 45%Psychic crit_chance = 15		
+70026	1	Tribes	MUTANT_BLOOD	MYTHIC Blood God Essence	Brute	Brute hp = 35%Brute growl_chance = 5		
+70027	1	Tribes	MUTANT_NATURE	MYTHIC Nature God Seed	GuardianWarrior	Guardian hp = 38%Guardian healing_taken_mod = 40%Warrior hp = 35%Warrior damage = 40Warrior armor = 15		
+70028	1	Tribes	MUTANT_MIND	MYTHIC Mind God Matrix	HighPriestShaman	HighPriest psi = 35%HighPriest holy_aura_heal = 15Shaman psi_gen = 350Shaman drain_life_chance = 10		
+70029	1	Tribes	MUTANT_SPIRIT	MYTHIC Spirit God Core	HighPriestShamanStoneGhost	HighPriest hp = 38%HighPriest psi = 40%Shaman healing_taken_mod = 50%Shaman psi = 35%StoneGhost damage = 35StoneGhost armor = 12		
+70030	1	Humans	HUMAN_SPECA1	MYTHIC Durable Frame	TrooperRipperAssaultBotHellfire	Trooper hp = 35%Ripper hp = 35%Ripper armor = 18AssaultBot hp = 30%AssaultBot damage = 35Hellfire hp = 40% Hellfire armor = 20		
+70031	1	Aliens	ALIEN_SPECA1	MYTHIC Bio Core	TrisatTritechHarvesterShifter	Trisat hp = 40%Tritech hp = 35%Tritech psi = 25%Harvester hp = 40%Harvester harvest_damage = 60Shifter hp = 35%Shifter psi = 30%		
+70032	1	Tribes	MUTANT_SPECA1	MYTHIC Eternal Core	WarriorBruteGuardian	Warrior hp = 40%Warrior damage = 45Warrior armor = 20Brute hp = 40%Brute armor = 18Guardian hp = 40%Guardian armor = 20
