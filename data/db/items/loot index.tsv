@@ -7,7 +7,7 @@
 60	Safari - Mech 0	0	100	100	5	0
 70	Safari - Jack	0	100	100	10	0
 80	Safari - Bill	0	0	100	10	0
-90	Safari - Bill Hard	1	0	0	100	20
+90	Safari - Bill Hard	15	0	0	100	20
 100	DTB - Cages	0	100	25	0	0
 110	DTB - Adam	1	0	100	20	0
 120	DTB - Frank	1	0	100	20	0
@@ -23,8 +23,8 @@
 220	JY 3min Reward	0	100	25	5	0
 230	JY 3rd Side	0	100	25	5	0
 240	JY Gorgar	0	0	100	25	5
-250	JY Gorgar Hard	1	0	0	100	25
-260	JY Ditz Left Side Hard	1	0	0	100	25
+250	JY Gorgar Hard	15	0	0	100	25
+260	JY Ditz Left Side Hard	15	0	0	100	25
 270	JY Ditz	0	0	0	100	25
 280	JY Xessk	0	0	0	0	100
 290	Common Low Boss	0	100	75	50	25
@@ -34,16 +34,16 @@
 330	CF Village 1	0	100	25	5	0
 340	CF Village 2	0	100	25	5	0
 350	CF Boss	0	0	100	10	0
-360	CF Boss Extra 1	5	0	0	100	50
-370	CF Boss Extra 2	5	0	0	100	50
+360	CF Boss Extra 1	15	0	0	100	50
+370	CF Boss Extra 2	15	0	0	100	50
 380	AC West	0	0	100	20	0
 390	AC East	0	100	50	10	0
 400	AC Last	0	0	100	10	0
-410	AC Hard	2	0	0	100	10
+410	AC Hard	15	0	0	100	10
 420	RH Officers	0	0	100	10	0
 430	RH Zul Thark	0	0	0	50	20
-440	RH Final Master	10	0	0	10	100
+440	RH Final Master	15	0	0	10	100
 450	BRD Start	0	100	10	0	0
 460	BRD Lan Zealot	0	0	100	20	0
-470	BRD Lan Zealot - Hard	2	0	0	100	20
-111	DTB Hard Mythic	35	0	0	100	0
+470	BRD Lan Zealot - Hard	15	0	0	100	20
+111	DTB Hard Mythic	15	0	0	100	0

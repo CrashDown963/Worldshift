@@ -2154,38 +2154,61 @@
 20	Common Hard Boss	40190			Wind of Ghostly Darkness
 20	Common Hard Boss	40320			Acolyte Seeker Bolt
 90	Safari - Bill Hard	70000			MYTHIC Godlike Command Core
+90	Safari - Bill Hard	70006			MYTHIC Immortal Defender
 90	Safari - Bill Hard	70010			MYTHIC Cosmic Devastation
 90	Safari - Bill Hard	70020			MYTHIC Primal Ascension
 250	JY Gorgar Hard	70005			MYTHIC Master Engineer Core
+250	JY Gorgar Hard	70007			MYTHIC Neural God Matrix
 250	JY Gorgar Hard	70011			MYTHIC Eternal Guardian
+250	JY Gorgar Hard	70017			MYTHIC Corruption God Seed
 250	JY Gorgar Hard	70023			MYTHIC Titan Guardian Core
 260	JY Ditz Left Side Hard	70002			MYTHIC Divine Justice
+260	JY Ditz Left Side Hard	70007			MYTHIC Neural God Matrix
 260	JY Ditz Left Side Hard	70012			MYTHIC Dominion Core
 260	JY Ditz Left Side Hard	70021			MYTHIC Void Walker
+360	CF Boss Extra 1	70001			MYTHIC Shadow of the Void
 360	CF Boss Extra 1	70008			MYTHIC Legendary Arsenal
 360	CF Boss Extra 1	70016			MYTHIC Astral God Core
+360	CF Boss Extra 1	70019			MYTHIC Enigma of the Void
 360	CF Boss Extra 1	70025			MYTHIC Psychic Overlord
 370	CF Boss Extra 2	70004			MYTHIC Supreme Overlord
+370	CF Boss Extra 2	70006			MYTHIC Immortal Defender
+370	CF Boss Extra 2	70013			MYTHIC Harvester of Souls
 370	CF Boss Extra 2	70018			MYTHIC Dogma of Power
 370	CF Boss Extra 2	70022			MYTHIC Legendary Destroyer
+410	AC Hard	70001			MYTHIC Shadow of the Void
 410	AC Hard	70003			MYTHIC Celestial Healer
+410	AC Hard	70007			MYTHIC Neural God Matrix
 410	AC Hard	70015			MYTHIC Defiler of Worlds
+410	AC Hard	70019			MYTHIC Enigma of the Void
 410	AC Hard	70024			MYTHIC Phantom God Stone
+440	RH Final Master	70001			MYTHIC Shadow of the Void
+440	RH Final Master	70006			MYTHIC Immortal Defender
+440	RH Final Master	70007			MYTHIC Neural God Matrix
+440	RH Final Master	70013			MYTHIC Harvester of Souls
+440	RH Final Master	70017			MYTHIC Corruption God Seed
+440	RH Final Master	70019			MYTHIC Enigma of the Void
 440	RH Final Master	70027			MYTHIC Nature God Seed
 440	RH Final Master	70028			MYTHIC Mind God Matrix
 440	RH Final Master	70029			MYTHIC Spirit God Core
 440	RH Final Master	70030			MYTHIC Durable Frame
 440	RH Final Master	70031			MYTHIC Bio Core
 440	RH Final Master	70032			MYTHIC Eternal Core
+470	BRD Lan Zealot - Hard	70006			MYTHIC Immortal Defender
 470	BRD Lan Zealot - Hard	70009			MYTHIC Psionic God Core
+470	BRD Lan Zealot - Hard	70013			MYTHIC Harvester of Souls
 470	BRD Lan Zealot - Hard	70014			MYTHIC Mystic Transcendence
+470	BRD Lan Zealot - Hard	70017			MYTHIC Corruption God Seed
+470	BRD Lan Zealot - Hard	70019			MYTHIC Enigma of the Void
 470	BRD Lan Zealot - Hard	70026			MYTHIC Blood God Essence
 110	DTB - Adam	70000			MYTHIC Godlike Command Core
 110	DTB - Adam	70010			MYTHIC Cosmic Devastation
 110	DTB - Adam	70020			MYTHIC Primal Ascension
 111	DTB Hard Mythic	70000			MYTHIC Godlike Command Core
+111	DTB Hard Mythic	70001			MYTHIC Shadow of the Void
 111	DTB Hard Mythic	70003			MYTHIC Celestial Healer
 111	DTB Hard Mythic	70010			MYTHIC Cosmic Devastation
+111	DTB Hard Mythic	70013			MYTHIC Harvester of Souls
 111	DTB Hard Mythic	70014			MYTHIC Mystic Transcendence
 111	DTB Hard Mythic	70020			MYTHIC Primal Ascension
 111	DTB Hard Mythic	70021			MYTHIC Void Walker
