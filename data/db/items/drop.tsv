@@ -17,8 +17,8 @@
 80	Safari - Bill	80	Safari - Bill	100	1	1			100				
 80	Safari - Bill	80	Safari - Bill	25	1	1				100			
 80	Safari - Bill	290	Common Low Boss	100	1	1							
-90	Safari - Bill Hard	90	Safari - Bill Hard	100	1	1				100			
-90	Safari - Bill Hard	90	Safari - Bill Hard	25	1	1					100		
+90	Safari - Bill Hard	90	Safari - Bill Hard	100	1	1	35	0	0		100			
+90	Safari - Bill Hard	90	Safari - Bill Hard	25	1	1	35	0	0	100		
 90	Safari - Bill Hard	20	Common Hard Boss	100	1	1							
 90	Safari - Bill Hard	0	GENERIC	50	1	1							
 100	DTB - Cages	100	DTB - Cages	100	1	1		100					
@@ -62,10 +62,10 @@
 230	JY 3rd Side	230	JY 3rd Side	25	1	1		100	20	5			
 240	JY Gorgar	240	JY Gorgar	100	1	1			100				
 240	JY Gorgar	240	JY Gorgar	25	1	1				50	10		
-250	JY Gorgar Hard	250	JY Gorgar Hard	100	1	1				100			
-250	JY Gorgar Hard	250	JY Gorgar Hard	25	1	1					100		
-260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	100	1	1				100	10		
-260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	25	1	1					100		
+250	JY Gorgar Hard	250	JY Gorgar Hard	100	1	1	35	0	0		100			
+250	JY Gorgar Hard	250	JY Gorgar Hard	25	1	1	35	0	0	100		
+260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	100	1	1	35	0	0		100	10		
+260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	25	1	1	35	0	0	100		
 260	JY Ditz Left Side Hard	20	Common Hard Boss	50	1	1				50	10		
 270	JY Ditz	270	JY Ditz	100	1	1				100			
 270	JY Ditz	270	JY Ditz	25	1	1					100		
@@ -85,8 +85,8 @@
 330	CF Boss	350	CF Boss	100	1	1			100				
 330	CF Boss	350	CF Boss	25	1	1				100			
 330	CF Boss	20	Common Hard Boss	100	1	1							
-340	CF Boss Extra 1	360	CF Boss Extra 1	100	1	1							
-350	CF Boss Extra 2	370	CF Boss Extra 2	100	1	1							
+340	CF Boss Extra 1	360	CF Boss Extra 1	100	1	1	35	0	0					
+350	CF Boss Extra 2	370	CF Boss Extra 2	100	1	1	35	0	0							
 360	AC West	380	AC West	100	1	1			100				
 360	AC West	380	AC West	25	1	1				100			
 360	AC West	0	GENERIC	100	1	1		100	10				
@@ -96,8 +96,8 @@
 380	AC Last	400	AC Last	100	1	1			100				
 380	AC Last	400	AC Last	25	1	1				100			
 380	AC Last	0	GENERIC	50	1	1							
-390	AC Hard	410	AC Hard	100	1	1				100			
-390	AC Hard	410	AC Hard	25	1	1					100		
+390	AC Hard	410	AC Hard	100	1	1	35	0	0		100			
+390	AC Hard	410	AC Hard	25	1	1	35	0	0	100		
 390	AC Hard	20	Common Hard Boss	100	1	1							
 390	AC Hard	0	GENERIC	100	1	2							
 400	RH Officers	420	RH Officers	100	1	1			100				
@@ -106,21 +106,16 @@
 410	RH Zul Thark	430	RH Zul Thark	50	1	1					100		
 410	RH Zul Thark	20	Common Hard Boss	100	1	1							
 410	RH Zul Thark	30	Common Dungeon	100	1	2							
-420	RH Final	440	RH Final Master	100	1	1					100		
-420	RH Final	440	RH Final Master	25	1	1				100			
-420	RH Final	20	Common Hard Boss	100	1	2							
-420	RH Final	0	GENERIC	100	1	1		100	50	10			
-420	RH Final	30	Common Dungeon	10	1	1					100		
+420	RH Final	440	RH Final Master	100	1	1	35	0	0		100			
+420	RH Final	440	RH Final Master	25	1	1	35	0	0	100
 430	BRD Monster	450	BRD Start	100	1	1		100					
 430	BRD Monster	450	BRD Start	25	1	1			100				
 430	BRD Monster	0	GENERIC	100	1	2							
 440	BRD Lan Zealot	460	BRD Lan Zealot	100	1	1			100				
 440	BRD Lan Zealot	460	BRD Lan Zealot	25	1	1				100			
 440	BRD Lan Zealot	0	GENERIC	100	1	1							
-450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	100	1	1					100		
-450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	25	1	1				100			
-450	BRD Lan Zealot Hard	20	Common Hard Boss	100	1	1							
-450	BRD Lan Zealot Hard 290	Common Low Boss	100	1	1			100	50	20			
+450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	100	1	1	35	0	0		100			
+450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	25	1	1	35	0	0	100
 460	Bodo	30	Common Dungeon	100	1	1	0	100	20	0	0		
 460	Bodo	290	Common Low Boss	100	1	1			100	20	10		
 460	Bodo	10	PVP GENERIC	50	1	1					100		
