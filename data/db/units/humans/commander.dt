@@ -5,7 +5,7 @@ Commander Commander : BaseUnit {
   model = data/models/units/Commander/Commander3.kfm
   race = humans
   tags = unit, organic
-  speed = 450
+  speed = 5000
   take_auras : { RestorationCoreAura }
   icon = 1,1
   conv_icon_row = 2
@@ -18,7 +18,7 @@ Commander Commander : BaseUnit {
     psi = 350
 
     range = 1200
-    damage = 30
+    damage = 300000
     
     inject_hp = 250
     inject_power_cost = 110

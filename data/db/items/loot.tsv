@@ -1,3 +1,9 @@
+0	GENERIC	40340			Body Stimulation
+0	GENERIC	40060			Tribal Focus
+0	GENERIC	40020			Hive Matrix Barrier
+0	GENERIC	40130			Intelligent Targeting Core
+0	GENERIC	40190			Wind of Ghostly Darkness
+0	GENERIC	40320			Acolyte Seeker Bolt
 10	PVP GENERIC	40130			Intelligent Targeting Core
 10	PVP GENERIC	40300			Tactical First-Aid Kit 
 10	PVP GENERIC	40340			Body Stimulation 
@@ -2140,3 +2146,9 @@
 470	BRD Lan Zealot - Hard	62830			Arch Lord Astrodice
 470	BRD Lan Zealot - Hard	63000			Demonic Chant of Life
 470	BRD Lan Zealot - Hard	63370			Subdued Life Splicer
+20	Common Hard Boss	40340			Body Stimulation
+20	Common Hard Boss	40060			Tribal Focus
+20	Common Hard Boss	40020			Hive Matrix Barrier
+20	Common Hard Boss	40130			Intelligent Targeting Core
+20	Common Hard Boss	40190			Wind of Ghostly Darkness
+20	Common Hard Boss	40320			Acolyte Seeker Bolt

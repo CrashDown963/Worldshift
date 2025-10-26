@@ -2024,7 +2024,7 @@
 60230	1	Humans	HUMAN_SURGEON	Bio Training 	Surgeon	Surgeon hp = 3%		
 60240	3	Humans	HUMAN_IMPLANTS	Expert Fitness Activation	Trooper	Trooper hp = 6%		
 60250	2	Aliens	ALIEN_ARBITER	Black Matrix Warp	Arbiter	Arbiter damage = 7Arbiter hp = 2%		
-60260	1	Humans	HUMAN_ASSASSIN	Particle Guns 	Assassin	Assassin damage = 4		
+60260	1	Humans	HUMAN_ASSASSIN	Particle Guns 	Assassin	Assassin damage = 400000		
 60270	5	Tribes	MUTANT_BLOOD	Idol of Ferocious Flame	Brute	Brute ignite_duration = 5Brute armor = 4		
 60280	5	Aliens	ALIEN_DOMINATOR	Life Energy Concentrator	Dominator	Dominator healing_taken_mod = 42%Dominator crit_chance = 3Dominator power_fuse_area = 4%		
 60290	2	Tribes	MUTANT_BLOOD	Rhyme of Gripping Desire	GuardianWarrior	Guardian psi = 6%Warrior healing_taken_mod = 2%		
@@ -2678,7 +2678,7 @@
 66770	1	Humans	HUMAN_SURGEON	Bacterial Heal-Kit 	Surgeon	Surgeon mend_heal = 11		
 66780	1	Aliens	ALIEN_MASTER	Grid Armor 	Master	Master armor = 1		
 66790	4	Aliens	ALIEN_DOMINATOR	Cosmic Fever 	Dominator	Dominator power_fuse_area = 6%		
-66800	1	Humans	HUMAN_ASSASSIN	Sub-cell Training 	Assassin	Assassin hp = 1%Assassin damage = 170000		
+66800	1	Humans	HUMAN_ASSASSIN	Sub-cell Training 	Assassin	Assassin hp = 1%Assassin damage = 4
 66810	5	Tribes	MUTANT_HIGHPRIEST	Bolt of Pure Light	HighPriest	HighPriest lightning_damage = 81HighPriest hp_gen = 66		
 66820	1	Aliens	ALIEN_MASTER	Power Shard 	Master	Master psi = 3%		
 66830	5	Aliens	ALIEN_CORRUPTION	Black Flame 	OverseerTrisat	Overseer charging_field_psi_perc = 4Overseer psi_gen = 12Trisat armor = 2Trisat hp_gen = 10		

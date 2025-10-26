@@ -1,6 +1,6 @@
-0	GENERIC	50	25	10	5	1
-10	PVP GENERIC	50	25	10	5	1
-20	Common Hard Boss	0	0	20	5	1
+0	GENERIC	100	25	10	5	1
+10	PVP GENERIC	100	25	10	5	1
+20	Common Hard Boss	100	0	20	5	1
 30	Common Dungeon	50	25	10	5	1
 40	PvP Rewards	50	25	10	5	1
 50	Safari - Queen	0	100	100	5	0
@@ -9,7 +9,7 @@
 80	Safari - Bill	0	0	100	10	0
 90	Safari - Bill Hard	0	0	0	100	20
 100	DTB - Cages	0	100	25	0	0
-110	DTB - Adam	0	0	100	20	0
+110	DTB - Adam	100	0	100	20	0
 120	DTB - Frank	0	0	100	20	0
 130	BSA - Horror	0	100	100	20	0
 140	BSA - Yamu	0	100	100	20	0
