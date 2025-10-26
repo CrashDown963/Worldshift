@@ -982,8 +982,8 @@
 50	Safari - Queen	48150			Sacred Surge of Mind
 50	Safari - Queen	48280			Eternal Claws of Blood
 50	Safari - Queen	47070			Sacred Paw of the Deer
-50	Safari - Queen	47390			Guardian�s Razor Edge
-50	Safari - Queen	46360			Deacon�s Event of Cosmos
+50	Safari - Queen	47390			Guardians Razor Edge
+50	Safari - Queen	46360			Deacons Event of Cosmos
 50	Safari - Queen	46550			Astral Catalytic Adhesion
 50	Safari - Queen	46670			Torsion Psionic Vortex
 50	Safari - Queen	48770			Seeker Bolt of Pain
@@ -1000,9 +1000,12 @@
 50	Safari - Queen	57390			Spring of Youth 
 50	Safari - Queen	59200			Runic Catalytic Synthesis
 50	Safari - Queen	59250			Runic Torsion Odds
-50	Safari - Queen	59410			Deacon�s Energy Shard
+50	Safari - Queen	59410			Deacons Energy Shard
 50	Safari - Queen	59450			Deep Rune Barrier
 50	Safari - Queen	59650			Runic Torsion Event
+50	Safari - Queen	69990			Saturated Pulsation
+50	Safari - Queen	69830			Halo of Protection
+50	Safari - Queen	69580			Sub-cell Stimulation
 60	Safari - Mech 0	47760			Intelligent Alloy Module
 60	Safari - Mech 0	47830			Tactical Revitalizer �Pro�
 60	Safari - Mech 0	48040			Glorious Shout of Dominance
@@ -1087,6 +1090,7 @@
 90	Safari - Bill Hard	51360			Ritual Warp of Pain
 90	Safari - Bill Hard	51370			Sub Zero Energy Infuser
 90	Safari - Bill Hard	51940			Energized Pair of Nails
+
 100	DTB - Cages	46530			Balanced Sweeping Shells
 100	DTB - Cages	46570			Autorepair Booster Pack 
 100	DTB - Cages	46630			Second Life Injector �Pro�

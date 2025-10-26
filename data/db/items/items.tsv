@@ -2981,7 +2981,6 @@
 69800	3	Tribes	MUTANT_NATURE	Sacred Step of Avoidance	GuardianHighPriest	Guardian fortify_armor = 1HighPriest pyrowave_chance = 1HighPriest healing_taken_mod = 10%		
 69810	2	Humans	HUMAN_WEAPONS	Field Charged Slugs	AssassinHellfire	Assassin expose_target_chance = 4Hellfire damage = 3		
 69820	1	Tribes	MUTANT_HIGHPRIEST	Claw of the Brute 	HighPriest	HighPriest hp = 1%		
-69830	1	Tribes	MUTANT_NATURE	Halo of Protection 	Warrior	Warrior armor = 1		
 69840	4	Humans	HUMAN_IMPLANTS	Infused Neural Implant “165”	SurgeonTrooper	Surgeon psi = 14%Surgeon armor = 2Trooper crit_chance = 1		
 69850	2	Aliens	ALIEN_POWER	Subcarbon Rune Screen	Trisat	Trisat armor = 2Trisat hp = 2%		
 69860	2	Aliens	ALIEN_POWER	Runic Chromatic Exoskin	Harvester	Harvester healing_taken_mod = 18%Harvester hp = 2%		
@@ -2998,3 +2997,5 @@
 69970	4	Humans	HUMAN_ASSASSIN	Rare Bioactive Covers	Assassin	Assassin armor = 4		
 69980	2	Humans	HUMAN_COMMANDER	Stabilized Particle Phasers	Commander	Commander damage = 8		
 69990	1	Aliens	ALIEN_POWER	Saturated Pulsation 	Harvester	Harvester hp = 2%		
+69830	1	Tribes	MUTANT_NATURE	Halo of Protection 	Warrior	Warrior armor = 1		
+69580	1	Humans	HUMAN_WEAPONS	Sub-cell Stimulation 	Trooper	Trooper hp = 1%		

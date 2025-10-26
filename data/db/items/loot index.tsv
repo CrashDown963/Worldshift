@@ -3,7 +3,7 @@
 20	Common Hard Boss	100	0	20	5	1
 30	Common Dungeon	50	25	10	5	1
 40	PvP Rewards	50	25	10	5	1
-50	Safari - Queen	0	100	100	5	0
+50	Safari - Queen	100	1	1	5	0
 60	Safari - Mech 0	0	100	100	5	0
 70	Safari - Jack	0	100	100	10	0
 80	Safari - Bill	0	0	100	10	0
