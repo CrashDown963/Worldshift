@@ -1,2 +1,12 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Force CRLF line endings for game files (game expects Windows line endings)
+*.tsv text eol=crlf
+*.dt text eol=crlf
+*.ini text eol=crlf
+*.cfg text eol=crlf
+*.txt text eol=crlf
+*.lua text eol=crlf
+*.fx text eol=crlf
+*.fxh text eol=crlf

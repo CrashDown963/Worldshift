@@ -6,6 +6,18 @@
 - If you encounter issues, check that you have the correct repository URL
 - Keep your Git installation updated for the best experience
 
+## Why ZIP Downloads Don't Work
+
+If you download the repository as a ZIP file and the game doesn't work, but it does work with `git clone`, this is due to **line ending differences**:
+
+- **Git clone**: Automatically converts LF (Unix) to CRLF (Windows) line endings during checkout
+- **ZIP downloads**: Extracts files with their original line endings (typically LF)
+- **The game expects CRLF**: WorldShift.exe reads files expecting Windows line endings (CRLF)
+
+When you manually copy `data/db` from a git clone to a ZIP download, the files now have the correct CRLF line endings and the game works.
+
+**Solution**: Always use `git clone` to ensure files have the correct line endings.
+
 
 
 ## Installation Guide
