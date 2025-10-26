@@ -339,3 +339,10 @@ destroy_succ	You destroyed the artifacts and successfully extracted [#] xenoshar
 destroy_succ1	You destroyed the artifacts and successfully extracted 1 xenoshard.
 destroy_fail	You destroyed the artifacts but did not succeed in extracting any xenoshards. Better luck next time!
 continue	Continue
+//// Player Level System
+player_level	Level
+experience_points	Experience Points
+xp_gained	XP Gained
+level_up	LEVEL UP!
+max_skill_points_reached	Maximum skill points reached for your level!
+skill_points_available	Skill Points Available
