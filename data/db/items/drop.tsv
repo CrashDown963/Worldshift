@@ -124,8 +124,8 @@
 460	Bodo	30	Common Dungeon	100	1	1	0	100	20	0	0					
 460	Bodo	290	Common Low Boss	100	1	1			100	20	10					
 460	Bodo	10	PVP GENERIC	50	1	1					100					
+470	DTB Hard	20	Common Hard Boss	100	1	1				100	25
+470	DTB Hard	0	GENERIC	100	1	1					100
+470	DTB Hard	10	PVP GENERIC	25	1	1					100
 470	DTB Hard	111	DTB Hard Mythic	100	1	1	15	0	0					
-470	DTB Hard	111	DTB Hard Mythic	25	1	1	15	0	0					
-470	DTB Hard	20	Common Hard Boss	100	1	1					
-470	DTB Hard	0	GENERIC	100	1	1					
-470	DTB Hard	10	PVP GENERIC	25	1	1
+470	DTB Hard	111	DTB Hard Mythic	25	1	1	15	0	0
