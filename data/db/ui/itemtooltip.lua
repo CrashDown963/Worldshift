@@ -41,7 +41,7 @@ local max_stats = 5
 local max_units = 10
 
 local itemcolors = {
-  clr1 = {183,187,200,255},
+  clr1 = {255,0,0,255},
   clr2 = {119,224,80,255},
   clr3 = {255,255,0,255},
   clr4 = {255,172,49,255},
