@@ -18,8 +18,10 @@ Unit Shifter : AlienUnit {
     hp = 580
     psi = 300
     armor = 8
-    range = 1400
+    range = stat:range
     damage = 10
+    speed = 450
+    range = 1400
 
     shield_hull = 250
     shield_regen  = 120
@@ -42,7 +44,7 @@ Unit Shifter : AlienUnit {
     infestation_hatchlings = 1
   }
   
-  speed = 450
+  speed = stat:speed
   actions :{
     BreedAction
   }

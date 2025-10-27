@@ -64,8 +64,10 @@ Unit HighPriest : BaseUnit {
  
   stats :{
     hp = 850
-    range = 1800
+    range = stat:range
     psi = 500
+    speed = 450
+    range = 1800
 
     damage = 35
     armor = 2
@@ -83,7 +85,7 @@ Unit HighPriest : BaseUnit {
     freeze_duration = 5
     freeze_power = 120
   }
-  speed = 450
+  speed = stat:speed
 
   impacts : LivingUnitImpacts
   xp = 0

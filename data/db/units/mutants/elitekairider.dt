@@ -14,12 +14,14 @@ Unit EliteKaiRider : BaseUnit {
     hp = 320
     armor = 15
     damage = 40
+    range = stat:range
+    speed = 450
     range = 2200
     
     frenzy_crit_chance = 5
   }
 
-  speed = 450
+  speed = stat:speed
 
   frenzy_threshold = stat:damage * 3
   frenzy_duration = 15

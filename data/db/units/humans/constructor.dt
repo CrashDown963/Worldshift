@@ -6,6 +6,7 @@ Constructor Constructor : MachineUnit {
   officer = 1
   icon = 4,4
   explosion = ExplosionMedium_03
+  speed = stat:speed
 
   can_build = 1
 
@@ -61,12 +62,14 @@ Constructor Constructor : MachineUnit {
 
     hp = 420
     armor = 7
-    range = 1600
+    range = stat:range
 
     damage = 14
     
     power = 300
 
+    speed = 450
+    range = 1600
 
     nano_fix_power = 50
     nano_fix_heal = 200

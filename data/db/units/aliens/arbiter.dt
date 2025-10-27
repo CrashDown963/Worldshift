@@ -26,7 +26,7 @@ Unit Arbiter : AlienUnit {
 
   stats :{
     hp = 320
-    range = 2200
+    range = stat:range
     psi = 300
     damage = 80 
     armor = 2
@@ -43,9 +43,10 @@ Unit Arbiter : AlienUnit {
     fear_shock_area = 300
     fear_shock_duration = 6
     fear_shock_range = 1800
-    
+    speed = 450
+    range = 2200
   }
-  speed = 450
+  speed = stat:speed
 
   aggro_range = stat:range
   

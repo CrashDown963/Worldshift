@@ -33,6 +33,8 @@ Unit Overseer : MachineUnit {
     armor = 4
     damage = 9
     power = 300
+    range = stat:range
+    speed = 450
     range = 1800
     
     field_fire_rate = 2.5
@@ -54,7 +56,7 @@ Unit Overseer : MachineUnit {
     charging_field_tick = 5
   }
 
-  speed = 450
+  speed = stat:speed
 
   aggro_range = var:sight
   

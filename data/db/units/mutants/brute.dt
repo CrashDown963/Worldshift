@@ -12,9 +12,11 @@ Unit Brute : BaseUnit {
     armor = 14
     psi = 0
     psi_gen = 0
-    range = 150
+    range = stat:range
     damage = 8
     growl_duration = 4
+    speed = 450
+    range = 150
     growl_chance = 5
     ignite_on_strike_chance = 0
     ignite_duration = 8
@@ -22,7 +24,7 @@ Unit Brute : BaseUnit {
   sight = stat:range + 1050
   aggro_range = var:sight
   min_attack_range = 80
-  speed = 450
+  speed = stat:speed
 
   ignite_targets = 3
   ignite_damage = stat:damage * 0.5

@@ -30,9 +30,10 @@ Unit Dominator: AlienUnit {
   stats :{
     hp = 450
     armor = 7
-    range = 1400
+    range = stat:range
     damage = 15
     speed = 450
+    range = 1400
     psi = 360
 
     shield_hull = 100
@@ -57,7 +58,7 @@ Unit Dominator: AlienUnit {
     fire_rate = 1.8
   }
   
-  speed = 450
+  speed = stat:speed
   sight_in_combat = 6000
   sight = stat:range + 400
   aggro_range = var:sight
