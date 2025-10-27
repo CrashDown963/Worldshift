@@ -21,6 +21,8 @@
 90	Safari - Bill Hard	90	Safari - Bill Hard	5	1	1	15	0	0					
 90	Safari - Bill Hard	20	Common Hard Boss	100	1	1					
 90	Safari - Bill Hard	0	GENERIC	50	1	1										
+90	Safari - Bill Hard	112	Safari - Bill Hard Mythic	10	1	1	100	0	0
+90	Safari - Bill Hard	121	All Mythics Pool	3	1	1	100	0	0
 100	DTB - Cages	100	DTB - Cages	100	1	1		100								
 100	DTB - Cages	100	DTB - Cages	25	1	1			100							
 100	DTB - Cages	0	GENERIC	100	1	1										
@@ -64,9 +66,13 @@
 240	JY Gorgar	240	JY Gorgar	25	1	1				50	10					
 250	JY Gorgar Hard	250	JY Gorgar Hard	10	1	1	15	0	0					
 250	JY Gorgar Hard	250	JY Gorgar Hard	5	1	1	15	0	0						
+250	JY Gorgar Hard	113	JY Gorgar Hard Mythic	10	1	1	100	0	0
+250	JY Gorgar Hard	121	All Mythics Pool	3	1	1	100	0	0
 260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	10	1	1	15	0	0					
 260	JY Ditz Left Side Hard	260	JY Ditz Left Side Hard	5	1	1	15	0	0					
 260	JY Ditz Left Side Hard	20	Common Hard Boss	50	1	1				50	10					
+260	JY Ditz Left Side Hard	114	JY Ditz Left Side Hard Mythic	10	1	1	100	0	0
+260	JY Ditz Left Side Hard	121	All Mythics Pool	3	1	1	100	0	0
 270	JY Ditz	270	JY Ditz	100	1	1				100						
 270	JY Ditz	270	JY Ditz	25	1	1					100					
 270	JY Ditz	0	GENERIC	100	1	1										
@@ -86,7 +92,11 @@
 330	CF Boss	350	CF Boss	25	1	1				100						
 330	CF Boss	20	Common Hard Boss	100	1	1										
 340	CF Boss Extra 1	360	CF Boss Extra 1	10	1	1	15	0	0					
+340	CF Boss Extra 1	115	CF Boss Extra 1 Mythic	10	1	1	100	0	0
+340	CF Boss Extra 1	121	All Mythics Pool	3	1	1	100	0	0
 350	CF Boss Extra 2	370	CF Boss Extra 2	10	1	1	15	0	0							
+350	CF Boss Extra 2	116	CF Boss Extra 2 Mythic	10	1	1	100	0	0
+350	CF Boss Extra 2	121	All Mythics Pool	3	1	1	100	0	0							
 360	AC West	380	AC West	100	1	1			100							
 360	AC West	380	AC West	25	1	1				100						
 360	AC West	0	GENERIC	100	1	1		100	10							
@@ -100,6 +110,8 @@
 390	AC Hard	410	AC Hard	5	1	1	15	0	0					
 390	AC Hard	20	Common Hard Boss	100	1	1					
 390	AC Hard	0	GENERIC	100	1	2										
+390	AC Hard	117	AC Hard Mythic	10	1	1	100	0	0
+390	AC Hard	121	All Mythics Pool	3	1	1	100	0	0
 400	RH Officers	420	RH Officers	100	1	1			100							
 400	RH Officers	420	RH Officers	25	1	1				100						
 410	RH Zul Thark	430	RH Zul Thark	100	1	1				100						
@@ -111,6 +123,8 @@
 420	RH Final	20	Common Hard Boss	100	1	2					
 420	RH Final	0	GENERIC	100	1	1		100	50	10	    
 420	RH Final	30	Common Dungeon	10	1	1					100
+420	RH Final	118	RH Final Master Mythic	10	1	1	100	0	0
+420	RH Final	121	All Mythics Pool	3	1	1	100	0	0
 430	BRD Monster	450	BRD Start	100	1	1		100								
 430	BRD Monster	450	BRD Start	25	1	1			100							
 430	BRD Monster	0	GENERIC	100	1	2										
@@ -121,6 +135,8 @@
 450	BRD Lan Zealot Hard	470	BRD Lan Zealot - Hard	5	1	1	15	0	0					
 450	BRD Lan Zealot Hard	20	Common Hard Boss	100	1	1					
 450	BRD Lan Zealot Hard	290	Common Low Boss	100	1	1			100	50	20										
+450	BRD Lan Zealot Hard	119	BRD Lan Zealot Hard Mythic	10	1	1	100	0	0
+450	BRD Lan Zealot Hard	121	All Mythics Pool	3	1	1	100	0	0
 460	Bodo	30	Common Dungeon	100	1	1	0	100	20	0	0					
 460	Bodo	290	Common Low Boss	100	1	1			100	20	10					
 460	Bodo	10	PVP GENERIC	50	1	1					100					
@@ -129,3 +145,4 @@
 470	DTB Hard	10	PVP GENERIC	25	1	1					100
 470	DTB Hard	111	DTB Hard Mythic	10	1	1	15	0	0					
 470	DTB Hard	111	DTB Hard Mythic	5	1	1	15	0	0
+470	DTB Hard	121	All Mythics Pool	3	1	1	100	0	0
