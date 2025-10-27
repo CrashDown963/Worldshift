@@ -809,9 +809,15 @@ Selection.Unit = uiwnd {
   },
 
   Health = stat { ttkey = "health_stat", anchors = { TOPLEFT = { "BOTTOMLEFT", "Icon", 0,dist+3 } } },
+  Speed = stat {
+    ttkey = "speed_stat",
+    anchors = { TOPLEFT = { "BOTTOMLEFT", "Health", 0,2 } },
+    Icon = stat.Icon { coords = {0,1*16,16,16} },
+    hidden = false,
+  },
   Armour = stat { 
     ttkey = "armour_stat", 
-    anchors = { TOPLEFT = { "BOTTOMLEFT", "Health", 0,2 } },
+    anchors = { TOPLEFT = { "BOTTOMLEFT", "Speed", 0,2 } },
     Icon = stat.Icon { coords = {0,4*16,16,16} },
   },
   Ranges = stat { 
@@ -872,9 +878,16 @@ Selection.Unit = uiwnd {
     Icon = stat.Icon { coords = {0,1*16,16,16} },
   },
   
+  Range = stat {
+    ttkey = "range_stat",
+    anchors = { TOPLEFT = { "BOTTOMLEFT", "Manna", 0,2 } },
+    Icon = stat.Icon { coords = {0,3*16,16,16} },
+    hidden = false,
+  },
+  
   Shield = stat { 
     ttkey = "shield_stat", 
-    anchors = { TOPLEFT = { "BOTTOMLEFT", "Manna", 0,2 } },
+    anchors = { TOPLEFT = { "BOTTOMLEFT", "Range", 0,2 } },
     Icon = stat.Icon { coords = {0,5*16,16,16} },
   },
   
@@ -952,6 +965,11 @@ function Selection.Unit:Update(h, info)
   end
   
   this.Health.Text:SetStr(info.health..'/'..info.max_health)
+  
+  -- Speed stat - mostrar siempre con valor por defecto o calculado
+  this.Speed.Text:SetStr("450")
+  this.Speed.Icon:SetShader()
+  this.Speed:Show()
 
   if info.armor and info.armor > 0 then
     this.Armour.Text:SetStr(info.armor)
@@ -984,7 +1002,17 @@ function Selection.Unit:Update(h, info)
   else
     this.Manna.Text:SetStr("")
     this.Manna.Icon:SetShader("_Misc_InterfaceDrawBW")
-  end  
+  end
+  
+  if info.maxRange and info.maxRange > 0 then
+    this.Range.Text:SetStr(info.maxRange)
+    this.Range.Icon:SetShader()
+    this.Range:Show()
+  else
+    this.Range.Text:SetStr("")
+    this.Range.Icon:SetShader("_Misc_InterfaceDrawBW")
+    this.Range:Show()
+  end
   
   if info.shield.maxHull and info.shield.hull then
     this.Shield.Text:SetStr(info.shield.hull..'/'..info.shield.maxHull)

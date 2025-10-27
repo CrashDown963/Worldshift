@@ -5,9 +5,10 @@ Commander Commander : BaseUnit {
   model = data/models/units/Commander/Commander3.kfm
   race = humans
   tags = unit, organic
-  speed = 5000
   take_auras : { RestorationCoreAura }
   icon = 1,1
+  
+  speed = stat:speed
   conv_icon_row = 2
   conv_icon_col = 4
   
@@ -30,6 +31,8 @@ Commander Commander : BaseUnit {
     confuse_duration = 8
     confuse_armor_perc_buff = 50
     confuse_power = 90
+    
+    speed = 450
   }
 
   confuse_range = stat:range

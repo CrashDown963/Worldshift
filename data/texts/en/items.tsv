@@ -134,6 +134,7 @@ stat.hp_gen	Hit Point Generation
 stat.psi_gen	Power Generation
 stat.crit_chance	Critical Hit Chance
 stat.healing_taken_mod	Healing Taken
+stat.speed	Movement Speed
 
 	
 //// Generic item descriptions	

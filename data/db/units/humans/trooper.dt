@@ -8,8 +8,9 @@ Trooper Trooper : BaseUnit {
   race = humans
   icon = 1,1
 
-  speed = 450
   take_auras : { RestorationCoreAura }
+  
+  speed = stat:speed
 
   sounds {
     start = data/speech/summoning/trooper/
@@ -33,6 +34,7 @@ Trooper Trooper : BaseUnit {
     damage = 6
     motivation = 0
     crit_chance_increase = 5
+    speed = 450
   }
   
   physics {
