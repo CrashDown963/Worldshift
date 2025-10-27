@@ -346,12 +346,25 @@ function Selection:ShowTooltip(ui)
     Tooltip.Title:SetStr(ui.name)
     Tooltip.Text:SetStr("<p>"..(ui.text or "</>"))
   elseif ui.type == "stat" then
-    local str = ui.Text:GetStr()
-    if str and str ~= "" then
-      Tooltip.Title:SetStr(TEXT{ui.ttkey})
-      Tooltip.Text:SetStr("<p>"..TEXT{ui.ttkey.."_d"})
+    -- Añadir información de rangos si es damagerange_stat
+    if ui.ttkey == "damagerange_stat" and this.Unit and this.Unit.rangeInfo then
+      local ri = this.Unit.rangeInfo
+      -- Calcular daño del rango medio (promedio entre óptimo y peor)
+      local midDamage = math.floor((ri.optDamage + ri.badDamage) / 2)
+      
+      Tooltip.Title:SetStr("Damage by Range")
+      local rangeText = "<p><color=0,165,0>Optimal: "..math.floor(ri.optRange).." range ("..ri.optDamage.." damage)</>"
+      rangeText = rangeText .. "<nl><p><color=255,204,0>Medium: "..math.floor(ri.midRange).." range ("..midDamage.." damage)</>"
+      rangeText = rangeText .. "<nl><p><color=255,102,0>Minimal: "..math.floor(ri.badRange).." range ("..ri.badDamage.." damage)</>"
+      Tooltip.Text:SetStr(rangeText)
     else
-      return  
+      local str = ui.Text:GetStr()
+      if str and str ~= "" then
+        Tooltip.Title:SetStr(TEXT{ui.ttkey})
+        Tooltip.Text:SetStr("<p>"..TEXT{ui.ttkey.."_d"})
+      else
+        return  
+      end
     end
   end  
   
@@ -984,7 +997,34 @@ function Selection.Unit:Update(h, info)
     this.Ranges_bar.Text:SetStr(info.nearDamage..' - '..info.farDamage)
     this.Ranges_bar:Show()
     this.Ranges:Hide()
+    
+    -- Guardar info de rangos para el tooltip
+    this.rangeInfo = {}
+    if info.minRange and info.midRange and info.maxRange then
+      -- Ordenar rangos correctamente
+      -- minRange = rango más lejano, maxRange = rango más cercano (al revés de lo esperado)
+      if info.nearDamage > info.farDamage then
+        -- Más daño de cerca: maxRange (cerca) es óptimo (verde), minRange (lejos) es peor (naranja)
+        this.rangeInfo = {
+          optRange = info.maxRange,
+          midRange = info.midRange,
+          badRange = info.minRange,
+          optDamage = info.nearDamage,
+          badDamage = info.farDamage
+        }
+      else
+        -- Más daño de lejos: minRange (lejos) es óptimo (verde), maxRange (cerca) es peor (naranja)
+        this.rangeInfo = {
+          optRange = info.minRange,
+          midRange = info.midRange,
+          badRange = info.maxRange,
+          optDamage = info.farDamage,
+          badDamage = info.nearDamage
+        }
+      end
+    end
   else
+    this.rangeInfo = nil
     local damage = info.nearDamage
     if not info.nearDamage or info.nearDamage < 1 then 
       damage = info.damage
