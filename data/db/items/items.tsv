@@ -3009,7 +3009,7 @@
 70030	1	Humans	HUMAN_SPECA1	MYTHIC Durable Frame	TrooperRipperAssaultBotHellfire	Trooper hp = 35%Trooper damage = 2Ripper hp = 65%Ripper damage = 4Ripper armor = 14AssaultBot hp = 30%AssaultBot damage = 20Hellfire hp = 40%Hellfire armor = 15Hellfire damage = 12		
 70010	1	Aliens	ALIEN_MASTER	MYTHIC Cosmic Devastation	Master	Master damage = 30Master hp = 25%Master psi = 40%Master psi_gen = 100Master nether_nova_damage = 30		
 70011	1	Aliens	ALIEN_ARBITER	MYTHIC Eternal Guardian	Arbiter	Arbiter hp = 25%Arbiter armor = 15Arbiter psi = 35%Arbiter healing_taken_mod = 50%Arbiter damage = 30		
-70012	1	Aliens	ALIEN_DOMINATOR	MYTHIC Dominion Core	Dominator	Dominator damage = 40Dominator hp = 35%Dominator psi = 40%Dominator stasis_shot_chance = 6Dominator armor = 10		
+70012	1	Aliens	ALIEN_DOMINATOR	MYTHIC Dominion Core	Dominator	Dominator damage = 20Dominator hp = 35%Dominator psi = 40%Dominator stasis_shot_chance = 6Dominator armor = 10		
 70013	1	Aliens	ALIEN_HARVESTER	MYTHIC Harvester of Souls	Harvester	Harvester hp = 50%Harvester harvest_damage = 40Harvester armor = 20Harvester healing_taken_mod = 45%Harvester harvest_chance = 5		
 70014	1	Aliens	ALIEN_MANIPULATOR	MYTHIC Mystic Transcendence	Manipulator	Manipulator life_leech_boost = 30Manipulator healing_taken_mod = 50%Manipulator psi = 35%Manipulator damage = 12Manipulator crit_chance = 12		
 70015	1	Aliens	ALIEN_DEFILER	MYTHIC Defiler of Worlds	Defiler	Defiler damage = 30Defiler hp = 30%Defiler armor = 12Defiler psi = 30%		
