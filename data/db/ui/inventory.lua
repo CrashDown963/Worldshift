@@ -9,36 +9,22 @@ local DragingItem = false
 
 -- Experience System Functions (define early so Recycle slot can access them)
 local function CalculateLevel(totalExp)
-  if totalExp < 500 then return 1
-  elseif totalExp < 1500 then return 2
-  elseif totalExp < 3500 then return 3
-  elseif totalExp < 7500 then return 4
-  elseif totalExp < 15000 then return 5
-  elseif totalExp < 30000 then return 6
-  else
-    -- Level 7+ requires exponentially more exp
-    local expForLevel7 = 30000
-    local level = 7
-    local expNeeded = 15000 -- Amount needed for level 6->7
-    
-    while totalExp >= expForLevel7 do
-      level = level + 1
-      expNeeded = expNeeded * 2 -- Double the exp needed each level
-      expForLevel7 = expForLevel7 + expNeeded
-    end
-    
-    return level
-  end
+  -- Each level requires exactly 1000 XP
+  -- Level 1 = 0-999 XP
+  -- Level 2 = 1000-1999 XP
+  -- Level 3 = 2000-2999 XP, etc.
+  local level = math.floor(totalExp / 1000) + 1
+  return math.max(1, math.min(level, 999)) -- Cap at level 999
 end
 
 local function GetExpForQuality(quality)
   local expTable = {
     [1] = 10,   -- Common
-    [2] = 25,   -- Uncommon
-    [3] = 50,   -- Rare
-    [4] = 100,  -- Epic
-    [5] = 250,  -- Legendary
-    [6] = 500   -- Mythic
+    [2] = 20,   -- Uncommon
+    [3] = 30,   -- Rare
+    [4] = 50,   -- Epic
+    [5] = 100,  -- Legendary
+    [6] = 200   -- Mythic
   }
   return expTable[quality] or 10
 end
@@ -277,17 +263,32 @@ Inventory.DefItemSlot = uislot {
           local quality = item.quality
           -- Only destroy tier 4 (Epic) or tier 5 (Legendary) items
           if quality == 4 or quality == 5 then
-            -- Award experience and move to EXP_REPOSITORY_ITEMS (invisible repository)
-            AwardExperience(quality, item)
+            -- Check if player is already at max level (100)
+            local playerData = game.LoadUserPrefs("experience")
+            local currentLevel = 1
+            if playerData and playerData.level then
+              currentLevel = playerData.level
+            end
             
-            local result = this:MoveItem("EXP_REPOSITORY_ITEMS")
-            if result then
-              game.PlaySnd(sounds.inv_item_out)
-            else
-              -- If repository is full, show error message
+            if currentLevel >= 100 then
+              -- Max level reached, show error
               game.PlaySnd(sounds.item_reject)
               if ErrText then
-                ErrText:ShowText("Destruction repository is full.")
+                ErrText:ShowText("Maximum level reached. Can't destroy more items for experience.")
+              end
+            else
+              -- Award experience and move to EXP_REPOSITORY_ITEMS (invisible repository)
+              AwardExperience(quality, item)
+              
+              local result = this:MoveItem("EXP_REPOSITORY_ITEMS")
+              if result then
+                game.PlaySnd(sounds.inv_item_out)
+              else
+                -- If repository is full, show error message
+                game.PlaySnd(sounds.item_reject)
+                if ErrText then
+                  ErrText:ShowText("Destruction repository is full.")
+                end
               end
             end
           else

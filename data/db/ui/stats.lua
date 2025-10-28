@@ -802,10 +802,16 @@ Stats = uiwnd {
       
       -- Load and display player level
       local playerExp = game.LoadUserPrefs("experience")
-      if playerExp and playerExp.level then
-        this.PlayerLevel.StatPanel.Text:SetStr(tostring(playerExp.level))
+      if playerExp and playerExp.level and playerExp.total then
+        local level = playerExp.level
+        local totalExp = playerExp.total
+        -- Calculate current experience in this level and max needed
+        local currentExpInLevel = totalExp % 1000
+        local maxExpInLevel = 1000
+        -- Format: "Level X | Exp: Y/Z"
+        this.PlayerLevel.StatPanel.Text:SetStr(level .. " | " .. currentExpInLevel .. "/" .. maxExpInLevel)
       else
-        this.PlayerLevel.StatPanel.Text:SetStr("1")
+        this.PlayerLevel.StatPanel.Text:SetStr("1 | 0/1000")
       end            
       
       local stats = game.LoadUserData("stats")
