@@ -65,11 +65,13 @@ local function AwardExperience(quality, recycledItem)
   -- Show feedback
   if newLevel > oldLevel then
     if ErrText then
-      ErrText:ShowText(TEXT{"level_up", newLevel})
+      local levelText = TEXT("level_up"):gsub("{0}", tostring(newLevel))
+      ErrText:ShowText(levelText)
     end
   else
     if ErrText then
-      ErrText:ShowText(TEXT{"exp_gained", expGained})
+      local expText = TEXT("exp_gained"):gsub("{0}", tostring(expGained))
+      ErrText:ShowText(expText)
     end
   end
 end
