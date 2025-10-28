@@ -397,6 +397,12 @@ Victory = uiwnd {
 	    index = 6,
 	    anchors = {TOPLEFT = {"BOTTOMLEFT", "MostDeathsStat", 0, 5}, TOPRIGHT = {"BOTTOMRIGHT", "MostDeathsStat", 0, 5}},
 	  },
+	  
+	  XPGainedStat = StatBase {
+	    TitleString = TEXT("xp_gained"),
+	    index = 7,
+	    anchors = {TOPLEFT = {"BOTTOMLEFT", "MostCommandsStat", 0, 5}, TOPRIGHT = {"BOTTOMRIGHT", "MostCommandsStat", 0, 5}},
+	  },
   },
   
   MissionTime = uiwnd {
@@ -532,6 +538,16 @@ Victory = uiwnd {
   	  str = TEXT{"drag_txt"},	  
 	  },
 	  
+	  XPGainedText = uitext {
+	    layer = "+5",
+      size = {600,30},
+      color = {100, 255, 100, 255},
+      anchors = { TOP = { "BOTTOM", "DestroyTxt", 0, 10 } },
+  	  font = "Tahoma,16b",
+  	  str = "",
+      halign = "CENTER",
+      hidden = true,
+	  },
 	  
 	  ShardImg = uiwnd {
 	    layer = "+1",
@@ -1178,6 +1194,19 @@ function Victory:OnShow()
     
     this.Stats:Hide()
     this.ChoosePVPReward:Hide()
+    
+    -- Mostrar XP ganada en la UI
+    if PlayerLevel then
+      local session_xp = PlayerLevel:GetSessionXP()
+      if session_xp > 0 then
+        this.Items.XPGainedText:SetStr("+" .. session_xp .. " XP Gained! (Level " .. PlayerLevel:GetLevel() .. ")")
+        this.Items.XPGainedText:Show()
+      else
+        this.Items.XPGainedText:Hide()
+      end
+    else
+      this.Items.XPGainedText:Hide()
+    end
   end
   
   if gametype == "mission" and not game.PlayerWins() then

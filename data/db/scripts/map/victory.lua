@@ -6,6 +6,25 @@ g_bPlayerDefeated = false
 g_bAllDefeated = false
 g_sLeaderID = nil
 
+-- Sistema de niveles ya se carga desde index.txt en UI
+-- Si no existe PlayerLevel, crear versión básica para map scripts
+if not PlayerLevel then
+  PlayerLevel = {
+    current_level = 1,
+    current_xp = 0,
+    skill_points = 10,
+    session_xp_gained = 0
+  }
+  
+  function PlayerLevel:AddXP(amount) end
+  function PlayerLevel:GetLevel() return self.current_level end
+  function PlayerLevel:GetCurrentXP() return self.current_xp end
+  function PlayerLevel:GetSessionXP() return self.session_xp_gained or 0 end
+  function PlayerLevel:GetMaxSkillPoints() return self.skill_points end
+  function PlayerLevel:CheckLevelUp() end
+  function PlayerLevel:Save() end
+end
+
 local function Msg(s, p, param)
   if not s then
     sMsg = nil
@@ -115,10 +134,60 @@ function CheatWinMission()
   g_bCheatWin = true
 end
 
+function GetMissionDifficultyMultiplier()
+  local map_name = game.GetMapName()
+  -- Detectar si es hardmode (mapas que contienen "hard" en el nombre)
+  if string.find(string.lower(map_name), "hard") then
+    return 3.0
+  end
+  -- Por defecto, dificultad normal
+  return 1.5
+end
+
+function CalculatePerformanceBonus()
+  local bonus = 0
+  -- Obtener tiempo de misión (si existe) - aproximado
+  local mission_time = 0  -- Por ahora no hay API para obtener tiempo real
+  
+  -- Por ahora retornamos un bonus fijo
+  -- En implementación futura se podría rastrear tiempo y muertes
+  bonus = bonus + 50  -- Bonus base
+  
+  return bonus
+end
+
+function GiveMissionRewards()
+  -- Código existente de recompensas (si existe)...
+  
+  -- Añadir sistema de XP
+  local base_xp = 100
+  local difficulty_mult = GetMissionDifficultyMultiplier()
+  local performance_bonus = CalculatePerformanceBonus()
+  
+  local total_xp = base_xp * difficulty_mult + performance_bonus
+  
+  -- Guardar XP usando game.SaveUserPrefs directamente
+  local data = game.LoadUserPrefs("PlayerLevel") or { level = 1, xp = 0 }
+  data.xp = data.xp + total_xp
+  
+  -- Calcular nuevos stats
+  while data.level < 100 and data.xp >= (data.level * 100) do
+    data.xp = data.xp - (data.level * 100)
+    data.level = data.level + 1
+  end
+  
+  game.SaveUserPrefs("PlayerLevel", data)
+  
+  print("GiveMissionRewards: Added " .. total_xp .. " XP. New level: " .. data.level .. ", XP: " .. data.xp)
+end
+
 function WinMission(descr)
   if onVictory and onVictory() then return false end
   PLEvent("MisWon", GetName());
+  
+  -- Solo otorgar XP si la misión fue exitosa
   GiveMissionRewards()
+  
   ui.Victory.description = ui.TEXT(descr or "victory_missiondone")
   SetPlayerWin(true)
   Pause()
@@ -308,6 +377,13 @@ end
 local function VCStart()
   sleep(0.5)
   local sName = GetName();
+  
+  -- Debug: Verificar que PlayerLevel existe
+  if PlayerLevel then
+    print("PlayerLevel exists! Level: " .. PlayerLevel.current_level .. ", XP: " .. PlayerLevel.current_xp)
+  else
+    print("PlayerLevel NOT EXISTS in VCStart!")
+  end
 
   if GetType() == "mission" then
     PLEvent("MisStart", sName)

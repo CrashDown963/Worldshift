@@ -670,20 +670,37 @@ end
 
 function TechGrid:UpdateGems()
   local gems, allGems = game.GetPlayerGems()
+  
+  -- Obtener límite de puntos de habilidad basado en nivel
+  local max_skill_points = 10
+  if PlayerLevel then
+    max_skill_points = PlayerLevel:GetMaxSkillPoints()
+  end
+  
+  -- Mostrar gemas disponibles (mantener límite de 300 para xenoshards)
   this.Gems.Text:SetStr("<color=103,137,236>"..gems.."</><color=50,62,140>/"..allGems.."</>")
 
   for race, interface in pairs{humans = this.HumansInterface, mutants = this.MutantsInterface, aliens = this.AliensInterface} do  
     local starsFree, starsUsed = game.GetPlayerStars(race)
     if not interface:IsHidden() then
-      starsFree = starsFree + starsUsed
+      -- Limitar estrellas disponibles según el nivel
+      local max_allowed_stars = starsFree + starsUsed
+      if starsUsed >= max_skill_points then
+        -- Ya se alcanzó el máximo de puntos de habilidad permitidos
+        starsFree = 0
+      else
+        -- Ajustar estrellas libres al límite
+        starsFree = math.min(starsFree, max_skill_points - starsUsed)
+        max_allowed_stars = starsUsed + starsFree
+      end
       
       local hs = this.Stars:GetSize()
       local ss = this.Stars.Star_1:GetSize()
-      local offs = (hs.x - ((starsFree*ss.x) + ((starsFree-1)*this.Stars.dx))) / 2
+      local offs = (hs.x - ((max_allowed_stars*ss.x) + ((max_allowed_stars-1)*this.Stars.dx))) / 2
       this.Stars.Star_1:SetAnchor("RIGHT", this.Stars, "RIGHT", {-offs,0})
       
       for i = 1,this.Stars.count do
-        if i <= starsFree then
+        if i <= max_allowed_stars then
           if i <= starsUsed then
             this.Stars["Star_"..i]:SetState(1)
           else
