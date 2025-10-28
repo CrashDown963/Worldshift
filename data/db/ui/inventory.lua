@@ -158,6 +158,7 @@ Inventory = uiwnd {
     Tooltip:Hide()
   end,
 },
+
 }
 
 Inventory.DefItemSlot = uislot {
@@ -271,16 +272,30 @@ Inventory.DefItemSlot = uislot {
       local item = this:GetItem()
       if item then
         local src = this:GetInfo()
-        -- Only work if item is in inventory (not equipped)
+        -- Only work if item is in inventory (not equipped) and is tier 5 (Legendary)
         if string.sub(src, 1, 10) == "INVENTORY_" then
-          -- Award experience and move to RECYCLE
           local quality = item.quality
-          if quality then
+          -- Only destroy tier 4 (Epic) or tier 5 (Legendary) items
+          if quality == 4 or quality == 5 then
+            -- Award experience and move to TRASH (invisible repository)
             AwardExperience(quality, item)
-          end
-          local result = this:MoveItem("RECYCLE")
-          if result then
-            game.PlaySnd(sounds.inv_item_out)
+            
+            local result = this:MoveItem("TRASH")
+            if result then
+              game.PlaySnd(sounds.inv_item_out)
+            else
+              -- If TRASH is full, show error message
+              game.PlaySnd(sounds.item_reject)
+              if ErrText then
+                ErrText:ShowText("Destruction repository is full.")
+              end
+            end
+          else
+            -- Not tier 4 or 5, show error
+            game.PlaySnd(sounds.item_reject)
+            if ErrText then
+              ErrText:ShowText("Only Epic and Legendary items can be destroyed for experience.")
+            end
           end
         else
           -- If not in inventory, create item link (original behavior)
