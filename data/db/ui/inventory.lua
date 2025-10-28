@@ -6,7 +6,6 @@ local sz_item_w = 42
 local sz_item_h = 42
 
 local DragingItem = false
-local DraggedItemInfo = nil -- Store item info before recycling
 
 -- Experience System Functions (define early so Recycle slot can access them)
 local function CalculateLevel(totalExp)
@@ -156,28 +155,6 @@ Inventory = uiwnd {
   OnMouseLeave = function(this)
     Tooltip:Hide()
   end,
-  
-  OnLoad = function(this)
-    this:RegisterEvent("ITEM_UPDATE")
-  end,
-  
-  OnEvent = function(this, event)
-    if event == "ITEM_UPDATE" then
-      -- Only award experience if an item was actually recycled in THIS slot
-      local item = this:GetItem()
-      local slotInfo = this:GetInfo()
-      
-      -- Verify we're in the RECYCLE slot and have a stored item
-      if slotInfo == "RECYCLE" and DraggedItemInfo then
-        -- Item entered RECYCLE slot, award experience
-        local quality = DraggedItemInfo.quality
-        if quality then
-          AwardExperience(quality, DraggedItemInfo)
-        end
-        DraggedItemInfo = nil
-      end
-    end
-  end,
 },
 }
 
@@ -287,8 +264,30 @@ Inventory.DefItemSlot = uislot {
   end,
 
   OnMouseDown = function(this)
+    -- Shift+Click on inventory item = destroy item and give experience
     if argMods.shift and argBtn == "LEFT" then
-      DESKTOP:CreateItemLink(this:GetItem())
+      local item = this:GetItem()
+      if item then
+        local src = this:GetInfo()
+        -- Only work if item is in inventory (not equipped)
+        if string.sub(src, 1, 10) == "INVENTORY_" then
+          -- Award experience and move to RECYCLE
+          local quality = item.quality
+          if quality then
+            AwardExperience(quality, item)
+          end
+          local result = this:MoveItem("RECYCLE")
+          if result then
+            game.PlaySnd(sounds.inv_item_out)
+          end
+        else
+          -- If not in inventory, create item link (original behavior)
+          DESKTOP:CreateItemLink(this:GetItem())
+        end
+      else
+        -- If no item, create item link (original behavior)
+        DESKTOP:CreateItemLink(this:GetItem())
+      end
       return
     end
     
@@ -506,12 +505,6 @@ function Inventory.DefItemSlot_OnLoad(this)
       this:OnMouseLeave()
       local item = argSlot:GetItem()
       local r,t = this:GetInfo()
-      
-      -- Store item info for potential recycling
-      if argSlot == this then
-        DraggedItemInfo = item
-      end
-      
       if argSlot == this then 
         game.PlaySnd(this.soundItemOut)
         this:SetColor(ItemColors.dragged)
@@ -547,7 +540,6 @@ function Inventory.DefItemSlot_OnLoad(this)
       if argDestSlot == this then 
         game.PlaySnd(sounds.item_reject) 
         ErrText:ShowText("strItemReject")
-        DraggedItemInfo = nil -- Clear stored item info
         return 
       end
     end
