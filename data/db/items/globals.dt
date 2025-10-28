@@ -58,12 +58,20 @@ item_slots {
     max_stars = 2
     give_stars = 5
   }
+  HUMAN_SPECA3 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_A3H; 
+    reveal_gems = 10;
+    max_stars = 2
+    req_stars = 0
+    give_stars = 5
+  }
   HUMAN_SPECB1 { 
     count = 1; race = humans; spec = 1; 
     bind = I_B1H; 
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECA1
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   HUMAN_SPECB2 { 
@@ -72,16 +80,16 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECA2
     max_stars = 3
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   HUMAN_SPECB3 { 
     count = 1; race = humans; spec = 1; 
     bind = I_B3H; 
     reveal_gems = 10;
-    req_to_reveal = HUMAN_SPECB2
+    req_to_reveal = HUMAN_SPECA2
     max_stars = 2
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   HUMAN_SPECC1 { 
@@ -90,7 +98,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECB1
     max_stars = 2
-    req_stars = 0
+    req_stars = 5
     give_stars = 5
   }
   HUMAN_SPECC2 { 
@@ -99,7 +107,16 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECB2
     max_stars = 3
-    req_stars = 0
+    req_stars = 5
+    give_stars = 5
+  }
+  HUMAN_SPECC3 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_C3H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECB2
+    max_stars = 2
+    req_stars = 5
     give_stars = 5
   }
   HUMAN_SPECD1 { 
@@ -107,7 +124,7 @@ item_slots {
     bind = I_D1H; 
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECC1
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
   HUMAN_SPECD2 { 
@@ -116,7 +133,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECC1
     max_stars = 3
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
   HUMAN_SPECD3 { 
@@ -124,7 +141,7 @@ item_slots {
     bind = I_D3H; 
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECC2
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
 
@@ -151,7 +168,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECA1
     max_stars = 3
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   MUTANT_SPECB2 { 
@@ -160,7 +177,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECA1
     max_stars = 2
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   MUTANT_SPECB3 { 
@@ -169,7 +186,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECA2
     max_stars = 1
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   MUTANT_SPECC1 { 
@@ -178,7 +195,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECB1
     max_stars = 2
-    req_stars = 0
+    req_stars = 5
     give_stars = 5
   }
   MUTANT_SPECC2 { 
@@ -187,7 +204,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECB3
     max_stars = 3
-    req_stars = 0
+    req_stars = 5
     give_stars = 5
   }
   MUTANT_SPECD1 { 
@@ -195,7 +212,7 @@ item_slots {
     bind = I_D1M; 
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECC1
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
   MUTANT_SPECD2 { 
@@ -204,7 +221,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECC2
     max_stars = 2
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
   MUTANT_SPECD3 { 
@@ -212,7 +229,7 @@ item_slots {
     bind = I_D3M; 
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECC2
-    req_stars = 0
+    req_stars = 8
     max_stars = 2
     give_stars = 5
   }
@@ -239,7 +256,7 @@ item_slots {
     bind = I_B1A; 
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECB2
-    req_stars = 0
+    req_stars = 2
     max_stars = 2
     give_stars = 5
   }
@@ -249,7 +266,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECA1
     max_stars = 3
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   ALIEN_SPECB3 { 
@@ -258,7 +275,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECA2
     max_stars = 1
-    req_stars = 0
+    req_stars = 2
     give_stars = 5
   }
   ALIEN_SPECC1 { 
@@ -267,7 +284,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECB2
     max_stars = 3
-    req_stars = 0
+    req_stars = 5
     give_stars = 5
   }
   ALIEN_SPECC2 { 
@@ -276,7 +293,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECB3
     max_stars = 2
-    req_stars = 0
+    req_stars = 5
     give_stars = 5
   }
   ALIEN_SPECD1 { 
@@ -284,7 +301,7 @@ item_slots {
     bind = I_D1A; 
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECC1
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
   ALIEN_SPECD2 { 
@@ -293,7 +310,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECC2
     max_stars = 3
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
   ALIEN_SPECD3 { 
@@ -301,7 +318,7 @@ item_slots {
     bind = I_D3A; 
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECC2
-    req_stars = 0
+    req_stars = 8
     give_stars = 5
   }
 
@@ -344,11 +361,13 @@ item_slots {
   -- human spec tree
   INSPECT_HUMAN_SPECA1 : HUMAN_SPECA1
   INSPECT_HUMAN_SPECA2 : HUMAN_SPECA2
+  INSPECT_HUMAN_SPECA3 : HUMAN_SPECA3
   INSPECT_HUMAN_SPECB1 : HUMAN_SPECB1
   INSPECT_HUMAN_SPECB2 : HUMAN_SPECB2
   INSPECT_HUMAN_SPECB3 : HUMAN_SPECB3
   INSPECT_HUMAN_SPECC1 : HUMAN_SPECC1
   INSPECT_HUMAN_SPECC2 : HUMAN_SPECC2
+  INSPECT_HUMAN_SPECC3 : HUMAN_SPECC3
   INSPECT_HUMAN_SPECD1 : HUMAN_SPECD1
   INSPECT_HUMAN_SPECD2 : HUMAN_SPECD2
   INSPECT_HUMAN_SPECD3 : HUMAN_SPECD3
