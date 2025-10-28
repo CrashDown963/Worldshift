@@ -2996,7 +2996,7 @@
 69960	3	Aliens	ALIEN_MANIPULATOR	Thar�Kyn Nova 	Manipulator	Manipulator life_leech_boost = 10Manipulator armor = 2		
 69970	4	Humans	HUMAN_ASSASSIN	Rare Bioactive Covers	Assassin	Assassin armor = 4		
 69980	2	Humans	HUMAN_COMMANDER	Stabilized Particle Phasers	Commander	Commander damage = 8		
-70000	1	Humans	HUMAN_COMMANDER	MYTHIC Godlike Command Core	Commander	Commander damage = 50Commander hp = 50%Commander armor = 16Commander healing_taken_mod = 50%Commander inject_hp = 	80	
+70000	1	Humans	HUMAN_COMMANDER	MYTHIC Godlike Command Core	Commander	Commander damage = 50Commander hp = 50%Commander armor = 16Commander healing_taken_mod = 50%Commander inject_hp = 80	
 70001	1	Humans	HUMAN_ASSASSIN	MYTHIC Shadow of the Void	Assassin	Assassin damage = 25Assassin hp = 25%Assassin armor = 15Assassin crit_chance = 24Assassin expose_target_chance = 10		
 70002	1	Humans	HUMAN_JUDGE	MYTHIC Divine Justice	Judge	Judge damage = 25Judge psi = 35%Judge crit_chance = 15Judge voiceofcommand_damage_perc = 20Judge armor = 15		
 70003	1	Humans	HUMAN_SURGEON	MYTHIC Celestial Healer	Surgeon	Surgeon healing_taken_mod = 50%Surgeon psi_gen = 80Surgeon bandage_amount = 25Surgeon bandage_crit = 16Surgeon bandage_cooldown = -25%		

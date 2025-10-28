@@ -171,7 +171,7 @@ ignore_all_invitations	Ignore ALL game invitations
 show_friends_invitations	Show game invitations only from players in your friends list	
 allow_inspected	Allow to be inspected	
 statistics_average	STATISTICS AVERAGE<nl>(MULTIPLAYER GAMES)	
-gamedurationtext	Avg. deathmatch game duration	
+gamedurationtext	Avg. PVP game duration	
 battlepointstext	Amount of Battle points	
 battlepointsvalue	[#] of [#]	
 gamedurationvalue	[#]:[#] min	
