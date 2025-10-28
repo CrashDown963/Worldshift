@@ -760,6 +760,19 @@ Stats = uiwnd {
     
     PlayerLevel = DefGSStat {
       anchors = { TOP = { "BOTTOM", "BossesKilled", 0,15 } },
+      
+      StatPanel = uiwnd {
+        size = {200,29},
+        anchors = { TOPLEFT = {150,2 } },
+        Back = DefBackInBlack{ layer = "+1" },
+        Text = uitext {
+          layer = "+3",
+          color = {255, 143, 51},
+          font = "Verdana,11b",
+          halign = "CENTER",
+          str = "N/A",
+        },
+      },
     },	      	  
 	  
 	  
