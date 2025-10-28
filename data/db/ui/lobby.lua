@@ -3182,6 +3182,16 @@ Lobby = uiwnd {
         str = "If you want to change the item's race, enter a skirmish game with the race you want, and then exit it",
       },
       
+      TokenTipText = uitext {
+        layer = "+1",
+        size = {500, 30},
+        anchors = { TOPLEFT = { 50, 240 } },
+        color = {100, 255, 100},
+        font = "Tahoma,8b",
+        halign = "CENTER",
+        str = TEXT{"token_system_info"},
+      },
+      
       ChangeOfferBtn = DefButton {
         size = {120,26},
         layer = "+1",

@@ -35,6 +35,7 @@ refresh	REFRESH
 no_tokens	Not enough tokens to purchase this item.
 no_tokens_ttl	Purchase Failed
 bp_tip	Tip: Enter and exit any Skirmish match to get 9999 Battle Points!
+token_system_info	Get tokens by completing cooperative missions! 1 Token = 1 Item
 player_level	Player Level
 exp_gained	+{0} EXP!
 level_up	LEVEL UP! Now Level {0}

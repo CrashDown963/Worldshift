@@ -479,7 +479,7 @@ function Inventory.DefItemSlot_OnLoad(this)
 		  ItemTooltip:SetItem(item, this, 0)
 		end
     local repo = this:GetInfo()
-    if string.sub(repo, 1, 10) == "INVENTORY_" then
+    if repo and string.sub(repo, 1, 10) == "INVENTORY_" then
       for race, interface in pairs{humans = TechGrid.HumansInterface, mutants = TechGrid.MutantsInterface, aliens = TechGrid.AliensInterface} do
         if not interface:IsHidden() then 
           for k,v in pairs(interface) do
