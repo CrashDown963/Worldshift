@@ -248,6 +248,34 @@ local DefSpecSlot = Inventory.DefItemSlot {
     if argBtn ~= "LEFT" then return end
     local id = string.sub(this:GetName(), 10, 11)
     local state = game.GetSpecInfo(TechGrid.race, id)
+    
+    -- Verificar límite de estrellas basado en el nivel (solo si el slot ya está desbloqueado)
+    if state > 0 then
+      local starsFree, starsUsed = game.GetPlayerStars(TechGrid.race)
+      
+      -- Intentar obtener el nivel de cualquiera de los dos sistemas
+      local current_level = 1
+      local experience = game.LoadUserPrefs("experience")
+      if experience and experience.level then
+        current_level = experience.level
+      elseif PlayerLevel then
+        current_level = PlayerLevel:GetLevel()
+      end
+      
+      -- Calcular límite: 10 + floor(level / 10)
+      local max_allowed_stars = 10 + math.floor(current_level / 10)
+      
+      -- Debug: mostrar info en consola
+      print("Level: " .. current_level .. ", Stars Used: " .. starsUsed .. ", Max: " .. max_allowed_stars)
+      
+      -- Si ya se alcanzó el límite, bloquear asignación adicional
+      if starsUsed >= max_allowed_stars then
+        ErrText:ShowText(TEXT{"nostars"} .. " (Used: " .. starsUsed .. "/" .. max_allowed_stars .. " Level: " .. current_level .. ")")
+        game.PlaySnd(sounds.on_error)
+        return
+      end
+    end
+    
     local err = game.SpecClicked(TechGrid.race, id)
     if err then
       ErrText:ShowText(ERRTEXTS[err])
@@ -530,7 +558,7 @@ TechGrid = uiwnd {
     anchors = { BOTTOMRIGHT = { "HumansInterface", -60,-10 } },
 
     dx = 0,
-    count = 12,
+    count = 20,
     
     Star_1 = DefSpendStar { anchors = { RIGHT = { 0,0 } } },
     Star_2 = DefSpendStar {},
@@ -544,6 +572,14 @@ TechGrid = uiwnd {
     Star_10 = DefSpendStar {},
     Star_11 = DefSpendStar {},
     Star_12 = DefSpendStar {},
+    Star_13 = DefSpendStar {},
+    Star_14 = DefSpendStar {},
+    Star_15 = DefSpendStar {},
+    Star_16 = DefSpendStar {},
+    Star_17 = DefSpendStar {},
+    Star_18 = DefSpendStar {},
+    Star_19 = DefSpendStar {},
+    Star_20 = DefSpendStar {},
     
     OnShow = function(this)
       local ss = this.Star_1:GetSize()
@@ -671,7 +707,7 @@ end
 function TechGrid:UpdateGems()
   local gems, allGems = game.GetPlayerGems()
   
-  -- Obtener límite de puntos de habilidad basado en nivel
+  -- Obtener límite basado en el nivel del jugador
   local max_skill_points = 10
   if PlayerLevel then
     max_skill_points = PlayerLevel:GetMaxSkillPoints()
