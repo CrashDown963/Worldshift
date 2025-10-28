@@ -572,7 +572,7 @@ TechGrid = uiwnd {
 
   Stars = uiwnd {
     size = {160,32},
-    anchors = { BOTTOMRIGHT = { "HumansInterface", -60,-10 } },
+    anchors = { BOTTOMRIGHT = { "HumansInterface", -60,-9 } },
 
     dx = 0,
     dy = -18,  -- Espacio vertical entre filas
