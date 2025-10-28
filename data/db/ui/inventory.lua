@@ -6,6 +6,74 @@ local sz_item_w = 42
 local sz_item_h = 42
 
 local DragingItem = false
+local DraggedItemInfo = nil -- Store item info before recycling
+
+-- Experience System Functions (define early so Recycle slot can access them)
+local function CalculateLevel(totalExp)
+  if totalExp < 500 then return 1
+  elseif totalExp < 1500 then return 2
+  elseif totalExp < 3500 then return 3
+  elseif totalExp < 7500 then return 4
+  elseif totalExp < 15000 then return 5
+  elseif totalExp < 30000 then return 6
+  else
+    -- Level 7+ requires exponentially more exp
+    local expForLevel7 = 30000
+    local level = 7
+    local expNeeded = 15000 -- Amount needed for level 6->7
+    
+    while totalExp >= expForLevel7 do
+      level = level + 1
+      expNeeded = expNeeded * 2 -- Double the exp needed each level
+      expForLevel7 = expForLevel7 + expNeeded
+    end
+    
+    return level
+  end
+end
+
+local function GetExpForQuality(quality)
+  local expTable = {
+    [1] = 10,   -- Common
+    [2] = 25,   -- Uncommon
+    [3] = 50,   -- Rare
+    [4] = 100,  -- Epic
+    [5] = 250,  -- Legendary
+    [6] = 500   -- Mythic
+  }
+  return expTable[quality] or 10
+end
+
+local function AwardExperience(quality, recycledItem)
+  local expGained = GetExpForQuality(quality)
+  
+  -- Load current experience data
+  local playerData = game.LoadUserPrefs("experience")
+  if not playerData then
+    playerData = { total = 0, level = 1, recycled_items = 0 }
+  end
+  
+  local oldLevel = playerData.level
+  playerData.total = playerData.total + expGained
+  playerData.recycled_items = (playerData.recycled_items or 0) + 1
+  
+  local newLevel = CalculateLevel(playerData.total)
+  playerData.level = newLevel
+  
+  -- Save the data using game.SaveUserPrefs (works in lobby and in-game)
+  game.SaveUserPrefs("experience", playerData)
+  
+  -- Show feedback
+  if newLevel > oldLevel then
+    if ErrText then
+      ErrText:ShowText(TEXT{"level_up", newLevel})
+    end
+  else
+    if ErrText then
+      ErrText:ShowText(TEXT{"exp_gained", expGained})
+    end
+  end
+end
 
 local FrameByRepo = {
   ALIEN_POWER = 7,
@@ -85,10 +153,32 @@ Inventory = uiwnd {
       Tooltip:Show()
     end,
 
-    OnMouseLeave = function(this)
-      Tooltip:Hide()
-    end,
-	},
+  OnMouseLeave = function(this)
+    Tooltip:Hide()
+  end,
+  
+  OnLoad = function(this)
+    this:RegisterEvent("ITEM_UPDATE")
+  end,
+  
+  OnEvent = function(this, event)
+    if event == "ITEM_UPDATE" then
+      -- Only award experience if an item was actually recycled in THIS slot
+      local item = this:GetItem()
+      local slotInfo = this:GetInfo()
+      
+      -- Verify we're in the RECYCLE slot and have a stored item
+      if slotInfo == "RECYCLE" and DraggedItemInfo then
+        -- Item entered RECYCLE slot, award experience
+        local quality = DraggedItemInfo.quality
+        if quality then
+          AwardExperience(quality, DraggedItemInfo)
+        end
+        DraggedItemInfo = nil
+      end
+    end
+  end,
+},
 }
 
 Inventory.DefItemSlot = uislot {
@@ -416,6 +506,12 @@ function Inventory.DefItemSlot_OnLoad(this)
       this:OnMouseLeave()
       local item = argSlot:GetItem()
       local r,t = this:GetInfo()
+      
+      -- Store item info for potential recycling
+      if argSlot == this then
+        DraggedItemInfo = item
+      end
+      
       if argSlot == this then 
         game.PlaySnd(this.soundItemOut)
         this:SetColor(ItemColors.dragged)
@@ -433,6 +529,7 @@ function Inventory.DefItemSlot_OnLoad(this)
     	this.mark_accept = nil
       this:SlotLight(false)
       this:SetColor()
+      
       local item = this:GetItem() 
       if not item then
         this:UpdateFrame()
@@ -442,6 +539,7 @@ function Inventory.DefItemSlot_OnLoad(this)
 				this:OnMouseEnter()
         game.PlaySnd(this.soundItemIn)
       end
+      
       this:UpdateFrame()
     end
     
@@ -449,6 +547,7 @@ function Inventory.DefItemSlot_OnLoad(this)
       if argDestSlot == this then 
         game.PlaySnd(sounds.item_reject) 
         ErrText:ShowText("strItemReject")
+        DraggedItemInfo = nil -- Clear stored item info
         return 
       end
     end

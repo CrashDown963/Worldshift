@@ -757,8 +757,12 @@ Stats = uiwnd {
     BossesKilled = DefGSStat {
       anchors = { TOP = { "BOTTOM", "LocPlayed", 0,15 } },
     },	      	  
+    
+    PlayerLevel = DefGSStat {
+      anchors = { TOP = { "BOTTOM", "BossesKilled", 0,15 } },
+    },	      	  
 	  
-	  	  
+	  
     OnShow = function(this)
       --local pname = net.Lobby_GetPlayerName()
       --this.Name:SetStr(TEXT{"logo_name", pname})
@@ -786,6 +790,7 @@ Stats = uiwnd {
       this.Streak1v1DM.Title:SetStr("<p>"..TEXT("streak1v1txt"))
       this.LocPlayed.Title:SetStr("<p>"..TEXT("player_loc_played"))
       this.BossesKilled.Title:SetStr("<p>"..TEXT("player_bosses"))      
+      this.PlayerLevel.Title:SetStr("<p>"..TEXT("player_level"))
       
       this.Rank1v1DM.StatPanel.Text:SetStr("N/A")
       this.Rating1v1DM.StatPanel.Text:SetStr("N/A")
@@ -793,7 +798,15 @@ Stats = uiwnd {
       this.Losses1v1DM.StatPanel.Text:SetStr("N/A")
       this.Streak1v1DM.StatPanel.Text:SetStr("N/A") 
       this.LocPlayed.StatPanel.Text:SetStr("N/A") 
-      this.BossesKilled.StatPanel.Text:SetStr("N/A")            
+      this.BossesKilled.StatPanel.Text:SetStr("N/A")
+      
+      -- Load and display player level
+      local playerExp = game.LoadUserPrefs("experience")
+      if playerExp and playerExp.level then
+        this.PlayerLevel.StatPanel.Text:SetStr(tostring(playerExp.level))
+      else
+        this.PlayerLevel.StatPanel.Text:SetStr("1")
+      end            
       
       local stats = game.LoadUserData("stats")
       local count = stats.count and stats.count > 0 and stats.count or 1

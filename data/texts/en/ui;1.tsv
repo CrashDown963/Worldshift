@@ -33,6 +33,9 @@ inactive_spec	Inactive
 chg_off_btn	Reroll	
 refresh	REFRESH
 bp_tip	Tip: Enter and exit any Skirmish match to get 9999 Battle Points!
+player_level	Player Level
+exp_gained	+{0} EXP!
+level_up	LEVEL UP! Now Level {0}
 close_caps	CLOSE	
 continue_caps	CONTINUE	
 observe_caps	OBSERVE	
