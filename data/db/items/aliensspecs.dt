@@ -40,6 +40,33 @@ item I_A2A : AlienSpecItem {
   --abilities { AA2A { item = I_A2A } }
 }
 
+item I_A3A : AlienSpecItem {
+  name = "Tough Carapace"
+  text = "All your units will have [stats.armor] additional armor."
+  icon = 4,1
+  levels = 1,2
+  repo = ALIEN_SPECA3
+  target {
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+    Defiler
+    Shifter
+    Overseer
+    Tritech
+    Trisat
+    Hatchling
+    AttackDrone
+    PsiDetonator
+  }
+  stats {
+    armor = 5%/10%
+  }
+  --abilities { AA3A { item = I_A3A } }
+}
+
 item I_B1A : AlienSpecItem {
   name = "Prophesy"
   text = "Your Master will regenerate power [stats.psi_gen] faster."
@@ -121,6 +148,33 @@ item I_C2A : AlienSpecItem {
       icon = 6,0
     }
   }
+}
+
+item I_C3A : AlienSpecItem {
+  name = "Evolutive Assault"
+  text = "All your units will have [stats.damage] additional direct damage."
+  icon = 4,1
+  levels = 1,2
+  repo = ALIEN_SPECC3
+  target {
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+    Defiler
+    Shifter
+    Overseer
+    Tritech
+    Trisat
+    Hatchling
+    AttackDrone
+    PsiDetonator
+  }
+  stats {
+    damage = 1/2
+  }
+  --abilities { AC3A { item = I_C3A } }
 }
 
 item I_D1A : AlienSpecItem {

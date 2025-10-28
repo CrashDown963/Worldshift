@@ -356,20 +356,26 @@ TechGrid = uiwnd {
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Arbiter.name"} },
 	  ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Defiler.name"} },
 
-	  -- spec
-	  SpecSlot_A1 = DefSpecSlot { row = 5, col = 1, repo = "ALIEN_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 10,20 } } },
-	  SpecSlot_A2 = DefSpecSlot { row = 5, col = 2, repo = "ALIEN_SPECA2",   anchors = { TOPLEFT = { "RightFrame" , "TOP", 30,20 } } },
+	  -- spec - Layout 3 columnas x 4 filas
+	  -- Primera fila: A1 (izq), A2 (centro), A3 (der - NUEVO)
+	  SpecSlot_A1 = DefSpecSlot { row = 5, col = 1, repo = "ALIEN_SPECA1",   anchors = { TOPLEFT = { "RightFrame" , "TOP", -110,20 } } },
+	  SpecSlot_A2 = DefSpecSlot { row = 5, col = 2, repo = "ALIEN_SPECA2",   anchors = { TOP = { "RightFrame" , "TOP", 0,20 } } },
+	  SpecSlot_A3 = DefSpecSlot { row = 5, col = 1, repo = "ALIEN_SPECA3",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 110,20 } } },
 	  
-	  SpecSlot_B1 = DefSpecSlot { row = 5, col = 3, repo = "ALIEN_SPECB1",   anchors = { RIGHT = { "SpecSlot_B2" , "LEFT", -20,0 } } },
-	  SpecSlot_B2 = DefSpecSlot { row = 5, col = 4, repo = "ALIEN_SPECB2",   anchors = { RIGHT = { "SpecSlot_B3" , "LEFT", -20,0 } } },
-	  SpecSlot_B3 = DefSpecSlot { row = 5, col = 5, repo = "ALIEN_SPECB3",   anchors = { TOP = { "SpecSlot_A2" , "BOTTOM", 0,20 } } },
+	  -- Segunda fila: B1 bajo A1, B2 bajo A2, B3 bajo A3
+	  SpecSlot_B1 = DefSpecSlot { row = 5, col = 3, repo = "ALIEN_SPECB1",   anchors = { TOPLEFT = { "SpecSlot_A1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B2 = DefSpecSlot { row = 5, col = 4, repo = "ALIEN_SPECB2",   anchors = { TOPLEFT = { "SpecSlot_A2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B3 = DefSpecSlot { row = 5, col = 5, repo = "ALIEN_SPECB3",   anchors = { TOPLEFT = { "SpecSlot_A3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_C1 = DefSpecSlot { row = 6, col = 1, repo = "ALIEN_SPECC1",   anchors = { TOP = { "SpecSlot_B2" , "BOTTOM", -40,20 } } },
-	  SpecSlot_C2 = DefSpecSlot { row = 6, col = 2, repo = "ALIEN_SPECC2",   anchors = { TOP = { "SpecSlot_B3" , "BOTTOM", 0,20 } } },
+	  -- Tercera fila: C1 bajo B1, C2 bajo B2, C3 bajo B3 (NUEVO)
+	  SpecSlot_C1 = DefSpecSlot { row = 6, col = 1, repo = "ALIEN_SPECC1",   anchors = { TOPLEFT = { "SpecSlot_B1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C2 = DefSpecSlot { row = 6, col = 2, repo = "ALIEN_SPECC2",   anchors = { TOPLEFT = { "SpecSlot_B2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C3 = DefSpecSlot { row = 6, col = 1, repo = "ALIEN_SPECC3",   anchors = { TOPLEFT = { "SpecSlot_B3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_D1 = DefSpecSlot { row = 6, col = 3, repo = "ALIEN_SPECD1",   anchors = { TOP = { "SpecSlot_C1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_D2 = DefSpecSlot { row = 6, col = 4, repo = "ALIEN_SPECD2",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", -40,20 } } },
-	  SpecSlot_D3 = DefSpecSlot { row = 6, col = 5, repo = "ALIEN_SPECD3",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", 40,20 } } },
+	  -- Cuarta fila: D1 bajo C1, D2 bajo C2, D3 bajo C3
+	  SpecSlot_D1 = DefSpecSlot { row = 6, col = 3, repo = "ALIEN_SPECD1",   anchors = { TOPLEFT = { "SpecSlot_C1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D2 = DefSpecSlot { row = 6, col = 4, repo = "ALIEN_SPECD2",   anchors = { TOPLEFT = { "SpecSlot_C2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D3 = DefSpecSlot { row = 6, col = 5, repo = "ALIEN_SPECD3",   anchors = { TOPLEFT = { "SpecSlot_C3" , "BOTTOMLEFT", 0,20 } } },
 	  
     OnShow = function(this)
       TechGrid.HumansInterface:Hide()
@@ -420,20 +426,26 @@ TechGrid = uiwnd {
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Guardian.name"} },
     ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Psychic.name"} },
 	  
-	  -- spec
-	  SpecSlot_A1 = DefSpecSlot { row = 3, col = 1, repo = "MUTANT_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", -30,20 } } },
-	  SpecSlot_A2 = DefSpecSlot { row = 3, col = 2, repo = "MUTANT_SPECA2",   anchors = { TOPLEFT = { "RightFrame" , "TOP", 30,20 } } },
+	  -- spec - Layout 3 columnas x 4 filas
+	  -- Primera fila: A1 (izq), A2 (centro), A3 (der - NUEVO)
+	  SpecSlot_A1 = DefSpecSlot { row = 3, col = 1, repo = "MUTANT_SPECA1",   anchors = { TOPLEFT = { "RightFrame" , "TOP", -110,20 } } },
+	  SpecSlot_A2 = DefSpecSlot { row = 3, col = 2, repo = "MUTANT_SPECA2",   anchors = { TOP = { "RightFrame" , "TOP", 0,20 } } },
+	  SpecSlot_A3 = DefSpecSlot { row = 3, col = 1, repo = "MUTANT_SPECA3",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 110,20 } } },
 	  
-	  SpecSlot_B1 = DefSpecSlot { row = 3, col = 3, repo = "MUTANT_SPECB1",   anchors = { TOP = { "SpecSlot_A1" , "BOTTOM", -40,20 } } },
-	  SpecSlot_B2 = DefSpecSlot { row = 3, col = 4, repo = "MUTANT_SPECB2",   anchors = { TOP = { "SpecSlot_A1" , "BOTTOM", 40,20 } } },
-	  SpecSlot_B3 = DefSpecSlot { row = 3, col = 5, repo = "MUTANT_SPECB3",   anchors = { TOP = { "SpecSlot_A2" , "BOTTOM", 0,20 } } },
+	  -- Segunda fila: B1 bajo A1, B2 bajo A2, B3 bajo A3
+	  SpecSlot_B1 = DefSpecSlot { row = 3, col = 3, repo = "MUTANT_SPECB1",   anchors = { TOPLEFT = { "SpecSlot_A1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B2 = DefSpecSlot { row = 3, col = 4, repo = "MUTANT_SPECB2",   anchors = { TOPLEFT = { "SpecSlot_A2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B3 = DefSpecSlot { row = 3, col = 5, repo = "MUTANT_SPECB3",   anchors = { TOPLEFT = { "SpecSlot_A3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_C1 = DefSpecSlot { row = 4, col = 1, repo = "MUTANT_SPECC1",   anchors = { TOP = { "SpecSlot_B1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_C2 = DefSpecSlot { row = 4, col = 2, repo = "MUTANT_SPECC2",   anchors = { TOP = { "SpecSlot_B3" , "BOTTOM", 0,20 } } },
+	  -- Tercera fila: C1 bajo B1, C2 bajo B2, C3 bajo B3 (NUEVO)
+	  SpecSlot_C1 = DefSpecSlot { row = 4, col = 1, repo = "MUTANT_SPECC1",   anchors = { TOPLEFT = { "SpecSlot_B1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C2 = DefSpecSlot { row = 4, col = 2, repo = "MUTANT_SPECC2",   anchors = { TOPLEFT = { "SpecSlot_B2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C3 = DefSpecSlot { row = 4, col = 1, repo = "MUTANT_SPECC3",   anchors = { TOPLEFT = { "SpecSlot_B3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_D1 = DefSpecSlot { row = 4, col = 3, repo = "MUTANT_SPECD1",   anchors = { TOP = { "SpecSlot_C1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_D2 = DefSpecSlot { row = 4, col = 4, repo = "MUTANT_SPECD2",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", -40,20 } } },
-	  SpecSlot_D3 = DefSpecSlot { row = 4, col = 5, repo = "MUTANT_SPECD3",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", 40,20 } } },
+	  -- Cuarta fila: D1 bajo C1, D2 bajo C2, D3 bajo C3
+	  SpecSlot_D1 = DefSpecSlot { row = 4, col = 3, repo = "MUTANT_SPECD1",   anchors = { TOPLEFT = { "SpecSlot_C1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D2 = DefSpecSlot { row = 4, col = 4, repo = "MUTANT_SPECD2",   anchors = { TOPLEFT = { "SpecSlot_C2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D3 = DefSpecSlot { row = 4, col = 5, repo = "MUTANT_SPECD3",   anchors = { TOPLEFT = { "SpecSlot_C3" , "BOTTOMLEFT", 0,20 } } },
 	  
     OnShow = function(this)
       TechGrid.AliensInterface:Hide()
