@@ -169,7 +169,7 @@ show_friends_invitations	Show game invitations only from players in your friends
 allow_inspected	Allow to be inspected	
 statistics_average	STATISTICS AVERAGE<nl>(MULTIPLAYER GAMES)	
 gamedurationtext	Avg. deathmatch game duration	
-battlepointstext	Current amount of Battle points	
+battlepointstext	Amount of Battle points	
 battlepointsvalue	[#] of [#]	
 gamedurationvalue	[#]:[#] min	
 player_settings	Player	
