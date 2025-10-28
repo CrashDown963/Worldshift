@@ -554,10 +554,11 @@ TechGrid = uiwnd {
   },
 
   Stars = uiwnd {
-    size = {192,16},
+    size = {160,32},
     anchors = { BOTTOMRIGHT = { "HumansInterface", -60,-10 } },
 
     dx = 0,
+    dy = -18,  -- Espacio vertical entre filas
     count = 20,
     
     Star_1 = DefSpendStar { anchors = { RIGHT = { 0,0 } } },
@@ -583,8 +584,19 @@ TechGrid = uiwnd {
     
     OnShow = function(this)
       local ss = this.Star_1:GetSize()
-      this:SetSize{(this.count*ss.x) + ((this.count-1)*this.dx), ss.y}
-      for i = 2,this.count do
+      -- Calcular tamaño para 10 estrellas por fila
+      local width = (10*ss.x) + ((10-1)*this.dx)
+      local height = (ss.y * 2) + this.dy
+      this:SetSize({width, height})
+      
+      -- Primera fila (Star_1 a Star_10) - de derecha a izquierda
+      for i = 2,10 do
+        this["Star_"..i]:SetAnchor("RIGHT", this["Star_"..i-1], "LEFT", {this.dx,0})  
+      end
+      
+      -- Segunda fila (Star_11 a Star_20) - alinear Star_11 justo debajo de Star_1
+      this.Star_11:SetAnchor("RIGHT", this.Star_1, "RIGHT", {0, this.dy})
+      for i = 12,20 do
         this["Star_"..i]:SetAnchor("RIGHT", this["Star_"..i-1], "LEFT", {this.dx,0})  
       end
     end,
@@ -736,9 +748,31 @@ function TechGrid:UpdateGems()
         max_allowed_stars = starsUsed + starsFree
       end
       
-      local hs = this.Stars:GetSize()
       local ss = this.Stars.Star_1:GetSize()
-      local offs = (hs.x - ((max_allowed_stars*ss.x) + ((max_allowed_stars-1)*this.Stars.dx))) / 2
+      
+      -- Calcular cuántas estrellas por fila (máximo 10)
+      local stars_per_row = 10
+      local rows = math.ceil(max_allowed_stars / stars_per_row)
+      local stars_in_last_row = math.min(max_allowed_stars % stars_per_row, stars_per_row)
+      if stars_in_last_row == 0 then stars_in_last_row = stars_per_row end
+      
+      -- Calcular ancho: necesitamos el ancho de la fila con más estrellas
+      local widest_row = stars_per_row
+      if rows == 2 and max_allowed_stars > 10 then
+        -- Dos filas, usar el ancho de la fila completa
+        widest_row = stars_per_row
+      elseif rows == 1 then
+        widest_row = max_allowed_stars
+      end
+      
+      local total_width = (widest_row * ss.x) + ((widest_row - 1) * this.Stars.dx)
+      local total_height = (ss.y * rows) + (this.Stars.dy * (rows - 1))
+      
+      -- Ajustar el tamaño del contenedor Stars
+      this.Stars:SetSize({total_width, total_height})
+      
+      -- Calcular offset para centrar en el ancho disponible
+      local offs = 0
       this.Stars.Star_1:SetAnchor("RIGHT", this.Stars, "RIGHT", {-offs,0})
       
       for i = 1,this.Stars.count do
