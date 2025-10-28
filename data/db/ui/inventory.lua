@@ -23,7 +23,7 @@ local function GetExpForQuality(quality)
     [2] = 20,   -- Uncommon
     [3] = 30,   -- Rare
     [4] = 50,   -- Epic
-    [5] = 100,  -- Legendary
+    [5] = 10000,  -- Legendary
     [6] = 200   -- Mythic
   }
   return expTable[quality] or 10

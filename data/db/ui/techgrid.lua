@@ -707,11 +707,17 @@ end
 function TechGrid:UpdateGems()
   local gems, allGems = game.GetPlayerGems()
   
-  -- Obtener límite basado en el nivel del jugador
-  local max_skill_points = 10
-  if PlayerLevel then
-    max_skill_points = PlayerLevel:GetMaxSkillPoints()
+  -- Obtener nivel del sistema correcto y calcular límite
+  local current_level = 1
+  local experience = game.LoadUserPrefs("experience")
+  if experience and experience.level then
+    current_level = experience.level
+  elseif PlayerLevel then
+    current_level = PlayerLevel:GetLevel()
   end
+  
+  -- Calcular límite: 10 + floor(level / 10)
+  local max_skill_points = 10 + math.floor(current_level / 10)
   
   -- Mostrar gemas disponibles (mantener límite de 300 para xenoshards)
   this.Gems.Text:SetStr("<color=103,137,236>"..gems.."</><color=50,62,140>/"..allGems.."</>")
