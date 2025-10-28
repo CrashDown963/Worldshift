@@ -51,7 +51,7 @@ item I_A2H : HumanSpecItem {
 
 item I_A3H : HumanSpecItem {
   name = "Enhanced Shields"
-  text = "All your units will have [stats.armor] additional armor."
+  text = "All your units will have [stats.armor] additional armor. And [stats.damage] more damage"
   icon = 4,1
   levels = 1,2
   repo = HUMAN_SPECA3
@@ -66,6 +66,7 @@ item I_A3H : HumanSpecItem {
 
   stats {
     armor = 5%/10%
+    damage = 20%
   }
   --abilities { AA3H { item = I_A3H } }
 }
