@@ -156,6 +156,17 @@ function CalculatePerformanceBonus()
   return bonus
 end
 
+-- Award token for completing any mission successfully
+function AwardMissionToken()
+  local tokenData = game.LoadUserPrefs("player_tokens")
+  if not tokenData then
+    tokenData = { count = 0 }
+  end
+  tokenData.count = (tokenData.count or 0) + 1
+  game.SaveUserPrefs("player_tokens", tokenData)
+  print("Token awarded! Total tokens: " .. tokenData.count)
+end
+
 function GiveMissionRewards()
   -- Código existente de recompensas (si existe)...
   
@@ -179,6 +190,9 @@ function GiveMissionRewards()
   game.SaveUserPrefs("PlayerLevel", data)
   
   print("GiveMissionRewards: Added " .. total_xp .. " XP. New level: " .. data.level .. ", XP: " .. data.xp)
+  
+  -- Give token for completing mission successfully
+  AwardMissionToken()
 end
 
 function WinMission(descr)
@@ -288,7 +302,9 @@ local function CheckSpecialLocationVictory()
     if g_bCheatWin then
       g_bCheatWin = nil
       if not onVictory or not onVictory() then 
-        --GiveMissionRewards()
+        -- Award token for cheating to win (testing)
+        AwardMissionToken()
+        
         ui.Victory.description = ui.TEXT("victory_missiondone")
         SetPlayerWin(true)
         Pause()
@@ -303,6 +319,9 @@ local function CheckSpecialLocationVictory()
     if fVictoryTime or fDefeatTime then 
       if fVictoryTime and fVictoryTime ~= -1 then
         if not onVictory or not onVictory() then 
+          -- Award token for completing special location (safari, etc)
+          AwardMissionToken()
+          
           PLEvent("SLWon", GetName());
           ui.Victory.description = ui.TEXT("victory_missiondone")
           SetPlayerWin(true)

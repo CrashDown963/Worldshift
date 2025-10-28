@@ -2,6 +2,36 @@
 -- Lobby Screen
 --
 
+-- Token System for shop purchases
+local function GetTokenCount()
+  local data = game.LoadUserPrefs("player_tokens")
+  if not data then
+    return 0
+  end
+  return data.count or 0
+end
+
+local function AddToken(amount)
+  local data = game.LoadUserPrefs("player_tokens")
+  if not data then
+    data = { count = 0 }
+  end
+  data.count = (data.count or 0) + (amount or 1)
+  game.SaveUserPrefs("player_tokens", data)
+  return data.count
+end
+
+local function SpendToken()
+  local count = GetTokenCount()
+  if count > 0 then
+    local data = game.LoadUserPrefs("player_tokens")
+    data.count = data.count - 1
+    game.SaveUserPrefs("player_tokens", data)
+    return true
+  end
+  return false
+end
+
 local StartStr = TEXT{"startstr"}
 local StartGame_WaitForParty = TEXT{"startgame_waitforparty"}
 local StartGame_WaitForJoin = TEXT{"startgame_waitforjoin"}
@@ -682,6 +712,12 @@ local DefPVPSlot = Inventory.DefItemSlot {
   
   OnMouseDown = function(this)
     if this:GetItem() then
+      -- Check if player has tokens
+      if GetTokenCount() <= 0 then
+        MessageBox:Alert(TEXT{"no_tokens"}, TEXT{"no_tokens_ttl"})
+        return
+      end
+      
       local quality = this:GetItem().quality
       local race = game.GetPlayerRace()
       local targetRepo = "INVENTORY_H" -- Default to humans
@@ -695,10 +731,14 @@ local DefPVPSlot = Inventory.DefItemSlot {
       
       local res = this:MoveItem(targetRepo)
       if res and res > 0 then
-        -- Update battle points display in shop
+        -- Spend token
+        SpendToken()
+        
+        -- Update displays in shop
         local shopView = this:GetParent():GetParent()
         if shopView.BattlePointsDisplay then
           shopView.BattlePointsDisplay:UpdateBP()
+          shopView:UpdateTokenDisplay()
         end
         
         -- Refresh the shop to show new items
@@ -3053,6 +3093,32 @@ Lobby = uiwnd {
       end,
     },
     
+    TokenDisplay = uiwnd {
+      layer = lobbylayer + 1,
+      size = {200, 30},
+      anchors = { TOPRIGHT = { -15, 50 } },
+      
+      Frame = uiimg {
+        texture = "data/textures/ui/stat_black_back.dds",
+        coords = {0, 0, 227, 29},
+        size = {200, 29},
+      },
+      
+      Text = uitext {
+        layer = "+1",
+        size = {200, 29},
+        anchors = { CENTER = { "CENTER", "Frame", 0,0 } },
+        color = {255, 143, 51},
+        font = "Tahoma,12b",
+        halign = "CENTER",
+      },
+      
+      UpdateTokens = function(this)
+        local tokens = GetTokenCount()
+        this.Text:SetStr("<p>Tokens: "..tokens)
+      end,
+    },
+    
     ShopArea = uiwnd {
       size = {view_w-30, view_h-100},
       anchors = { TOPLEFT = { 15, 60 } },
@@ -3143,14 +3209,22 @@ Lobby = uiwnd {
       },
     },
     
+    UpdateTokenDisplay = function(this)
+      if this.TokenDisplay then
+        this.TokenDisplay:UpdateTokens()
+      end
+    end,
+    
     RefreshShop = function(this)
       -- Force refresh of PvP items
       game.RerollPVPItemsOffer()
       this.BattlePointsDisplay:UpdateBP()
+      this:UpdateTokenDisplay()
     end,
     
     OnShow = function(this)
       this.BattlePointsDisplay:UpdateBP()
+      this:UpdateTokenDisplay()
       this:RefreshShop()
     end,
   },
