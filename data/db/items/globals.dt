@@ -4,7 +4,7 @@ item_slots {
   INVENTORY_A { count = 65; accept_all = 1; }
   REWARDS   { count = 16; accept_all = 1; }
   RECYCLE   { count = 1; accept_all = 1; }
-  TRASH     { count = 1000; accept_all = 1; }
+  EXP_REPOSITORY_ITEMS { count = 1000; accept_all = 1; }
   MISSION   { count = 3; accept_all = 1; }
   PVP       { count = 6; accept_all = 1; }
 

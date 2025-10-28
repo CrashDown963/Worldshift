@@ -277,14 +277,14 @@ Inventory.DefItemSlot = uislot {
           local quality = item.quality
           -- Only destroy tier 4 (Epic) or tier 5 (Legendary) items
           if quality == 4 or quality == 5 then
-            -- Award experience and move to TRASH (invisible repository)
+            -- Award experience and move to EXP_REPOSITORY_ITEMS (invisible repository)
             AwardExperience(quality, item)
             
-            local result = this:MoveItem("TRASH")
+            local result = this:MoveItem("EXP_REPOSITORY_ITEMS")
             if result then
               game.PlaySnd(sounds.inv_item_out)
             else
-              -- If TRASH is full, show error message
+              -- If repository is full, show error message
               game.PlaySnd(sounds.item_reject)
               if ErrText then
                 ErrText:ShowText("Destruction repository is full.")
