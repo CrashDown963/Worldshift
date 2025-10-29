@@ -19,7 +19,7 @@ Commander Commander : BaseUnit {
     psi = 350
 
     range = 1200
-    damage = 300000
+    damage = 30
     
     inject_hp = 250
     inject_power_cost = 110
