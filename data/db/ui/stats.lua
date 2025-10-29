@@ -721,7 +721,7 @@ Stats = uiwnd {
       },
 	  },
 	  
-	  BattlePointsText = uitext {
+ 	  BattlePointsText = uitext {
 	    layer = "+1",
 	    size = {250,1},
 	    --halign = "LEFT",
@@ -729,12 +729,8 @@ Stats = uiwnd {
       font = "Verdana,10",
 	  },
 
-    PlayerLevelStat = DefGSStat {
-      anchors = { TOPLEFT = { 20,20 } },
-    },
-
     Rank1v1DM = DefGSStat {
-      anchors = { TOP = { "BOTTOM", "PlayerLevelStat", 0,15 } },
+      anchors = { TOPLEFT = { 20,20 } },
     },
 	  
     Rating1v1DM = DefGSStat {
@@ -797,24 +793,6 @@ Stats = uiwnd {
       local durm, durs = game.GetPlayerAveragePVPDuration()
       if durs < 10 then durs = "0" .. durs end
       this.GameDuration.Text:SetStr(TEXT{"gamedurationvalue", durm, durs})
-      
-      
-      -- Mostrar nivel del jugador y XP ganada
-      local player_level = 1
-      local current_xp = 0
-      local xp_needed = 100
-      local session_xp = 0
-      if PlayerLevel then
-        player_level = PlayerLevel:GetLevel()
-        current_xp = PlayerLevel:GetCurrentXP()
-        xp_needed = player_level * 100
-        session_xp = PlayerLevel.session_xp_gained or 0
-      end
-      this.PlayerLevelStat.Title:SetStr("<p>"..TEXT("player_level"))
-      this.PlayerLevelStat.StatPanel.Text:SetStr(player_level .. "/100 (" .. math.floor((current_xp/xp_needed)*100) .. "%)")
-      
-      -- Nota: La XP ganada se mostrará cuando las estadísticas se actualicen
-      -- No necesitamos hacer nada extra aquí
 
       this.Rank1v1DM.Title:SetStr("<p>"..TEXT("rank1v1txt"))
       this.Rating1v1DM.Title:SetStr("<p>"..TEXT("rating1v1txt"))
