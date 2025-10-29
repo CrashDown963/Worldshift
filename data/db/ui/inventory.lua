@@ -7,6 +7,61 @@ local sz_item_h = 42
 
 local DragingItem = false
 
+-- Experience System Functions (define early so Recycle slot can access them)
+local function CalculateLevel(totalExp)
+  -- Each level requires exactly 1000 XP
+  -- Level 1 = 0-999 XP
+  -- Level 2 = 1000-1999 XP
+  -- Level 3 = 2000-2999 XP, etc.
+  local level = math.floor(totalExp / 1000) + 1
+  return math.max(1, math.min(level, 999)) -- Cap at level 999
+end
+
+local function GetExpForQuality(quality)
+  local expTable = {
+    [1] = 10,   -- Common
+    [2] = 20,   -- Uncommon
+    [3] = 30,   -- Rare
+    [4] = 50,   -- Epic
+    [5] = 100,  -- Legendary
+    [6] = 200   -- Mythic
+  }
+  return expTable[quality] or 10
+end
+
+local function AwardExperience(quality, recycledItem)
+  local expGained = GetExpForQuality(quality)
+  
+  -- Load current experience data
+  local playerData = game.LoadUserPrefs("experience")
+  if not playerData then
+    playerData = { total = 0, level = 1, recycled_items = 0 }
+  end
+  
+  local oldLevel = playerData.level
+  playerData.total = playerData.total + expGained
+  playerData.recycled_items = (playerData.recycled_items or 0) + 1
+  
+  local newLevel = CalculateLevel(playerData.total)
+  playerData.level = newLevel
+  
+  -- Save the data using game.SaveUserPrefs (works in lobby and in-game)
+  game.SaveUserPrefs("experience", playerData)
+  
+  -- Show feedback
+  if newLevel > oldLevel then
+    if ErrText then
+      local levelText = TEXT("level_up"):gsub("{0}", tostring(newLevel))
+      ErrText:ShowText(levelText)
+    end
+  else
+    if ErrText then
+      local expText = TEXT("exp_gained"):gsub("{0}", tostring(expGained))
+      ErrText:ShowText(expText)
+    end
+  end
+end
+
 local FrameByRepo = {
   ALIEN_POWER = 7,
   MUTANT_BLOOD = 7,
@@ -85,10 +140,11 @@ Inventory = uiwnd {
       Tooltip:Show()
     end,
 
-    OnMouseLeave = function(this)
-      Tooltip:Hide()
-    end,
-	},
+  OnMouseLeave = function(this)
+    Tooltip:Hide()
+  end,
+},
+
 }
 
 Inventory.DefItemSlot = uislot {
@@ -197,8 +253,59 @@ Inventory.DefItemSlot = uislot {
   end,
 
   OnMouseDown = function(this)
+    -- Shift+Click on inventory item = destroy item and give experience
     if argMods.shift and argBtn == "LEFT" then
-      DESKTOP:CreateItemLink(this:GetItem())
+      local item = this:GetItem()
+      if item then
+        local src = this:GetInfo()
+        -- Only work if item is in inventory (not equipped) and is tier 5 (Legendary)
+        if string.sub(src, 1, 10) == "INVENTORY_" then
+          local quality = item.quality
+          -- Only destroy tier 4 (Epic) or tier 5 (Legendary) items
+          if quality == 4 or quality == 5 then
+            -- Check if player is already at max level (100)
+            local playerData = game.LoadUserPrefs("experience")
+            local currentLevel = 1
+            if playerData and playerData.level then
+              currentLevel = playerData.level
+            end
+            
+            if currentLevel >= 100 then
+              -- Max level reached, show error
+              game.PlaySnd(sounds.item_reject)
+              if ErrText then
+                ErrText:ShowText("Maximum level reached. Can't destroy more items for experience.")
+              end
+            else
+              -- Award experience and move to EXP_REPOSITORY_ITEMS (invisible repository)
+              AwardExperience(quality, item)
+              
+              local result = this:MoveItem("EXP_REPOSITORY_ITEMS")
+              if result then
+                game.PlaySnd(sounds.inv_item_out)
+              else
+                -- If repository is full, show error message
+                game.PlaySnd(sounds.item_reject)
+                if ErrText then
+                  ErrText:ShowText("Destruction repository is full.")
+                end
+              end
+            end
+          else
+            -- Not tier 4 or 5, show error
+            game.PlaySnd(sounds.item_reject)
+            if ErrText then
+              ErrText:ShowText("Only Epic and Legendary items can be destroyed for experience.")
+            end
+          end
+        else
+          -- If not in inventory, create item link (original behavior)
+          DESKTOP:CreateItemLink(this:GetItem())
+        end
+      else
+        -- If no item, create item link (original behavior)
+        DESKTOP:CreateItemLink(this:GetItem())
+      end
       return
     end
     
@@ -433,6 +540,7 @@ function Inventory.DefItemSlot_OnLoad(this)
     	this.mark_accept = nil
       this:SlotLight(false)
       this:SetColor()
+      
       local item = this:GetItem() 
       if not item then
         this:UpdateFrame()
@@ -442,6 +550,7 @@ function Inventory.DefItemSlot_OnLoad(this)
 				this:OnMouseEnter()
         game.PlaySnd(this.soundItemIn)
       end
+      
       this:UpdateFrame()
     end
     

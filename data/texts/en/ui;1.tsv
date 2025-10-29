@@ -32,7 +32,12 @@ purchase_success	Purchase Successful
 inactive_spec	Inactive	
 chg_off_btn	Reroll	
 refresh	REFRESH
+no_tokens	Not enough tokens to purchase this item.
+no_tokens_ttl	Purchase Failed
 bp_tip	Tip: Enter and exit any Skirmish match to get 9999 Battle Points!
+player_level	Player Level
+exp_gained	+{0} EXP!
+level_up	LEVEL UP! Now Level {0}
 close_caps	CLOSE	
 continue_caps	CONTINUE	
 observe_caps	OBSERVE	
@@ -165,8 +170,8 @@ ignore_all_invitations	Ignore ALL game invitations
 show_friends_invitations	Show game invitations only from players in your friends list	
 allow_inspected	Allow to be inspected	
 statistics_average	STATISTICS AVERAGE<nl>(MULTIPLAYER GAMES)	
-gamedurationtext	Average deathmatch game duration	
-battlepointstext	Current amount of Battle points	
+gamedurationtext	Avg. deathmatch game duration	
+battlepointstext	Amount of Battle points	
 battlepointsvalue	[#] of [#]	
 gamedurationvalue	[#]:[#] min	
 player_settings	Player	

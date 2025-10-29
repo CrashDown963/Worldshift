@@ -19,6 +19,17 @@ function InitMissions()
     table.insert(loc, { map = mapn })
     map.SaveUserData("SpecialLocations", loc)
   end
+  
+  -- Initialize experience system
+  local playerExp = game.LoadUserPrefs("experience")
+  if not playerExp or not playerExp.total then
+    playerExp = {
+      total = 0,
+      level = 1,
+      recycled_items = 0
+    }
+    game.SaveUserPrefs("experience", playerExp)
+  end
 end
 
 local function find(tbl, name)

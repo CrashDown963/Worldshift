@@ -728,10 +728,13 @@ Stats = uiwnd {
 	    anchors = { TOP = { "BOTTOM", "BattlePoints", 0,5 } },
       font = "Verdana,10",
 	  },
-	  
-	  
-    Rank1v1DM = DefGSStat {
+
+    PlayerLevelStat = DefGSStat {
       anchors = { TOPLEFT = { 20,20 } },
+    },
+
+    Rank1v1DM = DefGSStat {
+      anchors = { TOP = { "BOTTOM", "PlayerLevelStat", 0,15 } },
     },
 	  
     Rating1v1DM = DefGSStat {
@@ -757,8 +760,25 @@ Stats = uiwnd {
     BossesKilled = DefGSStat {
       anchors = { TOP = { "BOTTOM", "LocPlayed", 0,15 } },
     },	      	  
+    
+    PlayerLevel = DefGSStat {
+      anchors = { TOP = { "BOTTOM", "BossesKilled", 0,15 } },
+      
+      StatPanel = uiwnd {
+        size = {200,29},
+        anchors = { TOPLEFT = {150,2 } },
+        Back = DefBackInBlack{ layer = "+1" },
+        Text = uitext {
+          layer = "+3",
+          color = {255, 143, 51},
+          font = "Verdana,11b",
+          halign = "CENTER",
+          str = "N/A",
+        },
+      },
+    },	      	  
 	  
-	  	  
+	  
     OnShow = function(this)
       --local pname = net.Lobby_GetPlayerName()
       --this.Name:SetStr(TEXT{"logo_name", pname})
@@ -779,6 +799,23 @@ Stats = uiwnd {
       this.GameDuration.Text:SetStr(TEXT{"gamedurationvalue", durm, durs})
       
       
+      -- Mostrar nivel del jugador y XP ganada
+      local player_level = 1
+      local current_xp = 0
+      local xp_needed = 100
+      local session_xp = 0
+      if PlayerLevel then
+        player_level = PlayerLevel:GetLevel()
+        current_xp = PlayerLevel:GetCurrentXP()
+        xp_needed = player_level * 100
+        session_xp = PlayerLevel.session_xp_gained or 0
+      end
+      this.PlayerLevelStat.Title:SetStr("<p>"..TEXT("player_level"))
+      this.PlayerLevelStat.StatPanel.Text:SetStr(player_level .. "/100 (" .. math.floor((current_xp/xp_needed)*100) .. "%)")
+      
+      -- Nota: La XP ganada se mostrará cuando las estadísticas se actualicen
+      -- No necesitamos hacer nada extra aquí
+
       this.Rank1v1DM.Title:SetStr("<p>"..TEXT("rank1v1txt"))
       this.Rating1v1DM.Title:SetStr("<p>"..TEXT("rating1v1txt"))
       this.Wins1v1DM.Title:SetStr("<p>"..TEXT("wins1v1txt"))
@@ -786,6 +823,7 @@ Stats = uiwnd {
       this.Streak1v1DM.Title:SetStr("<p>"..TEXT("streak1v1txt"))
       this.LocPlayed.Title:SetStr("<p>"..TEXT("player_loc_played"))
       this.BossesKilled.Title:SetStr("<p>"..TEXT("player_bosses"))      
+      this.PlayerLevel.Title:SetStr("<p>"..TEXT("player_level"))
       
       this.Rank1v1DM.StatPanel.Text:SetStr("N/A")
       this.Rating1v1DM.StatPanel.Text:SetStr("N/A")
@@ -793,7 +831,21 @@ Stats = uiwnd {
       this.Losses1v1DM.StatPanel.Text:SetStr("N/A")
       this.Streak1v1DM.StatPanel.Text:SetStr("N/A") 
       this.LocPlayed.StatPanel.Text:SetStr("N/A") 
-      this.BossesKilled.StatPanel.Text:SetStr("N/A")            
+      this.BossesKilled.StatPanel.Text:SetStr("N/A")
+      
+      -- Load and display player level
+      local playerExp = game.LoadUserPrefs("experience")
+      if playerExp and playerExp.level and playerExp.total then
+        local level = playerExp.level
+        local totalExp = playerExp.total
+        -- Calculate current experience in this level and max needed
+        local currentExpInLevel = totalExp % 1000
+        local maxExpInLevel = 1000
+        -- Format: "Lvl X | Y/Z"
+        this.PlayerLevel.StatPanel.Text:SetStr("Lvl " .. level .. " | " .. currentExpInLevel .. "/" .. maxExpInLevel)
+      else
+        this.PlayerLevel.StatPanel.Text:SetStr("Lvl 1 | 0/1000")
+      end            
       
       local stats = game.LoadUserData("stats")
       local count = stats.count and stats.count > 0 and stats.count or 1
