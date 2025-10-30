@@ -30,7 +30,6 @@ Unit HowlingHorror : UnderworldUnit {
   stats: {
     hp = 1120
     armor = 18
-    range = stat:range
     damage = 40
     psi = 300
     speed = 450

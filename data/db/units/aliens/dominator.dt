@@ -30,7 +30,6 @@ Unit Dominator: AlienUnit {
   stats :{
     hp = 450
     armor = 7
-    range = stat:range
     damage = 15
     speed = 450
     range = 1400

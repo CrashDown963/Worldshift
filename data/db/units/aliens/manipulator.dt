@@ -29,7 +29,6 @@ Unit Manipulator : AlienUnit {
   stats : {
     hp = 420
     armor = 2
-    range = stat:range
     damage = 12
     psi = 400
     speed = 450

@@ -18,7 +18,6 @@ Unit Shifter : AlienUnit {
     hp = 580
     psi = 300
     armor = 8
-    range = stat:range
     damage = 10
     speed = 450
     range = 1400

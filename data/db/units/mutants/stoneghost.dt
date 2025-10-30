@@ -62,7 +62,6 @@ StoneGhost StoneGhost : UnderworldUnit {
     hp = 420
     psi = 320
     armor = 0
-    range = stat:range
     damage = 4
     armor = 2
     speed = 450

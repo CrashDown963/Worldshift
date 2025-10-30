@@ -40,7 +40,6 @@ Unit Master : AlienUnit {
   stats :{
     hp = 700
     armor = 12
-    range = stat:range
     damage = 75
     psi = 380
     speed = 450

@@ -19,7 +19,6 @@ Unit Warrior : BaseUnit {
     hp = 220
     armor = 0
     damage = 12
-    range = stat:range
     speed = 450
     range = 1600
   }

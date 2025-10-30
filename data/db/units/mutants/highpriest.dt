@@ -64,7 +64,6 @@ Unit HighPriest : BaseUnit {
  
   stats :{
     hp = 850
-    range = stat:range
     psi = 500
     speed = 450
     range = 1800

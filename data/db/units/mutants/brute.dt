@@ -12,7 +12,6 @@ Unit Brute : BaseUnit {
     armor = 14
     psi = 0
     psi_gen = 0
-    range = stat:range
     damage = 8
     growl_duration = 4
     speed = 450

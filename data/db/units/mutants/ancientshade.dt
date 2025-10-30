@@ -15,7 +15,6 @@ Unit AncientShade : UnderworldUnit {
 	  psi = 280
     damage = 15
     penetration = 100
-    range = stat:range
     speed = 450
     range = 1800
     

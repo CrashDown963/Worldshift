@@ -62,7 +62,6 @@ Guardian Guardian : BaseUnit {
     hp = 720
     armor = 4
     psi = 200
-    range = stat:range
     damage = 50
     speed = 450
     range = 200

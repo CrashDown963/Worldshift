@@ -28,7 +28,6 @@ Unit Shaman : BaseUnit {
 
   stats :{
     hp = 420
-    range = stat:range
     psi = 420
     armor = 0
     damage = 10

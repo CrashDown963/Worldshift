@@ -26,7 +26,6 @@ Unit Arbiter : AlienUnit {
 
   stats :{
     hp = 320
-    range = stat:range
     psi = 300
     damage = 80 
     armor = 2

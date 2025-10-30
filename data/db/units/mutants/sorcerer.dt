@@ -34,7 +34,6 @@ Unit Sorcerer : BaseUnit {
   
   stats :{
     hp = 540
-    range = stat:range
     psi = 400
     damage = 80
     armor = 0

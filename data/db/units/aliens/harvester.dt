@@ -32,7 +32,6 @@ Unit Harvester: AlienUnit {
   stats : {
     hp = 780
     armor = 22
-    range = stat:range
     damage = 35
     psi = 400
     speed = 450

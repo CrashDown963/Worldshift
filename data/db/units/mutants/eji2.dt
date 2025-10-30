@@ -20,7 +20,7 @@ Unit Psychic : BaseUnit {
     damage = data/speech/engage alerts/eji damage/
   }
 
-  speed = 450
+  speed = stat:speed
   sight = 1400
   aggro_range = 0
   
@@ -31,6 +31,7 @@ Unit Psychic : BaseUnit {
     psi = 520
     psi_gen = 380
     restore_amount = 200
+    speed = 450
   }
 
   

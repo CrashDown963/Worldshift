@@ -21,6 +21,7 @@ Unit PsiDetonator : MachineUnit {
     armor = 25
     damage = 50
     range = 1600
+    speed = 450
     
 	  shield_hull = 100
     shield_regen  = 120
@@ -33,7 +34,7 @@ Unit PsiDetonator : MachineUnit {
     detonatoraura_tick = 10
   }
   
-  speed = 450
+  speed = stat:speed
 
   min_attack_range = 70
 

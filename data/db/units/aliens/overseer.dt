@@ -33,7 +33,6 @@ Unit Overseer : MachineUnit {
     armor = 4
     damage = 9
     power = 300
-    range = stat:range
     speed = 450
     range = 1800
     
