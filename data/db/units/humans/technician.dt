@@ -12,12 +12,11 @@ Technician Technician : BaseUnit {
   stats :{
     armor = 0
     hp = 400
-    range = stat:range
+    range = 1100
     damage = 25
     aggro_range = 800
     mine_amount_per_turn = 10
     speed = 450
-    range = 1100
   }
 
   impacts : LivingUnitImpacts

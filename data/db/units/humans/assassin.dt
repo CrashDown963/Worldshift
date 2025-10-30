@@ -15,7 +15,7 @@ Unit Assassin : BaseUnit {
     psi = 120
     armor = 2
     speed = 450
-    range = stat:range
+    range = 2100
     damage = 120
 
     poison_shot_psi = 90
@@ -25,12 +25,12 @@ Unit Assassin : BaseUnit {
     poison_shot_cooldown = 40
     poison_shot_perc = 30
 
-    range = 2100
+    
 
     expose_target_chance = 10
     expose_target_armor_perc = 10
     expose_target_armor_duration = 12
-    speed = 450
+    
   }	
   sight = stat:range + 300
   physics {

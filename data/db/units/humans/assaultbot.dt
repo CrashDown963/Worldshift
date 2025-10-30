@@ -22,12 +22,11 @@ AssaultBot AssaultBot : MachineUnit {
     hp = 340
     armor = 25
     power = 300
-    range = stat:range
+    range = 1600
     damage = 10
     attack_proximity = 0
     attack_precision = 100
     speed = 450
-    range = 1600
 
     barrage_cost = 120
     barrage_duration = 4
@@ -36,7 +35,6 @@ AssaultBot AssaultBot : MachineUnit {
     rocket_precision_duration = 10
     rocket_precision_chance = 5
     rocket_damage = 20
-    speed = 450
   }
 
   sight = stat:range + 500

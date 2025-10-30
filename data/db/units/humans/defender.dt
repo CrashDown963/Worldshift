@@ -54,7 +54,7 @@ Unit Defender : MachineUnit {
   stats :{
     hp = 420
     power = 220
-    range = stat:range
+    range = 1200
     damage = 15
     armor = 25
     rocket_radius = 500

@@ -51,8 +51,6 @@ Constructor Constructor : MachineUnit {
     }
   }
   
-  speed = stat:speed
-  
   animation {
     cast_nano_fix_prepare = cast_preparation
     cast_nano_fix_finish = cast_finish
@@ -64,14 +62,13 @@ Constructor Constructor : MachineUnit {
 
     hp = 420
     armor = 7
-    range = stat:range
+    range = 1600
 
     damage = 14
     
     power = 300
 
     speed = 450
-    range = 1600
 
     nano_fix_power = 50
     nano_fix_heal = 200
@@ -87,7 +84,6 @@ Constructor Constructor : MachineUnit {
     repairdrones_tick_time = 1
     repairdrones_heal_radius = 300
     repairdrones_health = 400
-    speed = 450
   }
 
   -- nano fix

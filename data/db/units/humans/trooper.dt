@@ -10,8 +10,6 @@ Trooper Trooper : BaseUnit {
 
   speed = stat:speed
   take_auras : { RestorationCoreAura }
-  
-  speed = stat:speed
 
   sounds {
     start = data/speech/summoning/trooper/

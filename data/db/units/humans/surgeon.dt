@@ -32,10 +32,9 @@ Surgeon Surgeon : BaseUnit {
   stats : {
     armor = 2
     hp = 350
-    range = stat:range
+    range = 1600
     damage = 8
     speed = 450
-    range = 1600
  
     attack_rate = 1
     attack_proximity = 10
@@ -56,7 +55,6 @@ Surgeon Surgeon : BaseUnit {
 
     mend_power = 80
     mend_heal = 280
-    speed = 450
   }
   
   relief_radius = 600

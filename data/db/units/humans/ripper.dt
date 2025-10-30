@@ -25,12 +25,10 @@ Unit Ripper : MachineUnit {
   stats : {
     hp = 180
     armor = 8
-    range = stat:range
+    range = 80
     damage = 12
     elusion = 0
     speed = 450
-
-    range = 80
 
     overclock_cooldown = 16
     overclock_perc = 150
@@ -39,7 +37,7 @@ Unit Ripper : MachineUnit {
     rupture_chance = 3
     rupture_stun_duration = 4
     
-    speed = 450
+    
   }
   
   actions :{

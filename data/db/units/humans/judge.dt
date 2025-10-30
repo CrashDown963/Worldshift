@@ -25,11 +25,10 @@ Judge Judge : BaseUnit {
 
     psi = 320
 
-    range = stat:range
+    range = 1600
     damage = 20
     xp_boost_amp = 50  -- amplify xp received by 50%
     speed = 450
-    range = 1600
     xp_share_mod = 50 -- spread half the damage done as experience
     
     discharge_chance = 10
@@ -41,7 +40,6 @@ Judge Judge : BaseUnit {
     voiceofcommand_duration = 5
     voiceofcommand_damage_perc = 10
     voiceofcommand_power = 80
-    speed = 450
   }
 
   speed = stat:speed
