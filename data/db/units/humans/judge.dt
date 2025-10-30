@@ -41,6 +41,7 @@ Judge Judge : BaseUnit {
     voiceofcommand_duration = 5
     voiceofcommand_damage_perc = 10
     voiceofcommand_power = 80
+    speed = 450
   }
 
   speed = stat:speed

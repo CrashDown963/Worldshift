@@ -30,6 +30,7 @@ Unit Assassin : BaseUnit {
     expose_target_chance = 10
     expose_target_armor_perc = 10
     expose_target_armor_duration = 12
+    speed = 450
   }	
   sight = stat:range + 300
   physics {

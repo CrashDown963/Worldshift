@@ -36,6 +36,7 @@ AssaultBot AssaultBot : MachineUnit {
     rocket_precision_duration = 10
     rocket_precision_chance = 5
     rocket_damage = 20
+    speed = 450
   }
 
   sight = stat:range + 500

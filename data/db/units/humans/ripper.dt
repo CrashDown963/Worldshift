@@ -39,6 +39,7 @@ Unit Ripper : MachineUnit {
     rupture_chance = 3
     rupture_stun_duration = 4
     
+    speed = 450
   }
   
   actions :{

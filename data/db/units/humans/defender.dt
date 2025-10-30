@@ -59,7 +59,6 @@ Unit Defender : MachineUnit {
     armor = 25
     rocket_radius = 500
     speed = 450
-    range = 1200
   }
   
   reacts {

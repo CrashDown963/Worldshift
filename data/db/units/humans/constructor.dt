@@ -51,6 +51,8 @@ Constructor Constructor : MachineUnit {
     }
   }
   
+  speed = stat:speed
+  
   animation {
     cast_nano_fix_prepare = cast_preparation
     cast_nano_fix_finish = cast_finish
@@ -85,6 +87,7 @@ Constructor Constructor : MachineUnit {
     repairdrones_tick_time = 1
     repairdrones_heal_radius = 300
     repairdrones_health = 400
+    speed = 450
   }
 
   -- nano fix
