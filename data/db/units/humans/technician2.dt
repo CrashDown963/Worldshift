@@ -20,6 +20,7 @@ Unit Engineer : BaseUnit {
     attack_rate = 1
     attack_proximity = 10
     attack_precision = 1
+    turret_damage = 30
   }
 
   sounds {
@@ -105,7 +106,7 @@ RepairAbi {
 
 TurretsAbi {
   name = Turrets
-  text = "Deploys a Proton Turret at the target location. The turret has 750 health, 20 armor, deals 30 energy damage and has a range of 1600. The turret automatically attacks nearby enemies and despawns after 120 seconds or when there are no enemies nearby for 30 seconds. Cooldown: 45 seconds."
+  text = "Deploys a Proton Turret at the target location. The turret has 750 health, 20 armor, deals [stat:turret_damage] energy damage and has a range of 1600. The turret automatically attacks nearby enemies and despawns after 120 seconds or when there are no enemies nearby for 30 seconds. Cooldown: 45 seconds."
   visible = 1
   when : abi.combat
   icon = 1,0

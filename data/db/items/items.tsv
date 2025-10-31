@@ -3001,11 +3001,11 @@
 70002	1	Humans	HUMAN_JUDGE	MYTHIC Divine Justice	Judge	Judge damage = 25Judge psi = 35%Judge crit_chance = 15Judge voiceofcommand_damage_perc = 20Judge armor = 15		
 70003	1	Humans	HUMAN_SURGEON	MYTHIC Celestial Healer	Surgeon	Surgeon healing_taken_mod = 50%Surgeon psi_gen = 80Surgeon bandage_amount = 25Surgeon bandage_crit = 16Surgeon bandage_cooldown = -25%		
 70004	1	Humans	HUMAN_CONSTRUCTOR	MYTHIC Supreme Overlord	Constructor	Constructor repairdrones_repair_per_tick = 40Constructor hp = 25%Constructor psi_gen = 100Constructor repairdrones_heal_radius = 25%Constructor nano_fix_heal = 60		
-70005	1	Humans	HUMAN_ENGINEER	MYTHIC Master Engineer Core	Engineer	Engineer damage = 40Engineer hp = 25%Engineer psi = 30%Engineer armor = 10		
+70005	1	Humans	HUMAN_ENGINEER	MYTHIC Master Engineer Core	Engineer	Engineer turret_damage = 20Engineer hp = 25%Engineer psi = 30%Engineer armor = 10		
 70006	1	Humans	HUMAN_DEFENCE	MYTHIC Immortal Defender	HellfireTrooper	Hellfire damage = 30Hellfire hp = 35%Hellfire armor = 18Trooper damage = 5Trooper hp = 30%Trooper armor = 10	
 70007	1	Humans	HUMAN_IMPLANTS	MYTHIC Neural God Matrix	AssassinJudgeSurgeon	Assassin damage = 16Assassin crit_chance = 10Judge psi = 25%Judge damage = 15Surgeon bandage_amount = 12Surgeon bandage_cooldown = -10%		
 70008	1	Humans	HUMAN_WEAPONS	MYTHIC Legendary Arsenal	AssassinHellfire	Assassin damage = 15Assassin expose_target_chance = 8Hellfire damage = 20Hellfire hp = 20%Hellfire armor = 10	
-70009	1	Humans	HUMAN_NEUROSCIENCE	MYTHIC Psionic God Core	JudgeSurgeonEngineer	Judge voiceofcommand_damage_perc = 16Judge proton_shot_radius = 18Surgeon bandage_crit = 10Surgeon bandage_cooldown = -10%Engineer damage = 15Engineer hp = 25%	
+70009	1	Humans	HUMAN_NEUROSCIENCE	MYTHIC Psionic God Core	JudgeSurgeonEngineer	Judge voiceofcommand_damage_perc = 16Judge proton_shot_radius = 18Surgeon bandage_crit = 10Surgeon bandage_cooldown = -10%Engineer turret_damage = 10Engineer hp = 25%	
 70030	1	Humans	HUMAN_SPECA1	MYTHIC Durable Frame	TrooperRipperAssaultBotHellfire	Trooper hp = 35%Trooper damage = 2Ripper hp = 65%Ripper damage = 4Ripper armor = 14AssaultBot hp = 30%AssaultBot damage = 20Hellfire hp = 40%Hellfire armor = 15Hellfire damage = 12		
 70010	1	Aliens	ALIEN_MASTER	MYTHIC Cosmic Devastation	Master	Master damage = 30Master hp = 25%Master psi = 40%Master psi_gen = 100Master nether_nova_damage = 30		
 70011	1	Aliens	ALIEN_ARBITER	MYTHIC Eternal Guardian	Arbiter	Arbiter hp = 25%Arbiter armor = 15Arbiter psi = 35%Arbiter healing_taken_mod = 50%Arbiter damage = 30		
