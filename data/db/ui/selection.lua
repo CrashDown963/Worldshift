@@ -999,7 +999,18 @@ function Selection.Unit:Update(h, info)
     this.Armour.Icon:SetShader("_Misc_InterfaceDrawBW")
   end  
   
-  if info.nearDamage ~= info.farDamage then
+  -- Engineer (technician2) invoca torretas, mostrar daño de la torreta en lugar del suyo
+  local unitName = GetActorName(h)
+  local isEngineer = (unitName == "Engineer" or info.name == "Engineer")
+  
+  if isEngineer then
+    -- ProtonTurret2: damage = 30, range = 1600 (daño fijo, sin variación por rango)
+    local turretDamage = 30
+    this.rangeInfo = nil
+    this.Ranges.Text:SetStr(turretDamage)
+    this.Ranges:Show()
+    this.Ranges_bar:Hide()
+  elseif info.nearDamage ~= info.farDamage then
     this.Ranges_bar.Image:Set(info.nearDamage, info.farDamage, info.minRange, info.midRange, info.maxRange)
     this.Ranges_bar.Text:SetStr(info.nearDamage..' - '..info.farDamage)
     this.Ranges_bar:Show()
@@ -1008,23 +1019,25 @@ function Selection.Unit:Update(h, info)
     -- Guardar info de rangos para el tooltip
     this.rangeInfo = {}
     if info.minRange and info.midRange and info.maxRange then
-      -- Ordenar rangos correctamente
-      -- minRange = rango más lejano, maxRange = rango más cercano (al revés de lo esperado)
+      -- Determinar cuál rango es más cercano y cuál es más lejano
+      local closestRange = math.min(info.minRange, info.maxRange)
+      local farthestRange = math.max(info.minRange, info.maxRange)
+      
       if info.nearDamage > info.farDamage then
-        -- Más daño de cerca: maxRange (cerca) es óptimo (verde), minRange (lejos) es peor (naranja)
+        -- Más daño de cerca: rango más pequeño = óptimo (verde), rango más grande = peor (naranja)
         this.rangeInfo = {
-          optRange = info.maxRange,
+          optRange = closestRange,
           midRange = info.midRange,
-          badRange = info.minRange,
+          badRange = farthestRange,
           optDamage = info.nearDamage,
           badDamage = info.farDamage
         }
       else
-        -- Más daño de lejos: minRange (lejos) es óptimo (verde), maxRange (cerca) es peor (naranja)
+        -- Más daño de lejos: rango más grande = óptimo (verde), rango más pequeño = peor (naranja)
         this.rangeInfo = {
-          optRange = info.minRange,
+          optRange = farthestRange,
           midRange = info.midRange,
-          badRange = info.maxRange,
+          badRange = closestRange,
           optDamage = info.farDamage,
           badDamage = info.nearDamage
         }
