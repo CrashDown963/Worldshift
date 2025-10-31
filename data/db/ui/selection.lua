@@ -826,11 +826,11 @@ Selection.Unit = uiwnd {
     ttkey = "speed_stat",
     anchors = { TOPLEFT = { "BOTTOMLEFT", "Health", 0,2 } },
     Icon = stat.Icon { coords = {0,1*16,16,16} },
-    hidden = false,
+    hidden = true,
   },
   Armour = stat { 
     ttkey = "armour_stat", 
-    anchors = { TOPLEFT = { "BOTTOMLEFT", "Speed", 0,2 } },
+    anchors = { TOPLEFT = { "BOTTOMLEFT", "Health", 0,2 } },
     Icon = stat.Icon { coords = {0,4*16,16,16} },
   },
   Ranges = stat { 
@@ -895,12 +895,12 @@ Selection.Unit = uiwnd {
     ttkey = "range_stat",
     anchors = { TOPLEFT = { "BOTTOMLEFT", "Manna", 0,2 } },
     Icon = stat.Icon { coords = {0,3*16,16,16} },
-    hidden = false,
+    hidden = true,
   },
   
   Shield = stat { 
     ttkey = "shield_stat", 
-    anchors = { TOPLEFT = { "BOTTOMLEFT", "Range", 0,2 } },
+    anchors = { TOPLEFT = { "BOTTOMLEFT", "Manna", 0,2 } },
     Icon = stat.Icon { coords = {0,5*16,16,16} },
   },
   
@@ -944,6 +944,7 @@ function Selection.Unit:Update(h, info)
     
     this.Owner:SetColor(info.color)
     this.Owner:SetStr(info.player)
+    
   end
   this.h = h
   
@@ -979,10 +980,16 @@ function Selection.Unit:Update(h, info)
   
   this.Health.Text:SetStr(info.health..'/'..info.max_health)
   
-  -- Speed stat - mostrar siempre con valor por defecto o calculado
-  this.Speed.Text:SetStr("450")
-  this.Speed.Icon:SetShader()
-  this.Speed:Show()
+  -- Speed stat ocultado
+  -- if info.speed and info.speed > 0 then
+  --   this.Speed.Text:SetStr(math.floor(info.speed))
+  --   this.Speed.Icon:SetShader()
+  --   this.Speed:Show()
+  -- else
+  --   this.Speed.Text:SetStr("")
+  --   this.Speed.Icon:SetShader("_Misc_InterfaceDrawBW")
+  --   this.Speed:Show()
+  -- end
 
   if info.armor and info.armor > 0 then
     this.Armour.Text:SetStr(info.armor)
@@ -1044,15 +1051,16 @@ function Selection.Unit:Update(h, info)
     this.Manna.Icon:SetShader("_Misc_InterfaceDrawBW")
   end
   
-  if info.maxRange and info.maxRange > 0 then
-    this.Range.Text:SetStr(info.maxRange)
-    this.Range.Icon:SetShader()
-    this.Range:Show()
-  else
-    this.Range.Text:SetStr("")
-    this.Range.Icon:SetShader("_Misc_InterfaceDrawBW")
-    this.Range:Show()
-  end
+  -- Range stat ocultado del HUD
+  -- if info.maxRange and info.maxRange > 0 then
+  --   this.Range.Text:SetStr(info.maxRange)
+  --   this.Range.Icon:SetShader()
+  --   this.Range:Show()
+  -- else
+  --   this.Range.Text:SetStr("")
+  --   this.Range.Icon:SetShader("_Misc_InterfaceDrawBW")
+  --   this.Range:Show()
+  -- end
   
   if info.shield.maxHull and info.shield.hull then
     this.Shield.Text:SetStr(info.shield.hull..'/'..info.shield.maxHull)
