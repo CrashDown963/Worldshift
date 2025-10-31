@@ -62,7 +62,7 @@ item_slots {
     count = 1; race = humans; spec = 1; 
     bind = I_A3H; 
     reveal_gems = 10;
-    max_stars = 2
+    max_stars = 3
     req_stars = 10
     give_stars = 5
   }
@@ -166,8 +166,8 @@ item_slots {
     count = 1; race = mutants; spec = 1; 
     bind = I_A3M; 
     reveal_gems = 10;
-    max_stars = 10
-    req_stars = 0
+    max_stars = 3
+    req_stars = 10
     give_stars = 5
   }
   MUTANT_SPECB1 { 
@@ -272,7 +272,7 @@ item_slots {
     count = 1; race = aliens; spec = 1; 
     bind = I_A3A; 
     reveal_gems = 10;
-    max_stars = 2
+    max_stars = 3
     req_stars = 10
     give_stars = 5
   }
