@@ -6,7 +6,7 @@ Unit Engineer : BaseUnit {
   officer = 1
   icon = 3,3
   tags = unit, organic
-  speed = 450
+  speed = stat:speed
   aggro_range = 0
 
   take_auras : { RestorationCoreAura }
@@ -21,6 +21,7 @@ Unit Engineer : BaseUnit {
     attack_proximity = 10
     attack_precision = 1
     turret_damage = 30
+    speed = 450
   }
 
   sounds {

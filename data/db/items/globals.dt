@@ -63,7 +63,7 @@ item_slots {
     bind = I_A3H; 
     reveal_gems = 10;
     max_stars = 2
-    req_stars = 0
+    req_stars = 10
     give_stars = 5
   }
   HUMAN_SPECB1 { 
@@ -116,7 +116,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECB2
     max_stars = 2
-    req_stars = 5
+    req_stars = 10
     give_stars = 5
   }
   HUMAN_SPECD1 { 
@@ -166,7 +166,7 @@ item_slots {
     count = 1; race = mutants; spec = 1; 
     bind = I_A3M; 
     reveal_gems = 10;
-    max_stars = 2
+    max_stars = 10
     req_stars = 0
     give_stars = 5
   }
@@ -221,7 +221,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECB3
     max_stars = 2
-    req_stars = 5
+    req_stars = 10
     give_stars = 5
   }
   MUTANT_SPECD1 { 
@@ -273,7 +273,7 @@ item_slots {
     bind = I_A3A; 
     reveal_gems = 10;
     max_stars = 2
-    req_stars = 0
+    req_stars = 10
     give_stars = 5
   }
   ALIEN_SPECB1 { 
@@ -327,7 +327,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECB3
     max_stars = 2
-    req_stars = 5
+    req_stars = 10
     give_stars = 5
   }
   ALIEN_SPECD1 { 

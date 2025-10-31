@@ -208,8 +208,8 @@ gems: 	Xenoshards:
 gems2	Xenoshards: [#]/[#]
 nogems	Not enough xenoshards.
 prednotrev	You must unlock the previous specializations.
-noreqstars	More stars required on previous specializations.
-nostars	Not enough stars.
+noreqstars	You need to place more stars in other specializations before unlocking this node.
+nostars	You need to place more stars in other specializations before you can unlock or upgrade this node.
 reset	RESET
 	
 //// Settings window	

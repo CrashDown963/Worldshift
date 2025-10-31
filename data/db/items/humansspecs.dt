@@ -56,17 +56,20 @@ item I_A3H : HumanSpecItem {
   levels = 1,2
   repo = HUMAN_SPECA3
   target {
-    Technician
+    Engineer
     Ripper
     Trooper
     AssaultBot
     Hellfire
     Defender
+    Assassin
   }
 
   stats {
     armor = 5%/10%
     damage = 20%
+    turret_damage = 200%
+    speed = 50%/100%
   }
   --abilities { AA3H { item = I_A3H } }
 }
