@@ -19,7 +19,7 @@ Commander Commander : BaseUnit {
 
     range = 1200
     damage = 30
-    speed = 5000
+    speed = 450
     
     inject_hp = 250
     inject_power_cost = 110
