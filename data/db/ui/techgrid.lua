@@ -834,17 +834,39 @@ function TechGrid:UpdateGems()
             if stars > 0 then v.Star_1:SetColor(StarColorEnabled) end
             if stars > 1 then v.Star_2:SetColor(StarColorEnabled) end
             if stars > 2 then v.Star_3:SetColor(StarColorEnabled) end
-            for i = 1,maxStars do v["Star_"..i]:Show() end
-            for i = maxStars+1,3 do v["Star_"..i]:Hide() end
+            -- Validar que maxStars existe y está en rango válido (1-3)
+            if maxStars and maxStars > 0 then
+              local validMaxStars = math.min(math.max(maxStars, 1), 3)
+              for i = 1,validMaxStars do 
+                if v["Star_"..i] then 
+                  v["Star_"..i]:Show() 
+                end 
+              end
+              for i = validMaxStars+1,3 do 
+                if v["Star_"..i] then 
+                  v["Star_"..i]:Hide() 
+                end 
+              end
+            else
+              -- Si maxStars es nil o inválido, ocultar todas las estrellas
+              for i = 1,3 do 
+                if v["Star_"..i] then 
+                  v["Star_"..i]:Hide() 
+                end 
+              end
+            end
             v:SetAlpha(0)
             v.SpecIcon:SetAlpha(1)
             v.Star_1:SetAlpha(1)
             v.Star_2:SetAlpha(1)
             v.Star_3:SetAlpha(1)
-            local sz = v.StarPlate:GetSize()
-            local top = (maxStars-1)*sz.y
-            v.StarPlate:SetTexture(nil, {0,top,sz.x,top+sz.y})
-            v.StarPlate:SetAlpha(1)
+            if maxStars and maxStars > 0 and v.StarPlate then
+              local sz = v.StarPlate:GetSize()
+              local validMaxStars = math.min(math.max(maxStars, 1), 3)
+              local top = (validMaxStars-1)*sz.y
+              v.StarPlate:SetTexture(nil, {0,top,sz.x,top+sz.y})
+              v.StarPlate:SetAlpha(1)
+            end
           else
             v:SetAlpha(0)
             v.SpecIcon:SetAlpha(0)

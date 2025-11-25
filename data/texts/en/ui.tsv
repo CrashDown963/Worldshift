@@ -208,8 +208,8 @@ gems: 	Xenoshards:
 gems2	Xenoshards: [#]/[#]
 nogems	Not enough xenoshards.
 prednotrev	You must unlock the previous specializations.
-noreqstars	More stars required on previous specializations.
-nostars	Not enough stars.
+noreqstars	You need to place more stars in other specializations before unlocking this node.
+nostars	You need to place more stars in other specializations before you can unlock or upgrade this node.
 reset	RESET
 	
 //// Settings window	
@@ -256,8 +256,12 @@ done	Done
 effects	Effects
 health_stat	Hit points
 health_stat_d	The hit points show how much damage the unit can take before being destroyed.
+speed_stat	Speed
+speed_stat_d	The speed determines how fast the unit moves across the battlefield.
+range_stat	Range
+range_stat_d	The range determines the maximum distance at which the unit can attack enemies.
 armour_stat	Armor
-armour_stat_d	The armor points determine how much of the incoming damage is deducted from the bearer’s hit points.
+armour_stat_d	The armor points determine how much of the incoming damage is deducted from the bearer's hit points.
 damage_stat	Damage
 damage_stat_d	This property shows how many hit points a single attack will deduct from a target with no armor.
 damagerange_stat	Damage by range

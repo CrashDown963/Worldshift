@@ -50,23 +50,50 @@ item I_A2H : HumanSpecItem {
 }
 
 item I_A3H : HumanSpecItem {
-  name = "Enhanced Shields"
-  text = "All your units will have [stats.armor] additional armor. And [stats.damage] more damage"
+  name = "Cross-Species Alliance"
+  text = "All your units from all races will have [stats.speed] more speed and [stats.damage] more damage."
   icon = 4,1
-  levels = 1,2
+  levels = 1,2,3
   repo = HUMAN_SPECA3
   target {
-    Technician
-    Ripper
+    HighPriest
+    Shaman
+    Sorcerer
+    StoneGhost
+    Guardian
+    Psychic
+    Warrior
+    Brute
+    AncientShade
+    HowlingHorror
+    EliteKaiRider
+    Commander
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+    Engineer
     Trooper
+    Ripper
     AssaultBot
     Hellfire
     Defender
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+    Defiler
+    Shifter
+    Overseer
+    Tritech
+    Trisat
+    PsiDetonator
   }
 
   stats {
-    armor = 5%/10%
-    damage = 20%
+    speed = 1%/5%/10%
+    damage = 1%/3%/5%
   }
   --abilities { AA3H { item = I_A3H } }
 }

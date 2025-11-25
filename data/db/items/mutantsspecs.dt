@@ -36,29 +36,49 @@ item I_A2M : MutantSpecItem {
 }
 
 item I_A3M : MutantSpecItem {
-  name = "Resilient Forces"
-  text = "All your units will have [stats.armor] additional armor."
+  name = "Cross-Species Alliance"
+  text = "All your units from all races will have [stats.speed] more speed and [stats.damage] more damage."
   icon = 4,1
-  levels = 1,2
+  levels = 1,2,3
   repo = MUTANT_SPECA3
   target {
-    Warrior
-    Worker
-    Brute
     HighPriest
     Shaman
     Sorcerer
     StoneGhost
     Guardian
     Psychic
-    Adept
+    Warrior
+    Brute
     AncientShade
     HowlingHorror
     EliteKaiRider
-    Worm
+    Commander
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+    Engineer
+    Trooper
+    Ripper
+    AssaultBot
+    Hellfire
+    Defender
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+    Defiler
+    Shifter
+    Overseer
+    Tritech
+    Trisat
+    PsiDetonator
   }
   stats {
-    armor = 5%/10%
+    speed = 1%/5%/10%
+    damage = 1%/3%/5%
   }
   --abilities { AA3M { item = I_A3M } }
 }
