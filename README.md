@@ -1,28 +1,22 @@
 # Worldshift Modding
 
+
+## Installation Guide to download and play the game
+
+-Download the project: Download the ZIP file from GitHub
+-Extract the file: Extract the ZIP contents to your desired location
+-Run the game: Open the bin folder and run WorldShift.exe
+
+
+## Installation Guide (If you want help develop the game)
+
+This guide will help you install Git and download the Worldshift modding repository properly. **Important**: Downloading as a ZIP file does not work well with this project, so Git installation is required.
+
 **Important Notes:**
 - Always use `git clone` instead of downloading ZIP files
 - Make sure Git is properly installed before attempting to clone
 - If you encounter issues, check that you have the correct repository URL
 - Keep your Git installation updated for the best experience
-
-## Why ZIP Downloads Don't Work
-
-If you download the repository as a ZIP file and the game doesn't work, but it does work with `git clone`, this is due to **line ending differences**:
-
-- **Git clone**: Automatically converts LF (Unix) to CRLF (Windows) line endings during checkout
-- **ZIP downloads**: Extracts files with their original line endings (typically LF)
-- **The game expects CRLF**: WorldShift.exe reads files expecting Windows line endings (CRLF)
-
-When you manually copy `data/db` from a git clone to a ZIP download, the files now have the correct CRLF line endings and the game works.
-
-**Solution**: Always use `git clone` to ensure files have the correct line endings.
-
-
-
-## Installation Guide
-
-This guide will help you install Git and download the Worldshift modding repository properly. **Important**: Downloading as a ZIP file does not work well with this project, so Git installation is required.
 
 ### Step 1: Install Git
 
