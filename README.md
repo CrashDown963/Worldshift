@@ -3,9 +3,9 @@
 
 ## Installation Guide to download and play the game
 
--Download the project: Download the ZIP file from GitHub
--Extract the file: Extract the ZIP contents to your desired location
--Run the game: Open the bin folder and run WorldShift.exe
+- Download the ZIP file from GitHub
+- Extract the ZIP contents to your desired location
+- Open the bin folder and run WorldShift.exe
 
 
 ## Installation Guide (If you want help develop the game)
