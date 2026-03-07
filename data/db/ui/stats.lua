@@ -721,14 +721,15 @@ Stats = uiwnd {
       },
 	  },
 	  
- 	  BattlePointsText = uitext {
+	  BattlePointsText = uitext {
 	    layer = "+1",
 	    size = {250,1},
 	    --halign = "LEFT",
 	    anchors = { TOP = { "BOTTOM", "BattlePoints", 0,5 } },
       font = "Verdana,10",
 	  },
-
+	  
+	  
     Rank1v1DM = DefGSStat {
       anchors = { TOPLEFT = { 20,20 } },
     },
@@ -756,49 +757,8 @@ Stats = uiwnd {
     BossesKilled = DefGSStat {
       anchors = { TOP = { "BOTTOM", "LocPlayed", 0,15 } },
     },	      	  
-    
-    PlayerLevel = DefGSStat {
-      anchors = { TOP = { "BOTTOM", "BossesKilled", 0,15 } },
-      
-      StatPanel = uiwnd {
-        size = {200,29},
-        anchors = { TOPLEFT = {150,2 } },
-        Back = DefBackInBlack{ layer = "+1" },
-        Text = uitext {
-          layer = "+3",
-          color = {255, 143, 51},
-          font = "Verdana,11b",
-          halign = "CENTER",
-          str = "N/A",
-        },
-      },
-    },	      	  
-    
-    PlayerCurrentEXP = DefGSStat {
-      anchors = { TOP = { "BOTTOM", "PlayerLevel", 0,15 } },
-      
-      StatPanel = uiwnd {
-        size = {200,29},
-        anchors = { TOPLEFT = {150,2 } },
-        Back = DefBackInBlack{ layer = "+1" },
-        Text = uitext {
-          layer = "+3",
-          color = {255, 143, 51},
-          font = "Verdana,11b",
-          halign = "CENTER",
-          str = "N/A",
-        },
-      },
-    },
 	  
-	  RecycleInfoText = uitext {
-	    layer = "+1",
-	    size = {250,1},
-	    anchors = { TOP = { "BOTTOM", "PlayerCurrentEXP", 0,20 } },
-      font = "Verdana,9",
-	    color = {200, 200, 200},
-	  },
-	  
+	  	  
     OnShow = function(this)
       --local pname = net.Lobby_GetPlayerName()
       --this.Name:SetStr(TEXT{"logo_name", pname})
@@ -811,17 +771,14 @@ Stats = uiwnd {
       this.BattlePointsText:SetStr("<p>"..TEXT("battlepointstext"))
       h = this.BattlePointsText:GetStrHeight()
       this.BattlePointsText:SetSize{this.BattlePointsText:GetSize().x, h}
-
-      this.RecycleInfoText:SetStr("<p>You can recycle <color = 255,172,49,255>EPIC</color> and <color = 204,0,204,255>LEGENADRY</color> items to gain EXP points.")
-      h = this.RecycleInfoText:GetStrHeight()
-      this.RecycleInfoText:SetSize{this.RecycleInfoText:GetSize().x, h}
       
       this.BattlePoints.Text:SetStr(TEXT{"battlepointsvalue", game.GetPlayerBattlePoints(), 600})
       
       local durm, durs = game.GetPlayerAveragePVPDuration()
       if durs < 10 then durs = "0" .. durs end
       this.GameDuration.Text:SetStr(TEXT{"gamedurationvalue", durm, durs})
-
+      
+      
       this.Rank1v1DM.Title:SetStr("<p>"..TEXT("rank1v1txt"))
       this.Rating1v1DM.Title:SetStr("<p>"..TEXT("rating1v1txt"))
       this.Wins1v1DM.Title:SetStr("<p>"..TEXT("wins1v1txt"))
@@ -829,8 +786,6 @@ Stats = uiwnd {
       this.Streak1v1DM.Title:SetStr("<p>"..TEXT("streak1v1txt"))
       this.LocPlayed.Title:SetStr("<p>"..TEXT("player_loc_played"))
       this.BossesKilled.Title:SetStr("<p>"..TEXT("player_bosses"))      
-      this.PlayerLevel.Title:SetStr("<p>"..TEXT("player_level"))
-      this.PlayerCurrentEXP.Title:SetStr("<p>Player current lvl EXP")
       
       this.Rank1v1DM.StatPanel.Text:SetStr("N/A")
       this.Rating1v1DM.StatPanel.Text:SetStr("N/A")
@@ -838,24 +793,7 @@ Stats = uiwnd {
       this.Losses1v1DM.StatPanel.Text:SetStr("N/A")
       this.Streak1v1DM.StatPanel.Text:SetStr("N/A") 
       this.LocPlayed.StatPanel.Text:SetStr("N/A") 
-      this.BossesKilled.StatPanel.Text:SetStr("N/A")
-      
-      -- Load and display player level
-      local playerExp = game.LoadUserPrefs("experience")
-      if playerExp and playerExp.level and playerExp.total then
-        local level = playerExp.level
-        local totalExp = playerExp.total
-        -- Calculate current experience in this level and max needed
-        local currentExpInLevel = totalExp % 1000
-        local maxExpInLevel = 1000
-        -- Format: "Lvl X | Y/Z"
-        this.PlayerLevel.StatPanel.Text:SetStr("Level " .. level .. "/100")
-        -- Display total EXP
-        this.PlayerCurrentEXP.StatPanel.Text:SetStr(currentExpInLevel .. "/" .. maxExpInLevel .. " EXP")
-      else
-        this.PlayerLevel.StatPanel.Text:SetStr("Lv 1 | 0/1000 EXP")
-        this.PlayerCurrentEXP.StatPanel.Text:SetStr("0 EXP")
-      end            
+      this.BossesKilled.StatPanel.Text:SetStr("N/A")            
       
       local stats = game.LoadUserData("stats")
       local count = stats.count and stats.count > 0 and stats.count or 1

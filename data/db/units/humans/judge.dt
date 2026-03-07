@@ -28,7 +28,6 @@ Judge Judge : BaseUnit {
     range = 1600
     damage = 20
     xp_boost_amp = 50  -- amplify xp received by 50%
-    speed = 450
     xp_share_mod = 50 -- spread half the damage done as experience
     
     discharge_chance = 10
@@ -42,7 +41,7 @@ Judge Judge : BaseUnit {
     voiceofcommand_power = 80
   }
 
-  speed = stat:speed
+  speed = 450
   promote_xp_cost = 100 -- promote after collected this XP
   promote_wait_time = 2 -- wait X secs before promoting
   discharge_damage = stat:damage * 1.5

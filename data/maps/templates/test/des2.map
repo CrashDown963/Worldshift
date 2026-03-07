@@ -10,7 +10,7 @@ map = int: 1000000
     sync_unit_light = int: 0
     sun_altitude = FLOAT: 22.1
     sun_azimuth = FLOAT: -148.89
-    fog_far_plane = FLOAT: 86.05
+    fog_far_plane = FLOAT: 1000
   [/]
   color_fog = color: 163,178,149
   sun_direction = FLOAT3: -0.793273,0.478721,-0.376224

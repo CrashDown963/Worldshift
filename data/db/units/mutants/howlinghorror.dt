@@ -30,10 +30,9 @@ Unit HowlingHorror : UnderworldUnit {
   stats: {
     hp = 1120
     armor = 18
+    range = 100
     damage = 40
     psi = 300
-    speed = 450
-    range = 100
 
     hollow_voice_chance = 20
     hollow_voice_damage = 60
@@ -54,7 +53,7 @@ Unit HowlingHorror : UnderworldUnit {
     howl_cooldown = 60
     howl_fear_area = 600
   }
-  speed = stat:speed
+  speed = 450
 
   sight = stat:range + 1100
   aggro_range = var:sight

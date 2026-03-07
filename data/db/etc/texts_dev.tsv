@@ -10,19 +10,19 @@ cost_1	%s
 cost_2	%s, %s
 cost_3	%s, %s, %s
 		
-crit	<color=255,0,0>+%d!</>
-drain_psy	<color=35,150,250>+%d</>
-burn_psy	<color=0,0,255>-%d</>
-nano_restore	<color=0,255,0>+%d</>
-mend	<color=0,255,0>+%d</>
-drnlife	<color=255,0,0>-%d</>
-healcrit	<color=0,255,0>+%d</>
+crit	
+drain_psy	
+burn_psy	
+nano_restore	
+mend	
+drnlife	
+healcrit	
 		
 res_ok	<color=0,255,0>%d</>
 res_bad	<color=255,0,0>%d</>
 		
-buff_damage	<color=255,0,0>-%d</>
-buff_heal	<color=0,255,0>+%d</>
+buff_damage	
+buff_heal	
 
 ed_start	Extinction Editor
 

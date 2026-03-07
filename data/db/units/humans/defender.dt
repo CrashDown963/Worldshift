@@ -13,7 +13,7 @@ Unit Defender : MachineUnit {
   yaw_speed = 120
   min_yaw = -45
   max_yaw = 45
-  speed = stat:speed
+  speed = 450
   scale = 0.7
   tags = unit
   rocket_range = stat:range * 2
@@ -58,7 +58,6 @@ Unit Defender : MachineUnit {
     damage = 15
     armor = 25
     rocket_radius = 500
-    speed = 450
   }
   
   reacts {

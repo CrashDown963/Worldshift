@@ -29,9 +29,8 @@ Unit Hellfire : MachineUnit {
     
     sweep_power_cost = 220
     sweep_damage = 210
-    speed = 450
   }
-  speed = stat:speed
+  speed = 450
   race = humans
 
   destruction = ragdoll

@@ -7,7 +7,7 @@ Unit AttackDrone : MachineUnit {
   explosion = ExplosionPlasma_Green
   destruction = ExplosionPlasma_Green
   scale = 0.5
-  speed = stat:speed
+  speed = 550
   sight = stat:range * 1.1
   aggro_range = 5000
   waypoint_radius = 5000
@@ -22,10 +22,8 @@ Unit AttackDrone : MachineUnit {
   stats := {
     hp = 100
     damage = 10
-    range = stat:range
-    fire_rate = 2
-    speed = 550
     range = 1600
+    fire_rate = 2
   }
 
   sounds {

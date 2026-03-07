@@ -44,7 +44,6 @@ special locations btn	SPECIAL<nl>LOCATIONS
 pvp	DEATHMATCH
 skirmish	SKIRMISH
 practice	PRACTICE
-shop	SHOP
 abilities btn	ABILITY GRID
 chat settings	CHAT SETTINGS
 settings	SETTINGS
@@ -208,8 +207,8 @@ gems: 	Xenoshards:
 gems2	Xenoshards: [#]/[#]
 nogems	Not enough xenoshards.
 prednotrev	You must unlock the previous specializations.
-noreqstars	You need to place more stars in other specializations before unlocking this node.
-nostars	You need to place more stars in other specializations before you can unlock or upgrade this node.
+noreqstars	More stars required on previous specializations.
+nostars	Not enough stars.
 reset	RESET
 	
 //// Settings window	
@@ -256,12 +255,8 @@ done	Done
 effects	Effects
 health_stat	Hit points
 health_stat_d	The hit points show how much damage the unit can take before being destroyed.
-speed_stat	Speed
-speed_stat_d	The speed determines how fast the unit moves across the battlefield.
-range_stat	Range
-range_stat_d	The range determines the maximum distance at which the unit can attack enemies.
 armour_stat	Armor
-armour_stat_d	The armor points determine how much of the incoming damage is deducted from the bearer's hit points.
+armour_stat_d	The armor points determine how much of the incoming damage is deducted from the bearer’s hit points.
 damage_stat	Damage
 damage_stat_d	This property shows how many hit points a single attack will deduct from a target with no armor.
 damagerange_stat	Damage by range
@@ -343,10 +338,3 @@ destroy_succ	You destroyed the artifacts and successfully extracted [#] xenoshar
 destroy_succ1	You destroyed the artifacts and successfully extracted 1 xenoshard.
 destroy_fail	You destroyed the artifacts but did not succeed in extracting any xenoshards. Better luck next time!
 continue	Continue
-//// Player Level System
-player_level	Level
-experience_points	Experience Points
-xp_gained	XP Gained
-level_up	LEVEL UP!
-max_skill_points_reached	Maximum skill points reached for your level!
-skill_points_available	Skill Points Available

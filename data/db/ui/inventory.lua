@@ -7,59 +7,20 @@ local sz_item_h = 42
 
 local DragingItem = false
 
--- Experience System Functions (define early so Recycle slot can access them)
-local function CalculateLevel(totalExp)
-  -- Each level requires exactly 1000 XP
-  -- Level 1 = 0-999 XP
-  -- Level 2 = 1000-1999 XP
-  -- Level 3 = 2000-2999 XP, etc.
-  local level = math.floor(totalExp / 1000) + 1
-  return math.max(1, math.min(level, 999)) -- Cap at level 999
-end
-
-local function GetExpForQuality(quality)
-  local expTable = {
-    [1] = 10,   -- Common
-    [2] = 20,   -- Uncommon
-    [3] = 30,   -- Rare
-    [4] = 100,   -- Epic
-    [5] = 250,  -- Legendary
-    [6] = 1000   -- Mythic
-  }
-  return expTable[quality] or 10
-end
-
-local function AwardExperience(quality, recycledItem)
-  local expGained = GetExpForQuality(quality)
-  
-  -- Load current experience data
-  local playerData = game.LoadUserPrefs("experience")
-  if not playerData then
-    playerData = { total = 0, level = 1, recycled_items = 0 }
-  end
-  
-  local oldLevel = playerData.level
-  playerData.total = playerData.total + expGained
-  playerData.recycled_items = (playerData.recycled_items or 0) + 1
-  
-  local newLevel = CalculateLevel(playerData.total)
-  playerData.level = newLevel
-  
-  -- Save the data using game.SaveUserPrefs (works in lobby and in-game)
-  game.SaveUserPrefs("experience", playerData)
-  
-  -- Show feedback
-  if newLevel > oldLevel then
-    if ErrText then
-      local levelText = TEXT("level_up"):gsub("{0}", tostring(newLevel))
-      ErrText:ShowText(levelText)
-    end
-  else
-    if ErrText then
-      local expText = TEXT("exp_gained"):gsub("{0}", tostring(expGained))
-      ErrText:ShowText(expText)
+local function FindEquipSlotByRepo(repo)
+  if type(repo) ~= "string" or not TechGrid then return nil end
+  for _, iface in pairs({TechGrid.HumansInterface, TechGrid.MutantsInterface, TechGrid.AliensInterface}) do
+    if type(iface) == "table" then
+      for _, slot in pairs(iface) do
+        if type(slot) == "table" and slot.GetType and slot:GetType() == "uislot" and slot.GetInfo then
+          if slot:GetInfo() == repo then
+            return slot
+          end
+        end
+      end
     end
   end
+  return nil
 end
 
 local FrameByRepo = {
@@ -140,11 +101,10 @@ Inventory = uiwnd {
       Tooltip:Show()
     end,
 
-  OnMouseLeave = function(this)
-    Tooltip:Hide()
-  end,
-},
-
+    OnMouseLeave = function(this)
+      Tooltip:Hide()
+    end,
+	},
 }
 
 Inventory.DefItemSlot = uislot {
@@ -210,19 +170,22 @@ Inventory.DefItemSlot = uislot {
       end
     else
       local repo = this:GetInfo()
-      if repo and type(repo) == "string" then
-        if string.sub(repo, 1, 7) == "MUTANT_" or string.sub(repo, 1, 15) == "INSPECT_MUTANT_" then
-          this.frame_top = this.mutants_top
-          this.lvl_top = this.lvl_mutants_top
-        end
-        if string.sub(repo, 1, 6) == "ALIEN_" or string.sub(repo, 1, 14) == "INSPECT_ALIEN_" then
-          this.frame_top = this.aliens_top
-          this.lvl_top = this.lvl_aliens_top
-        end
-        if string.sub(repo, 1, 6) == "HUMAN_" or string.sub(repo, 1, 14) == "INSPECT_HUMAN_" then
-          this.frame_top = this.humans_top
-          this.lvl_top = this.lvl_humans_top
-        end
+      if type(repo) ~= "string" then
+        this.Frame:Hide()
+        this.Level:Hide()
+        return
+      end
+      if string.sub(repo, 1, 7) == "MUTANT_" or string.sub(repo, 1, 15) == "INSPECT_MUTANT_" then
+        this.frame_top = this.mutants_top
+        this.lvl_top = this.lvl_mutants_top
+      end
+      if string.sub(repo, 1, 6) == "ALIEN_" or string.sub(repo, 1, 14) == "INSPECT_ALIEN_" then
+        this.frame_top = this.aliens_top
+        this.lvl_top = this.lvl_aliens_top
+      end
+      if string.sub(repo, 1, 6) == "HUMAN_" or string.sub(repo, 1, 14) == "INSPECT_HUMAN_" then
+        this.frame_top = this.humans_top
+        this.lvl_top = this.lvl_humans_top
       end
     end
 
@@ -253,63 +216,46 @@ Inventory.DefItemSlot = uislot {
   end,
 
   OnMouseDown = function(this)
-    -- Shift+Click on inventory item = destroy item and give experience
     if argMods.shift and argBtn == "LEFT" then
-      local item = this:GetItem()
-      if item then
-        local src = this:GetInfo()
-        -- Only work if item is in inventory (not equipped) and is tier 5 (Legendary)
-        if string.sub(src, 1, 10) == "INVENTORY_" then
-          local quality = item.quality
-          -- Only destroy tier 4 (Epic) or tier 5 (Legendary) items
-          if quality == 4 or quality == 5 then
-            -- Check if player is already at max level (100)
-            local playerData = game.LoadUserPrefs("experience")
-            local currentLevel = 1
-            if playerData and playerData.level then
-              currentLevel = playerData.level
-            end
-            
-            if currentLevel >= 100 then
-              -- Max level reached, show error
-              game.PlaySnd(sounds.item_reject)
-              if ErrText then
-                ErrText:ShowText("Maximum level reached. Can't destroy more items for experience.")
-              end
-            else
-              -- Award experience and move to EXP_REPOSITORY_ITEMS (invisible repository)
-              AwardExperience(quality, item)
-              
-              local result = this:MoveItem("EXP_REPOSITORY_ITEMS")
-              if result then
-                game.PlaySnd(sounds.inv_item_out)
-              else
-                -- If repository is full, show error message
-                game.PlaySnd(sounds.item_reject)
-                if ErrText then
-                  ErrText:ShowText("Destruction repository is full.")
-                end
-              end
-            end
-          else
-            -- Not tier 4 or 5, show error
-            game.PlaySnd(sounds.item_reject)
-            if ErrText then
-              ErrText:ShowText("Only Epic and Legendary items can be destroyed for experience.")
-            end
-          end
-        else
-          -- If not in inventory, create item link (original behavior)
-          DESKTOP:CreateItemLink(this:GetItem())
-        end
-      else
-        -- If no item, create item link (original behavior)
-        DESKTOP:CreateItemLink(this:GetItem())
-      end
+      DESKTOP:CreateItemLink(this:GetItem())
       return
     end
     
     local item = this:GetItem()
+    if argMods.ctrl and argBtn == "LEFT" then
+      if not item then return end
+      if TechGrid:IsHidden() then return end
+
+      local src = this:GetInfo()
+      local invRepo = "INVENTORY_"..Inventory.suff
+      local dst = nil
+
+      if src == invRepo then
+        if StashUI and StashUI.GetActiveRepoName then
+          dst = StashUI:GetActiveRepoName()
+        else
+          dst = "STASH_1"
+        end
+      elseif type(src) == "string" and string.sub(src, 1, 6) == "STASH_" then
+        dst = invRepo
+      end
+
+      if dst and dst ~= src then
+        if not this:MoveItem(dst) then
+          game.PlaySnd(sounds.item_reject)
+          ErrText:ShowText("strItemReject")
+        else
+          ItemTooltip:Hide()
+          if src == invRepo then game.PlaySnd(sounds.unit_item_in) end
+          if dst == invRepo then game.PlaySnd(sounds.unit_item_out) end
+          this:SlotLight(false)
+          this:OnMouseLeave()
+          this:UpdateFrame()
+        end
+      end
+      return
+    end
+
     if argBtn == "LEFT" then
       if item then DragingItem = true end
       return
@@ -343,7 +289,22 @@ Inventory.DefItemSlot = uislot {
       TechGrid:SelectRace(TechGrid.Humans)
     end
 
-    if not this:MoveItem(dst) then 
+    if not this:MoveItem(dst) then
+      -- Requested behavior: if equip target is occupied, push old item to next free inventory slot, then equip.
+      if src == "INVENTORY_"..Inventory.suff and item and item.repo then
+        local equipSlot = FindEquipSlotByRepo(dst)
+        local invRepo = "INVENTORY_"..Inventory.suff
+        if equipSlot and type(equipSlot.GetItem) == "function" and type(equipSlot.MoveItem) == "function" and equipSlot:GetItem() then
+          if equipSlot:MoveItem(invRepo) and this:MoveItem(dst) then
+            ItemTooltip:Hide()
+            game.PlaySnd(sounds.unit_item_in)
+            this:SlotLight(false)
+            this:OnMouseLeave()
+            this:UpdateFrame()
+            return
+          end
+        end
+      end
       if src ~= "MISSION" then
         game.PlaySnd(sounds.item_reject) 
         ErrText:ShowText("strItemReject")
@@ -479,7 +440,7 @@ function Inventory.DefItemSlot_OnLoad(this)
 		  ItemTooltip:SetItem(item, this, 0)
 		end
     local repo = this:GetInfo()
-    if repo and string.sub(repo, 1, 10) == "INVENTORY_" then
+    if type(repo) == "string" and string.sub(repo, 1, 10) == "INVENTORY_" then
       for race, interface in pairs{humans = TechGrid.HumansInterface, mutants = TechGrid.MutantsInterface, aliens = TechGrid.AliensInterface} do
         if not interface:IsHidden() then 
           for k,v in pairs(interface) do
@@ -528,6 +489,7 @@ function Inventory.DefItemSlot_OnLoad(this)
         this:SetColor(ItemColors.dragged)
       end
       if r == "INVENTORY_"..Inventory.suff or r == "REWARDS" then return end
+      if type(r) == "string" and string.sub(r, 1, 6) == "STASH_" then return end
       if (not t or item.type == t) and this:CanAccept(argSlot) then
         this:SlotLight(true)
         this.mark_accept = 1
@@ -540,7 +502,6 @@ function Inventory.DefItemSlot_OnLoad(this)
     	this.mark_accept = nil
       this:SlotLight(false)
       this:SetColor()
-      
       local item = this:GetItem() 
       if not item then
         this:UpdateFrame()
@@ -550,7 +511,6 @@ function Inventory.DefItemSlot_OnLoad(this)
 				this:OnMouseEnter()
         game.PlaySnd(this.soundItemIn)
       end
-      
       this:UpdateFrame()
     end
     

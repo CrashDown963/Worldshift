@@ -1437,7 +1437,7 @@ data\models\units\bigmutant\bigmutant-mask.dds
 data\models\units\bigmutant\bigmutant_nm.dds
 data\models\units\alienjack\alienjack-dif.dds
 data\models\units\alienjack\alienjack-mask.dds
-data\models\units\alienjack\alienjack.dds
+data\models\units\alienjack\alienjack_nm.dds
 data\models\units\bladeoverseer\bladeoverseer-diff1.dds
 data\models\units\bladeoverseer\bladeoverseer-nm1.dds
 data\models\units\bladeoverseer\bladeoverseermask.dds

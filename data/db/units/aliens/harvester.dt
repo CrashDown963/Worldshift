@@ -32,10 +32,9 @@ Unit Harvester: AlienUnit {
   stats : {
     hp = 780
     armor = 22
+    range = 125
     damage = 35
     psi = 400
-    speed = 450
-    range = 125
     
 	  shield_hull = 100
     shield_regen  = 120
@@ -59,7 +58,7 @@ Unit Harvester: AlienUnit {
     
     confuse_chance = 25
   }
-  speed = stat:speed
+  speed = 450
 
   sight = stat:range + 1100
   aggro_range = var:sight

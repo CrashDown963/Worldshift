@@ -17,7 +17,7 @@ map = int: 1000000
     backlight_strength = FLOAT: 0.84
     sky_colorize_midpoint = FLOAT: 0.62
     sky_brightness = FLOAT: 2.5
-    fog_far_plane = FLOAT: 77.41
+    fog_far_plane = FLOAT: 1000
     sun_altitude = FLOAT: 34.2
     sky_colorize_low = color: 30,30,66
   [/]

@@ -9,7 +9,6 @@ Unit PsiDetonator : MachineUnit {
   explosion = ExplosionPlasma_Green
   hover_altitude_min = 4000
   hover_altitude_max = 5000
-  movement_type = hover
   cost : pvp.aliens.unit_costs.PsiDetonator
   cost_sloc : pvp.aliens.sloc_costs.PsiDetonator
   attack_spell = PsiDetonatorCastSpell
@@ -21,7 +20,6 @@ Unit PsiDetonator : MachineUnit {
     armor = 25
     damage = 50
     range = 1600
-    speed = 450
     
 	  shield_hull = 100
     shield_regen  = 120
@@ -34,7 +32,7 @@ Unit PsiDetonator : MachineUnit {
     detonatoraura_tick = 10
   }
   
-  speed = stat:speed
+  speed = 450
 
   min_attack_range = 70
 

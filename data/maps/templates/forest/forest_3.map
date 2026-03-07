@@ -2,7 +2,7 @@ map = int: 1000000
 [#1000000]
   class = sid: CMap
   [$vars]
-    fog_far_plane = FLOAT: 84.32
+    fog_far_plane = FLOAT: 1000
     sun_altitude = FLOAT: 43.7
     sync_unit_light = int: 0
     fog_distance = FLOAT: 37.04

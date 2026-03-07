@@ -40,10 +40,9 @@ Unit Master : AlienUnit {
   stats :{
     hp = 700
     armor = 12
+    range = 1600
     damage = 75
     psi = 380
-    speed = 450
-    range = 1600
     
     shield_hull = 250
     shield_regen  = 150
@@ -65,7 +64,7 @@ Unit Master : AlienUnit {
   feed_base_damage = stat:feed_base
   feed_base_heal = stat:feed_base * 0.2
   
-  speed = stat:speed
+  speed = 450
   take_auras : { RestorationCoreAura }
 
   can_build = 1

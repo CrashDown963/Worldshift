@@ -37,11 +37,11 @@ local SlotNames = {
   ALIEN_ENIGMA  = "enigma",
 }
 
-local max_stats = 6
+local max_stats = 5
 local max_units = 10
 
 local itemcolors = {
-  clr1 = {255,0,0,255},
+  clr1 = {183,187,200,255},
   clr2 = {119,224,80,255},
   clr3 = {255,255,0,255},
   clr4 = {255,172,49,255},
@@ -132,7 +132,6 @@ UnitStatBase = uiwnd {
   UnitStat3 = StatBase { anchors = {TOP = {"BOTTOM", "UnitStat2", 0, 2}} },
   UnitStat4 = StatBase { anchors = {TOP = {"BOTTOM", "UnitStat3", 0, 2}} },
   UnitStat5 = StatBase { anchors = {TOP = {"BOTTOM", "UnitStat4", 0, 2}} },
-  UnitStat6 = StatBase { anchors = {TOP = {"BOTTOM", "UnitStat5", 0, 2}} },
    
   Sepline = uiimg {
     layer = "+1",

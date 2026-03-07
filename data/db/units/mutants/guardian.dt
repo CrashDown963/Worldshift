@@ -62,9 +62,8 @@ Guardian Guardian : BaseUnit {
     hp = 720
     armor = 4
     psi = 200
-    damage = 50
-    speed = 450
     range = 200
+    damage = 50
 
     whirlwind_chance  = 10  
     
@@ -77,7 +76,7 @@ Guardian Guardian : BaseUnit {
     
     shift_stun_duration = 4
   }
-  speed = stat:speed
+  speed = 450
   illusions_duration = 15
   min_attack_range = 70
   impacts : LivingUnitImpacts

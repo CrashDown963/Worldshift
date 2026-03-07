@@ -4,7 +4,7 @@ map = int: 1000000
   [$vars]
     backlight_strength = fixp: 0.83999996185302734375
     fog_distance = FLOAT: 96.79
-    fog_far_plane = FLOAT: 150
+    fog_far_plane = FLOAT: 1000
   [/]
   color_fog = color: 46,49,54
   sun_direction = FLOAT3: -0.579228,0.579228,-0.573577

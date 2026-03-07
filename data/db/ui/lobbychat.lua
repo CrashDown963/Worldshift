@@ -111,7 +111,7 @@ LobbyChat = uiwnd {
     Text = uitext { shadow_ofs = {1,1}, font = "Verdana,11", halign = "LEFT", valign = "BOTTOM", },
     anchors = { 
       TOPLEFT = { 5, 2 },
-      BOTTOMRIGHT = { "BOTTOMRIGHT", -5,-35 },
+      BOTTOMRIGHT = { "BOTTOMRIGHT", -5,-5 },
     },
     --DefFrameImage {
       --anchors = { 
@@ -316,6 +316,7 @@ LobbyChat = uiwnd {
 	},
 	
   Buttons = uiwnd {
+    hidden = true,
     size = {sz[1],30},
     anchors = { BOTTOMLEFT = { "BOTTOMLEFT", 0, 0 } },
     
@@ -460,7 +461,7 @@ function LobbyChat:ToggleWriteMode()
     this.TextEdit:Hide()  
     this.Target:Hide()
     this.EditFrame:Hide()
-    this.Buttons:Show()
+    this.Buttons:Hide()
     this.TextEdit:RemoveFocus()
   end
 end

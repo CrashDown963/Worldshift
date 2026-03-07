@@ -9,7 +9,7 @@ Surgeon Surgeon : BaseUnit {
   icon = 1,4
 
   tags = unit, organic
-  speed = stat:speed
+  speed = 450
   physics {
     default = data/models/units/Surgeon/Medic_Proxy.pml
     die = data/models/units/Surgeon/Medic.pml
@@ -34,7 +34,6 @@ Surgeon Surgeon : BaseUnit {
     hp = 350
     range = 1600
     damage = 8
-    speed = 450
  
     attack_rate = 1
     attack_proximity = 10

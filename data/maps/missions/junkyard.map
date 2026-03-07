@@ -3,7 +3,7 @@ map = int: 1000000
   class = sid: CMap
   [$vars]
     sky_colorize_midpoint = FLOAT: 0.48
-    fog_far_plane = FLOAT: 87.78
+    fog_far_plane = FLOAT: 1000
     sun_altitude = FLOAT: 27.28
     terrain_backlight_strength = FLOAT: 0.57
     sky_colorize_low = color: 123,79,17

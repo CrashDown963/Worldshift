@@ -29,10 +29,9 @@ Unit Manipulator : AlienUnit {
   stats : {
     hp = 420
     armor = 2
+    range = 1600
     damage = 12
     psi = 400
-    speed = 450
-    range = 1600
 
     shield_hull = 100
     shield_regen  = 120
@@ -58,7 +57,7 @@ Unit Manipulator : AlienUnit {
 
   life_leech_heal = stat:life_leech_boost * 0.1 
 
-  speed = stat:speed
+  speed = 450
   attack_spell = ManipulatorCastSpell
 
   take_auras : { RestorationCoreAura }

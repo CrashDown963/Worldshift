@@ -34,11 +34,10 @@ Unit Sorcerer : BaseUnit {
   
   stats :{
     hp = 540
+    range = 1600
     psi = 400
     damage = 80
     armor = 0
-    speed = 450
-    range = 1600
     
     chill_psi_cost = 150
     chill_duration = 8
@@ -59,7 +58,7 @@ Unit Sorcerer : BaseUnit {
 
   incinerate_spot_size = 600
 
-  speed = stat:speed
+  speed = 450
 
   take_auras : { xp_boost; RestorationCoreAura }
   

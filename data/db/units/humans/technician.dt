@@ -6,7 +6,7 @@ Technician Technician : BaseUnit {
   icon = 6,1
 
   tags = unit, organic, lowrank
-  speed = stat:speed
+  speed = 450
   take_auras : { RestorationCoreAura }
 
   stats :{
@@ -16,7 +16,6 @@ Technician Technician : BaseUnit {
     damage = 25
     aggro_range = 800
     mine_amount_per_turn = 10
-    speed = 450
   }
 
   impacts : LivingUnitImpacts

@@ -139,14 +139,14 @@ pvp {
   give1time = 180
 
   -- battle points stuff  
-  costlvl1 = 0
-  costlvl2 = 0
-  costlvl3 = 0
-  costlvl4 = 0
-  costlvl5 = 0
-  costoffer = 1
-  winpoints = 9999
-  losspoints = 9999
-  maxpoints = 9999
+  costlvl1 = 2
+  costlvl2 = 8
+  costlvl3 = 20
+  costlvl4 = 50
+  costlvl5 = 90
+  costoffer = 5
+  winpoints = 50
+  losspoints = 9
+  maxpoints = 600
 
 }

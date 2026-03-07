@@ -2,7 +2,7 @@ map = int: 1000000
 [#1000000]
   class = sid: CMap
   [$vars]
-    fog_far_plane = FLOAT: 82.59
+    fog_far_plane = FLOAT: 1000
     bloom_luminance = FLOAT: 0.96
     camera_specular = FLOAT: 3
     type = sid: mission

@@ -19,11 +19,10 @@ Unit Warrior : BaseUnit {
     hp = 220
     armor = 0
     damage = 12
-    speed = 450
     range = 1600
   }
   
-  speed = stat:speed
+  speed = 450
 
   sounds {
     start = data/speech/summoning/warrior summoned.wav

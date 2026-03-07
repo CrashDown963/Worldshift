@@ -992,7 +992,7 @@ Victory = uiwnd {
   ModeBtn = DefButton1 { 
     layer = 2100,
     --size = {120,30},
-    anchors = { BOTTOMLEFT = { 20, -10 } },
+    anchors = { TOP = { "BOTTOMLEFT", "ChooseMissionReward", 55, -120 } },
 	  str = TEXT{"observe_caps"},
 	  OnClick = function(this)
       CollectedItems:Hide()
@@ -1230,8 +1230,6 @@ function Victory:OnShow()
   
   if game.PlayerWins() then
     this.Result:SetStr(TEXT{"victory"})
-    
-    -- Tokens are awarded in GiveMissionRewards() in map scripts
   else
     this.Result:SetStr(TEXT{"defeat"})
   end      

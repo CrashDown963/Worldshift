@@ -47,14 +47,16 @@ VS_OUTPUT VS_Bars(VS_INPUT v)
   VS_OUTPUT o;
   float4 vWorld;
 
-  vWorld.x = vBarsPoints[v.vPos.z].x + v.vPos.x * vBarsPoints[v.vPos.z].w;
-  vWorld.y = vBarsPoints[v.vPos.z].y + v.vPos.y * vBarsPoints[v.vPos.z + 1].w;
+  vWorld.x = vBarsPoints[v.vPos.z].x + v.vPos.x * vBarsPoints[v.vPos.z].w * 1;
+  vWorld.y = vBarsPoints[v.vPos.z].y * 0.3 + v.vPos.y * vBarsPoints[v.vPos.z + 1].w * 0.3 + 20; 
   vWorld.z = vBarsPoints[v.vPos.z].z;
   vWorld.w = 1;
   
   
   o.vPos = mul(vWorld, mWorld);
-  o.vPos.xyz = o.vPos.xyz + vBarsPoints[v.vPos.z + 1].xyz;
+  o.vPos.x += vBarsPoints[v.vPos.z + 1].x;
+  o.vPos.y += vBarsPoints[v.vPos.z + 1].y;
+  o.vPos.z += vBarsPoints[v.vPos.z + 1].z;
 
   o.vPos = mul(o.vPos, mViewProj);
   o.vTexC.x = v.vPos.x;

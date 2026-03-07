@@ -16,19 +16,19 @@ colors = {
 }
 
 ItemColors = {
-	q1 = { 255, 0, 0 },   -- Mythic (Red) - Was Common
-	q2 = { 119,224,80 },  -- Common (Green) - Was Rare
-	q3 = { 255,255,0 },   -- Rare (Yellow) - Was Epic
-	q4 = { 255,172,49 },  -- Epic (Orange) - Was Legendary
-	q5 = { 204,0,204 },   -- Legendary (Purple) - Was Unique
-	q6 = { 255, 0, 0 },   -- Unused
+	q1 = { 183,187,200 }, -- quality
+	q2 = { 119,224,80 },
+	q3 = { 255,255,0 },
+	q4 = { 255,172,49 },
+	q5 = { 204,0,204 },
+	q6 = { 255, 0, 0 },
 
-	h1 = { 255, 0, 0 },   -- Mythic highlight (Red)
-	h2 = { 119,224,80 },  -- Common highlight (Green)
-	h3 = { 255,255,0 },   -- Rare highlight (Yellow)
-	h4 = { 255,172,49 },  -- Epic highlight (Orange)
-	h5 = { 130,5,177 },   -- Legendary highlight (Purple)
-	h6 = { 255, 0, 0 },   -- Unused
+	h1 = { 183,187,200 }, -- highlight
+	h2 = { 119,224,80 },
+	h3 = { 255,255,0 },
+	h4 = { 255,172,49 },
+	h5 = { 130,5,177 },
+	h6 = { 255, 0, 0 },
 
 -- obsolete
 

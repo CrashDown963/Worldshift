@@ -346,25 +346,12 @@ function Selection:ShowTooltip(ui)
     Tooltip.Title:SetStr(ui.name)
     Tooltip.Text:SetStr("<p>"..(ui.text or "</>"))
   elseif ui.type == "stat" then
-    -- Añadir información de rangos si es damagerange_stat
-    if ui.ttkey == "damagerange_stat" and this.Unit and this.Unit.rangeInfo then
-      local ri = this.Unit.rangeInfo
-      -- Calcular daño del rango medio (promedio entre óptimo y peor)
-      local midDamage = math.floor((ri.optDamage + ri.badDamage) / 2)
-      
-      Tooltip.Title:SetStr("Damage by Range")
-      local rangeText = "<p><color=0,165,0>Optimal: "..math.floor(ri.optRange).." range ("..ri.optDamage.." damage)</>"
-      rangeText = rangeText .. "<nl><p><color=255,204,0>Medium: "..math.floor(ri.midRange).." range ("..midDamage.." damage)</>"
-      rangeText = rangeText .. "<nl><p><color=255,102,0>Minimal: "..math.floor(ri.badRange).." range ("..ri.badDamage.." damage)</>"
-      Tooltip.Text:SetStr(rangeText)
+    local str = ui.Text:GetStr()
+    if str and str ~= "" then
+      Tooltip.Title:SetStr(TEXT{ui.ttkey})
+      Tooltip.Text:SetStr("<p>"..TEXT{ui.ttkey.."_d"})
     else
-      local str = ui.Text:GetStr()
-      if str and str ~= "" then
-        Tooltip.Title:SetStr(TEXT{ui.ttkey})
-        Tooltip.Text:SetStr("<p>"..TEXT{ui.ttkey.."_d"})
-      else
-        return  
-      end
+      return  
     end
   end  
   
@@ -822,12 +809,6 @@ Selection.Unit = uiwnd {
   },
 
   Health = stat { ttkey = "health_stat", anchors = { TOPLEFT = { "BOTTOMLEFT", "Icon", 0,dist+3 } } },
-  Speed = stat {
-    ttkey = "speed_stat",
-    anchors = { TOPLEFT = { "BOTTOMLEFT", "Health", 0,2 } },
-    Icon = stat.Icon { coords = {0,1*16,16,16} },
-    hidden = true,
-  },
   Armour = stat { 
     ttkey = "armour_stat", 
     anchors = { TOPLEFT = { "BOTTOMLEFT", "Health", 0,2 } },
@@ -891,13 +872,6 @@ Selection.Unit = uiwnd {
     Icon = stat.Icon { coords = {0,1*16,16,16} },
   },
   
-  Range = stat {
-    ttkey = "range_stat",
-    anchors = { TOPLEFT = { "BOTTOMLEFT", "Manna", 0,2 } },
-    Icon = stat.Icon { coords = {0,3*16,16,16} },
-    hidden = true,
-  },
-  
   Shield = stat { 
     ttkey = "shield_stat", 
     anchors = { TOPLEFT = { "BOTTOMLEFT", "Manna", 0,2 } },
@@ -944,7 +918,6 @@ function Selection.Unit:Update(h, info)
     
     this.Owner:SetColor(info.color)
     this.Owner:SetStr(info.player)
-    
   end
   this.h = h
   
@@ -979,17 +952,6 @@ function Selection.Unit:Update(h, info)
   end
   
   this.Health.Text:SetStr(info.health..'/'..info.max_health)
-  
-  -- Speed stat ocultado
-  -- if info.speed and info.speed > 0 then
-  --   this.Speed.Text:SetStr(math.floor(info.speed))
-  --   this.Speed.Icon:SetShader()
-  --   this.Speed:Show()
-  -- else
-  --   this.Speed.Text:SetStr("")
-  --   this.Speed.Icon:SetShader("_Misc_InterfaceDrawBW")
-  --   this.Speed:Show()
-  -- end
 
   if info.armor and info.armor > 0 then
     this.Armour.Text:SetStr(info.armor)
@@ -999,52 +961,12 @@ function Selection.Unit:Update(h, info)
     this.Armour.Icon:SetShader("_Misc_InterfaceDrawBW")
   end  
   
-  -- Engineer (technician2) invoca torretas, mostrar daño de la torreta en lugar del suyo
-  local unitName = GetActorName(h)
-  local isEngineer = (unitName == "Engineer" or info.name == "Engineer")
-  
-  if isEngineer then
-    -- ProtonTurret2: damage = 30, range = 1600 (daño fijo, sin variación por rango)
-    local turretDamage = 30
-    this.rangeInfo = nil
-    this.Ranges.Text:SetStr(turretDamage)
-    this.Ranges:Show()
-    this.Ranges_bar:Hide()
-  elseif info.nearDamage ~= info.farDamage then
+  if info.nearDamage ~= info.farDamage then
     this.Ranges_bar.Image:Set(info.nearDamage, info.farDamage, info.minRange, info.midRange, info.maxRange)
     this.Ranges_bar.Text:SetStr(info.nearDamage..' - '..info.farDamage)
     this.Ranges_bar:Show()
     this.Ranges:Hide()
-    
-    -- Guardar info de rangos para el tooltip
-    this.rangeInfo = {}
-    if info.minRange and info.midRange and info.maxRange then
-      -- Determinar cuál rango es más cercano y cuál es más lejano
-      local closestRange = math.min(info.minRange, info.maxRange)
-      local farthestRange = math.max(info.minRange, info.maxRange)
-      
-      if info.nearDamage > info.farDamage then
-        -- Más daño de cerca: rango más pequeño = óptimo (verde), rango más grande = peor (naranja)
-        this.rangeInfo = {
-          optRange = closestRange,
-          midRange = info.midRange,
-          badRange = farthestRange,
-          optDamage = info.nearDamage,
-          badDamage = info.farDamage
-        }
-      else
-        -- Más daño de lejos: rango más grande = óptimo (verde), rango más pequeño = peor (naranja)
-        this.rangeInfo = {
-          optRange = farthestRange,
-          midRange = info.midRange,
-          badRange = closestRange,
-          optDamage = info.farDamage,
-          badDamage = info.nearDamage
-        }
-      end
-    end
   else
-    this.rangeInfo = nil
     local damage = info.nearDamage
     if not info.nearDamage or info.nearDamage < 1 then 
       damage = info.damage
@@ -1062,18 +984,7 @@ function Selection.Unit:Update(h, info)
   else
     this.Manna.Text:SetStr("")
     this.Manna.Icon:SetShader("_Misc_InterfaceDrawBW")
-  end
-  
-  -- Range stat ocultado del HUD
-  -- if info.maxRange and info.maxRange > 0 then
-  --   this.Range.Text:SetStr(info.maxRange)
-  --   this.Range.Icon:SetShader()
-  --   this.Range:Show()
-  -- else
-  --   this.Range.Text:SetStr("")
-  --   this.Range.Icon:SetShader("_Misc_InterfaceDrawBW")
-  --   this.Range:Show()
-  -- end
+  end  
   
   if info.shield.maxHull and info.shield.hull then
     this.Shield.Text:SetStr(info.shield.hull..'/'..info.shield.maxHull)
@@ -1336,10 +1247,10 @@ function Selection.Mob:Update(h, info)
     this.Shield_prg:Hide()
   end
   
-  this.Health.Text:SetStr(math.floor(info.health).."/"..math.floor(info.max_health).." ("..math.floor((info.health/info.max_health)*100).."%)")
+  this.Health.Text:SetStr(math.floor((info.health/info.max_health)*100).."%")
   
   if info.power and info.power > 0 and info.max_power and info.max_power > 0 then
-    this.Manna.Text:SetStr(math.floor(info.power).."/"..math.floor(info.max_power).." ("..math.floor((info.power/info.max_power)*100).."%)")
+    this.Manna.Text:SetStr(math.floor((info.power/info.max_power)*100).."%")
     this.Manna.Icon:SetShader()
   else
     this.Manna.Text:SetStr("")
@@ -1347,7 +1258,7 @@ function Selection.Mob:Update(h, info)
   end  
   
   if info.shield.maxHull and info.shield.hull then
-    this.Shield.Text:SetStr(math.floor(info.shield.hull).."/"..math.floor(info.shield.maxHull).." ("..math.floor((info.shield.hull/info.shield.maxHull)*100).."%)")
+    this.Shield.Text:SetStr(math.floor((info.shield.hull/info.shield.maxHull)*100).."%")
     this.Shield.Icon:SetShader()
   else
     this.Shield.Text:SetStr("")
@@ -1907,10 +1818,10 @@ function Selection.Building:Update(h, info)
     this.Health_prg:Hide()
   end
 
-  this.Health.Text:SetStr(math.floor(info.health).."/"..math.floor(info.max_health).." ("..math.floor((info.health/info.max_health)*100).."%)")
+  this.Health.Text:SetStr(math.floor((info.health/info.max_health)*100).."%")
   
   if not info.construct and info.power and info.power > 0 and info.max_power and info.max_power > 0 then
-    this.Manna.Text:SetStr(math.floor(info.power).."/"..math.floor(info.max_power).." ("..math.floor((info.power/info.max_power)*100).."%)")
+    this.Manna.Text:SetStr(math.floor((info.power/info.max_power)*100).."%")
     this.Manna:Show()
   else
     this.Manna:Hide()
@@ -1922,7 +1833,7 @@ function Selection.Building:Update(h, info)
     else  
       this.Shield:SetAnchor("TOPLEFT", this.Manna, "BOTTOMLEFT", {0,2})
     end  
-    this.Shield.Text:SetStr(math.floor(info.shield.hull).."/"..math.floor(info.shield.maxHull).." ("..math.floor((info.shield.hull/info.shield.maxHull)*100).."%)")
+    this.Shield.Text:SetStr(math.floor((info.shield.hull/info.shield.maxHull)*100).."%")
     this.Shield:Show()
   else
     this.Shield:Hide()

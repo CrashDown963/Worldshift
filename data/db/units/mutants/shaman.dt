@@ -28,11 +28,10 @@ Unit Shaman : BaseUnit {
 
   stats :{
     hp = 420
+    range = 1600
     psi = 420
     armor = 0
     damage = 10
-    speed = 450
-    range = 1600
 
     drain_life_chance = 25
     drain_life_purge = 0
@@ -48,7 +47,7 @@ Unit Shaman : BaseUnit {
 
   renew_heal_area = 750
   
-  speed = stat:speed
+  speed = 450
   
   drain_life_boost_modifier = stat:drain_life_boost * 10
   

@@ -2,6 +2,339 @@
 -- GameUI
 --
 
+-- Ultrawide Support
+local ultrawideZoomMultiplier = 1.0
+local ultrawideZoomApplied = false
+local isExtraZoomOutActive = false
+local testOutputLines = {}
+local maxTestOutputLines = 20
+local MIN_SAFE_ZOOM = 30
+local MAX_SAFE_ZOOM = 300
+local DEFAULT_SAFE_ZOOM = 200
+
+-- On-screen message display
+local TestOutputWindow = uiwnd {
+  hidden = false,
+  size = {600, 400},
+  anchors = { TOPLEFT = { 10, 10 } },
+  layer = 9000,
+  
+  Background = uiimg {
+    color = {0, 0, 0, 200},
+    size = {600, 400},
+  },
+  
+  Title = uitext {
+    font = "Arial,12b",
+    color = {0, 255, 0, 255},
+    str = "Camera Test Results (Press Delete to close)",
+    anchors = { TOPLEFT = { 10, 5 } },
+  },
+  
+  Content = uitext {
+    font = "Courier,9",
+    color = {0, 255, 0, 255},
+    str = "",
+    halign = "LEFT",
+    valign = "TOP",
+    anchors = { TOPLEFT = { 10, 25 }, BOTTOMRIGHT = { -10, -10 } },
+  },
+}
+
+local function AddTestOutput(message)
+  -- push into our on-screen buffer
+  table.insert(testOutputLines, message)
+  if #testOutputLines > maxTestOutputLines then
+    table.remove(testOutputLines, 1)
+  end
+  
+  local fullText = ""
+  for _, line in ipairs(testOutputLines) do
+    fullText = fullText .. line .. "\n"
+  end
+  TestOutputWindow.Content:SetStr(fullText)
+  
+  -- also send to chat window so you can review it there
+  if Chat and Chat.AddLine then
+    Chat:AddLine(message)
+  end
+end
+
+local function ShowTestResults()
+  print("[Ultrawide] ShowTestResults invoked")
+  TestOutputWindow.hidden = false
+  uiwnd.Show(TestOutputWindow)
+end
+
+local function HideTestResults()
+  uiwnd.Hide(TestOutputWindow)
+end
+
+local function GetAspectRatio()
+  local width = 1920
+  local height = 1080
+  if game and game.GetResolution then
+    local res = game.GetResolution()
+    if res then
+      width = res[1] or 1920
+      height = res[2] or 1080
+    end
+  end
+  return width / height
+end
+
+local function ApplyUltrawideZoom()
+  if ultrawideZoomApplied then return end
+  
+  local aspect = GetAspectRatio()
+  
+  print("[Ultrawide] Detected aspect ratio: " .. aspect)
+  
+  -- For ultrawide displays, we need to zoom out
+  -- The game calculates zoom based on screen resolution
+  -- We can only warn the user to manually adjust
+  if aspect > 2.2 then
+    print("[Ultrawide] 21:9 ultrawide detected!")
+    print("[Ultrawide] ZOOM CONTROLS:")
+    print("[Ultrawide] - Use MOUSE WHEEL to zoom in/out (scroll DOWN to zoom out)")
+    print("[Ultrawide] - Press INSERT key while scrolling to potentially zoom further")
+    print("[Ultrawide] Note: Game engine has a hard-coded zoom limit")
+    ultrawideZoomMultiplier = 1.3
+  elseif aspect > 1.9 then
+    print("[Ultrawide] 2.0:1+ ultrawide aspect detected!")
+    print("[Ultrawide] ZOOM CONTROLS:")
+    print("[Ultrawide] - Use MOUSE WHEEL to zoom in/out (scroll DOWN to zoom out)")
+    print("[Ultrawide] - Press INSERT key while scrolling to potentially zoom further")
+    print("[Ultrawide] Note: Game engine has a hard-coded zoom limit")
+    ultrawideZoomMultiplier = 1.2
+  end
+  
+  ultrawideZoomApplied = true
+end
+
+-- Camera test functions
+function TestAllCameraFunctions()
+  testOutputLines = {}
+  AddTestOutput("\n" .. string.rep("=", 60))
+  AddTestOutput("CAMERA FUNCTION DISCOVERY TEST")
+  AddTestOutput(string.rep("=", 60) .. "\n")
+  
+  -- List of functions to try
+  local functionsToTry = {
+    "camera", "GetCamera", "SetCamera", "GetCameraDistance", "SetCameraDistance",
+    "GetCameraZoom", "SetCameraZoom", "CameraZoom", "ZoomCamera",
+    "GetViewDistance", "SetViewDistance", "GetViewZoom", "SetViewZoom",
+    "GetOrthoCam", "SetOrthoCam", "GetCamDistance", "SetCamDistance",
+    "GetCamZoom", "SetCamZoom", "AdjustZoom", "AdjustCamera", "AdjustCameraDistance",
+    "GetWorldCamera", "GetGameCamera", "GetMainCamera", "ModifyZoom", "ZoomOut", "ZoomIn"
+  }
+  
+  -- diagnostic: ensure globals exist
+  if not game then
+    AddTestOutput("ERROR: global 'game' is nil!")
+    ShowTestResults()
+    return
+  end
+  if not map then
+    AddTestOutput("NOTE: global 'map' is nil (map not loaded?)")
+  end
+  if not ui then
+    AddTestOutput("NOTE: global 'ui' is nil")
+  end
+  
+  -- helper to dump first few keys of a table
+  local function DumpKeys(tbl, name)
+    if not tbl then return end
+    AddTestOutput("Keys in " .. name .. ":")
+    local count = 0
+    for k,v in pairs(tbl) do
+      AddTestOutput("  " .. tostring(k) .. " = " .. type(v))
+      count = count + 1
+      if count >= 20 then break end
+    end
+    if count == 0 then
+      AddTestOutput("  (no keys)")
+    end
+  end
+  DumpKeys(game, "game")
+  DumpKeys(map, "map")
+  DumpKeys(ui, "ui")
+  
+  local foundCount = 0
+  
+  -- Test game object functions
+  AddTestOutput("Checking game object functions:")
+  for _, funcName in ipairs(functionsToTry) do
+    if game[funcName] then
+      AddTestOutput("  [FOUND] game." .. funcName .. " = " .. tostring(type(game[funcName])))
+      foundCount = foundCount + 1
+    end
+  end
+  if foundCount == 0 then
+    AddTestOutput("  (none found in game object)")
+  end
+  
+  foundCount = 0
+  
+  -- Test map object functions
+  AddTestOutput("\nChecking map object functions:")
+  if map then
+    for _, funcName in ipairs(functionsToTry) do
+      if map[funcName] then
+        AddTestOutput("  [FOUND] map." .. funcName .. " = " .. tostring(type(map[funcName])))
+        foundCount = foundCount + 1
+      end
+    end
+  else
+    AddTestOutput("  (map object not available)")
+  end
+  if foundCount == 0 then
+    AddTestOutput("  (none found in map object)")
+  end
+  
+  foundCount = 0
+  
+  -- Test ui object functions
+  AddTestOutput("\nChecking ui object functions:")
+  if ui then
+    for _, funcName in ipairs(functionsToTry) do
+      if ui[funcName] then
+        AddTestOutput("  [FOUND] ui." .. funcName .. " = " .. tostring(type(ui[funcName])))
+        foundCount = foundCount + 1
+      end
+    end
+  else
+    AddTestOutput("  (ui object not available)")
+  end
+  if foundCount == 0 then
+    AddTestOutput("  (none found in ui object)")
+  end
+  
+  -- Try to enumerate all game object members for camera-related ones
+  AddTestOutput("\nScanning game object for camera-related members:")
+  local cameraRelatedFound = 0
+  if game then
+    for key, value in pairs(game) do
+      local keyLower = string.lower(key)
+      if string.find(keyLower, "cam") or string.find(keyLower, "zoom") or 
+         string.find(keyLower, "view") or string.find(keyLower, "distance") then
+        AddTestOutput("  [CAMERA-RELATED] game." .. key .. " = " .. tostring(type(value)))
+        cameraRelatedFound = cameraRelatedFound + 1
+      end
+    end
+  end
+  
+  if cameraRelatedFound == 0 then
+    print("  (no camera-related members found)")
+  end
+  
+  AddTestOutput("\n" .. string.rep("=", 60))
+  AddTestOutput("TEST COMPLETE")
+  AddTestOutput(string.rep("=", 60) .. "\n")
+  ShowTestResults()
+end
+
+-- Try to adjust zoom with different methods
+function TryZoomMethods(zoomValue)
+  if zoomValue < MIN_SAFE_ZOOM then
+    zoomValue = MIN_SAFE_ZOOM
+  elseif zoomValue > MAX_SAFE_ZOOM then
+    zoomValue = MAX_SAFE_ZOOM
+  end
+
+  AddTestOutput("\n" .. string.rep("-", 60))
+  AddTestOutput("ZOOM ADJUSTMENT TEST - Value: " .. zoomValue)
+  AddTestOutput(string.rep("-", 60) .. "\n")
+  
+  local successCount = 0
+  
+  -- Method 1: Direct function calls
+  if game.SetCameraDistance then
+    game.SetCameraDistance(zoomValue)
+    AddTestOutput("[SUCCESS] Called: game.SetCameraDistance(" .. zoomValue .. ")")
+    successCount = successCount + 1
+  else
+    AddTestOutput("[FAILED] game.SetCameraDistance does not exist")
+  end
+  
+  if game.SetCameraZoom then
+    game.SetCameraZoom(zoomValue)
+    AddTestOutput("[SUCCESS] Called: game.SetCameraZoom(" .. zoomValue .. ")")
+    successCount = successCount + 1
+  else
+    AddTestOutput("[FAILED] game.SetCameraZoom does not exist")
+  end
+  
+  if game.SetZoom then
+    game.SetZoom(zoomValue)
+    AddTestOutput("[SUCCESS] Called: game.SetZoom(" .. zoomValue .. ")")
+    successCount = successCount + 1
+  else
+    AddTestOutput("[FAILED] game.SetZoom does not exist")
+  end
+  
+  if game.ZoomOut then
+    game.ZoomOut()
+    AddTestOutput("[SUCCESS] Called: game.ZoomOut()")
+    successCount = successCount + 1
+  else
+    AddTestOutput("[FAILED] game.ZoomOut does not exist")
+  end
+  
+  -- Method 2: Table assignment
+  if game.camera then
+    AddTestOutput("[INFO] game.camera exists")
+    if game.camera.distance ~= nil then
+      game.camera.distance = zoomValue
+      AddTestOutput("[SUCCESS] Set: game.camera.distance = " .. zoomValue)
+      successCount = successCount + 1
+    else
+      AddTestOutput("[FAILED] game.camera.distance is nil or doesn't exist")
+    end
+    
+    if game.camera.zoom ~= nil then
+      game.camera.zoom = zoomValue
+      AddTestOutput("[SUCCESS] Set: game.camera.zoom = " .. zoomValue)
+      successCount = successCount + 1
+    else
+      AddTestOutput("[FAILED] game.camera.zoom is nil or doesn't exist")
+    end
+  else
+    AddTestOutput("[INFO] game.camera does not exist")
+  end
+  
+  -- Method 3: Map object
+  if map and map.camera then
+    map.camera = zoomValue
+    AddTestOutput("[SUCCESS] Set: map.camera = " .. zoomValue)
+    successCount = successCount + 1
+  else
+    AddTestOutput("[INFO] map.camera does not exist or map is not available")
+  end
+  
+  AddTestOutput("\n[RESULT] " .. successCount .. " zoom methods were executed")
+  AddTestOutput(string.rep("-", 60) .. "\n")
+  ShowTestResults()
+end
+
+local function ApplySafeZoomReset()
+  if game and game.SetCameraDistance then
+    game.SetCameraDistance(DEFAULT_SAFE_ZOOM)
+  end
+  if game and game.SetCameraZoom then
+    game.SetCameraZoom(DEFAULT_SAFE_ZOOM)
+  end
+  if game and game.SetZoom then
+    game.SetZoom(DEFAULT_SAFE_ZOOM)
+  end
+  if game and game.camera and game.camera.distance ~= nil then
+    game.camera.distance = DEFAULT_SAFE_ZOOM
+  end
+  if game and game.camera and game.camera.zoom ~= nil then
+    game.camera.zoom = DEFAULT_SAFE_ZOOM
+  end
+end
+
 local QuitStr = TEXT{"exiting"}
 
 GameUI = uiwnd {
@@ -18,17 +351,84 @@ function GameUI:OnLoad()
   this:RegisterEvent("QUIT_CONFIRMED")
   this:RegisterEvent("DEMO_SHOWSLIDES")
   this.lastClickTime = 0
+  this.altGaugeToggleHeld = false
+  this.altGaugeFallbackState = false
+  this.isGaugeActive = false -- Track Alt toggle state like minimap
+  
+  -- Initialize ultrawide support
+  ApplyUltrawideZoom()
+  
+  print("[Ultrawide] camera test functions available")
+  print("[Ultrawide] Press F9 to run discovery and F7/F8 to test zoom")
+  print("[Ultrawide] Safe zoom clamp active: " .. MIN_SAFE_ZOOM .. "-" .. MAX_SAFE_ZOOM)
+  print("[Ultrawide] Press Delete to toggle the test results window")
 end
 
 function GameUI:OnKeyUp(key, mod)
-  --Toggle Gauge  
-  if mod.key == "Alt" then game.ToggleGlobalGauge(false) end
+  -- Alt now behaves as a true toggle (one action per press).
+  if key == "Alt" or mod.key == "Alt" then
+    this.altGaugeToggleHeld = false
+    return
+  end
+  
+  -- Ultrawide zoom control - release Insert to disable extra zoom
+  if key == "Insert" then
+    isExtraZoomOutActive = false
+    print("[Ultrawide] Extra zoom-out disabled")
+  end
 end 
 
 function GameUI:OnKeyDown(key, mod)
+
+  -- Toggle global bars on Alt key press, matching minimap toggle logic.
+  if key == "Alt" or mod.key == "Alt" then
+    if this.altGaugeToggleHeld then return end
+    this.altGaugeToggleHeld = true
+    this.isGaugeActive = not this.isGaugeActive
+    game.ToggleGlobalGauge(this.isGaugeActive)
+    return
+  end
   
   if key == "Escape" then game.StopAction() end
   if key == "F10" then GameUI:ShowMenu() end
+  if key == "F9" then 
+    -- Run camera function discovery test
+    if TestAllCameraFunctions then
+      TestAllCameraFunctions()
+      ShowTestResults()
+    end
+  end
+  if key == "Delete" then
+    if TestOutputWindow.visible then
+      HideTestResults()
+    else
+      ShowTestResults()
+    end
+  end
+  if key == "F6" then
+    if TechGrid and not TechGrid:IsHidden() and StashUI and StashUI.Toggle then
+      local wasOpen = StashUI and not StashUI:IsHidden()
+      StashUI:Toggle(TechGrid and TechGrid.race or nil)
+      if Victory and Victory.ModeBtn then
+        if wasOpen then
+          Victory.ModeBtn:Show()
+        else
+          Victory.ModeBtn:Hide()
+        end
+      end
+    end
+    return
+  end
+  if key == "F7" then
+    -- Try to zoom out (test zoom adjustment)
+    print("\n[F7] Attempting zoom out with multiple method attempts...")
+    if TryZoomMethods then TryZoomMethods(200) end
+  end
+  if key == "F8" then
+    -- Try to zoom in (test zoom adjustment)
+    print("\n[F8] Attempting zoom in with multiple method attempts...")
+    if TryZoomMethods then TryZoomMethods(30) end
+  end
   if key == "Add" then game.SetSpeed(game.GetSpeed() * 1.25) end
   if key == "Subtract" then game.SetSpeed(game.GetSpeed() / 1.25) end
   if key == "Multiply" then game.SetSpeed(1) end
@@ -57,9 +457,6 @@ function GameUI:OnKeyDown(key, mod)
     this.lastSelObj = sel.active
     game.SetCameraPos(sel.active)
   end
-  
-  --Toggle Gauge  
-  if mod.key == "Alt" then game.ToggleGlobalGauge(true) return end
   
   if mod.key >= '0' and mod.key <= '9' then
     if mod.alt then return end
@@ -114,6 +511,12 @@ function GameUI:OnKeyDown(key, mod)
     this.fKey = mod.key
   end
   
+  -- Disabled unsafe extended zoom override to avoid breaking world-space UI
+  if key == "Insert" then
+    isExtraZoomOutActive = false
+    print("[Ultrawide] Extra zoom override is disabled for UI stability")
+  end
+  
 end
 
 function GameUI:OnEvent(event)
@@ -123,12 +526,19 @@ function GameUI:OnEvent(event)
     end
     this.race = game.GetPlayerRace()
     this:Show()
+    -- Reapply ultrawide zoom when map is loaded
+    ApplyUltrawideZoom()
+    ApplySafeZoomReset()
+    -- Keep map load clean; avoid camera test actions here.
   end
   if event == "MAP_STARTED" then print("START")
     local map = game.GetMapName()
     if sounds.mis[map] and not this.ambSound then
       this.ambSound = game.PlaySnd(sounds.mis[map])
     end
+    -- Apply ultrawide zoom when map starts
+    ApplyUltrawideZoom()
+    ApplySafeZoomReset()
   end
   if event == "MAP_CLOSED" then
     this:Hide()

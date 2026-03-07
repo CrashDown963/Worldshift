@@ -6,7 +6,7 @@ Unit Assassin : BaseUnit {
   race = humans
   officer = 1
   tags = unit, organic
-  speed = stat:speed
+  speed = 450
   take_auras : { RestorationCoreAura }
   icon = 2,4
   
@@ -14,7 +14,6 @@ Unit Assassin : BaseUnit {
     hp = 320
     psi = 120
     armor = 2
-    speed = 450
     range = 2100
     damage = 120
 
@@ -25,12 +24,9 @@ Unit Assassin : BaseUnit {
     poison_shot_cooldown = 40
     poison_shot_perc = 30
 
-    
-
     expose_target_chance = 10
     expose_target_armor_perc = 10
     expose_target_armor_duration = 12
-    
   }	
   sight = stat:range + 300
   physics {

@@ -26,7 +26,6 @@ AssaultBot AssaultBot : MachineUnit {
     damage = 10
     attack_proximity = 0
     attack_precision = 100
-    speed = 450
 
     barrage_cost = 120
     barrage_duration = 4
@@ -38,7 +37,7 @@ AssaultBot AssaultBot : MachineUnit {
   }
 
   sight = stat:range + 500
-  speed = stat:speed
+  speed = 450
   barrage_range = stat:range * 1.5
   barrage_min_range = stat:range * 0.5
   pitch_speed = 90

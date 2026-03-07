@@ -23,7 +23,6 @@ Unit Trisat : AlienUnit {
     armor = 2
     range = 100
     damage = 14
-    speed = 450
         
     shield_hull = 180
     shield_regen  = 120
@@ -40,7 +39,7 @@ Unit Trisat : AlienUnit {
     paralyzing_field_range = 250
     paralyzing_field_speed_reduction_perc = 20
   }
-  speed = stat:speed
+  speed = 450
   
   sight = stat:range + 1000
   aggro_range = var:sight

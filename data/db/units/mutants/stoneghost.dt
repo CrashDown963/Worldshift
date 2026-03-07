@@ -62,10 +62,9 @@ StoneGhost StoneGhost : UnderworldUnit {
     hp = 420
     psi = 320
     armor = 0
+    range = 1600
     damage = 4
     armor = 2
-    speed = 450
-    range = 1600
 
     corruption_psi_cost = 120
     corruption_damage = 10  -- per tick (currently 2 sec)
@@ -83,7 +82,7 @@ StoneGhost StoneGhost : UnderworldUnit {
     unholy_power_duration = 20
     unholy_power_cooldown = 60
   }
-  speed = stat:speed
+  speed = 450
  
   spread_psi_range = 800
   spread_psi_react = spread_psi

@@ -182,7 +182,7 @@ local progress = uiwnd {
     this.value = val
     this.max = max
     
-    this.Text:SetStr("<p>"..math.floor(val).."/"..math.floor(max).." ("..math.floor((val/max)*100).."%)")
+    this.Text:SetStr("<p>"..math.floor((val/max)*100).."%")
     
     if val < 0 then val = 0 end
     if val > max then val = max end

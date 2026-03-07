@@ -2,12 +2,12 @@ Errors.lua
 CONSTS.lua
 SOUNDS.lua
 COLORS.lua
-data/db/scripts/system/player_level.lua
 DefaultControls.lua
 DefaultDialogs.lua
 Desktop.lua
 Login.lua
 Inventory.lua
+Stash.lua
 GameUI.lua
 Selection.lua
 Resources.lua
