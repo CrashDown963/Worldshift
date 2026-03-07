@@ -1,6 +1,7 @@
 Alien AlienBase: BaseUnit {
   name = "Alien"
   race = aliens
+  speed = stat:speed
 
   create_fow_proxy = 1
 
@@ -9,12 +10,13 @@ Alien AlienBase: BaseUnit {
 
   stats :{
     hp = 1000
-    range = 1300
+    range = stat:range
     speed = 462
     aura_hp_bonus = 0
     aura_dmg_bonus = 0
     charged_damage_bonus = 0
     port_time = 5
+    range = 1300
     consume_time = 3
     charges_on_produce = 0
   }

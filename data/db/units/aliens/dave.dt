@@ -10,7 +10,7 @@ Unit Defiler : AlienUnit {
   officer = 1
   tags = unit, organic
   scale = 0.4
-  speed = 450
+  speed = stat:speed
   aggro_range = stat:range
   take_auras : { RestorationCoreAura }
 
@@ -25,6 +25,7 @@ Unit Defiler : AlienUnit {
     armor = 8
     range = 1200
     damage = 30
+    speed = 450
     healing_taken_debuff_amount = 2
     healing_taken_debuff_duration = 15
     shield_hull = 100

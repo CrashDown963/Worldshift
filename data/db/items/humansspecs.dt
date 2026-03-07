@@ -49,6 +49,55 @@ item I_A2H : HumanSpecItem {
   --abilities { AA2H { item = I_A2H } }
 }
 
+item I_A3H : HumanSpecItem {
+  name = "Cross-Species Alliance"
+  text = "All your units from all races will have [stats.speed] more speed and [stats.damage] more damage."
+  icon = 4,1
+  levels = 1,2,3
+  repo = HUMAN_SPECA3
+  target {
+    HighPriest
+    Shaman
+    Sorcerer
+    StoneGhost
+    Guardian
+    Psychic
+    Warrior
+    Brute
+    AncientShade
+    HowlingHorror
+    EliteKaiRider
+    Commander
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+    Engineer
+    Trooper
+    Ripper
+    AssaultBot
+    Hellfire
+    Defender
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+    Defiler
+    Shifter
+    Overseer
+    Tritech
+    Trisat
+    PsiDetonator
+  }
+
+  stats {
+    speed = 1%/5%/10%
+    damage = 1%/3%/5%
+  }
+  --abilities { AA3H { item = I_A3H } }
+}
+
 item I_B1H : HumanSpecItem {
   name = "Elusion"
   text = "Your Rippers will have [stats.elusion]% chance to completely ignore direct ranged attacks coming from melee range."
@@ -124,7 +173,7 @@ item I_C2H : HumanSpecItem {
   text = "Surgeons' First-Aid has additional [stats.bandage_crit]% chance to heal for double amount."
   icon = 4,1
   levels = 1,3
-  repo = HUMAN_SPECD2
+  repo = HUMAN_SPECC2
   target {
     Surgeon
   }
@@ -132,6 +181,31 @@ item I_C2H : HumanSpecItem {
     bandage_crit = 10/20/30
   }
   --abilities { AC2H { item = I_C2H } }
+}
+
+item I_C3H : HumanSpecItem {
+  name = "Advanced Tactics"
+  text = "All your units will have [stats.damage] additional direct damage."
+  icon = 4,1
+  levels = 1,2
+  repo = HUMAN_SPECC3
+  target {
+    Commander
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+    Technician
+    Ripper
+    Trooper
+    AssaultBot
+    Hellfire
+    Defender
+  }
+  stats {
+    damage = 1/2
+  }
+  --abilities { AC3H { item = I_C3H } }
 }
 
 item I_D1H : HumanSpecItem {
@@ -154,7 +228,7 @@ item I_D2H : HumanSpecItem {
   text = "All your Officers have [stats.hp] more hit points"
   icon = 4,1
   levels = 1,3
-  repo = HUMAN_SPECC2
+  repo = HUMAN_SPECD2
   target {
     Assassin
     Surgeon

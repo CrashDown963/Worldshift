@@ -35,6 +35,54 @@ item I_A2M : MutantSpecItem {
   --abilities { AA2M { item = I_A2M } }
 }
 
+item I_A3M : MutantSpecItem {
+  name = "Cross-Species Alliance"
+  text = "All your units from all races will have [stats.speed] more speed and [stats.damage] more damage."
+  icon = 4,1
+  levels = 1,2,3
+  repo = MUTANT_SPECA3
+  target {
+    HighPriest
+    Shaman
+    Sorcerer
+    StoneGhost
+    Guardian
+    Psychic
+    Warrior
+    Brute
+    AncientShade
+    HowlingHorror
+    EliteKaiRider
+    Commander
+    Assassin
+    Surgeon
+    Judge
+    Constructor
+    Engineer
+    Trooper
+    Ripper
+    AssaultBot
+    Hellfire
+    Defender
+    Master
+    Harvester
+    Arbiter
+    Manipulator
+    Dominator
+    Defiler
+    Shifter
+    Overseer
+    Tritech
+    Trisat
+    PsiDetonator
+  }
+  stats {
+    speed = 1%/5%/10%
+    damage = 1%/3%/5%
+  }
+  --abilities { AA3M { item = I_A3M } }
+}
+
 item I_B1M : MutantSpecItem {
   name = "Weapons Training"
   text = "Your warriors will have additional [stat.crit_chance]% to critically attack inflicting double damage."
@@ -121,6 +169,34 @@ item I_C2M : MutantSpecItem {
     holy_aura_heal = 10%/20%/30%
   }
   --abilities { AC2M { item = I_C2M } }
+}
+
+item I_C3M : MutantSpecItem {
+  name = "Tribal Warfare"
+  text = "All your units will have [stats.damage] additional direct damage."
+  icon = 4,1
+  levels = 1,2
+  repo = MUTANT_SPECC3
+  target {
+    Warrior
+    Worker
+    Brute
+    HighPriest
+    Shaman
+    Sorcerer
+    StoneGhost
+    Guardian
+    Psychic
+    Adept
+    AncientShade
+    HowlingHorror
+    EliteKaiRider
+    Worm
+  }
+  stats {
+    damage = 1/2
+  }
+  --abilities { AC3M { item = I_C3M } }
 }
 
 item I_D1M : MutantSpecItem {

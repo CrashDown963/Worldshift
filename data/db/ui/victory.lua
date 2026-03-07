@@ -1230,6 +1230,8 @@ function Victory:OnShow()
   
   if game.PlayerWins() then
     this.Result:SetStr(TEXT{"victory"})
+    
+    -- Tokens are awarded in GiveMissionRewards() in map scripts
   else
     this.Result:SetStr(TEXT{"defeat"})
   end      

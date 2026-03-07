@@ -1,116 +1,105 @@
 # Worldshift Modding
 
+## Quick Installation Guide
 
-## Installation Guide to download and play the game
+1. **Download the project**: Download the ZIP file from GitHub
+2. **Extract the file**: Extract the ZIP contents to your desired location
+3. **Run the game**: Open the `bin` folder and run `WorldShift.exe`
 
-- Download the ZIP file from GitHub
-- Extract the ZIP contents to your desired location
-- Open the bin folder and run WorldShift.exe
+Ready! You can start playing now.
 
+---
 
-## Installation Guide (If you want help develop the game)
+## New Features Added
 
-This guide will help you install Git and download the Worldshift modding repository properly. **Important**: Downloading as a ZIP file does not work well with this project, so Git installation is required.
+### 🎮 New Units (6 official units)
 
-**Important Notes:**
-- Always use `git clone` instead of downloading ZIP files
-- Make sure Git is properly installed before attempting to clone
-- If you encounter issues, check that you have the correct repository URL
-- Keep your Git installation updated for the best experience
+**6 new official units** have been added to the game:
 
-### Step 1: Install Git
+- **Engineer** (Humans) - Engineer specialized in turrets and defenses
+- **Defender** (Humans) - Robot similar to Assault Bot that fires missiles
+- **Psychic** (Mutants/Tribes) - Healer unit with support abilities
+- **Elite Kai Rider** (Mutants/Tribes) - Sniper unit with long-range capabilities
+- **Defiler** (Aliens) - Alien unit with corruption abilities
+- **Psi Detonator** (Aliens) - Support unit specialized in mana regeneration
 
-#### Windows:
-1. Go to [https://git-scm.com/download/win](https://git-scm.com/download/win)
-2. Download the latest version for Windows
-3. Run the installer and follow the installation wizard
-4. **Important**: During installation, make sure to select "Git from the command line and also from 3rd-party software" when prompted about PATH environment
-5. Complete the installation and restart your computer if prompted
+### 💎 Mythic Items System
 
-#### macOS:
-1. Open Terminal (Applications > Utilities > Terminal)
-2. Install Xcode Command Line Tools by running:
-   ```bash
-   xcode-select --install
-   ```
-3. Or download Git from [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+A new **Mythic quality tier** (tier 1) superior to all others has been implemented:
 
-#### Linux (Ubuntu/Debian):
-```bash
-sudo apt update
-sudo apt install git
-```
+- **33 unique mythic items** distributed among the 3 races
+- **5% droprate** in hardmodes for **all races** (Humans, Aliens and Tribes)
+- Items with significantly improved stats (50-100% superior to Unique items)
+- Available in multiple hardmodes throughout the game
 
-#### Linux (CentOS/RHEL/Fedora):
-```bash
-sudo yum install git
-# or for newer versions:
-sudo dnf install git
-```
+#### Examples of Mythic Items:
+- **MYTHIC Godlike Command Core** (Commander)
+- **MYTHIC Shadow of the Void** (Assassin)
+- **MYTHIC Celestial Healer** (Surgeon)
+- **MYTHIC Master Engineer Core** (Engineer)
+- **MYTHIC Divine Justice** (Judge)
+- **MYTHIC Supreme Overlord** (Constructor)
+- And many more...
 
-### Step 2: Verify Git Installation
+### 📦 New Item Slots
 
-Open Command Prompt (Windows) or Terminal (macOS/Linux) and run:
-```bash
-git --version
-```
+Two new item slots have been added for Humans:
 
-You should see output like: `git version 2.x.x`
+- **Neuroscience Slot** - For items that enhance psionic and mental abilities
+- **Engineer Slot** - For items that enhance engineering and turret capabilities
 
-### Step 3: Clone the Repository
+### 📊 Experience and Level System
 
-1. Open Command Prompt (Windows) or Terminal (macOS/Linux)
-2. Navigate to where you want to install the project (e.g., Desktop):
-   ```bash
-   cd Desktop
-   ```
-3. Clone the repository:
-   ```bash
-   git clone https://github.com/CrashDown963/Worldshift.git
-   ```
+Complete player progression system:
 
-4. Navigate into the project folder:
-   ```bash
-   cd Worldshift
-   ```
+- **Level system**: Players gain experience by recycling items
+- **Experience by quality** (only applies to Epic and Legendary items): 
+  - Epic: 100 XP
+  - Legendary: 250 XP
+- **Levels**: Each level requires 1000 additional XP
+- **Persistence**: Level and experience are saved between sessions
+- **Visual feedback**: Notifications when you level up or gain experience
 
-### Step 4: Verify Installation
+### 🌳 Ability Grid Rework (Skill Tree)
 
-Check that all files are properly downloaded:
-```bash
-ls -la
-# or on Windows:
-dir
-```
+Completely revamped ability system:
 
-You should see the project files including `data/`, `bin/`, and other directories.
+- **Level-limited star system**: The maximum number of stars you can assign is limited by your level
+  - **Formula**: 10 + floor(level / 10)
+  - Example: Level 1-9 = 10 max stars, Level 10-19 = 11 max stars, Level 20-29 = 12 max stars, etc.
+- **Gradual progression**: As you level up, you can assign more stars to your specializations
 
-### Troubleshooting
+### 🛒 Main Menu Shop with Tokens
 
-#### Common Issues:
+New shop accessible from the main menu:
 
-**"git is not recognized as an internal or external command"**
-- Git is not installed or not added to PATH
-- Solution: Reinstall Git and make sure to select the PATH option during installation
+- **"SHOP" button** in the main lobby menu
+- **Token system**: Special currency to buy items
+- **5 item slots**: Shows up to 5 random items of different qualities
+- **Battle Points system**: Shows your current battle points
+- **Item reroll**: Changes the item offer (costs Battle Points)
+- **Direct purchase**: Click on an item to buy it with tokens
+- **Race-separated inventory**: Items are automatically added to the correct inventory based on your race
 
-**"Permission denied (publickey)"**
-- You're trying to clone a private repository without proper authentication
-- Solution: Use HTTPS instead of SSH, or set up SSH keys
+#### Shop Features:
+- Real-time display of Tokens and Battle Points
+- Manual refresh button
+- Full integration with the inventory system
+- Token validation before purchasing
 
-**"Repository not found"**
-- The repository URL is incorrect or the repository doesn't exist
-- Solution: Verify the correct repository URL
+---
 
-**Files appear corrupted or incomplete**
-- This usually happens when downloading as ZIP
-- Solution: Use `git clone` instead of downloading ZIP files
+## Additional Information
 
-### Getting Updates
+### Important Installation Notes
 
-To get the latest changes from the repository:
-```bash
-git pull origin main
-```
+**Note about ZIP files**: If you download the repository as a ZIP file and the game doesn't work, but it does work with `git clone`, this is due to **line ending differences**:
+
+- **Git clone**: Automatically converts LF (Unix) to CRLF (Windows) during checkout
+- **ZIP downloads**: Extracts files with their original line endings (typically LF)
+- **The game expects CRLF**: WorldShift.exe reads files expecting Windows line endings (CRLF)
+
+**Solution**: If you have issues, use `git clone` to ensure files have the correct line endings.
 
 ### Contributing
 
@@ -120,8 +109,6 @@ If you want to contribute changes:
 3. Commit your changes: `git commit -m "Your commit message"`
 4. Push your changes: `git push origin main`
 
-Every push you make, patch notes are required.
+**Every push you make requires patch notes.**
 
 ---
-
-

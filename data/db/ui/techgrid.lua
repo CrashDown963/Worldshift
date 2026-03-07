@@ -248,6 +248,34 @@ local DefSpecSlot = Inventory.DefItemSlot {
     if argBtn ~= "LEFT" then return end
     local id = string.sub(this:GetName(), 10, 11)
     local state = game.GetSpecInfo(TechGrid.race, id)
+    
+    -- Verificar límite de estrellas basado en el nivel (solo si el slot ya está desbloqueado)
+    if state > 0 then
+      local starsFree, starsUsed = game.GetPlayerStars(TechGrid.race)
+      
+      -- Intentar obtener el nivel de cualquiera de los dos sistemas
+      local current_level = 1
+      local experience = game.LoadUserPrefs("experience")
+      if experience and experience.level then
+        current_level = experience.level
+      elseif PlayerLevel then
+        current_level = PlayerLevel:GetLevel()
+      end
+      
+      -- Calcular límite: 10 + floor(level / 10)
+      local max_allowed_stars = 10 + math.floor(current_level / 10)
+      
+      -- Debug: mostrar info en consola
+      print("Level: " .. current_level .. ", Stars Used: " .. starsUsed .. ", Max: " .. max_allowed_stars)
+      
+      -- Si ya se alcanzó el límite, bloquear asignación adicional
+      if starsUsed >= max_allowed_stars then
+        ErrText:ShowText(TEXT{"nostars"} .. " (Used: " .. starsUsed .. "/" .. max_allowed_stars .. " Level: " .. current_level .. ")")
+        game.PlaySnd(sounds.on_error)
+        return
+      end
+    end
+    
     local err = game.SpecClicked(TechGrid.race, id)
     if err then
       ErrText:ShowText(ERRTEXTS[err])
@@ -328,20 +356,26 @@ TechGrid = uiwnd {
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Arbiter.name"} },
 	  ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Defiler.name"} },
 
-	  -- spec
-	  SpecSlot_A1 = DefSpecSlot { row = 5, col = 1, repo = "ALIEN_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 10,20 } } },
-	  SpecSlot_A2 = DefSpecSlot { row = 5, col = 2, repo = "ALIEN_SPECA2",   anchors = { TOPLEFT = { "RightFrame" , "TOP", 30,20 } } },
+	  -- spec - Layout 3 columnas x 4 filas
+	  -- Primera fila: A1 (izq), A2 (centro), A3 (der - NUEVO)
+	  SpecSlot_A1 = DefSpecSlot { row = 5, col = 1, repo = "ALIEN_SPECA1",   anchors = { TOPLEFT = { "RightFrame" , "TOP", -110,20 } } },
+	  SpecSlot_A2 = DefSpecSlot { row = 5, col = 2, repo = "ALIEN_SPECA2",   anchors = { TOP = { "RightFrame" , "TOP", 0,20 } } },
+	  SpecSlot_A3 = DefSpecSlot { row = 5, col = 1, repo = "ALIEN_SPECA3",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 110,20 } } },
 	  
-	  SpecSlot_B1 = DefSpecSlot { row = 5, col = 3, repo = "ALIEN_SPECB1",   anchors = { RIGHT = { "SpecSlot_B2" , "LEFT", -20,0 } } },
-	  SpecSlot_B2 = DefSpecSlot { row = 5, col = 4, repo = "ALIEN_SPECB2",   anchors = { RIGHT = { "SpecSlot_B3" , "LEFT", -20,0 } } },
-	  SpecSlot_B3 = DefSpecSlot { row = 5, col = 5, repo = "ALIEN_SPECB3",   anchors = { TOP = { "SpecSlot_A2" , "BOTTOM", 0,20 } } },
+	  -- Segunda fila: B1 bajo A1, B2 bajo A2, B3 bajo A3
+	  SpecSlot_B1 = DefSpecSlot { row = 5, col = 3, repo = "ALIEN_SPECB1",   anchors = { TOPLEFT = { "SpecSlot_A1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B2 = DefSpecSlot { row = 5, col = 4, repo = "ALIEN_SPECB2",   anchors = { TOPLEFT = { "SpecSlot_A2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B3 = DefSpecSlot { row = 5, col = 5, repo = "ALIEN_SPECB3",   anchors = { TOPLEFT = { "SpecSlot_A3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_C1 = DefSpecSlot { row = 6, col = 1, repo = "ALIEN_SPECC1",   anchors = { TOP = { "SpecSlot_B2" , "BOTTOM", -40,20 } } },
-	  SpecSlot_C2 = DefSpecSlot { row = 6, col = 2, repo = "ALIEN_SPECC2",   anchors = { TOP = { "SpecSlot_B3" , "BOTTOM", 0,20 } } },
+	  -- Tercera fila: C1 bajo B1, C2 bajo B2, C3 bajo B3 (NUEVO)
+	  SpecSlot_C1 = DefSpecSlot { row = 6, col = 1, repo = "ALIEN_SPECC1",   anchors = { TOPLEFT = { "SpecSlot_B1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C2 = DefSpecSlot { row = 6, col = 2, repo = "ALIEN_SPECC2",   anchors = { TOPLEFT = { "SpecSlot_B2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C3 = DefSpecSlot { row = 6, col = 1, repo = "ALIEN_SPECC3",   anchors = { TOPLEFT = { "SpecSlot_B3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_D1 = DefSpecSlot { row = 6, col = 3, repo = "ALIEN_SPECD1",   anchors = { TOP = { "SpecSlot_C1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_D2 = DefSpecSlot { row = 6, col = 4, repo = "ALIEN_SPECD2",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", -40,20 } } },
-	  SpecSlot_D3 = DefSpecSlot { row = 6, col = 5, repo = "ALIEN_SPECD3",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", 40,20 } } },
+	  -- Cuarta fila: D1 bajo C1, D2 bajo C2, D3 bajo C3
+	  SpecSlot_D1 = DefSpecSlot { row = 6, col = 3, repo = "ALIEN_SPECD1",   anchors = { TOPLEFT = { "SpecSlot_C1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D2 = DefSpecSlot { row = 6, col = 4, repo = "ALIEN_SPECD2",   anchors = { TOPLEFT = { "SpecSlot_C2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D3 = DefSpecSlot { row = 6, col = 5, repo = "ALIEN_SPECD3",   anchors = { TOPLEFT = { "SpecSlot_C3" , "BOTTOMLEFT", 0,20 } } },
 	  
     OnShow = function(this)
       TechGrid.HumansInterface:Hide()
@@ -392,20 +426,26 @@ TechGrid = uiwnd {
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Guardian.name"} },
     ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Psychic.name"} },
 	  
-	  -- spec
-	  SpecSlot_A1 = DefSpecSlot { row = 3, col = 1, repo = "MUTANT_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", -30,20 } } },
-	  SpecSlot_A2 = DefSpecSlot { row = 3, col = 2, repo = "MUTANT_SPECA2",   anchors = { TOPLEFT = { "RightFrame" , "TOP", 30,20 } } },
+	  -- spec - Layout 3 columnas x 4 filas
+	  -- Primera fila: A1 (izq), A2 (centro), A3 (der - NUEVO)
+	  SpecSlot_A1 = DefSpecSlot { row = 3, col = 1, repo = "MUTANT_SPECA1",   anchors = { TOPLEFT = { "RightFrame" , "TOP", -110,20 } } },
+	  SpecSlot_A2 = DefSpecSlot { row = 3, col = 2, repo = "MUTANT_SPECA2",   anchors = { TOP = { "RightFrame" , "TOP", 0,20 } } },
+	  SpecSlot_A3 = DefSpecSlot { row = 3, col = 1, repo = "MUTANT_SPECA3",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 110,20 } } },
 	  
-	  SpecSlot_B1 = DefSpecSlot { row = 3, col = 3, repo = "MUTANT_SPECB1",   anchors = { TOP = { "SpecSlot_A1" , "BOTTOM", -40,20 } } },
-	  SpecSlot_B2 = DefSpecSlot { row = 3, col = 4, repo = "MUTANT_SPECB2",   anchors = { TOP = { "SpecSlot_A1" , "BOTTOM", 40,20 } } },
-	  SpecSlot_B3 = DefSpecSlot { row = 3, col = 5, repo = "MUTANT_SPECB3",   anchors = { TOP = { "SpecSlot_A2" , "BOTTOM", 0,20 } } },
+	  -- Segunda fila: B1 bajo A1, B2 bajo A2, B3 bajo A3
+	  SpecSlot_B1 = DefSpecSlot { row = 3, col = 3, repo = "MUTANT_SPECB1",   anchors = { TOPLEFT = { "SpecSlot_A1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B2 = DefSpecSlot { row = 3, col = 4, repo = "MUTANT_SPECB2",   anchors = { TOPLEFT = { "SpecSlot_A2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B3 = DefSpecSlot { row = 3, col = 5, repo = "MUTANT_SPECB3",   anchors = { TOPLEFT = { "SpecSlot_A3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_C1 = DefSpecSlot { row = 4, col = 1, repo = "MUTANT_SPECC1",   anchors = { TOP = { "SpecSlot_B1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_C2 = DefSpecSlot { row = 4, col = 2, repo = "MUTANT_SPECC2",   anchors = { TOP = { "SpecSlot_B3" , "BOTTOM", 0,20 } } },
+	  -- Tercera fila: C1 bajo B1, C2 bajo B2, C3 bajo B3 (NUEVO)
+	  SpecSlot_C1 = DefSpecSlot { row = 4, col = 1, repo = "MUTANT_SPECC1",   anchors = { TOPLEFT = { "SpecSlot_B1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C2 = DefSpecSlot { row = 4, col = 2, repo = "MUTANT_SPECC2",   anchors = { TOPLEFT = { "SpecSlot_B2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C3 = DefSpecSlot { row = 4, col = 1, repo = "MUTANT_SPECC3",   anchors = { TOPLEFT = { "SpecSlot_B3" , "BOTTOMLEFT", 0,20 } } },
 	  
-	  SpecSlot_D1 = DefSpecSlot { row = 4, col = 3, repo = "MUTANT_SPECD1",   anchors = { TOP = { "SpecSlot_C1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_D2 = DefSpecSlot { row = 4, col = 4, repo = "MUTANT_SPECD2",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", -40,20 } } },
-	  SpecSlot_D3 = DefSpecSlot { row = 4, col = 5, repo = "MUTANT_SPECD3",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", 40,20 } } },
+	  -- Cuarta fila: D1 bajo C1, D2 bajo C2, D3 bajo C3
+	  SpecSlot_D1 = DefSpecSlot { row = 4, col = 3, repo = "MUTANT_SPECD1",   anchors = { TOPLEFT = { "SpecSlot_C1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D2 = DefSpecSlot { row = 4, col = 4, repo = "MUTANT_SPECD2",   anchors = { TOPLEFT = { "SpecSlot_C2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D3 = DefSpecSlot { row = 4, col = 5, repo = "MUTANT_SPECD3",   anchors = { TOPLEFT = { "SpecSlot_C3" , "BOTTOMLEFT", 0,20 } } },
 	  
     OnShow = function(this)
       TechGrid.AliensInterface:Hide()
@@ -457,20 +497,25 @@ TechGrid = uiwnd {
 	  ItemLabl_1_4 = DefTechHolderSlots.ItemLabl_1_4 { str = TEXT{"Judge.name"} },
     ItemLabl_1_5 = DefTechHolderSlots.ItemLabl_1_5 { str = TEXT{"Engineer.name"} },
 
-	  -- spec
-    SpecSlot_A1 = DefSpecSlot { row = 1, col = 1, repo = "HUMAN_SPECA1",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", -30,20 } } },
-	  SpecSlot_A2 = DefSpecSlot { row = 1, col = 2, repo = "HUMAN_SPECA2",   anchors = { TOPLEFT = { "RightFrame" , "TOP", -10,20 } } },
-	  
-	  SpecSlot_B1 = DefSpecSlot { row = 1, col = 3, repo = "HUMAN_SPECB1",   anchors = { TOP = { "SpecSlot_A1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_B2 = DefSpecSlot { row = 1, col = 4, repo = "HUMAN_SPECB2",   anchors = { TOP = { "SpecSlot_A2" , "BOTTOM", 0,20 } } },
-	  SpecSlot_B3 = DefSpecSlot { row = 1, col = 5, repo = "HUMAN_SPECB3",   anchors = { LEFT = { "SpecSlot_B2" , "RIGHT", 20,0 } } },
-	  
-	  SpecSlot_C1 = DefSpecSlot { row = 2, col = 1, repo = "HUMAN_SPECC1",   anchors = { TOP = { "SpecSlot_B1" , "BOTTOM", 0,20 } } },
-	  SpecSlot_C2 = DefSpecSlot { row = 2, col = 2, repo = "HUMAN_SPECC2",   anchors = { TOP = { "SpecSlot_B2" , "BOTTOM", 40,20 } } },
-	  
-	  SpecSlot_D1 = DefSpecSlot { row = 2, col = 3, repo = "HUMAN_SPECD1",   anchors = { TOP = { "SpecSlot_C1" , "BOTTOM", -40,20 } } },
-	  SpecSlot_D2 = DefSpecSlot { row = 2, col = 4, repo = "HUMAN_SPECD2",   anchors = { TOP = { "SpecSlot_C1" , "BOTTOM", 40,20 } } },
-	  SpecSlot_D3 = DefSpecSlot { row = 2, col = 5, repo = "HUMAN_SPECD3",   anchors = { TOP = { "SpecSlot_C2" , "BOTTOM", 0,20 } } },
+	  -- spec - Primera fila (sin dependencias): izquierda, centro, derecha
+    SpecSlot_A1 = DefSpecSlot { row = 1, col = 1, repo = "HUMAN_SPECA1",   anchors = { TOPLEFT = { "RightFrame" , "TOP", -110,20 } } },
+	  SpecSlot_A2 = DefSpecSlot { row = 1, col = 2, repo = "HUMAN_SPECA2",   anchors = { TOP = { "RightFrame" , "TOP", 0,20 } } },
+	  SpecSlot_A3 = DefSpecSlot { row = 1, col = 1, repo = "HUMAN_SPECA3",   anchors = { TOPRIGHT = { "RightFrame" , "TOP", 110,20 } } },
+  
+	  -- Segunda fila (debajo de la primera)
+	  SpecSlot_B1 = DefSpecSlot { row = 1, col = 3, repo = "HUMAN_SPECB1",   anchors = { TOPLEFT = { "SpecSlot_A1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B2 = DefSpecSlot { row = 1, col = 4, repo = "HUMAN_SPECB2",   anchors = { TOPLEFT = { "SpecSlot_A2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_B3 = DefSpecSlot { row = 1, col = 5, repo = "HUMAN_SPECB3",   anchors = { TOPLEFT = { "SpecSlot_A3" , "BOTTOMLEFT", 0,20 } } },
+  
+	  -- Tercera fila (debajo de la segunda)
+	  SpecSlot_C1 = DefSpecSlot { row = 2, col = 1, repo = "HUMAN_SPECC1",   anchors = { TOPLEFT = { "SpecSlot_B1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C2 = DefSpecSlot { row = 2, col = 2, repo = "HUMAN_SPECC2",   anchors = { TOPLEFT = { "SpecSlot_B2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_C3 = DefSpecSlot { row = 2, col = 1, repo = "HUMAN_SPECC3",   anchors = { TOPLEFT = { "SpecSlot_B3" , "BOTTOMLEFT", 0,20 } } },
+  
+	  -- Cuarta fila (debajo de la tercera)
+	  SpecSlot_D1 = DefSpecSlot { row = 2, col = 3, repo = "HUMAN_SPECD1",   anchors = { TOPLEFT = { "SpecSlot_C1" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D2 = DefSpecSlot { row = 2, col = 4, repo = "HUMAN_SPECD2",   anchors = { TOPLEFT = { "SpecSlot_C2" , "BOTTOMLEFT", 0,20 } } },
+	  SpecSlot_D3 = DefSpecSlot { row = 2, col = 5, repo = "HUMAN_SPECD3",   anchors = { TOPLEFT = { "SpecSlot_C3" , "BOTTOMLEFT", 0,20 } } },
 	  
     OnShow = function(this)
       TechGrid.AliensInterface:Hide()
@@ -526,11 +571,12 @@ TechGrid = uiwnd {
   },
 
   Stars = uiwnd {
-    size = {192,16},
-    anchors = { BOTTOMRIGHT = { "HumansInterface", -60,-10 } },
+    size = {160,32},
+    anchors = { BOTTOMRIGHT = { "HumansInterface", -60,-9 } },
 
     dx = 0,
-    count = 12,
+    dy = -18,  -- Espacio vertical entre filas
+    count = 20,
     
     Star_1 = DefSpendStar { anchors = { RIGHT = { 0,0 } } },
     Star_2 = DefSpendStar {},
@@ -544,11 +590,30 @@ TechGrid = uiwnd {
     Star_10 = DefSpendStar {},
     Star_11 = DefSpendStar {},
     Star_12 = DefSpendStar {},
+    Star_13 = DefSpendStar {},
+    Star_14 = DefSpendStar {},
+    Star_15 = DefSpendStar {},
+    Star_16 = DefSpendStar {},
+    Star_17 = DefSpendStar {},
+    Star_18 = DefSpendStar {},
+    Star_19 = DefSpendStar {},
+    Star_20 = DefSpendStar {},
     
     OnShow = function(this)
       local ss = this.Star_1:GetSize()
-      this:SetSize{(this.count*ss.x) + ((this.count-1)*this.dx), ss.y}
-      for i = 2,this.count do
+      -- Calcular tamaño para 10 estrellas por fila
+      local width = (10*ss.x) + ((10-1)*this.dx)
+      local height = (ss.y * 2) + this.dy
+      this:SetSize({width, height})
+      
+      -- Primera fila (Star_1 a Star_10) - de derecha a izquierda
+      for i = 2,10 do
+        this["Star_"..i]:SetAnchor("RIGHT", this["Star_"..i-1], "LEFT", {this.dx,0})  
+      end
+      
+      -- Segunda fila (Star_11 a Star_20) - alinear Star_11 justo debajo de Star_1
+      this.Star_11:SetAnchor("RIGHT", this.Star_1, "RIGHT", {0, this.dy})
+      for i = 12,20 do
         this["Star_"..i]:SetAnchor("RIGHT", this["Star_"..i-1], "LEFT", {this.dx,0})  
       end
     end,
@@ -670,20 +735,65 @@ end
 
 function TechGrid:UpdateGems()
   local gems, allGems = game.GetPlayerGems()
+  
+  -- Obtener nivel del sistema correcto y calcular límite
+  local current_level = 1
+  local experience = game.LoadUserPrefs("experience")
+  if experience and experience.level then
+    current_level = experience.level
+  elseif PlayerLevel then
+    current_level = PlayerLevel:GetLevel()
+  end
+  
+  -- Calcular límite: 10 + floor(level / 10)
+  local max_skill_points = 10 + math.floor(current_level / 10)
+  
+  -- Mostrar gemas disponibles (mantener límite de 300 para xenoshards)
   this.Gems.Text:SetStr("<color=103,137,236>"..gems.."</><color=50,62,140>/"..allGems.."</>")
 
   for race, interface in pairs{humans = this.HumansInterface, mutants = this.MutantsInterface, aliens = this.AliensInterface} do  
     local starsFree, starsUsed = game.GetPlayerStars(race)
     if not interface:IsHidden() then
-      starsFree = starsFree + starsUsed
+      -- Limitar estrellas disponibles según el nivel
+      local max_allowed_stars = starsFree + starsUsed
+      if starsUsed >= max_skill_points then
+        -- Ya se alcanzó el máximo de puntos de habilidad permitidos
+        starsFree = 0
+      else
+        -- Ajustar estrellas libres al límite
+        starsFree = math.min(starsFree, max_skill_points - starsUsed)
+        max_allowed_stars = starsUsed + starsFree
+      end
       
-      local hs = this.Stars:GetSize()
       local ss = this.Stars.Star_1:GetSize()
-      local offs = (hs.x - ((starsFree*ss.x) + ((starsFree-1)*this.Stars.dx))) / 2
+      
+      -- Calcular cuántas estrellas por fila (máximo 10)
+      local stars_per_row = 10
+      local rows = math.ceil(max_allowed_stars / stars_per_row)
+      local stars_in_last_row = math.min(max_allowed_stars % stars_per_row, stars_per_row)
+      if stars_in_last_row == 0 then stars_in_last_row = stars_per_row end
+      
+      -- Calcular ancho: necesitamos el ancho de la fila con más estrellas
+      local widest_row = stars_per_row
+      if rows == 2 and max_allowed_stars > 10 then
+        -- Dos filas, usar el ancho de la fila completa
+        widest_row = stars_per_row
+      elseif rows == 1 then
+        widest_row = max_allowed_stars
+      end
+      
+      local total_width = (widest_row * ss.x) + ((widest_row - 1) * this.Stars.dx)
+      local total_height = (ss.y * rows) + (this.Stars.dy * (rows - 1))
+      
+      -- Ajustar el tamaño del contenedor Stars
+      this.Stars:SetSize({total_width, total_height})
+      
+      -- Calcular offset para centrar en el ancho disponible
+      local offs = 0
       this.Stars.Star_1:SetAnchor("RIGHT", this.Stars, "RIGHT", {-offs,0})
       
       for i = 1,this.Stars.count do
-        if i <= starsFree then
+        if i <= max_allowed_stars then
           if i <= starsUsed then
             this.Stars["Star_"..i]:SetState(1)
           else
@@ -724,17 +834,39 @@ function TechGrid:UpdateGems()
             if stars > 0 then v.Star_1:SetColor(StarColorEnabled) end
             if stars > 1 then v.Star_2:SetColor(StarColorEnabled) end
             if stars > 2 then v.Star_3:SetColor(StarColorEnabled) end
-            for i = 1,maxStars do v["Star_"..i]:Show() end
-            for i = maxStars+1,3 do v["Star_"..i]:Hide() end
+            -- Validar que maxStars existe y está en rango válido (1-3)
+            if maxStars and maxStars > 0 then
+              local validMaxStars = math.min(math.max(maxStars, 1), 3)
+              for i = 1,validMaxStars do 
+                if v["Star_"..i] then 
+                  v["Star_"..i]:Show() 
+                end 
+              end
+              for i = validMaxStars+1,3 do 
+                if v["Star_"..i] then 
+                  v["Star_"..i]:Hide() 
+                end 
+              end
+            else
+              -- Si maxStars es nil o inválido, ocultar todas las estrellas
+              for i = 1,3 do 
+                if v["Star_"..i] then 
+                  v["Star_"..i]:Hide() 
+                end 
+              end
+            end
             v:SetAlpha(0)
             v.SpecIcon:SetAlpha(1)
             v.Star_1:SetAlpha(1)
             v.Star_2:SetAlpha(1)
             v.Star_3:SetAlpha(1)
-            local sz = v.StarPlate:GetSize()
-            local top = (maxStars-1)*sz.y
-            v.StarPlate:SetTexture(nil, {0,top,sz.x,top+sz.y})
-            v.StarPlate:SetAlpha(1)
+            if maxStars and maxStars > 0 and v.StarPlate then
+              local sz = v.StarPlate:GetSize()
+              local validMaxStars = math.min(math.max(maxStars, 1), 3)
+              local top = (validMaxStars-1)*sz.y
+              v.StarPlate:SetTexture(nil, {0,top,sz.x,top+sz.y})
+              v.StarPlate:SetAlpha(1)
+            end
           else
             v:SetAlpha(0)
             v.SpecIcon:SetAlpha(0)

@@ -28,6 +28,7 @@ Unit Ripper : MachineUnit {
     range = 80
     damage = 12
     elusion = 0
+    speed = 450
 
     overclock_cooldown = 16
     overclock_perc = 150
@@ -36,13 +37,14 @@ Unit Ripper : MachineUnit {
     rupture_chance = 3
     rupture_stun_duration = 4
     
+    
   }
   
   actions :{
     MakeOreExtractor -- fake
   }
   
-  speed = 450
+  speed = stat:speed
 
   sounds {
     attack = data/speech/confirmations/ripper/

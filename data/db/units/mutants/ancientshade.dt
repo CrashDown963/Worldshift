@@ -5,7 +5,7 @@ Unit AncientShade : UnderworldUnit {
   scale = 0.8
   race = mutants
   icon = 7,2
-  speed = 450
+  speed = stat:speed
   attack_spell = AncientShadeAttackSpell
   cost : pvp.mutants.unit_costs.AncientShade
   cost_sloc : pvp.mutants.sloc_costs.AncientShade
@@ -15,6 +15,7 @@ Unit AncientShade : UnderworldUnit {
 	  psi = 280
     damage = 15
     penetration = 100
+    speed = 450
     range = 1800
     
     fatelink_duration = 10

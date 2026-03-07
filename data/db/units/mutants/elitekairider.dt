@@ -14,12 +14,13 @@ Unit EliteKaiRider : BaseUnit {
     hp = 320
     armor = 15
     damage = 40
+    speed = 450
     range = 2200
     
     frenzy_crit_chance = 5
   }
 
-  speed = 450
+  speed = stat:speed
 
   frenzy_threshold = stat:damage * 3
   frenzy_duration = 15
@@ -42,7 +43,7 @@ Unit EliteKaiRider : BaseUnit {
   abilities {
     Frenzy {
       name = "Frenzy"
-      text = "The Elite Kai Rider goes into a Frenzy after he has seen enough blood."
+      text = "After dealing enough damage (3x the unit's base damage), the Elite Kai Rider enters a Frenzy state, increasing his critical chance by [stat:frenzy_crit_chance]%. This effect can stack up to 3 times. The Frenzy effect lasts for 15 seconds and resets if the unit doesn't deal enough damage within that time."
       icon = 1,0
     }
   }

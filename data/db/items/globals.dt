@@ -4,6 +4,7 @@ item_slots {
   INVENTORY_A { count = 65; accept_all = 1; }
   REWARDS   { count = 16; accept_all = 1; }
   RECYCLE   { count = 1; accept_all = 1; }
+  EXP_REPOSITORY_ITEMS { count = 10000; accept_all = 1; }
   MISSION   { count = 3; accept_all = 1; }
   PVP       { count = 6; accept_all = 1; }
 
@@ -48,14 +49,22 @@ item_slots {
     max_stars = 2       -- slot level
     --req_to_reveal = ID  -- require slot ID to be uncovered to uncover this slot
     req_stars = 0       -- require already placed stars to be able to upgrade
-    give_stars = 1      -- how many stars player received when uncovered
+    give_stars = 5      -- how many stars player received when uncovered
   }
   HUMAN_SPECA2 { 
     count = 1; race = humans; spec = 1; 
     bind = I_A2H; 
     reveal_gems = 10;
     max_stars = 2
-    give_stars = 1
+    give_stars = 5
+  }
+  HUMAN_SPECA3 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_A3H; 
+    reveal_gems = 10;
+    max_stars = 3
+    req_stars = 10
+    give_stars = 5
   }
   HUMAN_SPECB1 { 
     count = 1; race = humans; spec = 1; 
@@ -63,7 +72,7 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECA1
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   HUMAN_SPECB2 { 
     count = 1; race = humans; spec = 1; 
@@ -72,16 +81,16 @@ item_slots {
     req_to_reveal = HUMAN_SPECA2
     max_stars = 3
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   HUMAN_SPECB3 { 
     count = 1; race = humans; spec = 1; 
     bind = I_B3H; 
     reveal_gems = 10;
-    req_to_reveal = HUMAN_SPECB2
+    req_to_reveal = HUMAN_SPECA2
     max_stars = 2
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   HUMAN_SPECC1 { 
     count = 1; race = humans; spec = 1; 
@@ -89,8 +98,8 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECB1
     max_stars = 2
-    req_stars = 4
-    give_stars = 1
+    req_stars = 5
+    give_stars = 5
   }
   HUMAN_SPECC2 { 
     count = 1; race = humans; spec = 1; 
@@ -98,16 +107,25 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECB2
     max_stars = 3
-    req_stars = 4
-    give_stars = 1
+    req_stars = 5
+    give_stars = 5
+  }
+  HUMAN_SPECC3 { 
+    count = 1; race = humans; spec = 1; 
+    bind = I_C3H; 
+    reveal_gems = 10;
+    req_to_reveal = HUMAN_SPECB2
+    max_stars = 2
+    req_stars = 10
+    give_stars = 5
   }
   HUMAN_SPECD1 { 
     count = 1; race = humans; spec = 1; 
     bind = I_D1H; 
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECC1
-    req_stars = 7
-    give_stars = 1
+    req_stars = 8
+    give_stars = 5
   }
   HUMAN_SPECD2 { 
     count = 1; race = humans; spec = 1; 
@@ -115,16 +133,16 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECC1
     max_stars = 3
-    req_stars = 7
-    give_stars = 1
+    req_stars = 8
+    give_stars = 5
   }
   HUMAN_SPECD3 { 
     count = 1; race = humans; spec = 1; 
     bind = I_D3H; 
     reveal_gems = 10;
     req_to_reveal = HUMAN_SPECC2
-    req_stars = 7
-    give_stars = 1
+    req_stars = 8
+    give_stars = 5
   }
 
 -- mutants spec tree
@@ -135,14 +153,22 @@ item_slots {
     max_stars = 2       -- slot level
     --req_to_reveal = ID  -- require slot ID to be uncovered to uncover this slot
     req_stars = 0       -- require already placed stars to be able to upgrade
-    give_stars = 1      -- how many stars player received when uncovered
+    give_stars = 5      -- how many stars player received when uncovered
   }
   MUTANT_SPECA2 { 
     count = 1; race = mutants; spec = 1; 
     bind = I_A2M; 
     reveal_gems = 10;
     max_stars = 2
-    give_stars = 1
+    give_stars = 5
+  }
+  MUTANT_SPECA3 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_A3M; 
+    reveal_gems = 10;
+    max_stars = 3
+    req_stars = 10
+    give_stars = 5
   }
   MUTANT_SPECB1 { 
     count = 1; race = mutants; spec = 1; 
@@ -151,7 +177,7 @@ item_slots {
     req_to_reveal = MUTANT_SPECA1
     max_stars = 3
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   MUTANT_SPECB2 { 
     count = 1; race = mutants; spec = 1; 
@@ -160,16 +186,16 @@ item_slots {
     req_to_reveal = MUTANT_SPECA1
     max_stars = 2
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   MUTANT_SPECB3 { 
     count = 1; race = mutants; spec = 1; 
     bind = I_B3M; 
     reveal_gems = 10;
-    req_to_reveal = MUTANT_SPECA2
+    req_to_reveal = MUTANT_SPECA3
     max_stars = 1
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   MUTANT_SPECC1 { 
     count = 1; race = mutants; spec = 1; 
@@ -177,8 +203,8 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECB1
     max_stars = 2
-    req_stars = 4
-    give_stars = 1
+    req_stars = 5
+    give_stars = 5
   }
   MUTANT_SPECC2 { 
     count = 1; race = mutants; spec = 1; 
@@ -186,16 +212,25 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECB3
     max_stars = 3
-    req_stars = 4
-    give_stars = 1
+    req_stars = 5
+    give_stars = 5
+  }
+  MUTANT_SPECC3 { 
+    count = 1; race = mutants; spec = 1; 
+    bind = I_C3M; 
+    reveal_gems = 10;
+    req_to_reveal = MUTANT_SPECB3
+    max_stars = 2
+    req_stars = 10
+    give_stars = 5
   }
   MUTANT_SPECD1 { 
     count = 1; race = mutants; spec = 1; 
     bind = I_D1M; 
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECC1
-    req_stars = 7
-    give_stars = 1
+    req_stars = 8
+    give_stars = 5
   }
   MUTANT_SPECD2 { 
     count = 1; race = mutants; spec = 1; 
@@ -203,17 +238,17 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = MUTANT_SPECC2
     max_stars = 2
-    req_stars = 7
-    give_stars = 1
+    req_stars = 8
+    give_stars = 5
   }
   MUTANT_SPECD3 { 
     count = 1; race = mutants; spec = 1; 
     bind = I_D3M; 
     reveal_gems = 10;
-    req_to_reveal = MUTANT_SPECC2
-    req_stars = 7
+    req_to_reveal = MUTANT_SPECC3
+    req_stars = 8
     max_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
 
 -- alien spec tree
@@ -224,14 +259,22 @@ item_slots {
     max_stars = 2       -- slot level
     --req_to_reveal = ID  -- require slot ID to be uncovered to uncover this slot
     req_stars = 0       -- require already placed stars to be able to upgrade
-    give_stars = 1      -- how many stars player received when uncovered
+    give_stars = 5      -- how many stars player received when uncovered
   }
   ALIEN_SPECA2 { 
     count = 1; race = aliens; spec = 1; 
     bind = I_A2A; 
     reveal_gems = 10;
     max_stars = 2
-    give_stars = 1
+    give_stars = 5
+  }
+  ALIEN_SPECA3 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_A3A; 
+    reveal_gems = 10;
+    max_stars = 3
+    req_stars = 10
+    give_stars = 5
   }
   ALIEN_SPECB1 { 
     count = 1; race = aliens; spec = 1; 
@@ -240,7 +283,7 @@ item_slots {
     req_to_reveal = ALIEN_SPECB2
     req_stars = 2
     max_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   ALIEN_SPECB2 { 
     count = 1; race = aliens; spec = 1; 
@@ -249,16 +292,16 @@ item_slots {
     req_to_reveal = ALIEN_SPECA1
     max_stars = 3
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   ALIEN_SPECB3 { 
     count = 1; race = aliens; spec = 1; 
     bind = I_B3A; 
     reveal_gems = 10;
-    req_to_reveal = ALIEN_SPECA2
+    req_to_reveal = ALIEN_SPECA3
     max_stars = 1
     req_stars = 2
-    give_stars = 1
+    give_stars = 5
   }
   ALIEN_SPECC1 { 
     count = 1; race = aliens; spec = 1; 
@@ -266,8 +309,8 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECB2
     max_stars = 3
-    req_stars = 4
-    give_stars = 1
+    req_stars = 5
+    give_stars = 5
   }
   ALIEN_SPECC2 { 
     count = 1; race = aliens; spec = 1; 
@@ -275,16 +318,25 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECB3
     max_stars = 2
-    req_stars = 4
-    give_stars = 1
+    req_stars = 5
+    give_stars = 5
+  }
+  ALIEN_SPECC3 { 
+    count = 1; race = aliens; spec = 1; 
+    bind = I_C3A; 
+    reveal_gems = 10;
+    req_to_reveal = ALIEN_SPECB3
+    max_stars = 2
+    req_stars = 10
+    give_stars = 5
   }
   ALIEN_SPECD1 { 
     count = 1; race = aliens; spec = 1; 
     bind = I_D1A; 
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECC1
-    req_stars = 7
-    give_stars = 1
+    req_stars = 8
+    give_stars = 5
   }
   ALIEN_SPECD2 { 
     count = 1; race = aliens; spec = 1; 
@@ -292,16 +344,16 @@ item_slots {
     reveal_gems = 10;
     req_to_reveal = ALIEN_SPECC2
     max_stars = 3
-    req_stars = 7
-    give_stars = 1
+    req_stars = 8
+    give_stars = 5
   }
   ALIEN_SPECD3 { 
     count = 1; race = aliens; spec = 1; 
     bind = I_D3A; 
     reveal_gems = 10;
-    req_to_reveal = ALIEN_SPECC2
-    req_stars = 7
-    give_stars = 1
+    req_to_reveal = ALIEN_SPECC3
+    req_stars = 8
+    give_stars = 5
   }
 
   --
@@ -343,11 +395,13 @@ item_slots {
   -- human spec tree
   INSPECT_HUMAN_SPECA1 : HUMAN_SPECA1
   INSPECT_HUMAN_SPECA2 : HUMAN_SPECA2
+  INSPECT_HUMAN_SPECA3 : HUMAN_SPECA3
   INSPECT_HUMAN_SPECB1 : HUMAN_SPECB1
   INSPECT_HUMAN_SPECB2 : HUMAN_SPECB2
   INSPECT_HUMAN_SPECB3 : HUMAN_SPECB3
   INSPECT_HUMAN_SPECC1 : HUMAN_SPECC1
   INSPECT_HUMAN_SPECC2 : HUMAN_SPECC2
+  INSPECT_HUMAN_SPECC3 : HUMAN_SPECC3
   INSPECT_HUMAN_SPECD1 : HUMAN_SPECD1
   INSPECT_HUMAN_SPECD2 : HUMAN_SPECD2
   INSPECT_HUMAN_SPECD3 : HUMAN_SPECD3
@@ -355,11 +409,13 @@ item_slots {
   -- mutants spec tree
   INSPECT_MUTANT_SPECA1 : MUTANT_SPECA1
   INSPECT_MUTANT_SPECA2 : MUTANT_SPECA2
+  INSPECT_MUTANT_SPECA3 : MUTANT_SPECA3
   INSPECT_MUTANT_SPECB1 : MUTANT_SPECB1
   INSPECT_MUTANT_SPECB2 : MUTANT_SPECB2
   INSPECT_MUTANT_SPECB3 : MUTANT_SPECB3
   INSPECT_MUTANT_SPECC1 : MUTANT_SPECC1
   INSPECT_MUTANT_SPECC2 : MUTANT_SPECC2
+  INSPECT_MUTANT_SPECC3 : MUTANT_SPECC3
   INSPECT_MUTANT_SPECD1 : MUTANT_SPECD1
   INSPECT_MUTANT_SPECD2 : MUTANT_SPECD2
   INSPECT_MUTANT_SPECD3 : MUTANT_SPECD3
@@ -367,11 +423,13 @@ item_slots {
   -- alien spec tree
   INSPECT_ALIEN_SPECA1 : ALIEN_SPECA1
   INSPECT_ALIEN_SPECA2 : ALIEN_SPECA2
+  INSPECT_ALIEN_SPECA3 : ALIEN_SPECA3
   INSPECT_ALIEN_SPECB1 : ALIEN_SPECB1
   INSPECT_ALIEN_SPECB2 : ALIEN_SPECB2
   INSPECT_ALIEN_SPECB3 : ALIEN_SPECB3
   INSPECT_ALIEN_SPECC1 : ALIEN_SPECC1
   INSPECT_ALIEN_SPECC2 : ALIEN_SPECC2
+  INSPECT_ALIEN_SPECC3 : ALIEN_SPECC3
   INSPECT_ALIEN_SPECD1 : ALIEN_SPECD1
   INSPECT_ALIEN_SPECD2 : ALIEN_SPECD2
   INSPECT_ALIEN_SPECD3 : ALIEN_SPECD3

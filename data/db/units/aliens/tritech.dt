@@ -22,6 +22,7 @@ Unit Tritech : AlienUnit {
     armor = 1
     range = 1700
     damage = 15
+    speed = 450
 
     shield_hull = 100
     shield_regen  = 120
@@ -32,7 +33,7 @@ Unit Tritech : AlienUnit {
     feedback_heal = 20
     bio_split_chance = 0
   }
-  speed = 450
+  speed = stat:speed
 
   model = data/models/units/Tritech/Tritech.kfm {
   die = data/models/units/Trisat/BugDie.nif
