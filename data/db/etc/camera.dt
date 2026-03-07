@@ -1,8 +1,0 @@
--- Camera configuration for gameplay
--- This extends the zoom-out limits for better ultrawide support
-
-camera_settings {
-  min_distance = 5
-  max_distance = 500
-  -- Increased from typical 300 to allow more zoom out
-}

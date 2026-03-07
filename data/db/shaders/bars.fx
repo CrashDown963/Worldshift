@@ -47,7 +47,7 @@ VS_OUTPUT VS_Bars(VS_INPUT v)
   VS_OUTPUT o;
   float4 vWorld;
 
-  vWorld.x = vBarsPoints[v.vPos.z].x + v.vPos.x * vBarsPoints[v.vPos.z].w * 1;
+  vWorld.x = vBarsPoints[v.vPos.z].x * 0.5 + v.vPos.x * vBarsPoints[v.vPos.z].w * 0.5;
   vWorld.y = vBarsPoints[v.vPos.z].y * 0.3 + v.vPos.y * vBarsPoints[v.vPos.z + 1].w * 0.3 + 20; 
   vWorld.z = vBarsPoints[v.vPos.z].z;
   vWorld.w = 1;

@@ -241,7 +241,7 @@ CSpellAction ManipulateAction {
         duration = stat:manipulate_duration
         multi_area : aoe_radius { anim = data/Models/Effects/Magic/AuraArbiter.nif }
         react = manipulate
-        stack_count = 1
+        stack_count = 1        
       }     
     
       effect = E_multicleanse {
