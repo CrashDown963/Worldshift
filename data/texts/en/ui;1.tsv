@@ -40,7 +40,8 @@ vic_close_items	There are still items in the temporary repository. Are you sure 
 //// Lobby		
 prac_caps	PRACTICE	
 pvp_caps	DEATHMATCH	
-locations	LOCATIONS	
+locations	LOCATIONS
+catalog_caps	CATALOG	
 chat btn lobby	CHAT	
 		
 		
