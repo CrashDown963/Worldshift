@@ -18,7 +18,7 @@ item_slots {
   HUMAN_CONSTRUCTOR   { count = 1; race = humans; icon = 5,2; }
   HUMAN_ASSASSIN { count = 1; race = humans; icon = 4,2; }
   HUMAN_JUDGE { count = 1; race = humans; icon = 2,2; }
-  HUMAN_ENGINEER { count = 1; race = humans; icon = 1,7; }
+  HUMAN_ENGINEER { count = 1; race = humans; icon = 2,5; }
   HUMAN_DEFENCE { count = 1; race = humans; icon = 7,2; }
   HUMAN_IMPLANTS { count = 1; race = humans; icon = 8,2; }
   HUMAN_WEAPONS { count = 1; race = humans; icon = 6,2; }
@@ -29,18 +29,18 @@ item_slots {
   MUTANT_STONEGHOST   { count = 1; race = mutants; icon = 5,3; }
   MUTANT_ADEPT { count = 1; race = mutants; icon = 4,3; }
   MUTANT_GUARDIAN { count = 1; race = mutants; icon = 2,3; }
-  MUTANT_PSYCHIC { count = 1; race = mutants; icon = 3,7; }
+  MUTANT_PSYCHIC { count = 1; race = mutants; icon = 5,6; }
   MUTANT_BLOOD { count = 1; race = mutants; icon = 7,3; }
   MUTANT_NATURE { count = 1; race = mutants; icon = 8,3; }
   MUTANT_MIND { count = 1; race = mutants; icon = 6,3; }
-  MUTANT_SPIRIT { count = 1; race = mutants; icon = 4,7; }
+  MUTANT_SPIRIT { count = 1; race = mutants; icon = 2,6; }
 
   ALIEN_MASTER { count = 1; race = aliens; icon = 1,1; }
   ALIEN_DOMINATOR   { count = 1; race = aliens; icon = 3,1; }
   ALIEN_HARVESTER   { count = 1; race = aliens; icon = 5,1; }
   ALIEN_MANIPULATOR { count = 1; race = aliens; icon = 4,1; }
   ALIEN_ARBITER { count = 1; race = aliens; icon = 2,1; }
-  ALIEN_DEFILER { count = 1; race = aliens; icon = 2,7; }
+  ALIEN_DEFILER { count = 1; race = aliens; icon = 7,4; }
   ALIEN_POWER { count = 1; race = aliens; icon = 7,1; }
   ALIEN_CORRUPTION { count = 1; race = aliens; icon = 8,1; }
   ALIEN_DOGMA { count = 1; race = aliens; icon = 6,1; }

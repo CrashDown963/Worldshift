@@ -2701,7 +2701,6 @@ Lobby = uiwnd {
     str = TEXT{"pvp_caps"},
     OnMouseEnter = function(this) NTTooltip:DoShow("deathmatch_btn_tip", this, "BOTTOM", "TOP", {0,10}) end,
     OnMouseLeave = function(this) NTTooltip:Hide() end,
-    OnLoad = function(this) if Login.demo then this.demodisabled = true end end,
   },
 
   PracticeBtn = DefLobbyBtn {
@@ -2712,6 +2711,11 @@ Lobby = uiwnd {
   CatalogBtn = DefLobbyBtn {
     anchors = { LEFT = { "RIGHT", "PracticeBtn", 2, 0 } },
     str = TEXT{"catalog_caps"},
+  },
+  
+  ShopBtn = DefLobbyBtn {
+    anchors = { LEFT = { "RIGHT", "CatalogBtn", 2, 0 } },
+    str = TEXT{"shop_caps"},
   },
   
   SettingsBtn = DefLobbyBtn {
@@ -2755,19 +2759,11 @@ Lobby = uiwnd {
     str = TEXT{"update"},
     OnClick = function(this) leaveLobby() AutoPatchWnd:Start() end,
   },
-  
-  Gamespy = uiimg {
-    hidden = true,
-    size = {100,23},
-    texture = "data/textures/ui/logo_gamespy.dds",
-    texture_auto_coords = true,
-    anchors = { BOTTOMRIGHT = {-200,-10} },
-  },
 
   Version = Login.Version {
     anchors = { RIGHT = { "LEFT", "Gamespy", -20,7 } },
   },
-  -- misiions
+  -- missions
     
 	MissionsView = uiwnd {
     size = {view_w, view_h},
@@ -4517,14 +4513,12 @@ function Lobby:OnShow()
     this.PracticeBtn:SetAnchor("LEFT", this.PVPBtn, "RIGHT",  {2,0})
     this.PracticeBtn.OnMouseEnter = function(this) NTTooltip:DoShow("practice_btn_tip", this, "BOTTOM", "TOP", {0,10}) end
     this.PracticeBtn.OnMouseLeave = function(this) NTTooltip:Hide() end
-    this.Gamespy:Show()
   else
     this.PVPBtn:Hide()
     this.PracticeBtn:SetStr(TEXT{"skirmish"})
     this.PracticeBtn:SetAnchor("LEFT", this.SLocationBtn, "RIGHT",  {2,0})
     this.PracticeBtn.OnMouseEnter = function(this) NTTooltip:DoShow("skirmish_btn_tip", this, "BOTTOM", "TOP", {0,10}) end
     this.PracticeBtn.OnMouseLeave = function(this) NTTooltip:Hide() end
-    this.Gamespy:Hide()
   end
   
   -- chat stuff

@@ -167,28 +167,22 @@ local	DefPVPSlot = Inventory.DefItemSlot {
     texture = "data/textures/ui/reward_chosen.dds",
     coords = {0,0,64,64},
   },
-  OnLoad = function(this) Inventory.DefItemSlot_OnLoad(this) end,
-  --OnMouseDown = function(this)
-  --  if this:GetItem() then
-  --    this:GetParent():OnItemSelect(this)
-  --  end
-  --end,
-  
+  OnLoad = function(this) Inventory.DefItemSlot_OnLoad(this) end,  
   
   OnMouseDown = function(this)
     if this:GetItem() then
       local quality = this:GetItem().quality
       local res = this:MoveItem("REWARDS")
       if res and res > 0 then
-        Victory.ChoosePVPReward:UpdateBPText()
+        Victory.ChooseShopReward:UpdateBPText()
         Victory.Items["Slot"..res].ItemMoveNif:Show()
         game.PlaySnd(sounds.item_take) 
         Victory.Items.animslot = Victory.Items["Slot"..res]
         Transitions:CallOnce(function() Victory.Items:StopAnim() end, 0.767)
-        Victory.ChoosePVPReward.animslot = this
-        Transitions:CallOnce(function() Victory.ChoosePVPReward:PVPRewFillEmptySlot() end, 0.5)
+        Victory.ChooseShopReward.animslot = this
+        Transitions:CallOnce(function() Victory.ChooseShopReward:PVPRewFillEmptySlot() end, 0.5)
             
-        Victory.ChoosePVPReward.qualitytofill = quality
+        Victory.ChooseShopReward.qualitytofill = quality
       else
         MessageBox:Alert(TEXT{"buyfailed"}, TEXT{"buyfailed_ttl"})
       end
@@ -670,7 +664,7 @@ Victory = uiwnd {
   },    
   
   
-  ChoosePVPReward = uiwnd {
+  ChooseShopReward = uiwnd {
     hidden = true,
     size = {586, 140},
     anchors = { TOP = {"BOTTOM", "Items", 0, 5}},
@@ -883,15 +877,15 @@ Victory = uiwnd {
 	  end,    
 
     PVPRewFillEmptySlot = function(this)
-      if not Victory:IsHidden() and not Victory.ChoosePVPReward:IsHidden() then
-        --game.AddPVPItem(Victory.ChoosePVPReward.BuyBtn.qualitytofill)
-        game.AddPVPItem(Victory.ChoosePVPReward.qualitytofill)
+      if not Victory:IsHidden() and not Victory.ChooseShopReward:IsHidden() then
+        --game.AddPVPItem(Victory.ChooseShopReward.BuyBtn.qualitytofill)
+        game.AddPVPItem(Victory.ChooseShopReward.qualitytofill)
         for i = 1,5 do
-          --if Victory.ChoosePVPReward["Rew"..i].ind == Victory.ChoosePVPReward.BuyBtn.qualitytofill then
-          if Victory.ChoosePVPReward["Rew"..i].ind == Victory.ChoosePVPReward.qualitytofill then
-            Victory.ChoosePVPReward["Rew"..i].ItemMoveNif:Show()
+          --if Victory.ChooseShopReward["Rew"..i].ind == Victory.ChooseShopReward.BuyBtn.qualitytofill then
+          if Victory.ChooseShopReward["Rew"..i].ind == Victory.ChooseShopReward.qualitytofill then
+            Victory.ChooseShopReward["Rew"..i].ItemMoveNif:Show()
             game.PlaySnd(sounds.item_take) 
-            Transitions:CallOnce(function() Victory.ChoosePVPReward:StopAnim() end, 0.767)
+            Transitions:CallOnce(function() Victory.ChooseShopReward:StopAnim() end, 0.767)
             break
           end
         end
@@ -1161,7 +1155,7 @@ function Victory:OnShow()
     this.MissionTime:Hide()
     this.ChooseMissionReward:Hide()  
     this.Items:Hide()
-    this.ChoosePVPReward:Hide()
+    this.ChooseShopReward:Hide()
   else
     this.Frame:SetSize{this.size_big[1], this.size_big[2]}
   end
@@ -1177,7 +1171,7 @@ function Victory:OnShow()
     this.ChooseMissionReward:Show()
     
     this.Stats:Hide()
-    this.ChoosePVPReward:Hide()
+    this.ChooseShopReward:Hide()
   end
   
   if gametype == "mission" and not game.PlayerWins() then
@@ -1191,7 +1185,7 @@ function Victory:OnShow()
     
     this.ChooseMissionReward:Hide()
     this.Stats:Hide()
-    this.ChoosePVPReward:Hide()
+    this.ChooseShopReward:Hide()
   end  
   
   if gametype == "speciallocation" or gametype == "special_location" then
@@ -1205,7 +1199,7 @@ function Victory:OnShow()
 
     this.MissionTime:Hide()
     this.ChooseMissionReward:Hide()
-    this.ChoosePVPReward:Hide()
+    this.ChooseShopReward:Hide()
   end
   
   if gametype == "pvp" or gametype == "pvpat" or (gametype == "practice" and not net.GLIsGameSpyLobby()) then
@@ -1216,7 +1210,7 @@ function Victory:OnShow()
     
     this.Stats:Show()
     this.Items:Show()
-    this.ChoosePVPReward:Show()
+    this.ChooseShopReward:Show()
     
     this.MissionTime:Hide()
     this.ChooseMissionReward:Hide()
