@@ -2976,6 +2976,36 @@ Lobby = uiwnd {
       },
     },
 	},
+
+  ShopView = uiwnd {
+    size = {view_w, view_h},
+    hidden = true,
+    anchors = { TOPLEFT = { 10, 60 } },
+  	
+	  Frame = DefBigBackImage {},
+    
+    Title = uiwnd {
+      layer = lobbylayer+1,
+      size = {view_w, 25},
+      anchors = { TOP = { 0,17 } },
+      uitext {font = "Verdana,10b", color = {255, 143, 51}, str = TEXT{"shop_caps"}},
+    },
+    
+    Setup = uiwnd {
+      size = {view_w-30, view_h-62},
+      anchors = { TOPLEFT = { 15,15 } },
+      
+      Frame = DefSmallBackImage {layer = lobbylayer-2},
+      
+      TemplateImage = uiimg {
+        layer = lobbylayer,
+        texture = "data/textures/ui/practice_picture_01_small.dds",
+        coords = {0,0,270,220},
+        anchors = { TOPLEFT = { "Frame", 5,25 }, BOTTOMRIGHT = { "TOPRIGHT", "Frame", -5,240 } }, 
+      },
+    },
+	},
+
 	-- practice
 	PracticeView = uiwnd {
     size = {view_w, view_h},
@@ -4762,6 +4792,9 @@ function Lobby:OnLobbyBtnClicked(btn)
   elseif btn == this.CatalogBtn then
     view = this.CatalogView 
     net.ExitLobby()
+  elseif btn == this.ShopBtn then
+    view = this.ShopView 
+    net.ExitLobby()    
   elseif btn == this.AbilityBtn then
     this:OnRightButton(btn)
     Settings:Hide()
