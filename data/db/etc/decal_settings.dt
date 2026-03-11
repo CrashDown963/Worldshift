@@ -23,7 +23,7 @@ decal_settings explosion_crater2_consts {
     explosion_crater2
   }
   
-  max_decals = 5
+  max_decals = 15
   life_time = 50
   fade_time = 2
   fast_fade = 0.5

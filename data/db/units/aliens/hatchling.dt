@@ -33,7 +33,7 @@ Unit Hatchling : AlienUnit {
 
   aggro_range = 3000
   waypoint_radius = 500
-  maintain_count = 24
+  maintain_count = 50
   spawn_react = respawn_react
 
   immune_to : {

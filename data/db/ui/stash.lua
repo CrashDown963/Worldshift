@@ -4,9 +4,9 @@
 --
 
 local stashLayer = 54
-local stashTabs = 5
+local stashTabs = 9
 local stashCols = 15
-local stashRows = 10
+local stashRows = 8
 local stashDx = 6
 local stashDy = 5
 
@@ -16,7 +16,7 @@ end
 
 local DefStashTab = DefButton {
   virtual = true,
-  size = {52, 28},
+  size = {77, 28},
   font = "Verdana,10b",
   selected = false,
 
@@ -84,7 +84,7 @@ local stashDef = {
   layer = stashLayer,
   hidden = true,
   mouse = true,
-  size = {728, 512},
+  size = {730, 412},
   anchors = { BOTTOMLEFT = { 10, -10 } },
   race = "humans",
   activeTab = 1,
@@ -102,11 +102,15 @@ local stashDef = {
     anchors = { TOPLEFT = {}, BOTTOMRIGHT = {} },
   },
 
-  Tab1 = MakeTab(1, { TOPLEFT = { 10, 6 } }),
-  Tab2 = MakeTab(2, { LEFT = { "Tab1", "RIGHT", 4, 0 } }),
-  Tab3 = MakeTab(3, { LEFT = { "Tab2", "RIGHT", 4, 0 } }),
-  Tab4 = MakeTab(4, { LEFT = { "Tab3", "RIGHT", 4, 0 } }),
-  Tab5 = MakeTab(5, { LEFT = { "Tab4", "RIGHT", 4, 0 } }),
+  Tab1 = MakeTab(1, { TOPLEFT = { 11, 6 } }),
+  Tab2 = MakeTab(2, { LEFT = { "Tab1", "RIGHT", 2, 0 } }),
+  Tab3 = MakeTab(3, { LEFT = { "Tab2", "RIGHT", 2, 0 } }),
+  Tab4 = MakeTab(4, { LEFT = { "Tab3", "RIGHT", 2, 0 } }),
+  Tab5 = MakeTab(5, { LEFT = { "Tab4", "RIGHT", 2, 0 } }),
+  Tab6 = MakeTab(6, { LEFT = { "Tab5", "RIGHT", 2, 0 } }),
+  Tab7 = MakeTab(7, { LEFT = { "Tab6", "RIGHT", 2, 0 } }),
+  Tab8 = MakeTab(8, { LEFT = { "Tab7", "RIGHT", 2, 0 } }),
+  Tab9 = MakeTab(9, { LEFT = { "Tab8", "RIGHT", 2, 0 } }),
 }
 
 local TabSlots = {}
@@ -131,7 +135,7 @@ local function BuildTabSlots(tab)
 
       local slotName = repo .. "_slot" .. idx
       if idx == 1 then
-        slot.anchors = { TOPLEFT = { 8, 34 } }
+        slot.anchors = { TOPLEFT = { 8, 35 } }
       elseif r == 1 then
         slot.anchors = { LEFT = { repo .. "_slot" .. (idx - 1), "RIGHT", stashDx, 0 } }
       else

@@ -14,7 +14,7 @@ Unit Worm : UnderworldUnit {
     range = 800
   }
   
-  maintain_count = 18
+  maintain_count = 30
   
   speed = 180
   sight = stat:range

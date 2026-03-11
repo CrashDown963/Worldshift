@@ -572,7 +572,7 @@ TechGrid = uiwnd {
   StashToggle = DefRacesBtn {
     layer = techlayer+1,
     size = {86,26},
-    anchors = { LEFT = { 230, 87 } },
+    anchors = { LEFT = { 230, 90 } },
     font = "Verdana,10",
     str = "stash",
     OnClick = function(this)

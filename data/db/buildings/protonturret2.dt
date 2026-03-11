@@ -4,7 +4,6 @@ Turret ProtonTurret2 : BaseTurret {
   model = Data/Models/buildings/ProtonTurret/ProtonTurret.kfm {
   constr_phase_0 = Data/Models/buildings/DefencePost/DefencePost_build.nif
   }
-  maintain_count = 4
   race = humans
   icon = 4,26
 
@@ -41,7 +40,7 @@ Turret ProtonTurret2 : BaseTurret {
   
   CAutoDieController AutoDie {
     no_enemy_despawn_time = 30
-	duration = 120
+	duration = 60
     show_progress = 0
   }
   

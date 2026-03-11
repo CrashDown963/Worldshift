@@ -54,7 +54,7 @@ Unit Sorcerer : BaseUnit {
     chainlightning_add_damage = 8
   } 
 
-  chainlightning_base_damage = stat:damage * 0.3
+  chainlightning_base_damage = stat:damage * 0.1
 
   incinerate_spot_size = 600
 
@@ -191,6 +191,7 @@ ChillSpellAbi {
   }
 
   projectile = chase {
+    start_point = pt_staff
     model = data/models/Projectiles/IceBolt/Icebolt.nif {
       CTrailController trail {
         emitter = TrailEmitter

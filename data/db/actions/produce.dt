@@ -159,5 +159,5 @@ CProduceAction ProducePsiDetonator : ProduceAction {
   name : PsiDetonator.name
   descr : PsiDetonator.descr
   produce = PsiDetonator
-  icon = 7,9
+  icon = 7,6
 }

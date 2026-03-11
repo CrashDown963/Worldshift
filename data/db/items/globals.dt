@@ -1,17 +1,21 @@
 item_slots {
-  INVENTORY_H { count = 65; accept_all = 1; }
-  INVENTORY_M { count = 65; accept_all = 1; }
-  INVENTORY_A { count = 65; accept_all = 1; }
+  INVENTORY_H { count = 65; accept_all = 1; race = humans; }
+  INVENTORY_M { count = 65; accept_all = 1; race = mutants; }
+  INVENTORY_A { count = 65; accept_all = 1; race = aliens; }
   REWARDS   { count = 16; accept_all = 1; }
   RECYCLE   { count = 1; accept_all = 1; }
   MISSION   { count = 3; accept_all = 1; }
   PVP       { count = 5; accept_all = 1; }
 
-  STASH_1 { count = 150; accept_all = 1; }
-  STASH_2 { count = 150; accept_all = 1; }
-  STASH_3 { count = 150; accept_all = 1; }
-  STASH_4 { count = 150; accept_all = 1; }
-  STASH_5 { count = 150; accept_all = 1; }
+  STASH_1 { count = 120; accept_all = 1; }
+  STASH_2 { count = 120; accept_all = 1; }
+  STASH_3 { count = 120; accept_all = 1; }
+  STASH_4 { count = 120; accept_all = 1; }
+  STASH_5 { count = 120; accept_all = 1; }
+  STASH_6 { count = 120; accept_all = 1; }
+  STASH_7 { count = 120; accept_all = 1; }
+  STASH_8 { count = 120; accept_all = 1; }
+  STASH_9 { count = 120; accept_all = 1; }
 
   HUMAN_COMMANDER { count = 1; race = humans; icon = 1,2; }
   HUMAN_SURGEON   { count = 1; race = humans; icon = 3,5; }

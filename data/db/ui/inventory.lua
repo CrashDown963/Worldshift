@@ -7,21 +7,21 @@ local sz_item_h = 42
 
 local DragingItem = false
 
--- local function FindEquipSlotByRepo(repo)
---   if type(repo) ~= "string" or not TechGrid then return nil end
---   for _, iface in pairs({TechGrid.HumansInterface, TechGrid.MutantsInterface, TechGrid.AliensInterface}) do
---     if type(iface) == "table" then
---       for _, slot in pairs(iface) do
---         if type(slot) == "table" and slot.GetType and slot:GetType() == "uislot" and slot.GetInfo then
---           if slot:GetInfo() == repo then
---             return slot
---           end
---         end
---       end
---     end
---   end
---   return nil
--- end
+local function FindEquipSlotByRepo(repo)
+  if type(repo) ~= "string" or not TechGrid then return nil end
+  for _, iface in pairs({TechGrid.HumansInterface, TechGrid.MutantsInterface, TechGrid.AliensInterface}) do
+    if type(iface) == "table" then
+      for _, slot in pairs(iface) do
+        if type(slot) == "table" and slot.GetType and slot:GetType() == "uislot" and slot.GetInfo then
+          if slot:GetInfo() == repo then
+            return slot
+          end
+        end
+      end
+    end
+  end
+  return nil
+end
 
 local FrameByRepo = {
   ALIEN_POWER = 7,

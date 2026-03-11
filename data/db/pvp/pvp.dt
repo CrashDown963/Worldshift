@@ -10,7 +10,7 @@ pvp {
     max_res = 1000
     start_res = 0
     res_name = "Credits"
-    unit_points = 30
+    unit_points = 50
     unit_point_lag_time = 10
     unit_costs {
       Commander = 0u 100r 15t
@@ -43,7 +43,7 @@ pvp {
     max_res = 1000          
     start_res = 0
     res_name = "Focus"
-    unit_points = 30
+    unit_points = 50
     unit_point_lag_time = 10
     unit_costs {
       HighPriest = 0u 100r 15t
@@ -88,7 +88,7 @@ pvp {
     
     res_name = "Plasma"
 
-    unit_points = 30
+    unit_points = 50
     unit_point_lag_time = 10
 
     unit_costs {
@@ -112,9 +112,9 @@ pvp {
     officer_costs_add = int4:0,0,50,100
   }
   
-  make_struct_time = 4 -- time to plant the structure at xenolite for the faction leaders
+  make_struct_time = 10 -- time to plant the structure at xenolite for the faction leaders
   
-  xenolite_grow_time = 1  -- random seconds after xenolte structure is destroyed for the xenolite to respawn
+  xenolite_grow_time = 5  -- random seconds after xenolte structure is destroyed for the xenolite to respawn
 
 
   -- artifact bonuses
@@ -145,8 +145,8 @@ pvp {
   costlvl4 = 50
   costlvl5 = 90
   costoffer = 5
-  winpoints = 50
-  losspoints = 9
-  maxpoints = 600
+  winpoints = 500
+  losspoints = 500
+  maxpoints = 999
 
 }
