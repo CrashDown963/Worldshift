@@ -145,8 +145,8 @@ pvp {
   costlvl4 = 50
   costlvl5 = 90
   costoffer = 5
-  winpoints = 500
-  losspoints = 500
+  winpoints = 900
+  losspoints = 900
   maxpoints = 999
 
 }

@@ -1,6 +1,5 @@
 --
 -- Stash UI
--- Static 5-tab stash: each tab has its own dedicated repo and slot set.
 --
 
 local stashLayer = 54
